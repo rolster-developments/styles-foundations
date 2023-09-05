@@ -4,16 +4,17 @@
   "description": "Front-end style pack to develop responsive and mobile projects on the web with Rolster.",
   "sass": "scss/styles.scss",
   "style": "dist/styles.css",
-  "author": "Daniel Andrés Castillo Pedroza",
+  "author": "Rolster Technology <rolster.developments@gmail.com>",
   "license": "MIT",
   "files": [
     "dist/",
     "fonts/",
+    "icons/",
     "scss/"
   ],
   "scripts": {
     "clean": "rimraf ./dist",
-    "sass-to-css": "node-sass scss/styles.scss -o dist/",
+    "sass-to-css": "node-sass scss/_styles.scss -o dist/styles.css",
     "css-minify": "css-minify -d dist/ -o dist/",
     "rltcss": "rtlcss dist/styles.css dist/styles.rtl.css",
     "build": "npm run clean && npm run sass-to-css && npm run rltcss && npm run css-minify"
