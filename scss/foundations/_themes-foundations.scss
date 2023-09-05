@@ -1,11 +1,9 @@
-/*!
- * Rolster Technology Themes Foundations
- * v1.0.0
- * @license MIT
- * Author: Rolster Developers
- * Created: 03/Mar/2022
- * Updated: 14/Abr/2023
-*/
+// Rolster Technology Themes Foundations
+// v1.0.0
+// @license MIT
+// Author: Rolster Developers
+// Created: 03/Mar/2022
+// Updated: 14/Abr/2023
 
 @mixin border-theme-rolster($token, $color) {
   --border-1-rolster-#{$token}: var(--border-1) solid

@@ -1,11 +1,9 @@
-/**
- * Rolster Technology Text Utilities
- * v1.0.0
- * @license MIT
- * Author: Rolster Developers
- * Created: 08/Sep/2022
- * Updated: 08/Sep/2022
-*/
+// Rolster Technology Text Utilities
+// v1.0.0
+// @license MIT
+// Author: Rolster Developers
+// Created: 08/Sep/2022
+// Updated: 08/Sep/2022
 
 @mixin align($orientation) {
   .align-#{$orientation} {
