@@ -14,10 +14,10 @@
   ],
   "scripts": {
     "clean": "rimraf ./dist",
-    "sass-to-css": "node-sass scss/styles.scss -o dist/",
+    "sass:build": "node-sass scss/_rolster-styles.scss dist/rolster-styles.css",
     "css-minify": "css-minify -d dist/ -o dist/",
-    "rltcss": "rtlcss dist/styles.css dist/styles.rtl.css",
-    "build": "npm run clean && npm run sass-to-css && npm run rltcss && npm run css-minify"
+    "rltcss": "rtlcss dist/rolster-styles.css dist/rolster-styles.rtl.css",
+    "build": "npm run clean && npm run sass:build && npm run rltcss && npm run css-minify"
   },
   "devDependencies": {
     "css-minify": "^2.0.0",
