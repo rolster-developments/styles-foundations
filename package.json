@@ -1,0 +1,31 @@
+{
+  "name": "@rolster/styles-foundations",
+  "version": "1.0.0",
+  "description": "Front-end style pack to develop responsive and mobile projects on the web with Rolster.",
+  "sass": "scss/styles.scss",
+  "style": "dist/styles.css",
+  "author": "Daniel Andrés Castillo Pedroza",
+  "license": "MIT",
+  "files": [
+    "dist/",
+    "fonts/",
+    "scss/"
+  ],
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "sass-to-css": "node-sass scss/styles.scss -o dist/",
+    "css-minify": "css-minify -d dist/ -o dist/",
+    "rltcss": "rtlcss dist/styles.css dist/styles.rtl.css",
+    "build": "npm run clean && npm run sass-to-css && npm run rltcss && npm run css-minify"
+  },
+  "devDependencies": {
+    "css-minify": "^2.0.0",
+    "node-sass": "^9.0.0",
+    "rimraf": "^3.0.2",
+    "rtlcss": "^4.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rolster-developments/typescript-forms.git"
+  }
+}

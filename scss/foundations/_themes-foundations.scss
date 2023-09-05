@@ -1,0 +1,105 @@
+/*!
+ * Rolster Technology Themes Foundations
+ * v1.0.0
+ * @license MIT
+ * Author: Rolster Developers
+ * Created: 03/Mar/2022
+ * Updated: 14/Abr/2023
+*/
+
+@mixin border-theme-rolster($token, $color) {
+  --border-1-rolster-#{$token}: var(--border-1) solid
+    var(--color-#{$color}-#{$token});
+
+  --border-2-rolster-#{$token}: var(--border-2) solid
+    var(--color-#{$color}-#{$token});
+
+  --border-4-rolster-#{$token}: var(--border-4) solid
+    var(--color-#{$color}-#{$token});
+}
+
+@mixin theme-rolster($color) {
+  --color-rolster-900: var(--color-#{$color}-900);
+
+  --color-rolster-700: var(--color-#{$color}-700);
+
+  --color-rolster-500: var(--color-#{$color}-500);
+
+  --color-rolster-300: var(--color-#{$color}-300);
+
+  --color-rolster-100: var(--color-#{$color}-100);
+
+  --skeleton-rolster-500: var(--skeleton-#{$color}-500);
+
+  --skeleton-rolster-300: var(--skeleton-#{$color}-300);
+
+  --skeleton-rolster-100: var(--skeleton-#{$color}-100);
+
+  @include border-theme-rolster(900, $color);
+  @include border-theme-rolster(700, $color);
+  @include border-theme-rolster(500, $color);
+  @include border-theme-rolster(300, $color);
+  @include border-theme-rolster(100, $color);
+
+  --box-shadow-rolster-500: var(--box-shadow-#{$color}-500);
+
+  --backdrop-rolster-500: var(--backdrop-#{$color}-500);
+
+  --gradient-rolster-500: var(--gradient-#{$color}-500);
+}
+
+@mixin border-theme($theme, $token) {
+  --border-1-theme-#{$token}: var(--border-1) solid
+    var(--border-#{$theme}-#{$token});
+
+  --border-2-theme-#{$token}: var(--border-2) solid
+    var(--border-#{$theme}-#{$token});
+
+  --border-4-theme-#{$token}: var(--border-4) solid
+    var(--border-#{$theme}-#{$token});
+}
+
+:root {
+  --background-theme-500: var(--background-light-500);
+
+  --background-theme-300: var(--background-light-300);
+
+  --background-theme-100: var(--background-light-100);
+
+  --color-theme-500: var(--color-dark-500);
+
+  --color-theme-300: var(--color-dark-300);
+
+  --color-theme-100: var(--color-dark-100);
+
+  --border-theme-500: var(--border-dark-500);
+
+  --border-theme-300: var(--border-dark-300);
+
+  --border-theme-100: var(--border-dark-100);
+
+  @include border-theme('dark', 500);
+  @include border-theme('dark', 300);
+  @include border-theme('dark', 100);
+  @include theme-rolster('base');
+}
+
+*[rls-theme='success'] {
+  @include theme-rolster('success');
+}
+
+*[rls-theme='info'] {
+  @include theme-rolster('info');
+}
+
+*[rls-theme='happy'] {
+  @include theme-rolster('happy');
+}
+
+*[rls-theme='warning'] {
+  @include theme-rolster('warning');
+}
+
+*[rls-theme='danger'] {
+  @include theme-rolster('danger');
+}
