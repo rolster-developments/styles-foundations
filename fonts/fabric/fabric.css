@@ -1,0 +1,131 @@
+/*!
+ * Rolster Technology Fonts Fabric
+ * v1.0.0
+ * @license MIT
+ * Author: Rolster Developers
+ * Created: 19/Abr/2018
+ * Updated: 19/Abr/2023
+ */
+
+ @font-face {
+  font-family: -rolster-system-font;
+  font-style: normal;
+  font-weight: 100;
+  src: url('fabric-light.otf') format('opentype');
+}
+
+@font-face {
+  font-family: -rolster-system-font;
+  font-style: normal;
+  font-weight: 200;
+  src: url('fabric-light.otf') format('opentype');
+}
+
+@font-face {
+  font-family: -rolster-system-font;
+  font-style: normal;
+  font-weight: 300;
+  src: url('fabric-light.otf') format('opentype');
+}
+
+@font-face {
+  font-family: -rolster-system-font;
+  font-style: normal;
+  font-weight: 400;
+  src: url('fabric-regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: -rolster-system-font;
+  font-style: normal;
+  font-weight: 500;
+  src: url('fabric-semibold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: -rolster-system-font;
+  font-style: normal;
+  font-weight: 600;
+  src: url('fabric-semibold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: -rolster-system-font;
+  font-style: normal;
+  font-weight: 700;
+  src: url('fabric-bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: -rolster-system-font;
+  font-style: normal;
+  font-weight: 800;
+  src: url('fabric-bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: -rolster-system-font;
+  font-style: normal;
+  font-weight: 900;
+  src: url('fabric-bold.otf') format('opentype');
+}
+
+:root {
+  --rolster-font-size: 16px;
+
+  --heading-1-size: 2rem;
+  --heading-1-letter-spacing: 0em;
+  --heading-1-line-height: 2.275rem;
+
+  --heading-2-size: 1.75rem;
+  --heading-2-letter-spacing: 0em;
+  --heading-2-line-height: 1.925rem;
+
+  --heading-3-size: 1.5rem;
+  --heading-3-letter-spacing: 0em;
+  --heading-3-line-height: 1.825rem;
+
+  --heading-4-size: 1.375rem;
+  --heading-4-letter-spacing: 0em;
+  --heading-4-line-height: 1.675rem;
+
+  --heading-5-size: 1.25rem;
+  --heading-5-letter-spacing: 0em;
+  --heading-5-line-height: 1.575rem;
+
+  --heading-6-size: 1.15rem;
+  --heading-6-letter-spacing: 0em;
+  --heading-6-line-height: 1.325rem;
+
+  --title-size: 1.125rem;
+  --title-letter-spacing: 0.01em;
+  --title-line-height: 1.25rem;
+
+  --subtitle-size: 1.075rem;
+  --subtitle-letter-spacing: 0.01em;
+  --subtitle-line-height: 1.175rem;
+
+  --body-size: 1rem;
+  --body-letter-spacing: 0.01em;
+  --body-line-height: 1.125rem;
+
+  --input-size: 0.95rem;
+  --input-letter-spacing: 0.01em;
+  --input-line-height: 1.125rem;
+
+  --label-size: 0.875rem;
+  --label-letter-spacing: 0.01em;
+  --label-line-height: 1.025rem;
+
+  --smalltext-size: 0.75rem;
+  --smalltext-letter-spacing: 0.01em;
+  --smalltext-line-height: 1rem;
+
+  --caption-size: 0.7375rem;
+  --caption-letter-spacing: 0.01em;
+  --caption-line-height: 1rem;
+
+  --overline-size: 0.675rem;
+  --overline-letter-spacing: 0.1em;
+  --overline-line-height: 1rem;
+}
