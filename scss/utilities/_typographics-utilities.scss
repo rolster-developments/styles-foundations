@@ -1,363 +1,91 @@
 // Rolster Technology Typographics Utilities
-// v1.0.0
+// v2.0.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 13/Abr/2023
-
-h1,
-.h1-default {
-  font-size: var(--heading-1-size);
-  letter-spacing: var(--heading-1-letter-spacing);
-  min-height: var(--heading-1-line-height);
-  line-height: var(--heading-1-line-height);
-}
-
-h2,
-.h2-default {
-  font-size: var(--heading-2-size);
-  letter-spacing: var(--heading-2-letter-spacing);
-  min-height: var(--heading-2-line-height);
-  line-height: var(--heading-2-line-height);
-}
-
-h3,
-.h3-default {
-  font-size: var(--heading-3-size);
-  letter-spacing: var(--heading-3-letter-spacing);
-  min-height: var(--heading-3-line-height);
-  line-height: var(--heading-3-line-height);
-}
-
-h4,
-.h4-default {
-  font-size: var(--heading-4-size);
-  letter-spacing: var(--heading-4-letter-spacing);
-  min-height: var(--heading-4-line-height);
-  line-height: var(--heading-4-line-height);
-}
-
-h5,
-.h5-default {
-  font-size: var(--heading-5-size);
-  letter-spacing: var(--heading-5-letter-spacing);
-  min-height: var(--heading-5-line-height);
-  line-height: var(--heading-5-line-height);
-}
-
-h6,
-.h6-default {
-  font-size: var(--heading-6-size);
-  letter-spacing: var(--heading-6-letter-spacing);
-  min-height: var(--heading-6-line-height);
-  line-height: var(--heading-6-line-height);
-}
-
-.title-default {
-  font-size: var(--title-size);
-  letter-spacing: var(--title-letter-spacing);
-  min-height: var(--title-line-height);
-  line-height: var(--title-line-height);
-}
-
-.subtitle-default {
-  font-size: var(--subtitle-size);
-  letter-spacing: var(--subtitle-letter-spacing);
-  min-height: var(--subtitle-line-height);
-  line-height: var(--subtitle-line-height);
-}
-
-.body-default {
-  font-size: var(--body-size);
-  letter-spacing: var(--body-letter-spacing);
-  min-height: var(--body-line-height);
-  line-height: var(--body-line-height);
-}
-
-.label-default {
-  font-size: var(--label-size);
-  letter-spacing: var(--label-letter-spacing);
-  min-height: var(--label-line-height);
-  line-height: var(--label-line-height);
-}
-
-.smalltext-default {
-  font-size: var(--smalltext-size);
-  letter-spacing: var(--smalltext-letter-spacing);
-  min-height: var(--smalltext-line-height);
-  line-height: var(--smalltext-line-height);
-}
-
-.caption-default {
-  font-size: var(--caption-size);
-  letter-spacing: var(--caption-letter-spacing);
-  min-height: var(--caption-line-height);
-  line-height: var(--caption-line-height);
-}
-
-.overline-default {
-  font-size: var(--overline-size);
-  letter-spacing: var(--overline-letter-spacing);
-  min-height: var(--overline-line-height);
-  line-height: var(--overline-line-height);
-}
-
-.h1-regular {
-  @extend .h1-default;
-  font-weight: var(--font-weight-regular);
-}
-
-.h1-medium {
-  @extend .h1-default;
-  font-weight: var(--font-weight-medium);
-}
-
-.h1-semibold {
-  @extend .h1-default;
-  font-weight: var(--font-weight-semibold);
-}
-
-.h1-bold {
-  @extend .h1-default;
-  font-weight: var(--font-weight-bold);
-}
-
-.h2-regular {
-  @extend .h2-default;
-  font-weight: var(--font-weight-regular);
-}
-
-.h2-medium {
-  @extend .h2-default;
-  font-weight: var(--font-weight-medium);
-}
-
-.h2-semibold {
-  @extend .h2-default;
-  font-weight: var(--font-weight-semibold);
-}
-
-.h2-bold {
-  @extend .h2-default;
-  font-weight: var(--font-weight-bold);
-}
-
-.h3-regular {
-  @extend .h3-default;
-  font-weight: var(--font-weight-regular);
-}
-
-.h3-medium {
-  @extend .h3-default;
-  font-weight: var(--font-weight-medium);
-}
-
-.h3-semibold {
-  @extend .h3-default;
-  font-weight: var(--font-weight-semibold);
-}
-
-.h3-bold {
-  @extend .h3-default;
-  font-weight: var(--font-weight-bold);
-}
-
-.h4-regular {
-  @extend .h4-default;
-  font-weight: var(--font-weight-regular);
-}
-
-.h4-medium {
-  @extend .h4-default;
-  font-weight: var(--font-weight-medium);
-}
-
-.h4-semibold {
-  @extend .h4-default;
-  font-weight: var(--font-weight-semibold);
-}
-
-.h4-bold {
-  @extend .h4-default;
-  font-weight: var(--font-weight-bold);
-}
-
-.h5-regular {
-  @extend .h5-default;
-  font-weight: var(--font-weight-regular);
-}
-
-.h5-medium {
-  @extend .h5-default;
-  font-weight: var(--font-weight-medium);
-}
-
-.h5-semibold {
-  @extend .h5-default;
-  font-weight: var(--font-weight-semibold);
-}
-
-.h5-bold {
-  @extend .h5-default;
-  font-weight: var(--font-weight-bold);
-}
-
-.h6-regular {
-  @extend .h6-default;
-  font-weight: var(--font-weight-regular);
-}
-
-.h6-medium {
-  @extend .h6-default;
-  font-weight: var(--font-weight-medium);
-}
-
-.h6-semibold {
-  @extend .h6-default;
-  font-weight: var(--font-weight-semibold);
-}
-
-.h6-bold {
-  @extend .h6-default;
-  font-weight: var(--font-weight-bold);
-}
-
-.title-regular {
-  @extend .title-default;
-  font-weight: var(--font-weight-regular);
-}
-
-.title-medium {
-  @extend .title-default;
-  font-weight: var(--font-weight-medium);
-}
-
-.title-semibold {
-  @extend .title-default;
-  font-weight: var(--font-weight-semibold);
-}
-
-.title-bold {
-  @extend .title-default;
-  font-weight: var(--font-weight-bold);
-}
-
-.subtitle-regular {
-  @extend .subtitle-default;
-  font-weight: var(--font-weight-regular);
-}
-
-.subtitle-medium {
-  @extend .subtitle-default;
-  font-weight: var(--font-weight-medium);
-}
-
-.subtitle-semibold {
-  @extend .subtitle-default;
-  font-weight: var(--font-weight-semibold);
-}
-
-.subtitle-bold {
-  @extend .subtitle-default;
-  font-weight: var(--font-weight-bold);
-}
-
-.body-regular {
-  @extend .body-default;
-  font-weight: var(--font-weight-regular);
-}
-
-.body-medium {
-  @extend .body-default;
-  font-weight: var(--font-weight-medium);
-}
-
-.body-semibold {
-  @extend .body-default;
-  font-weight: var(--font-weight-semibold);
-}
-
-.body-bold {
-  @extend .body-default;
-  font-weight: var(--font-weight-bold);
-}
-
-.label-regular {
-  @extend .label-default;
-  font-weight: var(--font-weight-regular);
-}
-
-.label-medium {
-  @extend .label-default;
-  font-weight: var(--font-weight-medium);
-}
-
-.label-semibold {
-  @extend .label-default;
-  font-weight: var(--font-weight-semibold);
-}
-
-.label-bold {
-  @extend .label-default;
-  font-weight: var(--font-weight-bold);
-}
-
-.smalltext-regular {
-  @extend .smalltext-default;
-  font-weight: var(--font-weight-regular);
-}
-
-.smalltext-medium {
-  @extend .smalltext-default;
-  font-weight: var(--font-weight-medium);
-}
-
-.smalltext-semibold {
-  @extend .smalltext-default;
-  font-weight: var(--font-weight-semibold);
-}
-
-.smalltext-bold {
-  @extend .smalltext-default;
-  font-weight: var(--font-weight-bold);
-}
-
-.caption-regular {
-  @extend .caption-default;
-  font-weight: var(--font-weight-regular);
-}
-
-.caption-medium {
-  @extend .caption-default;
-  font-weight: var(--font-weight-medium);
-}
-
-.caption-semibold {
-  @extend .caption-default;
-  font-weight: var(--font-weight-semibold);
-}
-
-.caption-bold {
-  @extend .caption-default;
-  font-weight: var(--font-weight-bold);
-}
-
-.overline-regular {
-  @extend .overline-default;
-  font-weight: var(--font-weight-regular);
-}
-
-.overline-medium {
-  @extend .overline-default;
-  font-weight: var(--font-weight-medium);
-}
-
-.overline-semibold {
-  @extend .overline-default;
-  font-weight: var(--font-weight-semibold);
-}
-
-.overline-bold {
-  @extend .overline-default;
-  font-weight: var(--font-weight-bold);
-}
+// Updated: 13/Sep/2023
+
+@mixin typographic($name, $key) {
+  .#{$name}-default {
+    font-size: var(--#{$key}-font-size);
+    letter-spacing: var(--#{$key}-letter-spacing);
+    min-height: var(--#{$key}-line-height);
+    line-height: var(--#{$key}-line-height);
+  }
+
+  .#{$name}-regular {
+    @extend .#{$name}-default;
+    font-weight: var(--font-weight-regular);
+  }
+
+  .#{$name}-medium {
+    @extend .#{$name}-default;
+    font-weight: var(--font-weight-medium);
+  }
+
+  .#{$name}-semibold {
+    @extend .#{$name}-default;
+    font-weight: var(--font-weight-semibold);
+  }
+
+  .#{$name}-bold {
+    @extend .#{$name}-default;
+    font-weight: var(--font-weight-bold);
+  }
+}
+
+h1 {
+  font-size: var(--heading1-font-size);
+  letter-spacing: var(--heading1-letter-spacing);
+  min-height: var(--heading1-line-height);
+  line-height: var(--heading1-line-height);
+}
+
+h2 {
+  font-size: var(--heading2-font-size);
+  letter-spacing: var(--heading2-letter-spacing);
+  min-height: var(--heading2-line-height);
+  line-height: var(--heading2-line-height);
+}
+
+h3 {
+  font-size: var(--heading3-font-size);
+  letter-spacing: var(--heading3-letter-spacing);
+  min-height: var(--heading3-line-height);
+  line-height: var(--heading3-line-height);
+}
+
+h4 {
+  font-size: var(--heading4-font-size);
+  letter-spacing: var(--heading4-letter-spacing);
+  min-height: var(--heading4-line-height);
+  line-height: var(--heading4-line-height);
+}
+
+h5 {
+  font-size: var(--heading5-font-size);
+  letter-spacing: var(--heading5-letter-spacing);
+  min-height: var(--heading5-line-height);
+  line-height: var(--heading5-line-height);
+}
+
+h6 {
+  font-size: var(--heading6-font-size);
+  letter-spacing: var(--heading6-letter-spacing);
+  min-height: var(--heading6-line-height);
+  line-height: var(--heading6-line-height);
+}
+
+@include typographic('h1', 'heading1');
+@include typographic('h2', 'heading2');
+@include typographic('h3', 'heading3');
+@include typographic('h4', 'heading4');
+@include typographic('h5', 'heading5');
+@include typographic('h6', 'heading6');
+@include typographic('title', 'title');
+@include typographic('subtitle', 'subtitle');
+@include typographic('input', 'input');
+@include typographic('label', 'label');
+@include typographic('smalltext', 'smalltext');
+@include typographic('caption', 'caption');
+@include typographic('overline', 'overline');

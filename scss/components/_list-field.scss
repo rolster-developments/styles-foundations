@@ -1,0 +1,253 @@
+// Rolster Technology ListField Component
+// v1.0.1
+// @license MIT
+// Author: Rolster Developers
+// Created: 20/Mar/2018
+// Updated: 12/Sep/2023
+
+.rls-list-field {
+  --rls-boxfield-body-padding: var(--sizing-6) var(--sizing-8);
+
+  --pvt-action-font-color: var(--color-theme-300);
+  --pvt-list-height: 0rem;
+  --pvt-list-opacity: 0;
+  --pvt-list-transform: scale(0, 0);
+  --pvt-list-transform-origin: 0% 0%;
+  --pvt-backdrop-opacity: 0;
+  --pvt-backdrop-bottom: initial;
+
+  position: relative;
+  float: left;
+  width: 100%;
+  box-sizing: border-box;
+
+  &.rls-box-field--active {
+    --rls-boxfield-body-shadow: 0px 0px 0px 3px var(--box-shadow-theme-100);
+    --rls-boxfield-body-border: var(--border-1-theme-300);
+    --rls-boxfield-label-font-color: var(--color-theme-300);
+  }
+
+  &.rls-box-field--disabled {
+    --pvt-action-font-color: var(--color-theme-100);
+  }
+
+  &__control {
+    position: relative;
+    float: left;
+    width: calc(100% - var(--sizing-28));
+    height: var(--sizing-24);
+    line-height: var(--sizing-24);
+    padding: 0rem;
+    cursor: text;
+    border: none;
+    outline: none;
+    color: var(--rls-input-font-color);
+    background: transparent;
+    font-size: var(--rls-input-size);
+    font-weight: var(--font-weight-medium);
+    letter-spacing: var(--rls-input-letter-spacing);
+
+    &::placeholder {
+      color: var(--color-theme-100);
+    }
+
+    &::selection {
+      background: var(--color-rolster-700);
+      color: var(--color-light-500);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+    }
+
+    &__placeholder {
+      position: relative;
+      float: left;
+      color: var(--color-theme-100);
+    }
+  }
+
+  &__action {
+    color: var(--pvt-action-font-color);
+    width: var(--sizing-24);
+    height: var(--sizing-24);
+    padding: 0rem;
+    margin-left: var(--sizing-4);
+    outline: none;
+    background: transparent;
+  }
+
+  &__suggestions {
+    position: absolute;
+    top: 4.25rem;
+    left: 0rem;
+    width: 100%;
+    height: 0rem;
+    overflow: hidden;
+    z-index: var(--z-index-4);
+
+    &--visible {
+      --pvt-list-height: auto;
+      --pvt-list-opacity: 1;
+      --pvt-list-transform: scale(1, 1);
+
+      overflow: initial;
+      opacity: 1;
+      height: auto;
+    }
+
+    &--higher {
+      --pvt-list-transform-origin: 0% 100%;
+
+      top: initial;
+      bottom: var(--sizing-48);
+    }
+  }
+
+  &__ul {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    float: left;
+    width: 100%;
+    height: var(--pvt-list-height);
+    padding: var(--sizing-8) 0rem;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: var(--z-index-2);
+    background: var(--background-theme-500);
+    border: var(--border-1-rolster-500);
+    box-shadow: 0px 0px 0px 3px var(--box-shadow-rolster-500);
+    will-change: opacity, transform;
+    opacity: var(--pvt-list-opacity);
+    transform: var(--pvt-list-transform);
+    transform-origin: var(--pvt-list-transform-origin);
+    transition:
+      opacity 240ms 0ms var(--standard-curve),
+      transform 240ms 0ms var(--standard-curve);
+  }
+
+  &__element {
+    --rls-ballot-subtitle-overflow: hidden;
+    --rls-ballot-subtitle-text-overflow: ellipsis;
+    --rls-ballot-subtitle-white-space: nowrap;
+
+    padding: 0rem var(--sizing-8);
+    box-sizing: border-box;
+    outline: none;
+
+    &:hover {
+      background: var(--background-theme-300);
+    }
+
+    &:not(:hover):focus {
+      background: var(--color-rolster-100);
+    }
+  }
+
+  &__empty {
+    display: flex;
+    padding: 0rem var(--sizing-16);
+    box-sizing: border-box;
+
+    &__avatar {
+      width: var(--sizing-40);
+      height: var(--sizing-40);
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &__description {
+      width: 100%;
+      box-sizing: border-box;
+
+      label {
+        display: block;
+        float: left;
+        width: 100%;
+        color: var(--color-theme-300);
+      }
+    }
+  }
+
+  &__backdrop {
+    position: absolute;
+    display: block;
+    top: 0rem;
+    left: 0rem;
+    right: 0rem;
+    bottom: var(--pvt-backdrop-bottom);
+    opacity: var(--pvt-backdrop-opacity);
+    z-index: var(--z-index-1);
+    will-change: opacity;
+    background: var(--backdrop-rolster-500);
+    backdrop-filter: blur(2px);
+    transition:
+      opacity 120ms 0ms var(--deceleration-curve),
+      bottom 120ms 0ms var(--deceleration-curve);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .rls-list-field {
+    --pvt-list-transform: translateY(100%);
+    --pvt-list-transform-origin: initial;
+
+    &__suggestions {
+      display: flex;
+      justify-content: center;
+
+      &--visible {
+        --pvt-list-transform: translateY(0%);
+        --pvt-backdrop-opacity: 1;
+        --pvt-backdrop-bottom: 0rem;
+
+        position: fixed;
+        top: 0rem;
+        left: 0rem;
+        height: 100%;
+        z-index: var(--z-index-32);
+      }
+    }
+
+    &__ul {
+      position: absolute;
+      bottom: 0rem;
+      width: 100%;
+      max-width: 25rem;
+      min-height: 25%;
+      max-height: 75%;
+      padding: var(--sizing-16) var(--sizing-4);
+      border-radius: var(--sizing-8) var(--sizing-8) 0rem 0rem;
+      border: none;
+      box-shadow: none;
+    }
+
+    &__empty {
+      flex-direction: column;
+      margin: auto;
+
+      &__avatar {
+        width: 100%;
+        height: auto;
+        max-width: 8rem;
+        margin: auto;
+        padding-bottom: var(--sizing-12);
+      }
+
+      &__description {
+        width: 100%;
+        padding-left: 0rem;
+
+        label {
+          text-align: center;
+          margin-top: var(--sizing-4);
+        }
+      }
+    }
+  }
+}

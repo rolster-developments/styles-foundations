@@ -1,45 +1,41 @@
 // Rolster Technology BoxField Component
-// v1.0.0
+// v1.0.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 08/Sep/2022
-// Updated: 14/Abr/2023
+// Updated: 12/Sep/2023
 
 .rls-box-field {
-  --box-field-body-background: rgb(248, 248, 248, 1);
-  --box-field-body-border: var(--border-1-theme-100);
-  --box-field-body-shadow: none;
-  --box-field-body-opacity: 1;
-  --box-field-label-color: var(--color-theme-300);
-  --box-field-label-opacity: 1;
+  --pvt-body-background: rgba(248, 248, 248, 1);
+  --pvt-body-opacity: 1;
+  --pvt-label-opacity: 1;
 
   position: relative;
   float: left;
   width: 100%;
   box-sizing: border-box;
 
-  &__content {
-    transition: height 160ms 0ms var(--standard-curve);
-    box-sizing: border-box;
+  transition: height 160ms 0ms var(--standard-curve);
+  box-sizing: border-box;
 
-    &--active {
-      --box-field-body-background: var(--background-theme-500);
-      --box-field-label-color: var(--color-xofttion-500);
-      --box-field-body-border: var(--border-1-xofttion-500);
-      --box-field-body-shadow: 0px 0px 0px 3px var(--box-shadow-xofttion-500);
-    }
+  &--active {
+    --rls-boxfield-body-border: var(--border-1-rolster-500);
+    --rls-boxfield-body-shadow: 0px 0px 0px 3px var(--box-shadow-rolster-500);
+    --rls-boxfield-label-font-color: var(--color-rolster-500);
 
-    &--error {
-      --box-field-label-color: var(--color-danger-500);
-      --box-field-body-border: var(--border-1) solid var(--color-danger-500);
-      --box-field-body-shadow: 0px 0px 0px 3px var(--box-shadow-danger-500);
-    }
+    --pvt-body-background: var(--background-theme-500);
+  }
 
-    &--disabled {
-      --box-field-body-background: var(--background-theme-500);
-      --box-field-body-opacity: 0.75;
-      --box-field-label-opacity: 0.5;
-    }
+  &--error {
+    --rls-boxfield-body-border: var(--border-1) solid var(--color-danger-500);
+    --rls-boxfield-body-shadow: 0px 0px 0px 3px var(--box-shadow-danger-500);
+    --rls-boxfield-label-font-color: var(--color-danger-500);
+  }
+
+  &--disabled {
+    --pvt-body-background: var(--background-theme-500);
+    --pvt-body-opacity: 0.75;
+    --pvt-label-opacity: 0.5;
   }
 
   &__label {
@@ -49,13 +45,13 @@
     padding: 0rem 0.625rem;
     box-sizing: border-box;
     margin-bottom: var(--sizing-4);
+    color: var(--rls-boxfield-label-font-color);
+    opacity: var(--pvt-label-opacity);
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    color: var(--box-field-label-color);
-    opacity: var(--box-field-label-opacity);
     font-weight: var(--font-weight-medium);
-    font-size: var(--smalltext-size);
+    font-size: var(--smalltext-font-size);
     letter-spacing: var(--smalltext-letter-spacing);
     min-height: var(--smalltext-line-height);
     line-height: var(--smalltext-line-height);
@@ -69,11 +65,12 @@
     display: flex;
     box-sizing: border-box;
     overflow: hidden;
+    opacity: var(--pvt-body-opacity);
     border-radius: var(--sizing-4);
-    background: var(--box-field-body-background);
-    border: var(--box-field-body-border);
-    box-shadow: var(--box-field-body-shadow);
-    opacity: var(--box-field-body-opacity);
+    background: var(--pvt-body-background);
+    padding: var(--rls-boxfield-body-padding);
+    border: var(--rls-boxfield-body-border);
+    box-shadow: var(--rls-boxfield-body-shadow);
   }
 
   &__helper {
@@ -82,7 +79,7 @@
     box-sizing: border-box;
     margin-top: var(--sizing-4);
     font-weight: var(--font-weight-medium);
-    font-size: var(--overline-size);
+    font-size: var(--overline-font-size);
     letter-spacing: var(--overline-letter-spacing);
     min-height: var(--overline-line-height);
     line-height: var(--overline-line-height);

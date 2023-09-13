@@ -1,0 +1,263 @@
+// Rolster Technology Datatable Component
+// v1.0.2
+// @license MIT
+// Author: Rolster Developers
+// Created: 20/Mar/2018
+// Updated: 12/Sep/2023
+
+@mixin datatable_cell_control() {
+  --rls-avatar-border-radius: var(--sizing-6);
+  --rls-avatar-width: var(--sizing-32);
+  --rls-avatar-height: var(--sizing-32);
+  --rls-avatar-font-size: var(--pvt-datatable-font-size);
+
+  --rls-buttonaction-ripple-dimension: var(--sizing-32);
+  --rls-buttonaction-ripple-position: -1rem;
+
+  display: flex;
+  width: var(--sizing-48);
+  padding: 0rem;
+
+  & > * {
+    margin: auto;
+  }
+}
+
+.rls-datatable {
+  --pvt-datatable-letter-spacing: 0.525px;
+  --pvt-datatable-font-size: 0.8725rem;
+
+  position: relative;
+  float: left;
+  width: 100%;
+  border-radius: var(--sizing-8);
+  box-sizing: border-box;
+
+  & > table {
+    position: relative;
+    float: left;
+    width: 100%;
+    display: block;
+  }
+
+  &__content {
+    position: relative;
+    display: block;
+    float: left;
+    width: 100%;
+    border-radius: 0rem;
+  }
+
+  &__table {
+    display: block;
+    float: left;
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+  }
+
+  &__thead {
+    display: block;
+    float: left;
+    width: 100%;
+    margin-bottom: var(--sizing-4);
+  }
+
+  &__header {
+    padding: 0rem var(--sizing-12);
+    display: flex;
+    box-sizing: border-box;
+  }
+
+  &__title {
+    position: relative;
+    display: block;
+    float: left;
+    text-align: left;
+    padding: 0rem var(--sizing-4);
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    height: var(--sizing-40);
+    line-height: var(--sizing-40);
+    color: var(--color-theme-500);
+    font-size: var(--pvt-datatable-font-size);
+    letter-spacing: var(--pvt-datatable-letter-spacing);
+    font-weight: var(--font-weight-bold);
+
+    &--control {
+      @include datatable_cell_control();
+    }
+  }
+
+  &__tbody {
+    position: relative;
+    float: left;
+    width: 100%;
+    display: block;
+  }
+
+  &__data {
+    position: relative;
+    display: flex;
+    padding: 0rem var(--sizing-12);
+    box-sizing: border-box;
+    border: var(--border-1-theme-100);
+    border-radius: var(--sizing-8);
+    background: rgba(252, 252, 252, 1);
+
+    &--error {
+      border: var(--border-1-danger-100);
+    }
+
+    & + .rls-datatable__data {
+      margin-top: var(--sizing-12);
+    }
+  }
+
+  &__cell {
+    position: relative;
+    display: block;
+    float: left;
+    height: var(--sizing-40);
+    line-height: var(--sizing-40);
+    padding: 0rem var(--sizing-4);
+    cursor: default;
+    text-align: left;
+    color: var(--color-theme-input);
+    font-size: var(--pvt-datatable-font-size);
+    letter-spacing: var(--pvt-datatable-letter-spacing);
+    font-weight: var(--font-weight-medium);
+
+    &--control {
+      @include datatable_cell_control();
+    }
+
+    .rls-box-field {
+      width: 100%;
+      padding: 0rem;
+
+      &__label {
+        display: none;
+      }
+
+      &__body {
+        background: transparent;
+        border: none;
+        padding: 0rem;
+        box-shadow: none;
+
+        .rls-input-field {
+          padding: var(--sizing-8) 0rem !important;
+
+          &__component,
+          &__value {
+            font-size: var(--pvt-datatable-font-size);
+            font-weight: var(--font-weight-medium);
+            letter-spacing: var(--body-2-letter-spacing);
+          }
+        }
+      }
+
+      &__icon {
+        padding: 0rem;
+      }
+    }
+
+    .rls-list-field {
+      .rls-box-field__body {
+        padding: var(--sizing-8) 0rem;
+        border: none;
+        box-shadow: none;
+      }
+
+      &__control {
+        font-size: var(--pvt-datatable-font-size);
+        font-weight: var(--font-weight-medium);
+        letter-spacing: var(--body-2-letter-spacing);
+      }
+
+      &__suggestions {
+        top: var(--sizing-48);
+
+        &--higher {
+          top: initial;
+          bottom: var(--sizing-48);
+        }
+      }
+
+      &__action {
+        .rls-icon {
+          font-size: var(--sizing-20);
+        }
+      }
+    }
+
+    .rls-input {
+      margin: var(--sizing-8) 0rem;
+
+      &__component {
+        font-size: var(--pvt-datatable-font-size);
+      }
+    }
+
+    .rls-amount {
+      font-size: var(--pvt-datatable-font-size);
+    }
+
+    .rls-poster {
+      display: flex;
+      width: calc(100% - var(--sizing-4));
+      height: 100%;
+      margin: var(--sizing-6) 0rem;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      height: var(--sizing-28);
+      line-height: var(--sizing-28);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      background: var(--color-rolster-100);
+      color: var(--color-rolster-500);
+    }
+
+    & > .rls-ballot {
+      padding: 0rem;
+      height: var(--sizing-40);
+
+      .rls-ballot__title {
+        font-weight: var(--font-weight-semibold);
+        font-size: var(--smalltext-font-size);
+        letter-spacing: var(--smalltext-letter-spacing);
+        min-height: 1rem;
+        line-height: 1rem;
+      }
+
+      .rls-ballot__subtitle {
+        margin-top: 0rem;
+        font-size: var(--overline-font-size);
+        letter-spacing: var(--overline-letter-spacing);
+        min-height: 1rem;
+        line-height: 1rem;
+      }
+    }
+
+    & > a {
+      &:hover {
+        color: var(--color-theme-700);
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__tfooter {
+    position: relative;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    background: var(--color-theme-100);
+    border-radius: 0rem 0rem var(--sizing-8) var(--sizing-8);
+  }
+}
