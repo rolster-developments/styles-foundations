@@ -2,8 +2,8 @@
   "name": "@rolster/styles-foundations",
   "version": "1.0.2",
   "description": "Front-end style pack to develop responsive and mobile projects on the web with Rolster.",
-  "sass": "scss/styles.scss",
-  "style": "dist/styles.css",
+  "sass": "scss/_rolster-styles.scss",
+  "style": "dist/rolster-styles.css",
   "author": "Rolster Technology <rolster.developments@gmail.com>",
   "license": "MIT",
   "files": [
