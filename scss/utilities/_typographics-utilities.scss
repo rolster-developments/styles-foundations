@@ -84,6 +84,7 @@ h6 {
 @include typographic('h6', 'heading6');
 @include typographic('title', 'title');
 @include typographic('subtitle', 'subtitle');
+@include typographic('body', 'body');
 @include typographic('input', 'input');
 @include typographic('label', 'label');
 @include typographic('smalltext', 'smalltext');

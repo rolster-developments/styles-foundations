@@ -219,7 +219,6 @@
       bottom: 0rem;
       width: 100%;
       max-width: 25rem;
-      min-height: 25%;
       max-height: 75%;
       padding: var(--sizing-16) var(--sizing-4);
       border-radius: var(--sizing-8) var(--sizing-8) 0rem 0rem;
@@ -230,6 +229,7 @@
     &__empty {
       flex-direction: column;
       margin: auto;
+      padding: var(--sizing-24) 0rem;
 
       &__avatar {
         width: 100%;

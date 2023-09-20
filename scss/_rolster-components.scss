@@ -1,9 +1,9 @@
 // Rolster Technology Components
-// v1.0.1
+// v1.0.2
 // @license MIT
 // Author: Rolster Developers
 // Created: 13/Abr/2023
-// Updated: 12/Sep/2023
+// Updated: 19/Sep/2023
 
 :root {
   --rls-avatar-font-size: var(--title-font-size);
@@ -28,6 +28,8 @@
   --rls-button-content-padding: 0rem var(--sizing-8);
   --rls-button-content-radius: var(--sizing-4);
 
+  --rls-buttonaction-color: var(--color-theme-300);
+  --rls-buttonaction-ripple-color: var(--rls-buttonaction-color);
   --rls-buttonaction-ripple-dimension: var(--sizing-36);
   --rls-buttonaction-ripple-position: -1.125rem;
 
