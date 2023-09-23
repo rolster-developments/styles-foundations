@@ -1,34 +1,9 @@
 // Rolster Technology Layout Utilities
-// v1.0.0
+// v1.0.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 11/Abr/2023
-// Updated: 13/Abr/2023
-
-:root {
-  --flex-grid-12-gap: 0rem;
-  --flex-grid-8-gap: 0rem;
-  --flex-grid-6-gap: 0rem;
-  --flex-grid-4-gap: 0rem;
-
-  --flex-grid-12-col-2: 0rem;
-  --flex-grid-12-col-3: 0rem;
-  --flex-grid-12-col-4: 0rem;
-  --flex-grid-12-col-6: 0rem;
-  --flex-grid-12-col-8: 0rem;
-
-  --flex-grid-8-col-2: 0rem;
-  --flex-grid-8-col-3: 0rem;
-  --flex-grid-8-col-4: 0rem;
-  --flex-grid-8-col-6: 0rem;
-
-  --flex-grid-6-col-2: 0rem;
-  --flex-grid-6-col-3: 0rem;
-  --flex-grid-6-col-4: 0rem;
-
-  --flex-grid-4-col-2: 0rem;
-  --flex-grid-4-col-3: 0rem;
-}
+// Updated: 23/Sep/2023
 
 @mixin grid-responsive($size) {
   .#{$size}-grid-8 {
@@ -69,24 +44,6 @@
   .#{$size}-grid-col-1 {
     grid-template-columns: repeat(1, 1fr);
   }
-}
-
-@include grid-responsive('xs');
-
-@media screen and (min-width: 360px) {
-  @include grid-responsive('sm');
-}
-
-@media screen and (min-width: 640px) {
-  @include grid-responsive('md');
-}
-
-@media screen and (min-width: 960px) {
-  @include grid-responsive('lg');
-}
-
-@media screen and (min-width: 1280px) {
-  @include grid-responsive('xl');
 }
 
 @mixin flex-grid-responsive($size) {
@@ -293,6 +250,49 @@
       }
     }
   }
+}
+
+:root {
+  --flex-grid-12-gap: 0rem;
+  --flex-grid-8-gap: 0rem;
+  --flex-grid-6-gap: 0rem;
+  --flex-grid-4-gap: 0rem;
+
+  --flex-grid-12-col-2: 0rem;
+  --flex-grid-12-col-3: 0rem;
+  --flex-grid-12-col-4: 0rem;
+  --flex-grid-12-col-6: 0rem;
+  --flex-grid-12-col-8: 0rem;
+
+  --flex-grid-8-col-2: 0rem;
+  --flex-grid-8-col-3: 0rem;
+  --flex-grid-8-col-4: 0rem;
+  --flex-grid-8-col-6: 0rem;
+
+  --flex-grid-6-col-2: 0rem;
+  --flex-grid-6-col-3: 0rem;
+  --flex-grid-6-col-4: 0rem;
+
+  --flex-grid-4-col-2: 0rem;
+  --flex-grid-4-col-3: 0rem;
+}
+
+@include grid-responsive('xs');
+
+@media screen and (min-width: 360px) {
+  @include grid-responsive('sm');
+}
+
+@media screen and (min-width: 640px) {
+  @include grid-responsive('md');
+}
+
+@media screen and (min-width: 960px) {
+  @include grid-responsive('lg');
+}
+
+@media screen and (min-width: 1280px) {
+  @include grid-responsive('xl');
 }
 
 @include flex-grid-responsive('xs');
