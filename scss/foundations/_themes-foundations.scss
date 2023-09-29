@@ -1,11 +1,22 @@
 // Rolster Technology Themes Foundations
-// v1.0.0
+// v1.1.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 03/Mar/2022
-// Updated: 14/Abr/2023
+// Updated: 29/Sep/2023
 
-@mixin border-theme-rolster($token, $color) {
+@mixin border-theme($theme, $token) {
+  --border-1-theme-#{$token}: var(--border-1) solid
+    var(--border-#{$theme}-#{$token});
+
+  --border-2-theme-#{$token}: var(--border-2) solid
+    var(--border-#{$theme}-#{$token});
+
+  --border-4-theme-#{$token}: var(--border-4) solid
+    var(--border-#{$theme}-#{$token});
+}
+
+@mixin border-rolster-theme($token, $color) {
   --border-1-rolster-#{$token}: var(--border-1) solid
     var(--color-#{$color}-#{$token});
 
@@ -16,7 +27,7 @@
     var(--color-#{$color}-#{$token});
 }
 
-@mixin theme-rolster($color) {
+@mixin rolster-theme($color) {
   --color-rolster-900: var(--color-#{$color}-900);
 
   --color-rolster-700: var(--color-#{$color}-700);
@@ -33,11 +44,11 @@
 
   --skeleton-rolster-100: var(--skeleton-#{$color}-100);
 
-  @include border-theme-rolster(900, $color);
-  @include border-theme-rolster(700, $color);
-  @include border-theme-rolster(500, $color);
-  @include border-theme-rolster(300, $color);
-  @include border-theme-rolster(100, $color);
+  @include border-rolster-theme(900, $color);
+  @include border-rolster-theme(700, $color);
+  @include border-rolster-theme(500, $color);
+  @include border-rolster-theme(300, $color);
+  @include border-rolster-theme(100, $color);
 
   --box-shadow-rolster-500: var(--box-shadow-#{$color}-500);
 
@@ -46,15 +57,18 @@
   --gradient-rolster-500: var(--gradient-#{$color}-500);
 }
 
-@mixin border-theme($theme, $token) {
-  --border-1-theme-#{$token}: var(--border-1) solid
-    var(--border-#{$theme}-#{$token});
+@mixin shadow-theme($theme, $token) {
+  --shadow-#{$token}-theme-2: var(--shadow-#{$token}-#{$theme}-2);
 
-  --border-2-theme-#{$token}: var(--border-2) solid
-    var(--border-#{$theme}-#{$token});
+  --shadow-#{$token}-theme-4: var(--shadow-#{$token}-#{$theme}-4);
 
-  --border-4-theme-#{$token}: var(--border-4) solid
-    var(--border-#{$theme}-#{$token});
+  --shadow-#{$token}-theme-8: var(--shadow-#{$token}-#{$theme}-8);
+
+  --shadow-#{$token}-theme-16: var(--shadow-#{$token}-#{$theme}-16);
+
+  --shadow-#{$token}-theme-24: var(--shadow-#{$token}-#{$theme}-24);
+
+  --shadow-#{$token}-theme-32: var(--shadow-#{$token}-#{$theme}-32);
 }
 
 :root {
@@ -79,25 +93,30 @@
   @include border-theme('dark', 500);
   @include border-theme('dark', 300);
   @include border-theme('dark', 100);
-  @include theme-rolster('base');
+  @include rolster-theme('base');
+  @include shadow-theme('light', 'bottom');
+  @include shadow-theme('light', 'top');
+  @include shadow-theme('light', 'right');
+  @include shadow-theme('light', 'left');
+  @include shadow-theme('light', 'center');
 }
 
 *[rls-theme='success'] {
-  @include theme-rolster('success');
+  @include rolster-theme('success');
 }
 
 *[rls-theme='info'] {
-  @include theme-rolster('info');
+  @include rolster-theme('info');
 }
 
 *[rls-theme='happy'] {
-  @include theme-rolster('happy');
+  @include rolster-theme('happy');
 }
 
 *[rls-theme='warning'] {
-  @include theme-rolster('warning');
+  @include rolster-theme('warning');
 }
 
 *[rls-theme='danger'] {
-  @include theme-rolster('danger');
+  @include rolster-theme('danger');
 }
