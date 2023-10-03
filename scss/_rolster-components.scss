@@ -11,6 +11,8 @@
   --rls-avatar-width: var(--sizing-48);
   --rls-avatar-height: var(--sizing-48);
 
+  --rls-amount-text-align: start;
+
   --rls-ballot-subtitle-width: 100%;
   --rls-ballot-subtitle-height: var(--smalltext-line-height);
   --rls-ballot-subtitle-overflow: initial;
@@ -41,6 +43,7 @@
 
   --rls-input-font-color: var(--color-theme-500);
   --rls-input-font-size: var(--sizing-16);
+  --rls-input-text-align: left;
   --rls-input-letter-spacing: var(--body-letter-spacing);
   --rls-input-height: var(--sizing-24);
   --rls-input-parent-padding: 0rem;

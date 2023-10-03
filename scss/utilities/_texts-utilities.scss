@@ -1,20 +1,38 @@
 // Rolster Technology Text Utilities
-// v1.0.0
+// v1.0.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 08/Sep/2022
-// Updated: 08/Sep/2022
+// Updated: 03/Oct/2023
 
-@mixin align($orientation) {
-  .align-#{$orientation} {
-    text-align: #{$orientation} !important;
-  }
+.align-center {
+  --rls-amount-text-align: center;
+  --rls-input-text-align: center;
+  
+  text-align: center !important;
+  
 }
 
-@include align(center);
-@include align(justify);
-@include align(left);
-@include align(right);
+.align-justify {
+  --rls-amount-text-align: start;
+  --rls-input-text-align: left;
+
+  text-align: justify !important;
+}
+
+.align-left {
+  --rls-amount-text-align: start;
+  --rls-input-text-align: left;
+
+  text-align: left !important;
+}
+
+.align-right {
+  --rls-amount-text-align: end;
+  --rls-input-text-align: right;
+
+  text-align: right !important;
+}
 
 .truncate {
   text-overflow: ellipsis;
