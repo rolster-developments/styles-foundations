@@ -1,0 +1,198 @@
+// Rolster Technology Responsives Foundations
+// v1.0.0
+// @license MIT
+// Author: Rolster Developers
+// Created: 20/Mar/2018
+// Updated: 12/Ago/2022
+
+@mixin responsive($size) {
+  .#{$size}-2-5 {
+    width: 2.5% !important;
+  }
+
+  .#{$size}-5 {
+    width: 5% !important;
+  }
+
+  .#{$size}-7-5 {
+    width: 7.5% !important;
+  }
+
+  .#{$size}-10 {
+    width: 10% !important;
+  }
+
+  .#{$size}-12-5 {
+    width: 12.5% !important;
+  }
+
+  .#{$size}-15 {
+    width: 15% !important;
+  }
+
+  .#{$size}-16 {
+    width: 16.66% !important;
+  }
+
+  .#{$size}-17-5 {
+    width: 17.5% !important;
+  }
+
+  .#{$size}-20 {
+    width: 20% !important;
+  }
+
+  .#{$size}-22-5 {
+    width: 22.5% !important;
+  }
+
+  .#{$size}-25 {
+    width: 25% !important;
+  }
+
+  .#{$size}-27-5 {
+    width: 27.5% !important;
+  }
+
+  .#{$size}-30 {
+    width: 30% !important;
+  }
+
+  .#{$size}-32-5 {
+    width: 32.5% !important;
+  }
+
+  .#{$size}-33 {
+    width: 33.33% !important;
+  }
+
+  .#{$size}-35 {
+    width: 35% !important;
+  }
+
+  .#{$size}-37-5 {
+    width: 37.5% !important;
+  }
+
+  .#{$size}-40 {
+    width: 40% !important;
+  }
+
+  .#{$size}-42-5 {
+    width: 42.5% !important;
+  }
+
+  .#{$size}-45 {
+    width: 45% !important;
+  }
+
+  .#{$size}-47-5 {
+    width: 47.5% !important;
+  }
+
+  .#{$size}-50 {
+    width: 50% !important;
+  }
+
+  .#{$size}-52-5 {
+    width: 52.5% !important;
+  }
+
+  .#{$size}-55 {
+    width: 55% !important;
+  }
+
+  .#{$size}-57-5 {
+    width: 57.5% !important;
+  }
+
+  .#{$size}-60 {
+    width: 60% !important;
+  }
+
+  .#{$size}-62-5 {
+    width: 62.5% !important;
+  }
+
+  .#{$size}-65 {
+    width: 65% !important;
+  }
+
+  .#{$size}-66 {
+    width: 66.66% !important;
+  }
+
+  .#{$size}-67-5 {
+    width: 67.5% !important;
+  }
+
+  .#{$size}-70 {
+    width: 70% !important;
+  }
+
+  .#{$size}-72-5 {
+    width: 72.5% !important;
+  }
+
+  .#{$size}-75 {
+    width: 75% !important;
+  }
+
+  .#{$size}-77-5 {
+    width: 77.5% !important;
+  }
+
+  .#{$size}-80 {
+    width: 80% !important;
+  }
+
+  .#{$size}-82-5 {
+    width: 82.5% !important;
+  }
+
+  .#{$size}-85 {
+    width: 85% !important;
+  }
+
+  .#{$size}-87-5 {
+    width: 87.5% !important;
+  }
+
+  .#{$size}-90 {
+    width: 90% !important;
+  }
+
+  .#{$size}-92-5 {
+    width: 92.5% !important;
+  }
+
+  .#{$size}-95 {
+    width: 95% !important;
+  }
+
+  .#{$size}-97-5 {
+    width: 97.5% !important;
+  }
+
+  .#{$size} {
+    width: 100% !important;
+  }
+}
+
+@include responsive(col-xs);
+
+@media only screen and (min-width: 361px) {
+  @include responsive(col-sm);
+}
+
+@media only screen and (min-width: 641px) {
+  @include responsive(col-md);
+}
+
+@media only screen and (min-width: 961px) {
+  @include responsive(col-lg);
+}
+
+@media only screen and (min-width: 1241px) {
+  @include responsive(col-xl);
+}
