@@ -76,6 +76,20 @@ h6 {
   line-height: var(--heading6-line-height);
 }
 
+p {
+  font-size: var(--body-font-size);
+  letter-spacing: var(--body-letter-spacing);
+  min-height: var(--body-line-height);
+  line-height: var(--body-line-height);
+}
+
+button {
+  font-size: var(--button-font-size);
+  letter-spacing: var(--button-letter-spacing);
+  min-height: var(--button-line-height);
+  line-height: var(--button-line-height);
+}
+
 @include typographic('h1', 'heading1');
 @include typographic('h2', 'heading2');
 @include typographic('h3', 'heading3');
@@ -87,6 +101,7 @@ h6 {
 @include typographic('body', 'body');
 @include typographic('input', 'input');
 @include typographic('label', 'label');
+@include typographic('button', 'button');
 @include typographic('smalltext', 'smalltext');
 @include typographic('caption', 'caption');
 @include typographic('overline', 'overline');

@@ -1,9 +1,9 @@
 // Rolster Technology Fonts MonaSans
-// v1.0.1
+// v1.0.2
 // @license MIT
 // Author: Rolster Developers
 // Created: 03/Mar/2018
-// Updated: 12/Sep/2023
+// Updated: 11/Oct/2023
 
 @font-face {
   font-family: -rolster-system-font;
@@ -72,54 +72,62 @@
   --rolster-font-size: 16px;
 
   --heading1-font-size: 2rem;
-  --heading1-letter-spacing: 0em;
+  --heading1-letter-spacing: 0.0234375em;
   --heading1-line-height: 2.275rem;
 
-  --heading2-font-size: 1.75rem;
-  --heading2-letter-spacing: 0.02em;
+  --heading2-font-size: 1.8rem;
+  --heading2-letter-spacing: 0.0234375em;
   --heading2-line-height: 1.925rem;
 
-  --heading3-font-size: 1.5rem;
-  --heading3-letter-spacing: 0.05em;
+  --heading3-font-size: 1.675rem;
+  --heading3-letter-spacing: 0.0234375em;
   --heading3-line-height: 1.825rem;
 
-  --heading4-font-size: 1.375rem;
-  --heading4-letter-spacing: 0.05em;
+  --heading4-font-size: 1.5rem;
+  --heading4-letter-spacing: 0.0234375em;
   --heading4-line-height: 1.675rem;
 
-  --heading5-font-size: 1.25rem;
-  --heading5-letter-spacing: 0.05em;
+  --heading5-font-size: 1.375rem;
+  --heading5-letter-spacing: 0.0234375em;
   --heading5-line-height: 1.575rem;
 
-  --heading6-font-size: 1.15rem;
-  --heading6-letter-spacing: 0.05em;
+  --heading6-font-size: 1.25rem;
+  --heading6-letter-spacing: 0.0234375em;
   --heading6-line-height: 1.325rem;
 
   --title-font-size: 1.125rem;
-  --title-letter-spacing: 0.03em;
+  --title-letter-spacing: 0.0546875em;
   --title-line-height: 1.25rem;
 
-  --subtitle-font-size: 1.075rem;
-  --subtitle-letter-spacing: 0.03em;
-  --subtitle-line-height: 1.175rem;
+  --subtitle-font-size: 1.09375rem;
+  --subtitle-letter-spacing: 0.0546875em;
+  --subtitle-line-height: 1.11875rem;
 
   --body-font-size: 1rem;
-  --body-letter-spacing: 0.03em;
+  --body-letter-spacing: 0.03125em;
   --body-line-height: 1.125rem;
 
+  --input-font-size: 0.95rem;
+  --input-letter-spacing: 0.03125em;
+  --input-line-height: 1.125rem;
+
   --label-font-size: 0.875rem;
-  --label-letter-spacing: 0.05em;
-  --label-line-height: 1.025rem;
+  --label-letter-spacing: 0.03125em;
+  --label-line-height: 1.0625rem;
+
+  --button-font-size: 0.85rem;
+  --button-letter-spacing: 0.03125em;
+  --button-line-height: 1.0625rem;
 
   --smalltext-font-size: 0.75rem;
-  --smalltext-letter-spacing: 0.07em;
-  --smalltext-line-height: 1rem;
+  --smalltext-letter-spacing: 0.03125em;
+  --smalltext-line-height: 1.0625rem;
 
-  --caption-font-size: 0.7375rem;
-  --caption-letter-spacing: 0.07em;
+  --caption-font-size: 0.7125rem;
+  --caption-letter-spacing: 0.046875em;
   --caption-line-height: 1rem;
 
   --overline-font-size: 0.675rem;
-  --overline-letter-spacing: 0.1em;
+  --overline-letter-spacing: 0.0625em;
   --overline-line-height: 1rem;
 }
