@@ -1,5 +1,5 @@
 // Rolster Technology Text Utilities
-// v1.0.2
+// v1.0.3
 // @license MIT
 // Author: Rolster Developers
 // Created: 08/Sep/2022
@@ -8,9 +8,8 @@
 .align-center {
   --rls-amount-text-align: center;
   --rls-input-text-align: center;
-  
+
   text-align: center !important;
-  
 }
 
 .align-justify {
@@ -51,6 +50,8 @@
 }
 
 .truncate {
+  display: block;
+  width: 100%;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
