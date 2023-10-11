@@ -1,9 +1,9 @@
 // Rolster Technology Components
-// v1.0.2
+// v1.0.3
 // @license MIT
 // Author: Rolster Developers
 // Created: 13/Abr/2023
-// Updated: 19/Sep/2023
+// Updated: 11/Oct/2023
 
 :root {
   --rls-avatar-font-size: var(--title-font-size);
@@ -30,10 +30,10 @@
   --rls-button-content-padding: 0rem var(--sizing-8);
   --rls-button-content-radius: var(--sizing-4);
 
-  --rls-buttonaction-color: var(--color-theme-300);
-  --rls-buttonaction-ripple-color: var(--rls-buttonaction-color);
-  --rls-buttonaction-ripple-dimension: var(--sizing-36);
-  --rls-buttonaction-ripple-position: -1.125rem;
+  --rls-action-color: var(--color-theme-300);
+  --rls-action-ripple-color: var(--rls-action-color);
+  --rls-action-ripple-dimension: var(--sizing-36);
+  --rls-action-ripple-position: -1.125rem;
 
   --rls-form-footer-justify-content: end;
 
@@ -42,9 +42,9 @@
   --rls-icon-height: var(--sizing-24);
 
   --rls-input-font-color: var(--color-theme-500);
-  --rls-input-font-size: var(--sizing-16);
+  --rls-input-font-size: var(--input-font-size);
   --rls-input-text-align: left;
-  --rls-input-letter-spacing: var(--body-letter-spacing);
+  --rls-input-letter-spacing: var(--input-letter-spacing);
   --rls-input-height: var(--sizing-24);
   --rls-input-parent-padding: 0rem;
 
