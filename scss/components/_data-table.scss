@@ -125,10 +125,9 @@
     padding: 0rem var(--sizing-4);
     cursor: default;
     text-align: left;
-    color: var(--color-theme-input);
+    color: var(--rls-input-font-color);
     font-size: var(--pvt-datatable-font-size);
     letter-spacing: var(--pvt-datatable-letter-spacing);
-    font-weight: var(--font-weight-medium);
 
     &--control {
       @include datatable_cell_control();

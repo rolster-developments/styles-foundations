@@ -77,10 +77,10 @@ h6 {
 }
 
 p {
-  font-size: var(--body-font-size);
-  letter-spacing: var(--body-letter-spacing);
-  min-height: var(--body-line-height);
-  line-height: var(--body-line-height);
+  font-size: var(--label-font-size);
+  letter-spacing: var(--label-letter-spacing);
+  min-height: var(--label-line-height);
+  line-height: var(--label-line-height);
 }
 
 button {
