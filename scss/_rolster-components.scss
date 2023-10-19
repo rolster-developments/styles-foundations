@@ -1,11 +1,16 @@
 // Rolster Technology Components
-// v1.0.3
+// v1.0.5
 // @license MIT
 // Author: Rolster Developers
 // Created: 13/Abr/2023
-// Updated: 11/Oct/2023
+// Updated: 19/Oct/2023
 
 :root {
+  --rls-action-color: var(--color-theme-300);
+  --rls-action-ripple-color: var(--rls-action-color);
+  --rls-action-ripple-dimension: var(--sizing-36);
+  --rls-action-ripple-position: -1.125rem;
+
   --rls-avatar-font-size: var(--title-font-size);
   --rls-avatar-border-radius: var(--sizing-8);
   --rls-avatar-width: var(--sizing-48);
@@ -22,7 +27,7 @@
   --rls-boxfield-body-padding: 0rem;
   --rls-boxfield-body-border: var(--border-1-theme-100);
   --rls-boxfield-body-shadow: none;
-  --rls-boxfield-label-font-color: var(--color-theme-100);
+  --rls-boxfield-label-font-color: var(--color-theme-300);
 
   --rls-breadcrumb-height: var(--sizing-36);
 
@@ -30,10 +35,7 @@
   --rls-button-content-padding: 0rem var(--sizing-8);
   --rls-button-content-radius: var(--sizing-4);
 
-  --rls-action-color: var(--color-theme-300);
-  --rls-action-ripple-color: var(--rls-action-color);
-  --rls-action-ripple-dimension: var(--sizing-36);
-  --rls-action-ripple-position: -1.125rem;
+  --rls-card-content-padding: var(--sizing-16);
 
   --rls-form-footer-justify-content: end;
 
