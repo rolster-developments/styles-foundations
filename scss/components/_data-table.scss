@@ -1,15 +1,15 @@
 // Rolster Technology Datatable Component
-// v1.0.2
+// v1.1.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 12/Sep/2023
+// Updated: 23/Oct/2023
 
 @mixin datatable_cell_control() {
   --rls-avatar-border-radius: var(--sizing-6);
   --rls-avatar-width: var(--sizing-32);
   --rls-avatar-height: var(--sizing-32);
-  --rls-avatar-font-size: var(--pvt-datatable-font-size);
+  --rls-avatar-font-size: var(--rls-datatable-font-size);
 
   --rls-action-ripple-dimension: var(--sizing-32);
   --rls-action-ripple-position: -1rem;
@@ -24,8 +24,8 @@
 }
 
 .rls-datatable {
-  --pvt-datatable-letter-spacing: 0.525px;
-  --pvt-datatable-font-size: 0.8725rem;
+  --rls-input-font-size: var(--rls-datatable-font-size);
+  --rls-input-letter-spacing: var(--rls-datatable-letter-spacing);
 
   position: relative;
   float: left;
@@ -34,73 +34,62 @@
   box-sizing: border-box;
 
   & > table {
-    position: relative;
-    float: left;
-    width: 100%;
-    display: block;
-  }
-
-  &__content {
-    position: relative;
-    display: block;
-    float: left;
-    width: 100%;
-    border-radius: 0rem;
-  }
-
-  &__table {
-    display: block;
-    float: left;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--sizing-8);
     border-spacing: 0;
     border-collapse: collapse;
   }
 
   &__thead {
-    display: block;
-    float: left;
     width: 100%;
-    margin-bottom: var(--sizing-4);
   }
 
   &__header {
-    padding: 0rem var(--sizing-12);
     display: flex;
+    column-gap: var(--sizing-8);
+    padding: 0rem var(--sizing-12);
     box-sizing: border-box;
   }
 
   &__title {
     position: relative;
-    display: block;
-    float: left;
-    text-align: left;
-    padding: 0rem var(--sizing-4);
+    display: flex;
     text-align: left;
     overflow: hidden;
     white-space: nowrap;
-    text-overflow: ellipsis;
     height: var(--sizing-40);
     line-height: var(--sizing-40);
     color: var(--color-theme-500);
-    font-size: var(--pvt-datatable-font-size);
-    letter-spacing: var(--pvt-datatable-letter-spacing);
+    font-size: var(--rls-datatable-font-size);
+    letter-spacing: var(--rls-datatable-letter-spacing);
     font-weight: var(--font-weight-bold);
 
     &--control {
       @include datatable_cell_control();
     }
+
+    & > span {
+      width: 100%;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    & > .rls-icon {
+      margin: auto;
+    }
   }
 
   &__tbody {
-    position: relative;
-    float: left;
-    width: 100%;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--sizing-12);
   }
 
   &__data {
     position: relative;
     display: flex;
+    column-gap: var(--sizing-8);
     padding: 0rem var(--sizing-12);
     box-sizing: border-box;
     border: var(--border-1-theme-100);
@@ -110,28 +99,34 @@
     &--error {
       border: var(--border-1-danger-100);
     }
-
-    & + .rls-datatable__data {
-      margin-top: var(--sizing-12);
-    }
   }
 
   &__cell {
     position: relative;
-    display: block;
-    float: left;
+    display: flex;
     height: var(--sizing-40);
     line-height: var(--sizing-40);
-    padding: 0rem var(--sizing-4);
-    cursor: default;
     text-align: left;
+    cursor: default;
+    overflow: hidden;
+    white-space: nowrap;
     color: var(--rls-input-font-color);
-    font-size: var(--pvt-datatable-font-size);
-    letter-spacing: var(--pvt-datatable-letter-spacing);
+    font-size: var(--rls-datatable-font-size);
+    letter-spacing: var(--rls-datatable-letter-spacing);
     font-weight: var(--font-weight-regular);
+
+    &--overflow {
+      overflow: initial;
+    }
 
     &--control {
       @include datatable_cell_control();
+    }
+
+    & > span {
+      width: 100%;
+      text-overflow: ellipsis;
+      overflow: hidden;
     }
 
     .rls-box-field {
@@ -150,13 +145,6 @@
 
         .rls-input-field {
           padding: var(--sizing-8) 0rem !important;
-
-          &__component,
-          &__value {
-            font-size: var(--pvt-datatable-font-size);
-            font-weight: var(--font-weight-medium);
-            letter-spacing: var(--body-2-letter-spacing);
-          }
         }
       }
 
@@ -173,7 +161,7 @@
       }
 
       &__control {
-        font-size: var(--pvt-datatable-font-size);
+        font-size: var(--rls-datatable-font-size);
         font-weight: var(--font-weight-medium);
         letter-spacing: var(--body-2-letter-spacing);
       }
@@ -196,14 +184,10 @@
 
     .rls-input {
       margin: var(--sizing-8) 0rem;
-
-      &__component {
-        font-size: var(--pvt-datatable-font-size);
-      }
     }
 
     .rls-amount {
-      font-size: var(--pvt-datatable-font-size);
+      font-size: var(--rls-datatable-font-size);
     }
 
     .rls-poster {
