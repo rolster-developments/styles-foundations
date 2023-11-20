@@ -1,9 +1,9 @@
 // Rolster Technology BoxField Component
-// v1.0.2
+// v1.0.3
 // @license MIT
 // Author: Rolster Developers
 // Created: 08/Sep/2022
-// Updated: 18/Sep/2023
+// Updated: 17/Nov/2023
 
 .rls-box-field {
   --pvt-body-background: rgba(248, 248, 248, 1);
@@ -11,7 +11,9 @@
   --pvt-label-opacity: 1;
 
   position: relative;
-  float: left;
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--sizing-4);
   width: 100%;
   box-sizing: border-box;
   transition: height 160ms 0ms var(--standard-curve);
@@ -42,7 +44,6 @@
     width: 100%;
     padding: 0rem 0.625rem;
     box-sizing: border-box;
-    margin-bottom: var(--sizing-4);
     color: var(--rls-boxfield-label-font-color);
     opacity: var(--pvt-label-opacity);
     overflow: hidden;
@@ -75,7 +76,6 @@
     color: var(--color-theme-100);
     padding: 0rem 0.625rem;
     box-sizing: border-box;
-    margin-top: var(--sizing-4);
     font-weight: var(--font-weight-medium);
     font-size: var(--overline-font-size);
     letter-spacing: var(--overline-letter-spacing);
@@ -84,9 +84,11 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+  }
 
-    &--error {
-      color: var(--color-danger-500);
-    }
+  &__error {
+    padding: 0rem var(--sizing-8);
+    box-sizing: border-box;
+    margin-top: var(--sizing-2);
   }
 }

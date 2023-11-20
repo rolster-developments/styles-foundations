@@ -1,16 +1,16 @@
 // Rolster Technology ListField Component
-// v1.0.3
+// v1.0.5
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 02/Nov/2023
+// Updated: 15/Nov/2023
 
 .rls-list-field {
   --rls-boxfield-body-padding: var(--sizing-6) var(--sizing-8);
 
   --pvt-action-font-color: var(--color-theme-300);
   --pvt-list-height: 0rem;
-  --pvt-list-max-height: 15rem;
+  --pvt-list-max-height: 20rem;
   --pvt-list-opacity: 0;
   --pvt-list-transform: scale(0, 0);
   --pvt-list-transform-origin: 0% 0%;
@@ -113,7 +113,7 @@
       width: 100%;
       height: var(--pvt-list-height);
       max-height: var(--pvt-list-max-height);
-      padding: var(--sizing-8);
+      padding: var(--sizing-8) var(--sizing-4);
       box-sizing: border-box;
       border-radius: 0.5rem;
       overflow: hidden;
@@ -135,7 +135,10 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0rem var(--sizing-8);
+    box-sizing: border-box;
   }
 
   &__element {
@@ -145,6 +148,9 @@
 
     box-sizing: border-box;
     outline: none;
+    border-radius: var(--sizing-8);
+    padding: var(--sizing-4);
+    box-sizing: border-box;
 
     &:hover {
       background: var(--background-theme-300);
@@ -157,7 +163,7 @@
 
   &__empty {
     display: flex;
-    padding: 0rem var(--sizing-16);
+    padding: 0rem var(--sizing-8);
     box-sizing: border-box;
 
     &__avatar {
@@ -170,13 +176,19 @@
     }
 
     &__description {
-      width: 100%;
-      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      row-gap: var(--sizing-4);
+      overflow: hidden;
 
       label {
         display: block;
-        float: left;
         width: 100%;
+        color: var(--color-theme-300);
+      }
+
+      p {
+        white-space: initial;
         color: var(--color-theme-300);
       }
     }
