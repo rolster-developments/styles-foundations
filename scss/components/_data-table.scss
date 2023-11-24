@@ -1,9 +1,9 @@
 // Rolster Technology Datatable Component
-// v1.1.2
+// v1.1.3
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 18/Nov/2023
+// Updated: 24/Nov/2023
 
 @mixin datatable_cell_control() {
   --rls-avatar-border-radius: var(--sizing-6);
@@ -13,6 +13,10 @@
 
   --rls-action-ripple-dimension: var(--sizing-32);
   --rls-action-ripple-position: -1rem;
+
+  --rls-switch-element-size: var(--sizing-20);
+  --rls-switch-bar-radius: var(--sizing-4);
+  --rls-switch-bar-height: var(--sizing-8);
 
   display: flex;
   width: var(--sizing-48);
