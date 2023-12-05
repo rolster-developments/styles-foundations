@@ -1,9 +1,9 @@
 // Rolster Technology BoxField Component
-// v1.0.3
+// v1.0.4
 // @license MIT
 // Author: Rolster Developers
 // Created: 08/Sep/2022
-// Updated: 17/Nov/2023
+// Updated: 04/Dic/2023
 
 .rls-box-field {
   --pvt-body-background: rgba(248, 248, 248, 1);
@@ -18,7 +18,7 @@
   box-sizing: border-box;
   transition: height 160ms 0ms var(--standard-curve);
 
-  &--active {
+  &--focused {
     --rls-boxfield-body-border: var(--border-1-rolster-500);
     --rls-boxfield-body-shadow: 0px 0px 0px 3px var(--box-shadow-rolster-500);
     --rls-boxfield-label-font-color: var(--color-rolster-500);
