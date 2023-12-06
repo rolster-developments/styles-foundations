@@ -1,9 +1,9 @@
 // Rolster Technology ListField Component
-// v1.0.5
+// v1.0.6
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 15/Nov/2023
+// Updated: 06/Dic/2023
 
 .rls-list-field {
   --rls-boxfield-body-padding: var(--sizing-6) var(--sizing-8);
@@ -18,8 +18,6 @@
   --pvt-backdrop-bottom: initial;
 
   position: relative;
-  float: left;
-  width: 100%;
   box-sizing: border-box;
 
   &.rls-box-field--active {
@@ -34,7 +32,6 @@
 
   &__control {
     position: relative;
-    float: left;
     width: calc(100% - var(--sizing-28));
     height: var(--sizing-24);
     line-height: var(--sizing-24);
@@ -42,8 +39,8 @@
     cursor: text;
     border: none;
     outline: none;
-    color: var(--rls-input-font-color);
     background: transparent;
+    color: var(--rls-input-font-color);
     font-size: var(--rls-input-size);
     font-weight: var(--font-weight-medium);
     letter-spacing: var(--rls-input-letter-spacing);
@@ -80,13 +77,13 @@
 
   &__suggestions {
     position: absolute;
-    top: 4.25rem;
+    top: calc(100% + var(--sizing-8));
     left: 0rem;
     width: 100%;
     height: 0rem;
     max-height: var(--pvt-list-max-height);
     overflow: hidden;
-    z-index: var(--z-index-1);
+    z-index: var(--z-index-2);
     padding-bottom: var(--sizing-12);
 
     &--visible {
@@ -202,7 +199,7 @@
     right: 0rem;
     bottom: var(--pvt-backdrop-bottom);
     opacity: var(--pvt-backdrop-opacity);
-    z-index: var(--z-index-1);
+    z-index: var(--z-index-2);
     will-change: opacity;
     background: var(--backdrop-rolster-500);
     backdrop-filter: blur(2px);
