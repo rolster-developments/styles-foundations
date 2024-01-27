@@ -1,16 +1,16 @@
 // Rolster Technology ListField Component
-// v1.0.7
+// v1.1.7
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 07/Dic/2023
+// Updated: 27/Ene/2024
 
 .rls-list-field {
   --rls-boxfield-body-padding: var(--sizing-x3) var(--sizing-x4);
 
   --pvt-action-font-color: var(--color-theme-300);
   --pvt-list-height: 0rem;
-  --pvt-list-max-height: 20rem;
+  --pvt-list-max-height: 160rem;
   --pvt-list-opacity: 0;
   --pvt-list-transform: scale(0, 0);
   --pvt-list-transform-origin: 0% 0%;
@@ -112,7 +112,7 @@
       max-height: var(--pvt-list-max-height);
       padding: var(--sizing-x4) var(--sizing-x2);
       box-sizing: border-box;
-      border-radius: 4rem;
+      border-radius: var(--sizing-x4);
       overflow: hidden;
       z-index: var(--z-index-2);
       background: var(--background-theme-500);
@@ -236,7 +236,7 @@
       position: absolute;
       bottom: 0rem;
       width: 100%;
-      max-width: 25rem;
+      max-width: 200rem;
       max-height: 75%;
       padding: var(--sizing-x8) var(--sizing-x2);
       border-radius: var(--sizing-x4) var(--sizing-x4) 0rem 0rem;
@@ -252,7 +252,7 @@
       &__avatar {
         width: 100%;
         height: auto;
-        max-width: 8rem;
+        max-width: var(--sizing-x8);
         margin: auto;
         padding-bottom: var(--sizing-x6);
       }

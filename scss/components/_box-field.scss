@@ -1,9 +1,9 @@
 // Rolster Technology BoxField Component
-// v1.0.4
+// v1.1.4
 // @license MIT
 // Author: Rolster Developers
 // Created: 08/Sep/2022
-// Updated: 04/Dic/2023
+// Updated: 27/Ene/2024
 
 .rls-box-field {
   --pvt-body-background: rgba(248, 248, 248, 1);
@@ -40,9 +40,8 @@
 
   &__label {
     position: relative;
-    float: left;
     width: 100%;
-    padding: 0rem 0.625rem;
+    padding: 0rem 5rem;
     box-sizing: border-box;
     color: var(--rls-boxfield-label-font-color);
     opacity: var(--pvt-label-opacity);
@@ -74,7 +73,7 @@
 
   &__helper {
     color: var(--color-theme-100);
-    padding: 0rem 0.625rem;
+    padding: 0rem 5rem;
     box-sizing: border-box;
     font-weight: var(--font-weight-medium);
     font-size: var(--overline-font-size);
