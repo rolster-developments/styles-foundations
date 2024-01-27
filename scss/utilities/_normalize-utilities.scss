@@ -85,12 +85,12 @@ select,
 textarea {
   font-family: inherit;
   line-height: normal;
+  font-size: 8rem;
 }
 
 textarea {
   overflow: auto;
   height: auto;
-  font: inherit;
   color: inherit;
 }
 
@@ -103,7 +103,6 @@ input,
 optgroup,
 select {
   margin: 0rem;
-  font: inherit;
   color: inherit;
 }
 

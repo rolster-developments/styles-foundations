@@ -61,7 +61,7 @@
 
     &__nav {
       position: relative;
-      width: var(--sizing-x20);
+      width: 160rem;
       height: 100%;
       margin: 0rem;
       padding: 0rem;
@@ -71,9 +71,9 @@
       background: var(--background-theme-100);
 
       & + .rls-app__page__content {
-        --rls-snackbar-left: calc(50% + var(--sizing-x10));
+        --rls-snackbar-left: calc(50% + 80rem);
 
-        width: calc(100% - var(--sizing-x20));
+        width: calc(100% - 160rem);
       }
     }
 

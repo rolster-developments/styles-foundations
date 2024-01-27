@@ -100,6 +100,7 @@
     background: rgba(252, 252, 252, 1);
 
     &--error {
+      background: var(--color-danger-100);
       border: var(--border-1-danger-100);
     }
   }

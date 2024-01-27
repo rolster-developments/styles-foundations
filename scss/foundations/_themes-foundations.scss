@@ -1,74 +1,83 @@
 // Rolster Technology Themes Foundations
-// v1.1.0
+// v2.1.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 03/Mar/2022
-// Updated: 29/Sep/2023
+// Updated: 27/Ene/2024
 
-@mixin border-theme($theme, $token) {
+@mixin border-base-theme($name, $token) {
   --border-1-theme-#{$token}: var(--border-1) solid
-    var(--border-#{$theme}-#{$token});
+    var(--border-#{$name}-#{$token});
 
   --border-2-theme-#{$token}: var(--border-2) solid
-    var(--border-#{$theme}-#{$token});
+    var(--border-#{$name}-#{$token});
 
   --border-4-theme-#{$token}: var(--border-4) solid
-    var(--border-#{$theme}-#{$token});
+    var(--border-#{$name}-#{$token});
 }
 
-@mixin border-rolster-theme($token, $color) {
+@mixin border-rolster-theme($name, $token) {
   --border-1-rolster-#{$token}: var(--border-1) solid
-    var(--color-#{$color}-#{$token});
+    var(--color-#{$name}-#{$token});
 
   --border-2-rolster-#{$token}: var(--border-2) solid
-    var(--color-#{$color}-#{$token});
+    var(--color-#{$name}-#{$token});
 
   --border-4-rolster-#{$token}: var(--border-4) solid
-    var(--color-#{$color}-#{$token});
+    var(--color-#{$name}-#{$token});
+
+  --border-1-#{$name}-#{$token}: var(--border-1) solid
+    var(--color-#{$name}-#{$token});
+
+  --border-2-#{$name}-#{$token}: var(--border-2) solid
+    var(--color-#{$name}-#{$token});
+
+  --border-4-#{$name}-#{$token}: var(--border-4) solid
+    var(--color-#{$name}-#{$token});
 }
 
-@mixin rolster-theme($color) {
-  --color-rolster-900: var(--color-#{$color}-900);
+@mixin rolster-theme($name) {
+  --color-rolster-900: var(--color-#{$name}-900);
 
-  --color-rolster-700: var(--color-#{$color}-700);
+  --color-rolster-700: var(--color-#{$name}-700);
 
-  --color-rolster-500: var(--color-#{$color}-500);
+  --color-rolster-500: var(--color-#{$name}-500);
 
-  --color-rolster-300: var(--color-#{$color}-300);
+  --color-rolster-300: var(--color-#{$name}-300);
 
-  --color-rolster-100: var(--color-#{$color}-100);
+  --color-rolster-100: var(--color-#{$name}-100);
 
-  --skeleton-rolster-500: var(--skeleton-#{$color}-500);
+  --skeleton-rolster-500: var(--skeleton-#{$name}-500);
 
-  --skeleton-rolster-300: var(--skeleton-#{$color}-300);
+  --skeleton-rolster-300: var(--skeleton-#{$name}-300);
 
-  --skeleton-rolster-100: var(--skeleton-#{$color}-100);
+  --skeleton-rolster-100: var(--skeleton-#{$name}-100);
 
-  @include border-rolster-theme(900, $color);
-  @include border-rolster-theme(700, $color);
-  @include border-rolster-theme(500, $color);
-  @include border-rolster-theme(300, $color);
-  @include border-rolster-theme(100, $color);
+  @include border-rolster-theme(900, $name);
+  @include border-rolster-theme(700, $name);
+  @include border-rolster-theme(500, $name);
+  @include border-rolster-theme(300, $name);
+  @include border-rolster-theme(100, $name);
 
-  --box-shadow-rolster-500: var(--box-shadow-#{$color}-500);
+  --box-shadow-rolster-500: var(--box-shadow-#{$name}-500);
 
-  --backdrop-rolster-500: var(--backdrop-#{$color}-500);
+  --backdrop-rolster-500: var(--backdrop-#{$name}-500);
 
-  --gradient-rolster-500: var(--gradient-#{$color}-500);
+  --gradient-rolster-500: var(--gradient-#{$name}-500);
 }
 
-@mixin shadow-theme($theme, $token) {
-  --shadow-#{$token}-theme-2: var(--shadow-#{$token}-#{$theme}-2);
+@mixin shadow-theme($name, $token) {
+  --shadow-#{$name}-theme-2: var(--shadow-#{$name}-#{$token}-2);
 
-  --shadow-#{$token}-theme-4: var(--shadow-#{$token}-#{$theme}-4);
+  --shadow-#{$name}-theme-4: var(--shadow-#{$name}-#{$token}-4);
 
-  --shadow-#{$token}-theme-8: var(--shadow-#{$token}-#{$theme}-8);
+  --shadow-#{$name}-theme-8: var(--shadow-#{$name}-#{$token}-8);
 
-  --shadow-#{$token}-theme-16: var(--shadow-#{$token}-#{$theme}-16);
+  --shadow-#{$name}-theme-16: var(--shadow-#{$name}-#{$token}-16);
 
-  --shadow-#{$token}-theme-24: var(--shadow-#{$token}-#{$theme}-24);
+  --shadow-#{$name}-theme-24: var(--shadow-#{$name}-#{$token}-24);
 
-  --shadow-#{$token}-theme-32: var(--shadow-#{$token}-#{$theme}-32);
+  --shadow-#{$name}-theme-32: var(--shadow-#{$name}-#{$token}-32);
 }
 
 :root {
@@ -90,9 +99,9 @@
 
   --border-theme-100: var(--border-dark-100);
 
-  @include border-theme('dark', 500);
-  @include border-theme('dark', 300);
-  @include border-theme('dark', 100);
+  @include border-base-theme('dark', 500);
+  @include border-base-theme('dark', 300);
+  @include border-base-theme('dark', 100);
   @include rolster-theme('base');
   @include shadow-theme('light', 'bottom');
   @include shadow-theme('light', 'top');
