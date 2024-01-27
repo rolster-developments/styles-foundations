@@ -11,7 +11,7 @@
 }
 
 html {
-  font-size: var(--rolster-font-size, 16px);
+  font-size: var(--rolster-font-size, 2px);
   font-family: var(--rolster-font-family);
 }
 
@@ -58,7 +58,7 @@ svg:not(:root) {
 }
 
 figure {
-  margin: 1rem 40rem;
+  margin: 8rem 40rem;
 }
 
 hr {
@@ -76,7 +76,7 @@ kbd,
 pre,
 samp {
   font-family: inherit;
-  font-size: 1rem;
+  font-size: 8rem;
 }
 
 label,
@@ -95,7 +95,7 @@ textarea {
 }
 
 textarea::placeholder {
-  padding-left: 0.125rem;
+  padding-left: 1rem;
 }
 
 form,

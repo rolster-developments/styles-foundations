@@ -1,24 +1,24 @@
 // Rolster Technology Layout Utilities
-// v1.0.1
+// v2.0.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 11/Abr/2023
-// Updated: 23/Sep/2023
+// Updated: 27/Ene/2024
 
 @mixin grid-responsive($size) {
   .#{$size}-grid-8 {
     display: grid;
-    gap: var(--sizing-8);
+    gap: var(--sizing-x4);
   }
 
   .#{$size}-grid-12 {
     display: grid;
-    gap: var(--sizing-12);
+    gap: var(--sizing-x6);
   }
 
   .#{$size}-grid-16 {
     display: grid;
-    gap: var(--sizing-16);
+    gap: var(--sizing-x8);
   }
 
   .#{$size}-grid-col-12 {
@@ -48,89 +48,90 @@
 
 @mixin flex-grid-responsive($size) {
   .#{$size}-flex-grid-8 {
+    --flex-grid-12-gap: 3.6672rem;
+    --flex-grid-8-gap: 28rem;
+    --flex-grid-6-gap: 3.336rem;
+    --flex-grid-4-gap: 3rem;
+
+    --flex-grid-12-col-2: 3.4rem;
+    --flex-grid-12-col-3: 3.1rem;
+    --flex-grid-12-col-4: 2.8rem;
+    --flex-grid-12-col-6: 2.18rem;
+    --flex-grid-12-col-8: 3rem;
+
+    --flex-grid-8-col-2: 3.1rem;
+    --flex-grid-8-col-3: 2.6rem;
+    --flex-grid-8-col-4: 2.2rem;
+    --flex-grid-8-col-6: 1.8rem;
+
+    --flex-grid-6-col-2: 2.82rem;
+    --flex-grid-6-col-3: 2.2rem;
+    --flex-grid-6-col-4: 1.7rem;
+
+    --flex-grid-4-col-2: 2rem;
+    --flex-grid-4-col-3: 1rem;
+
     display: inline-flex;
     flex-wrap: wrap;
-    gap: var(--sizing-8);
-    --flex-grid-12-gap: 0.4584rem;
-    --flex-grid-8-gap: 0.4375rem;
-    --flex-grid-6-gap: 0.417rem;
-    --flex-grid-4-gap: 0.375rem;
-
-    --flex-grid-12-col-2: 0.425rem;
-    --flex-grid-12-col-3: 0.3875rem;
-    --flex-grid-12-col-4: 0.35rem;
-    --flex-grid-12-col-6: 0.2725rem;
-    --flex-grid-12-col-8: 0.375rem;
-
-    --flex-grid-8-col-2: 0.3875rem;
-    --flex-grid-8-col-3: 0.325rem;
-    --flex-grid-8-col-4: 0.275rem;
-    --flex-grid-8-col-6: 0.225rem;
-
-    --flex-grid-6-col-2: 0.3525rem;
-    --flex-grid-6-col-3: 0.275rem;
-    --flex-grid-6-col-4: 0.2125rem;
-
-    --flex-grid-4-col-2: 0.25rem;
-    --flex-grid-4-col-3: 0.125rem;
+    gap: var(--sizing-x4);
   }
 
   .#{$size}-flex-grid-12 {
+    --flex-grid-12-gap: 7.3125rem;
+    --flex-grid-8-gap: 7rem;
+    --flex-grid-6-gap: 6,6475rem;
+    --flex-grid-4-gap: 6rem;
+
+    --flex-grid-12-col-2: 6,624rem;
+    --flex-grid-12-col-3: 6rem;
+    --flex-grid-12-col-4: 5,38rem;
+    --flex-grid-12-col-6: 4,1rem;
+    --flex-grid-12-col-8: 3rem;
+
+    --flex-grid-8-col-2: 6,182rem;
+    --flex-grid-8-col-3: 5,2rem;
+    --flex-grid-8-col-4: 4rem;
+    --flex-grid-8-col-6: 2,2rem;
+
+    --flex-grid-6-col-2: 5,4rem;
+    --flex-grid-6-col-3: 4rem;
+    --flex-grid-6-col-4: 2,84rem;
+
+    --flex-grid-4-col-2: 4rem;
+    --flex-grid-4-col-3: 2,2rem;
+
     display: inline-flex;
     flex-wrap: wrap;
-    gap: var(--sizing-12);
-
-    --flex-grid-12-gap: 0.9140625rem;
-    --flex-grid-8-gap: 0.875rem;
-    --flex-grid-6-gap: 0.8309375rem;
-    --flex-grid-4-gap: 0.75rem;
-
-    --flex-grid-12-col-2: 0.828rem;
-    --flex-grid-12-col-3: 0.75rem;
-    --flex-grid-12-col-4: 0.6725rem;
-    --flex-grid-12-col-6: 0.5125rem;
-    --flex-grid-12-col-8: 0.375rem;
-
-    --flex-grid-8-col-2: 0.77275rem;
-    --flex-grid-8-col-3: 0.65rem;
-    --flex-grid-8-col-4: 0.5rem;
-    --flex-grid-8-col-6: 0.275rem;
-
-    --flex-grid-6-col-2: 0.675rem;
-    --flex-grid-6-col-3: 0.5rem;
-    --flex-grid-6-col-4: 0.355rem;
-
-    --flex-grid-4-col-2: 0.5rem;
-    --flex-grid-4-col-3: 0.275rem;
+    gap: var(--sizing-x6);
   }
 
   .#{$size}-flex-grid-16 {
+    --flex-grid-12-gap: 7.3125rem;
+    --flex-grid-8-gap: 7rem;
+    --flex-grid-6-gap: 6,6475rem;
+    --flex-grid-4-gap: 6rem;
+
+    --flex-grid-12-col-2: 6.66rem;
+    --flex-grid-12-col-3: 6rem;
+    --flex-grid-12-col-4: 5,38rem;
+    --flex-grid-12-col-6: 4,1rem;
+    --flex-grid-12-col-8: 3rem;
+
+    --flex-grid-8-col-2: 6,182rem;
+    --flex-grid-8-col-3: 5,2rem;
+    --flex-grid-8-col-4: 4rem;
+    --flex-grid-8-col-6: 2,2rem;
+
+    --flex-grid-6-col-2: 5,4rem;
+    --flex-grid-6-col-3: 4rem;
+    --flex-grid-6-col-4: 2,84rem;
+
+    --flex-grid-4-col-2: 4rem;
+    --flex-grid-4-col-3: 2,2rem;
+
     display: inline-flex;
     flex-wrap: wrap;
-    gap: var(--sizing-16);
-
-    --flex-grid-12-gap: 0.9140625rem;
-    --flex-grid-8-gap: 0.875rem;
-    --flex-grid-6-gap: 0.8309375rem;
-    --flex-grid-4-gap: 0.75rem;
-
-    --flex-grid-12-col-2: 0.8325rem;
-    --flex-grid-12-col-3: 0.75rem;
-    --flex-grid-12-col-4: 0.6725rem;
-    --flex-grid-12-col-6: 0.5125rem;
-    --flex-grid-12-col-8: 0.375rem;
-
-    --flex-grid-8-col-2: 0.77275rem;
-    --flex-grid-8-col-3: 0.65rem;
-    --flex-grid-8-col-4: 0.5rem;
-    --flex-grid-8-col-6: 0.275rem;
-
-    --flex-grid-6-col-2: 0.675rem;
-    --flex-grid-6-col-3: 0.5rem;
-    --flex-grid-6-col-4: 0.355rem;
-
-    --flex-grid-4-col-2: 0.5rem;
-    --flex-grid-4-col-3: 0.275rem;
+    gap: var(--sizing-x8);
   }
 
   .#{$size}-flex-grid-col-4 {

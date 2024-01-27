@@ -13,7 +13,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  row-gap: var(--sizing-4);
+  row-gap: var(--sizing-x2);
   width: 100%;
   box-sizing: border-box;
   transition: height 160ms 0ms var(--standard-curve);
@@ -65,7 +65,7 @@
     box-sizing: border-box;
     overflow: hidden;
     opacity: var(--pvt-body-opacity);
-    border-radius: var(--sizing-4);
+    border-radius: var(--sizing-x2);
     background: var(--pvt-body-background);
     padding: var(--rls-boxfield-body-padding);
     border: var(--rls-boxfield-body-border);
@@ -87,8 +87,8 @@
   }
 
   &__error {
-    padding: 0rem var(--sizing-8);
+    padding: 0rem var(--sizing-x4);
     box-sizing: border-box;
-    margin-top: var(--sizing-2);
+    margin-top: var(--sizing-x1);
   }
 }

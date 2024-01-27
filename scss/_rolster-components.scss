@@ -8,13 +8,13 @@
 :root {
   --rls-action-color: var(--color-theme-300);
   --rls-action-ripple-color: var(--rls-action-color);
-  --rls-action-ripple-dimension: var(--sizing-36);
+  --rls-action-ripple-dimension: var(--sizing-x18);
   --rls-action-ripple-position: -1.125rem;
 
   --rls-avatar-font-size: var(--title-font-size);
-  --rls-avatar-border-radius: var(--sizing-8);
-  --rls-avatar-width: var(--sizing-48);
-  --rls-avatar-height: var(--sizing-48);
+  --rls-avatar-border-radius: var(--sizing-x4);
+  --rls-avatar-width: var(--sizing-x24);
+  --rls-avatar-height: var(--sizing-x24);
 
   --rls-amount-text-align: start;
 
@@ -29,44 +29,44 @@
   --rls-boxfield-body-shadow: none;
   --rls-boxfield-label-font-color: var(--color-theme-300);
 
-  --rls-breadcrumb-height: var(--sizing-36);
+  --rls-breadcrumb-height: var(--sizing-x18);
 
   --rls-button-label-text-transform: uppercase;
-  --rls-button-content-padding: 0rem var(--sizing-8);
-  --rls-button-content-radius: var(--sizing-4);
+  --rls-button-content-padding: 0rem var(--sizing-x4);
+  --rls-button-content-radius: var(--sizing-x2);
 
-  --rls-card-content-padding: var(--sizing-16);
+  --rls-card-content-padding: var(--sizing-x8);
 
   --rls-datatable-letter-spacing: 0.0625em;
   --rls-datatable-font-size: 0.875rem;
 
   --rls-form-footer-justify-content: end;
 
-  --rls-icon-font-size: var(--sizing-24);
-  --rls-icon-width: var(--sizing-24);
-  --rls-icon-height: var(--sizing-24);
+  --rls-icon-font-size: var(--sizing-x12);
+  --rls-icon-width: var(--sizing-x12);
+  --rls-icon-height: var(--sizing-x12);
   --rls-icon-color: inherit;
 
   --rls-input-font-color: var(--color-theme-500);
   --rls-input-font-size: var(--input-font-size);
   --rls-input-text-align: left;
   --rls-input-letter-spacing: var(--input-letter-spacing);
-  --rls-input-height: var(--sizing-24);
+  --rls-input-height: var(--sizing-x12);
   --rls-input-parent-padding: 0rem;
 
-  --rls-poster-height: var(--sizing-36);
-  --rls-poster-padding: var(--sizing-8);
+  --rls-poster-height: var(--sizing-x18);
+  --rls-poster-padding: var(--sizing-x4);
 
   --rls-snackbar-left: 50%;
 
-  --rls-switch-element-size: var(--sizing-24);
-  --rls-switch-bar-radius: var(--sizing-6);
-  --rls-switch-bar-height: var(--sizing-12);
+  --rls-switch-element-size: var(--sizing-x12);
+  --rls-switch-bar-radius: var(--sizing-x3);
+  --rls-switch-bar-height: var(--sizing-x6);
 
   --rls-tabulartext-char-width: 0.625rem;
-  --rls-tabulartext-pointer-width: 0.25rem;
+  --rls-tabulartext-pointer-width: 2rem;
 
-  --rls-toolbar-height: var(--sizing-56);
+  --rls-toolbar-height: var(--sizing-x28);
 }
 
 @import 'components/app';
