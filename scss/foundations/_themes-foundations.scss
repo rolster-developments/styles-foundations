@@ -1,11 +1,11 @@
 // Rolster Technology Themes Foundations
-// v2.1.0
+// v2.1.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 03/Mar/2022
-// Updated: 27/Ene/2024
+// Updated: 29/Ene/2024
 
-@mixin border-base-theme($name, $token) {
+@mixin border-theme-color($name, $token) {
   --border-1-theme-#{$token}: var(--border-1) solid
     var(--border-#{$name}-#{$token});
 
@@ -16,6 +16,39 @@
     var(--border-#{$name}-#{$token});
 }
 
+@mixin shadow-position-theme($position, $theme) {
+  --shadow-#{$position}-theme-2: var(--shadow-#{$position}-#{$theme}-2);
+
+  --shadow-#{$position}-theme-4: var(--shadow-#{$position}-#{$theme}-4);
+
+  --shadow-#{$position}-theme-8: var(--shadow-#{$position}-#{$theme}-8);
+
+  --shadow-#{$position}-theme-16: var(--shadow-#{$position}-#{$theme}-16);
+
+  --shadow-#{$position}-theme-24: var(--shadow-#{$position}-#{$theme}-24);
+
+  --shadow-#{$position}-theme-32: var(--shadow-#{$position}-#{$theme}-32);
+}
+
+@mixin border-color($name, $token) {
+  --border-1-#{$name}-#{$token}: var(--border-1) solid
+    var(--color-#{$name}-#{$token});
+
+  --border-2-#{$name}-#{$token}: var(--border-2) solid
+    var(--color-#{$name}-#{$token});
+
+  --border-4-#{$name}-#{$token}: var(--border-4) solid
+    var(--color-#{$name}-#{$token});
+}
+
+@mixin border-rolster-color($name) {
+  @include border-color($name, 100);
+  @include border-color($name, 300);
+  @include border-color($name, 500);
+  @include border-color($name, 700);
+  @include border-color($name, 900);
+}
+
 @mixin border-rolster-theme($name, $token) {
   --border-1-rolster-#{$token}: var(--border-1) solid
     var(--color-#{$name}-#{$token});
@@ -24,15 +57,6 @@
     var(--color-#{$name}-#{$token});
 
   --border-4-rolster-#{$token}: var(--border-4) solid
-    var(--color-#{$name}-#{$token});
-
-  --border-1-#{$name}-#{$token}: var(--border-1) solid
-    var(--color-#{$name}-#{$token});
-
-  --border-2-#{$name}-#{$token}: var(--border-2) solid
-    var(--color-#{$name}-#{$token});
-
-  --border-4-#{$name}-#{$token}: var(--border-4) solid
     var(--color-#{$name}-#{$token});
 }
 
@@ -66,20 +90,6 @@
   @include border-rolster-theme($name, 100);
 }
 
-@mixin shadow-theme($name, $token) {
-  --shadow-#{$name}-theme-2: var(--shadow-#{$name}-#{$token}-2);
-
-  --shadow-#{$name}-theme-4: var(--shadow-#{$name}-#{$token}-4);
-
-  --shadow-#{$name}-theme-8: var(--shadow-#{$name}-#{$token}-8);
-
-  --shadow-#{$name}-theme-16: var(--shadow-#{$name}-#{$token}-16);
-
-  --shadow-#{$name}-theme-24: var(--shadow-#{$name}-#{$token}-24);
-
-  --shadow-#{$name}-theme-32: var(--shadow-#{$name}-#{$token}-32);
-}
-
 :root {
   --background-theme-500: var(--background-light-500);
 
@@ -99,15 +109,24 @@
 
   --border-theme-100: var(--border-dark-100);
 
-  @include border-base-theme('dark', 500);
-  @include border-base-theme('dark', 300);
-  @include border-base-theme('dark', 100);
+  @include border-theme-color('dark', 500);
+  @include border-theme-color('dark', 300);
+  @include border-theme-color('dark', 100);
+
+  @include shadow-position-theme('bottom', 'light');
+  @include shadow-position-theme('top', 'light');
+  @include shadow-position-theme('right', 'light');
+  @include shadow-position-theme('left', 'light');
+  @include shadow-position-theme('center', 'light');
+
+  @include border-rolster-color('base');
+  @include border-rolster-color('success');
+  @include border-rolster-color('info');
+  @include border-rolster-color('warning');
+  @include border-rolster-color('happy');
+  @include border-rolster-color('danger');
+
   @include rolster-theme('base');
-  @include shadow-theme('bottom', 'light');
-  @include shadow-theme('top', 'light');
-  @include shadow-theme('right', 'light');
-  @include shadow-theme('left', 'light');
-  @include shadow-theme('center', 'light');
 }
 
 *[rls-theme='success'] {
