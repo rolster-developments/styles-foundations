@@ -1,9 +1,9 @@
 // Rolster Technology Datatable Component
-// v1.2.4
+// v1.2.5
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 29/Ene/2024
+// Updated: 17/Mar/2024
 
 @mixin datatable_cell_control() {
   --rls-avatar-border-radius: var(--sizing-x3);
@@ -146,10 +146,6 @@
         border: none;
         padding: 0rem;
         box-shadow: none;
-
-        .rls-input-field {
-          padding: var(--sizing-x4) 0rem !important;
-        }
       }
 
       &__icon {
@@ -158,6 +154,11 @@
 
       &__error {
         display: none;
+      }
+
+      .rls-input-number,
+      .rls-input-text {
+        --rls-input-parent-padding: 0rem;
       }
     }
 

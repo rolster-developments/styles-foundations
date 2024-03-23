@@ -1,9 +1,9 @@
 // Rolster Technology Normalize Utilities
-// v1.0.0
+// v1.0.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 11/Ago/2022
-// Updated: 11/Ago/2022
+// Updated: 23/Mar/2024
 
 :root {
   --rolster-font-family: -rolster-system-font, -apple-system, BlinkMacSystemFont,
@@ -88,6 +88,12 @@ textarea {
   font-size: 8rem;
 }
 
+a,
+p,
+span {
+  font-size: inherit;
+}
+
 textarea {
   overflow: auto;
   height: auto;
@@ -115,26 +121,15 @@ input[type='submit'] {
 a,
 a div,
 a span,
-a ion-icon,
-a ion-label,
 button,
 button div,
 button span,
-button ion-icon,
-button ion-label,
 [tappable],
 [tappable] div,
 [tappable] span,
-[tappable] ion-icon,
-[tappable] ion-label,
 input,
 textarea {
   touch-action: manipulation;
-}
-
-a ion-label,
-button ion-label {
-  pointer-events: none;
 }
 
 button {
