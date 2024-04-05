@@ -102,23 +102,23 @@
   }
 }
 
-@include padding('4');
-@include padding('8');
-@include padding('12');
-@include padding('16');
-@include padding('24');
-@include padding('36');
+@include padding('x4');
+@include padding('x8');
+@include padding('x12');
+@include padding('x16');
+@include padding('x24');
+@include padding('x36');
 
-@include padding-box-sizing('4');
-@include padding-box-sizing('8');
-@include padding-box-sizing('12');
-@include padding-box-sizing('16');
-@include padding-box-sizing('24');
-@include padding-box-sizing('36');
+@include padding-box-sizing('x4');
+@include padding-box-sizing('x8');
+@include padding-box-sizing('x12');
+@include padding-box-sizing('x16');
+@include padding-box-sizing('x24');
+@include padding-box-sizing('x36');
 
-@include margin('4');
-@include margin('8');
-@include margin('12');
-@include margin('16');
-@include margin('24');
-@include margin('36');
+@include margin('x4');
+@include margin('x8');
+@include margin('x12');
+@include margin('x16');
+@include margin('x24');
+@include margin('x36');

@@ -1,9 +1,9 @@
 // Rolster Technology Normalize Utilities
-// v1.0.1
+// v1.0.2
 // @license MIT
 // Author: Rolster Developers
 // Created: 11/Ago/2022
-// Updated: 23/Mar/2024
+// Updated: 04/Abr/2024
 
 :root {
   --rolster-font-family: -rolster-system-font, -apple-system, BlinkMacSystemFont,
@@ -85,6 +85,10 @@ select,
 textarea {
   font-family: inherit;
   line-height: normal;
+  font-size: 8rem;
+}
+
+button {
   font-size: 8rem;
 }
 
