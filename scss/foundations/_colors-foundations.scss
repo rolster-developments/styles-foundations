@@ -1,9 +1,9 @@
 // Rolster Technology Colors Foundations
-// v2.0.0
+// v2.1.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 03/Mar/2022
-// Updated: 27/Ene/2024
+// Updated: 06/Abr/2024
 
 :root {
   --background-dark-500: rgba(37, 38, 65, 1);
@@ -42,31 +42,35 @@
 
   --border-light-100: rgba(128, 141, 190, 1);
 
-  --color-base-900: rgba(21, 56, 101, 1);
+  // COLORS PRIMARY
 
-  --color-base-700: rgba(17, 75, 147, 1);
+  --color-primary-900: rgba(21, 56, 101, 1);
 
-  --color-base-500: rgba(33, 122, 214, 1);
+  --color-primary-700: rgba(17, 75, 147, 1);
 
-  --color-base-300: rgba(136, 186, 241, 1);
+  --color-primary-500: rgba(33, 122, 214, 1);
 
-  --color-base-100: rgba(227, 236, 251, 1);
+  --color-primary-300: rgba(136, 186, 241, 1);
 
-  --skeleton-base-500: rgba(17, 75, 147, 0.5);
+  --color-primary-100: rgba(227, 236, 251, 1);
 
-  --skeleton-base-300: rgba(17, 75, 147, 0.25);
+  --skeleton-primary-500: rgba(17, 75, 147, 0.5);
 
-  --skeleton-base-100: rgba(17, 75, 147, 0.1);
+  --skeleton-primary-300: rgba(17, 75, 147, 0.25);
 
-  --box-shadow-base-500: rgba(33, 122, 214, 0.24);
+  --skeleton-primary-100: rgba(17, 75, 147, 0.1);
 
-  --backdrop-base-500: rgba(18, 46, 79, 0.8);
+  --box-shadow-primary-500: rgba(33, 122, 214, 0.24);
 
-  --gradient-base-500: linear-gradient(
+  --backdrop-primary-500: rgba(21, 56, 101, 0.8);
+
+  --gradient-primary-500: linear-gradient(
     180deg,
     rgb(33, 122, 214) 0%,
     rgb(17, 75, 147) 100%
   );
+
+  // COLORS SUCCESS
 
   --color-success-900: rgba(16, 81, 70, 1);
 
@@ -86,13 +90,15 @@
 
   --box-shadow-success-500: rgba(12, 192, 157, 0.24);
 
-  --backdrop-success-500: rgba(14, 70, 60, 0.8);
+  --backdrop-success-500: rgba(16, 81, 70, 0.8);
 
   --gradient-success-500: linear-gradient(
     180deg,
     rgb(12, 192, 157) 0%,
     rgb(10, 123, 104) 100%
   );
+
+  // COLORS INFO
 
   --color-info-900: rgba(10, 77, 112, 1);
 
@@ -112,7 +118,7 @@
 
   --box-shadow-info-500: rgba(24, 182, 246, 0.24);
 
-  --backdrop-info-500: rgba(20, 77, 100, 0.8);
+  --backdrop-info-500: rgba(10, 77, 112, 0.8);
 
   --gradient-info-500: linear-gradient(
     180deg,
@@ -120,57 +126,63 @@
     rgb(0, 110, 164) 100%
   );
 
-  --color-happy-900: rgba(60, 22, 46, 1);
+  // COLORS HAPPY
 
-  --color-happy-700: rgba(114, 54, 93, 1);
+  --color-happy-900: rgb(63, 3, 104, 1);
 
-  --color-happy-500: rgba(169, 80, 142, 1);
+  --color-happy-700: rgb(113, 27, 174, 1);
 
-  --color-happy-300: rgba(218, 152, 200, 1);
+  --color-happy-500: rgba(154, 43, 242, 1);
 
-  --color-happy-100: rgba(243, 219, 238, 1);
+  --color-happy-300: rgb(197, 127, 255, 1);
 
-  --skeleton-happy-500: rgba(114, 54, 93, 0.5);
+  --color-happy-100: rgb(243, 219, 238, 1);
 
-  --skeleton-happy-300: rgba(114, 54, 93, 0.25);
+  --skeleton-happy-500: rgba(113, 27, 174, 0.5);
 
-  --skeleton-happy-100: rgba(114, 54, 93, 0.1);
+  --skeleton-happy-300: rgba(113, 27, 174, 0.25);
 
-  --box-shadow-happy-500: rgba(169, 80, 142, 0.24);
+  --skeleton-happy-100: rgba(113, 27, 174, 0.1);
 
-  --backdrop-happy-500: rgba(64, 35, 55, 0.8);
+  --box-shadow-happy-500: rgba(154, 43, 242, 0.24);
+
+  --backdrop-happy-500: rgba(63, 3, 104, 0.8);
 
   --gradient-happy-500: linear-gradient(
     180deg,
-    rgb(169, 80, 142) 0%,
-    rgb(114, 54, 93) 100%
+    rgb(154, 43, 242) 0%,
+    rgb(113, 27, 174) 100%
   );
 
-  --color-warning-900: rgba(155, 60, 17, 1);
+  // COLORS WARNING
 
-  --color-warning-700: rgba(235, 101, 11, 1);
+  --color-warning-900: rgb(70, 27, 2, 1);
 
-  --color-warning-500: rgba(252, 165, 73, 1);
+  --color-warning-700: rgba(164, 96, 4, 1);
 
-  --color-warning-300: rgba(254, 220, 170, 1);
+  --color-warning-500: rgb(239, 178, 3, 1);
 
-  --color-warning-100: rgba(255, 248, 237, 1);
+  --color-warning-300: rgb(255, 196, 28, 1);
 
-  --skeleton-warning-500: rgba(235, 101, 11, 0.5);
+  --color-warning-100: rgb(255, 249, 194, 1);
 
-  --skeleton-warning-300: rgba(235, 101, 11, 0.25);
+  --skeleton-warning-500: rgba(164, 96, 4, 0.5);
 
-  --skeleton-warning-100: rgba(235, 101, 11, 0.1);
+  --skeleton-warning-300: rgba(164, 96, 4, 0.25);
 
-  --box-shadow-warning-500: rgba(252, 165, 73, 0.24);
+  --skeleton-warning-100: rgba(164, 96, 4, 0.1);
 
-  --backdrop-warning-500: rgba(102, 71, 38, 0.8);
+  --box-shadow-warning-500: rgba(239, 178, 3, 0.24);
+
+  --backdrop-warning-500: rgba(70, 27, 2, 0.8);
 
   --gradient-warning-500: linear-gradient(
     180deg,
-    rgb(252, 165, 73) 0%,
-    rgb(235, 101, 11) 100%
+    rgb(239, 178, 3) 0%,
+    rgb(164, 96, 4) 100%
   );
+
+  // COLORS DANGER
 
   --color-danger-900: rgba(130, 26, 26, 1);
 
@@ -190,11 +202,67 @@
 
   --box-shadow-danger-500: rgba(244, 60, 60, 0.24);
 
-  --backdrop-danger-500: rgba(99, 33, 33, 0.8);
+  --backdrop-danger-500: rgba(130, 26, 26, 0.8);
 
   --gradient-danger-500: linear-gradient(
     180deg,
     rgb(244, 60, 60) 0%,
     rgb(190, 23, 23) 100%
+  );
+
+  // COLORS COFFEE
+
+  --color-coffee-900: rgba(93, 57, 49, 1);
+
+  --color-coffee-700: rgba(140, 83, 66, 1);
+
+  --color-coffee-500: rgba(182, 121, 89, 1);
+
+  --color-coffee-300: rgba(219, 193, 172, 1);
+
+  --color-coffee-100: rgb(243, 234, 225, 1);
+
+  --skeleton-coffee-500: rgba(140, 83, 66, 0.5);
+
+  --skeleton-coffee-300: rgba(140, 83, 66, 0.25);
+
+  --skeleton-coffee-100: rgba(140, 83, 66, 0.1);
+
+  --box-shadow-coffee-500: rgba(182, 121, 89, 0.24);
+
+  --backdrop-coffee-500: rgba(93, 57, 49, 0.8);
+
+  --gradient-coffee-500: linear-gradient(
+    180deg,
+    rgb(182, 121, 89) 0%,
+    rgb(140, 83, 66) 100%
+  );
+
+  // COLORS OBSIDIAN
+
+  --color-obsidian-900: rgba(58, 50, 45, 1);
+
+  --color-obsidian-700: rgba(97, 84, 71, 1);
+
+  --color-obsidian-500: rgba(141, 127, 101, 1);
+
+  --color-obsidian-300: rgb(178, 170, 146, 1);
+
+  --color-obsidian-100: rgb(230, 228, 219, 1);
+
+  --skeleton-obsidian-500: rgba(97, 84, 71, 0.5);
+
+  --skeleton-obsidian-300: rgba(97, 84, 71, 0.25);
+
+  --skeleton-obsidian-100: rgba(97, 84, 71, 0.1);
+
+  --box-shadow-obsidian-500: rgba(141, 127, 101, 0.24);
+
+  --backdrop-obsidian-500: rgba(58, 50, 45, 0.8);
+
+  --gradient-obsidian-500: linear-gradient(
+    180deg,
+    rgb(141, 127, 101) 0%,
+    rgb(97, 84, 71) 100%
   );
 }
