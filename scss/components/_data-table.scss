@@ -1,5 +1,5 @@
 // Rolster Technology Datatable Component
-// v1.2.6
+// v1.2.7
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
@@ -95,7 +95,14 @@
     row-gap: var(--sizing-x6);
   }
 
-  &__data {
+  &__summary {
+    padding-left: var(--sizing-x6);
+    padding-right: var(--pvt-header-padding-right);
+    box-sizing: border-box;
+  }
+
+  &__data,
+  &__totals {
     position: relative;
     display: flex;
     column-gap: var(--sizing-x4);
@@ -111,7 +118,8 @@
     }
   }
 
-  &__cell {
+  &__cell,
+  &__info {
     position: relative;
     display: flex;
     height: var(--sizing-x20);
