@@ -1,9 +1,9 @@
 // Rolster Technology Colors Foundations
-// v2.1.0
+// v2.2.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 03/Mar/2022
-// Updated: 06/Abr/2024
+// Updated: 13/Abr/2024
 
 :root {
   --background-dark-500: rgba(37, 38, 65, 1);
@@ -72,142 +72,144 @@
 
   // COLORS SUCCESS
 
-  --color-success-900: rgba(16, 81, 70, 1);
+  --color-success-900: rgba(4, 80, 56, 1);
 
-  --color-success-700: rgba(10, 123, 104, 1);
+  --color-success-700: rgba(0, 124, 82, 1);
 
-  --color-success-500: rgba(12, 192, 157, 1);
+  --color-success-500: rgba(10, 191, 121, 1);
 
-  --color-success-300: rgba(87, 241, 204, 1);
+  --color-success-300: rgba(106, 235, 177, 1);
 
-  --color-success-100: rgba(202, 253, 238, 1);
+  --color-success-100: rgba(208, 251, 227, 1);
 
-  --skeleton-success-500: rgba(10, 123, 104, 0.5);
+  --skeleton-success-500: rgba(0, 124, 82, 0.5);
 
-  --skeleton-success-300: rgba(10, 123, 104, 0.25);
+  --skeleton-success-300: rgba(0, 124, 82, 0.25);
 
-  --skeleton-success-100: rgba(10, 123, 104, 0.1);
+  --skeleton-success-100: rgba(0, 124, 82, 0.1);
 
-  --box-shadow-success-500: rgba(12, 192, 157, 0.24);
+  --box-shadow-success-500: rgba(10, 191, 121, 0.24);
 
-  --backdrop-success-500: rgba(16, 81, 70, 0.8);
+  --backdrop-success-500: rgba(4, 80, 56, 0.8);
 
   --gradient-success-500: linear-gradient(
     180deg,
-    rgb(12, 192, 157) 0%,
-    rgb(10, 123, 104) 100%
+    rgb(10, 191, 121) 0%,
+    rgb(0, 124, 82) 100%
   );
 
   // COLORS INFO
 
-  --color-info-900: rgba(10, 77, 112, 1);
+  --color-info-900: rgba(7, 70, 115, 1);
 
-  --color-info-700: rgba(0, 110, 164, 1);
+  --color-info-700: rgba(0, 100, 170, 1);
 
-  --color-info-500: rgba(24, 182, 246, 1);
+  --color-info-500: rgba(2, 159, 245, 1);
 
-  --color-info-300: rgba(122, 215, 255, 1);
+  --color-info-300: rgba(118, 207, 255, 1);
 
-  --color-info-100: rgba(218, 243, 253, 1);
+  --color-info-100: rgba(222, 241, 255, 1);
 
-  --skeleton-info-500: rgba(0, 110, 164, 0.5);
+  --skeleton-info-500: rgba(0, 100, 170, 0.5);
 
-  --skeleton-info-300: rgba(0, 110, 164, 0.25);
+  --skeleton-info-300: rgba(0, 100, 170, 0.25);
 
-  --skeleton-info-100: rgba(0, 110, 164, 0.1);
+  --skeleton-info-100: rgba(0, 100, 170, 0.1);
 
-  --box-shadow-info-500: rgba(24, 182, 246, 0.24);
+  --box-shadow-info-500: rgba(2, 159, 245, 0.24);
 
-  --backdrop-info-500: rgba(10, 77, 112, 0.8);
+  --backdrop-info-500: rgba(7, 70, 115, 0.8);
 
   --gradient-info-500: linear-gradient(
     180deg,
-    rgb(24, 182, 246) 0%,
-    rgb(0, 110, 164) 100%
+    rgb(2, 159, 245) 0%,
+    rgb(0, 100, 170) 100%
   );
 
   // COLORS HAPPY
 
-  --color-happy-900: rgb(63, 3, 104, 1);
+  --color-happy-900: rgb(63, 19, 63, 1);
 
-  --color-happy-700: rgb(113, 27, 174, 1);
+  --color-happy-700: rgb(142, 58, 145, 1);
 
-  --color-happy-500: rgba(154, 43, 242, 1);
+  --color-happy-500: rgba(170, 73, 176, 1);
 
-  --color-happy-300: rgb(197, 127, 255, 1);
+  --color-happy-300: rgba(217, 147, 223, 1);
 
-  --color-happy-100: rgb(243, 219, 238, 1);
+  --color-happy-100: rgba(240, 217, 245, 1);
 
-  --skeleton-happy-500: rgba(113, 27, 174, 0.5);
+  --skeleton-happy-500: rgba(142, 58, 145, 0.5);
 
-  --skeleton-happy-300: rgba(113, 27, 174, 0.25);
+  --skeleton-happy-300: rgba(142, 58, 145, 0.25);
 
-  --skeleton-happy-100: rgba(113, 27, 174, 0.1);
+  --skeleton-happy-100: rgba(142, 58, 145, 0.1);
 
-  --box-shadow-happy-500: rgba(154, 43, 242, 0.24);
+  --box-shadow-happy-500: rgba(170, 73, 176, 0.24);
 
-  --backdrop-happy-500: rgba(63, 3, 104, 0.8);
+  --backdrop-happy-500: rgba(63, 19, 63, 0.8);
 
   --gradient-happy-500: linear-gradient(
     180deg,
-    rgb(154, 43, 242) 0%,
-    rgb(113, 27, 174) 100%
+    rgb(170, 73, 176) 0%,
+    rgb(142, 58, 145) 100%
   );
 
   // COLORS WARNING
 
-  --color-warning-900: rgb(70, 27, 2, 1);
+  --color-warning-900: rgb(116, 68, 15, 1);
 
-  --color-warning-700: rgba(164, 96, 4, 1);
+  --color-warning-700: rgba(166, 107, 2, 1);
 
-  --color-warning-500: rgb(239, 178, 3, 1);
+  --color-warning-500: rgb(255, 206, 0, 1);
 
-  --color-warning-300: rgb(255, 196, 28, 1);
+  --color-warning-300: rgba(255, 238, 65, 1);
 
-  --color-warning-100: rgb(255, 249, 194, 1);
+  --color-warning-100: rgba(255, 254, 193, 1);
 
-  --skeleton-warning-500: rgba(164, 96, 4, 0.5);
+  --skeleton-warning-500: rgba(166, 107, 2, 0.5);
 
-  --skeleton-warning-300: rgba(164, 96, 4, 0.25);
+  --skeleton-warning-300: rgba(166, 107, 2, 0.25);
 
-  --skeleton-warning-100: rgba(164, 96, 4, 0.1);
+  --skeleton-warning-100: rgba(166, 107, 2, 0.1);
 
-  --box-shadow-warning-500: rgba(239, 178, 3, 0.24);
+  --box-shadow-warning-500: rgba(255, 206, 0, 0.24);
 
-  --backdrop-warning-500: rgba(70, 27, 2, 0.8);
+  --backdrop-warning-500: rgba(116, 68, 15, 0.8);
 
   --gradient-warning-500: linear-gradient(
     180deg,
-    rgb(239, 178, 3) 0%,
-    rgb(164, 96, 4) 100%
+    rgb(255, 206, 0) 0%,
+    rgb(166, 107, 2) 100%
   );
 
   // COLORS DANGER
 
-  --color-danger-900: rgba(130, 26, 26, 1);
+  color: rgb(136, 20, 20);
 
-  --color-danger-700: rgba(190, 23, 23, 1);
+  --color-danger-900: rgba(136, 20, 20, 1);
 
-  --color-danger-500: rgba(244, 60, 60, 1);
+  --color-danger-700: rgba(200, 13, 13, 1);
 
-  --color-danger-300: rgba(255, 162, 162, 1);
+  --color-danger-500: rgba(255, 44, 44, 1);
 
-  --color-danger-100: rgba(254, 242, 242, 1);
+  --color-danger-300: rgba(255, 157, 157, 1);
 
-  --skeleton-danger-500: rgba(190, 23, 23, 0.5);
+  --color-danger-100: rgba(255, 223, 223, 1);
 
-  --skeleton-danger-300: rgba(190, 23, 23, 0.25);
+  --skeleton-danger-500: rgba(200, 13, 13, 0.5);
 
-  --skeleton-danger-100: rgba(190, 23, 23, 0.1);
+  --skeleton-danger-300: rgba(200, 13, 13, 0.25);
 
-  --box-shadow-danger-500: rgba(244, 60, 60, 0.24);
+  --skeleton-danger-100: rgba(200, 13, 13, 0.1);
 
-  --backdrop-danger-500: rgba(130, 26, 26, 0.8);
+  --box-shadow-danger-500: rgba(255, 44, 44, 0.24);
+
+  --backdrop-danger-500: rgba(136, 20, 20, 0.8);
 
   --gradient-danger-500: linear-gradient(
     180deg,
-    rgb(244, 60, 60) 0%,
-    rgb(190, 23, 23) 100%
+    rgb(255, 44, 44) 0%,
+    rgb(200, 13, 13) 100%
   );
 
   // COLORS COFFEE

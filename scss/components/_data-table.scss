@@ -1,9 +1,9 @@
 // Rolster Technology Datatable Component
-// v1.2.5
+// v1.2.6
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 17/Mar/2024
+// Updated: 13/Abr/2024
 
 @mixin datatable_cell_control() {
   --rls-avatar-border-radius: var(--sizing-x3);
@@ -30,11 +30,16 @@
 .rls-datatable {
   --rls-input-font-size: var(--rls-datatable-font-size);
   --rls-input-letter-spacing: var(--rls-datatable-letter-spacing);
+  --pvt-header-padding-right: var(--sizing-x6);
 
   position: relative;
   width: 100%;
   border-radius: var(--sizing-x4);
   box-sizing: border-box;
+
+  &--scrolleable {
+    --pvt-header-padding-right: var(--sizing-x12);
+  }
 
   & > table {
     display: flex;
@@ -51,7 +56,8 @@
   &__header {
     display: flex;
     column-gap: var(--sizing-x4);
-    padding: 0rem var(--sizing-x6);
+    padding-left: var(--sizing-x6);
+    padding-right: var(--pvt-header-padding-right);
     box-sizing: border-box;
   }
 
@@ -204,7 +210,7 @@
       display: flex;
       width: calc(100% - var(--sizing-x2));
       height: 100%;
-      margin: var(--sizing-x3) 0rem;
+      margin: var(--sizing-x3) var(--sizing-x2);
       justify-content: center;
       align-items: center;
       overflow: hidden;
