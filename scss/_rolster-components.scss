@@ -1,9 +1,9 @@
 // Rolster Technology Components
-// v1.1.6
+// v1.2.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 13/Abr/2023
-// Updated: 27/Ene/2024
+// Updated: 13/Abr/2024
 
 :root {
   --rls-action-color: var(--color-theme-300);
@@ -39,7 +39,8 @@
 
   --rls-datatable-letter-spacing: 0.0625em;
   --rls-datatable-font-size: 7rem;
-  --rls-datatable-width-scroll: var(--sizing-x12);
+  --rls-datatable-width-scroll: var(--sizing-x4);
+  --rls-datatable-padding-scroll: 0rem;
 
   --rls-form-footer-justify-content: end;
 
@@ -68,6 +69,11 @@
   --rls-tabulartext-pointer-width: 2rem;
 
   --rls-toolbar-height: var(--sizing-x28);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-rolster-300) var(--background-theme-100);
 }
 
 @import 'components/app';
