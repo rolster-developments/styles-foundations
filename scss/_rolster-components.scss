@@ -1,9 +1,9 @@
 // Rolster Technology Components
-// v1.2.0
+// v1.2.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 13/Abr/2023
-// Updated: 13/Abr/2024
+// Updated: 23/Abr/2024
 
 :root {
   --rls-action-color: var(--color-theme-300);
@@ -58,6 +58,8 @@
 
   --rls-poster-height: var(--sizing-x18);
   --rls-poster-padding: var(--sizing-x4);
+  
+  --rls-progress-circular-dimension: var(--sizing-x28);
 
   --rls-snackbar-left: 50%;
 

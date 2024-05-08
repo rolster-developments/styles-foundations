@@ -1,9 +1,9 @@
 // Rolster Technology Normalize Utilities
-// v1.0.2
+// v1.0.3
 // @license MIT
 // Author: Rolster Developers
 // Created: 11/Ago/2022
-// Updated: 04/Abr/2024
+// Updated: 23/Abr/2024
 
 :root {
   --rolster-font-family: -rolster-system-font, -apple-system, BlinkMacSystemFont,
@@ -24,6 +24,7 @@ body {
   margin: 0rem;
   padding: 0rem;
   -webkit-tap-highlight-color: transparent;
+  color: var(--color-theme-500);
   background: var(--background-theme-300);
 }
 
