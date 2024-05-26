@@ -1,9 +1,9 @@
 // Rolster Technology Datatable Component
-// v1.3.1
+// v2.0.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 14/Abr/2024
+// Updated: 26/May/2024
 
 @mixin datatable_cell_control() {
   --rls-avatar-border-radius: var(--rls-sizing-x3);
@@ -28,9 +28,10 @@
 }
 
 .rls-datatable {
+  --pvt-header-padding-right: var(--rls-datatable-padding-scroll);
+
   --rls-input-font-size: var(--rls-datatable-font-size);
   --rls-input-letter-spacing: var(--rls-datatable-letter-spacing);
-  --pvt-header-padding-right: var(--rls-datatable-padding-scroll);
 
   position: relative;
   display: flex;
@@ -78,7 +79,7 @@
     white-space: nowrap;
     height: var(--rls-sizing-x20);
     line-height: var(--rls-sizing-x20);
-    color: var(--color-theme-500);
+    color: var(--rls-app-color-500);
     font-size: var(--rls-datatable-font-size);
     letter-spacing: var(--rls-datatable-letter-spacing);
     font-weight: var(--rls-font-weight-bold);
@@ -124,7 +125,7 @@
     background: rgba(252, 252, 252, 1);
 
     &--error {
-      background: var(--color-danger-100);
+      background: var(--rls-danger-color-100);
       border: var(--rls-border-1-danger-300);
     }
   }
@@ -197,7 +198,7 @@
       &__control {
         font-size: var(--rls-datatable-font-size);
         font-weight: var(--rls-font-weight-medium);
-        letter-spacing: var(--body-letter-spacing);
+        letter-spacing: var(--rls-body-letter-spacing);
       }
 
       &__suggestions {
@@ -248,16 +249,16 @@
 
       .rls-ballot__title {
         font-weight: var(--rls-font-weight-semibold);
-        font-size: var(--smalltext-font-size);
-        letter-spacing: var(--smalltext-letter-spacing);
+        font-size: var(--rls-smalltext-font-size);
+        letter-spacing: var(--rls-smalltext-letter-spacing);
         min-height: var(--rls-sizing-x8);
         line-height: var(--rls-sizing-x8);
       }
 
       .rls-ballot__subtitle {
         margin-top: 0rem;
-        font-size: var(--overline-font-size);
-        letter-spacing: var(--overline-letter-spacing);
+        font-size: var(--rls-overline-font-size);
+        letter-spacing: var(--rls-overline-letter-spacing);
         min-height: var(--rls-sizing-x8);
         line-height: var(--rls-sizing-x8);
       }
@@ -265,7 +266,7 @@
 
     & > a {
       &:hover {
-        color: var(--color-theme-700);
+        color: var(--rls-app-color-700);
         text-decoration: underline;
       }
     }
@@ -275,7 +276,7 @@
     position: relative;
     width: 100%;
     overflow: hidden;
-    background: var(--color-theme-100);
+    background: var(--rls-app-color-100);
     border-radius: 0rem 0rem var(--rls-sizing-x4) var(--rls-sizing-x4);
   }
 }

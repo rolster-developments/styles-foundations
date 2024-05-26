@@ -1,9 +1,9 @@
 // Rolster Technology Fonts Fabric
-// v1.0.1
+// v2.0.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 19/Abr/2018
-// Updated: 11/Oct/2023
+// Updated: 26/May/2024
 
 @font-face {
   font-family: -rolster-system-font;
@@ -69,65 +69,65 @@
 }
 
 :root {
-  --rolster-font-size: 2px;
+  --rls-app-font-size: 2px;
 
-  --heading1-font-size: 16rem;
-  --heading1-letter-spacing: 0.0234375em;
-  --heading1-line-height: 2.275rem;
+  --rls-heading1-font-size: 16rem;
+  --rls-heading1-letter-spacing: 0.0234375em;
+  --rls-heading1-line-height: 2.275rem;
 
-  --heading2-font-size: 1.8rem;
-  --heading2-letter-spacing: 0.0234375em;
-  --heading2-line-height: 1.925rem;
+  --rls-heading2-font-size: 1.8rem;
+  --rls-heading2-letter-spacing: 0.0234375em;
+  --rls-heading2-line-height: 1.925rem;
 
-  --heading3-font-size: 1.675rem;
-  --heading3-letter-spacing: 0.0234375em;
-  --heading3-line-height: 1.825rem;
+  --rls-heading3-font-size: 1.675rem;
+  --rls-heading3-letter-spacing: 0.0234375em;
+  --rls-heading3-line-height: 1.825rem;
 
-  --heading4-font-size: 12rem;
-  --heading4-letter-spacing: 0.0234375em;
-  --heading4-line-height: 1.675rem;
+  --rls-heading4-font-size: 12rem;
+  --rls-heading4-letter-spacing: 0.0234375em;
+  --rls-heading4-line-height: 1.675rem;
 
-  --heading5-font-size: 1.375rem;
-  --heading5-letter-spacing: 0.0234375em;
-  --heading5-line-height: 1.575rem;
+  --rls-heading5-font-size: 1.375rem;
+  --rls-heading5-letter-spacing: 0.0234375em;
+  --rls-heading5-line-height: 1.575rem;
 
-  --heading6-font-size: 10rem;
-  --heading6-letter-spacing: 0.0234375em;
-  --heading6-line-height: 1.325rem;
+  --rls-heading6-font-size: 10rem;
+  --rls-heading6-letter-spacing: 0.0234375em;
+  --rls-heading6-line-height: 1.325rem;
 
-  --title-font-size: 1.125rem;
-  --title-letter-spacing: 0.0546875em;
-  --title-line-height: 10rem;
+  --rls-title-font-size: 1.125rem;
+  --rls-title-letter-spacing: 0.0546875em;
+  --rls-title-line-height: 10rem;
 
-  --subtitle-font-size: 1.09375rem;
-  --subtitle-letter-spacing: 0.0546875em;
-  --subtitle-line-height: 1.11875rem;
+  --rls-subtitle-font-size: 1.09375rem;
+  --rls-subtitle-letter-spacing: 0.0546875em;
+  --rls-subtitle-line-height: 1.11875rem;
 
-  --body-font-size: 8rem;
-  --body-letter-spacing: 0.03125em;
-  --body-line-height: 1.125rem;
+  --rls-body-font-size: 8rem;
+  --rls-body-letter-spacing: 0.03125em;
+  --rls-body-line-height: 1.125rem;
 
-  --input-font-size: 0.95rem;
-  --input-letter-spacing: 0.03125em;
-  --input-line-height: 1.125rem;
+  --rls-input-font-size: 0.95rem;
+  --rls-input-letter-spacing: 0.03125em;
+  --rls-input-line-height: 1.125rem;
 
-  --label-font-size: 0.875rem;
-  --label-letter-spacing: 0.03125em;
-  --label-line-height: 1.0625rem;
+  --rls-label-font-size: 0.875rem;
+  --rls-label-letter-spacing: 0.03125em;
+  --rls-label-line-height: 1.0625rem;
 
-  --button-font-size: 0.85rem;
-  --button-letter-spacing: 0.03125em;
-  --button-line-height: 1.0625rem;
+  --rls-button-font-size: 0.85rem;
+  --rls-button-letter-spacing: 0.03125em;
+  --rls-button-line-height: 1.0625rem;
 
-  --smalltext-font-size: 6rem;
-  --smalltext-letter-spacing: 0.03125em;
-  --smalltext-line-height: 1.0625rem;
+  --rls-smalltext-font-size: 6rem;
+  --rls-smalltext-letter-spacing: 0.03125em;
+  --rls-smalltext-line-height: 1.0625rem;
 
-  --caption-font-size: 0.7125rem;
-  --caption-letter-spacing: 0.046875em;
-  --caption-line-height: 8rem;
+  --rls-caption-font-size: 0.7125rem;
+  --rls-caption-letter-spacing: 0.046875em;
+  --rls-caption-line-height: 8rem;
 
-  --overline-font-size: 0.675rem;
-  --overline-letter-spacing: 0.0625em;
-  --overline-line-height: 8rem;
+  --rls-overline-font-size: 0.675rem;
+  --rls-overline-letter-spacing: 0.0625em;
+  --rls-overline-line-height: 8rem;
 }

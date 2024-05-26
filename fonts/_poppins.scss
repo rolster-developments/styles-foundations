@@ -1,9 +1,9 @@
 // Rolster Technology Fonts Poppins
-// v1.0.2
+// v2.0.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 03/Mar/2018
-// Updated: 11/Oct/2023
+// Updated: 26/May/2024
 
 @font-face {
   font-family: -rolster-system-font;
@@ -69,57 +69,57 @@
 }
 
 :root {
-  --rolster-font-size: 2px;
+  --rls-app-font-size: 2px;
 
-  --heading1-font-size: 16rem;
-  --heading1-letter-spacing: 0em;
-  --heading1-line-height: 2.275rem;
+  --rls-heading1-font-size: 16rem;
+  --rls-heading1-letter-spacing: 0em;
+  --rls-heading1-line-height: 2.275rem;
 
-  --heading2-font-size: 14rem;
-  --heading2-letter-spacing: 0.02em;
-  --heading2-line-height: 1.925rem;
+  --rls-heading2-font-size: 14rem;
+  --rls-heading2-letter-spacing: 0.02em;
+  --rls-heading2-line-height: 1.925rem;
 
-  --heading3-font-size: 12rem;
-  --heading3-letter-spacing: 0.05em;
-  --heading3-line-height: 1.825rem;
+  --rls-heading3-font-size: 12rem;
+  --rls-heading3-letter-spacing: 0.05em;
+  --rls-heading3-line-height: 1.825rem;
 
-  --heading4-font-size: 1.375rem;
-  --heading4-letter-spacing: 0.05em;
-  --heading4-line-height: 1.675rem;
+  --rls-heading4-font-size: 1.375rem;
+  --rls-heading4-letter-spacing: 0.05em;
+  --rls-heading4-line-height: 1.675rem;
 
-  --heading5-font-size: 10rem;
-  --heading5-letter-spacing: 0.05em;
-  --heading5-line-height: 1.575rem;
+  --rls-heading5-font-size: 10rem;
+  --rls-heading5-letter-spacing: 0.05em;
+  --rls-heading5-line-height: 1.575rem;
 
-  --heading6-font-size: 10rem;
-  --heading6-letter-spacing: 0.05em;
-  --heading6-line-height: 1.325rem;
+  --rls-heading6-font-size: 10rem;
+  --rls-heading6-letter-spacing: 0.05em;
+  --rls-heading6-line-height: 1.325rem;
 
-  --title-font-size: 1.325rem;
-  --title-letter-spacing: 0.03em;
-  --title-line-height: 12rem;
+  --rls-title-font-size: 1.325rem;
+  --rls-title-letter-spacing: 0.03em;
+  --rls-title-line-height: 12rem;
 
-  --subtitle-font-size: 1.125rem;
-  --subtitle-letter-spacing: 0.03em;
-  --subtitle-line-height: 1.175rem;
+  --rls-subtitle-font-size: 1.125rem;
+  --rls-subtitle-letter-spacing: 0.03em;
+  --rls-subtitle-line-height: 1.175rem;
 
-  --body-font-size: 8rem;
-  --body-letter-spacing: 0.03em;
-  --body-line-height: 1.125rem;
+  --rls-body-font-size: 8rem;
+  --rls-body-letter-spacing: 0.03em;
+  --rls-body-line-height: 1.125rem;
 
-  --label-font-size: 0.875rem;
-  --label-letter-spacing: 0.05em;
-  --label-line-height: 1.025rem;
+  --rls-label-font-size: 0.875rem;
+  --rls-label-letter-spacing: 0.05em;
+  --rls-label-line-height: 1.025rem;
 
-  --smalltext-font-size: 6rem;
-  --smalltext-letter-spacing: 0.07em;
-  --smalltext-line-height: 8rem;
+  --rls-smalltext-font-size: 6rem;
+  --rls-smalltext-letter-spacing: 0.07em;
+  --rls-smalltext-line-height: 8rem;
 
-  --caption-font-size: 0.7375rem;
-  --caption-letter-spacing: 0.07em;
-  --caption-line-height: 8rem;
+  --rls-caption-font-size: 0.7375rem;
+  --rls-caption-letter-spacing: 0.07em;
+  --rls-caption-line-height: 8rem;
 
-  --overline-font-size: 0.675rem;
-  --overline-letter-spacing: 0.1em;
-  --overline-line-height: 8rem;
+  --rls-overline-font-size: 0.675rem;
+  --rls-overline-letter-spacing: 0.1em;
+  --rls-overline-line-height: 8rem;
 }

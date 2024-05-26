@@ -11,7 +11,7 @@
   --rls-action-ripple-dimension: var(--rls-sizing-x18);
   --rls-action-ripple-position: -9rem;
 
-  --rls-avatar-font-size: var(--title-font-size);
+  --rls-avatar-font-size: var(--rls-title-font-size);
   --rls-avatar-border-radius: var(--rls-sizing-x4);
   --rls-avatar-width: var(--rls-sizing-x24);
   --rls-avatar-height: var(--rls-sizing-x24);
@@ -19,7 +19,7 @@
   --rls-amount-text-align: start;
 
   --rls-ballot-subtitle-width: 100%;
-  --rls-ballot-subtitle-height: var(--smalltext-line-height);
+  --rls-ballot-subtitle-height: var(--rls-smalltext-line-height);
   --rls-ballot-subtitle-overflow: initial;
   --rls-ballot-subtitle-text-overflow: initial;
   --rls-ballot-subtitle-white-space: initial;
@@ -50,9 +50,9 @@
   --rls-icon-color: inherit;
 
   --rls-input-font-color: var(--color-theme-500);
-  --rls-input-font-size: var(--input-font-size);
+  --rls-input-font-size: var(--rls-input-font-size);
   --rls-input-text-align: left;
-  --rls-input-letter-spacing: var(--input-letter-spacing);
+  --rls-input-letter-spacing: var(--rls-input-letter-spacing);
   --rls-input-height: var(--rls-sizing-x12);
   --rls-input-parent-padding: 0rem;
 

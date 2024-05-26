@@ -1,9 +1,9 @@
 // Rolster Technology BoxField Component
-// v1.1.4
+// v2.0.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 08/Sep/2022
-// Updated: 27/Ene/2024
+// Updated: 26/May/2024
 
 .rls-box-field {
   --pvt-body-background: rgba(248, 248, 248, 1);
@@ -19,21 +19,22 @@
   transition: height 160ms 0ms var(--rls-standard-curve);
 
   &--focused {
+    --pvt-body-background: var(--rls-app-background-500);
+
     --rls-boxfield-body-border: var(--rls-border-1-rolster-500);
     --rls-boxfield-body-shadow: 0px 0px 0px 3px var(--box-shadow-rolster-500);
-    --rls-boxfield-label-font-color: var(--color-rolster-500);
-
-    --pvt-body-background: var(--background-theme-500);
+    --rls-boxfield-label-font-color: var(--rls-app-color-500);
   }
 
   &--error {
-    --rls-boxfield-body-border: var(--rls-border-1) solid var(--color-danger-500);
+    --rls-boxfield-body-border: var(--rls-border-1) solid
+      var(--rls-danger-color-500);
     --rls-boxfield-body-shadow: 0px 0px 0px 3px var(--box-shadow-danger-500);
-    --rls-boxfield-label-font-color: var(--color-danger-500);
+    --rls-boxfield-label-font-color: var(--rls-danger-color-500);
   }
 
   &--disabled {
-    --pvt-body-background: var(--background-theme-500);
+    --pvt-body-background: var(--rls-app-background-500);
     --pvt-body-opacity: 0.75;
     --pvt-label-opacity: 0.5;
   }
@@ -49,13 +50,13 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     font-weight: var(--rls-font-weight-medium);
-    font-size: var(--smalltext-font-size);
-    letter-spacing: var(--smalltext-letter-spacing);
-    min-height: var(--smalltext-line-height);
-    line-height: var(--smalltext-line-height);
+    font-size: var(--rls-smalltext-font-size);
+    letter-spacing: var(--rls-smalltext-letter-spacing);
+    min-height: var(--rls-smalltext-line-height);
+    line-height: var(--rls-smalltext-line-height);
 
     span {
-      color: var(--color-danger-500);
+      color: var(--rls-danger-color-500);
     }
   }
 
@@ -76,10 +77,10 @@
     padding: 0rem 5rem;
     box-sizing: border-box;
     font-weight: var(--rls-font-weight-medium);
-    font-size: var(--overline-font-size);
-    letter-spacing: var(--overline-letter-spacing);
-    min-height: var(--overline-line-height);
-    line-height: var(--overline-line-height);
+    font-size: var(--rls-overline-font-size);
+    letter-spacing: var(--rls-overline-letter-spacing);
+    min-height: var(--rls-overline-line-height);
+    line-height: var(--rls-overline-line-height);
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;

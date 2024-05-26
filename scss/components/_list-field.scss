@@ -6,9 +6,7 @@
 // Updated: 27/Ene/2024
 
 .rls-list-field {
-  --rls-boxfield-body-padding: var(--rls-sizing-x3) var(--rls-sizing-x4);
-
-  --pvt-action-font-color: var(--color-theme-300);
+  --pvt-action-font-color: var(--rls-app-color-300);
   --pvt-list-height: 0rem;
   --pvt-list-max-height: 160rem;
   --pvt-list-opacity: 0;
@@ -17,17 +15,19 @@
   --pvt-backdrop-opacity: 0;
   --pvt-backdrop-bottom: initial;
 
+  --rls-boxfield-body-padding: var(--rls-sizing-x3) var(--rls-sizing-x4);
+
   position: relative;
   box-sizing: border-box;
 
   &.rls-box-field--active {
     --rls-boxfield-body-shadow: 0px 0px 0px 3px var(--box-shadow-theme-100);
     --rls-boxfield-body-border: var(--rls-theme-border-1-300);
-    --rls-boxfield-label-font-color: var(--color-theme-300);
+    --rls-boxfield-label-font-color: var(--rls-app-color-300);
   }
 
   &.rls-box-field--disabled {
-    --pvt-action-font-color: var(--color-theme-100);
+    --pvt-action-font-color: var(--rls-app-color-100);
   }
 
   &__control {
@@ -46,11 +46,11 @@
     letter-spacing: var(--rls-input-letter-spacing);
 
     &::placeholder {
-      color: var(--color-theme-100);
+      color: var(--rls-app-color-100);
     }
 
     &::selection {
-      background: var(--color-rolster-700);
+      background: var(--rls-theme-color-700);
       color: var(--rls-light-color-500);
     }
 
@@ -60,8 +60,7 @@
 
     &__placeholder {
       position: relative;
-      float: left;
-      color: var(--color-theme-100);
+      color: var(--rls-app-color-100);
     }
   }
 
@@ -115,9 +114,9 @@
       border-radius: var(--rls-sizing-x4);
       overflow: hidden;
       z-index: var(--rls-z-index-2);
-      background: var(--background-theme-500);
-      border: var(--rls-border-1-rolster-500);
-      box-shadow: 0px 0px 0px 3px var(--box-shadow-rolster-500);
+      background: var(--rls-app-background-500);
+      border: var(--rls-theme-border-1-500);
+      box-shadow: 0px 0px 0px 3px var(--rls-theme-shadow-500);
       will-change: opacity, transform;
       opacity: var(--pvt-list-opacity);
       transform: var(--pvt-list-transform);
@@ -150,11 +149,11 @@
     box-sizing: border-box;
 
     &:hover {
-      background: var(--background-theme-300);
+      background: var(--rls-app-background-300);
     }
 
     &:not(:hover):focus {
-      background: var(--color-rolster-100);
+      background: var(--rls-theme-color-100);
     }
   }
 
@@ -181,12 +180,12 @@
       label {
         display: block;
         width: 100%;
-        color: var(--color-theme-300);
+        color: var(--rls-app-color-300);
       }
 
       p {
         white-space: initial;
-        color: var(--color-theme-300);
+        color: var(--rls-app-color-300);
       }
     }
   }

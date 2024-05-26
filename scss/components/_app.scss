@@ -1,9 +1,9 @@
 // Rolster Technology App Component
-// v1.1.0
+// v2.0.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 27/Ene/2024
+// Updated: 26/May/2024
 
 .rls-app {
   &__body {
@@ -31,7 +31,7 @@
     height: var(--rls-sizing-x28);
     box-sizing: border-box;
     z-index: var(--rls-z-index-8);
-    background: var(--background-theme-100);
+    background: var(--rls-app-background-100);
 
     & + .rls-app__page,
     & + .rls-app__content {
@@ -68,7 +68,7 @@
       overflow: auto;
       box-sizing: border-box;
       border-radius: 0rem 0rem var(--rls-sizing-x16) 0rem;
-      background: var(--background-theme-100);
+      background: var(--rls-app-background-100);
 
       & + .rls-app__page__content {
         --rls-snackbar-left: calc(50% + 80rem);
@@ -94,7 +94,7 @@
   height: var(--rls-sizing-x1);
   background-image: linear-gradient(
     to right,
-    var(--border-theme-100) 50%,
+    var(--rls-app-border-100) 50%,
     rgba(255, 255, 255, 0) 0%
   );
   background-position: bottom;
