@@ -1,0 +1,109 @@
+// Rolster Technology Typographics Utilities
+// v2.0.0
+// @license MIT
+// Author: Rolster Developers
+// Created: 20/Mar/2018
+// Updated: 26/May/2024
+
+@mixin typographic($name, $key) {
+  .rls-#{$name}-default {
+    font-size: var(--rls-#{$key}-font-size);
+    letter-spacing: var(--rls-#{$key}-letter-spacing);
+    min-height: var(--rls-#{$key}-line-height);
+    line-height: var(--rls-#{$key}-line-height);
+  }
+
+  .rls-#{$name}-regular {
+    @extend .#{$name}-default;
+    font-weight: var(--rls-font-weight-regular);
+  }
+
+  .rls-#{$name}-medium {
+    @extend .#{$name}-default;
+    font-weight: var(--rls-font-weight-medium);
+  }
+
+  .rls-#{$name}-semibold {
+    @extend .#{$name}-default;
+    font-weight: var(--rls-font-weight-semibold);
+  }
+
+  .rls-#{$name}-bold {
+    @extend .#{$name}-default;
+    font-weight: var(--rls-font-weight-bold);
+  }
+}
+
+h1 {
+  font-size: var(--rls-heading1-font-size);
+  letter-spacing: var(--rls-heading1-letter-spacing);
+  min-height: var(--rls-heading1-line-height);
+  line-height: var(--rls-heading1-line-height);
+}
+
+h2 {
+  font-size: var(--rls-heading2-font-size);
+  letter-spacing: var(--rls-heading2-letter-spacing);
+  min-height: var(--rls-heading2-line-height);
+  line-height: var(--rls-heading2-line-height);
+}
+
+h3 {
+  font-size: var(--rls-heading3-font-size);
+  letter-spacing: var(--rls-heading3-letter-spacing);
+  min-height: var(--rls-heading3-line-height);
+  line-height: var(--rls-heading3-line-height);
+}
+
+h4 {
+  font-size: var(--rls-heading4-font-size);
+  letter-spacing: var(--rls-heading4-letter-spacing);
+  min-height: var(--rls-heading4-line-height);
+  line-height: var(--rls-heading4-line-height);
+}
+
+h5 {
+  font-size: var(--rls-heading5-font-size);
+  letter-spacing: var(--rls-heading5-letter-spacing);
+  min-height: var(--rls-heading5-line-height);
+  line-height: var(--rls-heading5-line-height);
+}
+
+h6 {
+  font-size: var(--rls-heading6-font-size);
+  letter-spacing: var(--rls-heading6-letter-spacing);
+  min-height: var(--rls-heading6-line-height);
+  line-height: var(--rls-heading6-line-height);
+}
+
+p,
+label,
+span {
+  font-size: var(--rls-label-font-size);
+  letter-spacing: var(--rls-label-letter-spacing);
+  min-height: var(--rls-label-line-height);
+  line-height: var(--rls-label-line-height);
+}
+
+button {
+  font-size: var(--rls-button-font-size);
+  letter-spacing: var(--rls-button-letter-spacing);
+  min-height: var(--rls-button-line-height);
+  line-height: var(--rls-button-line-height);
+}
+
+@include typographic('h1', 'heading1');
+@include typographic('h2', 'heading2');
+@include typographic('h3', 'heading3');
+@include typographic('h4', 'heading4');
+@include typographic('h5', 'heading5');
+@include typographic('h6', 'heading6');
+@include typographic('title', 'title');
+@include typographic('subtitle', 'subtitle');
+@include typographic('body', 'body');
+@include typographic('input', 'input');
+@include typographic('label', 'label');
+@include typographic('button', 'button');
+@include typographic('smalltext', 'smalltext');
+@include typographic('caption', 'caption');
+@include typographic('overline', 'overline');

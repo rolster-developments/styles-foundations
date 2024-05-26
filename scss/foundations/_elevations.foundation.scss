@@ -1,0 +1,157 @@
+// Rolster Technology Elevations Foundations
+// v2.0.0
+// @license MIT
+// Author: Rolster Developers
+// Created: 20/Mar/2018
+// Updated: 26/May/2024
+
+:root {
+  --rls-z-index-2: 2;
+
+  --rls-z-index-4: 4;
+
+  --rls-z-index-6: 6;
+
+  --rls-z-index-8: 8;
+
+  --rls-z-index-12: 12;
+
+  --rls-z-index-16: 16;
+
+  --rls-z-index-24: 24;
+
+  --rls-z-index-32: 32;
+
+  --rls-shadow-1: 0px 4px 2px -2px rgba(50, 44, 47, 0.02);
+
+  --rls-shadow-2: 0px 4px 8px -2px rgba(50, 44, 47, 0.04);
+
+  --rls-shadow-3: 0px 2px 4px -2px rgba(50, 44, 47, 0.08);
+
+  --rls-shadow-4: 0px 4px 8px -6px rgba(50, 44, 47, 0.03),
+    0px 16px 8px -4px rgba(50, 44, 47, 0.03);
+
+  --rls-shadow-5: 0px 8px 24px -4px rgba(50, 44, 47, 0.08);
+
+  --rls-shadow-6: 0px 8px 24px -4px rgba(50, 44, 47, 0.12);
+
+  --rls-light-shadow-bottom-2: 0px 2px 2px rgba(173, 186, 230, 0.4);
+
+  --rls-light-shadow-bottom-4: 0px 4px 4px rgba(173, 186, 230, 0.4);
+
+  --rls-light-shadow-bottom-8: 0px 8px 8px rgba(173, 186, 230, 0.4);
+
+  --rls-light-shadow-bottom-16: 0px 16px 16px rgba(173, 186, 230, 0.4);
+
+  --rls-light-shadow-bottom-24: 0px 24px 24px rgba(173, 186, 230, 0.4);
+
+  --rls-light-shadow-bottom-32: 0px 32px 32px rgba(173, 186, 230, 0.4);
+
+  --rls-light-shadow-top-2: 0px -2px 2px rgba(173, 186, 230, 0.4);
+
+  --rls-light-shadow-top-4: 0px -4px 4px rgba(173, 186, 230, 0.4);
+
+  --rls-light-shadow-top-8: 0px -8px 8px rgba(173, 186, 230, 0.4);
+
+  --rls-light-shadow-top-16: 0px -16px 16px rgba(173, 186, 230, 0.4);
+
+  --rls-light-shadow-top-24: 0px -24px 24px rgba(173, 186, 230, 0.4);
+
+  --rls-light-shadow-top-32: 0px -32px 32px rgba(173, 186, 230, 0.4);
+
+  --rls-light-shadow-right-2: 2px 0px 2px rgba(173, 186, 230, 0.4);
+
+  --rls-light-shadow-right-4: 4px 0px 4px rgba(173, 186, 230, 0.4);
+
+  --rls-light-shadow-right-8: 8px 0px 8px rgba(173, 186, 230, 0.4);
+
+  --rls-light-shadow-right-16: 16px 0px 16px rgba(173, 186, 230, 0.4);
+
+  --rls-light-shadow-right-24: 24px 0px 24px rgba(173, 186, 230, 0.4);
+
+  --rls-light-shadow-right-32: 32px 0px 32px rgba(173, 186, 230, 0.4);
+
+  --rls-light-shadow-left-2: -2px 0px 2px rgba(173, 186, 230, 0.4);
+
+  --rls-light-shadow-left-4: -4px 0px 4px rgba(173, 186, 230, 0.4);
+
+  --rls-light-shadow-left-8: -8px 0px 8px rgba(173, 186, 230, 0.4);
+
+  --rls-light-shadow-left-16: -16px 0px 16px rgba(173, 186, 230, 0.4);
+
+  --rls-light-shadow-left-24: -24px 0px 24px rgba(173, 186, 230, 0.4);
+
+  --rls-light-shadow-left-32: -32px 0px 32px rgba(173, 186, 230, 0.4);
+
+  --rls-light-shadow-center-2: 0px 0px 2px 0px rgba(173, 186, 230, 0.4);
+
+  --rls-light-shadow-center-4: 0px 0px 4px 0px rgba(173, 186, 230, 0.4);
+
+  --rls-light-shadow-center-8: 0px 0px 8px 0px rgba(173, 186, 230, 0.4);
+
+  --rls-light-shadow-center-16: 0px 0px 16px 0px rgba(173, 186, 230, 0.4);
+
+  --rls-light-shadow-center-24: 0px 0px 24px 0px rgba(173, 186, 230, 0.4);
+
+  --rls-light-shadow-center-32: 0px 0px 32px 0px rgba(173, 186, 230, 0.4);
+
+  --rls-dark-shadow-bottom-2: 0px 2px 2px rgba(50, 44, 47, 0.4);
+
+  --rls-dark-shadow-bottom-4: 0px 4px 4px rgba(50, 44, 47, 0.4);
+
+  --rls-dark-shadow-bottom-8: 0px 8px 8px rgba(50, 44, 47, 0.4);
+
+  --rls-dark-shadow-bottom-16: 0px 16px 16px rgba(50, 44, 47, 0.4);
+
+  --rls-dark-shadow-bottom-24: 0px 24px 24px rgba(50, 44, 47, 0.4);
+
+  --rls-dark-shadow-bottom-32: 0px 32px 32px rgba(50, 44, 47, 0.4);
+
+  --rls-dark-shadow-top-2: 0px -2px 2px rgba(50, 44, 47, 0.4);
+
+  --rls-dark-shadow-top-4: 0px -4px 4px rgba(50, 44, 47, 0.4);
+
+  --rls-dark-shadow-top-8: 0px -8px 8px rgba(50, 44, 47, 0.4);
+
+  --rls-dark-shadow-top-16: 0px -16px 16px rgba(50, 44, 47, 0.4);
+
+  --rls-dark-shadow-top-24: 0px -24px 24px rgba(50, 44, 47, 0.4);
+
+  --rls-dark-shadow-top-32: 0px -32px 32px rgba(50, 44, 47, 0.4);
+
+  --rls-dark-shadow-right-2: 2px 0px 2px rgba(50, 44, 47, 0.4);
+
+  --rls-dark-shadow-right-4: 4px 0px 4px rgba(50, 44, 47, 0.4);
+
+  --rls-dark-shadow-right-8: 8px 0px 8px rgba(50, 44, 47, 0.4);
+
+  --rls-dark-shadow-right-16: 16px 0px 16px rgba(50, 44, 47, 0.4);
+
+  --rls-dark-shadow-right-24: 24px 0px 24px rgba(50, 44, 47, 0.4);
+
+  --rls-dark-shadow-right-32: 32px 0px 32px rgba(50, 44, 47, 0.4);
+
+  --rls-dark-shadow-left-2: -2px 0px 2px rgba(50, 44, 47, 0.4);
+
+  --rls-dark-shadow-left-4: -4px 0px 4px rgba(50, 44, 47, 0.4);
+
+  --rls-dark-shadow-left-8: -8px 0px 8px rgba(50, 44, 47, 0.4);
+
+  --rls-dark-shadow-left-16: -16px 0px 16px rgba(50, 44, 47, 0.4);
+
+  --rls-dark-shadow-left-24: -24px 0px 24px rgba(50, 44, 47, 0.4);
+
+  --rls-dark-shadow-left-32: -32px 0px 32px rgba(50, 44, 47, 0.4);
+
+  --rls-dark-shadow-center-2: 0px 0px 2px 0px rgba(50, 44, 47, 0.4);
+
+  --rls-dark-shadow-center-4: 0px 0px 4px 0px rgba(50, 44, 47, 0.4);
+
+  --rls-dark-shadow-center-8: 0px 0px 8px 0px rgba(50, 44, 47, 0.4);
+
+  --rls-dark-shadow-center-16: 0px 0px 16px 0px rgba(50, 44, 47, 0.4);
+
+  --rls-dark-shadow-center-24: 0px 0px 24px 0px rgba(50, 44, 47, 0.4);
+
+  --rls-dark-shadow-center-32: 0px 0px 32px 0px rgba(50, 44, 47, 0.4);
+}

@@ -1,103 +1,103 @@
 // Rolster Technology Helpers Utilities
-// v1.0.0
+// v2.0.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 23/Sep/2023
-// Updated: 23/Sep/2023
+// Updated: 26/May/2024
 
 @mixin padding($size) {
-  .pdg-top-#{$size} {
+  .rls-pdg-top-#{$size} {
     padding-top: var(--rls-sizing-#{$size});
   }
 
-  .pdg-rgt-#{$size} {
+  .rls-pdg-rgt-#{$size} {
     padding-right: var(--rls-sizing-#{$size});
   }
 
-  .pdg-bot-#{$size} {
+  .rls-pdg-bot-#{$size} {
     padding-bottom: var(--rls-sizing-#{$size});
   }
 
-  .pdg-lft-#{$size} {
+  .rls-pdg-lft-#{$size} {
     padding-left: var(--rls-sizing-#{$size});
   }
 
-  .pdg-hrz-#{$size} {
+  .rls-pdg-hrz-#{$size} {
     padding: 0rem var(--rls-sizing-#{$size});
   }
 
-  .pdg-vrt-#{$size} {
+  .rls-pdg-vrt-#{$size} {
     padding: var(--rls-sizing-#{$size}) 0rem;
   }
 
-  .pdg-#{$size} {
+  .rls-pdg-#{$size} {
     padding: var(--rls-sizing-#{$size});
   }
 }
 
 @mixin padding-box-sizing($size) {
-  .pdx-top-#{$size} {
+  .rls-pdx-top-#{$size} {
     padding-top: var(--rls-sizing-#{$size});
     box-sizing: border-box;
   }
 
-  .pdx-rgt-#{$size} {
+  .rls-pdx-rgt-#{$size} {
     padding-right: var(--rls-sizing-#{$size});
     box-sizing: border-box;
   }
 
-  .pdx-bot-#{$size} {
+  .rls-pdx-bot-#{$size} {
     padding-bottom: var(--rls-sizing-#{$size});
     box-sizing: border-box;
   }
 
-  .pdx-lft-#{$size} {
+  .rls-pdx-lft-#{$size} {
     padding-left: var(--rls-sizing-#{$size});
     box-sizing: border-box;
   }
 
-  .pdx-hrz-#{$size} {
+  .rls-pdx-hrz-#{$size} {
     padding: 0rem var(--rls-sizing-#{$size});
     box-sizing: border-box;
   }
 
-  .pdx-vrt-#{$size} {
+  .rls-pdx-vrt-#{$size} {
     padding: var(--rls-sizing-#{$size}) 0rem;
     box-sizing: border-box;
   }
 
-  .pdx-#{$size} {
+  .rls-pdx-#{$size} {
     padding: var(--rls-sizing-#{$size});
     box-sizing: border-box;
   }
 }
 
 @mixin margin($size) {
-  .mrg-top-#{$size} {
+  .rls-mrg-top-#{$size} {
     margin-top: var(--rls-sizing-#{$size});
   }
 
-  .mrg-rgt-#{$size} {
+  .rls-mrg-rgt-#{$size} {
     margin-right: var(--rls-sizing-#{$size});
   }
 
-  .mrg-bot-#{$size} {
+  .rls-mrg-bot-#{$size} {
     margin-bottom: var(--rls-sizing-#{$size});
   }
 
-  .mrg-lft-#{$size} {
+  .rls-mrg-lft-#{$size} {
     margin-left: var(--rls-sizing-#{$size});
   }
 
-  .mrg-hrz-#{$size} {
+  .rls-mrg-hrz-#{$size} {
     margin: 0rem var(--rls-sizing-#{$size});
   }
 
-  .mrg-vrt-#{$size} {
+  .rls-mrg-vrt-#{$size} {
     margin: var(--rls-sizing-#{$size}) 0rem;
   }
 
-  .mrg-#{$size} {
+  .rls-mrg-#{$size} {
     margin: var(--rls-sizing-#{$size});
   }
 }

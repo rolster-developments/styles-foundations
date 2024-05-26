@@ -1,0 +1,160 @@
+// Rolster Technology Themes Foundations
+// v2.3.0
+// @license MIT
+// Author: Rolster Developers
+// Created: 03/Mar/2022
+// Updated: 26/May/2024
+
+@mixin app-border-token($theme, $token) {
+  --rls-app-border-1-#{$token}: var(--rls-border-1) solid
+    var(--rls-#{$theme}-border-#{$token});
+
+  --rls-app-border-2-#{$token}: var(--rls-border-2) solid
+    var(--rls-#{$theme}-border-#{$token});
+
+  --rls-app-border-4-#{$token}: var(--rls-border-4) solid
+    var(--rls-#{$theme}-border-#{$token});
+}
+
+@mixin app-shadow-position($theme, $position) {
+  --rls-app-shadow-#{$position}-2: var(--rls-#{$theme}-shadow-#{$position}-2);
+
+  --rls-app-shadow-#{$position}-4: var(--rls-#{$theme}-shadow-#{$position}-4);
+
+  --rls-app-shadow-#{$position}-8: var(--rls-#{$theme}-shadow-#{$position}-8);
+
+  --rls-app-shadow-#{$position}-16: var(--rls-#{$theme}-shadow-#{$position}-16);
+
+  --rls-app-shadow-#{$position}-24: var(--rls-#{$theme}-shadow-#{$position}-24);
+
+  --rls-app-shadow-#{$position}-32: var(--rls-#{$theme}-shadow-#{$position}-32);
+}
+
+@mixin rolster-border-color($theme, $token) {
+  --rls-#{$theme}-border-1-#{$token}: var(--rls-border-1) solid
+    var(--rls-#{$theme}-color-#{$token});
+
+  --rls-#{$theme}-border-2-#{$token}: var(--rls-border-2) solid
+    var(--rls-#{$theme}-color-#{$token});
+
+  --rls-#{$theme}-border-4-#{$token}: var(--rls-border-4) solid
+    var(--rls-#{$theme}-color-#{$token});
+}
+
+@mixin rolster-border-token($theme) {
+  @include rolster-border-color($theme, 100);
+  @include rolster-border-color($theme, 300);
+  @include rolster-border-color($theme, 500);
+  @include rolster-border-color($theme, 700);
+  @include rolster-border-color($theme, 900);
+}
+
+@mixin rolster-border-theme($theme, $token) {
+  --rls-theme-border-1-#{$token}: var(--rls-border-1) solid
+    var(--rls-#{$theme}-color-#{$token});
+
+  --rls-theme-border-2-#{$token}: var(--rls-border-2) solid
+    var(--rls-#{$theme}-color-#{$token});
+
+  --rls-theme-border-4-#{$token}: var(--rls-border-4) solid
+    var(--rls-#{$theme}-color-#{$token});
+}
+
+@mixin rolster-theme($theme) {
+  --rls-theme-color-900: var(--rls-#{$theme}-color-900);
+
+  --rls-theme-color-700: var(--rls-#{$theme}-color-700);
+
+  --rls-theme-color-500: var(--rls-#{$theme}-color-500);
+
+  --rls-theme-color-300: var(--rls-#{$theme}-color-300);
+
+  --rls-theme-color-100: var(--rls-#{$theme}-color-100);
+
+  --rls-theme-skeleton-500: var(--rls-#{$theme}-skeleton-500);
+
+  --rls-theme-skeleton-300: var(--rls-#{$theme}-skeleton-300);
+
+  --rls-theme-skeleton-100: var(--rls-#{$theme}-skeleton-100);
+
+  --rls-theme-shadow-500: var(--rls-#{$theme}-shadow-500);
+
+  --rls-theme-backdrop-500: var(--rls-#{$theme}-backdrop-500);
+
+  --rls-theme-gradient-500: var(--rls-#{$theme}-gradient-500);
+
+  @include rolster-border-theme($theme, 900);
+  @include rolster-border-theme($theme, 700);
+  @include rolster-border-theme($theme, 500);
+  @include rolster-border-theme($theme, 300);
+  @include rolster-border-theme($theme, 100);
+}
+
+:root {
+  --rls-app-background-500: var(--rls-light-background-500);
+
+  --rls-app-background-300: var(--rls-light-background-300);
+
+  --rls-app-background-100: var(--rls-light-background-100);
+
+  --rls-app-color-500: var(--rls-dark-color-500);
+
+  --rls-app-color-300: var(--rls-dark-color-300);
+
+  --rls-app-color-100: var(--rls-dark-color-100);
+
+  --rls-app-border-500: var(--rls-dark-border-500);
+
+  --rls-app-border-300: var(--rls-dark-border-300);
+
+  --rls-app-border-100: var(--rls-dark-border-100);
+
+  @include app-border-token('dark', 500);
+  @include app-border-token('dark', 300);
+  @include app-border-token('dark', 100);
+
+  @include app-shadow-position('bottom', 'light');
+  @include app-shadow-position('top', 'light');
+  @include app-shadow-position('right', 'light');
+  @include app-shadow-position('left', 'light');
+  @include app-shadow-position('center', 'light');
+
+  @include rolster-border-token('standard');
+  @include rolster-border-token('success');
+  @include rolster-border-token('info');
+  @include rolster-border-token('warning');
+  @include rolster-border-token('danger');
+  @include rolster-border-token('amaizing');
+  @include rolster-border-token('smartness');
+  @include rolster-border-token('obsidian');
+
+  @include rolster-theme('standard');
+}
+
+*[rls-theme='success'] {
+  @include rolster-theme('success');
+}
+
+*[rls-theme='info'] {
+  @include rolster-theme('info');
+}
+
+*[rls-theme='warning'] {
+  @include rolster-theme('warning');
+}
+
+*[rls-theme='danger'] {
+  @include rolster-theme('danger');
+}
+
+*[rls-theme='amaizing'] {
+  @include rolster-theme('amaizing');
+}
+
+*[rls-theme='smartness'] {
+  @include rolster-theme('smartness');
+}
+
+*[rls-theme='obsidian'] {
+  @include rolster-theme('obsidian');
+}
