@@ -6,13 +6,13 @@
 // Updated: 26/May/2024
 
 @mixin theme-border-color($name, $token) {
-  --rls-border-1-theme-#{$token}: var(--rls-border-1) solid
+  --rls-theme-border-1-#{$token}: var(--rls-border-1) solid
     var(--border-#{$name}-#{$token});
 
-  --rls-border-2-theme-#{$token}: var(--rls-border-2) solid
+  --rls-theme-border-2-#{$token}: var(--rls-border-2) solid
     var(--border-#{$name}-#{$token});
 
-  --rls-border-4-theme-#{$token}: var(--rls-border-4) solid
+  --rls-theme-border-4-#{$token}: var(--rls-border-4) solid
     var(--border-#{$name}-#{$token});
 }
 
