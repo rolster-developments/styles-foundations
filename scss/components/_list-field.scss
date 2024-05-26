@@ -123,8 +123,8 @@
       transform: var(--pvt-list-transform);
       transform-origin: var(--pvt-list-transform-origin);
       transition:
-        opacity 240ms 0ms var(--standard-curve),
-        transform 240ms 0ms var(--standard-curve);
+        opacity 240ms 0ms var(--rls-standard-curve),
+        transform 240ms 0ms var(--rls-standard-curve);
     }
   }
 
@@ -204,8 +204,8 @@
     background: var(--backdrop-rolster-500);
     backdrop-filter: blur(2px);
     transition:
-      opacity 120ms 0ms var(--deceleration-curve),
-      bottom 120ms 0ms var(--deceleration-curve);
+      opacity 120ms 0ms var(--rls-deceleration-curve),
+      bottom 120ms 0ms var(--rls-deceleration-curve);
   }
 }
 

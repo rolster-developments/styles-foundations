@@ -19,8 +19,8 @@
     z-index: var(--z-index-8);
     overflow: hidden;
     transition:
-      left 240ms 0ms var(--standard-curve),
-      width 240ms 0ms var(--standard-curve);
+      left 240ms 0ms var(--rls-standard-curve),
+      width 240ms 0ms var(--rls-standard-curve);
   }
 
   &__header {

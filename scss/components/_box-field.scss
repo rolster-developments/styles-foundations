@@ -16,7 +16,7 @@
   row-gap: var(--sizing-x2);
   width: 100%;
   box-sizing: border-box;
-  transition: height 160ms 0ms var(--standard-curve);
+  transition: height 160ms 0ms var(--rls-standard-curve);
 
   &--focused {
     --rls-boxfield-body-border: var(--border-1-rolster-500);
