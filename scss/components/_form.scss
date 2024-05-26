@@ -8,11 +8,11 @@
 .rls-form {
   display: flex;
   flex-direction: column;
-  row-gap: var(--sizing-x8);
+  row-gap: var(--rls-sizing-x8);
 
   &__content {
     position: relative;
-    padding: 0rem var(--sizing-x8);
+    padding: 0rem var(--rls-sizing-x8);
     box-sizing: border-box;
   }
 
@@ -20,8 +20,8 @@
     position: relative;
     display: flex;
     justify-content: var(--rls-form-footer-justify-content);
-    column-gap: var(--sizing-x8);
-    padding: 0rem var(--sizing-x8);
+    column-gap: var(--rls-sizing-x8);
+    padding: 0rem var(--rls-sizing-x8);
     box-sizing: border-box;
   }
 }

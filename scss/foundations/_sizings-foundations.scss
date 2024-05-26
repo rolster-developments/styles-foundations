@@ -1,74 +1,74 @@
 // Rolster Technology Sizings Foundations
-// v2.0.0
+// v2.1.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 27/Ene/2024
+// Updated: 26/May/2024
 
 :root {
-  --sizing-x1: 1rem;
+  --rls-sizing-x1: 1rem;
 
-  --sizing-x2: 2rem;
+  --rls-sizing-x2: 2rem;
 
-  --sizing-x3: 3rem;
+  --rls-sizing-x3: 3rem;
 
-  --sizing-x4: 4rem;
+  --rls-sizing-x4: 4rem;
 
-  --sizing-x6: 6rem;
+  --rls-sizing-x6: 6rem;
 
-  --sizing-x8: 8rem;
+  --rls-sizing-x8: 8rem;
 
-  --sizing-x10: 10rem;
+  --rls-sizing-x10: 10rem;
 
-  --sizing-x12: 12rem;
+  --rls-sizing-x12: 12rem;
 
-  --sizing-x14: 14rem;
+  --rls-sizing-x14: 14rem;
 
-  --sizing-x16: 16rem;
+  --rls-sizing-x16: 16rem;
 
-  --sizing-x18: 18rem;
+  --rls-sizing-x18: 18rem;
 
-  --sizing-x20: 20rem;
+  --rls-sizing-x20: 20rem;
 
-  --sizing-x22: 22rem;
+  --rls-sizing-x22: 22rem;
 
-  --sizing-x24: 24rem;
+  --rls-sizing-x24: 24rem;
 
-  --sizing-x26: 26rem;
+  --rls-sizing-x26: 26rem;
 
-  --sizing-x28: 28rem;
+  --rls-sizing-x28: 28rem;
 
-  --sizing-x30: 30rem;
+  --rls-sizing-x30: 30rem;
 
-  --sizing-x32: 32rem;
+  --rls-sizing-x32: 32rem;
 
-  --border-1: 1px;
+  --rls-border-1: 1px;
 
-  --border-2: 2px;
+  --rls-border-2: 2px;
 
-  --border-4: 4px;
+  --rls-border-4: 4px;
 }
 
 @supports (padding-top: constant(safe-area-inset-top)) {
   :root {
-    --sizing-safe-top: constant(safe-area-inset-top);
+    --rls-sizing-safe-top: constant(safe-area-inset-top);
 
-    --sizing-safe-right: constant(safe-area-inset-right);
+    --rls-sizing-safe-right: constant(safe-area-inset-right);
 
-    --sizing-safe-bottom: constant(safe-area-inset-bottom);
+    --rls-sizing-safe-bottom: constant(safe-area-inset-bottom);
 
-    --sizing-safe-left: constant(safe-area-inset-left);
+    --rls-sizing-safe-left: constant(safe-area-inset-left);
   }
 }
 
 @supports (padding-top: env(safe-area-inset-top)) {
   :root {
-    --sizing-safe-top: env(safe-area-inset-top);
+    --rls-sizing-safe-top: env(safe-area-inset-top);
 
-    --sizing-safe-right: env(safe-area-inset-right);
+    --rls-sizing-safe-right: env(safe-area-inset-right);
 
-    --sizing-safe-bottom: env(safe-area-inset-bottom);
+    --rls-sizing-safe-bottom: env(safe-area-inset-bottom);
 
-    --sizing-safe-left: env(safe-area-inset-left);
+    --rls-sizing-safe-left: env(safe-area-inset-left);
   }
 }

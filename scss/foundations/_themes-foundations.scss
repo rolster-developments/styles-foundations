@@ -6,13 +6,13 @@
 // Updated: 06/Abr/2024
 
 @mixin border-theme-color($name, $token) {
-  --border-1-theme-#{$token}: var(--border-1) solid
+  --rls-border-1-theme-#{$token}: var(--rls-border-1) solid
     var(--border-#{$name}-#{$token});
 
-  --border-2-theme-#{$token}: var(--border-2) solid
+  --rls-border-2-theme-#{$token}: var(--rls-border-2) solid
     var(--border-#{$name}-#{$token});
 
-  --border-4-theme-#{$token}: var(--border-4) solid
+  --rls-border-4-theme-#{$token}: var(--rls-border-4) solid
     var(--border-#{$name}-#{$token});
 }
 
@@ -31,13 +31,13 @@
 }
 
 @mixin border-color($name, $token) {
-  --border-1-#{$name}-#{$token}: var(--border-1) solid
+  --rls-border-1-#{$name}-#{$token}: var(--rls-border-1) solid
     var(--color-#{$name}-#{$token});
 
-  --border-2-#{$name}-#{$token}: var(--border-2) solid
+  --rls-border-2-#{$name}-#{$token}: var(--rls-border-2) solid
     var(--color-#{$name}-#{$token});
 
-  --border-4-#{$name}-#{$token}: var(--border-4) solid
+  --rls-border-4-#{$name}-#{$token}: var(--rls-border-4) solid
     var(--color-#{$name}-#{$token});
 }
 
@@ -50,13 +50,13 @@
 }
 
 @mixin border-rolster-theme($name, $token) {
-  --border-1-rolster-#{$token}: var(--border-1) solid
+  --rls-border-1-rolster-#{$token}: var(--rls-border-1) solid
     var(--color-#{$name}-#{$token});
 
-  --border-2-rolster-#{$token}: var(--border-2) solid
+  --rls-border-2-rolster-#{$token}: var(--rls-border-2) solid
     var(--color-#{$name}-#{$token});
 
-  --border-4-rolster-#{$token}: var(--border-4) solid
+  --rls-border-4-rolster-#{$token}: var(--rls-border-4) solid
     var(--color-#{$name}-#{$token});
 }
 

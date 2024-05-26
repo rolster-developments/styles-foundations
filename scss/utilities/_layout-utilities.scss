@@ -8,17 +8,17 @@
 @mixin grid-responsive($size) {
   .#{$size}-grid-8 {
     display: grid;
-    gap: var(--sizing-x4);
+    gap: var(--rls-sizing-x4);
   }
 
   .#{$size}-grid-12 {
     display: grid;
-    gap: var(--sizing-x6);
+    gap: var(--rls-sizing-x6);
   }
 
   .#{$size}-grid-16 {
     display: grid;
-    gap: var(--sizing-x8);
+    gap: var(--rls-sizing-x8);
   }
 
   .#{$size}-grid-col-12 {
@@ -73,7 +73,7 @@
 
     display: inline-flex;
     flex-wrap: wrap;
-    gap: var(--sizing-x4);
+    gap: var(--rls-sizing-x4);
   }
 
   .#{$size}-flex-grid-12 {
@@ -102,7 +102,7 @@
 
     display: inline-flex;
     flex-wrap: wrap;
-    gap: var(--sizing-x6);
+    gap: var(--rls-sizing-x6);
   }
 
   .#{$size}-flex-grid-16 {
@@ -131,7 +131,7 @@
 
     display: inline-flex;
     flex-wrap: wrap;
-    gap: var(--sizing-x8);
+    gap: var(--rls-sizing-x8);
   }
 
   .#{$size}-flex-grid-col-4 {
