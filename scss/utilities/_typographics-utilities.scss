@@ -15,22 +15,22 @@
 
   .#{$name}-regular {
     @extend .#{$name}-default;
-    font-weight: var(--font-weight-regular);
+    font-weight: var(--rls-font-weight-regular);
   }
 
   .#{$name}-medium {
     @extend .#{$name}-default;
-    font-weight: var(--font-weight-medium);
+    font-weight: var(--rls-font-weight-medium);
   }
 
   .#{$name}-semibold {
     @extend .#{$name}-default;
-    font-weight: var(--font-weight-semibold);
+    font-weight: var(--rls-font-weight-semibold);
   }
 
   .#{$name}-bold {
     @extend .#{$name}-default;
-    font-weight: var(--font-weight-bold);
+    font-weight: var(--rls-font-weight-bold);
   }
 }
 

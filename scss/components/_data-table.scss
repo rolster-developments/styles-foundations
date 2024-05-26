@@ -81,7 +81,7 @@
     color: var(--color-theme-500);
     font-size: var(--rls-datatable-font-size);
     letter-spacing: var(--rls-datatable-letter-spacing);
-    font-weight: var(--font-weight-bold);
+    font-weight: var(--rls-font-weight-bold);
 
     &--control {
       @include datatable_cell_control();
@@ -142,7 +142,7 @@
     color: var(--rls-input-font-color);
     font-size: var(--rls-datatable-font-size);
     letter-spacing: var(--rls-datatable-letter-spacing);
-    font-weight: var(--font-weight-regular);
+    font-weight: var(--rls-font-weight-regular);
 
     &--overflow {
       overflow: initial;
@@ -196,7 +196,7 @@
 
       &__control {
         font-size: var(--rls-datatable-font-size);
-        font-weight: var(--font-weight-medium);
+        font-weight: var(--rls-font-weight-medium);
         letter-spacing: var(--body-letter-spacing);
       }
 
@@ -247,7 +247,7 @@
       height: var(--sizing-x20);
 
       .rls-ballot__title {
-        font-weight: var(--font-weight-semibold);
+        font-weight: var(--rls-font-weight-semibold);
         font-size: var(--smalltext-font-size);
         letter-spacing: var(--smalltext-letter-spacing);
         min-height: var(--sizing-x8);
