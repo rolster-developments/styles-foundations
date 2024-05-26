@@ -83,7 +83,7 @@
     height: 0rem;
     max-height: var(--pvt-list-max-height);
     overflow: hidden;
-    z-index: var(--z-index-2);
+    z-index: var(--rls-z-index-2);
     padding-bottom: var(--rls-sizing-x6);
 
     &--visible {
@@ -94,7 +94,7 @@
       overflow: initial;
       opacity: 1;
       height: auto;
-      z-index: var(--z-index-4);
+      z-index: var(--rls-z-index-4);
     }
 
     &--higher {
@@ -114,7 +114,7 @@
       box-sizing: border-box;
       border-radius: var(--rls-sizing-x4);
       overflow: hidden;
-      z-index: var(--z-index-2);
+      z-index: var(--rls-z-index-2);
       background: var(--background-theme-500);
       border: var(--rls-border-1-rolster-500);
       box-shadow: 0px 0px 0px 3px var(--box-shadow-rolster-500);
@@ -199,7 +199,7 @@
     right: 0rem;
     bottom: var(--pvt-backdrop-bottom);
     opacity: var(--pvt-backdrop-opacity);
-    z-index: var(--z-index-2);
+    z-index: var(--rls-z-index-2);
     will-change: opacity;
     background: var(--backdrop-rolster-500);
     backdrop-filter: blur(2px);
@@ -228,7 +228,7 @@
         top: 0rem;
         left: 0rem;
         height: 100%;
-        z-index: var(--z-index-32);
+        z-index: var(--rls-z-index-32);
       }
     }
 

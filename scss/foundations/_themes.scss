@@ -1,11 +1,11 @@
 // Rolster Technology Themes Foundations
-// v2.2.0
+// v2.3.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 03/Mar/2022
-// Updated: 06/Abr/2024
+// Updated: 26/May/2024
 
-@mixin border-theme-color($name, $token) {
+@mixin theme-border-color($name, $token) {
   --rls-border-1-theme-#{$token}: var(--rls-border-1) solid
     var(--border-#{$name}-#{$token});
 
@@ -16,18 +16,18 @@
     var(--border-#{$name}-#{$token});
 }
 
-@mixin shadow-position-theme($position, $theme) {
-  --shadow-#{$position}-theme-2: var(--shadow-#{$position}-#{$theme}-2);
+@mixin theme-position-shadow($position, $theme) {
+  --rls-shadow-#{$position}-theme-2: var(--rls-shadow-#{$position}-#{$theme}-2);
 
-  --shadow-#{$position}-theme-4: var(--shadow-#{$position}-#{$theme}-4);
+  --rls-shadow-#{$position}-theme-4: var(--rls-shadow-#{$position}-#{$theme}-4);
 
-  --shadow-#{$position}-theme-8: var(--shadow-#{$position}-#{$theme}-8);
+  --rls-shadow-#{$position}-theme-8: var(--rls-shadow-#{$position}-#{$theme}-8);
 
-  --shadow-#{$position}-theme-16: var(--shadow-#{$position}-#{$theme}-16);
+  --rls-shadow-#{$position}-theme-16: var(--rls-shadow-#{$position}-#{$theme}-16);
 
-  --shadow-#{$position}-theme-24: var(--shadow-#{$position}-#{$theme}-24);
+  --rls-shadow-#{$position}-theme-24: var(--rls-shadow-#{$position}-#{$theme}-24);
 
-  --shadow-#{$position}-theme-32: var(--shadow-#{$position}-#{$theme}-32);
+  --rls-shadow-#{$position}-theme-32: var(--rls-shadow-#{$position}-#{$theme}-32);
 }
 
 @mixin border-color($name, $token) {
@@ -41,7 +41,7 @@
     var(--color-#{$name}-#{$token});
 }
 
-@mixin border-rolster-color($name) {
+@mixin rolster-border-color($name) {
   @include border-color($name, 100);
   @include border-color($name, 300);
   @include border-color($name, 500);
@@ -49,7 +49,7 @@
   @include border-color($name, 900);
 }
 
-@mixin border-rolster-theme($name, $token) {
+@mixin rolster-border-theme($name, $token) {
   --rls-border-1-rolster-#{$token}: var(--rls-border-1) solid
     var(--color-#{$name}-#{$token});
 
@@ -83,11 +83,11 @@
 
   --gradient-rolster-500: var(--gradient-#{$name}-500);
 
-  @include border-rolster-theme($name, 900);
-  @include border-rolster-theme($name, 700);
-  @include border-rolster-theme($name, 500);
-  @include border-rolster-theme($name, 300);
-  @include border-rolster-theme($name, 100);
+  @include rolster-border-theme($name, 900);
+  @include rolster-border-theme($name, 700);
+  @include rolster-border-theme($name, 500);
+  @include rolster-border-theme($name, 300);
+  @include rolster-border-theme($name, 100);
 }
 
 :root {
@@ -109,24 +109,24 @@
 
   --border-theme-100: var(--border-dark-100);
 
-  @include border-theme-color('dark', 500);
-  @include border-theme-color('dark', 300);
-  @include border-theme-color('dark', 100);
+  @include theme-border-color('dark', 500);
+  @include theme-border-color('dark', 300);
+  @include theme-border-color('dark', 100);
 
-  @include shadow-position-theme('bottom', 'light');
-  @include shadow-position-theme('top', 'light');
-  @include shadow-position-theme('right', 'light');
-  @include shadow-position-theme('left', 'light');
-  @include shadow-position-theme('center', 'light');
+  @include theme-position-shadow('bottom', 'light');
+  @include theme-position-shadow('top', 'light');
+  @include theme-position-shadow('right', 'light');
+  @include theme-position-shadow('left', 'light');
+  @include theme-position-shadow('center', 'light');
 
-  @include border-rolster-color('primary');
-  @include border-rolster-color('success');
-  @include border-rolster-color('info');
-  @include border-rolster-color('warning');
-  @include border-rolster-color('happy');
-  @include border-rolster-color('danger');
-  @include border-rolster-color('coffee');
-  @include border-rolster-color('obsidian');
+  @include rolster-border-color('primary');
+  @include rolster-border-color('success');
+  @include rolster-border-color('info');
+  @include rolster-border-color('warning');
+  @include rolster-border-color('danger');
+  @include rolster-border-color('amaizing');
+  @include rolster-border-color('smartness');
+  @include rolster-border-color('obsidian');
 
   @include rolster-theme('primary');
 }
@@ -139,10 +139,6 @@
   @include rolster-theme('info');
 }
 
-*[rls-theme='happy'] {
-  @include rolster-theme('happy');
-}
-
 *[rls-theme='warning'] {
   @include rolster-theme('warning');
 }
@@ -151,8 +147,12 @@
   @include rolster-theme('danger');
 }
 
-*[rls-theme='coffee'] {
-  @include rolster-theme('coffee');
+*[rls-theme='amaizing'] {
+  @include rolster-theme('amaizing');
+}
+
+*[rls-theme='smartness'] {
+  @include rolster-theme('smartness');
 }
 
 *[rls-theme='obsidian'] {

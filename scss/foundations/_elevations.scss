@@ -1,157 +1,157 @@
 // Rolster Technology Elevations Foundations
-// v1.0.0
+// v2.0.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 11/Abr/2023
+// Updated: 20/May/2024
 
 :root {
-  --z-index-2: 2;
+  --rls-z-index-2: 2;
 
-  --z-index-4: 4;
+  --rls-z-index-4: 4;
 
-  --z-index-6: 6;
+  --rls-z-index-6: 6;
 
-  --z-index-8: 8;
+  --rls-z-index-8: 8;
 
-  --z-index-12: 12;
+  --rls-z-index-12: 12;
 
-  --z-index-16: 16;
+  --rls-z-index-16: 16;
 
-  --z-index-24: 24;
+  --rls-z-index-24: 24;
 
-  --z-index-32: 32;
+  --rls-z-index-32: 32;
 
-  --shadow-1: 0px 4px 2px -2px rgba(50, 44, 47, 0.02);
+  --rls-shadow-1: 0px 4px 2px -2px rgba(50, 44, 47, 0.02);
 
-  --shadow-2: 0px 4px 8px -2px rgba(50, 44, 47, 0.04);
+  --rls-shadow-2: 0px 4px 8px -2px rgba(50, 44, 47, 0.04);
 
-  --shadow-3: 0px 2px 4px -2px rgba(50, 44, 47, 0.08);
+  --rls-shadow-3: 0px 2px 4px -2px rgba(50, 44, 47, 0.08);
 
-  --shadow-4: 0px 4px 8px -6px rgba(50, 44, 47, 0.03),
+  --rls-shadow-4: 0px 4px 8px -6px rgba(50, 44, 47, 0.03),
     0px 16px 8px -4px rgba(50, 44, 47, 0.03);
 
-  --shadow-5: 0px 8px 24px -4px rgba(50, 44, 47, 0.08);
+  --rls-shadow-5: 0px 8px 24px -4px rgba(50, 44, 47, 0.08);
 
-  --shadow-6: 0px 8px 24px -4px rgba(50, 44, 47, 0.12);
+  --rls-shadow-6: 0px 8px 24px -4px rgba(50, 44, 47, 0.12);
 
-  --shadow-bottom-light-2: 0px 2px 2px rgba(173, 186, 230, 0.4);
+  --rls-shadow-bottom-light-2: 0px 2px 2px rgba(173, 186, 230, 0.4);
 
-  --shadow-bottom-light-4: 0px 4px 4px rgba(173, 186, 230, 0.4);
+  --rls-shadow-bottom-light-4: 0px 4px 4px rgba(173, 186, 230, 0.4);
 
-  --shadow-bottom-light-8: 0px 8px 8px rgba(173, 186, 230, 0.4);
+  --rls-shadow-bottom-light-8: 0px 8px 8px rgba(173, 186, 230, 0.4);
 
-  --shadow-bottom-light-16: 0px 16px 16px rgba(173, 186, 230, 0.4);
+  --rls-shadow-bottom-light-16: 0px 16px 16px rgba(173, 186, 230, 0.4);
 
-  --shadow-bottom-light-24: 0px 24px 24px rgba(173, 186, 230, 0.4);
+  --rls-shadow-bottom-light-24: 0px 24px 24px rgba(173, 186, 230, 0.4);
 
-  --shadow-bottom-light-32: 0px 32px 32px rgba(173, 186, 230, 0.4);
+  --rls-shadow-bottom-light-32: 0px 32px 32px rgba(173, 186, 230, 0.4);
 
-  --shadow-top-light-2: 0px -2px 2px rgba(173, 186, 230, 0.4);
+  --rls-shadow-top-light-2: 0px -2px 2px rgba(173, 186, 230, 0.4);
 
-  --shadow-top-light-4: 0px -4px 4px rgba(173, 186, 230, 0.4);
+  --rls-shadow-top-light-4: 0px -4px 4px rgba(173, 186, 230, 0.4);
 
-  --shadow-top-light-8: 0px -8px 8px rgba(173, 186, 230, 0.4);
+  --rls-shadow-top-light-8: 0px -8px 8px rgba(173, 186, 230, 0.4);
 
-  --shadow-top-light-16: 0px -16px 16px rgba(173, 186, 230, 0.4);
+  --rls-shadow-top-light-16: 0px -16px 16px rgba(173, 186, 230, 0.4);
 
-  --shadow-top-light-24: 0px -24px 24px rgba(173, 186, 230, 0.4);
+  --rls-shadow-top-light-24: 0px -24px 24px rgba(173, 186, 230, 0.4);
 
-  --shadow-top-light-32: 0px -32px 32px rgba(173, 186, 230, 0.4);
+  --rls-shadow-top-light-32: 0px -32px 32px rgba(173, 186, 230, 0.4);
 
-  --shadow-right-light-2: 2px 0px 2px rgba(173, 186, 230, 0.4);
+  --rls-shadow-right-light-2: 2px 0px 2px rgba(173, 186, 230, 0.4);
 
-  --shadow-right-light-4: 4px 0px 4px rgba(173, 186, 230, 0.4);
+  --rls-shadow-right-light-4: 4px 0px 4px rgba(173, 186, 230, 0.4);
 
-  --shadow-right-light-8: 8px 0px 8px rgba(173, 186, 230, 0.4);
+  --rls-shadow-right-light-8: 8px 0px 8px rgba(173, 186, 230, 0.4);
 
-  --shadow-right-light-16: 16px 0px 16px rgba(173, 186, 230, 0.4);
+  --rls-shadow-right-light-16: 16px 0px 16px rgba(173, 186, 230, 0.4);
 
-  --shadow-right-light-24: 24px 0px 24px rgba(173, 186, 230, 0.4);
+  --rls-shadow-right-light-24: 24px 0px 24px rgba(173, 186, 230, 0.4);
 
-  --shadow-right-light-32: 32px 0px 32px rgba(173, 186, 230, 0.4);
+  --rls-shadow-right-light-32: 32px 0px 32px rgba(173, 186, 230, 0.4);
 
-  --shadow-left-light-2: -2px 0px 2px rgba(173, 186, 230, 0.4);
+  --rls-shadow-left-light-2: -2px 0px 2px rgba(173, 186, 230, 0.4);
 
-  --shadow-left-light-4: -4px 0px 4px rgba(173, 186, 230, 0.4);
+  --rls-shadow-left-light-4: -4px 0px 4px rgba(173, 186, 230, 0.4);
 
-  --shadow-left-light-8: -8px 0px 8px rgba(173, 186, 230, 0.4);
+  --rls-shadow-left-light-8: -8px 0px 8px rgba(173, 186, 230, 0.4);
 
-  --shadow-left-light-16: -16px 0px 16px rgba(173, 186, 230, 0.4);
+  --rls-shadow-left-light-16: -16px 0px 16px rgba(173, 186, 230, 0.4);
 
-  --shadow-left-light-24: -24px 0px 24px rgba(173, 186, 230, 0.4);
+  --rls-shadow-left-light-24: -24px 0px 24px rgba(173, 186, 230, 0.4);
 
-  --shadow-left-light-32: -32px 0px 32px rgba(173, 186, 230, 0.4);
+  --rls-shadow-left-light-32: -32px 0px 32px rgba(173, 186, 230, 0.4);
 
-  --shadow-center-light-2: 0px 0px 2px 0px rgba(173, 186, 230, 0.4);
+  --rls-shadow-center-light-2: 0px 0px 2px 0px rgba(173, 186, 230, 0.4);
 
-  --shadow-center-light-4: 0px 0px 4px 0px rgba(173, 186, 230, 0.4);
+  --rls-shadow-center-light-4: 0px 0px 4px 0px rgba(173, 186, 230, 0.4);
 
-  --shadow-center-light-8: 0px 0px 8px 0px rgba(173, 186, 230, 0.4);
+  --rls-shadow-center-light-8: 0px 0px 8px 0px rgba(173, 186, 230, 0.4);
 
-  --shadow-center-light-16: 0px 0px 16px 0px rgba(173, 186, 230, 0.4);
+  --rls-shadow-center-light-16: 0px 0px 16px 0px rgba(173, 186, 230, 0.4);
 
-  --shadow-center-light-24: 0px 0px 24px 0px rgba(173, 186, 230, 0.4);
+  --rls-shadow-center-light-24: 0px 0px 24px 0px rgba(173, 186, 230, 0.4);
 
-  --shadow-center-light-32: 0px 0px 32px 0px rgba(173, 186, 230, 0.4);
+  --rls-shadow-center-light-32: 0px 0px 32px 0px rgba(173, 186, 230, 0.4);
 
-  --shadow-bottom-dark-2: 0px 2px 2px rgba(50, 44, 47, 0.4);
+  --rls-shadow-bottom-dark-2: 0px 2px 2px rgba(50, 44, 47, 0.4);
 
-  --shadow-bottom-dark-4: 0px 4px 4px rgba(50, 44, 47, 0.4);
+  --rls-shadow-bottom-dark-4: 0px 4px 4px rgba(50, 44, 47, 0.4);
 
-  --shadow-bottom-dark-8: 0px 8px 8px rgba(50, 44, 47, 0.4);
+  --rls-shadow-bottom-dark-8: 0px 8px 8px rgba(50, 44, 47, 0.4);
 
-  --shadow-bottom-dark-16: 0px 16px 16px rgba(50, 44, 47, 0.4);
+  --rls-shadow-bottom-dark-16: 0px 16px 16px rgba(50, 44, 47, 0.4);
 
-  --shadow-bottom-dark-24: 0px 24px 24px rgba(50, 44, 47, 0.4);
+  --rls-shadow-bottom-dark-24: 0px 24px 24px rgba(50, 44, 47, 0.4);
 
-  --shadow-bottom-dark-32: 0px 32px 32px rgba(50, 44, 47, 0.4);
+  --rls-shadow-bottom-dark-32: 0px 32px 32px rgba(50, 44, 47, 0.4);
 
-  --shadow-top-dark-2: 0px -2px 2px rgba(50, 44, 47, 0.4);
+  --rls-shadow-top-dark-2: 0px -2px 2px rgba(50, 44, 47, 0.4);
 
-  --shadow-top-dark-4: 0px -4px 4px rgba(50, 44, 47, 0.4);
+  --rls-shadow-top-dark-4: 0px -4px 4px rgba(50, 44, 47, 0.4);
 
-  --shadow-top-dark-8: 0px -8px 8px rgba(50, 44, 47, 0.4);
+  --rls-shadow-top-dark-8: 0px -8px 8px rgba(50, 44, 47, 0.4);
 
-  --shadow-top-dark-16: 0px -16px 16px rgba(50, 44, 47, 0.4);
+  --rls-shadow-top-dark-16: 0px -16px 16px rgba(50, 44, 47, 0.4);
 
-  --shadow-top-dark-24: 0px -24px 24px rgba(50, 44, 47, 0.4);
+  --rls-shadow-top-dark-24: 0px -24px 24px rgba(50, 44, 47, 0.4);
 
-  --shadow-top-dark-32: 0px -32px 32px rgba(50, 44, 47, 0.4);
+  --rls-shadow-top-dark-32: 0px -32px 32px rgba(50, 44, 47, 0.4);
 
-  --shadow-right-dark-2: 2px 0px 2px rgba(50, 44, 47, 0.4);
+  --rls-shadow-right-dark-2: 2px 0px 2px rgba(50, 44, 47, 0.4);
 
-  --shadow-right-dark-4: 4px 0px 4px rgba(50, 44, 47, 0.4);
+  --rls-shadow-right-dark-4: 4px 0px 4px rgba(50, 44, 47, 0.4);
 
-  --shadow-right-dark-8: 8px 0px 8px rgba(50, 44, 47, 0.4);
+  --rls-shadow-right-dark-8: 8px 0px 8px rgba(50, 44, 47, 0.4);
 
-  --shadow-right-dark-16: 16px 0px 16px rgba(50, 44, 47, 0.4);
+  --rls-shadow-right-dark-16: 16px 0px 16px rgba(50, 44, 47, 0.4);
 
-  --shadow-right-dark-24: 24px 0px 24px rgba(50, 44, 47, 0.4);
+  --rls-shadow-right-dark-24: 24px 0px 24px rgba(50, 44, 47, 0.4);
 
-  --shadow-right-dark-32: 32px 0px 32px rgba(50, 44, 47, 0.4);
+  --rls-shadow-right-dark-32: 32px 0px 32px rgba(50, 44, 47, 0.4);
 
-  --shadow-left-dark-2: -2px 0px 2px rgba(50, 44, 47, 0.4);
+  --rls-shadow-left-dark-2: -2px 0px 2px rgba(50, 44, 47, 0.4);
 
-  --shadow-left-dark-4: -4px 0px 4px rgba(50, 44, 47, 0.4);
+  --rls-shadow-left-dark-4: -4px 0px 4px rgba(50, 44, 47, 0.4);
 
-  --shadow-left-dark-8: -8px 0px 8px rgba(50, 44, 47, 0.4);
+  --rls-shadow-left-dark-8: -8px 0px 8px rgba(50, 44, 47, 0.4);
 
-  --shadow-left-dark-16: -16px 0px 16px rgba(50, 44, 47, 0.4);
+  --rls-shadow-left-dark-16: -16px 0px 16px rgba(50, 44, 47, 0.4);
 
-  --shadow-left-dark-24: -24px 0px 24px rgba(50, 44, 47, 0.4);
+  --rls-shadow-left-dark-24: -24px 0px 24px rgba(50, 44, 47, 0.4);
 
-  --shadow-left-dark-32: -32px 0px 32px rgba(50, 44, 47, 0.4);
+  --rls-shadow-left-dark-32: -32px 0px 32px rgba(50, 44, 47, 0.4);
 
-  --shadow-center-dark-2: 0px 0px 2px 0px rgba(50, 44, 47, 0.4);
+  --rls-shadow-center-dark-2: 0px 0px 2px 0px rgba(50, 44, 47, 0.4);
 
-  --shadow-center-dark-4: 0px 0px 4px 0px rgba(50, 44, 47, 0.4);
+  --rls-shadow-center-dark-4: 0px 0px 4px 0px rgba(50, 44, 47, 0.4);
 
-  --shadow-center-dark-8: 0px 0px 8px 0px rgba(50, 44, 47, 0.4);
+  --rls-shadow-center-dark-8: 0px 0px 8px 0px rgba(50, 44, 47, 0.4);
 
-  --shadow-center-dark-16: 0px 0px 16px 0px rgba(50, 44, 47, 0.4);
+  --rls-shadow-center-dark-16: 0px 0px 16px 0px rgba(50, 44, 47, 0.4);
 
-  --shadow-center-dark-24: 0px 0px 24px 0px rgba(50, 44, 47, 0.4);
+  --rls-shadow-center-dark-24: 0px 0px 24px 0px rgba(50, 44, 47, 0.4);
 
-  --shadow-center-dark-32: 0px 0px 32px 0px rgba(50, 44, 47, 0.4);
+  --rls-shadow-center-dark-32: 0px 0px 32px 0px rgba(50, 44, 47, 0.4);
 }
