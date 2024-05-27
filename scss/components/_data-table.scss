@@ -6,17 +6,17 @@
 // Updated: 26/May/2024
 
 @mixin datatable_cell_control() {
-  --rls-avatar-border-radius: var(--rls-sizing-x3);
-  --rls-avatar-width: var(--rls-sizing-x16);
-  --rls-avatar-height: var(--rls-sizing-x16);
-  --rls-avatar-font-size: var(--rls-datatable-font-size);
+  --rlc-avatar-border-radius: var(--rls-sizing-x3);
+  --rlc-avatar-width: var(--rls-sizing-x16);
+  --rlc-avatar-height: var(--rls-sizing-x16);
+  --rlc-avatar-font-size: var(--rlc-datatable-font-size);
 
-  --rls-action-ripple-dimension: var(--rls-sizing-x16);
-  --rls-action-ripple-position: -8rem;
+  --rlc-action-ripple-dimension: var(--rls-sizing-x16);
+  --rlc-action-ripple-position: -8rem;
 
-  --rls-switch-element-size: var(--rls-sizing-x10);
-  --rls-switch-bar-radius: var(--rls-sizing-x2);
-  --rls-switch-bar-height: var(--rls-sizing-x4);
+  --rlc-switch-element-size: var(--rls-sizing-x10);
+  --rlc-switch-bar-radius: var(--rls-sizing-x2);
+  --rlc-switch-bar-height: var(--rls-sizing-x4);
 
   display: flex;
   width: var(--rls-sizing-x24);
@@ -28,10 +28,10 @@
 }
 
 .rls-datatable {
-  --pvt-header-padding-right: var(--rls-datatable-padding-scroll);
+  --pvt-header-padding-right: var(--rlc-datatable-padding-scroll);
 
-  --rls-input-font-size: var(--rls-datatable-font-size);
-  --rls-input-letter-spacing: var(--rls-datatable-letter-spacing);
+  --rls-input-font-size: var(--rlc-datatable-font-size);
+  --rls-input-letter-spacing: var(--rlc-datatable-letter-spacing);
 
   position: relative;
   display: flex;
@@ -43,7 +43,7 @@
 
   &--scrolleable {
     --pvt-header-padding-right: calc(
-      var(--rls-datatable-padding-scroll) + var(--rls-datatable-width-scroll)
+      var(--rlc-datatable-padding-scroll) + var(--rlc-datatable-width-scroll)
     );
   }
 
@@ -57,7 +57,7 @@
 
   &__thead {
     width: 100%;
-    padding-left: var(--rls-datatable-padding-scroll);
+    padding-left: var(--rlc-datatable-padding-scroll);
     padding-right: var(--pvt-header-padding-right);
     box-sizing: border-box;
   }
@@ -80,8 +80,8 @@
     height: var(--rls-sizing-x20);
     line-height: var(--rls-sizing-x20);
     color: var(--rls-app-color-500);
-    font-size: var(--rls-datatable-font-size);
-    letter-spacing: var(--rls-datatable-letter-spacing);
+    font-size: var(--rlc-datatable-font-size);
+    letter-spacing: var(--rlc-datatable-letter-spacing);
     font-weight: var(--rls-font-weight-bold);
 
     &--control {
@@ -103,12 +103,12 @@
     display: flex;
     flex-direction: column;
     row-gap: var(--rls-sizing-x6);
-    padding: 0rem var(--rls-datatable-padding-scroll);
+    padding: 0rem var(--rlc-datatable-padding-scroll);
     box-sizing: border-box;
   }
 
   &__tsummary {
-    padding-left: var(--rls-datatable-padding-scroll);
+    padding-left: var(--rlc-datatable-padding-scroll);
     padding-right: var(--pvt-header-padding-right);
     box-sizing: border-box;
   }
@@ -140,9 +140,9 @@
     cursor: default;
     overflow: hidden;
     white-space: nowrap;
-    color: var(--rls-input-font-color);
-    font-size: var(--rls-datatable-font-size);
-    letter-spacing: var(--rls-datatable-letter-spacing);
+    color: var(--rlc-input-font-color);
+    font-size: var(--rlc-datatable-font-size);
+    letter-spacing: var(--rlc-datatable-letter-spacing);
     font-weight: var(--rls-font-weight-regular);
 
     &--overflow {
@@ -184,7 +184,7 @@
 
       .rls-input-number,
       .rls-input-text {
-        --rls-input-parent-padding: 0rem;
+        --rlc-input-parent-padding: 0rem;
       }
     }
 
@@ -196,7 +196,7 @@
       }
 
       &__control {
-        font-size: var(--rls-datatable-font-size);
+        font-size: var(--rlc-datatable-font-size);
         font-weight: var(--rls-font-weight-medium);
         letter-spacing: var(--rls-body-letter-spacing);
       }
@@ -222,7 +222,7 @@
     }
 
     .rls-amount {
-      font-size: var(--rls-datatable-font-size);
+      font-size: var(--rlc-datatable-font-size);
       width: 100%;
     }
 
@@ -239,8 +239,8 @@
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
-      background: var(--color-rolster-100);
-      color: var(--color-rolster-500);
+      background: var(--rls-theme-color-100);
+      color: var(--rls-theme-color-500);
     }
 
     & > .rls-ballot {

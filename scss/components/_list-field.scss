@@ -15,15 +15,15 @@
   --pvt-backdrop-opacity: 0;
   --pvt-backdrop-bottom: initial;
 
-  --rls-boxfield-body-padding: var(--rls-sizing-x3) var(--rls-sizing-x4);
+  --rlc-boxfield-body-padding: var(--rls-sizing-x3) var(--rls-sizing-x4);
 
   position: relative;
   box-sizing: border-box;
 
   &.rls-box-field--active {
-    --rls-boxfield-body-shadow: 0px 0px 0px 3px var(--box-shadow-theme-100);
-    --rls-boxfield-body-border: var(--rls-theme-border-1-300);
-    --rls-boxfield-label-font-color: var(--rls-app-color-300);
+    --rlc-boxfield-body-shadow: 0px 0px 0px 3px var(--box-shadow-theme-100);
+    --rlc-boxfield-body-border: var(--rls-theme-border-1-300);
+    --rlc-boxfield-label-font-color: var(--rls-app-color-300);
   }
 
   &.rls-box-field--disabled {
@@ -40,7 +40,7 @@
     border: none;
     outline: none;
     background: transparent;
-    color: var(--rls-input-font-color);
+    color: var(--rlc-input-font-color);
     font-size: var(--rls-input-font-size);
     font-weight: var(--rls-font-weight-medium);
     letter-spacing: var(--rls-input-letter-spacing);
@@ -138,9 +138,9 @@
   }
 
   &__element {
-    --rls-ballot-subtitle-overflow: hidden;
-    --rls-ballot-subtitle-text-overflow: ellipsis;
-    --rls-ballot-subtitle-white-space: nowrap;
+    --rlc-ballot-subtitle-overflow: hidden;
+    --rlc-ballot-subtitle-text-overflow: ellipsis;
+    --rlc-ballot-subtitle-white-space: nowrap;
 
     box-sizing: border-box;
     outline: none;
@@ -200,7 +200,7 @@
     opacity: var(--pvt-backdrop-opacity);
     z-index: var(--rls-z-index-2);
     will-change: opacity;
-    background: var(--backdrop-rolster-500);
+    background: var(--rls-theme-backdrop-500);
     backdrop-filter: blur(2px);
     transition:
       opacity 120ms 0ms var(--rls-deceleration-curve),

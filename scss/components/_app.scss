@@ -24,7 +24,7 @@
   }
 
   &__header {
-    --rls-toolbar-height: 100%;
+    --rlc-toolbar-height: 100%;
 
     position: relative;
     width: 100%;
@@ -71,7 +71,7 @@
       background: var(--rls-app-background-100);
 
       & + .rls-app__page__content {
-        --rls-snackbar-left: calc(50% + 80rem);
+        --rlc-snackbar-left: calc(50% + 80rem);
 
         width: calc(100% - 160rem);
       }

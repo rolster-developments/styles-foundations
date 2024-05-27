@@ -1,81 +1,81 @@
 // Rolster Technology Components
-// v1.2.1
+// v2.0.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 13/Abr/2023
-// Updated: 23/Abr/2024
+// Updated: 26/May/2024
 
 :root {
-  --rls-action-color: var(--color-theme-300);
-  --rls-action-ripple-color: var(--rls-action-color);
-  --rls-action-ripple-dimension: var(--rls-sizing-x18);
-  --rls-action-ripple-position: -9rem;
+  --rlc-action-color: var(--rls-app-color-300);
+  --rlc-action-ripple-color: var(--rlc-action-color);
+  --rlc-action-ripple-dimension: var(--rls-sizing-x18);
+  --rlc-action-ripple-position: -9rem;
 
-  --rls-avatar-font-size: var(--rls-title-font-size);
-  --rls-avatar-border-radius: var(--rls-sizing-x4);
-  --rls-avatar-width: var(--rls-sizing-x24);
-  --rls-avatar-height: var(--rls-sizing-x24);
+  --rlc-avatar-font-size: var(--rls-title-font-size);
+  --rlc-avatar-border-radius: var(--rls-sizing-x4);
+  --rlc-avatar-width: var(--rls-sizing-x24);
+  --rlc-avatar-height: var(--rls-sizing-x24);
 
-  --rls-amount-text-align: start;
+  --rlc-amount-text-align: start;
 
-  --rls-ballot-subtitle-width: 100%;
-  --rls-ballot-subtitle-height: var(--rls-smalltext-line-height);
-  --rls-ballot-subtitle-overflow: initial;
-  --rls-ballot-subtitle-text-overflow: initial;
-  --rls-ballot-subtitle-white-space: initial;
+  --rlc-ballot-subtitle-width: 100%;
+  --rlc-ballot-subtitle-height: var(--rls-smalltext-line-height);
+  --rlc-ballot-subtitle-overflow: initial;
+  --rlc-ballot-subtitle-text-overflow: initial;
+  --rlc-ballot-subtitle-white-space: initial;
 
-  --rls-boxfield-body-padding: 0rem;
-  --rls-boxfield-body-border: var(--rls-theme-border-1-100);
-  --rls-boxfield-body-shadow: none;
-  --rls-boxfield-label-font-color: var(--color-theme-300);
+  --rlc-boxfield-body-padding: 0rem;
+  --rlc-boxfield-body-border: var(--rls-theme-border-1-100);
+  --rlc-boxfield-body-shadow: none;
+  --rlc-boxfield-label-font-color: var(--rls-app-color-300);
 
-  --rls-breadcrumb-height: var(--rls-sizing-x18);
+  --rlc-breadcrumb-height: var(--rls-sizing-x18);
 
-  --rls-button-label-text-transform: uppercase;
-  --rls-button-content-padding: 0rem var(--rls-sizing-x4);
-  --rls-button-content-radius: var(--rls-sizing-x2);
+  --rlc-button-label-text-transform: uppercase;
+  --rlc-button-content-padding: 0rem var(--rls-sizing-x4);
+  --rlc-button-content-radius: var(--rls-sizing-x2);
 
-  --rls-card-content-padding: var(--rls-sizing-x8);
+  --rlc-card-content-padding: var(--rls-sizing-x8);
 
-  --rls-datatable-letter-spacing: 0.0625em;
-  --rls-datatable-font-size: 7rem;
-  --rls-datatable-width-scroll: var(--rls-sizing-x4);
-  --rls-datatable-padding-scroll: 0rem;
+  --rlc-datatable-letter-spacing: 0.0625em;
+  --rlc-datatable-font-size: 7rem;
+  --rlc-datatable-width-scroll: var(--rls-sizing-x4);
+  --rlc-datatable-padding-scroll: 0rem;
 
-  --rls-form-footer-justify-content: end;
+  --rlc-form-footer-justify-content: end;
 
-  --rls-icon-font-size: var(--rls-sizing-x12);
-  --rls-icon-width: var(--rls-sizing-x12);
-  --rls-icon-height: var(--rls-sizing-x12);
-  --rls-icon-color: inherit;
+  --rlc-icon-font-size: var(--rls-sizing-x12);
+  --rlc-icon-width: var(--rls-sizing-x12);
+  --rlc-icon-height: var(--rls-sizing-x12);
+  --rlc-icon-color: inherit;
 
-  --rls-input-font-color: var(--color-theme-500);
+  --rlc-input-font-color: var(--rls-app-color-500);
   --rls-input-font-size: var(--rls-input-font-size);
-  --rls-input-text-align: left;
+  --rlc-input-text-align: left;
   --rls-input-letter-spacing: var(--rls-input-letter-spacing);
-  --rls-input-height: var(--rls-sizing-x12);
-  --rls-input-parent-padding: 0rem;
+  --rlc-input-height: var(--rls-sizing-x12);
+  --rlc-input-parent-padding: 0rem;
 
-  --rls-poster-height: var(--rls-sizing-x18);
-  --rls-poster-padding: var(--rls-sizing-x4);
+  --rlc-poster-height: var(--rls-sizing-x18);
+  --rlc-poster-padding: var(--rls-sizing-x4);
   
-  --rls-progress-circular-dimension: var(--rls-sizing-x28);
+  --rlc-progress-circular-dimension: var(--rls-sizing-x28);
 
-  --rls-snackbar-left: 50%;
+  --rlc-snackbar-left: 50%;
 
-  --rls-switch-element-size: var(--rls-sizing-x12);
-  --rls-switch-bar-radius: var(--rls-sizing-x3);
-  --rls-switch-bar-height: var(--rls-sizing-x6);
+  --rlc-switch-element-size: var(--rls-sizing-x12);
+  --rlc-switch-bar-radius: var(--rls-sizing-x3);
+  --rlc-switch-bar-height: var(--rls-sizing-x6);
 
-  --rls-tabulartext-char-width: 5rem;
-  --rls-tabulartext-pointer-width: 2rem;
+  --rlc-tabulartext-char-width: 5rem;
+  --rlc-tabulartext-pointer-width: 2rem;
 
-  --rls-toolbar-height: var(--rls-sizing-x28);
+  --rlc-toolbar-height: var(--rls-sizing-x28);
 }
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: var(--color-rolster-300) var(--background-theme-100);
+  scrollbar-color: var(--rls-theme-color-300) var(--rls-app-background-100);
 }
 
 @import 'components/app';

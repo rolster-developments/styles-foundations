@@ -21,16 +21,16 @@
   &--focused {
     --pvt-body-background: var(--rls-app-background-500);
 
-    --rls-boxfield-body-border: var(--rls-border-1-rolster-500);
-    --rls-boxfield-body-shadow: 0px 0px 0px 3px var(--box-shadow-rolster-500);
-    --rls-boxfield-label-font-color: var(--rls-app-color-500);
+    --rlc-boxfield-body-border: var(--rls-theme-border-1-500);
+    --rlc-boxfield-body-shadow: 0px 0px 0px 3px var(--rls-theme-shadow-500);
+    --rlc-boxfield-label-font-color: var(--rls-app-color-500);
   }
 
   &--error {
-    --rls-boxfield-body-border: var(--rls-border-1) solid
+    --rlc-boxfield-body-border: var(--rls-border-1) solid
       var(--rls-danger-color-500);
-    --rls-boxfield-body-shadow: 0px 0px 0px 3px var(--box-shadow-danger-500);
-    --rls-boxfield-label-font-color: var(--rls-danger-color-500);
+    --rlc-boxfield-body-shadow: 0px 0px 0px 3px var(--box-shadow-danger-500);
+    --rlc-boxfield-label-font-color: var(--rls-danger-color-500);
   }
 
   &--disabled {
@@ -44,7 +44,7 @@
     width: 100%;
     padding: 0rem 5rem;
     box-sizing: border-box;
-    color: var(--rls-boxfield-label-font-color);
+    color: var(--rlc-boxfield-label-font-color);
     opacity: var(--pvt-label-opacity);
     overflow: hidden;
     white-space: nowrap;
@@ -67,13 +67,13 @@
     opacity: var(--pvt-body-opacity);
     border-radius: var(--rls-sizing-x2);
     background: var(--pvt-body-background);
-    padding: var(--rls-boxfield-body-padding);
-    border: var(--rls-boxfield-body-border);
-    box-shadow: var(--rls-boxfield-body-shadow);
+    padding: var(--rlc-boxfield-body-padding);
+    border: var(--rlc-boxfield-body-border);
+    box-shadow: var(--rlc-boxfield-body-shadow);
   }
 
   &__helper {
-    color: var(--color-theme-100);
+    color: var(--rls-app-color-100);
     padding: 0rem 5rem;
     box-sizing: border-box;
     font-weight: var(--rls-font-weight-medium);
