@@ -1,9 +1,9 @@
 // Rolster Technology ListField Component
-// v1.1.7
+// v1.2.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 27/Ene/2024
+// Updated: 31/May/2024
 
 .rls-list-field {
   --pvt-action-font-color: var(--rls-app-color-300);
@@ -215,26 +215,30 @@
     --pvt-list-max-height: initial;
 
     &__suggestions {
+      position: fixed;
       display: flex;
       justify-content: center;
+      top: 0rem;
+      left: 0rem;
+      z-index: var(--rls-z-index-32);
 
       &--visible {
         --pvt-list-transform: translateY(0%);
         --pvt-backdrop-opacity: 1;
         --pvt-backdrop-bottom: 0rem;
 
-        position: fixed;
-        top: 0rem;
-        left: 0rem;
         height: 100%;
-        z-index: var(--rls-z-index-32);
+      }
+
+      &__body {
+        position: absolute;
+        bottom: 0px;
+        border: none;
+        z-index: var(--rls-z-index-4);
       }
     }
 
     &__ul {
-      position: absolute;
-      bottom: 0rem;
-      width: 100%;
       max-width: 200rem;
       max-height: 75%;
       padding: var(--rls-sizing-x8) var(--rls-sizing-x2);
@@ -245,8 +249,7 @@
 
     &__empty {
       flex-direction: column;
-      margin: auto;
-      padding: var(--rls-sizing-x12) 0rem;
+      padding: var(--rls-sizing-x12) var(--rls-sizing-x2);
 
       &__avatar {
         width: 100%;
@@ -257,12 +260,9 @@
       }
 
       &__description {
-        width: 100%;
-        padding-left: 0rem;
-
-        label {
+        label,
+        p {
           text-align: center;
-          margin-top: var(--rls-sizing-x2);
         }
       }
     }
