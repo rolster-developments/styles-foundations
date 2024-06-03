@@ -1,9 +1,9 @@
 // Rolster Technology Components
-// v2.0.0
+// v2.0.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 13/Abr/2023
-// Updated: 26/May/2024
+// Updated: 02/Jun/2024
 
 :root {
   --rlc-action-color: var(--rls-app-color-300);
@@ -25,7 +25,8 @@
   --rlc-ballot-subtitle-white-space: initial;
 
   --rlc-boxfield-body-padding: 0rem;
-  --rlc-boxfield-body-border: var(--rls-theme-border-1-100);
+  --rlc-boxfield-body-background: rgba(255, 255, 255, 1);
+  --rlc-boxfield-body-border: var(--rls-app-border-1-100);
   --rlc-boxfield-body-shadow: none;
   --rlc-boxfield-label-font-color: var(--rls-app-color-300);
 

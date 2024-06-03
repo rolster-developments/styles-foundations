@@ -67,9 +67,19 @@
 
   --rls-theme-color-500: var(--rls-#{$theme}-color-500);
 
+  --rls-theme-color-400: var(--rls-#{$theme}-color-400);
+
   --rls-theme-color-300: var(--rls-#{$theme}-color-300);
+  
+  --rls-theme-color-200: var(--rls-#{$theme}-color-200);
 
   --rls-theme-color-100: var(--rls-#{$theme}-color-100);
+
+  --rls-theme-font-900: var(--rls-#{$theme}-color-100);
+
+  --rls-theme-font-500: var(--rls-#{$theme}-color-100);
+
+  --rls-theme-font-100: var(--rls-#{$theme}-color-900);
 
   --rls-theme-skeleton-500: var(--rls-#{$theme}-skeleton-500);
 
@@ -79,9 +89,11 @@
 
   --rls-theme-shadow-500: var(--rls-#{$theme}-shadow-500);
 
-  --rls-theme-backdrop-500: var(--rls-#{$theme}-backdrop-500);
+  --rls-theme-backdrop-900: var(--rls-#{$theme}-backdrop-900);
 
   --rls-theme-gradient-500: var(--rls-#{$theme}-gradient-500);
+
+  --rls-theme-gradient-700: var(--rls-#{$theme}-gradient-500);
 
   @include rolster-border-theme($theme, 900);
   @include rolster-border-theme($theme, 700);

@@ -6,9 +6,8 @@
 // Updated: 26/May/2024
 
 .rls-box-field {
-  --pvt-body-background: rgba(248, 248, 248, 1);
-  --pvt-body-opacity: 1;
   --pvt-label-opacity: 1;
+  --pvt-body-opacity: 1;
 
   position: relative;
   display: flex;
@@ -19,11 +18,10 @@
   transition: height 160ms 0ms var(--rls-standard-curve);
 
   &--focused {
-    --pvt-body-background: var(--rls-app-background-500);
-
+    --rlc-boxfield-body-background: var(--rls-app-background-500);
     --rlc-boxfield-body-border: var(--rls-theme-border-1-500);
     --rlc-boxfield-body-shadow: 0px 0px 0px 3px var(--rls-theme-shadow-500);
-    --rlc-boxfield-label-font-color: var(--rls-app-color-500);
+    --rlc-boxfield-label-font-color: var(--rls-theme-color-500);
   }
 
   &--error {
@@ -34,7 +32,7 @@
   }
 
   &--disabled {
-    --pvt-body-background: var(--rls-app-background-500);
+    --rlc-boxfield-body-background: var(--rls-app-background-500);
     --pvt-body-opacity: 0.75;
     --pvt-label-opacity: 0.5;
   }
@@ -66,7 +64,7 @@
     overflow: hidden;
     opacity: var(--pvt-body-opacity);
     border-radius: var(--rls-sizing-x2);
-    background: var(--pvt-body-background);
+    background: var(--rlc-boxfield-body-background);
     padding: var(--rlc-boxfield-body-padding);
     border: var(--rlc-boxfield-body-border);
     box-shadow: var(--rlc-boxfield-body-shadow);
