@@ -31,7 +31,7 @@
     height: var(--rls-sizing-x28);
     box-sizing: border-box;
     z-index: var(--rls-z-index-8);
-    background: var(--rls-app-background-100);
+    background: var(--rlc-app-header-background);
 
     & + .rls-app__page,
     & + .rls-app__content {
@@ -47,6 +47,7 @@
     padding: 0rem;
     overflow: auto;
     box-sizing: border-box;
+    background: var(--rlc-app-content-background);
   }
 
   &__page {
@@ -68,7 +69,7 @@
       overflow: auto;
       box-sizing: border-box;
       border-radius: 0rem 0rem var(--rls-sizing-x16) 0rem;
-      background: var(--rls-app-background-100);
+      background: var(--rlc-app-navbar-background);
 
       & + .rls-app__page__content {
         --rlc-snackbar-left: calc(50% + 80rem);

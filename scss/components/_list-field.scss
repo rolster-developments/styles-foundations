@@ -41,9 +41,9 @@
     outline: none;
     background: transparent;
     color: var(--rlc-input-font-color);
-    font-size: var(--rls-input-font-size);
+    font-size: var(--rlc-input-font-size);
     font-weight: var(--rls-font-weight-medium);
-    letter-spacing: var(--rls-input-letter-spacing);
+    letter-spacing: var(--rlc-input-letter-spacing);
 
     &::placeholder {
       color: var(--rls-app-color-100);

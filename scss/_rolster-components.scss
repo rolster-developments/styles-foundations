@@ -1,11 +1,15 @@
 // Rolster Technology Components
-// v2.0.1
+// v2.0.2
 // @license MIT
 // Author: Rolster Developers
 // Created: 13/Abr/2023
-// Updated: 02/Jun/2024
+// Updated: 13/Jun/2024
 
 :root {
+  --rlc-app-header-background: var(--rls-app-background-100);
+  --rlc-app-content-background: var(--rls-app-background-500);
+  --rlc-app-navbar-background: var(--rls-app-background-100);
+
   --rlc-action-color: var(--rls-app-color-300);
   --rlc-action-ripple-color: var(--rlc-action-color);
   --rlc-action-ripple-dimension: var(--rls-sizing-x18);
@@ -51,9 +55,9 @@
   --rlc-icon-color: inherit;
 
   --rlc-input-font-color: var(--rls-app-color-500);
-  --rls-input-font-size: var(--rls-input-font-size);
+  --rlc-input-font-size: var(--rls-input-font-size);
   --rlc-input-text-align: left;
-  --rls-input-letter-spacing: var(--rls-input-letter-spacing);
+  --rlc-input-letter-spacing: var(--rls-input-letter-spacing);
   --rlc-input-height: var(--rls-sizing-x12);
   --rlc-input-parent-padding: 0rem;
 
@@ -76,7 +80,7 @@
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: var(--rls-theme-color-300) var(--rls-app-background-100);
+  scrollbar-color: var(--rls-theme-color-500) var(--rls-app-background-100);
 }
 
 @import 'components/app';
