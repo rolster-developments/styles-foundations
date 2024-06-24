@@ -1,11 +1,11 @@
 // Rolster Technology ListField Component
-// v1.2.0
+// v1.3.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 31/May/2024
+// Updated: 24/Jun/2024
 
-.rls-list-field {
+.rls-field-list {
   --pvt-action-font-color: var(--rls-app-color-300);
   --pvt-list-height: 0rem;
   --pvt-list-max-height: 160rem;
@@ -15,18 +15,18 @@
   --pvt-backdrop-opacity: 0;
   --pvt-backdrop-bottom: initial;
 
-  --rlc-boxfield-body-padding: var(--rls-sizing-x3) var(--rls-sizing-x4);
+  --rlc-fieldbox-body-padding: var(--rls-sizing-x3) var(--rls-sizing-x4);
 
   position: relative;
   box-sizing: border-box;
 
-  &.rls-box-field--active {
-    --rlc-boxfield-body-shadow: 0px 0px 0px 3px var(--box-shadow-theme-100);
-    --rlc-boxfield-body-border: var(--rls-theme-border-1-300);
-    --rlc-boxfield-label-font-color: var(--rls-app-color-300);
+  &.rls-field-box--active {
+    --rlc-fieldbox-body-shadow: 0px 0px 0px 3px var(--box-shadow-theme-100);
+    --rlc-fieldbox-body-border: var(--rls-theme-border-1-300);
+    --rlc-fieldbox-label-font-color: var(--rls-app-color-300);
   }
 
-  &.rls-box-field--disabled {
+  &.rls-field-box--disabled {
     --pvt-action-font-color: var(--rls-app-color-100);
   }
 
@@ -209,7 +209,7 @@
 }
 
 @media screen and (max-width: 480px) {
-  .rls-list-field {
+  .rls-field-list {
     --pvt-list-transform: translateY(100%);
     --pvt-list-transform-origin: initial;
     --pvt-list-max-height: initial;

@@ -1,11 +1,11 @@
-// Rolster Technology BoxField Component
-// v2.0.0
+// Rolster Technology FieldBox Component
+// v2.1.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 08/Sep/2022
-// Updated: 26/May/2024
+// Updated: 24/Jun/2024
 
-.rls-box-field {
+.rls-field-box {
   --pvt-label-opacity: 1;
   --pvt-body-opacity: 1;
 
@@ -18,21 +18,21 @@
   transition: height 160ms 0ms var(--rls-standard-curve);
 
   &--focused {
-    --rlc-boxfield-body-background: var(--rls-app-background-500);
-    --rlc-boxfield-body-border: var(--rls-theme-border-1-500);
-    --rlc-boxfield-body-shadow: 0px 0px 0px 3px var(--rls-theme-shadow-500);
-    --rlc-boxfield-label-font-color: var(--rls-theme-color-500);
+    --rlc-fieldbox-body-background: var(--rls-app-background-500);
+    --rlc-fieldbox-body-border: var(--rls-theme-border-1-500);
+    --rlc-fieldbox-body-shadow: 0px 0px 0px 3px var(--rls-theme-shadow-500);
+    --rlc-fieldbox-label-font-color: var(--rls-theme-color-500);
   }
 
   &--error {
-    --rlc-boxfield-body-border: var(--rls-border-1) solid
+    --rlc-fieldbox-body-border: var(--rls-border-1) solid
       var(--rls-danger-color-500);
-    --rlc-boxfield-body-shadow: 0px 0px 0px 3px var(--box-shadow-danger-500);
-    --rlc-boxfield-label-font-color: var(--rls-danger-color-500);
+    --rlc-fieldbox-body-shadow: 0px 0px 0px 3px var(--rls-danger-shadow-500);
+    --rlc-fieldbox-label-font-color: var(--rls-danger-color-500);
   }
 
   &--disabled {
-    --rlc-boxfield-body-background: var(--rls-app-background-500);
+    --rlc-fieldbox-body-background: var(--rls-app-background-500);
     --pvt-body-opacity: 0.75;
     --pvt-label-opacity: 0.5;
   }
@@ -42,7 +42,7 @@
     width: 100%;
     padding: 0rem 5rem;
     box-sizing: border-box;
-    color: var(--rlc-boxfield-label-font-color);
+    color: var(--rlc-fieldbox-label-font-color);
     opacity: var(--pvt-label-opacity);
     overflow: hidden;
     white-space: nowrap;
@@ -64,10 +64,10 @@
     overflow: hidden;
     opacity: var(--pvt-body-opacity);
     border-radius: var(--rls-sizing-x2);
-    background: var(--rlc-boxfield-body-background);
-    padding: var(--rlc-boxfield-body-padding);
-    border: var(--rlc-boxfield-body-border);
-    box-shadow: var(--rlc-boxfield-body-shadow);
+    background: var(--rlc-fieldbox-body-background);
+    padding: var(--rlc-fieldbox-body-padding);
+    border: var(--rlc-fieldbox-body-border);
+    box-shadow: var(--rlc-fieldbox-body-shadow);
   }
 
   &__helper {

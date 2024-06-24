@@ -162,7 +162,7 @@
       overflow: hidden;
     }
 
-    .rls-box-field {
+    .rls-field-box {
       width: 100%;
       padding: 0rem;
 
@@ -191,8 +191,8 @@
       }
     }
 
-    .rls-list-field {
-      .rls-box-field__body {
+    .rls-field-list {
+      .rls-field-box__body {
         padding: var(--rls-sizing-x4) 0rem;
         border: none;
         box-shadow: none;
