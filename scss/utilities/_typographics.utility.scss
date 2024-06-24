@@ -1,9 +1,9 @@
 // Rolster Technology Typographics Utilities
-// v2.0.0
+// v2.1.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 26/May/2024
+// Updated: 24/Jun/2024
 
 @mixin typographic($name, $key) {
   .rls-#{$name}-default {
@@ -32,6 +32,70 @@
     @extend .rls-#{$name}-default;
     font-weight: var(--rls-font-weight-bold);
   }
+}
+
+:root {
+  --rls-app-font-size: 2px;
+
+  --rls-heading1-font-size: 16rem;
+  --rls-heading1-letter-spacing: 0.0234375em;
+  --rls-heading1-line-height: 18.25rem;
+
+  --rls-heading2-font-size: 14.45rem;
+  --rls-heading2-letter-spacing: 0.0234375em;
+  --rls-heading2-line-height: 15.45rem;
+
+  --rls-heading3-font-size: 13.45rem;
+  --rls-heading3-letter-spacing: 0.0234375em;
+  --rls-heading3-line-height: 14.45rem;
+
+  --rls-heading4-font-size: 12rem;
+  --rls-heading4-letter-spacing: 0.0234375em;
+  --rls-heading4-line-height: 13rem;
+
+  --rls-heading5-font-size: 11rem;
+  --rls-heading5-letter-spacing: 0.0234375em;
+  --rls-heading5-line-height: 12.65rem;
+
+  --rls-heading6-font-size: 10rem;
+  --rls-heading6-letter-spacing: 0.0234375em;
+  --rls-heading6-line-height: 11rem;
+
+  --rls-title-font-size: 9rem;
+  --rls-title-letter-spacing: 0.0546875em;
+  --rls-title-line-height: 10rem;
+
+  --rls-subtitle-font-size: 8.75rem;
+  --rls-subtitle-letter-spacing: 0.0546875em;
+  --rls-subtitle-line-height: 8.95rem;
+
+  --rls-body-font-size: 8rem;
+  --rls-body-letter-spacing: 0.03125em;
+  --rls-body-line-height: 9rem;
+
+  --rls-input-font-size: 7.65rem;
+  --rls-input-letter-spacing: 0.03125em;
+  --rls-input-line-height: 9rem;
+
+  --rls-label-font-size: 7rem;
+  --rls-label-letter-spacing: 0.03125em;
+  --rls-label-line-height: 8.25rem;
+
+  --rls-button-font-size: 7.125rem;
+  --rls-button-letter-spacing: 0.05725em;
+  --rls-button-line-height: 8.5rem;
+
+  --rls-smalltext-font-size: 6rem;
+  --rls-smalltext-letter-spacing: 0.03125em;
+  --rls-smalltext-line-height: 8.5rem;
+
+  --rls-caption-font-size: 5.75rem;
+  --rls-caption-letter-spacing: 0.046875em;
+  --rls-caption-line-height: 7.25rem;
+
+  --rls-overline-font-size: 5.35rem;
+  --rls-overline-letter-spacing: 0.0625em;
+  --rls-overline-line-height: 7.25rem;
 }
 
 h1 {
