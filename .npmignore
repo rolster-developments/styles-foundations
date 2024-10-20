@@ -11,6 +11,7 @@ test
 .prettierrc
 .prettierignore
 .rtlcssrc
+fonts/mont
 package-lock.json
 tsconfig.json
-xofttion-icons-outline.json
+rolster-icons-outline.json

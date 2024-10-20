@@ -1,9 +1,9 @@
 // Rolster Technology Themes Foundations
-// v2.3.0
+// v2.3.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 03/Mar/2022
-// Updated: 26/May/2024
+// Updated: 14/Jul/2024
 
 @mixin app-border-token($theme, $token) {
   --rls-app-border-1-#{$token}: var(--rls-border-1) solid
@@ -83,7 +83,11 @@
 
   --rls-theme-skeleton-500: var(--rls-#{$theme}-skeleton-500);
 
+  --rls-theme-skeleton-400: var(--rls-#{$theme}-skeleton-400);
+
   --rls-theme-skeleton-300: var(--rls-#{$theme}-skeleton-300);
+
+  --rls-theme-skeleton-200: var(--rls-#{$theme}-skeleton-200);
 
   --rls-theme-skeleton-100: var(--rls-#{$theme}-skeleton-100);
 

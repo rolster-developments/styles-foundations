@@ -1,9 +1,9 @@
 // Rolster Technology Components
-// v2.0.4
+// v2.0.5
 // @license MIT
 // Author: Rolster Developers
 // Created: 13/Abr/2023
-// Updated: 24/Jun/2024
+// Updated: 14/Jul/2024
 
 :root {
   --rlc-app-header-background: var(--rls-app-background-100);
@@ -64,18 +64,33 @@
   --rlc-input-letter-spacing: var(--rls-input-letter-spacing);
   --rlc-input-height: var(--rls-sizing-x12);
 
-  --rlc-poster-height: var(--rls-sizing-x18);
+  --rlc-label-font-size: var(--rls-smalltext-font-size);
+  --rlc-label-letter-spacing: var(--rls-smalltext-letter-spacing);
+  --rlc-label-height: var(--rls-smalltext-line-height);
+
+  --rlc-poster-font-size: var(--rls-body-font-size);
+  --rlc-poster-letter-spacing: var(--rls-body-letter-spacing);
+  --rlc-poster-height: var(--rls-body-line-height);
   --rlc-poster-padding: var(--rls-sizing-x4);
+  --rlc-poster-text-align: center;
   
   --rlc-progress-circular-dimension: var(--rls-sizing-x28);
 
   --rlc-snackbar-left: 50%;
 
+  --rlc-skeleton-height: inherit;
+
+  --rlc-skeleton-text-font-size: var(--rls-body-font-size);
+  --rlc-skeleton-text-height: var(--rls-body-line-height);
+  --rlc-skeleton-text-letter-spacing: var(--rls-body-letter-spacing);
+
   --rlc-switch-element-size: var(--rls-sizing-x12);
   --rlc-switch-bar-radius: var(--rls-sizing-x3);
   --rlc-switch-bar-height: var(--rls-sizing-x6);
 
-  --rlc-tabulartext-char-width: 5rem;
+  --rlc-tabulartext-text-align: flex-start;
+  --rlc-tabulartext-font-size: var(--rls-body-font-size);
+  --rlc-tabulartext-char-width: 5.5rem;
   --rlc-tabulartext-pointer-width: 2rem;
 
   --rlc-toolbar-height: var(--rls-sizing-x28);

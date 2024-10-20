@@ -8,27 +8,31 @@
 .align-center {
   --rlc-amount-text-align: center;
   --rlc-input-text-align: center;
+  --rlc-poster-text-align: center;
 
   text-align: center !important;
 }
 
 .align-justify {
-  --rlc-amount-text-align: start;
-  --rlc-input-text-align: left;
+  --rlc-amount-text-align: flex-start;
+  --rlc-input-text-align: justify;
+  --rlc-poster-text-align: flex-start;
 
   text-align: justify !important;
 }
 
 .align-left {
-  --rlc-amount-text-align: start;
+  --rlc-amount-text-align: flex-start;
   --rlc-input-text-align: left;
+  --rlc-poster-text-align: flex-start;
 
   text-align: left !important;
 }
 
 .align-right {
-  --rlc-amount-text-align: end;
+  --rlc-amount-text-align: flex-end;
   --rlc-input-text-align: right;
+  --rlc-poster-text-align: flex-end;
 
   text-align: right !important;
 }

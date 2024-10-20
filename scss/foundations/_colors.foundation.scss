@@ -1,9 +1,9 @@
 // Rolster Technology Colors Foundations
-// v2.4.0
+// v2.4.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 03/Mar/2022
-// Updated: 02/Jun/2024
+// Updated: 14/Jul/2024
 
 @mixin rolster-theme-900($theme, $r, $g, $b) {
   --rls-#{$theme}-color-900: rgba(#{$r}, #{$g}, #{$b}, 1);
@@ -16,7 +16,11 @@
 
   --rls-#{$theme}-skeleton-500: rgba(#{$r}, #{$g}, #{$b}, 0.5);
 
+  --rls-#{$theme}-skeleton-400: rgba(#{$r}, #{$g}, #{$b}, 0.325);
+
   --rls-#{$theme}-skeleton-300: rgba(#{$r}, #{$g}, #{$b}, 0.25);
+
+  --rls-#{$theme}-skeleton-200: rgba(#{$r}, #{$g}, #{$b}, 0.175);
 
   --rls-#{$theme}-skeleton-100: rgba(#{$r}, #{$g}, #{$b}, 0.1);
 }
