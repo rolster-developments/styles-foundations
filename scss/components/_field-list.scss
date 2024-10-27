@@ -1,9 +1,9 @@
 // Rolster Technology ListField Component
-// v1.3.1
+// v1.3.2
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 23/Oct/2024
+// Updated: 27/Oct/2024
 
 .rls-field-list {
   --pvt-action-font-color: var(--rls-app-color-300);
@@ -32,7 +32,7 @@
 
   &__control {
     position: relative;
-    width: calc(100% - var(--rls-sizing-x14));
+    width: calc(100% - var(--rlc-fieldlist-action-dimension));
     height: var(--rls-sizing-x12);
     line-height: var(--rls-sizing-x12);
     padding: 0rem;
@@ -40,10 +40,10 @@
     border: none;
     outline: none;
     background: transparent;
+    font-weight: var(--rlc-fieldlist-control-font-weight);
+    font-size: var(--rlc-fieldlist-control-font-size);
+    letter-spacing: var(--rlc-fieldlist-control-letter-spacing);
     color: var(--rlc-input-font-color);
-    font-size: var(--rlc-input-font-size);
-    font-weight: var(--rls-font-weight-medium);
-    letter-spacing: var(--rlc-input-letter-spacing);
 
     &::placeholder {
       color: var(--rls-app-color-100);
@@ -57,26 +57,23 @@
     &:disabled {
       opacity: 0.5;
     }
-
-    &__placeholder {
-      position: relative;
-      color: var(--rls-app-color-100);
-    }
   }
 
   &__action {
+    --rlc-icon-dimesion: var(--rlc-fieldlist-action-dimension);
+
     color: var(--pvt-action-font-color);
-    width: var(--rls-sizing-x12);
-    height: var(--rls-sizing-x12);
+    width: var(--rlc-fieldlist-action-dimension);
+    height: var(--rlc-fieldlist-action-dimension);
     padding: 0rem;
-    margin-left: var(--rls-sizing-x2);
     outline: none;
     background: transparent;
   }
 
   &__suggestions {
     position: absolute;
-    top: calc(100% + var(--rls-sizing-x4));
+    top: var(--rlc-fieldlist-suggestions-top);
+    bottom: initial;
     left: 0rem;
     width: 100%;
     height: 0rem;
@@ -100,7 +97,7 @@
       --pvt-list-transform-origin: 0% 100%;
 
       top: initial;
-      bottom: 100%;
+      bottom: var(--rlc-fieldlist-suggestions-bottom);
     }
 
     &__body {
@@ -145,7 +142,7 @@
     box-sizing: border-box;
     outline: none;
     border-radius: var(--rls-sizing-x4);
-    padding: var(--rls-sizing-x2);
+    padding: var(--rlc-fieldlist-element-padding);
     box-sizing: border-box;
 
     &:hover {

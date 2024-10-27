@@ -1,9 +1,9 @@
 // Rolster Technology Datatable Component
-// v2.0.4
+// v2.1.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 26/Oct/2024
+// Updated: 27/Oct/2024
 
 @mixin datatable_cell_control() {
   --rlc-avatar-border-radius: var(--rls-sizing-x3);
@@ -16,23 +16,22 @@
 
   --rlc-fieldbox-body-background: transparent;
   --rlc-fieldbox-body-border: none;
-  --rlc-fieldbox-body-box-shadow: none;
   --rlc-fieldbox-body-padding: 0rem;
+  --rlc-fieldbox-body-shadow: none;
 
-  --rlc-switch-element-size: var(--rls-sizing-x10);
   --rlc-switch-bar-radius: var(--rls-sizing-x2);
   --rlc-switch-bar-height: var(--rls-sizing-x4);
+  --rlc-switch-element-size: var(--rls-sizing-x10);
 
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: var(--rls-sizing-x24);
   padding: 0rem;
-
-  & > * {
-    margin: auto;
-  }
 }
 
 .rls-datatable {
+  --pvt-datatable-row-background: var(--rlc-datatable-record-background);
   --pvt-header-padding-right: var(--rlc-datatable-padding-scroll);
 
   --rlc-input-font-size: var(--rlc-datatable-font-size);
@@ -82,28 +81,25 @@
   &__title {
     position: relative;
     display: flex;
-    text-align: left;
-    overflow: hidden;
-    white-space: nowrap;
     height: var(--rls-sizing-x20);
     line-height: var(--rls-sizing-x20);
     color: var(--rls-app-color-500);
+    font-weight: var(--rlc-datatable-header-font-weight);
     font-size: var(--rlc-datatable-font-size);
     letter-spacing: var(--rlc-datatable-letter-spacing);
-    font-weight: var(--rls-font-weight-bold);
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
 
     &--control {
       @include datatable_cell_control();
     }
 
     & > span {
+      display: block;
       width: 100%;
       text-overflow: ellipsis;
       overflow: hidden;
-    }
-
-    & > .rls-icon {
-      margin: auto;
     }
   }
 
@@ -113,15 +109,11 @@
     row-gap: var(--rls-sizing-x6);
     padding: 0rem var(--rlc-datatable-padding-scroll);
     box-sizing: border-box;
+    overflow-y: var(--rlc-datatable-body-overflow);
+    max-height: var(--rlc-datatable-body-max-height);
   }
 
-  &__tsummary {
-    padding-left: var(--rlc-datatable-padding-scroll);
-    padding-right: var(--pvt-header-padding-right);
-    box-sizing: border-box;
-  }
-
-  &__data,
+  &__record,
   &__totals {
     position: relative;
     display: flex;
@@ -130,7 +122,7 @@
     box-sizing: border-box;
     border: var(--rls-app-border-1-100);
     border-radius: var(--rls-sizing-x4);
-    background: var(--rlc-datatable-row-background);
+    background: var(--pvt-datatable-row-background);
 
     &--error {
       background: var(--rls-danger-color-100);
@@ -139,19 +131,40 @@
   }
 
   &__cell,
-  &__info {
+  &__data {
+    --rlc-amount-font-size: var(--rlc-datatable-font-size);
+    --rlc-amount-width: 100%;
+    --rlc-badge-padding: 0.5rem 1.5rem;
+    --rlc-ballot-padding: 0rem;
+    --rlc-ballot-component-row-gap: var(--rls-sizing-x1);
+    --rlc-ballot-title-letter-spacing: var(--rls-smalltext-letter-spacing);
+    --rlc-ballot-title-font-size: var(--rls-smalltext-font-size);
+    --rlc-ballot-title-height: var(--rls-smalltext-line-height);
+    --rlc-ballot-subtitle-letter-spacing: var(--rls-overline-letter-spacing);
+    --rlc-ballot-subtitle-font-size: var(--rls-overline-font-size);
+    --rlc-ballot-subtitle-height: var(--rls-overline-line-height);
+    --rlc-fieldbox-body-background: transparent;
+    --rlc-fieldbox-padding: 0rem;
+    --rlc-fieldbox-width: 100%;
+    --rlc-fieldbox-error-display: none;
+    --rlc-fieldbox-label-display: none;
+    --rlc-poster-background: var(--rlc-datatable-poster-background);
+    --rlc-poster-font-color: var(--rlc-datatable-poster-font-color);
+    --rlc-poster-font-size: var(--rlc-datatable-font-size);
+    --rlc-poster-height: var(--rls-sizing-x8);
+    --rlc-poster-padding: var(--rls-sizing-x2);
+    --rlc-skeleton-text-column-gap: var(--rls-sizing-x2);
+
     position: relative;
     display: flex;
-    height: var(--rls-sizing-x20);
-    line-height: var(--rls-sizing-x20);
-    text-align: left;
+    align-items: center;
     cursor: default;
-    overflow: hidden;
-    white-space: nowrap;
+    text-align: left;
+    min-height: var(--rls-sizing-x20);
+    font-weight: var(--rls-font-weight-regular);
     color: var(--rlc-input-font-color);
     font-size: var(--rlc-datatable-font-size);
     letter-spacing: var(--rlc-datatable-letter-spacing);
-    font-weight: var(--rls-font-weight-regular);
 
     &--overflow {
       overflow: initial;
@@ -162,99 +175,36 @@
     }
 
     & > span {
+      display: block;
       width: 100%;
+      white-space: nowrap;
       text-overflow: ellipsis;
       overflow: hidden;
     }
 
-    .rls-field-box {
-      width: 100%;
-      padding: 0rem;
-
-      &__label {
-        display: none;
-      }
-
-      &__icon {
-        padding: 0rem;
-      }
-
-      &__error {
-        display: none;
-      }
+    & > p {
+      padding: var(--rls-sizing-x2) 0rem;
     }
 
     .rls-field-list {
-      .rls-field-box__body {
-        padding: var(--rls-sizing-x4) 0rem;
-        border: none;
-        box-shadow: none;
-      }
-
-      &__control {
-        font-size: var(--rlc-datatable-font-size);
-        font-weight: var(--rls-font-weight-medium);
-        letter-spacing: var(--rls-body-letter-spacing);
-      }
-
-      &__suggestions {
-        top: var(--rls-sizing-x24);
-
-        &--higher {
-          top: initial;
-          bottom: var(--rls-sizing-x24);
-        }
-      }
-
-      &__action {
-        .rls-icon {
-          font-size: var(--rls-sizing-x10);
-        }
-      }
+      --rlc-fieldbox-body-border: none;
+      --rlc-fieldbox-body-padding: var(--rls-sizing-x4) 0rem;
+      --rlc-fieldbox-body-shadow: none;
+      --rlc-fieldlist-action-dimension: var(--rls-sizing-x10);
+      --rlc-fieldlist-control-font-size: var(--rlc-datatable-font-size);
+      --rlc-fieldlist-control-font-weight: var(--rls-font-weight-medium);
+      --rlc-fieldlist-control-letter-spacing: var(--rls-body-letter-spacing);
+      --rlc-fieldlist-element-padding: var(--rls-sizing-x4);
+      --rlc-fieldlist-suggestions-bottom: var(--rls-sizing-x24);
+      --rlc-fieldlist-suggestions-top: var(--rls-sizing-x24);
     }
 
-    .rls-input {
-      margin: var(--rls-sizing-x4) 0rem;
-    }
-
-    .rls-amount {
-      font-size: var(--rlc-datatable-font-size);
-      width: 100%;
-    }
-
-    .rls-poster {
-      display: flex;
+    .rls-poster,
+    rls-poster {
       width: calc(100% - var(--rls-sizing-x2));
-      margin: var(--rls-sizing-x3) var(--rls-sizing-x2);
-      justify-content: center;
-      align-items: center;
-      line-height: var(--rls-sizing-x14);
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
-      background: var(--rls-theme-color-100);
-      color: var(--rls-theme-color-500);
-    }
-
-    & > .rls-ballot {
-      padding: 0rem;
-      height: var(--rls-sizing-x20);
-
-      .rls-ballot__title {
-        font-weight: var(--rls-font-weight-semibold);
-        font-size: var(--rls-smalltext-font-size);
-        letter-spacing: var(--rls-smalltext-letter-spacing);
-        min-height: var(--rls-sizing-x8);
-        line-height: var(--rls-sizing-x8);
-      }
-
-      .rls-ballot__subtitle {
-        margin-top: 0rem;
-        font-size: var(--rls-overline-font-size);
-        letter-spacing: var(--rls-overline-letter-spacing);
-        min-height: var(--rls-sizing-x8);
-        line-height: var(--rls-sizing-x8);
-      }
     }
 
     & > a {
@@ -265,17 +215,21 @@
     }
   }
 
+  &__tsummary {
+    --pvt-datatable-row-background: var(--rlc-datatable-footer-background);
+
+    padding-left: var(--rlc-datatable-padding-scroll);
+    padding-right: var(--pvt-header-padding-right);
+    box-sizing: border-box;
+  }
+
   &__tfooter {
+    --pvt-datatable-row-background: var(--rlc-datatable-footer-background);
+
     position: relative;
     width: 100%;
     overflow: hidden;
     border-radius: 0rem 0rem var(--rls-sizing-x4) var(--rls-sizing-x4);
-    padding-left: var(--rlc-datatable-padding-scroll);
-    padding-right: var(--pvt-header-padding-right);
     box-sizing: border-box;
-
-    tr {
-      background: var(--rlc-datatable-footer-background);
-    }
   }
 }

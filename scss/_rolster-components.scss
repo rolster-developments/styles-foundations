@@ -1,40 +1,47 @@
 // Rolster Technology Components
-// v2.0.5
+// v2.0.7
 // @license MIT
 // Author: Rolster Developers
 // Created: 13/Abr/2023
-// Updated: 14/Jul/2024
+// Updated: 27/Oct/2024
 
 :root {
+  --rlc-app-content-background: var(--rls-app-background-500);
   --rlc-app-header-background: var(--rls-app-background-100);
   --rlc-app-header-height: var(--rls-sizing-x28);
   --rlc-app-navbar-background: var(--rls-app-background-100);
   --rlc-app-navbar-width: 160rem;
-  --rlc-app-content-background: var(--rls-app-background-500);
 
   --rlc-action-color: var(--rls-app-color-300);
   --rlc-action-ripple-color: var(--rlc-action-color);
   --rlc-action-ripple-dimension: var(--rls-sizing-x18);
   --rlc-action-ripple-position: -9rem;
 
-  --rlc-avatar-font-size: var(--rls-title-font-size);
   --rlc-avatar-border-radius: var(--rls-sizing-x4);
-  --rlc-avatar-width: var(--rls-sizing-x24);
+  --rlc-avatar-font-size: var(--rls-title-font-size);
   --rlc-avatar-height: var(--rls-sizing-x24);
+  --rlc-avatar-width: var(--rls-sizing-x24);
 
+  --rlc-amount-font-size: inherit;
   --rlc-amount-text-align: start;
+  --rlc-amount-width: auto;
 
+  --rlc-badge-padding: var(--rls-sizing-x2);
+
+  --rlc-ballot-padding: var(--rls-sizing-x4);
+  --rlc-ballot-component-row-gap: var(--rls-sizing-x2);
+  --rlc-ballot-title-letter-spacing: var(--rls-label-letter-spacing);
+  --rlc-ballot-title-font-size: var(--rls-label-font-size);
+  --rlc-ballot-title-font-weight: var(--rls-font-weight-medium);
+  --rlc-ballot-title-height: var(--rls-label-line-height);
   --rlc-ballot-subtitle-width: 100%;
+  --rlc-ballot-subtitle-letter-spacing: var(--rls-smalltext-letter-spacing);
+  --rlc-ballot-subtitle-font-size: var(--rls-smalltext-font-size);
+  --rlc-ballot-subtitle-font-weight: var(--rls-font-weight-semibold);
   --rlc-ballot-subtitle-height: var(--rls-smalltext-line-height);
   --rlc-ballot-subtitle-overflow: initial;
   --rlc-ballot-subtitle-text-overflow: initial;
   --rlc-ballot-subtitle-white-space: initial;
-
-  --rlc-fieldbox-body-padding: 0rem;
-  --rlc-fieldbox-body-background: rgba(255, 255, 255, 1);
-  --rlc-fieldbox-body-border: var(--rls-app-border-1-100);
-  --rlc-fieldbox-body-shadow: none;
-  --rlc-fieldbox-label-font-color: var(--rls-app-color-300);
 
   --rlc-breadcrumb-height: var(--rls-sizing-x18);
 
@@ -44,55 +51,79 @@
 
   --rlc-card-content-padding: var(--rls-sizing-x8);
 
+  --rlc-datatable-body-max-height: initial;
+  --rlc-datatable-body-overflow: initial;
   --rlc-datatable-letter-spacing: 0.0625em;
   --rlc-datatable-font-size: 7rem;
-  --rlc-datatable-width-scroll: var(--rls-sizing-x4);
-  --rlc-datatable-padding-scroll: 0rem;
-  --rlc-datatable-header-background: transparent;
-  --rlc-datatable-row-background: rgb(252, 252, 252);
   --rlc-datatable-footer-background: var(--rls-standard-color-100);
+  --rlc-datatable-header-background: transparent;
+  --rlc-datatable-header-font-weight: var(--rls-font-weight-semibold);
+  --rlc-datatable-padding-scroll: 0rem;
+  --rlc-datatable-poster-background: var(--rls-theme-color-500);
+  --rlc-datatable-poster-font-color: var(--rls-theme-color-100);
+  --rlc-datatable-record-background: rgb(252, 252, 252);
+  --rlc-datatable-width-scroll: var(--rls-sizing-x4);
+
+  --rlc-fieldbox-padding: 0rem;
+  --rlc-fieldbox-width: 100%;
+  --rlc-fieldbox-body-background: rgba(255, 255, 255, 1);
+  --rlc-fieldbox-body-border: var(--rls-app-border-1-100);
+  --rlc-fieldbox-body-padding: 0rem;
+  --rlc-fieldbox-body-shadow: none;
+  --rlc-fieldbox-error-display: block;
+  --rlc-fieldbox-label-display: block;
+  --rlc-fieldbox-label-font-color: var(--rls-app-color-300);
+
+  --rlc-fieldlist-action-dimension: var(--rls-sizing-x14);
+  --rlc-fieldlist-control-font-size: var(--rlc-input-font-size);
+  --rlc-fieldlist-control-font-weight: var(--rls-font-weight-medium);
+  --rlc-fieldlist-control-letter-spacing: var(--rlc-input-letter-spacing);
+  --rlc-fieldlist-element-padding: var(--rls-sizing-x2);
+  --rlc-fieldlist-suggestions-bottom: 100%;
+  --rlc-fieldlist-suggestions-top: calc(100% + var(--rls-sizing-x4));
 
   --rlc-form-footer-justify-content: end;
 
-  --rlc-icon-font-size: var(--rls-sizing-x12);
-  --rlc-icon-width: var(--rls-sizing-x12);
-  --rlc-icon-height: var(--rls-sizing-x12);
   --rlc-icon-color: inherit;
+  --rlc-icon-dimesion: var(--rls-sizing-x12);
 
   --rlc-input-font-color: var(--rls-app-color-500);
   --rlc-input-font-size: var(--rls-input-font-size);
-  --rlc-input-text-align: left;
   --rlc-input-letter-spacing: var(--rls-input-letter-spacing);
   --rlc-input-height: var(--rls-sizing-x12);
+  --rlc-input-text-align: left;
 
   --rlc-label-font-size: var(--rls-smalltext-font-size);
   --rlc-label-letter-spacing: var(--rls-smalltext-letter-spacing);
   --rlc-label-height: var(--rls-smalltext-line-height);
 
+  --rlc-poster-background: var(--rls-theme-gradient-500);
+  --rlc-poster-font-color: var(--rls-light-color-500);
   --rlc-poster-font-size: var(--rls-body-font-size);
   --rlc-poster-letter-spacing: var(--rls-body-letter-spacing);
   --rlc-poster-height: var(--rls-body-line-height);
   --rlc-poster-padding: var(--rls-sizing-x4);
   --rlc-poster-text-align: center;
-  
+
   --rlc-progress-circular-dimension: var(--rls-sizing-x28);
 
   --rlc-snackbar-left: 50%;
 
   --rlc-skeleton-height: inherit;
 
+  --rlc-skeleton-text-column-gap: var(--rls-sizing-x4);
   --rlc-skeleton-text-font-size: var(--rls-body-font-size);
   --rlc-skeleton-text-height: var(--rls-body-line-height);
   --rlc-skeleton-text-letter-spacing: var(--rls-body-letter-spacing);
 
-  --rlc-switch-element-size: var(--rls-sizing-x12);
   --rlc-switch-bar-radius: var(--rls-sizing-x3);
   --rlc-switch-bar-height: var(--rls-sizing-x6);
+  --rlc-switch-element-size: var(--rls-sizing-x12);
 
-  --rlc-tabulartext-text-align: flex-start;
-  --rlc-tabulartext-font-size: var(--rls-body-font-size);
   --rlc-tabulartext-char-width: 5.5rem;
+  --rlc-tabulartext-font-size: var(--rls-body-font-size);
   --rlc-tabulartext-pointer-width: 2rem;
+  --rlc-tabulartext-text-align: flex-start;
 
   --rlc-toolbar-height: var(--rls-sizing-x28);
 }
