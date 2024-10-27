@@ -5,9 +5,9 @@
 // Created: 11/Ago/2022
 // Updated: 05/Jul/2024
 
-@import 'rolster-foundations';
-@import 'rolster-utilities';
-@import 'rolster-components';
+@use 'foundations';
+@use 'utilities';
+@use 'components';
 
 .rls-aspect-ratio {
   --rls-app-font-size-1360: 2.5px;

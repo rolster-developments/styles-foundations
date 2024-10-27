@@ -5,6 +5,8 @@
 // Created: 13/Abr/2023
 // Updated: 27/Oct/2024
 
+@use 'sass:meta';
+
 :root {
   --rlc-app-content-background: var(--rls-app-background-500);
   --rlc-app-header-background: var(--rls-app-background-100);
@@ -133,8 +135,8 @@
   scrollbar-color: var(--rls-theme-color-500) var(--rls-app-background-100);
 }
 
-@import 'components/app';
-@import 'components/data-table';
-@import 'components/field-box';
-@import 'components/field-list';
-@import 'components/form';
+@include meta.load-css('components/app');
+@include meta.load-css('components/data-table');
+@include meta.load-css('components/field-box');
+@include meta.load-css('components/field-list');
+@include meta.load-css('components/form');
