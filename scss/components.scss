@@ -57,12 +57,10 @@
   --rlc-datatable-body-overflow: initial;
   --rlc-datatable-letter-spacing: 0.0625em;
   --rlc-datatable-font-size: 7rem;
-  --rlc-datatable-footer-background: var(--rls-standard-color-100);
+  --rlc-datatable-footer-background: var(--rls-theme-color-100);
   --rlc-datatable-header-background: transparent;
   --rlc-datatable-header-font-weight: var(--rls-font-weight-semibold);
   --rlc-datatable-padding-scroll: 0rem;
-  --rlc-datatable-poster-background: var(--rls-theme-color-500);
-  --rlc-datatable-poster-font-color: var(--rls-theme-color-100);
   --rlc-datatable-record-background: rgb(252, 252, 252);
   --rlc-datatable-width-scroll: var(--rls-sizing-x4);
 
@@ -99,8 +97,6 @@
   --rlc-label-letter-spacing: var(--rls-smalltext-letter-spacing);
   --rlc-label-height: var(--rls-smalltext-line-height);
 
-  --rlc-poster-background: var(--rls-theme-gradient-500);
-  --rlc-poster-font-color: var(--rls-light-color-500);
   --rlc-poster-font-size: var(--rls-body-font-size);
   --rlc-poster-letter-spacing: var(--rls-body-letter-spacing);
   --rlc-poster-height: var(--rls-body-line-height);

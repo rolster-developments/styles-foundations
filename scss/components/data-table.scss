@@ -31,11 +31,31 @@
 }
 
 .rls-datatable {
-  --pvt-datatable-row-background: var(--rlc-datatable-record-background);
+  --pvt-datatable-record-background: var(--rlc-datatable-record-background);
   --pvt-header-padding-right: var(--rlc-datatable-padding-scroll);
 
+  --rlc-amount-font-size: var(--rlc-datatable-font-size);
+  --rlc-amount-width: 100%;
+  --rlc-badge-padding: 0.5rem 1.5rem;
+  --rlc-ballot-padding: 0rem;
+  --rlc-ballot-component-row-gap: var(--rls-sizing-x1);
+  --rlc-ballot-title-letter-spacing: var(--rls-smalltext-letter-spacing);
+  --rlc-ballot-title-font-size: var(--rls-smalltext-font-size);
+  --rlc-ballot-title-height: var(--rls-smalltext-line-height);
+  --rlc-ballot-subtitle-letter-spacing: var(--rls-overline-letter-spacing);
+  --rlc-ballot-subtitle-font-size: var(--rls-overline-font-size);
+  --rlc-ballot-subtitle-height: var(--rls-overline-line-height);
+  --rlc-fieldbox-body-background: transparent;
+  --rlc-fieldbox-padding: 0rem;
+  --rlc-fieldbox-width: 100%;
+  --rlc-fieldbox-error-display: none;
+  --rlc-fieldbox-label-display: none;
   --rlc-input-font-size: var(--rlc-datatable-font-size);
   --rlc-input-letter-spacing: var(--rlc-datatable-letter-spacing);
+  --rlc-poster-font-size: var(--rlc-datatable-font-size);
+  --rlc-poster-height: var(--rls-sizing-x8);
+  --rlc-poster-padding: var(--rls-sizing-x2);
+  --rlc-skeleton-text-column-gap: var(--rls-sizing-x2);
 
   position: relative;
   display: flex;
@@ -122,7 +142,7 @@
     box-sizing: border-box;
     border: var(--rls-app-border-1-100);
     border-radius: var(--rls-sizing-x4);
-    background: var(--pvt-datatable-row-background);
+    background: var(--pvt-datatable-record-background);
 
     &--error {
       background: var(--rls-danger-color-100);
@@ -132,29 +152,6 @@
 
   &__cell,
   &__data {
-    --rlc-amount-font-size: var(--rlc-datatable-font-size);
-    --rlc-amount-width: 100%;
-    --rlc-badge-padding: 0.5rem 1.5rem;
-    --rlc-ballot-padding: 0rem;
-    --rlc-ballot-component-row-gap: var(--rls-sizing-x1);
-    --rlc-ballot-title-letter-spacing: var(--rls-smalltext-letter-spacing);
-    --rlc-ballot-title-font-size: var(--rls-smalltext-font-size);
-    --rlc-ballot-title-height: var(--rls-smalltext-line-height);
-    --rlc-ballot-subtitle-letter-spacing: var(--rls-overline-letter-spacing);
-    --rlc-ballot-subtitle-font-size: var(--rls-overline-font-size);
-    --rlc-ballot-subtitle-height: var(--rls-overline-line-height);
-    --rlc-fieldbox-body-background: transparent;
-    --rlc-fieldbox-padding: 0rem;
-    --rlc-fieldbox-width: 100%;
-    --rlc-fieldbox-error-display: none;
-    --rlc-fieldbox-label-display: none;
-    --rlc-poster-background: var(--rlc-datatable-poster-background);
-    --rlc-poster-font-color: var(--rlc-datatable-poster-font-color);
-    --rlc-poster-font-size: var(--rlc-datatable-font-size);
-    --rlc-poster-height: var(--rls-sizing-x8);
-    --rlc-poster-padding: var(--rls-sizing-x2);
-    --rlc-skeleton-text-column-gap: var(--rls-sizing-x2);
-
     position: relative;
     display: flex;
     align-items: center;
@@ -216,7 +213,7 @@
   }
 
   &__tsummary {
-    --pvt-datatable-row-background: var(--rlc-datatable-footer-background);
+    --pvt-datatable-record-background: var(--rls-theme-color-100);
 
     padding-left: var(--rlc-datatable-padding-scroll);
     padding-right: var(--pvt-header-padding-right);
@@ -224,7 +221,7 @@
   }
 
   &__tfooter {
-    --pvt-datatable-row-background: var(--rlc-datatable-footer-background);
+    --pvt-datatable-record-background: var(--rls-theme-color-100);
 
     position: relative;
     width: 100%;
