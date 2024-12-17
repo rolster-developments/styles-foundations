@@ -1,9 +1,9 @@
 // Rolster Technology Typographics Utilities
-// v2.1.0
+// v2.1.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 24/Jun/2024
+// Updated: 16/Dic/2024
 
 @mixin typographic($name, $key) {
   .rls-#{$name}-default {
@@ -43,23 +43,23 @@
 
   --rls-heading2-font-size: 14.45rem;
   --rls-heading2-letter-spacing: 0.0234375em;
-  --rls-heading2-line-height: 15.45rem;
+  --rls-heading2-line-height: 15.75rem;
 
   --rls-heading3-font-size: 13.45rem;
   --rls-heading3-letter-spacing: 0.0234375em;
-  --rls-heading3-line-height: 14.45rem;
+  --rls-heading3-line-height: 14.75rem;
 
   --rls-heading4-font-size: 12rem;
   --rls-heading4-letter-spacing: 0.0234375em;
-  --rls-heading4-line-height: 13rem;
+  --rls-heading4-line-height: 13.25rem;
 
   --rls-heading5-font-size: 11rem;
   --rls-heading5-letter-spacing: 0.0234375em;
-  --rls-heading5-line-height: 12.65rem;
+  --rls-heading5-line-height: 12.75rem;
 
   --rls-heading6-font-size: 10rem;
   --rls-heading6-letter-spacing: 0.0234375em;
-  --rls-heading6-line-height: 11rem;
+  --rls-heading6-line-height: 11.25rem;
 
   --rls-title-font-size: 9rem;
   --rls-title-letter-spacing: 0.0546875em;

@@ -145,8 +145,13 @@
     background: var(--pvt-datatable-record-background);
 
     &--error {
-      background: var(--rls-danger-color-100);
+      background: var(--rls-danger-color-050);
       border: var(--rls-danger-border-1-300);
+    }
+
+    &--warning {
+      background: var(--rls-warning-color-050);
+      border: var(--rls-warning-border-1-300);
     }
   }
 
@@ -213,7 +218,7 @@
   }
 
   &__tsummary {
-    --pvt-datatable-record-background: var(--rls-theme-color-100);
+    --pvt-datatable-record-background: var(--rls-theme-color-050);
 
     padding-left: var(--rlc-datatable-padding-scroll);
     padding-right: var(--pvt-header-padding-right);
@@ -221,7 +226,7 @@
   }
 
   &__tfooter {
-    --pvt-datatable-record-background: var(--rls-theme-color-100);
+    --pvt-datatable-record-background: var(--rls-theme-color-050);
 
     position: relative;
     width: 100%;

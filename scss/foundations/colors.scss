@@ -1,19 +1,17 @@
 // Rolster Technology Colors Foundations
-// v2.4.1
+// v2.5.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 03/Mar/2022
-// Updated: 14/Jul/2024
+// Updated: 17/Dic/2024
 
 @mixin rolster-theme-900($theme, $r, $g, $b) {
-  --rls-#{$theme}-color-900: rgba(#{$r}, #{$g}, #{$b}, 1);
-
   --rls-#{$theme}-backdrop-900: rgba(#{$r}, #{$g}, #{$b}, 0.8);
+
+  --rls-#{$theme}-color-900: rgba(#{$r}, #{$g}, #{$b}, 1);
 }
 
 @mixin rolster-theme-700($theme, $r, $g, $b) {
-  --rls-#{$theme}-color-700: rgba(#{$r}, #{$g}, #{$b}, 1);
-
   --rls-#{$theme}-skeleton-500: rgba(#{$r}, #{$g}, #{$b}, 0.5);
 
   --rls-#{$theme}-skeleton-400: rgba(#{$r}, #{$g}, #{$b}, 0.325);
@@ -23,12 +21,14 @@
   --rls-#{$theme}-skeleton-200: rgba(#{$r}, #{$g}, #{$b}, 0.175);
 
   --rls-#{$theme}-skeleton-100: rgba(#{$r}, #{$g}, #{$b}, 0.1);
+
+  --rls-#{$theme}-color-700: rgba(#{$r}, #{$g}, #{$b}, 1);
 }
 
 @mixin rolster-theme-500($theme, $r, $g, $b) {
-  --rls-#{$theme}-color-500: rgba(#{$r}, #{$g}, #{$b}, 1);
-
   --rls-#{$theme}-shadow-500: rgba(#{$r}, #{$g}, #{$b}, 0.24);
+
+  --rls-#{$theme}-color-500: rgba(#{$r}, #{$g}, #{$b}, 1);
 }
 
 :root {
@@ -70,19 +70,27 @@
 
   // COLORS STANDARD
 
-  @include rolster-theme-900('standard', 20, 39, 61);
+  --rls-standard-color-950: rgba(20, 39, 61, 1);
 
-  @include rolster-theme-700('standard', 32, 83, 136);
+  @include rolster-theme-900('standard', 29, 59, 93);
+
+  --rls-standard-color-800: rgba(29, 69, 111, 1);
+
+  @include rolster-theme-700('standard', 31, 81, 133);
+
+  --rls-standard-color-600: rgba(37, 101, 164, 1);
 
   @include rolster-theme-500('standard', 53, 128, 194);
 
-  --rls-standard-color-400: rgba(148, 190, 229, 1);
+  --rls-standard-color-400: rgba(90, 156, 214, 1);
 
-  --rls-standard-color-300: rgba(198, 219, 241, 1);
+  --rls-standard-color-300: rgba(148, 190, 229, 1);
 
-  --rls-standard-color-200: rgba(229, 238, 249, 1);
+  --rls-standard-color-200: rgba(198, 219, 241, 1);
 
-  --rls-standard-color-100: rgba(243, 247, 252, 1);
+  --rls-standard-color-100: rgba(229, 238, 249, 1);
+
+  --rls-standard-color-050: rgba(243, 247, 252, 1);
 
   --rls-standard-gradient-700: linear-gradient(
     180deg,
@@ -96,21 +104,35 @@
     var(--rls-standard-color-700) 100%
   );
 
+  --rls-standard-gradient-300: linear-gradient(
+    180deg,
+    var(--rls-standard-color-300) 0%,
+    var(--rls-standard-color-500) 100%
+  );
+
   // COLORS SUCCESS
 
-  @include rolster-theme-900('success', 1, 45, 33);
+  --rls-success-color-950: rgba(1, 45, 34, 1);
 
-  @include rolster-theme-700('success', 0, 124, 82);
+  @include rolster-theme-900('success', 4, 80, 59);
 
-  @include rolster-theme-500('success', 10, 191, 121);
+  --rls-success-color-800: rgba(4, 97, 70, 1);
 
-  --rls-success-color-400: rgba(106, 235, 177, 1);
+  @include rolster-theme-700('success', 1, 123, 86);
 
-  --rls-success-color-300: rgba(164, 246, 203, 1);
+  --rls-success-color-600: rgba(1, 159, 108, 1);
 
-  --rls-success-color-200: rgba(208, 251, 227, 1);
+  @include rolster-theme-500('success', 11, 190, 129);
 
-  --rls-success-color-100: rgba(235, 254, 244, 1);
+  --rls-success-color-400: rgba(48, 215, 152, 1);
+
+  --rls-success-color-300: rgba(107, 234, 182, 1);
+
+  --rls-success-color-200: rgba(165, 245, 207, 1);
+
+  --rls-success-color-100: rgba(208, 251, 228, 1);
+
+  --rls-success-color-050: rgba(236, 253, 245, 1);
 
   --rls-success-gradient-700: linear-gradient(
     180deg,
@@ -124,21 +146,35 @@
     var(--rls-success-color-700) 100%
   );
 
+  --rls-success-gradient-300: linear-gradient(
+    180deg,
+    var(--rls-success-color-300) 0%,
+    var(--rls-success-color-500) 100%
+  );
+
   // COLORS INFO
 
-  @include rolster-theme-900('info', 4, 45, 77);
+  --rls-info-color-950: rgb(4, 45, 77, 1);
+
+  @include rolster-theme-900('info', 7, 70, 115);
+
+  --rls-info-color-800: rgba(0, 85, 140, 1);
 
   @include rolster-theme-700('info', 0, 101, 170);
 
+  --rls-info-color-600: rgba(0, 126, 210, 1);
+
   @include rolster-theme-500('info', 2, 159, 245);
 
-  --rls-info-color-400: rgba(118, 207, 255, 1);
+  --rls-info-color-400: rgba(45, 184, 255, 1);
 
-  --rls-info-color-300: rgba(182, 228, 255, 1);
+  --rls-info-color-300: rgba(118, 207, 255, 1);
 
-  --rls-info-color-200: rgba(222, 241, 255, 1);
+  --rls-info-color-200: rgba(182, 228, 255, 1);
 
-  --rls-info-color-100: rgba(239, 248, 255, 1);
+  --rls-info-color-100: rgba(222, 241, 255, 1);
+
+  --rls-info-color-050: rgba(239, 248, 255, 1);
 
   --rls-info-gradient-700: linear-gradient(
     180deg,
@@ -152,21 +188,35 @@
     var(--rls-info-color-700) 100%
   );
 
+  --rls-info-gradient-300: linear-gradient(
+    180deg,
+    var(--rls-info-color-300) 0%,
+    var(--rls-info-color-500) 100%
+  );
+
   // COLORS WARNING
 
-  @include rolster-theme-900('warning', 70, 27, 2);
+  --rls-warning-color-950: rgba(72, 29, 0, 1);
 
-  @include rolster-theme-700('warning', 148, 64, 12);
+  @include rolster-theme-900('warning', 124, 58, 11);
 
-  @include rolster-theme-500('warning', 222, 123, 2);
+  --rls-warning-color-800: rgba(152, 70, 8, 1);
 
-  --rls-warning-color-400: rgba(255, 195, 32, 1);
+  @include rolster-theme-700('warning', 187, 91, 2);
 
-  --rls-warning-color-300: rgba(255, 221, 103, 1);
+  --rls-warning-color-600: rgba(226, 131, 0, 1);
 
-  --rls-warning-color-200: rgba(255, 232, 136, 1);
+  @include rolster-theme-500('warning', 246, 167, 0);
 
-  --rls-warning-color-100: rgba(255, 245, 198, 1);
+  --rls-warning-color-400: rgba(255, 207, 27, 1);
+
+  --rls-warning-color-300: rgba(255, 224, 70, 1);
+
+  --rls-warning-color-200: rgba(255, 239, 133, 1);
+
+  --rls-warning-color-100: rgba(255, 247, 197, 1);
+
+  --rls-warning-color-050: rgba(255, 253, 234, 1);
 
   --rls-warning-gradient-700: linear-gradient(
     180deg,
@@ -180,21 +230,35 @@
     var(--rls-warning-color-700) 100%
   );
 
+  --rls-warning-gradient-300: linear-gradient(
+    180deg,
+    var(--rls-warning-color-300) 0%,
+    var(--rls-warning-color-500) 100%
+  );
+
   // COLORS DANGER
 
-  @include rolster-theme-900('danger', 75, 4, 4);
+  --rls-danger-color-950: rgba(79, 2, 22, 1);
 
-  @include rolster-theme-700('danger', 157, 23, 23);
+  @include rolster-theme-900('danger', 141, 14, 50);
 
-  @include rolster-theme-500('danger', 255, 44, 44);
+  --rls-danger-color-800: rgba(165, 12, 50, 1);
 
-  --rls-danger-color-400: rgba(255, 157, 157, 1);
+  @include rolster-theme-700('danger', 197, 11, 51);
 
-  --rls-danger-color-300: rgba(255, 197, 197, 1);
+  --rls-danger-color-600: rgba(220, 20, 59, 1);
 
-  --rls-danger-color-200: rgba(255, 223, 223, 1);
+  @include rolster-theme-500('danger', 251, 56, 84);
 
-  --rls-danger-color-100: rgba(255, 241, 241, 1);
+  --rls-danger-color-400: rgba(255, 107, 125, 1);
+
+  --rls-danger-color-300: rgba(255, 160, 170, 1);
+
+  --rls-danger-color-200: rgba(255, 203, 209, 1);
+
+  --rls-danger-color-100: rgba(255, 227, 228, 1);
+
+  --rls-danger-color-050: rgba(255, 240, 242, 1);
 
   --rls-danger-gradient-700: linear-gradient(
     180deg,
@@ -208,21 +272,35 @@
     var(--rls-danger-color-700) 100%
   );
 
+  --rls-danger-gradient-300: linear-gradient(
+    180deg,
+    var(--rls-danger-color-300) 0%,
+    var(--rls-danger-color-500) 100%
+  );
+
   // COLORS AMAIZING
 
-  @include rolster-theme-900('amaizing', 63, 19, 63);
+  --rls-amaizing-color-950: rgba(63, 19, 63, 1);
 
-  @include rolster-theme-700('amaizing', 118, 49, 119);
+  @include rolster-theme-900('amaizing', 99, 44, 99);
 
-  @include rolster-theme-500('amaizing', 170, 73, 176);
+  --rls-amaizing-color-800: rgba(118, 49, 119, 1);
 
-  --rls-amaizing-color-400: rgba(231, 187, 236, 1);
+  @include rolster-theme-700('amaizing', 142, 58, 145);
 
-  --rls-amaizing-color-300: rgba(240, 217, 245, 1);
+  --rls-amaizing-color-600: rgba(170, 73, 176, 1);
 
-  --rls-amaizing-color-200: rgba(248, 237, 250, 1);
+  @include rolster-theme-500('amaizing', 197, 104, 205);
 
-  --rls-amaizing-color-100: rgba(252, 246, 253, 1);
+  --rls-amaizing-color-400: rgba(217, 147, 223, 1);
+
+  --rls-amaizing-color-300: rgba(231, 187, 236, 1);
+
+  --rls-amaizing-color-200: rgba(240, 217, 245, 1);
+
+  --rls-amaizing-color-100: rgba(248, 237, 250, 1);
+
+  --rls-amaizing-color-050: rgba(252, 246, 253, 1);
 
   --rls-amaizing-gradient-700: linear-gradient(
     180deg,
@@ -236,21 +314,35 @@
     var(--rls-amaizing-color-700) 100%
   );
 
+  --rls-amaizing-gradient-300: linear-gradient(
+    180deg,
+    var(--rls-amaizing-color-300) 0%,
+    var(--rls-amaizing-color-500) 100%
+  );
+
   // COLORS SMARTNESS
 
-  @include rolster-theme-900('smartness', 50, 24, 22);
+  --rls-smartness-color-950: rgba(50, 24, 22, 1);
+
+  @include rolster-theme-900('smartness', 90, 48, 45);
+
+  --rls-smartness-color-800: rgba(108, 57, 52, 1);
 
   @include rolster-theme-700('smartness', 131, 69, 58);
 
+  --rls-smartness-color-600: rgba(156, 90, 67, 1);
+
   @include rolster-theme-500('smartness', 182, 121, 89);
 
-  --rls-smartness-color-400: rgba(201, 163, 128, 1);
+  --rls-smartness-color-400: rgba(189, 138, 98, 1);
 
-  --rls-smartness-color-300: rgba(220, 196, 171, 1);
+  --rls-smartness-color-300: rgba(201, 163, 128, 1);
 
-  --rls-smartness-color-200: rgba(238, 226, 215, 1);
+  --rls-smartness-color-200: rgba(220, 196, 171, 1);
 
-  --rls-smartness-color-100: rgba(249, 246, 241, 1);
+  --rls-smartness-color-100: rgba(238, 226, 215, 1);
+
+  --rls-smartness-color-050: rgba(249, 246, 241, 1);
 
   --rls-smartness-gradient-700: linear-gradient(
     180deg,
@@ -264,21 +356,35 @@
     var(--rls-smartness-color-700) 100%
   );
 
+  --rls-smartness-gradient-300: linear-gradient(
+    180deg,
+    var(--rls-smartness-color-300) 0%,
+    var(--rls-smartness-color-500) 100%
+  );
+
   // COLORS OBSIDIAN
 
-  @include rolster-theme-900('obsidian', 41, 34, 31);
+  --rls-obsidian-color-950: rgba(41, 34, 31, 1);
+
+  @include rolster-theme-900('obsidian', 74, 63, 57);
+
+  --rls-obsidian-color-800: rgba(84, 72, 63, 1);
 
   @include rolster-theme-700('obsidian', 98, 83, 70);
 
+  --rls-obsidian-color-600: rgba(121, 105, 85, 1);
+
   @include rolster-theme-500('obsidian', 141, 127, 101);
 
-  --rls-obsidian-color-400: rgba(178, 170, 146, 1);
+  --rls-obsidian-color-400: rgba(156, 144, 115, 1);
 
-  --rls-obsidian-color-300: rgba(206, 202, 186, 1);
+  --rls-obsidian-color-300: rgba(178, 170, 146, 1);
 
-  --rls-obsidian-color-200: rgba(230, 228, 219, 1);
+  --rls-obsidian-color-200: rgba(206, 202, 186, 1);
 
-  --rls-obsidian-color-100: rgba(245, 245, 241, 1);
+  --rls-obsidian-color-100: rgba(230, 228, 219, 1);
+
+  --rls-obsidian-color-050: rgba(245, 245, 241, 1);
 
   --rls-obsidian-gradient-700: linear-gradient(
     180deg,
@@ -290,5 +396,11 @@
     180deg,
     var(--rls-obsidian-color-500) 0%,
     var(--rls-obsidian-color-700) 100%
+  );
+
+  --rls-obsidian-gradient-300: linear-gradient(
+    180deg,
+    var(--rls-obsidian-color-300) 0%,
+    var(--rls-obsidian-color-500) 100%
   );
 }

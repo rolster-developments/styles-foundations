@@ -1,11 +1,11 @@
 // Rolster Technology Text Utilities
-// v2.0.0
+// v2.1.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 08/Sep/2022
-// Updated: 26/May/2024
+// Updated: 17/Dic/2024
 
-.align-center {
+.rls-align-center {
   --rlc-amount-text-align: center;
   --rlc-input-text-align: center;
   --rlc-poster-text-align: center;
@@ -13,7 +13,7 @@
   text-align: center !important;
 }
 
-.align-justify {
+.rls-align-justify {
   --rlc-amount-text-align: flex-start;
   --rlc-input-text-align: justify;
   --rlc-poster-text-align: flex-start;
@@ -21,7 +21,7 @@
   text-align: justify !important;
 }
 
-.align-left {
+.rls-align-left {
   --rlc-amount-text-align: flex-start;
   --rlc-input-text-align: left;
   --rlc-poster-text-align: flex-start;
@@ -29,7 +29,7 @@
   text-align: left !important;
 }
 
-.align-right {
+.rls-align-right {
   --rlc-amount-text-align: flex-end;
   --rlc-input-text-align: right;
   --rlc-poster-text-align: flex-end;
@@ -37,23 +37,23 @@
   text-align: right !important;
 }
 
-.weight-light {
+.rls-weight-light {
   font-weight: var(--rls-font-weight-light);
 }
 
-.weight-medium {
+.rls-weight-medium {
   font-weight: var(--rls-font-weight-medium);
 }
 
-.weight-semibold {
+.rls-weight-semibold {
   font-weight: var(--rls-font-weight-semibold);
 }
 
-.weight-bold {
+.rls-weight-bold {
   font-weight: var(--rls-font-weight-bold);
 }
 
-.truncate {
+.rls-truncate {
   display: block;
   width: 100%;
   text-overflow: ellipsis;
