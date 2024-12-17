@@ -1,9 +1,9 @@
 // Rolster Technology Themes Foundations
-// v2.3.1
+// v2.3.2
 // @license MIT
 // Author: Rolster Developers
 // Created: 03/Mar/2022
-// Updated: 14/Jul/2024
+// Updated: 17/Dic/2024
 
 @mixin app-border-token($theme, $token) {
   --rls-app-border-1-#{$token}: var(--rls-border-1) solid
@@ -61,9 +61,15 @@
 }
 
 @mixin rolster-theme($theme) {
+  --rls-theme-color-950: var(--rls-#{$theme}-color-950);
+
   --rls-theme-color-900: var(--rls-#{$theme}-color-900);
 
+  --rls-theme-color-800: var(--rls-#{$theme}-color-800);
+
   --rls-theme-color-700: var(--rls-#{$theme}-color-700);
+
+  --rls-theme-color-600: var(--rls-#{$theme}-color-600);
 
   --rls-theme-color-500: var(--rls-#{$theme}-color-500);
 
@@ -75,9 +81,11 @@
 
   --rls-theme-color-100: var(--rls-#{$theme}-color-100);
 
-  --rls-theme-font-900: var(--rls-#{$theme}-color-100);
+  --rls-theme-color-050: var(--rls-#{$theme}-color-050);
 
-  --rls-theme-font-500: var(--rls-#{$theme}-color-100);
+  --rls-theme-font-900: var(--rls-#{$theme}-color-050);
+
+  --rls-theme-font-500: var(--rls-#{$theme}-color-050);
 
   --rls-theme-font-100: var(--rls-#{$theme}-color-900);
 
