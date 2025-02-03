@@ -193,6 +193,7 @@
     }
 
     .rls-field-list {
+      --rlc-fieldbox-body-background: transparent;
       --rlc-fieldbox-body-border: none;
       --rlc-fieldbox-body-padding: var(--rls-sizing-x4) 0rem;
       --rlc-fieldbox-body-shadow: none;
