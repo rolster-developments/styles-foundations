@@ -1,9 +1,9 @@
 // Rolster Technology Components
-// v2.0.7
+// v2.0.8
 // @license MIT
 // Author: Rolster Developers
 // Created: 13/Abr/2023
-// Updated: 27/Oct/2024
+// Updated: 25/Feb/2025
 
 @use 'sass:meta';
 
@@ -128,7 +128,7 @@
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: var(--rls-theme-color-500) var(--rls-app-background-100);
+  scrollbar-color: var(--rls-theme-color-300) var(--rls-app-background-100);
 }
 
 @include meta.load-css('components/app');
