@@ -1,5 +1,5 @@
 // Rolster Technology Datatable Component
-// v2.2.0
+// v2.2.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
@@ -74,7 +74,7 @@
     );
 
     --pvt-datatable-padding-component: 0rem
-      calc(var(--rlc-datatable-padding-scroll) + 6rem) 0rem
+      calc(var(--rlc-datatable-padding-scroll) + 5rem) 0rem
       var(--rlc-datatable-padding-scroll);
   }
 
@@ -197,7 +197,7 @@
     position: sticky;
     top: 0px;
     z-index: var(--rls-z-index-4);
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(241, 238, 247, 0.8);
     backdrop-filter: blur(2px);
   }
 

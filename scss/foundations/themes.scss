@@ -1,9 +1,9 @@
 // Rolster Technology Themes Foundations
-// v2.3.2
+// v2.3.3
 // @license MIT
 // Author: Rolster Developers
 // Created: 03/Mar/2022
-// Updated: 17/Dic/2024
+// Updated: 12/Mar/2025
 
 @mixin app-border-token($theme, $token) {
   --rls-app-border-1-#{$token}: var(--rls-border-1) solid
@@ -149,6 +149,7 @@
   @include rolster-border-token('warning');
   @include rolster-border-token('danger');
   @include rolster-border-token('amaizing');
+  @include rolster-border-token('amber');
   @include rolster-border-token('smartness');
   @include rolster-border-token('obsidian');
 
@@ -173,6 +174,10 @@
 
 *[rls-theme='amaizing'] {
   @include rolster-theme('amaizing');
+}
+
+*[rls-theme='amber'] {
+  @include rolster-theme('amber');
 }
 
 *[rls-theme='smartness'] {

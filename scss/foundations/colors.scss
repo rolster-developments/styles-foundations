@@ -1,9 +1,9 @@
 // Rolster Technology Colors Foundations
-// v2.5.0
+// v2.5.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 03/Mar/2022
-// Updated: 17/Dic/2024
+// Updated: 12/Mar/2025
 
 @mixin rolster-theme-900($theme, $r, $g, $b) {
   --rls-#{$theme}-backdrop-900: rgba(#{$r}, #{$g}, #{$b}, 0.8);
@@ -318,6 +318,48 @@
     180deg,
     var(--rls-amaizing-color-300) 0%,
     var(--rls-amaizing-color-500) 100%
+  );
+
+  // COLORS AMBER
+
+  --rls-amber-color-950: rgba(66, 27, 8, 1);
+
+  @include rolster-theme-900('amber', 123, 59, 19);
+
+  --rls-amber-color-800: rgba(152, 69, 20, 1);
+
+  @include rolster-theme-700('amber', 192, 88, 14);
+
+  --rls-amber-color-600: rgba(238, 119, 15, 1);
+
+  @include rolster-theme-500('amber', 246, 142, 25);
+
+  --rls-amber-color-400: rgba(249, 169, 62, 1);
+
+  --rls-amber-color-300: rgba(251, 202, 118, 1);
+
+  --rls-amber-color-200: rgba(253, 225, 171, 1);
+
+  --rls-amber-color-100: rgba(255, 242, 213, 1);
+
+  --rls-amber-color-050: rgba(255, 249, 237, 1);
+
+  --rls-amber-gradient-700: linear-gradient(
+    180deg,
+    var(--rls-amber-color-700) 0%,
+    var(--rls-amber-color-900) 100%
+  );
+
+  --rls-amber-gradient-500: linear-gradient(
+    180deg,
+    var(--rls-amber-color-500) 0%,
+    var(--rls-amber-color-700) 100%
+  );
+
+  --rls-amber-gradient-300: linear-gradient(
+    180deg,
+    var(--rls-amber-color-300) 0%,
+    var(--rls-amber-color-500) 100%
   );
 
   // COLORS SMARTNESS
