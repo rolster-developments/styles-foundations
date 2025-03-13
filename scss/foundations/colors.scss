@@ -1,9 +1,9 @@
 // Rolster Technology Colors Foundations
-// v2.5.1
+// v2.5.2
 // @license MIT
 // Author: Rolster Developers
 // Created: 03/Mar/2022
-// Updated: 12/Mar/2025
+// Updated: 13/Mar/2025
 
 @mixin rolster-theme-900($theme, $r, $g, $b) {
   --rls-#{$theme}-backdrop-900: rgba(#{$r}, #{$g}, #{$b}, 0.8);
@@ -322,27 +322,27 @@
 
   // COLORS AMBER
 
-  --rls-amber-color-950: rgba(66, 27, 8, 1);
+  --rls-amber-color-950: rgba(63, 17, 11, 1);
 
-  @include rolster-theme-900('amber', 123, 59, 19);
+  @include rolster-theme-900('amber', 117, 40, 25);
 
-  --rls-amber-color-800: rgba(152, 69, 20, 1);
+  --rls-amber-color-800: rgba(145, 45, 27, 1);
 
-  @include rolster-theme-700('amber', 192, 88, 14);
+  @include rolster-theme-700('amber', 183, 55, 23);
 
-  --rls-amber-color-600: rgba(238, 119, 15, 1);
+  --rls-amber-color-600: rgba(221, 75, 26, 1);
 
-  @include rolster-theme-500('amber', 246, 142, 25);
+  @include rolster-theme-500('amber', 235, 100, 36);
 
-  --rls-amber-color-400: rgba(249, 169, 62, 1);
+  --rls-amber-color-400: rgba(239, 132, 72, 1);
 
-  --rls-amber-color-300: rgba(251, 202, 118, 1);
+  --rls-amber-color-300: rgba(244, 175, 125, 1);
 
-  --rls-amber-color-200: rgba(253, 225, 171, 1);
+  --rls-amber-color-200: rgba(249, 208, 175, 1);
 
-  --rls-amber-color-100: rgba(255, 242, 213, 1);
+  --rls-amber-color-100: rgba(252, 234, 216, 1);
 
-  --rls-amber-color-050: rgba(255, 249, 237, 1);
+  --rls-amber-color-050: rgba(252, 234, 216, 1);
 
   --rls-amber-gradient-700: linear-gradient(
     180deg,
