@@ -1,9 +1,9 @@
 // Rolster Technology ListField Component
-// v1.3.3
+// v1.3.4
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 01/Mar/2025
+// Updated: 18/Mar/2025
 
 .rls-field-list {
   --pvt-action-font-color: var(--rls-app-color-300);
@@ -90,7 +90,7 @@
       overflow: initial;
       opacity: 1;
       height: auto;
-      z-index: var(--rls-z-index-4);
+      z-index: var(--rls-z-index-8);
     }
 
     &--higher {
