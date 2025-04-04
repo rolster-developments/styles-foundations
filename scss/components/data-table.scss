@@ -1,9 +1,9 @@
 // Rolster Technology Datatable Component
-// v2.2.1
+// v2.2.3
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 02/Mar/2025
+// Updated: 04/Abr/2025
 
 @mixin datatable_cell_control() {
   --rlc-avatar-border-radius: var(--rls-sizing-x3);
@@ -191,6 +191,10 @@
       background: var(--rls-danger-color-050);
       border: var(--rls-danger-border-1-300);
     }
+
+    &--overflow {
+      overflow: hidden;
+    }
   }
 
   &__subheader {
@@ -268,6 +272,35 @@
         color: var(--rls-app-color-700);
         text-decoration: underline;
       }
+    }
+  }
+
+  &__floating {
+    position: absolute;
+    display: flex;
+    left: initial;
+    right: 0;
+    height: 100%;
+    column-gap: 4rem;
+    align-items: center;
+    z-index: var(--rls-z-index-2);
+    padding: 0rem var(--rls-sizing-x6);
+    background: var(--rls-app-background-300);
+    border-right: none;
+    border-left: 2px dashed var(--rls-app-border-100);
+    transform: translateX(calc(100% - var(--rls-sizing-x6)));
+    transition: transform 240ms var(--rls-standard-curve);
+
+    &:hover {
+      transform: translateX(0);
+    }
+
+    &--invested {
+      right: initial;
+      left: 0;
+      transform: translateX(calc(-100% + var(--rls-sizing-x6)));
+      border-left: none;
+      border-right: 2px dashed var(--rls-app-border-100);
     }
   }
 
