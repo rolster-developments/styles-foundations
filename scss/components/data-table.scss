@@ -1,9 +1,9 @@
 // Rolster Technology Datatable Component
-// v2.2.3
+// v2.3.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 04/Abr/2025
+// Updated: 14/Abr/2025
 
 @mixin datatable_cell_control() {
   --rlc-avatar-border-radius: var(--rls-sizing-x3);
@@ -74,8 +74,7 @@
     );
 
     --pvt-datatable-padding-component: 0rem
-      calc(var(--rlc-datatable-padding-scroll) + 5rem) 0rem
-      var(--rlc-datatable-padding-scroll);
+      calc(var(--rlc-datatable-padding-scroll) + 5rem) 0rem 0rem;
   }
 
   & > table {
@@ -98,7 +97,6 @@
 
   &__head {
     width: 100%;
-    padding-left: var(--rlc-datatable-padding-scroll);
     padding-right: var(--pvt-header-padding-right);
     box-sizing: border-box;
   }
@@ -154,7 +152,7 @@
     display: flex;
     flex-direction: column;
     row-gap: var(--rls-sizing-x6);
-    padding: 0rem var(--rlc-datatable-padding-scroll);
+    padding-right: var(--rlc-datatable-padding-scroll);
     box-sizing: border-box;
     overflow-y: var(--rlc-datatable-body-overflow);
     max-height: var(--rlc-datatable-body-max-height);
@@ -276,6 +274,8 @@
   }
 
   &__floating {
+    --pvt-action-tooltip-transform: translate(calc(-100% - var(--rls-sizing-x4)));
+
     position: absolute;
     display: flex;
     left: initial;
@@ -287,8 +287,7 @@
     padding: 0rem var(--rls-sizing-x6);
     background: var(--rls-app-background-300);
     border-right: none;
-    border-left: 2px dashed var(--rls-app-border-100);
-    transform: translateX(calc(100% - var(--rls-sizing-x6)));
+    transform: translateX(calc(100% - var(--rls-sizing-x4)));
     transition: transform 240ms var(--rls-standard-curve);
 
     &:hover {
@@ -296,18 +295,25 @@
     }
 
     &--invested {
+      --pvt-action-tooltip-transform: translate(calc(100% + var(--rls-sizing-x4)));
+
       right: initial;
       left: 0;
       transform: translateX(calc(-100% + var(--rls-sizing-x6)));
       border-left: none;
       border-right: 2px dashed var(--rls-app-border-100);
     }
+
+    .rls-button-action__tooltip {
+      top: 0;
+      left: 0;
+      transform: var(--pvt-action-tooltip-transform);
+    }
   }
 
   &__summary {
     --pvt-datatable-record-background: var(--rls-theme-color-050);
 
-    padding-left: var(--rlc-datatable-padding-scroll);
     padding-right: var(--pvt-header-padding-right);
     box-sizing: border-box;
   }
