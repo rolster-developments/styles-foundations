@@ -30,21 +30,6 @@
 
   @include helpers.rolster-theme(
     'primary',
-    #0e2425,
-    #204140,
-    #224d4b,
-    #265f5c,
-    #2c7873,
-    #39938b,
-    #52afa5,
-    #7dcbc1,
-    #aee1d8,
-    #d7f0ec,
-    #f3faf8
-  );
-
-  @include helpers.rolster-theme(
-    'secondary',
     #0b2446,
     #0e335d,
     #0c4480,
@@ -56,6 +41,21 @@
     #bddbfa,
     #e1edfd,
     #f1f7fe
+  );
+
+  @include helpers.rolster-theme(
+    'secondary',
+    #0e2425,
+    #204140,
+    #224d4b,
+    #265f5c,
+    #2c7873,
+    #39938b,
+    #52afa5,
+    #7dcbc1,
+    #aee1d8,
+    #d7f0ec,
+    #f3faf8
   );
 
   @include helpers.rolster-theme(

@@ -256,10 +256,6 @@
       --rlc-fieldlist-element-padding: var(--rls-sizing-x4);
       --rlc-fieldlist-suggestions-bottom: var(--rls-sizing-x24);
       --rlc-fieldlist-suggestions-top: var(--rls-sizing-x24);
-
-      &__suggestions {
-        z-index: var(--rls-z-index-2);
-      }
     }
 
     .rls-poster {
