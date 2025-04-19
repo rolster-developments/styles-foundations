@@ -1,12 +1,12 @@
 // Rolster Technology ListField Component
-// v1.3.6
+// v1.3.7
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 16/Abr/2025
+// Updated: 18/Abr/2025
 
 .rls-field-list {
-  --pvt-action-font-color: var(--rls-app-color-300);
+  --pvt-action-font-color: var(--rls-app-color-600);
   --pvt-list-height: auto;
   --pvt-list-max-height: 160rem;
   --pvt-list-opacity: 0;
@@ -22,11 +22,11 @@
   &.rls-field-box--active {
     --rlc-fieldbox-body-shadow: 0px 0px 0px 3px var(--box-shadow-theme-100);
     --rlc-fieldbox-body-border: var(--rls-theme-border-1-300);
-    --rlc-fieldbox-label-font-color: var(--rls-app-color-300);
+    --rlc-fieldbox-label-font-color: var(--rls-app-color-600);
   }
 
   &.rls-field-box--disabled {
-    --pvt-action-font-color: var(--rls-app-color-100);
+    --pvt-action-font-color: var(--rls-app-color-400);
   }
 
   &__control {
@@ -45,12 +45,12 @@
     color: var(--rlc-input-font-color);
 
     &::placeholder {
-      color: var(--rls-app-color-100);
+      color: var(--rls-app-color-400);
     }
 
     &::selection {
       background: var(--rls-theme-color-700);
-      color: var(--rls-light-color-500);
+      color: var(--rls-app-color-050);
     }
 
     &:disabled {
@@ -78,8 +78,8 @@
     height: auto;
     max-height: var(--pvt-list-max-height);
     opacity: 0;
+    z-index: -1;
     overflow: hidden;
-    z-index: var(--rls-z-index-2);
 
     &--visible {
       --pvt-list-height: auto;
@@ -108,7 +108,7 @@
       opacity: var(--pvt-list-opacity);
       overflow: hidden;
       z-index: var(--rls-z-index-2);
-      background: var(--rls-app-background-500);
+      background: var(--rls-app-color-050);
       border: var(--rls-theme-border-1-500);
       box-shadow: 0px 0px 0px 3px var(--rls-theme-shadow-500);
       transform: var(--pvt-list-transform);
@@ -137,7 +137,7 @@
     box-sizing: border-box;
 
     &:hover {
-      background: var(--rls-app-background-300);
+      background: var(--rls-app-color-100);
     }
 
     &:not(:hover):focus {
@@ -168,12 +168,12 @@
       label {
         display: block;
         width: 100%;
-        color: var(--rls-app-color-300);
+        color: var(--rls-app-color-600);
       }
 
       p {
         white-space: initial;
-        color: var(--rls-app-color-300);
+        color: var(--rls-app-color-600);
       }
     }
   }

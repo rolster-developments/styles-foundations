@@ -1,9 +1,9 @@
 // Rolster Technology Datatable Component
-// v2.3.0
+// v2.3.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 14/Abr/2025
+// Updated: 18/Abr/2025
 
 @mixin datatable_cell_control() {
   --rlc-avatar-border-radius: var(--rls-sizing-x3);
@@ -124,7 +124,7 @@
     display: flex;
     height: var(--rls-sizing-x20);
     line-height: var(--rls-sizing-x20);
-    color: var(--rls-app-color-500);
+    color: var(--rls-app-color-900);
     font-weight: var(--rlc-datatable-header-font-weight);
     font-size: var(--rlc-datatable-font-size);
     letter-spacing: var(--rlc-datatable-letter-spacing);
@@ -256,6 +256,10 @@
       --rlc-fieldlist-element-padding: var(--rls-sizing-x4);
       --rlc-fieldlist-suggestions-bottom: var(--rls-sizing-x24);
       --rlc-fieldlist-suggestions-top: var(--rls-sizing-x24);
+
+      &__suggestions {
+        z-index: var(--rls-z-index-2);
+      }
     }
 
     .rls-poster {
@@ -274,7 +278,9 @@
   }
 
   &__floating {
-    --pvt-action-tooltip-transform: translate(calc(-100% - var(--rls-sizing-x4)));
+    --pvt-action-tooltip-transform: translate(
+      calc(-100% - var(--rls-sizing-x4))
+    );
 
     position: absolute;
     display: flex;
@@ -285,7 +291,7 @@
     align-items: center;
     z-index: var(--rls-z-index-2);
     padding: 0rem var(--rls-sizing-x6);
-    background: var(--rls-app-background-300);
+    background: var(--rls-app-color-100);
     border-right: none;
     transform: translateX(calc(100% - var(--rls-sizing-x4)));
     transition: transform 240ms var(--rls-standard-curve);
@@ -295,13 +301,15 @@
     }
 
     &--invested {
-      --pvt-action-tooltip-transform: translate(calc(100% + var(--rls-sizing-x4)));
+      --pvt-action-tooltip-transform: translate(
+        calc(100% + var(--rls-sizing-x4))
+      );
 
       right: initial;
       left: 0;
       transform: translateX(calc(-100% + var(--rls-sizing-x6)));
       border-left: none;
-      border-right: 2px dashed var(--rls-app-border-100);
+      border-right: 2px dashed var(--rls-app-color-300);
     }
 
     .rls-button-action__tooltip {

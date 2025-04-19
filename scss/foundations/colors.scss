@@ -1,448 +1,247 @@
 // Rolster Technology Colors Foundations
-// v2.5.2
+// v2.6.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 03/Mar/2022
-// Updated: 13/Mar/2025
+// Updated: 18/Abr/2025
 
-@mixin rolster-theme-900($theme, $r, $g, $b) {
-  --rls-#{$theme}-backdrop-900: rgba(#{$r}, #{$g}, #{$b}, 0.8);
-
-  --rls-#{$theme}-color-900: rgba(#{$r}, #{$g}, #{$b}, 1);
-}
-
-@mixin rolster-theme-700($theme, $r, $g, $b) {
-  --rls-#{$theme}-skeleton-500: rgba(#{$r}, #{$g}, #{$b}, 0.5);
-
-  --rls-#{$theme}-skeleton-400: rgba(#{$r}, #{$g}, #{$b}, 0.325);
-
-  --rls-#{$theme}-skeleton-300: rgba(#{$r}, #{$g}, #{$b}, 0.25);
-
-  --rls-#{$theme}-skeleton-200: rgba(#{$r}, #{$g}, #{$b}, 0.175);
-
-  --rls-#{$theme}-skeleton-100: rgba(#{$r}, #{$g}, #{$b}, 0.1);
-
-  --rls-#{$theme}-color-700: rgba(#{$r}, #{$g}, #{$b}, 1);
-}
-
-@mixin rolster-theme-500($theme, $r, $g, $b) {
-  --rls-#{$theme}-shadow-500: rgba(#{$r}, #{$g}, #{$b}, 0.24);
-
-  --rls-#{$theme}-color-500: rgba(#{$r}, #{$g}, #{$b}, 1);
-}
+@use 'helpers' as helpers;
 
 :root {
-  --rls-dark-background-500: rgba(37, 38, 65, 1);
+  --rls-app-color-900: rgba(40, 50, 61, 1);
 
-  --rls-dark-background-300: rgba(52, 57, 87, 1);
+  --rls-app-color-800: rgba(52, 57, 87, 1);
 
-  --rls-dark-background-100: rgba(72, 77, 107, 1);
+  --rls-app-color-700: rgba(72, 77, 107, 1);
 
-  --rls-light-background-500: rgba(255, 255, 255, 1);
+  --rls-app-color-600: rgba(98, 111, 155, 1);
 
-  --rls-light-background-300: rgba(239, 242, 252, 1);
+  --rls-app-color-500: rgba(128, 141, 190, 1);
 
-  --rls-light-background-100: rgba(221, 223, 237, 1);
+  --rls-app-color-400: rgba(173, 186, 212, 1);
 
-  --rls-dark-color-500: rgba(40, 50, 61, 1);
+  --rls-app-color-300: rgba(197, 203, 209, 1);
 
-  --rls-dark-color-300: rgba(98, 111, 155, 1);
+  --rls-app-color-200: rgba(209, 214, 239, 1);
 
-  --rls-dark-color-100: rgba(173, 186, 212, 1);
+  --rls-app-color-100: rgba(239, 242, 252, 1);
 
-  --rls-light-color-500: rgba(255, 255, 255, 1);
+  --rls-app-color-050: rgba(255, 255, 255, 1);
 
-  --rls-light-color-300: rgba(185, 195, 231, 1);
-
-  --rls-light-color-100: rgba(128, 141, 190, 1);
-
-  --rls-dark-border-500: rgba(85, 95, 131, 1);
-
-  --rls-dark-border-300: rgba(173, 186, 230, 1);
-
-  --rls-dark-border-100: rgba(209, 214, 239, 1);
-
-  --rls-light-border-500: rgba(255, 255, 255, 1);
-
-  --rls-light-border-300: rgba(185, 195, 231, 1);
-
-  --rls-light-border-100: rgba(128, 141, 190, 1);
-
-  // COLORS STANDARD
-
-  --rls-standard-color-950: rgba(20, 39, 61, 1);
-
-  @include rolster-theme-900('standard', 29, 59, 93);
-
-  --rls-standard-color-800: rgba(29, 69, 111, 1);
-
-  @include rolster-theme-700('standard', 31, 81, 133);
-
-  --rls-standard-color-600: rgba(37, 101, 164, 1);
-
-  @include rolster-theme-500('standard', 53, 128, 194);
-
-  --rls-standard-color-400: rgba(90, 156, 214, 1);
-
-  --rls-standard-color-300: rgba(148, 190, 229, 1);
-
-  --rls-standard-color-200: rgba(198, 219, 241, 1);
-
-  --rls-standard-color-100: rgba(229, 238, 249, 1);
-
-  --rls-standard-color-050: rgba(243, 247, 252, 1);
-
-  --rls-standard-gradient-700: linear-gradient(
-    180deg,
-    var(--rls-standard-color-700) 0%,
-    var(--rls-standard-color-900) 100%
+  @include helpers.rolster-theme(
+    'primary',
+    #0e2425,
+    #204140,
+    #224d4b,
+    #265f5c,
+    #2c7873,
+    #39938b,
+    #52afa5,
+    #7dcbc1,
+    #aee1d8,
+    #d7f0ec,
+    #f3faf8
   );
 
-  --rls-standard-gradient-500: linear-gradient(
-    180deg,
-    var(--rls-standard-color-500) 0%,
-    var(--rls-standard-color-700) 100%
+  @include helpers.rolster-theme(
+    'secondary',
+    #0b2446,
+    #0e335d,
+    #0c4480,
+    #094f9b,
+    #0a63bf,
+    #1781e0,
+    #409df0,
+    #82bef7,
+    #bddbfa,
+    #e1edfd,
+    #f1f7fe
   );
 
-  --rls-standard-gradient-300: linear-gradient(
-    180deg,
-    var(--rls-standard-color-300) 0%,
-    var(--rls-standard-color-500) 100%
+  @include helpers.rolster-theme(
+    'tertiary',
+    #440d0b,
+    #7d221f,
+    #97211d,
+    #b6241f,
+    #d92f29,
+    #ed5752,
+    #f67773,
+    #faaaa7,
+    #fdcdcb,
+    #fde4e3,
+    #fef2f2
   );
 
-  // COLORS SUCCESS
-
-  --rls-success-color-950: rgba(1, 45, 34, 1);
-
-  @include rolster-theme-900('success', 4, 80, 59);
-
-  --rls-success-color-800: rgba(4, 97, 70, 1);
-
-  @include rolster-theme-700('success', 1, 123, 86);
-
-  --rls-success-color-600: rgba(1, 159, 108, 1);
-
-  @include rolster-theme-500('success', 11, 190, 129);
-
-  --rls-success-color-400: rgba(48, 215, 152, 1);
-
-  --rls-success-color-300: rgba(107, 234, 182, 1);
-
-  --rls-success-color-200: rgba(165, 245, 207, 1);
-
-  --rls-success-color-100: rgba(208, 251, 228, 1);
-
-  --rls-success-color-050: rgba(236, 253, 245, 1);
-
-  --rls-success-gradient-700: linear-gradient(
-    180deg,
-    var(--rls-success-color-700) 0%,
-    var(--rls-success-color-900) 100%
+  @include helpers.rolster-theme(
+    'success',
+    #012d22,
+    #04503b,
+    #046146,
+    #017b56,
+    #019f6c,
+    #0bbe81,
+    #30d798,
+    #6beab6,
+    #a5f5cf,
+    #d0fbe4,
+    #ecfdf5
   );
 
-  --rls-success-gradient-500: linear-gradient(
-    180deg,
-    var(--rls-success-color-500) 0%,
-    var(--rls-success-color-700) 100%
+  @include helpers.rolster-theme(
+    'info',
+    #063852,
+    #085172,
+    #02628a,
+    #0075a7,
+    #0092cf,
+    #06b6f1,
+    #31ccff,
+    #78ddff,
+    #b7ebff,
+    #dff4ff,
+    #effaff
   );
 
-  --rls-success-gradient-300: linear-gradient(
-    180deg,
-    var(--rls-success-color-300) 0%,
-    var(--rls-success-color-500) 100%
+  @include helpers.rolster-theme(
+    'warning',
+    #411607,
+    #722f15,
+    #8a3816,
+    #aa4713,
+    #cd6512,
+    #e88918,
+    #efa930,
+    #f2c057,
+    #f6d991,
+    #fbedca,
+    #fef8ec
   );
 
-  // COLORS INFO
-
-  --rls-info-color-950: rgb(4, 45, 77, 1);
-
-  @include rolster-theme-900('info', 7, 70, 115);
-
-  --rls-info-color-800: rgba(0, 85, 140, 1);
-
-  @include rolster-theme-700('info', 0, 101, 170);
-
-  --rls-info-color-600: rgba(0, 126, 210, 1);
-
-  @include rolster-theme-500('info', 2, 159, 245);
-
-  --rls-info-color-400: rgba(45, 184, 255, 1);
-
-  --rls-info-color-300: rgba(118, 207, 255, 1);
-
-  --rls-info-color-200: rgba(182, 228, 255, 1);
-
-  --rls-info-color-100: rgba(222, 241, 255, 1);
-
-  --rls-info-color-050: rgba(239, 248, 255, 1);
-
-  --rls-info-gradient-700: linear-gradient(
-    180deg,
-    var(--rls-info-color-700) 0%,
-    var(--rls-info-color-900) 100%
+  @include helpers.rolster-theme(
+    'danger',
+    #500000,
+    #900c0d,
+    #af0506,
+    #cc0001,
+    #fc0607,
+    #ff2627,
+    #ff595a,
+    #ff9596,
+    #ffc1c1,
+    #ffdddd,
+    #fff0f0
   );
 
-  --rls-info-gradient-500: linear-gradient(
-    180deg,
-    var(--rls-info-color-500) 0%,
-    var(--rls-info-color-700) 100%
+  @include helpers.rolster-theme(
+    'berry',
+    #430e1e,
+    #78233f,
+    #8c2543,
+    #a7294a,
+    #c7375a,
+    #dc5770,
+    #ec96a4,
+    #f1b0b9,
+    #f7d4d9,
+    #fbe8e9,
+    #fdf3f4
   );
 
-  --rls-info-gradient-300: linear-gradient(
-    180deg,
-    var(--rls-info-color-300) 0%,
-    var(--rls-info-color-500) 100%
+  @include helpers.rolster-theme(
+    'mountains',
+    #161d18,
+    #2c352f,
+    #323d36,
+    #3b4a41,
+    #4f6457,
+    #5b7163,
+    #758c7d,
+    #9aaea0,
+    #c1cec4,
+    #e0e7e1,
+    #f6f7f6
   );
 
-  // COLORS WARNING
-
-  --rls-warning-color-950: rgba(72, 29, 0, 1);
-
-  @include rolster-theme-900('warning', 124, 58, 11);
-
-  --rls-warning-color-800: rgba(152, 70, 8, 1);
-
-  @include rolster-theme-700('warning', 187, 91, 2);
-
-  --rls-warning-color-600: rgba(226, 131, 0, 1);
-
-  @include rolster-theme-500('warning', 246, 167, 0);
-
-  --rls-warning-color-400: rgba(255, 207, 27, 1);
-
-  --rls-warning-color-300: rgba(255, 224, 70, 1);
-
-  --rls-warning-color-200: rgba(255, 239, 133, 1);
-
-  --rls-warning-color-100: rgba(255, 247, 197, 1);
-
-  --rls-warning-color-050: rgba(255, 253, 234, 1);
-
-  --rls-warning-gradient-700: linear-gradient(
-    180deg,
-    var(--rls-warning-color-700) 0%,
-    var(--rls-warning-color-900) 100%
+  @include helpers.rolster-theme(
+    'amaizing',
+    #3f133f,
+    #632c63,
+    #763177,
+    #8e3a91,
+    #aa49b0,
+    #c568cd,
+    #d993df,
+    #e7bbec,
+    #f0d9f5,
+    #f8edfa,
+    #fcf6fd
   );
 
-  --rls-warning-gradient-500: linear-gradient(
-    180deg,
-    var(--rls-warning-color-500) 0%,
-    var(--rls-warning-color-700) 100%
+  @include helpers.rolster-theme(
+    'amber',
+    #3f110b,
+    #752819,
+    #912d1b,
+    #b73717,
+    #dd4b1a,
+    #eb6424,
+    #ef8448,
+    #f4af7d,
+    #f9d0af,
+    #fcead8,
+    #fcead8
   );
 
-  --rls-warning-gradient-300: linear-gradient(
-    180deg,
-    var(--rls-warning-color-300) 0%,
-    var(--rls-warning-color-500) 100%
+  @include helpers.rolster-theme(
+    'smartness',
+    #321816,
+    #5a302d,
+    #6c3934,
+    #83453a,
+    #9c5a43,
+    #b67959,
+    #bd8a62,
+    #c9a380,
+    #dcc4ab,
+    #eee2d7,
+    #f9f6f1
   );
 
-  // COLORS DANGER
-
-  --rls-danger-color-950: rgba(79, 2, 22, 1);
-
-  @include rolster-theme-900('danger', 141, 14, 50);
-
-  --rls-danger-color-800: rgba(165, 12, 50, 1);
-
-  @include rolster-theme-700('danger', 197, 11, 51);
-
-  --rls-danger-color-600: rgba(220, 20, 59, 1);
-
-  @include rolster-theme-500('danger', 251, 56, 84);
-
-  --rls-danger-color-400: rgba(255, 107, 125, 1);
-
-  --rls-danger-color-300: rgba(255, 160, 170, 1);
-
-  --rls-danger-color-200: rgba(255, 203, 209, 1);
-
-  --rls-danger-color-100: rgba(255, 227, 228, 1);
-
-  --rls-danger-color-050: rgba(255, 240, 242, 1);
-
-  --rls-danger-gradient-700: linear-gradient(
-    180deg,
-    var(--rls-danger-color-700) 0%,
-    var(--rls-danger-color-900) 100%
+  @include helpers.rolster-theme(
+    'obsidian',
+    #29221f,
+    #4a3f39,
+    #54483f,
+    #625346,
+    #796955,
+    #8d7f65,
+    #9c9073,
+    #b2aa92,
+    #cecaba,
+    #e6e4db,
+    #f5f5f1
   );
+}
 
-  --rls-danger-gradient-500: linear-gradient(
-    180deg,
-    var(--rls-danger-color-500) 0%,
-    var(--rls-danger-color-700) 100%
-  );
+*[app-theme='dark'] {
+  --rls-app-color-900: rgba(255, 255, 255, 1);
 
-  --rls-danger-gradient-300: linear-gradient(
-    180deg,
-    var(--rls-danger-color-300) 0%,
-    var(--rls-danger-color-500) 100%
-  );
+  --rls-app-color-800: rgba(239, 242, 252, 1);
 
-  // COLORS AMAIZING
+  --rls-app-color-700: rgba(209, 214, 239, 1);
 
-  --rls-amaizing-color-950: rgba(63, 19, 63, 1);
+  --rls-app-color-600: rgba(197, 203, 209, 1);
 
-  @include rolster-theme-900('amaizing', 99, 44, 99);
+  --rls-app-color-500: rgba(173, 186, 212, 1);
 
-  --rls-amaizing-color-800: rgba(118, 49, 119, 1);
+  --rls-app-color-400: rgba(128, 141, 190, 1);
 
-  @include rolster-theme-700('amaizing', 142, 58, 145);
+  --rls-app-color-300: rgba(98, 111, 155, 1);
 
-  --rls-amaizing-color-600: rgba(170, 73, 176, 1);
+  --rls-app-color-200: rgba(72, 77, 107, 1);
 
-  @include rolster-theme-500('amaizing', 197, 104, 205);
+  --rls-app-color-100: rgba(52, 57, 87, 1);
 
-  --rls-amaizing-color-400: rgba(217, 147, 223, 1);
-
-  --rls-amaizing-color-300: rgba(231, 187, 236, 1);
-
-  --rls-amaizing-color-200: rgba(240, 217, 245, 1);
-
-  --rls-amaizing-color-100: rgba(248, 237, 250, 1);
-
-  --rls-amaizing-color-050: rgba(252, 246, 253, 1);
-
-  --rls-amaizing-gradient-700: linear-gradient(
-    180deg,
-    var(--rls-amaizing-color-700) 0%,
-    var(--rls-amaizing-color-900) 100%
-  );
-
-  --rls-amaizing-gradient-500: linear-gradient(
-    180deg,
-    var(--rls-amaizing-color-500) 0%,
-    var(--rls-amaizing-color-700) 100%
-  );
-
-  --rls-amaizing-gradient-300: linear-gradient(
-    180deg,
-    var(--rls-amaizing-color-300) 0%,
-    var(--rls-amaizing-color-500) 100%
-  );
-
-  // COLORS AMBER
-
-  --rls-amber-color-950: rgba(63, 17, 11, 1);
-
-  @include rolster-theme-900('amber', 117, 40, 25);
-
-  --rls-amber-color-800: rgba(145, 45, 27, 1);
-
-  @include rolster-theme-700('amber', 183, 55, 23);
-
-  --rls-amber-color-600: rgba(221, 75, 26, 1);
-
-  @include rolster-theme-500('amber', 235, 100, 36);
-
-  --rls-amber-color-400: rgba(239, 132, 72, 1);
-
-  --rls-amber-color-300: rgba(244, 175, 125, 1);
-
-  --rls-amber-color-200: rgba(249, 208, 175, 1);
-
-  --rls-amber-color-100: rgba(252, 234, 216, 1);
-
-  --rls-amber-color-050: rgba(252, 234, 216, 1);
-
-  --rls-amber-gradient-700: linear-gradient(
-    180deg,
-    var(--rls-amber-color-700) 0%,
-    var(--rls-amber-color-900) 100%
-  );
-
-  --rls-amber-gradient-500: linear-gradient(
-    180deg,
-    var(--rls-amber-color-500) 0%,
-    var(--rls-amber-color-700) 100%
-  );
-
-  --rls-amber-gradient-300: linear-gradient(
-    180deg,
-    var(--rls-amber-color-300) 0%,
-    var(--rls-amber-color-500) 100%
-  );
-
-  // COLORS SMARTNESS
-
-  --rls-smartness-color-950: rgba(50, 24, 22, 1);
-
-  @include rolster-theme-900('smartness', 90, 48, 45);
-
-  --rls-smartness-color-800: rgba(108, 57, 52, 1);
-
-  @include rolster-theme-700('smartness', 131, 69, 58);
-
-  --rls-smartness-color-600: rgba(156, 90, 67, 1);
-
-  @include rolster-theme-500('smartness', 182, 121, 89);
-
-  --rls-smartness-color-400: rgba(189, 138, 98, 1);
-
-  --rls-smartness-color-300: rgba(201, 163, 128, 1);
-
-  --rls-smartness-color-200: rgba(220, 196, 171, 1);
-
-  --rls-smartness-color-100: rgba(238, 226, 215, 1);
-
-  --rls-smartness-color-050: rgba(249, 246, 241, 1);
-
-  --rls-smartness-gradient-700: linear-gradient(
-    180deg,
-    var(--rls-smartness-color-700) 0%,
-    var(--rls-smartness-color-900) 100%
-  );
-
-  --rls-smartness-gradient-500: linear-gradient(
-    180deg,
-    var(--rls-smartness-color-500) 0%,
-    var(--rls-smartness-color-700) 100%
-  );
-
-  --rls-smartness-gradient-300: linear-gradient(
-    180deg,
-    var(--rls-smartness-color-300) 0%,
-    var(--rls-smartness-color-500) 100%
-  );
-
-  // COLORS OBSIDIAN
-
-  --rls-obsidian-color-950: rgba(41, 34, 31, 1);
-
-  @include rolster-theme-900('obsidian', 74, 63, 57);
-
-  --rls-obsidian-color-800: rgba(84, 72, 63, 1);
-
-  @include rolster-theme-700('obsidian', 98, 83, 70);
-
-  --rls-obsidian-color-600: rgba(121, 105, 85, 1);
-
-  @include rolster-theme-500('obsidian', 141, 127, 101);
-
-  --rls-obsidian-color-400: rgba(156, 144, 115, 1);
-
-  --rls-obsidian-color-300: rgba(178, 170, 146, 1);
-
-  --rls-obsidian-color-200: rgba(206, 202, 186, 1);
-
-  --rls-obsidian-color-100: rgba(230, 228, 219, 1);
-
-  --rls-obsidian-color-050: rgba(245, 245, 241, 1);
-
-  --rls-obsidian-gradient-700: linear-gradient(
-    180deg,
-    var(--rls-obsidian-color-700) 0%,
-    var(--rls-obsidian-color-900) 100%
-  );
-
-  --rls-obsidian-gradient-500: linear-gradient(
-    180deg,
-    var(--rls-obsidian-color-500) 0%,
-    var(--rls-obsidian-color-700) 100%
-  );
-
-  --rls-obsidian-gradient-300: linear-gradient(
-    180deg,
-    var(--rls-obsidian-color-300) 0%,
-    var(--rls-obsidian-color-500) 100%
-  );
+  --rls-app-color-050: rgba(40, 50, 61, 1);
 }

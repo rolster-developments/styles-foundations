@@ -1,9 +1,9 @@
 // Rolster Technology App Component
-// v2.2.0
+// v2.2.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 28/Oct/2024
+// Updated: 18/Abr/2025
 
 .rls-app {
   &__body {
@@ -93,7 +93,7 @@
   height: var(--rls-sizing-x1);
   background-image: linear-gradient(
     to right,
-    var(--rls-app-border-100) 50%,
+    var(--rls-app-color-300) 50%,
     rgba(255, 255, 255, 0) 0%
   );
   background-position: bottom;

@@ -1,20 +1,20 @@
 // Rolster Technology Components
-// v2.0.8
+// v2.1.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 13/Abr/2023
-// Updated: 25/Feb/2025
+// Updated: 18/Abr/2025
 
 @use 'sass:meta';
 
 :root {
-  --rlc-app-content-background: var(--rls-app-background-500);
-  --rlc-app-header-background: var(--rls-app-background-100);
+  --rlc-app-content-background: var(--rls-app-color-050);
+  --rlc-app-header-background: var(--rls-app-color-200);
   --rlc-app-header-height: var(--rls-sizing-x28);
-  --rlc-app-navbar-background: var(--rls-app-background-100);
+  --rlc-app-navbar-background: var(--rls-app-color-200);
   --rlc-app-navbar-width: 160rem;
 
-  --rlc-action-color: var(--rls-app-color-300);
+  --rlc-action-color: var(--rls-app-color-600);
   --rlc-action-ripple-color: var(--rlc-action-color);
   --rlc-action-ripple-dimension: var(--rls-sizing-x18);
   --rlc-action-ripple-position: -9rem;
@@ -72,7 +72,7 @@
   --rlc-fieldbox-body-shadow: none;
   --rlc-fieldbox-error-display: block;
   --rlc-fieldbox-label-display: block;
-  --rlc-fieldbox-label-font-color: var(--rls-app-color-300);
+  --rlc-fieldbox-label-font-color: var(--rls-app-color-600);
 
   --rlc-fieldlist-action-dimension: var(--rls-sizing-x12);
   --rlc-fieldlist-control-font-size: var(--rlc-input-font-size);
@@ -87,7 +87,7 @@
   --rlc-icon-color: inherit;
   --rlc-icon-dimesion: var(--rls-sizing-x12);
 
-  --rlc-input-font-color: var(--rls-app-color-500);
+  --rlc-input-font-color: var(--rls-app-color-900);
   --rlc-input-font-size: var(--rls-input-font-size);
   --rlc-input-letter-spacing: var(--rls-input-letter-spacing);
   --rlc-input-height: var(--rls-sizing-x12);
@@ -128,7 +128,7 @@
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: var(--rls-theme-color-300) var(--rls-app-background-100);
+  scrollbar-color: var(--rls-theme-color-300) var(--rls-app-color-200);
 }
 
 @include meta.load-css('components/app');

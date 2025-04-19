@@ -1,0 +1,101 @@
+// Rolster Technology Helpers Foundations
+// v1.0.1
+// @license MIT
+// Author: Rolster Developers
+// Created: 18/Abr/2025
+// Updated: 19/Abr/2025
+
+@use 'sass:color' as *;
+
+@mixin rolster-theme-900($theme, $color) {
+  $r: channel($color, 'red');
+  $g: channel($color, 'green');
+  $b: channel($color, 'blue');
+
+  --rls-#{$theme}-color-900: #{$color};
+
+  --rls-#{$theme}-backdrop-900: rgba(#{$r}, #{$g}, #{$b}, 0.8);
+}
+
+@mixin rolster-theme-700($theme, $color) {
+  $r: channel($color, 'red');
+  $g: channel($color, 'green');
+  $b: channel($color, 'blue');
+
+  --rls-#{$theme}-color-700: #{$color};
+
+  --rls-#{$theme}-skeleton-500: rgba(#{$r}, #{$g}, #{$b}, 0.5);
+
+  --rls-#{$theme}-skeleton-400: rgba(#{$r}, #{$g}, #{$b}, 0.325);
+
+  --rls-#{$theme}-skeleton-300: rgba(#{$r}, #{$g}, #{$b}, 0.25);
+
+  --rls-#{$theme}-skeleton-200: rgba(#{$r}, #{$g}, #{$b}, 0.175);
+
+  --rls-#{$theme}-skeleton-100: rgba(#{$r}, #{$g}, #{$b}, 0.1);
+}
+
+@mixin rolster-theme-500($theme, $color) {
+  $r: channel($color, 'red');
+  $g: channel($color, 'green');
+  $b: channel($color, 'blue');
+
+  --rls-#{$theme}-color-500: #{$color};
+
+  --rls-#{$theme}-shadow-500: rgba(#{$r}, #{$g}, #{$b}, 0.24);
+}
+
+@mixin rolster-theme(
+  $theme,
+  $c950,
+  $c900,
+  $c800,
+  $c700,
+  $c600,
+  $c500,
+  $c400,
+  $c300,
+  $c200,
+  $c100,
+  $c050
+) {
+  --rls-#{$theme}-color-950: #{$c950};
+
+  @include rolster-theme-900($theme, $c900);
+
+  --rls-#{$theme}-color-800: #{$c800};
+
+  @include rolster-theme-700($theme, $c700);
+
+  --rls-#{$theme}-color-600: #{$c600};
+
+  @include rolster-theme-500($theme, $c500);
+
+  --rls-#{$theme}-color-400: #{$c400};
+
+  --rls-#{$theme}-color-300: #{$c300};
+
+  --rls-#{$theme}-color-200: #{$c200};
+
+  --rls-#{$theme}-color-100: #{$c100};
+
+  --rls-#{$theme}-color-050: #{$c050};
+
+  --rls-#{$theme}-gradient-700: linear-gradient(
+    180deg,
+    var(--rls-#{$theme}-color-700) 0%,
+    var(--rls-#{$theme}-color-900) 100%
+  );
+
+  --rls-#{$theme}-gradient-500: linear-gradient(
+    180deg,
+    var(--rls-#{$theme}-color-500) 0%,
+    var(--rls-#{$theme}-color-700) 100%
+  );
+
+  --rls-#{$theme}-gradient-300: linear-gradient(
+    180deg,
+    var(--rls-#{$theme}-color-300) 0%,
+    var(--rls-#{$theme}-color-500) 100%
+  );
+}
