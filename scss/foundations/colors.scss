@@ -1,5 +1,5 @@
 // Rolster Technology Colors Foundations
-// v2.6.1
+// v2.6.2
 // @license MIT
 // Author: Rolster Developers
 // Created: 03/Mar/2022
@@ -28,6 +28,28 @@
 
   --rls-app-color-050: rgb(255, 255, 255);
 
+  *[app-theme='dark'] {
+    --rls-app-color-050: rgb(40, 50, 61);
+
+    --rls-app-color-100: rgb(52, 57, 87);
+
+    --rls-app-color-200: rgb(72, 77, 107);
+
+    --rls-app-color-300: rgb(98, 111, 155);
+
+    --rls-app-color-400: rgb(128, 141, 190);
+
+    --rls-app-color-500: rgb(189, 192, 220);
+
+    --rls-app-color-600: rgb(214, 217, 240);
+
+    --rls-app-color-700: rgb(229, 232, 245);
+
+    --rls-app-color-800: rgb(244, 247, 255);
+
+    --rls-app-color-900: rgb(255, 255, 255);
+  }
+
   @include helpers.rolster-theme(
     'primary',
     #0b2446,
@@ -40,7 +62,7 @@
     #82bef7,
     #bddbfa,
     #e1edfd,
-    #f1f7fe
+    #ebf5ff
   );
 
   @include helpers.rolster-theme(
@@ -222,26 +244,4 @@
     #e6e4db,
     #f5f5f1
   );
-}
-
-*[app-theme='dark'] {
-  --rls-app-color-050: rgb(40, 50, 61);
-
-  --rls-app-color-100: rgb(52, 57, 87);
-
-  --rls-app-color-200: rgb(72, 77, 107);
-
-  --rls-app-color-300: rgb(98, 111, 155);
-
-  --rls-app-color-400: rgb(128, 141, 190);
-
-  --rls-app-color-500: rgb(189, 192, 220);
-
-  --rls-app-color-600: rgb(214, 217, 240);
-
-  --rls-app-color-700: rgb(229, 232, 245);
-
-  --rls-app-color-800: rgb(244, 247, 255);
-
-  --rls-app-color-900: rgb(255, 255, 255);
 }

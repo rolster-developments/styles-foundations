@@ -9,9 +9,9 @@
 
 :root {
   --rlc-app-content-background: var(--rls-app-color-050);
-  --rlc-app-header-background: var(--rls-app-color-200);
+  --rlc-app-header-background: var(--rls-app-color-100);
   --rlc-app-header-height: var(--rls-sizing-x28);
-  --rlc-app-navbar-background: var(--rls-app-color-200);
+  --rlc-app-navbar-background: var(--rls-app-color-100);
   --rlc-app-navbar-width: 160rem;
 
   --rlc-action-color: var(--rls-app-color-600);
@@ -58,7 +58,7 @@
   --rlc-datatable-letter-spacing: 0.0625em;
   --rlc-datatable-font-size: 7rem;
   --rlc-datatable-footer-background: var(--rls-theme-color-050);
-  --rlc-datatable-header-background: var(--rls-app-color-200);
+  --rlc-datatable-header-background: var(--rls-theme-color-050);
   --rlc-datatable-header-font-weight: var(--rls-font-weight-semibold);
   --rlc-datatable-padding-scroll: 0rem;
   --rlc-datatable-record-background: var(--rls-app-color-100);
@@ -74,6 +74,7 @@
   --rlc-fieldbox-label-font-color: var(--rls-app-color-600);
   --rlc-fieldbox-action-dimension: var(--rls-sizing-x12);
   --rlc-fieldbox-action-background: var(--rls-app-color-050);
+  --rlc-fieldbox-action-radius: var(--rls-sizing-x2);
 
   --rlc-fieldlist-control-font-size: var(--rlc-input-font-size);
   --rlc-fieldlist-control-font-weight: var(--rls-font-weight-medium);
