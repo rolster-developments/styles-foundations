@@ -1,32 +1,32 @@
 // Rolster Technology Colors Foundations
-// v2.6.0
+// v2.6.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 03/Mar/2022
-// Updated: 18/Abr/2025
+// Updated: 23/Abr/2025
 
 @use 'helpers' as helpers;
 
 :root {
-  --rls-app-color-900: rgba(40, 50, 61, 1);
+  --rls-app-color-900: rgb(40, 50, 61);
 
-  --rls-app-color-800: rgba(52, 57, 87, 1);
+  --rls-app-color-800: rgb(52, 57, 87);
 
-  --rls-app-color-700: rgba(72, 77, 107, 1);
+  --rls-app-color-700: rgb(72, 77, 107);
 
-  --rls-app-color-600: rgba(98, 111, 155, 1);
+  --rls-app-color-600: rgb(98, 111, 155);
 
-  --rls-app-color-500: rgba(128, 141, 190, 1);
+  --rls-app-color-500: rgb(128, 141, 190);
 
-  --rls-app-color-400: rgba(173, 186, 212, 1);
+  --rls-app-color-400: rgb(189, 192, 220);
 
-  --rls-app-color-300: rgba(197, 203, 209, 1);
+  --rls-app-color-300: rgb(214, 217, 240);
 
-  --rls-app-color-200: rgba(209, 214, 239, 1);
+  --rls-app-color-200: rgb(229, 232, 245);
 
-  --rls-app-color-100: rgba(239, 242, 252, 1);
+  --rls-app-color-100: rgb(244, 247, 255);
 
-  --rls-app-color-050: rgba(255, 255, 255, 1);
+  --rls-app-color-050: rgb(255, 255, 255);
 
   @include helpers.rolster-theme(
     'primary',
@@ -225,23 +225,23 @@
 }
 
 *[app-theme='dark'] {
-  --rls-app-color-900: rgba(255, 255, 255, 1);
+  --rls-app-color-050: rgb(40, 50, 61);
 
-  --rls-app-color-800: rgba(239, 242, 252, 1);
+  --rls-app-color-100: rgb(52, 57, 87);
 
-  --rls-app-color-700: rgba(209, 214, 239, 1);
+  --rls-app-color-200: rgb(72, 77, 107);
 
-  --rls-app-color-600: rgba(197, 203, 209, 1);
+  --rls-app-color-300: rgb(98, 111, 155);
 
-  --rls-app-color-500: rgba(173, 186, 212, 1);
+  --rls-app-color-400: rgb(128, 141, 190);
 
-  --rls-app-color-400: rgba(128, 141, 190, 1);
+  --rls-app-color-500: rgb(189, 192, 220);
 
-  --rls-app-color-300: rgba(98, 111, 155, 1);
+  --rls-app-color-600: rgb(214, 217, 240);
 
-  --rls-app-color-200: rgba(72, 77, 107, 1);
+  --rls-app-color-700: rgb(229, 232, 245);
 
-  --rls-app-color-100: rgba(52, 57, 87, 1);
+  --rls-app-color-800: rgb(244, 247, 255);
 
-  --rls-app-color-050: rgba(40, 50, 61, 1);
+  --rls-app-color-900: rgb(255, 255, 255);
 }

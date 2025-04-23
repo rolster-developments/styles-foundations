@@ -15,9 +15,9 @@
   --rlc-action-ripple-position: -8rem;
 
   --rlc-fieldbox-body-background: transparent;
-  --rlc-fieldbox-body-border: none;
   --rlc-fieldbox-body-padding: 0rem;
   --rlc-fieldbox-body-shadow: none;
+  --rlc-fieldbox-action-background: transparent;
 
   --rlc-switch-bar-radius: var(--rls-sizing-x2);
   --rlc-switch-bar-height: var(--rls-sizing-x4);
@@ -91,7 +91,6 @@
     padding: var(--pvt-datatable-padding-component);
     box-sizing: border-box;
     background: var(--rlc-datatable-header-background);
-    border: var(--rls-app-border-1-100);
     border-radius: var(--rls-sizing-x4);
   }
 
@@ -166,7 +165,6 @@
     column-gap: var(--rls-sizing-x6);
     padding: 0rem var(--rls-sizing-x6);
     box-sizing: border-box;
-    border: var(--rls-app-border-1-100);
     border-radius: var(--rls-sizing-x4);
     background: var(--pvt-datatable-record-background);
 
@@ -246,10 +244,10 @@
 
     .rls-field-list {
       --rlc-fieldbox-body-background: transparent;
-      --rlc-fieldbox-body-border: none;
       --rlc-fieldbox-body-padding: var(--rls-sizing-x4) 0rem;
       --rlc-fieldbox-body-shadow: none;
-      --rlc-fieldlist-action-dimension: var(--rls-sizing-x10);
+      --rlc-fieldbox-action-dimension: var(--rls-sizing-x10);
+      --rlc-fieldbox-action-background: transparent;
       --rlc-fieldlist-control-font-size: var(--rlc-datatable-font-size);
       --rlc-fieldlist-control-font-weight: var(--rls-font-weight-medium);
       --rlc-fieldlist-control-letter-spacing: var(--rls-body-letter-spacing);
@@ -287,7 +285,7 @@
     align-items: center;
     z-index: var(--rls-z-index-2);
     padding: 0rem var(--rls-sizing-x6);
-    background: var(--rls-app-color-100);
+    background: var(--rls-theme-color-100);
     border-right: none;
     transform: translateX(calc(100% - var(--rls-sizing-x4)));
     transition: transform 240ms var(--rls-standard-curve);

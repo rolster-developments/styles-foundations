@@ -14,7 +14,7 @@
   --pvt-backdrop-opacity: 0;
   --pvt-backdrop-bottom: initial;
 
-  --rlc-fieldbox-body-padding: var(--rls-sizing-x3) var(--rls-sizing-x4);
+  --rlc-fieldbox-body-padding: var(--rls-sizing-x4);
 
   position: relative;
   box-sizing: border-box;
@@ -31,7 +31,7 @@
 
   &__control {
     position: relative;
-    width: calc(100% - var(--rlc-fieldlist-action-dimension));
+    width: calc(100% - var(--rlc-fieldbox-action-dimension));
     height: var(--rls-sizing-x12);
     line-height: var(--rls-sizing-x12);
     padding: 0rem;
@@ -59,14 +59,19 @@
   }
 
   &__action {
-    --rlc-icon-dimesion: var(--rlc-fieldlist-action-dimension);
+    --rlc-icon-dimesion: calc(var(--rlc-fieldbox-action-dimension) - 2rem);
 
+    width: var(--rlc-fieldbox-action-dimension);
+    height: var(--rlc-fieldbox-action-dimension);
     color: var(--pvt-action-font-color);
-    width: var(--rlc-fieldlist-action-dimension);
-    height: var(--rlc-fieldlist-action-dimension);
     padding: 0rem;
     outline: none;
-    background: transparent;
+    border-radius: 50%;
+    background: var(--rlc-fieldbox-action-background);
+
+    .rls-icon {
+      margin: 1rem;
+    }
   }
 
   &__suggestions {
@@ -109,7 +114,6 @@
       overflow: hidden;
       z-index: var(--rls-z-index-2);
       background: var(--rls-app-color-050);
-      border: var(--rls-theme-border-1-500);
       box-shadow: 0px 0px 0px 3px var(--rls-theme-shadow-500);
       transform: var(--pvt-list-transform);
     }
