@@ -1,9 +1,9 @@
 // Rolster Technology Datatable Component
-// v2.3.2
+// v2.3.4
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 18/Abr/2025
+// Updated: 27/Abr/2025
 
 @mixin datatable_cell_control() {
   --rlc-avatar-border-radius: var(--rls-sizing-x3);
@@ -19,6 +19,7 @@
   --rlc-fieldbox-body-shadow: none;
   --rlc-fieldbox-action-background: transparent;
 
+  --rlc-switch-max-width: var(--rls-sizing-x18);
   --rlc-switch-bar-radius: var(--rls-sizing-x2);
   --rlc-switch-bar-height: var(--rls-sizing-x4);
   --rlc-switch-element-size: var(--rls-sizing-x10);
@@ -169,22 +170,18 @@
 
     &--success {
       background: var(--rls-success-color-050);
-      border: var(--rls-success-border-1-300);
     }
 
     &--info {
       background: var(--rls-info-color-050);
-      border: var(--rls-info-border-1-300);
     }
 
     &--warning {
       background: var(--rls-warning-color-050);
-      border: var(--rls-warning-border-1-300);
     }
 
     &--error {
       background: var(--rls-danger-color-050);
-      border: var(--rls-danger-border-1-300);
     }
 
     &--overflow {
@@ -222,11 +219,7 @@
     }
 
     &.rls-align-center {
-      & > .rls-checkbox,
-      & > .rls-radiobutton,
-      & > .rls-switch {
-        margin: auto;
-      }
+      justify-content: center;
     }
 
     & > span {

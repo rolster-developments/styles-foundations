@@ -1,9 +1,9 @@
 // Rolster Technology Components
-// v2.2.0
+// v2.2.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 13/Abr/2023
-// Updated: 23/Abr/2025
+// Updated: 27/Abr/2025
 
 @use 'sass:meta';
 
@@ -52,6 +52,9 @@
   --rlc-button-content-radius: var(--rls-sizing-x2);
 
   --rlc-card-content-padding: var(--rls-sizing-x8);
+
+  --rlc-checkbox-dimension: var(--rls-sizing-x12);
+  --rlc-checkbox-children-dimension: 7rem;
 
   --rlc-datatable-body-max-height: initial;
   --rlc-datatable-body-overflow: initial;
@@ -106,6 +109,9 @@
 
   --rlc-progress-circular-dimension: var(--rls-sizing-x28);
 
+  --rlc-radiobutton-dimension: var(--rls-sizing-x12);
+  --rlc-radiobutton-children-dimension: 7rem;
+
   --rlc-snackbar-left: 50%;
 
   --rlc-skeleton-height: inherit;
@@ -115,9 +121,10 @@
   --rlc-skeleton-text-height: var(--rls-body-line-height);
   --rlc-skeleton-text-letter-spacing: var(--rls-body-letter-spacing);
 
-  --rlc-switch-bar-radius: var(--rls-sizing-x3);
-  --rlc-switch-bar-height: var(--rls-sizing-x6);
-  --rlc-switch-element-size: var(--rls-sizing-x12);
+  --rlc-switch-max-width: var(--rls-sizing-x18);
+  --rlc-switch-bar-radius: var(--rls-sizing-x2);
+  --rlc-switch-bar-height: var(--rls-sizing-x4);
+  --rlc-switch-element-size: var(--rls-sizing-x10);
 
   --rlc-tabulartext-char-width: 5.5rem;
   --rlc-tabulartext-font-size: var(--rls-body-font-size);
