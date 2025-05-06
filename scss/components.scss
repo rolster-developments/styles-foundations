@@ -7,7 +7,7 @@
 
 @use 'sass:meta';
 
-:root {
+body {
   --rlc-app-content-background: var(--rls-app-color-050);
   --rlc-app-header-background: var(--rls-app-color-100);
   --rlc-app-header-height: var(--rls-sizing-x28);
@@ -54,7 +54,7 @@
   --rlc-card-content-padding: var(--rls-sizing-x8);
 
   --rlc-checkbox-dimension: var(--rls-sizing-x12);
-  --rlc-checkbox-children-dimension: 7rem;
+  --rlc-checkbox-children-dimension: 6rem;
 
   --rlc-datatable-body-max-height: initial;
   --rlc-datatable-body-overflow: initial;
@@ -110,7 +110,7 @@
   --rlc-progress-circular-dimension: var(--rls-sizing-x28);
 
   --rlc-radiobutton-dimension: var(--rls-sizing-x12);
-  --rlc-radiobutton-children-dimension: 7rem;
+  --rlc-radiobutton-children-dimension: 6rem;
 
   --rlc-snackbar-left: 50%;
 
