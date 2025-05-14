@@ -1,11 +1,16 @@
-// Rolster Technology ListField Component
-// v1.3.9
+// Rolster Technology FieldList Component
+// v1.4.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 23/Abr/2025
+// Updated: 14/May/2025
 
 .rls-field-list {
+  --pvt-action-dimension: var(
+    --rlc-fieldbox-action-dimension,
+    var(--rls-sizing-x12)
+  );
+
   --pvt-action-font-color: var(--rls-app-color-600);
   --pvt-list-height: 0rem;
   --pvt-list-max-height: 160rem;
@@ -19,19 +24,13 @@
   position: relative;
   box-sizing: border-box;
 
-  &.rls-field-box--active {
-    --rlc-fieldbox-body-shadow: 0px 0px 0px 3px var(--box-shadow-theme-100);
-    --rlc-fieldbox-body-border: var(--rls-theme-border-1-300);
-    --rlc-fieldbox-label-font-color: var(--rls-app-color-600);
-  }
-
   &.rls-field-box--disabled {
     --pvt-action-font-color: var(--rls-app-color-400);
   }
 
   &__control {
     position: relative;
-    width: calc(100% - var(--rlc-fieldbox-action-dimension));
+    width: calc(100% - var(--pvt-action-dimension));
     height: var(--rls-sizing-x12);
     line-height: var(--rls-sizing-x12);
     padding: 0rem;
@@ -39,9 +38,18 @@
     border: none;
     outline: none;
     background: transparent;
-    font-weight: var(--rlc-fieldlist-control-font-weight);
-    font-size: var(--rlc-fieldlist-control-font-size);
-    letter-spacing: var(--rlc-fieldlist-control-letter-spacing);
+    font-weight: var(
+      --rlc-fieldlist-control-font-weight,
+      var(--rls-font-weight-medium)
+    );
+    font-size: var(
+      --rlc-fieldlist-control-font-size,
+      var(--rls-input-font-size)
+    );
+    letter-spacing: var(
+      --rlc-fieldlist-control-letter-spacing,
+      var(--rls-input-letter-spacing)
+    );
     color: var(--rlc-input-font-color);
 
     &::placeholder {
@@ -59,15 +67,15 @@
   }
 
   &__action {
-    --rlc-icon-dimesion: calc(var(--rlc-fieldbox-action-dimension) - 2rem);
+    --rlc-icon-dimesion: calc(var(--pvt-action-dimension) - 2rem);
 
-    width: var(--rlc-fieldbox-action-dimension);
-    height: var(--rlc-fieldbox-action-dimension);
+    width: var(--pvt-action-dimension);
+    height: var(--pvt-action-dimension);
     color: var(--pvt-action-font-color);
     padding: 0rem;
     outline: none;
-    border-radius: var(--rlc-fieldbox-action-radius);
-    background: var(--rlc-fieldbox-action-background);
+    border-radius: var(--rlc-fieldbox-action-radius, var(--rls-sizing-x2));
+    background: var(--rlc-fieldbox-action-background, var(--rls-app-color-050));
 
     .rls-icon {
       margin: 1rem;
@@ -76,7 +84,10 @@
 
   &__suggestions {
     position: absolute;
-    top: var(--rlc-fieldlist-suggestions-top);
+    top: var(
+      --rlc-fieldlist-suggestions-top,
+      calc(100% + var(--rls-sizing-x6))
+    );
     bottom: initial;
     left: 0rem;
     width: 100%;
@@ -99,7 +110,10 @@
 
     &--higher {
       top: initial;
-      bottom: var(--rlc-fieldlist-suggestions-bottom);
+      bottom: var(
+        --rlc-fieldlist-suggestions-bottom,
+        calc(100% - var(--rls-sizing-x4))
+      );
     }
 
     &__body {
@@ -138,7 +152,7 @@
     box-sizing: border-box;
     outline: none;
     border-radius: var(--rls-sizing-x4);
-    padding: var(--rlc-fieldlist-element-padding);
+    padding: var(--rlc-fieldlist-element-padding, var(--rls-sizing-x2));
     box-sizing: border-box;
 
     &:hover {

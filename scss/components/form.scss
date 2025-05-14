@@ -1,9 +1,9 @@
 // Rolster Technology Form Component
-// v2.0.0
+// v2.1.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 26/May/2024
+// Updated: 14/May/2025
 
 .rls-form {
   display: flex;
@@ -19,7 +19,7 @@
   &__footer {
     position: relative;
     display: flex;
-    justify-content: var(--rlc-form-footer-justify-content);
+    justify-content: var(--rlc-form-footer-justify-content, end);
     column-gap: var(--rls-sizing-x8);
     padding: 0rem var(--rls-sizing-x8);
     box-sizing: border-box;

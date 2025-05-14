@@ -1,31 +1,43 @@
 // Rolster Technology FieldBox Component
-// v2.1.6
+// v2.2.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 08/Sep/2022
-// Updated: 24/Abr/2025
+// Updated: 14/May/2025
 
 .rls-field-box {
+  --pvt-body-background: var(
+    --rlc-fieldbox-body-background,
+    var(--rls-app-color-100)
+  );
+
+  --pvt-body-shadow: var(--rlc-fieldbox-body-shadow, none);
+
+  --pvt-label-font-color: var(
+    --rlc-fieldbox-label-font-color,
+    var(--rls-app-color-600)
+  );
+
   --pvt-label-opacity: 1;
   --pvt-body-opacity: 1;
 
   position: relative;
   display: flex;
-  width: var(--rlc-fieldbox-width);
+  width: var(--rlc-fieldbox-width, 100%);
   flex-direction: column;
-  padding: var(--rlc-fieldbox-padding);
+  padding: var(--rlc-fieldbox-padding, 0rem);
   box-sizing: border-box;
   transition: height 160ms 0ms var(--rls-standard-curve);
 
   &--focused {
-    --rlc-fieldbox-body-background: var(--rls-app-color-050);
-    --rlc-fieldbox-body-shadow: 0px 0px 0px 3px var(--rls-theme-shadow-500);
-    --rlc-fieldbox-label-font-color: var(--rls-theme-color-500);
+    --pvt-body-background: var(--rls-app-color-050);
+    --pvt-body-shadow: 0px 0px 0px 3px var(--rls-theme-shadow-500);
+    --pvt-label-font-color: var(--rls-theme-color-500);
   }
 
   &--error {
-    --rlc-fieldbox-body-shadow: 0px 0px 0px 3px var(--rls-danger-shadow-500);
-    --rlc-fieldbox-label-font-color: var(--rls-danger-color-500);
+    --pvt-body-shadow: 0px 0px 0px 3px var(--rls-danger-shadow-500);
+    --pvt-label-font-color: var(--rls-danger-color-500);
   }
 
   &--disabled {
@@ -35,12 +47,12 @@
 
   &__label {
     position: relative;
-    display: var(--rlc-fieldbox-label-display);
+    display: var(--rlc-fieldbox-label-display, block);
     width: 100%;
     padding: 0rem 5rem;
     box-sizing: border-box;
     margin-bottom: var(--rls-sizing-x2);
-    color: var(--rlc-fieldbox-label-font-color);
+    color: var(--pvt-label-font-color);
     opacity: var(--pvt-label-opacity);
     overflow: hidden;
     white-space: nowrap;
@@ -63,10 +75,10 @@
     box-sizing: border-box;
     overflow: hidden;
     opacity: var(--pvt-body-opacity);
-    border-radius: var(--rls-sizing-x2);
-    background: var(--rlc-fieldbox-body-background);
-    padding: var(--rlc-fieldbox-body-padding);
-    box-shadow: var(--rlc-fieldbox-body-shadow);
+    border-radius: var(--rlc-fieldbox-body-radius, var(--rls-sizing-x2));
+    background: var(--pvt-body-background);
+    padding: var(--rlc-fieldbox-body-padding, 0rem);
+    box-shadow: var(--pvt-body-shadow);
   }
 
   &__helper {
@@ -84,7 +96,7 @@
   }
 
   &__error {
-    display: var(--rlc-fieldbox-error-display);
+    display: var(--rlc-fieldbox-error-display, block);
     padding: 0rem var(--rls-sizing-x4);
     box-sizing: border-box;
     margin-top: var(--rls-sizing-x2);

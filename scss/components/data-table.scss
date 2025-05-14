@@ -1,15 +1,15 @@
 // Rolster Technology Datatable Component
-// v2.3.5
+// v2.4.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 06/May/2025
+// Updated: 14/May/2025
 
 @mixin datatable_cell_control() {
-  --rlc-avatar-border-radius: var(--rls-sizing-x3);
+  --rlc-avatar-radius: var(--rls-sizing-x3);
   --rlc-avatar-width: var(--rls-sizing-x16);
   --rlc-avatar-height: var(--rls-sizing-x16);
-  --rlc-avatar-font-size: var(--rlc-datatable-font-size);
+  --rlc-avatar-font-size: var(--pvt-datatable-font-size);
 
   --rlc-action-ripple-dimension: var(--rls-sizing-x16);
   --rlc-action-ripple-position: -8rem;
@@ -32,11 +32,25 @@
 }
 
 .rls-datatable {
-  --pvt-datatable-record-background: var(--rlc-datatable-record-background);
-  --pvt-datatable-padding-component: 0rem;
-  --pvt-header-padding-right: var(--rlc-datatable-padding-scroll);
+  --pvt-datatable-letter-spacing: var(--rlc-datatable-letter-spacing, 0.0625em);
+  --pvt-datatable-font-size: var(--rlc-datatable-font-size, 7rem);
+  --pvt-datatable-font-color: var(--rlc-datatable-font-color, var(--rls-app-color-900));
 
-  --rlc-amount-font-size: var(--rlc-datatable-font-size);
+  --pvt-datatable-header-background: var(
+    --rlc-datatable-header-background,
+    var(--rls-theme-color-050)
+  );
+
+  --pvt-datatable-record-background: var(
+    --rlc-datatable-record-background,
+    var(--rls-app-color-100)
+  );
+  
+  --pvt-datatable-padding-component: 0rem;
+  --pvt-datatable-padding-scroll: var(--rlc-datatable-padding-scroll, 0rem);
+  --pvt-datatable-header-padding-right: var(--pvt-datatable-padding-scroll);
+
+  --rlc-amount-font-size: var(--pvt-datatable-font-size);
   --rlc-amount-width: 100%;
   --rlc-badge-padding: 0.5rem 1.5rem;
   --rlc-ballot-padding: 0rem;
@@ -52,9 +66,9 @@
   --rlc-fieldbox-width: 100%;
   --rlc-fieldbox-error-display: none;
   --rlc-fieldbox-label-display: none;
-  --rlc-input-font-size: var(--rlc-datatable-font-size);
-  --rlc-input-letter-spacing: var(--rlc-datatable-letter-spacing);
-  --rlc-poster-font-size: var(--rlc-datatable-font-size);
+  --rlc-input-font-size: var(--pvt-datatable-font-size);
+  --rlc-input-letter-spacing: var(--pvt-datatable-letter-spacing);
+  --rlc-poster-font-size: var(--pvt-datatable-font-size);
   --rlc-poster-height: var(--rls-sizing-x8);
   --rlc-poster-padding: var(--rls-sizing-x2);
   --rlc-skeleton-text-column-gap: var(--rls-sizing-x2);
@@ -68,14 +82,15 @@
   box-sizing: border-box;
 
   &--scrolleable {
-    --rlc-datatable-padding-scroll: var(--rls-sizing-x4);
+    --pvt-datatable-padding-scroll: var(--rls-sizing-x4);
 
-    --pvt-header-padding-right: calc(
-      var(--rlc-datatable-padding-scroll) + var(--rlc-datatable-width-scroll)
+    --pvt-datatable-header-padding-right: calc(
+      var(--pvt-datatable-padding-scroll) +
+        var(--rlc-datatable-width-scroll, var(--rls-sizing-x4))
     );
 
     --pvt-datatable-padding-component: 0rem
-      calc(var(--rlc-datatable-padding-scroll) + 5rem) 0rem 0rem;
+      calc(var(--pvt-datatable-padding-scroll) + 5rem) 0rem 0rem;
   }
 
   & > table {
@@ -91,13 +106,13 @@
     column-gap: var(--rls-sizing-x6);
     padding: var(--pvt-datatable-padding-component);
     box-sizing: border-box;
-    background: var(--rlc-datatable-header-background);
+    background: var(--pvt-datatable-header-background);
     border-radius: var(--rls-sizing-x4);
   }
 
   &__head {
     width: 100%;
-    padding-right: var(--pvt-header-padding-right);
+    padding-right: var(--pvt-datatable-header-padding-right);
     box-sizing: border-box;
   }
 
@@ -106,7 +121,7 @@
     column-gap: var(--rls-sizing-x6);
     padding: 0rem var(--rls-sizing-x6);
     box-sizing: border-box;
-    background: var(--rlc-datatable-header-background);
+    background: var(--pvt-datatable-header-background);
     border-radius: var(--rls-sizing-x4);
 
     .rls-poster {
@@ -124,9 +139,12 @@
     height: var(--rls-sizing-x20);
     line-height: var(--rls-sizing-x20);
     color: var(--rls-app-color-900);
-    font-weight: var(--rlc-datatable-header-font-weight);
-    font-size: var(--rlc-datatable-font-size);
-    letter-spacing: var(--rlc-datatable-letter-spacing);
+    font-weight: var(
+      --rlc-datatable-header-font-weight,
+      var(--rls-font-weight-semibold)
+    );
+    font-size: var(--pvt-datatable-font-size);
+    letter-spacing: var(--pvt-datatable-letter-spacing);
     text-align: left;
     overflow: hidden;
     white-space: nowrap;
@@ -151,10 +169,10 @@
     display: flex;
     flex-direction: column;
     row-gap: var(--rls-sizing-x6);
-    padding-right: var(--rlc-datatable-padding-scroll);
+    padding-right: var(--pvt-datatable-padding-scroll);
     box-sizing: border-box;
-    overflow-y: var(--rlc-datatable-body-overflow);
-    max-height: var(--rlc-datatable-body-max-height);
+    overflow-y: var(--rlc-datatable-body-overflow, initial);
+    max-height: var(--rlc-datatable-body-max-height, initial);
   }
 
   &__subheader,
@@ -206,9 +224,9 @@
     text-align: left;
     min-height: var(--rls-sizing-x20);
     font-weight: var(--rls-font-weight-regular);
-    color: var(--rlc-input-font-color);
-    font-size: var(--rlc-datatable-font-size);
-    letter-spacing: var(--rlc-datatable-letter-spacing);
+    color: var(--pvt-datatable-font-color);
+    font-size: var(--pvt-datatable-font-size);
+    letter-spacing: var(--pvt-datatable-letter-spacing);
 
     &--overflow {
       overflow: initial;
@@ -240,7 +258,7 @@
       --rlc-fieldbox-body-shadow: none;
       --rlc-fieldbox-action-dimension: var(--rls-sizing-x10);
       --rlc-fieldbox-action-background: transparent;
-      --rlc-fieldlist-control-font-size: var(--rlc-datatable-font-size);
+      --rlc-fieldlist-control-font-size: var(--pvt-datatable-font-size);
       --rlc-fieldlist-control-font-weight: var(--rls-font-weight-medium);
       --rlc-fieldlist-control-letter-spacing: var(--rls-body-letter-spacing);
       --rlc-fieldlist-element-padding: var(--rls-sizing-x4);
@@ -312,7 +330,7 @@
   &__summary {
     --pvt-datatable-record-background: var(--rls-app-color-200);
 
-    padding-right: var(--pvt-header-padding-right);
+    padding-right: var(--pvt-datatable-header-padding-right);
     box-sizing: border-box;
   }
 

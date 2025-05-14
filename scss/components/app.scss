@@ -1,11 +1,14 @@
 // Rolster Technology App Component
-// v2.2.3
+// v2.3.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 23/Abr/2025
+// Updated: 14/May/2025
 
 .rls-app {
+  --pvt-header-height: var(--rlc-app-header-height, var(--rls-sizing-x28));
+  --pvt-navbar-width: var(--rlc-app-navbar-width, 160rem);
+
   &__body {
     display: flex;
     flex-direction: column;
@@ -17,11 +20,11 @@
     z-index: var(--rls-z-index-8);
 
     &--snackbar {
-      --rlc-snackbar-left: calc(50% + calc(var(--rlc-app-navbar-width) / 2));
+      --rlc-snackbar-left: calc(50% + calc(var(--pvt-navbar-width) / 2));
     }
 
     &--navbar-condense {
-      --rlc-app-navbar-width: 36rem;
+      --pvt-navbar-width: 36rem;
     }
   }
 
@@ -30,14 +33,14 @@
 
     position: relative;
     width: 100%;
-    height: var(--rlc-app-header-height);
+    height: var(--pvt-header-height);
     box-sizing: border-box;
     z-index: var(--rls-z-index-8);
-    background: var(--rlc-app-header-background);
+    background: var(--rlc-app-header-background, var(--rls-app-color-100));
 
     & + .rls-app__page,
     & + .rls-app__content {
-      height: calc(100vh - var(--rlc-app-header-height));
+      height: calc(100vh - var(--pvt-header-height));
     }
   }
 
@@ -49,7 +52,7 @@
     padding: 0rem;
     overflow: auto;
     box-sizing: border-box;
-    background: var(--rlc-app-content-background);
+    background: var(--rlc-app-content-background, var(--rls-app-color-050));
   }
 
   &__page {
@@ -64,7 +67,7 @@
 
     &__nav {
       position: relative;
-      width: var(--rlc-app-navbar-width);
+      width: var(--pvt-navbar-width);
       height: 100%;
       margin: 0rem;
       padding: 0rem;
@@ -72,12 +75,12 @@
       overflow-x: hidden;
       overflow-y: auto;
       border-radius: 0rem 0rem var(--rls-sizing-x16) 0rem;
-      background: var(--rlc-app-navbar-background);
+      background: var(--rlc-app-navbar-background, var(--rls-app-color-100));
 
       & + .rls-app__page__content {
-        --rlc-snackbar-left: calc(50% + calc(var(--rlc-app-navbar-width) / 2));
+        --rlc-snackbar-left: calc(50% + calc(var(--pvt-navbar-width) / 2));
 
-        width: calc(100% - var(--rlc-app-navbar-width));
+        width: calc(100% - var(--pvt-navbar-width));
       }
     }
 
