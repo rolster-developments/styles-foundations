@@ -1,5 +1,5 @@
 // Rolster Technology Datatable Component
-// v2.4.0
+// v2.4.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
@@ -13,13 +13,6 @@
 
   --rlc-action-ripple-dimension: var(--rls-sizing-x16);
   --rlc-action-ripple-position: -8rem;
-
-  --rlc-fieldbox-body-background: transparent;
-  --rlc-fieldbox-body-background-focused: transparent;
-  --rlc-fieldbox-body-padding: 0rem;
-  --rlc-fieldbox-body-shadow: none;
-  --rlc-fieldbox-body-shadow-error: none;
-  --rlc-fieldbox-action-background: transparent;
 
   --rlc-switch-max-width: var(--rls-sizing-x18);
   --rlc-switch-bar-radius: var(--rls-sizing-x2);
@@ -36,7 +29,10 @@
 .rls-datatable {
   --pvt-datatable-letter-spacing: var(--rlc-datatable-letter-spacing, 0.0625em);
   --pvt-datatable-font-size: var(--rlc-datatable-font-size, 7rem);
-  --pvt-datatable-font-color: var(--rlc-datatable-font-color, var(--rls-app-color-900));
+  --pvt-datatable-font-color: var(
+    --rlc-datatable-font-color,
+    var(--rls-app-color-900)
+  );
 
   --pvt-datatable-header-background: var(
     --rlc-datatable-header-background,
@@ -47,7 +43,7 @@
     --rlc-datatable-record-background,
     var(--rls-app-color-100)
   );
-  
+
   --pvt-datatable-padding-component: 0rem;
   --pvt-datatable-padding-scroll: var(--rlc-datatable-padding-scroll, 0rem);
   --pvt-datatable-header-padding-right: var(--pvt-datatable-padding-scroll);
@@ -128,10 +124,10 @@
 
     .rls-poster {
       width: calc(100% - var(--rls-sizing-x2));
+      margin: auto 0rem;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
-      margin: auto 0rem;
     }
   }
 
@@ -219,6 +215,13 @@
 
   &__cell,
   &__data {
+    --rlc-fieldbox-body-background: transparent;
+    --rlc-fieldbox-body-background-focused: transparent;
+    --rlc-fieldbox-body-padding: 0rem;
+    --rlc-fieldbox-body-shadow: none;
+    --rlc-fieldbox-body-shadow-error: none;
+    --rlc-fieldbox-action-background: transparent;
+
     position: relative;
     display: flex;
     align-items: center;

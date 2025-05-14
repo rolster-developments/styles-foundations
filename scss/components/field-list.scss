@@ -1,5 +1,5 @@
 // Rolster Technology FieldList Component
-// v1.4.0
+// v1.4.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
@@ -67,7 +67,7 @@
   }
 
   &__action {
-    --rlc-icon-dimesion: calc(var(--pvt-action-dimension) - 2rem);
+    --rlc-icon-dimension: calc(var(--pvt-action-dimension) - 2rem);
 
     width: var(--pvt-action-dimension);
     height: var(--pvt-action-dimension);
