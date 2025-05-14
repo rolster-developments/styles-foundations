@@ -1,6 +1,6 @@
 {
   "name": "@rolster/styles-foundations",
-  "version": "2.5.20",
+  "version": "2.5.21",
   "description": "Front-end style pack to develop responsive and mobile projects on the web with Rolster.",
   "sass": "scss/styles.scss",
   "style": "dist/styles.css",
