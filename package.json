@@ -1,6 +1,6 @@
 {
   "name": "@rolster/styles-foundations",
-  "version": "2.5.23",
+  "version": "2.5.24",
   "description": "Front-end style pack to develop responsive and mobile projects on the web with Rolster.",
   "sass": "scss/styles.scss",
   "style": "dist/styles.css",
@@ -14,7 +14,7 @@
   ],
   "scripts": {
     "clean": "rimraf ./dist",
-    "sass:build": "node-sass scss/styles.scss dist/styles.css",
+    "sass:build": "sass scss/styles.scss dist/styles.css --style=compressed",
     "css:prettier": "prettier --write dist/*.css --ignore-path .prettierignore",
     "css:minify": "css-minify -d dist/ -o dist/",
     "rltcss": "rtlcss dist/styles.css dist/styles.rtl.css",
@@ -23,10 +23,10 @@
   },
   "devDependencies": {
     "css-minify": "^2.0.0",
-    "node-sass": "^9.0.0",
     "prettier": "^3.0.3",
     "rimraf": "^3.0.2",
     "rtlcss": "^4.1.0",
+    "sass": "^1.89.0",
     "sass-migrator": "^2.2.1"
   },
   "repository": {
