@@ -1,9 +1,9 @@
 // Rolster Technology Components
-// v2.3.0
+// v2.3.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 13/Abr/2023
-// Updated: 14/May/2025
+// Updated: 26/May/2025
 
 @use 'sass:meta';
 
@@ -17,3 +17,15 @@
 @include meta.load-css('components/field-box');
 @include meta.load-css('components/field-list');
 @include meta.load-css('components/form');
+
+.rls-divider {
+  height: var(--rlc-divider-height, var(--rls-sizing-x1));
+  background-image: linear-gradient(
+    to right,
+    var(--rlc-divider-background, var(--rls-app-color-300)) 50%,
+    rgba(255, 255, 255, 0) 0%
+  );
+  background-position: bottom;
+  background-size: var(--rlc-divider-size, var(--rls-sizing-x4));
+  background-repeat: repeat-x;
+}

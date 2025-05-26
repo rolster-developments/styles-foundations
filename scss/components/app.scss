@@ -96,15 +96,3 @@
     }
   }
 }
-
-.rls-divider {
-  height: var(--rls-sizing-x1);
-  background-image: linear-gradient(
-    to right,
-    var(--rls-app-color-300) 50%,
-    rgba(255, 255, 255, 0) 0%
-  );
-  background-position: bottom;
-  background-size: var(--rls-sizing-x4);
-  background-repeat: repeat-x;
-}

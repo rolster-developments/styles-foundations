@@ -1,9 +1,9 @@
 // Rolster Technology Datatable Component
-// v2.4.2
+// v2.4.3
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 20/May/2025
+// Updated: 26/May/2025
 
 @mixin datatable_cell_control() {
   --rlc-avatar-radius: var(--rls-sizing-x3);
@@ -235,7 +235,7 @@
     letter-spacing: var(--pvt-datatable-letter-spacing);
 
     &--overflow {
-      overflow: initial;
+      overflow: hidden;
     }
 
     &--control {
