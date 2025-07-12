@@ -1,9 +1,9 @@
 // Rolster Technology Text Utilities
-// v2.1.0
+// v2.1.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 08/Sep/2022
-// Updated: 17/Dic/2024
+// Updated: 01/Jul/2025
 
 .rls-align-center {
   --rlc-amount-text-align: center;
@@ -38,19 +38,19 @@
 }
 
 .rls-weight-light {
-  font-weight: var(--rls-font-weight-light);
+  font-weight: var(--rls-font-weight-light) !important;
 }
 
 .rls-weight-medium {
-  font-weight: var(--rls-font-weight-medium);
+  font-weight: var(--rls-font-weight-medium) !important;
 }
 
 .rls-weight-semibold {
-  font-weight: var(--rls-font-weight-semibold);
+  font-weight: var(--rls-font-weight-semibold) !important;
 }
 
 .rls-weight-bold {
-  font-weight: var(--rls-font-weight-bold);
+  font-weight: var(--rls-font-weight-bold) !important;
 }
 
 .rls-truncate {
