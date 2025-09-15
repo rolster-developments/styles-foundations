@@ -1,13 +1,18 @@
 // Rolster Technology Styles
-// v2.1.0
+// v2.1.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 11/Ago/2022
-// Updated: 05/Jul/2024
+// Updated: 15/Sep/2025
 
 @use 'foundations';
 @use 'utilities';
 @use 'components';
+
+:root {
+  --rls-html-max-width: 100%;
+  --rls-html-max-height: 100%;
+}
 
 .rls-aspect-ratio {
   --rls-app-font-size-1360: 2.5px;
