@@ -1,9 +1,9 @@
 // Rolster Technology FieldBox Component
-// v2.2.1
+// v2.2.2
 // @license MIT
 // Author: Rolster Developers
 // Created: 08/Sep/2022
-// Updated: 14/May/2025
+// Updated: 18/Sep/2025
 
 .rls-field-box {
   --pvt-body-background: var(
@@ -55,6 +55,10 @@
   &--disabled {
     --pvt-body-opacity: 0.75;
     --pvt-label-opacity: 0.5;
+  }
+
+  &--readonly {
+    --rlc-input-font-color: var(--rls-app-color-600);
   }
 
   &__label {

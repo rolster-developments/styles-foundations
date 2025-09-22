@@ -1,14 +1,16 @@
 // Rolster Technology App Component
-// v2.3.3
+// v2.3.5
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 08/Jun/2025
+// Updated: 15/Sep/2025
 
 .rls-app {
   &__body {
+    --pvt-navbar-dimension: 0rem;
     --pvt-navbar-width: var(--rlc-app-navbar-width, 160rem);
     --pvt-navbar-width-condense: 36rem;
+    --pvt-nabvar-snackbar: var(--pvt-navbar-width);
 
     display: flex;
     flex-direction: column;
@@ -20,11 +22,12 @@
     z-index: var(--rls-z-index-8);
 
     &--navbar-snackbar {
-      --rlc-snackbar-left: calc(50% + calc(var(--pvt-navbar-width) / 2));
+      --rlc-snackbar-left: calc(50% + calc(var(--pvt-navbar-snackbar) / 2));
     }
 
     &--navbar-condense {
       --pvt-navbar-width: var(--pvt-navbar-width-condense);
+      --pvt-nabvar-snackbar: var(--pvt-navbar-width-condense);
     }
   }
 
@@ -106,15 +109,17 @@
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 640px) {
   .rls-app {
     &__body {
-      --pvt-navbar-width: 120rem;
-      --pvt-navbar-width-condense: 120rem;
+      --pvt-navbar-dimension: 140rem;
+      --pvt-navbar-width: var(--pvt-navbar-dimension);
+      --pvt-navbar-width-condense: var(--pvt-navbar-dimension);
       --pvt-section-navbar: 0rem;
+      --pvt-navbar-snackbar: 0rem;
 
       &--navbar-condense {
-        --pvt-section-navbar: 120rem;
+        --pvt-section-navbar: var(--pvt-navbar-dimension);
       }
     }
 
@@ -126,15 +131,10 @@
   }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 320px) {
   .rls-app {
     &__body {
-      --pvt-navbar-width: 140rem;
-      --pvt-navbar-width-condense: 140rem;
-
-      &--navbar-condense {
-        --pvt-section-navbar: 140rem;
-      }
+      --pvt-navbar-dimension: 120rem;
     }
   }
 }
