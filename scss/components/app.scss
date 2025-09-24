@@ -1,16 +1,16 @@
 // Rolster Technology App Component
-// v2.3.5
+// v2.3.6
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 15/Sep/2025
+// Updated: 24/Sep/2025
 
 .rls-app {
   &__body {
     --pvt-navbar-dimension: 0rem;
     --pvt-navbar-width: var(--rlc-app-navbar-width, 160rem);
     --pvt-navbar-width-condense: 36rem;
-    --pvt-nabvar-snackbar: var(--pvt-navbar-width);
+    --pvt-navbar-snackbar: var(--pvt-navbar-width);
 
     display: flex;
     flex-direction: column;
