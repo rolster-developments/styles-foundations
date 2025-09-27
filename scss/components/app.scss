@@ -131,10 +131,10 @@
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 480px) {
   .rls-app {
     &__body {
-      --pvt-navbar-dimension: 120rem;
+      --pvt-navbar-dimension: calc(100vw - 32rem);
     }
   }
 }
