@@ -83,19 +83,31 @@
 
   --rls-#{$theme}-gradient-700: linear-gradient(
     180deg,
-    var(--rls-#{$theme}-color-700) 0%,
-    var(--rls-#{$theme}-color-900) 100%
+    var(--rls-#{$theme}-color-700) 15%,
+    var(--rls-#{$theme}-color-800) 85%
+  );
+
+  --rls-#{$theme}-gradient-600: linear-gradient(
+    180deg,
+    var(--rls-#{$theme}-color-600) 15%,
+    var(--rls-#{$theme}-color-700) 85%
   );
 
   --rls-#{$theme}-gradient-500: linear-gradient(
     180deg,
-    var(--rls-#{$theme}-color-500) 0%,
-    var(--rls-#{$theme}-color-700) 100%
+    var(--rls-#{$theme}-color-500) 15%,
+    var(--rls-#{$theme}-color-600) 85%
+  );
+
+  --rls-#{$theme}-gradient-400: linear-gradient(
+    180deg,
+    var(--rls-#{$theme}-color-400) 15%,
+    var(--rls-#{$theme}-color-500) 85%
   );
 
   --rls-#{$theme}-gradient-300: linear-gradient(
     180deg,
-    var(--rls-#{$theme}-color-300) 0%,
-    var(--rls-#{$theme}-color-500) 100%
+    var(--rls-#{$theme}-color-300) 15%,
+    var(--rls-#{$theme}-color-400) 85%
   );
 }

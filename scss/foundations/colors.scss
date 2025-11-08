@@ -1,61 +1,61 @@
 // Rolster Technology Colors Foundations
-// v2.6.3
+// v2.6.5
 // @license MIT
 // Author: Rolster Developers
 // Created: 03/Mar/2022
-// Updated: 06/May/2025
+// Updated: 26/Oct/2025
 
 @use 'helpers' as helpers;
 
 body {
-  --rls-app-color-900: rgb(40, 50, 61);
+  --rls-app-color-900: var(--rls-project-color-900, #28323d);
 
-  --rls-app-color-800: rgb(52, 57, 87);
+  --rls-app-color-800: var(--rls-project-color-800, #343957);
 
-  --rls-app-color-700: rgb(72, 77, 107);
+  --rls-app-color-700: var(--rls-project-color-700, #484d6b);
 
-  --rls-app-color-600: rgb(98, 111, 155);
+  --rls-app-color-600: var(--rls-project-color-600, #626f9b);
 
-  --rls-app-color-500: rgb(128, 141, 190);
+  --rls-app-color-500: var(--rls-project-color-500, #808dbe);
 
-  --rls-app-color-400: rgb(189, 192, 220);
+  --rls-app-color-400: var(--rls-project-color-400, #bdc0dc);
 
-  --rls-app-color-300: rgb(214, 217, 240);
+  --rls-app-color-300: var(--rls-project-color-300, #d6d9f0);
 
-  --rls-app-color-200: rgb(229, 232, 245);
+  --rls-app-color-200: var(--rls-project-color-200, #e5e8f5);
 
-  --rls-app-color-100: rgb(244, 247, 255);
+  --rls-app-color-100: var(--rls-project-color-100, #f4f7ff);
 
-  --rls-app-color-050: rgb(255, 255, 255);
+  --rls-app-color-050: var(--rls-project-color-050, #ffffff);
 
   @include helpers.rolster-theme(
     'primary',
-    #0b2446,
-    #0e335d,
-    #0c4480,
-    #094f9b,
-    #0a63bf,
-    #1781e0,
-    #409df0,
-    #82bef7,
-    #bddbfa,
-    #e1edfd,
-    #ebf5ff
+    #0d275e,
+    #0c409c,
+    #064dd9,
+    #0058f8,
+    #0471ff,
+    #1b91ff,
+    #46b5ff,
+    #81d1ff,
+    #b4e2ff,
+    #d5edff,
+    #ecf8ff
   );
 
   @include helpers.rolster-theme(
     'secondary',
-    #0e2425,
-    #204140,
-    #224d4b,
-    #265f5c,
-    #2c7873,
-    #39938b,
-    #52afa5,
-    #7dcbc1,
-    #aee1d8,
-    #d7f0ec,
-    #f3faf8
+    #003426,
+    #005c42,
+    #00714e,
+    #008f60,
+    #00b373,
+    #00da8b,
+    #0cdd90,
+    #56ffbb,
+    #98ffd1,
+    #c9ffe5,
+    #e9fff5
   );
 
   @include helpers.rolster-theme(
@@ -149,6 +149,36 @@ body {
   );
 
   @include helpers.rolster-theme(
+    'ross',
+    #500119,
+    #8f0c37,
+    #a80939,
+    #c8083b,
+    #ed1146,
+    #ff4b6e,
+    #ff6982,
+    #ff9fad,
+    #ffcad2,
+    #ffe2e6,
+    #fff0f1
+  );
+
+  @include helpers.rolster-theme(
+    'hope',
+    #02312c,
+    #105146,
+    #0d6255,
+    #0a7b68,
+    #07a287,
+    #0cc09d,
+    #25dcb5,
+    #57f1cc,
+    #95fade,
+    #cafdee,
+    #effef9
+  );
+
+  @include helpers.rolster-theme(
     'mountains',
     #161d18,
     #2c352f,
@@ -179,18 +209,33 @@ body {
   );
 
   @include helpers.rolster-theme(
+    'purple',
+    #201f47,
+    #35347b,
+    #3c399a,
+    #4843bf,
+    #5552d9,
+    #6e74e6,
+    #8a96ef,
+    #acbbf5,
+    #cbd6fa,
+    #e2e9fd,
+    #eff4fe
+  );
+
+  @include helpers.rolster-theme(
     'amber',
-    #3f110b,
-    #752819,
-    #912d1b,
-    #b73717,
-    #dd4b1a,
-    #eb6424,
-    #ef8448,
-    #f4af7d,
-    #f9d0af,
-    #fcead8,
-    #fcead8
+    #40150a,
+    #772c17,
+    #943418,
+    #ba4014,
+    #e15616,
+    #ef6f20,
+    #f28e45,
+    #f7b77a,
+    #fad5ae,
+    #fdecd7,
+    #fef7ee
   );
 
   @include helpers.rolster-theme(
@@ -224,24 +269,24 @@ body {
   );
 
   &[app-theme='dark'] {
-    --rls-app-color-050: rgb(40, 50, 61);
+    --rls-app-color-050: var(--rls-project-color-050, #28323d);
 
-    --rls-app-color-100: rgb(52, 57, 87);
+    --rls-app-color-100: var(--rls-project-color-100, #343957);
 
-    --rls-app-color-200: rgb(72, 77, 107);
+    --rls-app-color-200: var(--rls-project-color-200, #484d6b);
 
-    --rls-app-color-300: rgb(98, 111, 155);
+    --rls-app-color-300: var(--rls-project-color-300, #626f9b);
 
-    --rls-app-color-400: rgb(128, 141, 190);
+    --rls-app-color-400: var(--rls-project-color-400, #808dbe);
 
-    --rls-app-color-500: rgb(189, 192, 220);
+    --rls-app-color-500: var(--rls-project-color-500, #bdc0dc);
 
-    --rls-app-color-600: rgb(214, 217, 240);
+    --rls-app-color-600: var(--rls-project-color-600, #d6d9f0);
 
-    --rls-app-color-700: rgb(229, 232, 245);
+    --rls-app-color-700: var(--rls-project-color-700, #e5e8f5);
 
-    --rls-app-color-800: rgb(244, 247, 255);
+    --rls-app-color-800: var(--rls-project-color-800, #f4f7ff);
 
-    --rls-app-color-900: rgb(255, 255, 255);
+    --rls-app-color-900: var(--rls-project-color-900, #ffffff);
   }
 }

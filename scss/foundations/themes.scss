@@ -1,9 +1,20 @@
 // Rolster Technology Themes Foundations
-// v2.4.2
+// v2.5.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 03/Mar/2022
-// Updated: 06/May/2025
+// Updated: 26/Oct/2025
+
+@mixin rolster-app-border($token) {
+  --rls-app-border-1-#{$token}: var(--rls-border-1) solid
+    var(--rls-app-color-#{$token});
+
+  --rls-app-border-2-#{$token}: var(--rls-border-2) solid
+    var(--rls-app-color-#{$token});
+
+  --rls-app-border-4-#{$token}: var(--rls-border-4) solid
+    var(--rls-app-color-#{$token});
+}
 
 @mixin rolster-border-color($theme, $token) {
   --rls-#{$theme}-border-1-#{$token}: var(--rls-border-1) solid
@@ -18,9 +29,13 @@
 
 @mixin rolster-border-token($theme) {
   @include rolster-border-color($theme, 100);
+  @include rolster-border-color($theme, 200);
   @include rolster-border-color($theme, 300);
+  @include rolster-border-color($theme, 400);
   @include rolster-border-color($theme, 500);
+  @include rolster-border-color($theme, 600);
   @include rolster-border-color($theme, 700);
+  @include rolster-border-color($theme, 800);
   @include rolster-border-color($theme, 900);
 }
 
@@ -78,35 +93,38 @@
 
   --rls-theme-backdrop-900: var(--rls-#{$theme}-backdrop-900);
 
+  --rls-theme-gradient-700: var(--rls-#{$theme}-gradient-700);
+
+  --rls-theme-gradient-600: var(--rls-#{$theme}-gradient-600);
+  
   --rls-theme-gradient-500: var(--rls-#{$theme}-gradient-500);
 
-  --rls-theme-gradient-700: var(--rls-#{$theme}-gradient-500);
+  --rls-theme-gradient-400: var(--rls-#{$theme}-gradient-400);
+  
+  --rls-theme-gradient-300: var(--rls-#{$theme}-gradient-300);
 
   @include rolster-border-theme($theme, 900);
+  @include rolster-border-theme($theme, 800);
   @include rolster-border-theme($theme, 700);
+  @include rolster-border-theme($theme, 600);
   @include rolster-border-theme($theme, 500);
+  @include rolster-border-theme($theme, 400);
   @include rolster-border-theme($theme, 300);
+  @include rolster-border-theme($theme, 200);
   @include rolster-border-theme($theme, 100);
 }
 
 body {
-  --rls-app-border-1-100: var(--rls-border-1) solid var(--rls-app-color-200);
-
-  --rls-app-border-2-100: var(--rls-border-2) solid var(--rls-app-color-200);
-
-  --rls-app-border-4-100: var(--rls-border-4) solid var(--rls-app-color-200);
-
-  --rls-app-border-1-300: var(--rls-border-1) solid var(--rls-app-color-400);
-
-  --rls-app-border-2-300: var(--rls-border-2) solid var(--rls-app-color-400);
-
-  --rls-app-border-4-300: var(--rls-border-4) solid var(--rls-app-color-400);
-
-  --rls-app-border-1-500: var(--rls-border-1) solid var(--rls-app-color-600);
-
-  --rls-app-border-2-500: var(--rls-border-2) solid var(--rls-app-color-600);
-
-  --rls-app-border-4-500: var(--rls-border-4) solid var(--rls-app-color-600);
+  @include rolster-app-border('050');
+  @include rolster-app-border('100');
+  @include rolster-app-border('200');
+  @include rolster-app-border('300');
+  @include rolster-app-border('400');
+  @include rolster-app-border('500');
+  @include rolster-app-border('600');
+  @include rolster-app-border('700');
+  @include rolster-app-border('800');
+  @include rolster-app-border('900');
 
   @include rolster-border-token('primary');
   @include rolster-border-token('secondary');
@@ -116,8 +134,11 @@ body {
   @include rolster-border-token('warning');
   @include rolster-border-token('danger');
   @include rolster-border-token('berry');
+  @include rolster-border-token('ross');
+  @include rolster-border-token('hope');
   @include rolster-border-token('mountains');
   @include rolster-border-token('amaizing');
+  @include rolster-border-token('purple');
   @include rolster-border-token('amber');
   @include rolster-border-token('smartness');
   @include rolster-border-token('obsidian');
@@ -153,12 +174,24 @@ body {
   @include rolster-theme('berry');
 }
 
+*[rls-theme='ross'] {
+  @include rolster-theme('ross');
+}
+
+*[rls-theme='hope'] {
+  @include rolster-theme('hope');
+}
+
 *[rls-theme='mountains'] {
   @include rolster-theme('mountains');
 }
 
 *[rls-theme='amaizing'] {
   @include rolster-theme('amaizing');
+}
+
+*[rls-theme='purple'] {
+  @include rolster-theme('purple');
 }
 
 *[rls-theme='amber'] {

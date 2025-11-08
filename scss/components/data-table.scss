@@ -1,27 +1,51 @@
 // Rolster Technology Datatable Component
-// v2.5.2
+// v2.6.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 24/Sep/2025
+// Updated: 08/Nov/2025
+
+@mixin datatable_cell() {
+  --rlc-field-box-body-background: transparent;
+  --rlc-field-box-body-background-focused: transparent;
+  --rlc-field-box-body-padding: 0rem;
+  --rlc-field-box-body-border: none;
+  --rlc-field-box-body-border-focused: none;
+  --rlc-field-box-body-border-error: none;
+  --rlc-field-box-body-border-disabled: none;
+  --rlc-field-box-body-shadow: none;
+  --rlc-field-box-body-shadow-error: none;
+  --rlc-field-box-action-background: transparent;
+
+  --rlc-field-list-control-font-size: var(--pvt-datatable-font-size);
+  --rlc-field-list-control-font-weight: var(--rls-font-weight-medium);
+  --rlc-field-list-control-letter-spacing: var(--rls-body-letter-spacing);
+  --rlc-field-list-element-padding: var(--rls-sizing-x4);
+  --rlc-field-list-suggestions-bottom: var(--rls-sizing-x24);
+  --rlc-field-list-suggestions-top: var(--rls-sizing-x24);
+
+  --rlc-poster-font-size: var(--pvt-datatable-font-size);
+  --rlc-poster-width: calc(100% - var(--rls-sizing-x2));
+  --rlc-poster-height: var(--rls-sizing-x8);
+  --rlc-poster-padding: var(--rls-sizing-x2);
+}
 
 @mixin datatable_cell_control() {
+  --rlc-action-ripple-dimension: var(--rls-sizing-x16);
+  --rlc-action-ripple-position: -8rem;
+
   --rlc-avatar-radius: var(--rls-sizing-x3);
   --rlc-avatar-width: var(--rls-sizing-x16);
   --rlc-avatar-height: var(--rls-sizing-x16);
   --rlc-avatar-font-size: var(--pvt-datatable-font-size);
 
-  --rlc-action-ripple-dimension: var(--rls-sizing-x16);
-  --rlc-action-ripple-position: -8rem;
-
   --rlc-image-width: var(--rls-sizing-x12);
   --rlc-image-height: var(--rls-sizing-x12);
 
-  --rlc-switch-max-width: 17rem;
-  --rlc-switch-component-padding: var(--rls-sizing-x3) var(--rls-sizing-x1);
-  --rlc-switch-element-size: var(--rls-sizing-x10);
-  --rlc-switch-bar-radius: var(--rls-sizing-x2);
-  --rlc-switch-bar-height: var(--rls-sizing-x4);
+  --rlc-switch-max-width: var(--rls-sizing-x16);
+  --rlc-switch-component-height: var(--rls-sizing-x8);
+  --rlc-switch-element-height: var(--rls-sizing-x4);
+  --rlc-switch-element-radius: var(--rls-sizing-x4);
 
   display: flex;
   justify-content: center;
@@ -44,21 +68,24 @@
 
   --pvt-datatable-header-background: var(
     --rlc-datatable-header-background,
-    var(--rls-theme-color-050)
+    var(--rls-app-color-100)
   );
 
   --pvt-datatable-record-background: var(
     --rlc-datatable-record-background,
-    var(--rls-app-color-100)
+    transparent
   );
 
   --pvt-datatable-padding-component: 0rem;
   --pvt-datatable-padding-scroll: var(--rlc-datatable-padding-scroll, 0rem);
   --pvt-datatable-header-padding-right: var(--pvt-datatable-padding-scroll);
+  --pvt-datatable-floating-background: var(--rls-app-color-100);
 
   --rlc-amount-font-size: var(--pvt-datatable-font-size);
   --rlc-amount-width: 100%;
+
   --rlc-badge-padding: 0.5rem 1.5rem;
+
   --rlc-ballot-padding: 0rem;
   --rlc-ballot-component-row-gap: var(--rls-sizing-x1);
   --rlc-ballot-title-letter-spacing: var(--rls-smalltext-letter-spacing);
@@ -67,16 +94,16 @@
   --rlc-ballot-subtitle-letter-spacing: var(--rls-overline-letter-spacing);
   --rlc-ballot-subtitle-font-size: var(--rls-overline-font-size);
   --rlc-ballot-subtitle-height: var(--rls-overline-line-height);
-  --rlc-fieldbox-body-background: transparent;
-  --rlc-fieldbox-padding: 0rem;
-  --rlc-fieldbox-width: 100%;
-  --rlc-fieldbox-error-display: none;
-  --rlc-fieldbox-label-display: none;
+
+  --rlc-field-box-body-background: transparent;
+  --rlc-field-box-padding: 0rem;
+  --rlc-field-box-width: 100%;
+  --rlc-field-box-error-display: none;
+  --rlc-field-box-label-display: none;
+
   --rlc-input-font-size: var(--pvt-datatable-font-size);
   --rlc-input-letter-spacing: var(--pvt-datatable-letter-spacing);
-  --rlc-poster-font-size: var(--pvt-datatable-font-size);
-  --rlc-poster-height: var(--rls-sizing-x8);
-  --rlc-poster-padding: var(--rls-sizing-x2);
+
   --rlc-skeleton-text-column-gap: var(--rls-sizing-x2);
 
   position: relative;
@@ -128,6 +155,7 @@
     padding: 0rem var(--rls-sizing-x6);
     box-sizing: border-box;
     background: var(--pvt-datatable-header-background);
+    border: var(--rls-app-border-1-300);
     border-radius: var(--rls-sizing-x4);
 
     .rls-poster {
@@ -144,7 +172,7 @@
     display: flex;
     height: var(--rls-sizing-x20);
     line-height: var(--rls-sizing-x20);
-    color: var(--rls-app-color-900);
+    color: var(--rls-app-color-700);
     font-weight: var(
       --rlc-datatable-header-font-weight,
       var(--rls-font-weight-semibold)
@@ -185,26 +213,39 @@
     column-gap: var(--rls-sizing-x6);
     padding: 0rem var(--rls-sizing-x6);
     box-sizing: border-box;
-    border-radius: var(--rls-sizing-x4);
     background: var(--pvt-datatable-record-background);
+    border: var(--rls-app-border-1-300);
+    border-radius: var(--rls-sizing-x4);
 
     &--success {
+      --pvt-datatable-floating-background: var(--rls-success-color-100);
+
       background: var(--rls-success-color-050);
+      border: var(--rls-success-border-1-300);
     }
 
     &--info {
+      --pvt-datatable-floating-background: var(--rls-info-color-100);
+
       background: var(--rls-info-color-050);
+      border: var(--rls-info-border-1-300);
     }
 
     &--warning {
+      --pvt-datatable-floating-background: var(--rls-warning-color-100);
+
       background: var(--rls-warning-color-050);
+      border: var(--rls-warning-border-1-300);
     }
 
     &--error {
+      --pvt-datatable-floating-background: var(--rls-danger-color-100);
+
       background: var(--rls-danger-color-050);
+      border: var(--rls-danger-border-1-300);
     }
 
-    &--overflow {
+    &--contained {
       overflow: hidden;
     }
   }
@@ -219,19 +260,7 @@
 
   &__cell,
   &__data {
-    --rlc-fieldbox-body-background: transparent;
-    --rlc-fieldbox-body-background-focused: transparent;
-    --rlc-fieldbox-body-padding: 0rem;
-    --rlc-fieldbox-body-shadow: none;
-    --rlc-fieldbox-body-shadow-error: none;
-    --rlc-fieldbox-action-background: transparent;
-
-    --rlc-fieldlist-control-font-size: var(--pvt-datatable-font-size);
-    --rlc-fieldlist-control-font-weight: var(--rls-font-weight-medium);
-    --rlc-fieldlist-control-letter-spacing: var(--rls-body-letter-spacing);
-    --rlc-fieldlist-element-padding: var(--rls-sizing-x4);
-    --rlc-fieldlist-suggestions-bottom: var(--rls-sizing-x24);
-    --rlc-fieldlist-suggestions-top: var(--rls-sizing-x24);
+    @include datatable_cell();
 
     position: relative;
     display: flex;
@@ -244,7 +273,7 @@
     font-size: var(--pvt-datatable-font-size);
     letter-spacing: var(--pvt-datatable-letter-spacing);
 
-    &--overflow {
+    &--contained {
       overflow: hidden;
     }
 
@@ -269,12 +298,11 @@
     }
 
     .rls-field-list {
-      --rlc-fieldbox-body-padding: var(--rls-sizing-x4) 0rem;
-      --rlc-fieldbox-action-dimension: var(--rls-sizing-x10);
+      --rlc-field-box-body-padding: var(--rls-sizing-x4) 0rem;
+      --rlc-field-box-action-dimension: var(--rls-sizing-x10);
     }
 
     .rls-poster {
-      width: calc(100% - var(--rls-sizing-x2));
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -304,7 +332,7 @@
     align-items: center;
     z-index: var(--rls-z-index-2);
     padding: 0rem var(--rls-sizing-x6);
-    background: var(--rls-theme-color-100);
+    background: var(--pvt-datatable-floating-background);
     border-right: none;
     transform: translateX(calc(100% - var(--rls-sizing-x4)));
     transition: transform 240ms var(--rls-standard-curve);
@@ -325,6 +353,10 @@
       transform: translateX(calc(-100% + var(--rls-sizing-x4)));
     }
 
+    &[rls-theme] {
+      background: var(--rls-theme-color-050);
+    }
+
     .rls-button-action__tooltip {
       top: 0;
       left: var(--pvt-action-tooltip-left);
@@ -335,14 +367,14 @@
   }
 
   &__summary {
-    --pvt-datatable-record-background: var(--rls-app-color-200);
+    --pvt-datatable-record-background: var(--rls-app-color-100);
 
     padding-right: var(--pvt-datatable-header-padding-right);
     box-sizing: border-box;
   }
 
   &__footer {
-    --pvt-datatable-record-background: var(--rls-app-color-200);
+    --pvt-datatable-record-background: var(--rls-app-color-100);
 
     position: relative;
     width: 100%;
