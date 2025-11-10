@@ -8,6 +8,7 @@
 @mixin datatable_cell() {
   --rlc-field-box-body-background: transparent;
   --rlc-field-box-body-background-focused: transparent;
+  --rlc-field-box-body-background-disabled: transparent;
   --rlc-field-box-body-padding: 0rem;
   --rlc-field-box-body-border: none;
   --rlc-field-box-body-border-focused: none;
@@ -155,7 +156,7 @@
     padding: 0rem var(--rls-sizing-x6);
     box-sizing: border-box;
     background: var(--pvt-datatable-header-background);
-    border: var(--rls-app-border-1-300);
+    border: var(--rls-app-border-1-200);
     border-radius: var(--rls-sizing-x4);
 
     .rls-poster {
@@ -214,35 +215,35 @@
     padding: 0rem var(--rls-sizing-x6);
     box-sizing: border-box;
     background: var(--pvt-datatable-record-background);
-    border: var(--rls-app-border-1-300);
+    border: var(--rls-app-border-1-200);
     border-radius: var(--rls-sizing-x4);
 
     &--success {
       --pvt-datatable-floating-background: var(--rls-success-color-100);
 
       background: var(--rls-success-color-050);
-      border: var(--rls-success-border-1-300);
+      border: var(--rls-success-border-1-200);
     }
 
     &--info {
       --pvt-datatable-floating-background: var(--rls-info-color-100);
 
       background: var(--rls-info-color-050);
-      border: var(--rls-info-border-1-300);
+      border: var(--rls-info-border-1-200);
     }
 
     &--warning {
       --pvt-datatable-floating-background: var(--rls-warning-color-100);
 
       background: var(--rls-warning-color-050);
-      border: var(--rls-warning-border-1-300);
+      border: var(--rls-warning-border-1-200);
     }
 
     &--error {
       --pvt-datatable-floating-background: var(--rls-danger-color-100);
 
       background: var(--rls-danger-color-050);
-      border: var(--rls-danger-border-1-300);
+      border: var(--rls-danger-border-1-200);
     }
 
     &--contained {

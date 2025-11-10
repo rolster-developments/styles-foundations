@@ -11,6 +11,11 @@
     var(--rls-app-color-050)
   );
 
+  --pvt-body-background-disabled: var(
+    --rlc-field-box-body-background-disabled,
+    var(--rls-app-color-100)
+  );
+
   --pvt-body-border: var(
     --rlc-field-box-body-border,
     var(--rls-app-border-1-300)
@@ -74,7 +79,7 @@
     --pvt-body-opacity: 0.75;
     --pvt-label-opacity: 0.5;
 
-    --pvt-body-background: var(--rls-app-color-100);
+    --pvt-body-background: var(--pvt-body-background-disabled);
     --pvt-body-border: var(--pvt-body-border-disabled);
   }
 
@@ -111,7 +116,7 @@
     overflow: hidden;
     background: var(--pvt-body-background);
     opacity: var(--pvt-body-opacity);
-    border-radius: var(--rlc-field-box-body-radius, var(--rls-sizing-x4));
+    border-radius: var(--rlc-field-box-body-radius, var(--rls-sizing-x2));
     padding: var(--rlc-field-box-body-padding, 0rem);
     box-sizing: border-box;
     border: var(--pvt-body-border);
