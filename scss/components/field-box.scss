@@ -1,9 +1,9 @@
 // Rolster Technology FieldBox Component
-// v2.3.0
+// v2.3.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 08/Sep/2022
-// Updated: 28/Oct/2025
+// Updated: 12/Nov/2025
 
 .rls-field-box {
   --pvt-body-background: var(
@@ -28,7 +28,7 @@
 
   --pvt-body-border-error: var(
     --rlc-field-box-body-border-error,
-    var(--rls-danger-border-1-300)
+    var(--rls-danger-border-1-500)
   );
 
   --pvt-body-border-disabled: var(
@@ -116,7 +116,7 @@
     overflow: hidden;
     background: var(--pvt-body-background);
     opacity: var(--pvt-body-opacity);
-    border-radius: var(--rlc-field-box-body-radius, var(--rls-sizing-x2));
+    border-radius: var(--rlc-field-box-body-radius, var(--rls-sizing-x3));
     padding: var(--rlc-field-box-body-padding, 0rem);
     box-sizing: border-box;
     border: var(--pvt-body-border);
