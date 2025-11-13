@@ -1,9 +1,9 @@
 // Rolster Technology FlexBoxs Foundations
-// v1.0.0
+// v1.0.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 08/Nov/2025
-// Updated: 08/Nov/2025
+// Updated: 13/Nov/2025
 
 @mixin flex_row($gap) {
   display: flex;
@@ -63,4 +63,28 @@
 
 .rls-flex-column-16 {
   @include flex_column(16rem);
+}
+
+.rls-flex-justify-content-start {
+  justify-content: flex-start;
+}
+
+.rls-flex-justify-content-center {
+  justify-content: center;
+}
+
+.rls-flex-justify-content-end {
+  justify-content: flex-end;
+}
+
+.rls-flex-aligns-items-start {
+  align-items: flex-start;
+}
+
+.rls-flex-aligns-items-center {
+  align-items: center;
+}
+
+.rls-flex-aligns-items-end {
+  align-items: flex-end;
 }

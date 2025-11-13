@@ -1,9 +1,9 @@
 // Rolster Technology Layout Utilities
-// v2.0.1
+// v2.1.2
 // @license MIT
 // Author: Rolster Developers
 // Created: 11/Abr/2023
-// Updated: 27/Ene/2024
+// Updated: 13/Nov/2025
 
 @mixin grid-responsive($size) {
   .#{$size}-grid-8 {
@@ -136,6 +136,8 @@
 
   .#{$size}-flex-grid-col-4 {
     & > * {
+      display: flex;
+      align-items: flex-start;
       width: calc(25% - var(--flex-grid-4-gap));
 
       &.#{$size}-flex-col-1 {
@@ -161,6 +163,8 @@
 
   .#{$size}-flex-grid-col-6 {
     & > * {
+      display: flex;
+      align-items: flex-start;
       width: calc(16.66% - var(--flex-grid-6-gap));
 
       &.#{$size}-flex-col-1 {
@@ -189,6 +193,8 @@
 
   .#{$size}-flex-grid-col-8 {
     & > * {
+      display: flex;
+      align-items: flex-start;
       width: calc(12.5% - var(--flex-grid-8-gap));
 
       &.#{$size}-flex-col-1 {
@@ -220,6 +226,8 @@
 
   .#{$size}-flex-grid-col-12 {
     & > * {
+      display: flex;
+      align-items: flex-start;
       width: calc(8.33% - var(--flex-grid-12-gap));
 
       &.#{$size}-flex-col-1 {
