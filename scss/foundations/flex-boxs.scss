@@ -66,25 +66,31 @@
 }
 
 .rls-flex-justify-content-start {
+  display: flex;
   justify-content: flex-start;
 }
 
 .rls-flex-justify-content-center {
+  display: flex;
   justify-content: center;
 }
 
 .rls-flex-justify-content-end {
+  display: flex;
   justify-content: flex-end;
 }
 
 .rls-flex-aligns-items-start {
+  display: flex;
   align-items: flex-start;
 }
 
 .rls-flex-aligns-items-center {
+  display: flex;
   align-items: center;
 }
 
 .rls-flex-aligns-items-end {
+  display: flex;
   align-items: flex-end;
 }

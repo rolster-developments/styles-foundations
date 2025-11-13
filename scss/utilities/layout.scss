@@ -136,8 +136,6 @@
 
   .#{$size}-flex-grid-col-4 {
     & > * {
-      display: flex;
-      align-items: flex-start;
       width: calc(25% - var(--flex-grid-4-gap));
 
       &.#{$size}-flex-col-1 {
@@ -163,8 +161,6 @@
 
   .#{$size}-flex-grid-col-6 {
     & > * {
-      display: flex;
-      align-items: flex-start;
       width: calc(16.66% - var(--flex-grid-6-gap));
 
       &.#{$size}-flex-col-1 {
@@ -193,8 +189,6 @@
 
   .#{$size}-flex-grid-col-8 {
     & > * {
-      display: flex;
-      align-items: flex-start;
       width: calc(12.5% - var(--flex-grid-8-gap));
 
       &.#{$size}-flex-col-1 {
@@ -226,8 +220,6 @@
 
   .#{$size}-flex-grid-col-12 {
     & > * {
-      display: flex;
-      align-items: flex-start;
       width: calc(8.33% - var(--flex-grid-12-gap));
 
       &.#{$size}-flex-col-1 {
