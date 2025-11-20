@@ -6,10 +6,7 @@
 // Updated: 12/Nov/2025
 
 .rls-field-box {
-  --pvt-body-background: var(
-    --rlc-field-box-body-background,
-    var(--rls-app-color-050)
-  );
+  --pvt-body-background: var(--rlc-field-box-body-background, transparent);
 
   --pvt-body-background-disabled: var(
     --rlc-field-box-body-background-disabled,
