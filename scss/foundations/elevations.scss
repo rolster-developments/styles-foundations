@@ -1,11 +1,13 @@
 // Rolster Technology Elevations Foundations
-// v2.1.1
+// v2.1.2
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 06/May/2025
+// Updated: 24/Nov/2025
 
 body {
+  --rls-app-shadow-color: rgba(173, 186, 230, 0.6);
+
   --rls-z-index-2: 2;
 
   --rls-z-index-4: 4;
@@ -35,68 +37,80 @@ body {
 
   --rls-app-shadow-6: 0px 8px 24px -4px rgba(173, 186, 230, 0.12);
 
-  --rls-app-shadow-bottom-2: 0px 2px 2px rgba(173, 186, 230, 0.4);
+  --rls-app-shadow-bottom-2: 0px 2px 2px var(--rls-app-shadow-color);
 
-  --rls-app-shadow-bottom-4: 0px 4px 4px rgba(173, 186, 230, 0.4);
+  --rls-app-shadow-bottom-4: 0px 4px 4px var(--rls-app-shadow-color);
 
-  --rls-app-shadow-bottom-8: 0px 8px 8px rgba(173, 186, 230, 0.4);
+  --rls-app-shadow-bottom-6: 0px 6px 6px var(--rls-app-shadow-color);
 
-  --rls-app-shadow-bottom-16: 0px 16px 16px rgba(173, 186, 230, 0.4);
+  --rls-app-shadow-bottom-8: 0px 8px 8px var(--rls-app-shadow-color);
 
-  --rls-app-shadow-bottom-24: 0px 24px 24px rgba(173, 186, 230, 0.4);
+  --rls-app-shadow-bottom-16: 0px 16px 16px var(--rls-app-shadow-color);
 
-  --rls-app-shadow-bottom-32: 0px 32px 32px rgba(173, 186, 230, 0.4);
+  --rls-app-shadow-bottom-24: 0px 24px 24px var(--rls-app-shadow-color);
 
-  --rls-app-shadow-top-2: 0px -2px 2px rgba(173, 186, 230, 0.4);
+  --rls-app-shadow-bottom-32: 0px 32px 32px var(--rls-app-shadow-color);
 
-  --rls-app-shadow-top-4: 0px -4px 4px rgba(173, 186, 230, 0.4);
+  --rls-app-shadow-top-2: 0px -2px 2px var(--rls-app-shadow-color);
 
-  --rls-app-shadow-top-8: 0px -8px 8px rgba(173, 186, 230, 0.4);
+  --rls-app-shadow-top-4: 0px -4px 4px var(--rls-app-shadow-color);
 
-  --rls-app-shadow-top-16: 0px -16px 16px rgba(173, 186, 230, 0.4);
+  --rls-app-shadow-top-6: 0px -6px 6px var(--rls-app-shadow-color);
 
-  --rls-app-shadow-top-24: 0px -24px 24px rgba(173, 186, 230, 0.4);
+  --rls-app-shadow-top-8: 0px -8px 8px var(--rls-app-shadow-color);
 
-  --rls-app-shadow-top-32: 0px -32px 32px rgba(173, 186, 230, 0.4);
+  --rls-app-shadow-top-16: 0px -16px 16px var(--rls-app-shadow-color);
 
-  --rls-app-shadow-right-2: 2px 0px 2px rgba(173, 186, 230, 0.4);
+  --rls-app-shadow-top-24: 0px -24px 24px var(--rls-app-shadow-color);
 
-  --rls-app-shadow-right-4: 4px 0px 4px rgba(173, 186, 230, 0.4);
+  --rls-app-shadow-top-32: 0px -32px 32px var(--rls-app-shadow-color);
 
-  --rls-app-shadow-right-8: 8px 0px 8px rgba(173, 186, 230, 0.4);
+  --rls-app-shadow-right-2: 2px 0px 2px var(--rls-app-shadow-color);
 
-  --rls-app-shadow-right-16: 16px 0px 16px rgba(173, 186, 230, 0.4);
+  --rls-app-shadow-right-4: 4px 0px 4px var(--rls-app-shadow-color);
 
-  --rls-app-shadow-right-24: 24px 0px 24px rgba(173, 186, 230, 0.4);
+  --rls-app-shadow-right-6: 6px 0px 6px var(--rls-app-shadow-color);
 
-  --rls-app-shadow-right-32: 32px 0px 32px rgba(173, 186, 230, 0.4);
+  --rls-app-shadow-right-8: 8px 0px 8px var(--rls-app-shadow-color);
 
-  --rls-app-shadow-left-2: -2px 0px 2px rgba(173, 186, 230, 0.4);
+  --rls-app-shadow-right-16: 16px 0px 16px var(--rls-app-shadow-color);
 
-  --rls-app-shadow-left-4: -4px 0px 4px rgba(173, 186, 230, 0.4);
+  --rls-app-shadow-right-24: 24px 0px 24px var(--rls-app-shadow-color);
 
-  --rls-app-shadow-left-8: -8px 0px 8px rgba(173, 186, 230, 0.4);
+  --rls-app-shadow-right-32: 32px 0px 32px var(--rls-app-shadow-color);
 
-  --rls-app-shadow-left-16: -16px 0px 16px rgba(173, 186, 230, 0.4);
+  --rls-app-shadow-left-2: -2px 0px 2px var(--rls-app-shadow-color);
 
-  --rls-app-shadow-left-24: -24px 0px 24px rgba(173, 186, 230, 0.4);
+  --rls-app-shadow-left-4: -4px 0px 4px var(--rls-app-shadow-color);
 
-  --rls-app-shadow-left-32: -32px 0px 32px rgba(173, 186, 230, 0.4);
+  --rls-app-shadow-left-6: -6px 0px 6px var(--rls-app-shadow-color);
 
-  --rls-app-shadow-center-2: 0px 0px 2px 0px rgba(173, 186, 230, 0.4);
+  --rls-app-shadow-left-8: -8px 0px 8px var(--rls-app-shadow-color);
 
-  --rls-app-shadow-center-4: 0px 0px 4px 0px rgba(173, 186, 230, 0.4);
+  --rls-app-shadow-left-16: -16px 0px 16px var(--rls-app-shadow-color);
 
-  --rls-app-shadow-center-8: 0px 0px 8px 0px rgba(173, 186, 230, 0.4);
+  --rls-app-shadow-left-24: -24px 0px 24px var(--rls-app-shadow-color);
 
-  --rls-app-shadow-center-16: 0px 0px 16px 0px rgba(173, 186, 230, 0.4);
+  --rls-app-shadow-left-32: -32px 0px 32px var(--rls-app-shadow-color);
 
-  --rls-app-shadow-center-24: 0px 0px 24px 0px rgba(173, 186, 230, 0.4);
+  --rls-app-shadow-center-2: 0px 0px 2px 0px var(--rls-app-shadow-color);
 
-  --rls-app-shadow-center-32: 0px 0px 32px 0px rgba(173, 186, 230, 0.4);
+  --rls-app-shadow-center-4: 0px 0px 4px 0px var(--rls-app-shadow-color);
+
+  --rls-app-shadow-center-6: 0px 0px 6px 0px var(--rls-app-shadow-color);
+
+  --rls-app-shadow-center-8: 0px 0px 8px 0px var(--rls-app-shadow-color);
+
+  --rls-app-shadow-center-16: 0px 0px 16px 0px var(--rls-app-shadow-color);
+
+  --rls-app-shadow-center-24: 0px 0px 24px 0px var(--rls-app-shadow-color);
+
+  --rls-app-shadow-center-32: 0px 0px 32px 0px var(--rls-app-shadow-color);
 }
 
 *[app-theme='dark'] {
+  --rls-app-shadow-color: rgb(98, 111, 155, 0.6);
+
   --rls-app-shadow-1: 0px 4px 2px -2px rgba(50, 44, 47, 0.02);
 
   --rls-app-shadow-2: 0px 4px 8px -2px rgba(50, 44, 47, 0.04);
@@ -109,64 +123,4 @@ body {
   --rls-app-shadow-5: 0px 8px 24px -4px rgba(50, 44, 47, 0.08);
 
   --rls-app-shadow-6: 0px 8px 24px -4px rgba(50, 44, 47, 0.12);
-
-  --rls-app-shadow-bottom-2: 0px 2px 2px rgba(50, 44, 47, 0.4);
-
-  --rls-app-shadow-bottom-4: 0px 4px 4px rgba(50, 44, 47, 0.4);
-
-  --rls-app-shadow-bottom-8: 0px 8px 8px rgba(50, 44, 47, 0.4);
-
-  --rls-app-shadow-bottom-16: 0px 16px 16px rgba(50, 44, 47, 0.4);
-
-  --rls-app-shadow-bottom-24: 0px 24px 24px rgba(50, 44, 47, 0.4);
-
-  --rls-app-shadow-bottom-32: 0px 32px 32px rgba(50, 44, 47, 0.4);
-
-  --rls-app-shadow-top-2: 0px -2px 2px rgba(50, 44, 47, 0.4);
-
-  --rls-app-shadow-top-4: 0px -4px 4px rgba(50, 44, 47, 0.4);
-
-  --rls-app-shadow-top-8: 0px -8px 8px rgba(50, 44, 47, 0.4);
-
-  --rls-app-shadow-top-16: 0px -16px 16px rgba(50, 44, 47, 0.4);
-
-  --rls-app-shadow-top-24: 0px -24px 24px rgba(50, 44, 47, 0.4);
-
-  --rls-app-shadow-top-32: 0px -32px 32px rgba(50, 44, 47, 0.4);
-
-  --rls-app-shadow-right-2: 2px 0px 2px rgba(50, 44, 47, 0.4);
-
-  --rls-app-shadow-right-4: 4px 0px 4px rgba(50, 44, 47, 0.4);
-
-  --rls-app-shadow-right-8: 8px 0px 8px rgba(50, 44, 47, 0.4);
-
-  --rls-app-shadow-right-16: 16px 0px 16px rgba(50, 44, 47, 0.4);
-
-  --rls-app-shadow-right-24: 24px 0px 24px rgba(50, 44, 47, 0.4);
-
-  --rls-app-shadow-right-32: 32px 0px 32px rgba(50, 44, 47, 0.4);
-
-  --rls-app-shadow-left-2: -2px 0px 2px rgba(50, 44, 47, 0.4);
-
-  --rls-app-shadow-left-4: -4px 0px 4px rgba(50, 44, 47, 0.4);
-
-  --rls-app-shadow-left-8: -8px 0px 8px rgba(50, 44, 47, 0.4);
-
-  --rls-app-shadow-left-16: -16px 0px 16px rgba(50, 44, 47, 0.4);
-
-  --rls-app-shadow-left-24: -24px 0px 24px rgba(50, 44, 47, 0.4);
-
-  --rls-app-shadow-left-32: -32px 0px 32px rgba(50, 44, 47, 0.4);
-
-  --rls-app-shadow-center-2: 0px 0px 2px 0px rgba(50, 44, 47, 0.4);
-
-  --rls-app-shadow-center-4: 0px 0px 4px 0px rgba(50, 44, 47, 0.4);
-
-  --rls-app-shadow-center-8: 0px 0px 8px 0px rgba(50, 44, 47, 0.4);
-
-  --rls-app-shadow-center-16: 0px 0px 16px 0px rgba(50, 44, 47, 0.4);
-
-  --rls-app-shadow-center-24: 0px 0px 24px 0px rgba(50, 44, 47, 0.4);
-
-  --rls-app-shadow-center-32: 0px 0px 32px 0px rgba(50, 44, 47, 0.4);
 }
