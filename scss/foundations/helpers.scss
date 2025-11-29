@@ -1,9 +1,9 @@
 // Rolster Technology Helpers Foundations
-// v1.0.1
+// v1.0.2
 // @license MIT
 // Author: Rolster Developers
 // Created: 18/Abr/2025
-// Updated: 19/Abr/2025
+// Updated: 29/Nov/2025
 
 @use 'sass:color' as *;
 
@@ -42,7 +42,9 @@
 
   --rls-#{$theme}-color-500: #{$color};
 
-  --rls-#{$theme}-shadow-500: rgba(#{$r}, #{$g}, #{$b}, 0.24);
+  --rls-#{$theme}-shadow-color-500: rgba(#{$r}, #{$g}, #{$b}, 0.24);
+
+  --rls-#{$theme}-shadow-500: 0px 0px 0px 3px var(--rls-#{$theme}-shadow-color-500);
 }
 
 @mixin rolster-theme(

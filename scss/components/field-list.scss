@@ -1,9 +1,9 @@
 // Rolster Technology FieldList Component
-// v1.5.0
+// v1.5.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 08/Nov/2025
+// Updated: 29/Nov/2025
 
 .rls-field-list {
   --pvt-action-font-color: var(--rls-app-color-600);
@@ -151,7 +151,7 @@
       z-index: var(--rls-z-index-2);
       border: var(--pvt-list-body-border);
       background: var(--rls-app-color-050);
-      box-shadow: 0px 0px 0px 3px var(--rls-theme-shadow-500);
+      box-shadow: var(--rls-theme-shadow-500);
       transform: var(--pvt-list-transform);
 
       &::before {
