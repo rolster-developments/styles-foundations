@@ -1,9 +1,9 @@
 // Rolster Technology Typographics Utilities
-// v2.1.2
+// v2.1.4
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 18/Sep/2025
+// Updated: 03/Dic/2025
 
 @mixin typographic($name, $key) {
   .rls-#{$name}-default {
@@ -38,68 +38,76 @@
   --rls-app-font-size: 2px;
 
   --rls-heading1-font-size: 16rem;
-  --rls-heading1-letter-spacing: 0.0234375em;
-  --rls-heading1-line-height: 18.25rem;
+  --rls-heading1-letter-spacing: 0.0135rem;
+  --rls-heading1-line-height: 17.5rem;
 
-  --rls-heading2-font-size: 14.45rem;
-  --rls-heading2-letter-spacing: 0.0234375em;
-  --rls-heading2-line-height: 15.75rem;
+  --rls-heading2-font-size: 14.75rem;
+  --rls-heading2-letter-spacing: 0.0135rem;
+  --rls-heading2-line-height: 16rem;
 
-  --rls-heading3-font-size: 13.45rem;
-  --rls-heading3-letter-spacing: 0.0234375em;
-  --rls-heading3-line-height: 14.75rem;
+  --rls-heading3-font-size: 13.525rem;
+  --rls-heading3-letter-spacing: 0.0135rem;
+  --rls-heading3-line-height: 15rem;
 
-  --rls-heading4-font-size: 12rem;
-  --rls-heading4-letter-spacing: 0.0234375em;
-  --rls-heading4-line-height: 13.25rem;
+  --rls-heading4-font-size: 12.125rem;
+  --rls-heading4-letter-spacing: 0.0135rem;
+  --rls-heading4-line-height: 13.5rem;
 
   --rls-heading5-font-size: 11rem;
-  --rls-heading5-letter-spacing: 0.0234375em;
-  --rls-heading5-line-height: 12.75rem;
+  --rls-heading5-letter-spacing: 0.0135rem;
+  --rls-heading5-line-height: 12.125rem;
 
   --rls-heading6-font-size: 10rem;
-  --rls-heading6-letter-spacing: 0.0234375em;
-  --rls-heading6-line-height: 11.25rem;
+  --rls-heading6-letter-spacing: 0.0135rem;
+  --rls-heading6-line-height: 11rem;
 
-  --rls-title-font-size: 9rem;
-  --rls-title-letter-spacing: 0.0546875em;
-  --rls-title-line-height: 10rem;
+  --rls-title-font-size: 9.25rem;
+  --rls-title-letter-spacing: 0.0375rem;
+  --rls-title-line-height: 10.25rem;
 
   --rls-subtitle-font-size: 8.75rem;
-  --rls-subtitle-letter-spacing: 0.0546875em;
-  --rls-subtitle-line-height: 8.95rem;
+  --rls-subtitle-letter-spacing: 0.0375rem;
+  --rls-subtitle-line-height: 9.75rem;
 
   --rls-body-font-size: 8rem;
-  --rls-body-letter-spacing: 0.03125em;
+  --rls-body-letter-spacing: 0.0125rem;
   --rls-body-line-height: 9rem;
 
-  --rls-paragraph-font-size: 7.25rem;
+  --rls-input-font-size: 7.65rem;
+  --rls-input-letter-spacing: 0.0125rem;
+  --rls-input-line-height: 8.125rem;
+
+  --rls-paragraph-font-size: 7.325rem;
   --rls-paragraph-letter-spacing: 0.02625em;
   --rls-paragraph-line-height: 8rem;
 
-  --rls-input-font-size: 7.65rem;
-  --rls-input-letter-spacing: 0.03125em;
-  --rls-input-line-height: 9rem;
+  --rls-button-font-size: 7rem;
+  --rls-button-letter-spacing: 0.0125rem;
+  --rls-button-line-height: 7.875rem;
 
   --rls-label-font-size: 7rem;
-  --rls-label-letter-spacing: 0.03125em;
-  --rls-label-line-height: 8.25rem;
+  --rls-label-letter-spacing: 0.0125rem;
+  --rls-label-line-height: 7.875rem;
 
-  --rls-button-font-size: 7.125rem;
-  --rls-button-letter-spacing: 0.05725em;
-  --rls-button-line-height: 8.5rem;
+  --rls-span-font-size: 6.425rem;
+  --rls-span-letter-spacing: 0.0175rem;
+  --rls-span-line-height: 7.5rem;
 
-  --rls-smalltext-font-size: 6rem;
-  --rls-smalltext-letter-spacing: 0.03125em;
-  --rls-smalltext-line-height: 8.5rem;
+  --rls-smalltext-font-size: 6.125rem;
+  --rls-smalltext-letter-spacing: 0.0125rem;
+  --rls-smalltext-line-height: 7.125rem;
 
-  --rls-caption-font-size: 5.75rem;
-  --rls-caption-letter-spacing: 0.046875em;
-  --rls-caption-line-height: 7.25rem;
+  --rls-caption-font-size: 5.575rem;
+  --rls-caption-letter-spacing: 0.0275rem;
+  --rls-caption-line-height: 6.25rem;
 
-  --rls-overline-font-size: 5.35rem;
-  --rls-overline-letter-spacing: 0.0625em;
-  --rls-overline-line-height: 7.25rem;
+  --rls-overline-font-size: 5.125rem;
+  --rls-overline-letter-spacing: 0.0425rem;
+  --rls-overline-line-height: 5.825rem;
+
+  --rls-tiny-font-size: 4.325rem;
+  --rls-tiny-letter-spacing: 0.0425rem;
+  --rls-tiny-line-height: 5rem;
 }
 
 h1 {
@@ -167,8 +175,8 @@ button {
 @include typographic('title', 'title');
 @include typographic('subtitle', 'subtitle');
 @include typographic('body', 'body');
-@include typographic('paragraph', 'paragraph');
 @include typographic('input', 'input');
+@include typographic('paragraph', 'paragraph');
 @include typographic('label', 'label');
 @include typographic('button', 'button');
 @include typographic('smalltext', 'smalltext');
