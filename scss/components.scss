@@ -1,9 +1,9 @@
 // Rolster Technology Components
-// v2.3.1
+// v2.3.2
 // @license MIT
 // Author: Rolster Developers
 // Created: 13/Abr/2023
-// Updated: 26/May/2025
+// Updated: 16/Dic/2025
 
 @use 'sass:meta';
 
@@ -13,7 +13,6 @@
 }
 
 @include meta.load-css('components/app');
-@include meta.load-css('components/data-table');
 @include meta.load-css('components/field-box');
 @include meta.load-css('components/field-list');
 @include meta.load-css('components/form');
