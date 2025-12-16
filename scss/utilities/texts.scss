@@ -1,9 +1,9 @@
 // Rolster Technology Text Utilities
-// v2.1.1
+// v2.1.2
 // @license MIT
 // Author: Rolster Developers
 // Created: 08/Sep/2022
-// Updated: 01/Jul/2025
+// Updated: 16/Dic/2025
 
 .rls-align-center {
   --rlc-amount-text-align: center;
@@ -54,8 +54,6 @@
 }
 
 .rls-truncate {
-  display: block;
-  width: 100%;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
