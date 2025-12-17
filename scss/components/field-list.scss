@@ -1,9 +1,9 @@
 // Rolster Technology FieldList Component
-// v1.5.1
+// v1.5.2
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 29/Nov/2025
+// Updated: 17/Dic/2025
 
 .rls-field-list {
   --pvt-action-font-color: var(--rls-app-color-600);
@@ -29,6 +29,8 @@
   --pvt-list-body-max-height: 160rem;
   --pvt-list-body-border: var(--rls-theme-border-1-500);
   --pvt-list-component-padding: 0rem var(--rls-sizing-x4);
+  --pvt-element-opacity: 1;
+  --pvt-element-pointer-events: initial;
   --pvt-backdrop-opacity: 0;
   --pvt-backdrop-bottom: initial;
 
@@ -137,6 +139,11 @@
       );
     }
 
+    &--disabled {
+      --pvt-element-opacity: 0.5;
+      --pvt-element-pointer-events: none;
+    }
+
     &__body {
       display: flex;
       flex-direction: column;
@@ -186,6 +193,8 @@
     border-radius: var(--rls-sizing-x4);
     padding: var(--rlc-field-list-element-padding, var(--rls-sizing-x2));
     box-sizing: border-box;
+    opacity: var(--pvt-element-opacity);
+    pointer-events: var(--pvt-element-pointer-events);
 
     &:hover {
       background: var(--rls-app-color-100);
