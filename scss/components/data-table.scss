@@ -1,9 +1,9 @@
 // Rolster Technology Datatable Component
-// v2.6.6
+// v2.6.7
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 16/Dic/2025
+// Updated: 22/Dic/2025
 
 @mixin datatable_cell_vars() {
   --rlc-field-box-body-background: transparent;
@@ -126,15 +126,38 @@
   --pvt-datatable-table-overflow: initial;
   --pvt-datatable-body-overflow: initial;
 
+  --pvt-datatable-border-radius: var(
+    --rlc-datatable-border-radius,
+    var(--rls-sizing-x4)
+  );
+
   --pvt-datatable-header-padding-right: var(--pvt-datatable-padding-scroll);
   --pvt-datatable-header-background: var(
     --rlc-datatable-header-background,
     var(--rls-app-color-100)
   );
+  --pvt-datatable-header-border: var(
+    --rlc-datatable-header-border,
+    var(--rls-app-border-1-200)
+  );
 
-  --pvt-datatable-record-background: var(
-    --rlc-datatable-record-background,
+  --pvt-datatable-row-background: var(
+    --rlc-datatable-row-background,
     transparent
+  );
+  --pvt-datatable-row-border: var(
+    --rlc-datatable-row-border,
+    var(--rls-app-border-1-200)
+  );
+
+  --pvt-datatable-summary-background: var(
+    --rlc-datatable-summary-background,
+    var(--rls-app-color-100)
+  );
+
+  --pvt-datatable-footer-background: var(
+    --rlc-datatable-footer-background,
+    var(--rls-app-color-100)
   );
 
   --pvt-datatable-floating-background: var(--rls-app-color-100);
@@ -199,7 +222,8 @@
     padding: var(--pvt-datatable-padding-component);
     box-sizing: border-box;
     background: var(--pvt-datatable-header-background);
-    border-radius: var(--rls-sizing-x4);
+    border: var(--pvt-datatable-header-border);
+    border-radius: var(--pvt-datatable-border-radius);
   }
 
   &__table {
@@ -230,8 +254,8 @@
     padding: 0rem var(--rls-sizing-x6);
     box-sizing: border-box;
     background: var(--pvt-datatable-header-background);
-    border: var(--rls-app-border-1-200);
-    border-radius: var(--rls-sizing-x4);
+    border: var(--pvt-datatable-header-border);
+    border-radius: var(--pvt-datatable-border-radius);
 
     .rls-poster {
       width: calc(100% - var(--rls-sizing-x2));
@@ -288,9 +312,9 @@
     column-gap: var(--rls-sizing-x6);
     padding: 0rem var(--rls-sizing-x6);
     box-sizing: border-box;
-    background: var(--pvt-datatable-record-background);
-    border: var(--rls-app-border-1-200);
-    border-radius: var(--rls-sizing-x4);
+    background: var(--pvt-datatable-row-background);
+    border: var(--pvt-datatable-row-border);
+    border-radius: var(--pvt-datatable-border-radius);
 
     &--success {
       --pvt-datatable-floating-background: var(--rls-success-color-100);
@@ -402,7 +426,7 @@
   }
 
   &__summary {
-    --pvt-datatable-record-background: var(--rls-app-color-100);
+    --pvt-datatable-row-background: var(--pvt-datatable-summary-background);
 
     flex: 0 0 auto;
     padding-right: var(--pvt-datatable-header-padding-right);
@@ -410,13 +434,13 @@
   }
 
   &__footer {
-    --pvt-datatable-record-background: var(--rls-app-color-100);
+    --pvt-datatable-row-background: var(--pvt-datatable-footer-background);
 
     position: relative;
     flex: 0 0 auto;
     width: 100%;
+    overflow: hidden;
     padding: var(--pvt-datatable-padding-component);
     box-sizing: border-box;
-    overflow: hidden;
   }
 }
