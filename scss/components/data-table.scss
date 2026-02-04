@@ -1,9 +1,9 @@
 // Rolster Technology Datatable Component
-// v2.6.7
+// v2.6.8
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 22/Dic/2025
+// Updated: 04/Feb/2026
 
 @mixin datatable_cell_vars() {
   --rlc-field-box-body-background: transparent;
@@ -267,6 +267,8 @@
   }
 
   &__title {
+    @include datatable_cell_vars();
+
     position: relative;
     display: flex;
     height: var(--rls-sizing-x20);
@@ -279,19 +281,9 @@
     font-size: var(--pvt-datatable-font-size);
     letter-spacing: var(--pvt-datatable-letter-spacing);
     text-align: left;
-    overflow: hidden;
     white-space: nowrap;
 
-    &--control {
-      @include datatable_cell_control();
-    }
-
-    & > span {
-      display: block;
-      width: 100%;
-      text-overflow: ellipsis;
-      overflow: hidden;
-    }
+    @include datatable_cell_styles();
   }
 
   &__body {
@@ -315,6 +307,10 @@
     background: var(--pvt-datatable-row-background);
     border: var(--pvt-datatable-row-border);
     border-radius: var(--pvt-datatable-border-radius);
+
+    &--contained {
+      overflow: hidden;
+    }
 
     &--success {
       --pvt-datatable-floating-background: var(--rls-success-color-100);
@@ -343,18 +339,16 @@
       background: var(--rls-danger-color-050);
       border: var(--rls-danger-border-1-200);
     }
-
-    &--contained {
-      overflow: hidden;
-    }
   }
 
   &__subheader {
+    --pvt-data-font-color: var(--rls-app-color-700);
+    --pvt-data-font-weight: var(--rls-font-weight-semibold);
+
     position: sticky;
     top: 0px;
     z-index: var(--rls-z-index-4);
-    background: rgba(241, 238, 247, 0.8);
-    backdrop-filter: blur(2px);
+    background: var(--pvt-datatable-header-background);
   }
 
   &__cell,
@@ -367,12 +361,20 @@
     cursor: default;
     text-align: left;
     min-height: var(--rls-sizing-x20);
-    font-weight: var(--rls-font-weight-regular);
-    color: var(--pvt-datatable-font-color);
     font-size: var(--pvt-datatable-font-size);
     letter-spacing: var(--pvt-datatable-letter-spacing);
 
     @include datatable_cell_styles();
+  }
+
+  &__cell {
+    color: var(--pvt-datatable-font-color);
+    font-weight: var(--rls-font-weight-regular);
+  }
+
+  &__data {
+    color: var(--pvt-data-font-color, var(--pvt-datatable-font-color));
+    font-weight: var(--pvt-data-font-weight, var(--rls-font-weight-regular));
   }
 
   &__floating {
