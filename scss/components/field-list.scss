@@ -175,8 +175,9 @@
 
   &__ul {
     display: flex;
-    flex-direction: column;
     width: 100%;
+    flex-direction: column;
+    row-gap: var(--rls-sizing-x1);
     overflow-y: auto;
     overflow-x: hidden;
     padding: var(--pvt-list-component-padding);
@@ -206,7 +207,7 @@
   }
 
   &__ballot {
-    --rlc-ballot-padding: 0rem;
+    --rlc-ballot-padding: var(--rls-sizing-x4) var(--rls-sizing-x2);
     --rlc-ballot-component-row-gap: var(--rls-sizing-x2);
     --rlc-ballot-title-letter-spacing: var(--rls-label-letter-spacing);
     --rlc-ballot-title-font-size: var(--rls-label-font-size);

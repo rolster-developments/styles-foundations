@@ -1,5 +1,5 @@
 // Rolster Technology Datatable Component
-// v2.6.9
+// v2.6.10
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
@@ -271,9 +271,8 @@
 
     position: relative;
     display: flex;
-    height: var(--rls-sizing-x20);
-    line-height: var(--rls-sizing-x20);
-    color: var(--rls-app-color-700);
+    min-height: var(--rls-sizing-x20);
+    align-items: center;
     font-weight: var(
       --rlc-datatable-header-font-weight,
       var(--rls-font-weight-semibold)
@@ -284,6 +283,10 @@
     white-space: nowrap;
 
     @include datatable_cell_styles();
+
+    & > * {
+      color: var(--rls-app-color-700);
+    }
   }
 
   &__body {
