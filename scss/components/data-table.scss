@@ -1,9 +1,9 @@
 // Rolster Technology Datatable Component
-// v2.6.8
+// v2.6.9
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 04/Feb/2026
+// Updated: 05/Feb/2026
 
 @mixin datatable_cell_vars() {
   --rlc-field-box-body-background: transparent;
@@ -171,10 +171,10 @@
   --rlc-ballot-component-row-gap: var(--rls-sizing-x1);
   --rlc-ballot-title-letter-spacing: var(--rls-smalltext-letter-spacing);
   --rlc-ballot-title-font-size: var(--rls-smalltext-font-size);
-  --rlc-ballot-title-height: var(--rls-smalltext-line-height);
+  --rlc-ballot-title-line-height: var(--rls-smalltext-line-height);
   --rlc-ballot-subtitle-letter-spacing: var(--rls-overline-letter-spacing);
   --rlc-ballot-subtitle-font-size: var(--rls-overline-font-size);
-  --rlc-ballot-subtitle-height: var(--rls-overline-line-height);
+  --rlc-ballot-subtitle-line-height: var(--rls-overline-line-height);
 
   --rlc-field-box-body-background: transparent;
   --rlc-field-box-padding: 0rem;

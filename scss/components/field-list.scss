@@ -1,9 +1,9 @@
 // Rolster Technology FieldList Component
-// v1.5.2
+// v1.5.3
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 17/Dic/2025
+// Updated: 05/Feb/2026
 
 .rls-field-list {
   --pvt-action-font-color: var(--rls-app-color-600);
@@ -203,6 +203,17 @@
     &:not(:hover):focus {
       background: var(--rls-theme-color-100);
     }
+  }
+
+  &__ballot {
+    --rlc-ballot-padding: 0rem;
+    --rlc-ballot-component-row-gap: var(--rls-sizing-x2);
+    --rlc-ballot-title-letter-spacing: var(--rls-label-letter-spacing);
+    --rlc-ballot-title-font-size: var(--rls-label-font-size);
+    --rlc-ballot-title-line-height: var(--rls-label-line-height);
+    --rlc-ballot-subtitle-letter-spacing: var(--rls-smalltext-letter-spacing);
+    --rlc-ballot-subtitle-font-size: var(--rls-smalltext-font-size);
+    --rlc-ballot-subtitle-line-height: var(--rls-smalltext-line-height);
   }
 
   &__empty {
