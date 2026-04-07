@@ -1,336 +1,115 @@
 // Rolster Technology Layout Utilities
-// v2.1.3
+// v3.0.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 11/Abr/2023
-// Updated: 04/Dic/2025
+// Updated: 06/Abr/2026
+
+$rls-grid-col-sizes: 12, 8, 6, 4, 2, 1;
+
+@mixin grid-base($size) {
+  --rls-grid-columns: 12;
+
+  display: grid;
+  grid-template-columns: repeat(var(--rls-grid-columns), minmax(0, 1fr));
+  width: 100%;
+  box-sizing: border-box;
+
+  & > * {
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+}
 
 @mixin grid-responsive($size) {
-  .#{$size}-grid-8 {
-    display: grid;
-    gap: var(--rls-sizing-x4);
-  }
-
-  .#{$size}-grid-12 {
-    display: grid;
-    gap: var(--rls-sizing-x6);
-  }
-
+  // CSS Grid — gap variants
+  .#{$size}-grid-8,
+  .#{$size}-grid-12,
   .#{$size}-grid-16 {
-    display: grid;
-    gap: var(--rls-sizing-x8);
+    @include grid-base($size);
   }
 
-  .#{$size}-grid-col-12 {
-    grid-template-columns: repeat(12, 1fr);
+  .#{$size}-grid-8  { gap: var(--rls-sizing-x4); }
+  .#{$size}-grid-12 { gap: var(--rls-sizing-x6); }
+  .#{$size}-grid-16 { gap: var(--rls-sizing-x8); }
+
+  // CSS Grid — column count modifiers
+  @each $cols in $rls-grid-col-sizes {
+    .#{$size}-grid-col-#{$cols} {
+      --rls-grid-columns: #{$cols};
+    }
   }
 
-  .#{$size}-grid-col-8 {
-    grid-template-columns: repeat(8, 1fr);
+  // CSS Grid — span classes
+  @for $i from 1 through 12 {
+    .#{$size}-col-#{$i} {
+      grid-column: span #{$i} / span #{$i};
+    }
   }
 
-  .#{$size}-grid-col-6 {
-    grid-template-columns: repeat(6, 1fr);
+  // CSS Grid — clamp spans exceeding column count
+  @each $max in $rls-grid-col-sizes {
+    @if $max < 12 {
+      @for $col from ($max + 1) through 12 {
+        .#{$size}-grid-col-#{$max} > .#{$size}-col-#{$col} {
+          grid-column: span #{$max} / span #{$max};
+        }
+      }
+    }
   }
 
-  .#{$size}-grid-col-4 {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .#{$size}-grid-col-2 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .#{$size}-grid-col-1 {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-
-@mixin flex-grid-responsive($size) {
-  .#{$size}-flex-grid-8 {
-    --flex-grid-12-gap: 3.6672rem;
-    --flex-grid-8-gap: 28rem;
-    --flex-grid-6-gap: 3.336rem;
-    --flex-grid-4-gap: 3rem;
-
-    --flex-grid-12-col-2: 3.4rem;
-    --flex-grid-12-col-3: 3.1rem;
-    --flex-grid-12-col-4: 2.8rem;
-    --flex-grid-12-col-5: 2.8rem;
-    --flex-grid-12-col-6: 2.18rem;
-    --flex-grid-12-col-8: 3rem;
-
-    --flex-grid-8-col-2: 3.1rem;
-    --flex-grid-8-col-3: 2.6rem;
-    --flex-grid-8-col-4: 2.2rem;
-    --flex-grid-8-col-5: 2.2rem;
-    --flex-grid-8-col-6: 1.8rem;
-
-    --flex-grid-6-col-2: 2.82rem;
-    --flex-grid-6-col-3: 2.2rem;
-    --flex-grid-6-col-4: 1.7rem;
-    --flex-grid-6-col-5: 1.7rem;
-
-    --flex-grid-4-col-2: 2rem;
-    --flex-grid-4-col-3: 1rem;
-
-    display: inline-flex;
-    flex-wrap: wrap;
-    gap: var(--rls-sizing-x4);
-  }
-
-  .#{$size}-flex-grid-12 {
-    --flex-grid-12-gap: 7.3125rem;
-    --flex-grid-8-gap: 7rem;
-    --flex-grid-6-gap: 6.6475rem;
-    --flex-grid-4-gap: 6rem;
-
-    --flex-grid-12-col-2: 6.624rem;
-    --flex-grid-12-col-3: 6rem;
-    --flex-grid-12-col-4: 5.38rem;
-    --flex-grid-12-col-5: 5.38rem;
-    --flex-grid-12-col-6: 4.1rem;
-    --flex-grid-12-col-8: 3rem;
-
-    --flex-grid-8-col-2: 6.182rem;
-    --flex-grid-8-col-3: 5.2rem;
-    --flex-grid-8-col-4: 4rem;
-    --flex-grid-8-col-5: 4rem;
-    --flex-grid-8-col-6: 2.2rem;
-
-    --flex-grid-6-col-2: 5.4rem;
-    --flex-grid-6-col-3: 4rem;
-    --flex-grid-6-col-4: 2.84rem;
-    --flex-grid-6-col-5: 2.84rem;
-
-    --flex-grid-4-col-2: 4rem;
-    --flex-grid-4-col-3: 2.2rem;
-
-    display: inline-flex;
-    flex-wrap: wrap;
-    gap: var(--rls-sizing-x6);
-  }
-
+  // Flex Grid — gap variants (legacy names preserved)
+  .#{$size}-flex-grid-8,
+  .#{$size}-flex-grid-12,
   .#{$size}-flex-grid-16 {
-    --flex-grid-12-gap: 7.3125rem;
-    --flex-grid-8-gap: 7rem;
-    --flex-grid-6-gap: 6.6475rem;
-    --flex-grid-4-gap: 6rem;
-
-    --flex-grid-12-col-2: 6.66rem;
-    --flex-grid-12-col-3: 6rem;
-    --flex-grid-12-col-4: 5.38rem;
-    --flex-grid-12-col-5: 5.38rem;
-    --flex-grid-12-col-6: 4.1rem;
-    --flex-grid-12-col-8: 3rem;
-
-    --flex-grid-8-col-2: 6.182rem;
-    --flex-grid-8-col-3: 5.2rem;
-    --flex-grid-8-col-4: 4rem;
-    --flex-grid-8-col-5: 4rem;
-    --flex-grid-8-col-6: 2.2rem;
-
-    --flex-grid-6-col-2: 5.4rem;
-    --flex-grid-6-col-3: 4rem;
-    --flex-grid-6-col-4: 2.84rem;
-    --flex-grid-6-col-5: 2.84rem;
-
-    --flex-grid-4-col-2: 4rem;
-    --flex-grid-4-col-3: 2.2rem;
-
-    display: inline-flex;
-    flex-wrap: wrap;
-    gap: var(--rls-sizing-x8);
+    @include grid-base($size);
   }
 
-  .#{$size}-flex-grid-col-4 {
-    & > * {
-      width: calc(25% - var(--flex-grid-4-gap));
+  .#{$size}-flex-grid-8  { gap: var(--rls-sizing-x4); }
+  .#{$size}-flex-grid-12 { gap: var(--rls-sizing-x6); }
+  .#{$size}-flex-grid-16 { gap: var(--rls-sizing-x8); }
 
-      &.#{$size}-flex-col-1 {
-        width: calc(25% - var(--flex-grid-4-gap));
-      }
-
-      &.#{$size}-flex-col-2 {
-        width: calc(50% - var(--flex-grid-4-col-2));
-      }
-
-      &.#{$size}-flex-col-3 {
-        width: calc(75% - var(--flex-grid-4-col-3));
-      }
-
-      &.#{$size}-flex-col-4,
-      &.#{$size}-flex-col-6,
-      &.#{$size}-flex-col-8,
-      &.#{$size}-flex-col-12 {
-        width: 100%;
-      }
+  // Flex Grid — column count modifiers
+  @each $cols in $rls-grid-col-sizes {
+    .#{$size}-flex-grid-col-#{$cols} {
+      --rls-grid-columns: #{$cols};
     }
   }
 
-  .#{$size}-flex-grid-col-6 {
-    & > * {
-      width: calc(16.66% - var(--flex-grid-6-gap));
-
-      &.#{$size}-flex-col-1 {
-        width: calc(16.66% - var(--flex-grid-6-gap));
-      }
-
-      &.#{$size}-flex-col-2 {
-        width: calc(33.34% - var(--flex-grid-6-col-2));
-      }
-
-      &.#{$size}-flex-col-3 {
-        width: calc(50% - var(--flex-grid-6-col-3));
-      }
-
-      &.#{$size}-flex-col-4 {
-        width: calc(66.67% - var(--flex-grid-6-col-4));
-      }
-
-      &.#{$size}-flex-col-5 {
-        width: calc(83.34% - var(--flex-grid-6-col-5));
-      }
-
-      &.#{$size}-flex-col-6,
-      &.#{$size}-flex-col-8,
-      &.#{$size}-flex-col-12 {
-        width: 100%;
-      }
+  // Flex Grid — span classes
+  @for $i from 1 through 12 {
+    .#{$size}-flex-col-#{$i} {
+      grid-column: span #{$i} / span #{$i};
     }
   }
 
-  .#{$size}-flex-grid-col-8 {
-    & > * {
-      width: calc(12.5% - var(--flex-grid-8-gap));
-
-      &.#{$size}-flex-col-1 {
-        width: calc(12.5% - var(--flex-grid-8-gap));
-      }
-
-      &.#{$size}-flex-col-2 {
-        width: calc(25% - var(--flex-grid-8-col-2));
-      }
-
-      &.#{$size}-flex-col-3 {
-        width: calc(37.5% - var(--flex-grid-8-col-3));
-      }
-
-      &.#{$size}-flex-col-4 {
-        width: calc(50% - var(--flex-grid-8-col-4));
-      }
-
-      &.#{$size}-flex-col-5 {
-        width: calc(62.75% - var(--flex-grid-8-col-5));
-      }
-
-      &.#{$size}-flex-col-6 {
-        width: calc(75% - var(--flex-grid-8-col-6));
-      }
-
-      &.#{$size}-flex-col-8,
-      &.#{$size}-flex-col-12 {
-        width: 100%;
+  // Flex Grid — clamp spans exceeding column count
+  @each $max in $rls-grid-col-sizes {
+    @if $max < 12 {
+      @for $col from ($max + 1) through 12 {
+        .#{$size}-flex-grid-col-#{$max} > .#{$size}-flex-col-#{$col} {
+          grid-column: span #{$max} / span #{$max};
+        }
       }
     }
   }
-
-  .#{$size}-flex-grid-col-12 {
-    & > * {
-      width: calc(8.33% - var(--flex-grid-12-gap));
-
-      &.#{$size}-flex-col-1 {
-        width: calc(8.33% - var(--flex-grid-12-gap));
-      }
-
-      &.#{$size}-flex-col-2 {
-        width: calc(16.66% - var(--flex-grid-12-col-2));
-      }
-
-      &.#{$size}-flex-col-3 {
-        width: calc(25% - var(--flex-grid-12-col-3));
-      }
-
-      &.#{$size}-flex-col-4 {
-        width: calc(33.33% - var(--flex-grid-12-col-4));
-      }
-
-      &.#{$size}-flex-col-5 {
-        width: calc(41.66% - var(--flex-grid-12-col-5));
-      }
-
-      &.#{$size}-flex-col-6 {
-        width: calc(50% - var(--flex-grid-12-col-6));
-      }
-
-      &.#{$size}-flex-col-8 {
-        width: calc(66.66% - var(--flex-grid-12-col-8));
-      }
-
-      &.#{$size}-flex-col-12 {
-        width: 100%;
-      }
-    }
-  }
-}
-
-body {
-  --flex-grid-12-gap: 0rem;
-  --flex-grid-8-gap: 0rem;
-  --flex-grid-6-gap: 0rem;
-  --flex-grid-4-gap: 0rem;
-
-  --flex-grid-12-col-2: 0rem;
-  --flex-grid-12-col-3: 0rem;
-  --flex-grid-12-col-4: 0rem;
-  --flex-grid-12-col-6: 0rem;
-  --flex-grid-12-col-8: 0rem;
-
-  --flex-grid-8-col-2: 0rem;
-  --flex-grid-8-col-3: 0rem;
-  --flex-grid-8-col-4: 0rem;
-  --flex-grid-8-col-6: 0rem;
-
-  --flex-grid-6-col-2: 0rem;
-  --flex-grid-6-col-3: 0rem;
-  --flex-grid-6-col-4: 0rem;
-
-  --flex-grid-4-col-2: 0rem;
-  --flex-grid-4-col-3: 0rem;
 }
 
 @include grid-responsive('xs');
 
-@media screen and (min-width: 360px) {
+@media screen and (min-width: 420px) {
   @include grid-responsive('sm');
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 720px) {
   @include grid-responsive('md');
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 1024px) {
   @include grid-responsive('lg');
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1440px) {
   @include grid-responsive('xl');
-}
-
-@include flex-grid-responsive('xs');
-
-@media screen and (min-width: 360px) {
-  @include flex-grid-responsive('sm');
-}
-
-@media screen and (min-width: 640px) {
-  @include flex-grid-responsive('md');
-}
-
-@media screen and (min-width: 960px) {
-  @include flex-grid-responsive('lg');
-}
-
-@media screen and (min-width: 1280px) {
-  @include flex-grid-responsive('xl');
 }
