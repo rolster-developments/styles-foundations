@@ -1,5 +1,5 @@
 // Rolster Technology Layout Utilities
-// v3.0.0
+// v3.1.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 11/Abr/2023
@@ -7,9 +7,7 @@
 
 $rls-grid-col-sizes: 12, 8, 6, 4, 2, 1;
 
-@mixin grid-base($size) {
-  --rls-grid-columns: 12;
-
+@mixin grid-base() {
   display: grid;
   grid-template-columns: repeat(var(--rls-grid-columns), minmax(0, 1fr));
   width: 100%;
@@ -23,63 +21,33 @@ $rls-grid-col-sizes: 12, 8, 6, 4, 2, 1;
 }
 
 @mixin grid-responsive($size) {
-  // CSS Grid — gap variants
-  .#{$size}-grid-8,
-  .#{$size}-grid-12,
-  .#{$size}-grid-16 {
-    @include grid-base($size);
-  }
-
-  .#{$size}-grid-8  { gap: var(--rls-sizing-x4); }
-  .#{$size}-grid-12 { gap: var(--rls-sizing-x6); }
-  .#{$size}-grid-16 { gap: var(--rls-sizing-x8); }
-
-  // CSS Grid — column count modifiers
   @each $cols in $rls-grid-col-sizes {
-    .#{$size}-grid-col-#{$cols} {
+    .rls-flex-#{$size}-grid-col-#{$cols} {
       --rls-grid-columns: #{$cols};
     }
   }
 
-  // CSS Grid — span classes
-  @for $i from 1 through 12 {
-    .#{$size}-col-#{$i} {
-      grid-column: span #{$i} / span #{$i};
-    }
+  .rls-flex-#{$size}-grid-8,
+  .rls-flex-#{$size}-grid-12,
+  .rls-flex-#{$size}-grid-16 {
+    @include grid-base();
   }
 
-  // CSS Grid — clamp spans exceeding column count
-  @each $max in $rls-grid-col-sizes {
-    @if $max < 12 {
-      @for $col from ($max + 1) through 12 {
-        .#{$size}-grid-col-#{$max} > .#{$size}-col-#{$col} {
-          grid-column: span #{$max} / span #{$max};
-        }
-      }
-    }
+  .rls-flex-#{$size}-grid-8 {
+    gap: var(--rls-sizing-x4);
   }
 
-  // Flex Grid — gap variants (legacy names preserved)
-  .#{$size}-flex-grid-8,
-  .#{$size}-flex-grid-12,
-  .#{$size}-flex-grid-16 {
-    @include grid-base($size);
+  .rls-flex-#{$size}-grid-12 {
+    gap: var(--rls-sizing-x6);
   }
 
-  .#{$size}-flex-grid-8  { gap: var(--rls-sizing-x4); }
-  .#{$size}-flex-grid-12 { gap: var(--rls-sizing-x6); }
-  .#{$size}-flex-grid-16 { gap: var(--rls-sizing-x8); }
-
-  // Flex Grid — column count modifiers
-  @each $cols in $rls-grid-col-sizes {
-    .#{$size}-flex-grid-col-#{$cols} {
-      --rls-grid-columns: #{$cols};
-    }
+  .rls-flex-#{$size}-grid-16 {
+    gap: var(--rls-sizing-x8);
   }
 
   // Flex Grid — span classes
   @for $i from 1 through 12 {
-    .#{$size}-flex-col-#{$i} {
+    .rls-flex-#{$size}-col-#{$i} {
       grid-column: span #{$i} / span #{$i};
     }
   }
@@ -88,7 +56,7 @@ $rls-grid-col-sizes: 12, 8, 6, 4, 2, 1;
   @each $max in $rls-grid-col-sizes {
     @if $max < 12 {
       @for $col from ($max + 1) through 12 {
-        .#{$size}-flex-grid-col-#{$max} > .#{$size}-flex-col-#{$col} {
+        .rls-flex-#{$size}-grid-col-#{$max} > .rls-flex-#{$size}-col-#{$col} {
           grid-column: span #{$max} / span #{$max};
         }
       }

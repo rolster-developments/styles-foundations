@@ -1,9 +1,9 @@
 // Rolster Technology Themes Foundations
-// v2.5.2
+// v2.5.3
 // @license MIT
 // Author: Rolster Developers
 // Created: 03/Mar/2022
-// Updated: 18/Feb/2026
+// Updated: 09/Abr/2026
 
 @mixin rolster-app-border($token) {
   --rls-app-border-1-#{$token}: var(--rls-border-1) solid
@@ -92,6 +92,22 @@
   --rls-theme-shadow-color-500: var(--rls-#{$theme}-shadow-color-500);
 
   --rls-theme-shadow-500: var(--rls-#{$theme}-shadow-500);
+
+  --rls-theme-backdrop-100: var(--rls-#{$theme}-backdrop-100);
+
+  --rls-theme-backdrop-200: var(--rls-#{$theme}-backdrop-200);
+
+  --rls-theme-backdrop-300: var(--rls-#{$theme}-backdrop-300);
+
+  --rls-theme-backdrop-400: var(--rls-#{$theme}-backdrop-400);
+
+  --rls-theme-backdrop-500: var(--rls-#{$theme}-backdrop-500);
+
+  --rls-theme-backdrop-600: var(--rls-#{$theme}-backdrop-600);
+
+  --rls-theme-backdrop-700: var(--rls-#{$theme}-backdrop-700);
+
+  --rls-theme-backdrop-800: var(--rls-#{$theme}-backdrop-800);
 
   --rls-theme-backdrop-900: var(--rls-#{$theme}-backdrop-900);
 
