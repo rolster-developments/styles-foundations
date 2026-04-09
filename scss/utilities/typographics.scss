@@ -1,9 +1,9 @@
 // Rolster Technology Typographics Utilities
-// v2.1.4
+// v2.1.5
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 03/Dic/2025
+// Updated: 09/Abr/2026
 
 @mixin typographic($name, $key) {
   .rls-#{$name}-default {
@@ -176,9 +176,10 @@ button {
 @include typographic('subtitle', 'subtitle');
 @include typographic('body', 'body');
 @include typographic('input', 'input');
+@include typographic('button', 'button');
 @include typographic('paragraph', 'paragraph');
 @include typographic('label', 'label');
-@include typographic('button', 'button');
+@include typographic('span', 'span');
 @include typographic('smalltext', 'smalltext');
 @include typographic('caption', 'caption');
 @include typographic('overline', 'overline');

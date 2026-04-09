@@ -1,9 +1,9 @@
 // Rolster Technology Helpers Foundations
-// v1.0.2
+// v1.0.4
 // @license MIT
 // Author: Rolster Developers
 // Created: 18/Abr/2025
-// Updated: 29/Nov/2025
+// Updated: 08/Abr/2026
 
 @use 'sass:color' as *;
 
@@ -14,7 +14,15 @@
 
   --rls-#{$theme}-color-900: #{$color};
 
-  --rls-#{$theme}-backdrop-900: rgba(#{$r}, #{$g}, #{$b}, 0.8);
+  --rls-#{$theme}-backdrop-900: rgba(#{$r}, #{$g}, #{$b}, 0.9);
+  --rls-#{$theme}-backdrop-800: rgba(#{$r}, #{$g}, #{$b}, 0.8);
+  --rls-#{$theme}-backdrop-700: rgba(#{$r}, #{$g}, #{$b}, 0.7);
+  --rls-#{$theme}-backdrop-600: rgba(#{$r}, #{$g}, #{$b}, 0.6);
+  --rls-#{$theme}-backdrop-500: rgba(#{$r}, #{$g}, #{$b}, 0.5);
+  --rls-#{$theme}-backdrop-400: rgba(#{$r}, #{$g}, #{$b}, 0.4);
+  --rls-#{$theme}-backdrop-300: rgba(#{$r}, #{$g}, #{$b}, 0.3);
+  --rls-#{$theme}-backdrop-200: rgba(#{$r}, #{$g}, #{$b}, 0.2);
+  --rls-#{$theme}-backdrop-100: rgba(#{$r}, #{$g}, #{$b}, 0.1);
 }
 
 @mixin rolster-theme-700($theme, $color) {
