@@ -1,0 +1,23 @@
+// Rolster Technology ImageEditorModal Component
+// v1.0.0
+// @license MIT
+// Author: Rolster Developers
+// Created: 15/Ago/2025
+// Updated: 15/Ago/2025
+
+.rls-image-editor-modal {
+  --rlc-image-editor-footer-padding: 0rem var(--rls-sizing-x12)
+    var(--rls-sizing-x12) var(--rls-sizing-x12);
+
+  --rlc-modal-max-width: calc(250rem - var(--rls-sizing-x16));
+  width: 100%;
+}
+
+@media only screen and (max-width: 480px) {
+  .rls-image-editor-modal {
+    --rlc-image-editor-footer-padding: 0rem var(--rls-sizing-x8)
+      var(--rls-sizing-x8) var(--rls-sizing-x8);
+
+    --rlc-modal-max-width: 160rem;
+  }
+}

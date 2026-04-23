@@ -1,0 +1,65 @@
+// Rolster Technology FieldListSuggestions Component
+// v1.0.0
+// @license MIT
+// Author: Rolster Developers
+// Created: 03/Apr/2026
+
+.rls-field-list__ul {
+  &__search {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: var(--rls-sizing-x2);
+    margin-bottom: var(--rls-sizing-x6);
+    background: var(--rls-app-color-100);
+    border-radius: var(--rls-sizing-x4);
+    padding: var(--rls-sizing-x4);
+    box-sizing: border-box;
+
+    button {
+      color: var(--rls-app-color-600);
+      background: transparent;
+
+      &:not(:disabled):hover {
+        color: var(--rls-theme-color-300);
+      }
+
+      &:disabled {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &__control {
+    width: 100%;
+    height: var(--rls-sizing-x12);
+    line-height: var(--rls-sizing-x12);
+    padding: 0rem;
+    cursor: text;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--rls-app-color-900);
+    font-size: var(--rls-input-font-size);
+    font-weight: var(--rls-font-weight-medium);
+    letter-spacing: var(--rls-input-letter-spacing);
+
+    &::placeholder {
+      color: var(--rls-app-color-400);
+    }
+
+    &::selection {
+      background: var(--rls-theme-color-700);
+      color: var(--rls-app-color-050);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  }
+
+  .rls-progress-bar {
+    margin-bottom: var(--rls-sizing-x8);
+  }
+}

@@ -1,0 +1,108 @@
+// Rolster Technology BottomSheet Component
+// v1.0.4
+// @license MIT
+// Author: Rolster Developers
+// Created: 03/Sep/2025
+// Updated: 08/Abr/2026
+
+.rls-bottom-sheet {
+  --pvt-component-transform: translateY(100%);
+  --pvt-component-height: 0rem;
+  --pvt-component-max-height: 75%;
+  --pvt-component-opacity: 0;
+  --pvt-component-visibility: hidden;
+  --pvt-component-transition: 320ms;
+
+  --pvt-backdrop-opacity: 0;
+  --pvt-backdrop-bottom: initial;
+
+  position: fixed;
+  display: flex;
+  top: 0rem;
+  left: 0rem;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  z-index: var(--rls-z-index-24);
+  visibility: hidden;
+
+  &--visible {
+    --pvt-component-visibility: visible;
+    --pvt-component-height: auto;
+    --pvt-component-opacity: 1;
+    --pvt-component-transform: translateY(0);
+    --pvt-backdrop-bottom: 0rem;
+    --pvt-backdrop-opacity: 1;
+
+    visibility: visible;
+  }
+
+  &__component {
+    position: absolute;
+    display: flex;
+    bottom: 0px;
+    width: 100%;
+    max-width: 240rem;
+    max-height: var(--pvt-component-max-height);
+    flex-direction: column;
+    opacity: var(--pvt-component-opacity);
+    visibility: var(--pvt-component-visibility);
+    z-index: var(--rls-z-index-2);
+    border-radius: var(--rls-sizing-x4) var(--rls-sizing-x4) 0rem 0rem;
+    background: var(--rlc-bottom-sheet-background, var(--rls-app-color-050));
+    transform: var(--pvt-component-transform);
+    transition:
+      opacity var(--pvt-component-transition) 0ms var(--rls-deceleration-curve),
+      transform var(--pvt-component-transition) 0ms
+        var(--rls-deceleration-curve),
+      visibility var(--pvt-component-transition) 0ms
+        var(--rls-deceleration-curve);
+
+    &::before {
+      display: block;
+      content: '';
+      width: var(--rls-sizing-x24);
+      height: var(--rls-sizing-x2);
+      border-radius: var(--rls-sizing-x2);
+      background: var(--rls-app-color-300);
+      margin: var(--rls-sizing-x3) auto;
+    }
+  }
+
+  &__backdrop {
+    position: absolute;
+    display: block;
+    top: 0rem;
+    left: 0rem;
+    right: 0rem;
+    bottom: var(--pvt-backdrop-bottom);
+    opacity: var(--pvt-backdrop-opacity);
+    z-index: var(--rls-z-index-1);
+    background: var(
+      --rlc-bottom-sheet-backdrop-color,
+      var(--rls-theme-backdrop-400)
+    );
+    backdrop-filter: var(--rlc-bottom-sheet-backdrop-filter, blur(2px));
+    transition:
+      opacity 120ms 0ms var(--rls-deceleration-curve),
+      bottom 120ms 0ms var(--rls-deceleration-curve);
+  }
+}
+
+@media screen and (max-height: 960px) {
+  .rls-bottom-sheet {
+    --pvt-component-max-height: calc(100% - 32rem);
+  }
+}
+
+@media screen and (max-height: 720px) {
+  .rls-bottom-sheet {
+    --pvt-component-max-height: calc(100% - 24rem);
+  }
+}
+
+@media screen and (max-height: 560px) {
+  .rls-bottom-sheet {
+    --pvt-component-max-height: calc(100% - 16rem);
+  }
+}

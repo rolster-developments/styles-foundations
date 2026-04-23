@@ -1,0 +1,49 @@
+// Rolster Technology ButtonOption Component
+// v1.0.0
+// @license MIT
+// Author: Rolster Developers
+// Created: 04/Dic/2025
+// Updated: 04/Dic/2025
+
+.rls-button-option {
+  --pvt-span-color: var(--rls-app-color-800);
+  --pvt-background-hover: var(--rls-theme-color-100);
+  --rlc-icon-color: var(--rls-app-color-600);
+
+  display: flex;
+  width: var(--rlc-button-option, auto);
+  flex-direction: column;
+  row-gap: var(--rls-sizing-x3);
+  align-items: center;
+  padding: var(--rls-sizing-x4) var(--rls-sizing-x3);
+  box-sizing: border-box;
+  outline: none;
+  background: transparent;
+  border: var(--rls-app-border-1-300);
+  border-radius: var(--rls-sizing-x4);
+  overflow: hidden;
+
+  &:not(:disabled):hover {
+    background: var(--pvt-background-hover);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+
+  &--checked {
+    --pvt-background-hover: var(--rls-theme-color-800);
+    --pvt-span-color: var(--rls-theme-color-050);
+    --rlc-icon-color: var(--rls-theme-color-050);
+
+    background: var(--rls-theme-gradient-500);
+    border: var(--rls-theme-border-1-500);
+  }
+
+  & > span {
+    font-size: var(--rls-span-font-size);
+    letter-spacing: var(--rls-span-letter-spacing);
+    color: var(--pvt-span-color);
+    font-weight: var(--rls-font-weight-medium);
+  }
+}

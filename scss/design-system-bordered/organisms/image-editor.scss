@@ -1,0 +1,118 @@
+// Rolster Technology ImageEditor Component
+// v1.0.1
+// @license MIT
+// Author: Rolster Developers
+// Created: 03/Jul/2018
+// Updated: 11/Jul/2025
+
+.rls-image-editor {
+  --pvt-overlay-background: var(--rls-theme-backdrop-900);
+  --pvt-sliders-padding: 0rem var(--rls-sizing-x8);
+  --pvt-actions-direction: row;
+  --pvt-actions-row-gap: 0rem;
+  --pvt-actions-column-gap: var(--rls-sizing-x8);
+
+  position: relative;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  row-gap: var(--rls-sizing-x12);
+
+  &__body {
+    position: relative;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    background: var(--rls-app-color-900);
+
+    &__image {
+      overflow: hidden;
+    }
+
+    &__selection {
+      position: absolute;
+      cursor: move;
+      box-sizing: border-box;
+      z-index: var(--rls-z-index-4);
+      border: var(
+        --rlc-image-editor-selection-border,
+        2px dashed var(--rls-app-color-050)
+      );
+      user-select: none;
+    }
+
+    &__overlay--top {
+      position: absolute;
+      top: 0rem;
+      z-index: var(--rls-z-index-2);
+      background: var(--pvt-overlay-background);
+    }
+
+    &__overlay--right {
+      position: absolute;
+      right: 0rem;
+      height: 100%;
+      z-index: var(--rls-z-index-2);
+      background: var(--pvt-overlay-background);
+    }
+
+    &__overlay--bottom {
+      position: absolute;
+      bottom: 0rem;
+      z-index: var(--rls-z-index-2);
+      background: var(--pvt-overlay-background);
+    }
+
+    &__overlay--left {
+      position: absolute;
+      right: 0rem;
+      height: 100%;
+      z-index: var(--rls-z-index-2);
+      background: var(--pvt-overlay-background);
+    }
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--rls-sizing-x12);
+    padding: var(--rlc-image-editor-footer-padding, 0rem);
+    box-sizing: border-box;
+  }
+
+  &__sliders {
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--rls-sizing-x6);
+    padding: var(--pvt-sliders-padding);
+    box-sizing: border-box;
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: var(--pvt-actions-direction);
+    justify-content: center;
+    row-gap: var(--pvt-actions-row-gap);
+    column-gap: var(--pvt-actions-column-gap);
+  }
+
+  & > canvas {
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    z-index: -1;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .rls-image-editor {
+    --pvt-sliders-padding: 0rem;
+    --pvt-actions-direction: column;
+    --pvt-actions-row-gap: var(--rls-sizing-x6);
+    --pvt-actions-column-gap: 0rem;
+
+    row-gap: var(--rls-sizing-x8);
+  }
+}

@@ -1,0 +1,143 @@
+// Rolster Technology PickerClock Component
+// v2.0.0
+// @license MIT
+// Author: Rolster Developers
+// Created: 20/Mar/2018
+// Updated: 29/Dic/2025
+
+.rls-picker-clock {
+  position: relative;
+  display: flex;
+  width: 150rem;
+  flex-direction: column;
+  row-gap: var(--rls-sizing-x8);
+  overflow: hidden;
+  user-select: none;
+  padding: var(--rlc-picker-clock-padding, 0rem);
+  box-sizing: border-box;
+  border-radius: var(--rlc-picker-clock-radius, 0rem);
+  background: var(--rlc-picker-clock-background, transparent);
+
+  &__header {
+    display: flex;
+    column-gap: var(--rls-sizing-x8);
+    padding: var(--rls-sizing-x4) var(--rls-sizing-x4) 0rem var(--rls-sizing-x4);
+    box-sizing: border-box;
+    justify-content: center;
+  }
+
+  &__title {
+    display: flex;
+    width: auto;
+    column-gap: var(--rls-sizing-x2);
+    align-items: center;
+
+    &__value {
+      width: 16rem;
+      text-align: center;
+      font-size: var(--rls-heading4-font-size);
+      font-weight: var(--rls-font-weight-semibold);
+      color: var(--rls-app-color-600);
+
+      &--active {
+        color: var(--rls-theme-color-500);
+      }
+
+      &:hover {
+        color: var(--rls-app-color-900);
+      }
+    }
+
+    &__separator {
+      font-size: var(--rls-title-font-size);
+      font-weight: var(--rls-font-weight-semibold);
+    }
+  }
+
+  &__zone {
+    display: flex;
+    width: auto;
+    column-gap: var(--rls-sizing-x4);
+    align-items: center;
+
+    &__value {
+      width: 18rem;
+      text-align: center;
+      padding: var(--rls-sizing-x1) var(--rls-sizing-x2);
+      border-radius: var(--rls-sizing-x2);
+      font-size: var(--rls-body-font-size);
+      font-weight: var(--rls-font-weight-semibold);
+      background: var(--rls-app-color-200);
+
+      &--active {
+        background: var(--rls-theme-gradient-500);
+        color: var(--rls-theme-color-050);
+      }
+    }
+  }
+
+  &__body {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__plate {
+    width: 120rem;
+    height: 120rem;
+    border-radius: 50%;
+    border: var(--rls-app-border-2-200);
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  &__canvas {
+    position: absolute;
+
+    &__line {
+      stroke: var(--rls-theme-color-500);
+      stroke-width: var(--rls-sizing-x1);
+    }
+
+    &__center {
+      fill: var(--rls-theme-color-500);
+    }
+
+    &__indicator {
+      fill: var(--rls-theme-color-300);
+    }
+
+    &__point {
+      fill: var(--rls-theme-color-050);
+    }
+  }
+
+  &__tick {
+    position: absolute;
+    width: var(--rls-sizing-x14);
+    height: var(--rls-sizing-x14);
+    line-height: var(--rls-sizing-x14);
+    text-align: center;
+    cursor: pointer;
+    font-size: var(--rls-paragraph-font-size);
+    font-weight: var(--rls-font-weight-semibold);
+  }
+
+  &__footer {
+    --rlc-button-width: 100%;
+
+    display: flex;
+    column-gap: var(--rls-sizing-x6);
+    align-items: center;
+    padding: var(--rls-sizing-x4) var(--rls-sizing-x8) var(--rls-sizing-x6)
+      var(--rls-sizing-x8);
+    overflow: hidden;
+    box-sizing: border-box;
+
+    &--today {
+      display: flex;
+      width: var(--rls-sizing-x16);
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

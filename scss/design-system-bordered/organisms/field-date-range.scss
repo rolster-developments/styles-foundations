@@ -1,0 +1,93 @@
+// Rolster Technology FieldDateRange Component
+// v1.1.8
+// @license MIT
+// Author: Rolster Developers
+// Created: 25/May/2023
+// Updated: 29/Dic/2025
+
+.rls-field-date-range {
+  --rlc-field-box-body-padding: var(--rls-sizing-x3) var(--rls-sizing-x4);
+
+  --pvt-font-size: var(
+    --rlc-field-date-range-font-size,
+    var(--rls-input-font-size)
+  );
+
+  --pvt-letter-spacing: var(
+    --rlc-field-date-range-letter-spacing,
+    var(--rls-input-letter-spacing)
+  );
+
+  --pvt-action-dimension: var(
+    --rlc-field-box-action-dimension,
+    var(--rls-sizing-x12)
+  );
+
+  --pvt-action-background: var(
+    --rlc-field-box-action-background,
+    var(--rls-app-color-200)
+  );
+
+  --pvt-control-width: calc(100% - var(--pvt-action-dimension));
+
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+
+  .rls-field-box--readonly {
+    --pvt-control-width: 100%;
+  }
+
+  &__control {
+    position: relative;
+    width: var(--pvt-control-width);
+    height: var(--rls-sizing-x12);
+    line-height: var(--rls-sizing-x12);
+    padding: 0rem;
+    cursor: default;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--rls-app-color-900);
+    font-weight: var(--rls-font-weight-medium);
+    font-size: var(--pvt-font-size);
+    letter-spacing: var(--pvt-letter-spacing);
+
+    &::placeholder {
+      color: var(--rls-app-color-400);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+
+  &__action {
+    --rlc-icon-dimension: calc(var(--pvt-action-dimension) - 2rem);
+
+    width: var(--pvt-action-dimension);
+    height: var(--pvt-action-dimension);
+    color: var(--rls-app-color-600);
+    padding: 0rem;
+    outline: none;
+    border-radius: var(--rlc-field-box-action-radius, var(--rls-sizing-x2));
+    background: var(--pvt-action-background);
+
+    &:disabled {
+      opacity: 0.5;
+      background: transparent;
+    }
+
+    .rls-icon {
+      margin: 1rem;
+    }
+  }
+}
+
+.rls-field-date-range-modal {
+  --rlc-modal-background: transparent;
+  --rlc-modal-max-width: 150rem;
+  --rlc-picker-date-range-radius: var(--rls-sizing-x4);
+  --rlc-picker-date-range-background: var(--rls-app-color-050);
+}

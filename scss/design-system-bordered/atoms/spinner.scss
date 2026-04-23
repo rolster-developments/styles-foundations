@@ -1,0 +1,102 @@
+// Rolster Technology Spinner Component
+// v1.0.0
+// @license MIT
+// Author: Rolster Developers
+// Created: 21/May/2022
+// Updated: 20/Dic/2023
+
+.rls-spinner {
+  position: relative;
+  display: block;
+  width: var(--rlc-spinner-dimension, var(--rls-sizing-x12));
+  height: var(--rlc-spinner-dimension, var(--rls-sizing-x12));
+  fill: var(--rlc-spinner-color, var(--rls-app-color-800));
+
+  &__svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    fill: inherit;
+    transform-origin: center center;
+    transform: translateZ(0px);
+    animation: 1s linear 0s infinite normal none running rls-spinner-scale-out;
+
+    & > circle {
+      r: 5;
+      transform: translate(32px, 32px);
+    }
+
+    &--1 {
+      top: 0px;
+      left: 9px;
+      animation-delay: -1000ms;
+      animation-duration: 1000ms;
+    }
+
+    &--2 {
+      top: 5.78509px;
+      left: 6.8944px;
+      animation-delay: -888.889ms;
+      animation-duration: 1000ms;
+    }
+
+    &--3 {
+      top: 8.86327px;
+      left: 1.56283px;
+      animation-delay: -777.778ms;
+      animation-duration: 1000ms;
+    }
+
+    &--4 {
+      top: 7.79423px;
+      left: -4.5px;
+      animation-delay: -666.667ms;
+      animation-duration: 1000ms;
+    }
+
+    &--5 {
+      top: 3.07818px;
+      left: -8.45723px;
+      animation-delay: -555.556ms;
+      animation-duration: 1000ms;
+    }
+
+    &--6 {
+      top: -3.07818px;
+      left: -8.45723px;
+      animation-delay: -444.444ms;
+      animation-duration: 1000ms;
+    }
+
+    &--7 {
+      top: -7.79423px;
+      left: -4.5px;
+      animation-delay: -333.333ms;
+      animation-duration: 1000ms;
+    }
+
+    &--8 {
+      top: -8.86327px;
+      left: 1.56283px;
+      animation-delay: -222.222ms;
+      animation-duration: 1000ms;
+    }
+
+    &--9 {
+      top: -5.78509px;
+      left: 6.8944px;
+      animation-delay: -111.111ms;
+      animation-duration: 1000ms;
+    }
+  }
+}
+
+@keyframes rls-spinner-scale-out {
+  0% {
+    transform: scale(1, 1);
+  }
+
+  100% {
+    transform: scale(0, 0);
+  }
+}

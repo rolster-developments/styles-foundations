@@ -1,0 +1,249 @@
+// Rolster Technology Button Component
+// v2.4.5
+// @license MIT
+// Author: Rolster Developers
+// Created: 20/Mar/2018
+// Updated: 14/Feb/2026
+
+.rls-button {
+  --pvt-button-content-background: none;
+  --pvt-button-content-border: none;
+  --pvt-button-content-box-shadow: var(--rlc-button-content-box-shadow, none);
+  --pvt-button-content-font-color: var(--rls-theme-color-500);
+  --pvt-button-content-animation: none;
+  --pvt-button-content-visibility: hidden;
+  --pvt-button-ripple-background: var(--rls-theme-color-700);
+
+  --pvt-ghost-background: none;
+  --pvt-ghost-font-color: var(--rls-theme-color-500);
+  --pvt-ghost-border: none;
+
+  --pvt-outline-background: var(--rls-app-color-050);
+  --pvt-outline-font-color: var(--rls-app-color-500);
+  --pvt-outline-border: var(--rls-app-border-1-300);
+
+  --pvt-flat-background: var(--rls-theme-color-100);
+  --pvt-flat-font-color: var(--rls-theme-color-500);
+  --pvt-flat-border: none;
+
+  --pvt-stroked-background: var(--rls-app-color-050);
+  --pvt-stroked-font-color: var(--rls-theme-color-500);
+  --pvt-stroked-border: var(--rls-theme-border-1-300);
+
+  --pvt-classic-background: var(--rls-theme-color-050);
+  --pvt-classic-font-color: var(--rls-theme-color-500);
+  --pvt-classic-border: var(--rls-theme-border-1-300);
+
+  --pvt-raised-background: var(--rls-theme-color-500);
+  --pvt-raised-font-color: var(--rls-theme-color-050);
+  --pvt-raised-border: none;
+
+  --pvt-gradient-background: var(--rls-theme-gradient-500);
+  --pvt-gradient-font-color: var(--rls-theme-color-050);
+  --pvt-gradient-border: none;
+
+  position: relative;
+  padding: 0rem;
+  width: var(--rlc-button-width, auto);
+  outline: none;
+  background: transparent;
+
+  &:not(:disabled):not(:active) {
+    --pvt-button-content-animation: ripple-squarecenter 1000ms
+      var(--rls-standard-curve);
+  }
+
+  &:not(:disabled):focus {
+    --pvt-button-content-visibility: visible;
+  }
+
+  &:not(:disabled):hover {
+    --pvt-ghost-background: var(--rls-theme-color-200);
+    --pvt-ghost-font-color: var(--rls-theme-font-100);
+    --pvt-ghost-border: none;
+
+    --pvt-outline-background: transparent;
+    --pvt-outline-font-color: var(--rls-theme-color-500);
+    --pvt-outline-border: var(--rls-theme-border-1-500);
+
+    --pvt-stroked-background: var(--rls-theme-color-100);
+    --pvt-stroked-font-color: var(--rls-theme-color-700);
+    --pvt-stroked-border: var(--rls-theme-border-1-700);
+
+    --pvt-classic-background: var(--rls-theme-color-100);
+    --pvt-classic-font-color: var(--rls-theme-color-700);
+    --pvt-classic-border: var(--rls-theme-border-1-700);
+
+    --pvt-flat-background: var(--rls-theme-color-200);
+    --pvt-flat-font-color: var(--rls-theme-color-700);
+    --pvt-flat-border: none;
+
+    --pvt-raised-background: var(--rls-theme-color-700);
+    --pvt-raised-font-color: var(--rls-theme-font-900);
+    --pvt-raised-border: none;
+
+    --pvt-gradient-background: var(--rls-theme-color-700);
+    --pvt-gradient-font-color: var(--rls-theme-font-900);
+    --pvt-gradient-border: none;
+  }
+
+  &:disabled {
+    --pvt-button-content-box-shadow: none;
+
+    --pvt-ghost-background: transparent;
+    --pvt-ghost-font-color: var(--rls-app-color-400);
+    --pvt-ghost-border: none;
+
+    --pvt-outline-background: transparent;
+    --pvt-outline-font-color: var(--rls-app-color-400);
+    --pvt-outline-border: var(--rls-app-border-1-300);
+
+    --pvt-stroked-background: transparent;
+    --pvt-stroked-font-color: var(--rls-app-color-400);
+    --pvt-stroked-border: var(--rls-app-border-1-300);
+
+    --pvt-classic-background: var(--rls-app-color-100);
+    --pvt-classic-font-color: var(--rls-app-color-400);
+    --pvt-classic-border: var(--rls-app-border-1-300);
+
+    --pvt-flat-background: var(--rls-app-color-100);
+    --pvt-flat-font-color: var(--rls-app-color-400);
+    --pvt-flat-border: none;
+
+    --pvt-raised-background: var(--rls-app-color-100);
+    --pvt-raised-font-color: var(--rls-app-color-400);
+    --pvt-raised-border: none;
+
+    --pvt-gradient-background: var(--rls-app-color-100);
+    --pvt-gradient-font-color: var(--rls-app-color-400);
+    --pvt-gradient-border: none;
+
+    pointer-events: none;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    column-gap: var(--rlc-button-content-gap, var(--rls-sizing-x2));
+    line-height: var(--rls-sizing-x20);
+    height: var(--rls-sizing-x20);
+    padding: var(--rlc-button-content-padding, 0rem var(--rls-sizing-x4));
+    box-sizing: border-box;
+    border-radius: var(--rlc-button-content-radius, var(--rls-sizing-x2));
+    box-shadow: var(--pvt-button-content-box-shadow);
+    color: var(--pvt-button-content-font-color);
+    border: var(--pvt-button-content-border);
+    background: var(--pvt-button-content-background);
+    pointer-events: none;
+
+    &::before {
+      position: absolute;
+      display: block;
+      content: '';
+      top: 50%;
+      left: 50%;
+      padding-top: calc(100% - var(--rls-sizing-x8));
+      padding-left: calc(100% - var(--rls-sizing-x8));
+      margin-top: calc(-50% + var(--rls-sizing-x4));
+      margin-left: calc(-50% + var(--rls-sizing-x4));
+      border-radius: 50%;
+      opacity: 0.26;
+      transform: scale(0);
+      z-index: var(--rls-z-index-2);
+      background: var(--pvt-button-ripple-background);
+      animation: var(--pvt-button-content-animation);
+      visibility: var(--pvt-button-content-visibility);
+    }
+
+    &--ghost {
+      --rlc-spinner-color: var(--pvt-ghost-font-color);
+      --pvt-button-content-font-color: var(--pvt-ghost-font-color);
+      --pvt-button-content-background: var(--pvt-ghost-background);
+      --pvt-button-content-border: var(--pvt-ghost-border);
+    }
+
+    &--outline {
+      --rlc-spinner-color: var(--pvt-outline-font-color);
+      --pvt-button-content-font-color: var(--pvt-outline-font-color);
+      --pvt-button-content-background: var(--pvt-outline-background);
+      --pvt-button-content-border: var(--pvt-outline-border);
+    }
+
+    &--stroked {
+      --rlc-spinner-color: var(--pvt-stroked-font-color);
+      --pvt-button-content-font-color: var(--pvt-stroked-font-color);
+      --pvt-button-content-background: var(--pvt-stroked-background);
+      --pvt-button-content-border: var(--pvt-stroked-border);
+    }
+
+    &--classic {
+      --rlc-spinner-color: var(--pvt-classic-font-color);
+      --pvt-button-content-font-color: var(--pvt-classic-font-color);
+      --pvt-button-content-background: var(--pvt-classic-background);
+      --pvt-button-content-border: var(--pvt-classic-border);
+      --pvt-button-ripple-background: var(--rls-theme-font-100);
+    }
+
+    &--flat {
+      --rlc-spinner-color: var(--pvt-flat-font-color);
+      --pvt-button-content-font-color: var(--pvt-flat-font-color);
+      --pvt-button-content-background: var(--pvt-flat-background);
+      --pvt-button-content-border: var(--pvt-flat-border);
+      --pvt-button-ripple-background: var(--rls-theme-font-100);
+    }
+
+    &--raised {
+      --rlc-spinner-color: var(--pvt-raised-font-color);
+      --pvt-button-content-font-color: var(--pvt-raised-font-color);
+      --pvt-button-content-background: var(--pvt-raised-background);
+      --pvt-button-content-border: var(--pvt-raised-border);
+      --pvt-button-ripple-background: var(--rls-theme-font-900);
+    }
+
+    &--gradient {
+      --rlc-spinner-color: var(--pvt-gradient-font-color);
+      --pvt-button-content-font-color: var(--pvt-gradient-font-color);
+      --pvt-button-content-background: var(--pvt-gradient-background);
+      --pvt-button-content-border: var(--pvt-gradient-border);
+      --pvt-button-ripple-background: var(--rls-theme-font-900);
+    }
+  }
+
+  &__description {
+    display: flex;
+    width: auto;
+    align-items: center;
+    column-gap: var(--rlc-button-description-gap, var(--rls-sizing-x2));
+    padding: 0rem var(--rls-sizing-x2);
+    line-height: initial;
+    font-size: var(--rls-button-font-size);
+    letter-spacing: var(--rls-button-letter-spacing);
+    font-weight: var(--rlc-button-font-weight, var(--rls-font-weight-medium));
+    text-transform: var(--rlc-button-label-text-transform, uppercase);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}
+
+@keyframes ripple-squarecenter {
+  0% {
+    transform: scale(0);
+  }
+
+  20% {
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
