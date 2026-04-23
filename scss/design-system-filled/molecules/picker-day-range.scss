@@ -1,0 +1,109 @@
+// Rolster Technology DayRangePicker Component
+// v2.1.3
+// @license MIT
+// Author: Rolster Developers
+// Created: 23/Abr/2026
+// Updated: 23/Abr/2026
+
+.rls-picker-day-range {
+  --pvt-span-nothover-background: transparent;
+  --pvt-span-nothover-font-color: inherit;
+  --pvt-span-background: transparent;
+
+  position: relative;
+  display: var(--rlc-picker-day-range-display, flex);
+  width: 100%;
+  max-width: 140rem;
+  flex-direction: column;
+  row-gap: var(--rls-sizing-x4);
+  box-sizing: border-box;
+  user-select: none;
+
+  &__title {
+    color: var(--rls-app-color-600);
+    text-align: center;
+    font-size: var(--rls-body-font-size);
+    letter-spacing: var(--rls-body-letter-spacing);
+    line-height: var(--rls-body-line-height);
+    font-weight: var(--rls-font-weight-bold);
+  }
+
+  &__header {
+    display: flex;
+  }
+
+  &__label {
+    width: 100%;
+    height: var(--rls-sizing-x20);
+    line-height: var(--rls-sizing-x20);
+    text-align: center;
+    font-size: var(--rls-caption-font-size);
+    color: var(--rls-app-color-600);
+    font-weight: var(--rls-font-weight-regular);
+    letter-spacing: var(--rls-caption-letter-spacing);
+  }
+
+  &__component {
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--rls-sizing-x3);
+  }
+
+  &__week {
+    display: flex;
+  }
+
+  &__element {
+    text-align: center;
+    padding: var(--rls-sizing-x1);
+    box-sizing: border-box;
+
+    &--ranged {
+      --pvt-span-nothover-background: var(--rls-theme-color-100);
+    }
+
+    &--end {
+      --pvt-span-nothover-background: var(--rls-app-color-900);
+      --pvt-span-nothover-font-color: var(--rls-app-color-050);
+    }
+
+    &--source {
+      --pvt-span-nothover-background: var(--rls-theme-color-500);
+      --pvt-span-nothover-font-color: var(--rls-app-color-050);
+    }
+
+    &--forbidden {
+      --pvt-span-background: var(--rls-app-color-200);
+
+      pointer-events: none;
+      opacity: 0.5;
+    }
+
+    &--disabled {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+
+    &__span {
+      position: relative;
+      display: block;
+      font-size: var(--rls-paragraph-font-size);
+      font-weight: var(--rls-font-weight-semibold);
+      border-radius: var(--rls-sizing-x4);
+      height: var(--rls-sizing-x18);
+      line-height: var(--rls-sizing-x18);
+      box-sizing: border-box;
+      letter-spacing: var(--rls-paragraph-letter-spacing);
+
+      &:not(:hover) {
+        background: var(--pvt-span-nothover-background);
+        color: var(--pvt-span-nothover-font-color);
+      }
+
+      &:hover {
+        color: var(--rls-app-color-050);
+        background: var(--rls-theme-color-900);
+      }
+    }
+  }
+}

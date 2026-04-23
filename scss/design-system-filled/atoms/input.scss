@@ -1,0 +1,97 @@
+// Rolster Technology Input Component
+// v1.1.3
+// @license MIT
+// Author: Rolster Developers
+// Created: 23/Abr/2026
+// Updated: 23/Abr/2026
+
+.rls-input {
+  --pvt-font-color: var(--rlc-input-font-color, var(--rls-app-color-900));
+  --pvt-font-size: var(--rlc-input-font-size, var(--rls-input-font-size));
+
+  --pvt-letter-spacing: var(
+    --rlc-input-letter-spacing,
+    var(--rls-input-letter-spacing)
+  );
+
+  --pvt-height: var(--rlc-input-height, var(--rls-sizing-x12));
+  --pvt-text-align: var(--rlc-input-text-align, left);
+
+  --pvt-value-font-color: var(--pvt-font-color);
+  --pvt-value-opacity: 1;
+  --pvt-component-font-color: transparent;
+
+  --rlc-amount-height: var(--pvt-height);
+  --rlc-amount-align-items: center;
+
+  position: relative;
+  width: var(--rlc-input-width, 100%);
+
+  &--focused {
+    --pvt-component-font-color: var(--pvt-font-color);
+    --pvt-value-font-color: transparent;
+  }
+
+  &--disabled {
+    --pvt-value-opacity: 0.5;
+  }
+
+  &__component {
+    position: relative;
+    width: 100%;
+    height: var(--pvt-height);
+    line-height: var(--pvt-height);
+    padding: 0rem;
+    cursor: text;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--pvt-component-font-color);
+    font-weight: var(--rls-font-weight-medium);
+    font-size: var(--pvt-font-size);
+    text-align: var(--pvt-text-align);
+    letter-spacing: var(--pvt-letter-spacing);
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      margin: 0rem;
+      -webkit-appearance: none;
+    }
+
+    &::placeholder {
+      color: var(--rls-app-color-400);
+    }
+
+    &::selection {
+      background: var(--rls-theme-color-700);
+      color: var(--rls-app-color-050);
+    }
+
+    &:read-only {
+      pointer-events: none;
+    }
+
+    &:disabled {
+      opacity: 0.5;
+    }
+  }
+
+  &__value {
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    width: 100%;
+    height: var(--pvt-height);
+    line-height: var(--pvt-height);
+    background: transparent;
+    pointer-events: none;
+    overflow: hidden;
+    white-space: nowrap;
+    opacity: var(--pvt-value-opacity);
+    color: var(--pvt-value-font-color);
+    font-weight: var(--rls-font-weight-medium);
+    font-size: var(--pvt-font-size);
+    text-align: var(--pvt-text-align);
+    letter-spacing: var(--pvt-letter-spacing);
+  }
+}

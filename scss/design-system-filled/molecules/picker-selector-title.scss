@@ -1,0 +1,54 @@
+// Rolster Technology PickerSelectorTitle Component
+// v1.0.2
+// @license MIT
+// Author: Rolster Developers
+// Created: 23/Abr/2026
+// Updated: 23/Abr/2026
+
+.rls-picker-selector-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--rlc-picker-selector-title-padding, 0rem);
+  box-sizing: border-box;
+  border-radius: var(--rlc-picker-selector-title-radius, 0rem);
+  background: var(--rlc-picker-selector-title-background, transparent);
+
+  &__label {
+    display: flex;
+    column-gap: var(--rls-sizing-x3);
+    justify-content: center;
+
+    & > span {
+      font-size: var(--rls-body-font-size);
+      font-weight: var(--rls-font-weight-bold);
+      cursor: default;
+      height: var(--rls-sizing-x14);
+      line-height: var(--rls-sizing-x14);
+
+      &:hover {
+        color: var(--rls-theme-color-500);
+      }
+    }
+  }
+
+  & > button {
+    --rlc-icon-dimension: var(--rls-sizing-x10);
+
+    background: var(--rls-app-color-050);
+    outline: none;
+    padding: var(--rls-sizing-x2);
+    border-radius: var(--rls-sizing-x4);
+    color: var(--rls-app-color-900);
+
+    &:hover {
+      background: var(--rls-app-color-300);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      background: transparent;
+      color: var(--rls-app-color-600);
+    }
+  }
+}

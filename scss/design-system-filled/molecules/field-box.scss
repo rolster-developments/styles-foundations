@@ -1,0 +1,142 @@
+// Rolster Technology FieldBox Component
+// v2.3.2
+// @license MIT
+// Author: Rolster Developers
+// Created: 23/Abr/2026
+// Updated: 23/Abr/2026
+
+.rls-field-box {
+  --pvt-body-background: var(--rlc-field-box-body-background, transparent);
+
+  --pvt-body-background-disabled: var(
+    --rlc-field-box-body-background-disabled,
+    var(--rls-app-color-100)
+  );
+
+  --pvt-body-border: var(
+    --rlc-field-box-body-border,
+    var(--rls-app-border-1-300)
+  );
+
+  --pvt-body-border-focused: var(
+    --rlc-field-box-body-border-focused,
+    var(--rls-theme-border-1-500)
+  );
+
+  --pvt-body-border-error: var(
+    --rlc-field-box-body-border-error,
+    var(--rls-danger-border-1-500)
+  );
+
+  --pvt-body-border-disabled: var(
+    --rlc-field-box-body-border-disabled,
+    var(--rls-app-border-1-300)
+  );
+
+  --pvt-body-shadow: none;
+
+  --pvt-label-font-color: var(
+    --rlc-field-box-label-font-color,
+    var(--rls-app-color-600)
+  );
+
+  --pvt-label-opacity: 1;
+  --pvt-body-opacity: 1;
+
+  position: relative;
+  display: flex;
+  width: var(--rlc-field-box-width, 100%);
+  flex-direction: column;
+  row-gap: var(--rls-sizing-x2);
+  padding: var(--rlc-field-box-padding, 0rem);
+  box-sizing: border-box;
+  transition: height 160ms 0ms var(--rls-standard-curve);
+
+  &--focused {
+    --pvt-body-shadow: var(
+      --rlc-field-box-body-shadow,
+      var(--rls-theme-shadow-500)
+    );
+
+    --pvt-label-font-color: var(--rls-theme-color-500);
+    --pvt-body-border: var(--pvt-body-border-focused);
+  }
+
+  &--error {
+    --pvt-body-shadow: var(
+      --rlc-field-box-body-shadow-error,
+      0px 0px 0px 3px var(--rls-danger-shadow-color-500)
+    );
+
+    --pvt-label-font-color: var(--rls-danger-color-500);
+    --pvt-body-border: var(--pvt-body-border-error);
+  }
+
+  &--disabled {
+    --pvt-body-opacity: 0.75;
+    --pvt-label-opacity: 0.5;
+
+    --pvt-body-background: var(--pvt-body-background-disabled);
+    --pvt-body-border: var(--pvt-body-border-disabled);
+  }
+
+  &--readonly {
+    --rlc-input-font-color: var(--rls-app-color-600);
+  }
+
+  &__label {
+    position: relative;
+    display: var(--rlc-field-box-label-display, block);
+    width: 100%;
+    padding: 0rem 5rem;
+    box-sizing: border-box;
+    color: var(--pvt-label-font-color);
+    opacity: var(--pvt-label-opacity);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-weight: var(--rls-font-weight-medium);
+    font-size: var(--rls-smalltext-font-size);
+    letter-spacing: var(--rls-smalltext-letter-spacing);
+    min-height: var(--rls-smalltext-line-height);
+    line-height: var(--rls-smalltext-line-height);
+
+    span {
+      color: var(--rls-danger-color-500);
+    }
+  }
+
+  &__body {
+    display: flex;
+    align-items: center;
+    column-gap: var(--rls-sizing-x2);
+    overflow: hidden;
+    background: var(--pvt-body-background);
+    opacity: var(--pvt-body-opacity);
+    border-radius: var(--rlc-field-box-body-radius, var(--rls-sizing-x3));
+    padding: var(--rlc-field-box-body-padding, 0rem);
+    box-sizing: border-box;
+    border: var(--pvt-body-border);
+    box-shadow: var(--pvt-body-shadow);
+  }
+
+  &__helper {
+    color: var(--rls-app-color-400);
+    padding: 0rem 5rem;
+    box-sizing: border-box;
+    font-weight: var(--rls-font-weight-medium);
+    font-size: var(--rls-overline-font-size);
+    letter-spacing: var(--rls-overline-letter-spacing);
+    min-height: var(--rls-overline-line-height);
+    line-height: var(--rls-overline-line-height);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__error {
+    display: var(--rlc-field-box-error-display, block);
+    padding: 0rem var(--rls-sizing-x4);
+    box-sizing: border-box;
+  }
+}

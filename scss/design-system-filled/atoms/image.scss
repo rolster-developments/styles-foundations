@@ -1,0 +1,37 @@
+// Rolster Technology Image Component
+// v2.0.0
+// @license MIT
+// Author: Rolster Developers
+// Created: 23/Abr/2026
+// Updated: 23/Abr/2026
+
+.rls-image {
+  --pvt-background: transparent;
+  --pvt-width: var(--rlc-image-width, 100%);
+  --pvt-height: var(--rlc-image-height, 100%);
+  --pvt-img-display: none;
+
+  --rlc-skeleton-width: var(--pvt-width);
+  --rlc-skeleton-height: var(--pvt-height);
+
+  width: var(--pvt-width);
+  height: var(--pvt-height);
+  overflow: hidden;
+
+  &--complet {
+    --pvt-img-display: block;
+
+    background: var(--pvt-background);
+  }
+
+  &[rls-theme] {
+    --pvt-background: var(--rls-theme-color-600);
+  }
+
+  & > img {
+    display: var(--pvt-img-display);
+    width: var(--pvt-width);
+    height: var(--pvt-height);
+    content-visibility: auto;
+  }
+}

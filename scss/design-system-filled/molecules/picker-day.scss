@@ -1,0 +1,117 @@
+// Rolster Technology DayPicker Component
+// v2.1.1
+// @license MIT
+// Author: Rolster Developers
+// Created: 23/Abr/2026
+// Updated: 23/Abr/2026
+
+.rls-picker-day {
+  --pvt-span-background: transparent;
+  --pvt-span-font-color: var(--rls-app-color-900);
+  --pvt-span-border: var(--rls-app-border-1-transparent);
+  --pvt-span-box-shadow: none;
+
+  position: relative;
+  display: var(--rlc-picker-day-display, flex);
+  width: 100%;
+  max-width: 140rem;
+  flex-direction: column;
+  row-gap: var(--rls-sizing-x2);
+  box-sizing: border-box;
+  user-select: none;
+
+  &__header {
+    display: flex;
+  }
+
+  &__label {
+    width: 100%;
+    height: var(--rls-sizing-x20);
+    line-height: var(--rls-sizing-x20);
+    text-align: center;
+    font-size: var(--rls-caption-font-size);
+    color: var(--rls-app-color-600);
+    font-weight: var(--rls-font-weight-regular);
+    letter-spacing: var(--rls-caption-letter-spacing);
+  }
+
+  &__component {
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--rls-sizing-x3);
+  }
+
+  &__week {
+    display: flex;
+  }
+
+  &__element {
+    text-align: center;
+    padding: var(--rls-sizing-x1);
+    box-sizing: border-box;
+
+    &--today {
+      --pvt-span-background: transparent;
+      --pvt-span-font-color: var(--rls-theme-color-500);
+      --pvt-span-border: none;
+      --pvt-span-box-shadow: var(--rls-theme-shadow-500);
+    }
+
+    &--selected {
+      --pvt-span-background: var(--rls-theme-color-200);
+      --pvt-span-font-color: var(--rls-theme-color-600);
+      --pvt-span-border: none;
+      --pvt-span-box-shadow: none;
+    }
+
+    &--focused {
+      --pvt-span-background: var(--rls-theme-gradient-500);
+      --pvt-span-font-color: var(--rls-theme-color-050);
+      --pvt-span-border: none;
+      --pvt-span-box-shadow: none;
+    }
+
+    &--forbidden {
+      --pvt-span-background: var(--rls-app-color-100);
+      --pvt-span-font-color: var(--rls-app-color-400);
+      --pvt-span-border: var(--rls-app-border-1-100);
+      --pvt-span-box-shadow: none;
+
+      pointer-events: none;
+    }
+
+    &--disabled {
+      --pvt-span-background: transparent;
+      --pvt-span-font-color: var(--rls-app-color-400);
+      --pvt-span-border: var(--rls-app-border-1-transparent);
+      --pvt-span-box-shadow: none;
+
+      pointer-events: none;
+    }
+
+    &__span {
+      position: relative;
+      display: block;
+      font-size: var(--rls-paragraph-font-size);
+      font-weight: var(--rls-font-weight-semibold);
+      border-radius: var(--rls-sizing-x4);
+      height: var(--rls-sizing-x18);
+      line-height: var(--rls-sizing-x18);
+      box-sizing: border-box;
+      letter-spacing: var(--rls-paragraph-letter-spacing);
+      box-shadow: var(--pvt-span-box-shadow);
+
+      &:not(:hover) {
+        color: var(--pvt-span-font-color);
+        border: var(--pvt-span-border);
+        background: var(--pvt-span-background);
+      }
+
+      &:hover {
+        background: var(--rls-theme-color-800);
+        color: var(--rls-theme-color-050);
+        border: var(--rls-theme-border-1-800);
+      }
+    }
+  }
+}
