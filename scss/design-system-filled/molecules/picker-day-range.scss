@@ -63,25 +63,25 @@
     }
 
     &--end {
-      --pvt-span-nothover-background: var(--rls-app-color-900);
       --pvt-span-nothover-font-color: var(--rls-app-color-050);
+      --pvt-span-nothover-background: var(--rls-app-color-900);
     }
 
     &--source {
-      --pvt-span-nothover-background: var(--rls-theme-color-500);
       --pvt-span-nothover-font-color: var(--rls-app-color-050);
+      --pvt-span-nothover-background: var(--rls-theme-color-500);
     }
 
     &--forbidden {
       --pvt-span-background: var(--rls-app-color-200);
 
-      pointer-events: none;
       opacity: 0.5;
+      pointer-events: none;
     }
 
     &--disabled {
-      pointer-events: none;
       opacity: 0.5;
+      pointer-events: none;
     }
 
     &__span {
@@ -96,8 +96,8 @@
       letter-spacing: var(--rls-paragraph-letter-spacing);
 
       &:not(:hover) {
-        background: var(--pvt-span-nothover-background);
         color: var(--pvt-span-nothover-font-color);
+        background: var(--pvt-span-nothover-background);
       }
 
       &:hover {

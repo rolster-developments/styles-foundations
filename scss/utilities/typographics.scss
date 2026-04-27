@@ -1,35 +1,40 @@
 // Rolster Technology Typographics Utilities
-// v2.1.5
+// v2.2.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 09/Abr/2026
+// Updated: 24/Abr/2026
 
 @mixin typographic($name, $key) {
-  .rls-#{$name}-default {
+  .rls-#{$name}-font-default {
     font-size: var(--rls-#{$key}-font-size);
     letter-spacing: var(--rls-#{$key}-letter-spacing);
     min-height: var(--rls-#{$key}-line-height);
     line-height: var(--rls-#{$key}-line-height);
   }
 
-  .rls-#{$name}-regular {
-    @extend .rls-#{$name}-default;
+  .rls-#{$name}-font {
+    @extend .rls-#{$name}-font-default;
+    font-weight: var(--rls-#{$key}-font-weight);
+  }
+
+  .rls-#{$name}-font-regular {
+    @extend .rls-#{$name}-font-default;
     font-weight: var(--rls-font-weight-regular);
   }
 
-  .rls-#{$name}-medium {
-    @extend .rls-#{$name}-default;
+  .rls-#{$name}-font-medium {
+    @extend .rls-#{$name}-font-default;
     font-weight: var(--rls-font-weight-medium);
   }
 
-  .rls-#{$name}-semibold {
-    @extend .rls-#{$name}-default;
+  .rls-#{$name}-font-semibold {
+    @extend .rls-#{$name}-font-default;
     font-weight: var(--rls-font-weight-semibold);
   }
 
-  .rls-#{$name}-bold {
-    @extend .rls-#{$name}-default;
+  .rls-#{$name}-font-bold {
+    @extend .rls-#{$name}-font-default;
     font-weight: var(--rls-font-weight-bold);
   }
 }
@@ -37,77 +42,95 @@
 :root {
   --rls-app-font-size: 2px;
 
-  --rls-heading1-font-size: 16rem;
-  --rls-heading1-letter-spacing: 0.0135rem;
-  --rls-heading1-line-height: 17.5rem;
+  --rls-heading1-font-size: 32rem;
+  --rls-heading1-letter-spacing: -4%;
+  --rls-heading1-line-height: 40rem;
+  --rls-heading1-font-weight: 700;
 
-  --rls-heading2-font-size: 14.75rem;
-  --rls-heading2-letter-spacing: 0.0135rem;
-  --rls-heading2-line-height: 16rem;
+  --rls-heading2-font-size: 24rem;
+  --rls-heading2-letter-spacing: -4%;
+  --rls-heading2-line-height: 32rem;
+  --rls-heading2-font-weight: 700;
 
-  --rls-heading3-font-size: 13.525rem;
-  --rls-heading3-letter-spacing: 0.0135rem;
-  --rls-heading3-line-height: 15rem;
+  --rls-heading3-font-size: 21rem;
+  --rls-heading3-letter-spacing: -3%;
+  --rls-heading3-line-height: 28rem;
+  --rls-heading3-font-weight: 700;
 
-  --rls-heading4-font-size: 12.125rem;
-  --rls-heading4-letter-spacing: 0.0135rem;
-  --rls-heading4-line-height: 13.5rem;
+  --rls-heading4-font-size: 17rem;
+  --rls-heading4-letter-spacing: -3%;
+  --rls-heading4-line-height: 24rem;
+  --rls-heading4-font-weight: 700;
 
-  --rls-heading5-font-size: 11rem;
-  --rls-heading5-letter-spacing: 0.0135rem;
-  --rls-heading5-line-height: 12.125rem;
+  --rls-heading5-font-size: 14rem;
+  --rls-heading5-letter-spacing: -2%;
+  --rls-heading5-line-height: 20rem;
+  --rls-heading5-font-weight: 600;
 
-  --rls-heading6-font-size: 10rem;
-  --rls-heading6-letter-spacing: 0.0135rem;
-  --rls-heading6-line-height: 11rem;
+  --rls-heading6-font-size: 12rem;
+  --rls-heading6-letter-spacing: -2%;
+  --rls-heading6-line-height: 16rem;
+  --rls-heading6-font-weight: 600;
 
-  --rls-title-font-size: 9.25rem;
-  --rls-title-letter-spacing: 0.0375rem;
-  --rls-title-line-height: 10.25rem;
+  --rls-title-font-size: 9.5rem;
+  --rls-title-letter-spacing: -1%;
+  --rls-title-line-height: 11rem;
+  --rls-title-font-weight: 600;
 
   --rls-subtitle-font-size: 8.75rem;
-  --rls-subtitle-letter-spacing: 0.0375rem;
-  --rls-subtitle-line-height: 9.75rem;
+  --rls-subtitle-letter-spacing: -1%;
+  --rls-subtitle-line-height: 10.5rem;
+  --rls-subtitle-font-weight: 500;
 
   --rls-body-font-size: 8rem;
-  --rls-body-letter-spacing: 0.0125rem;
-  --rls-body-line-height: 9rem;
+  --rls-body-letter-spacing: -1%;
+  --rls-body-line-height: 9.5rem;
+  --rls-body-font-weight: 400;
 
   --rls-input-font-size: 7.65rem;
-  --rls-input-letter-spacing: 0.0125rem;
+  --rls-input-letter-spacing: -1%;
   --rls-input-line-height: 8.125rem;
+  --rls-input-font-weight: 500;
 
   --rls-paragraph-font-size: 7.325rem;
-  --rls-paragraph-letter-spacing: 0.02625em;
-  --rls-paragraph-line-height: 8rem;
+  --rls-paragraph-letter-spacing: -1%;
+  --rls-paragraph-line-height: 8.5rem;
+  --rls-paragraph-font-weight: 400;
 
-  --rls-button-font-size: 7rem;
-  --rls-button-letter-spacing: 0.0125rem;
-  --rls-button-line-height: 7.875rem;
+  --rls-button-font-size: 7.5rem;
+  --rls-button-letter-spacing: -1%;
+  --rls-button-line-height: 9rem;
+  --rls-button-font-weight: 600;
 
   --rls-label-font-size: 7rem;
-  --rls-label-letter-spacing: 0.0125rem;
-  --rls-label-line-height: 7.875rem;
+  --rls-label-letter-spacing: -1%;
+  --rls-label-line-height: 8.25rem;
+  --rls-label-font-weight: 500;
 
-  --rls-span-font-size: 6.425rem;
-  --rls-span-letter-spacing: 0.0175rem;
-  --rls-span-line-height: 7.5rem;
+  --rls-span-font-size: 6.5rem;
+  --rls-span-letter-spacing: -1%;
+  --rls-span-line-height: 8rem;
+  --rls-span-font-weight: 400;
 
   --rls-smalltext-font-size: 6.125rem;
-  --rls-smalltext-letter-spacing: 0.0125rem;
-  --rls-smalltext-line-height: 7.125rem;
+  --rls-smalltext-letter-spacing: -1%;
+  --rls-smalltext-line-height: 7.5rem;
+  --rls-smalltext-font-weight: 500;
 
   --rls-caption-font-size: 5.575rem;
-  --rls-caption-letter-spacing: 0.0275rem;
-  --rls-caption-line-height: 6.25rem;
+  --rls-caption-letter-spacing: -1%;
+  --rls-caption-line-height: 6.75rem;
+  --rls-caption-font-weight: 400;
 
   --rls-overline-font-size: 5.125rem;
-  --rls-overline-letter-spacing: 0.0425rem;
-  --rls-overline-line-height: 5.825rem;
+  --rls-overline-letter-spacing: -1%;
+  --rls-overline-line-height: 6.25rem;
+  --rls-overline-font-weight: 500;
 
-  --rls-tiny-font-size: 4.325rem;
-  --rls-tiny-letter-spacing: 0.0425rem;
-  --rls-tiny-line-height: 5rem;
+  --rls-tiny-font-size: 4.5rem;
+  --rls-tiny-letter-spacing: -1%;
+  --rls-tiny-line-height: 5.25rem;
+  --rls-tiny-font-weight: 400;
 }
 
 h1 {
@@ -115,6 +138,7 @@ h1 {
   letter-spacing: var(--rls-heading1-letter-spacing);
   min-height: var(--rls-heading1-line-height);
   line-height: var(--rls-heading1-line-height);
+  font-weight: var(--rls-heading1-font-weight);
 }
 
 h2 {
@@ -122,6 +146,7 @@ h2 {
   letter-spacing: var(--rls-heading2-letter-spacing);
   min-height: var(--rls-heading2-line-height);
   line-height: var(--rls-heading2-line-height);
+  font-weight: var(--rls-heading2-font-weight);
 }
 
 h3 {
@@ -136,6 +161,7 @@ h4 {
   letter-spacing: var(--rls-heading4-letter-spacing);
   min-height: var(--rls-heading4-line-height);
   line-height: var(--rls-heading4-line-height);
+  font-weight: var(--rls-heading4-font-weight);
 }
 
 h5 {
@@ -143,6 +169,7 @@ h5 {
   letter-spacing: var(--rls-heading5-letter-spacing);
   min-height: var(--rls-heading5-line-height);
   line-height: var(--rls-heading5-line-height);
+  font-weight: var(--rls-heading5-font-weight);
 }
 
 h6 {
@@ -150,13 +177,7 @@ h6 {
   letter-spacing: var(--rls-heading6-letter-spacing);
   min-height: var(--rls-heading6-line-height);
   line-height: var(--rls-heading6-line-height);
-}
-
-p {
-  font-size: var(--rls-paragraph-font-size);
-  letter-spacing: var(--rls-paragraph-letter-spacing);
-  min-height: var(--rls-paragraph-line-height);
-  line-height: var(--rls-paragraph-line-height);
+  font-weight: var(--rls-heading6-font-weight);
 }
 
 button {
@@ -164,6 +185,17 @@ button {
   letter-spacing: var(--rls-button-letter-spacing);
   min-height: var(--rls-button-line-height);
   line-height: var(--rls-button-line-height);
+  font-weight: var(--rls-button-font-weight);
+}
+
+input,
+textarea,
+select {
+  font-size: var(--rls-input-font-size);
+  letter-spacing: var(--rls-input-letter-spacing);
+  min-height: var(--rls-input-line-height);
+  line-height: var(--rls-input-line-height);
+  font-weight: var(--rls-input-font-weight);
 }
 
 @include typographic('h1', 'heading1');

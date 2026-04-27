@@ -11,14 +11,15 @@
 
   position: relative;
   display: flex;
+  flex: 0 0 auto;
   width: var(--rlc-avatar-width, var(--rls-sizing-x24));
   height: var(--rlc-avatar-height, var(--rls-sizing-x24));
   justify-content: center;
   align-items: center;
-  border-radius: var(--rlc-avatar-radius, var(--rls-sizing-x4));
+  border-radius: var(--rlc-avatar-radius, var(--rls-sizing-x6));
   font-size: var(--rlc-avatar-font-size, var(--rls-title-font-size));
-  color: var(--rlc-avatar-color, var(--rls-theme-color-050));
-  background: var(--rlc-avatar-background, var(--rls-theme-gradient-500));
+  color: var(--rlc-avatar-color, var(--rls-app-color-950));
+  background: var(--rlc-avatar-background, var(--rls-theme-color-200));
   overflow: hidden;
 
   &--skeleton {
@@ -31,11 +32,6 @@
 
   &--rounded {
     border-radius: 50%;
-  }
-
-  &--contrasted {
-    color: var(--rlc-avatar-color, var(--rls-theme-color-500));
-    background: var(--rlc-avatar-background, var(--rls-theme-color-100));
   }
 
   & > span {

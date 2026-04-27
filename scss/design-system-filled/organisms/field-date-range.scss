@@ -18,18 +18,6 @@
     var(--rls-input-letter-spacing)
   );
 
-  --pvt-action-dimension: var(
-    --rlc-field-box-action-dimension,
-    var(--rls-sizing-x12)
-  );
-
-  --pvt-action-background: var(
-    --rlc-field-box-action-background,
-    var(--rls-app-color-200)
-  );
-
-  --pvt-control-width: calc(100% - var(--pvt-action-dimension));
-
   position: relative;
   width: 100%;
   box-sizing: border-box;
@@ -40,7 +28,7 @@
 
   &__control {
     position: relative;
-    width: var(--pvt-control-width);
+    width: 100%;
     height: var(--rls-sizing-x12);
     line-height: var(--rls-sizing-x12);
     padding: 0rem;
@@ -62,32 +50,11 @@
       cursor: not-allowed;
     }
   }
-
-  &__action {
-    --rlc-icon-dimension: calc(var(--pvt-action-dimension) - 2rem);
-
-    width: var(--pvt-action-dimension);
-    height: var(--pvt-action-dimension);
-    color: var(--rls-app-color-600);
-    padding: 0rem;
-    outline: none;
-    border-radius: var(--rlc-field-box-action-radius, var(--rls-sizing-x2));
-    background: var(--pvt-action-background);
-
-    &:disabled {
-      opacity: 0.5;
-      background: transparent;
-    }
-
-    .rls-icon {
-      margin: 1rem;
-    }
-  }
 }
 
 .rls-field-date-range-modal {
   --rlc-modal-background: transparent;
   --rlc-modal-max-width: 150rem;
-  --rlc-picker-date-range-radius: var(--rls-sizing-x4);
+  --rlc-picker-date-range-radius: var(--rls-sizing-x6);
   --rlc-picker-date-range-background: var(--rls-app-color-050);
 }

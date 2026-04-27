@@ -38,7 +38,7 @@
   --pvt-raised-font-color: var(--rls-theme-color-050);
   --pvt-raised-border: none;
 
-  --pvt-gradient-background: var(--rls-theme-gradient-500);
+  --pvt-gradient-background: var(--rls-theme-color-500);
   --pvt-gradient-font-color: var(--rls-theme-color-050);
   --pvt-gradient-border: none;
 
@@ -127,11 +127,11 @@
     align-items: center;
     overflow: hidden;
     column-gap: var(--rlc-button-content-gap, var(--rls-sizing-x2));
-    line-height: var(--rls-sizing-x20);
-    height: var(--rls-sizing-x20);
-    padding: var(--rlc-button-content-padding, 0rem var(--rls-sizing-x4));
+    line-height: var(--rls-sizing-x24);
+    height: var(--rls-sizing-x24);
+    padding: var(--rlc-button-content-padding, 0rem var(--rls-sizing-x6));
     box-sizing: border-box;
-    border-radius: var(--rlc-button-content-radius, var(--rls-sizing-x2));
+    border-radius: var(--rlc-button-content-radius, var(--rls-sizing-x6));
     box-shadow: var(--pvt-button-content-box-shadow);
     color: var(--pvt-button-content-font-color);
     border: var(--pvt-button-content-border);

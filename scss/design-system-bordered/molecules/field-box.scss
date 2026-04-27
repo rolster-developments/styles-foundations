@@ -1,9 +1,9 @@
 // Rolster Technology FieldBox Component
-// v2.3.2
+// v2.3.3
 // @license MIT
 // Author: Rolster Developers
 // Created: 08/Sep/2022
-// Updated: 29/Nov/2025
+// Updated: 25/Abr/2026
 
 .rls-field-box {
   --pvt-body-background: var(--rlc-field-box-body-background, transparent);
@@ -38,6 +38,16 @@
   --pvt-label-font-color: var(
     --rlc-field-box-label-font-color,
     var(--rls-app-color-600)
+  );
+
+  --pvt-action-dimension: var(
+    --rlc-field-box-action-dimension,
+    var(--rls-sizing-x12)
+  );
+
+  --pvt-action-background: var(
+    --rlc-field-box-action-background,
+    var(--rls-app-color-200)
   );
 
   --pvt-label-opacity: 1;
@@ -118,6 +128,27 @@
     box-sizing: border-box;
     border: var(--pvt-body-border);
     box-shadow: var(--pvt-body-shadow);
+  }
+
+  &__action {
+    --rlc-icon-dimension: calc(var(--pvt-action-dimension) - 2rem);
+
+    display: flex;
+    flex: 0 0 auto;
+    width: var(--pvt-action-dimension);
+    height: var(--pvt-action-dimension);
+    align-items: center;
+    justify-content: center;
+    color: var(--rls-app-color-600);
+    padding: 0rem;
+    outline: none;
+    border-radius: var(--rlc-field-box-action-radius, var(--rls-sizing-x2));
+    background: var(--pvt-action-background);
+
+    &:disabled {
+      opacity: 0.5;
+      background: transparent;
+    }
   }
 
   &__helper {

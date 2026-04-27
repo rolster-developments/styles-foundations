@@ -35,33 +35,33 @@
     }
 
     &:hover {
-      background: var(--rls-theme-color-900);
       color: var(--rls-theme-font-900);
+      background: var(--rls-theme-color-900);
     }
 
     &--selected {
-      --pvt-component-background: var(--rls-theme-color-200);
       --pvt-component-font-color: var(--rls-theme-color-600);
+      --pvt-component-background: var(--rls-theme-color-200);
     }
 
     &--focused {
-      --pvt-component-background: var(--rls-theme-gradient-500);
       --pvt-component-font-color: var(--rls-theme-color-050);
+      --pvt-component-background: var(--rls-theme-color-500);
     }
 
     &--disabled {
-      --pvt-component-background: transparent;
       --pvt-component-font-color: var(--rls-app-color-400);
+      --pvt-component-background: transparent;
 
       pointer-events: none;
     }
   }
 
   &__span {
-    font-weight: var(--rls-font-weight-semibold);
-    font-size: var(--rls-caption-font-size);
     cursor: default;
+    font-size: var(--rls-caption-font-size);
+    letter-spacing: var(--rls-caption-letter-spacing);
+    font-weight: var(--rls-font-weight-semibold);
     pointer-events: none;
-    letter-spacing: 0.325rem;
   }
 }

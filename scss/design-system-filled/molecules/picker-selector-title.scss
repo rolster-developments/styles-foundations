@@ -20,11 +20,12 @@
     justify-content: center;
 
     & > span {
-      font-size: var(--rls-body-font-size);
-      font-weight: var(--rls-font-weight-bold);
       cursor: default;
       height: var(--rls-sizing-x14);
       line-height: var(--rls-sizing-x14);
+      font-size: var(--rls-body-font-size);
+      letter-spacing: var(--rls-body-letter-spacing);
+      font-weight: var(--rls-font-weight-bold);
 
       &:hover {
         color: var(--rls-theme-color-500);

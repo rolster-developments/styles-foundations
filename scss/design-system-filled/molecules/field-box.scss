@@ -6,38 +6,46 @@
 // Updated: 23/Abr/2026
 
 .rls-field-box {
-  --pvt-body-background: var(--rlc-field-box-body-background, transparent);
+  --pvt-body-background: var(
+    --rlc-field-box-body-background,
+    var(--rls-app-color-200)
+  );
+
+  --pvt-body-background-focused: var(
+    --rlc-field-box-body-background-focused,
+    var(--rls-app-color-050)
+  );
 
   --pvt-body-background-disabled: var(
     --rlc-field-box-body-background-disabled,
     var(--rls-app-color-100)
   );
 
-  --pvt-body-border: var(
-    --rlc-field-box-body-border,
-    var(--rls-app-border-1-300)
+  --pvt-body-background-error: var(
+    --rlc-field-box-body-background-error,
+    var(--rls-danger-color-100)
   );
 
-  --pvt-body-border-focused: var(
-    --rlc-field-box-body-border-focused,
-    var(--rls-theme-border-1-500)
-  );
-
-  --pvt-body-border-error: var(
-    --rlc-field-box-body-border-error,
-    var(--rls-danger-border-1-500)
-  );
-
-  --pvt-body-border-disabled: var(
-    --rlc-field-box-body-border-disabled,
-    var(--rls-app-border-1-300)
-  );
-
-  --pvt-body-shadow: none;
+  --pvt-body-shadow: var(--rls-app-shadow-center-2);
 
   --pvt-label-font-color: var(
     --rlc-field-box-label-font-color,
     var(--rls-app-color-600)
+  );
+
+  --pvt-action-dimension: var(
+    --rlc-field-box-action-dimension,
+    var(--rls-sizing-x12)
+  );
+
+  --pvt-action-background: var(
+    --rlc-field-box-action-background,
+    var(--rls-app-color-200)
+  );
+
+  --pvt-action-background-hover: var(
+    --rlc-field-box-action-background-hover,
+    var(--rls-app-color-300)
   );
 
   --pvt-label-opacity: 1;
@@ -53,31 +61,19 @@
   transition: height 160ms 0ms var(--rls-standard-curve);
 
   &--focused {
-    --pvt-body-shadow: var(
-      --rlc-field-box-body-shadow,
-      var(--rls-theme-shadow-500)
-    );
-
     --pvt-label-font-color: var(--rls-theme-color-500);
-    --pvt-body-border: var(--pvt-body-border-focused);
+    --pvt-body-background: var(--pvt-body-background-focused);
   }
 
   &--error {
-    --pvt-body-shadow: var(
-      --rlc-field-box-body-shadow-error,
-      0px 0px 0px 3px var(--rls-danger-shadow-color-500)
-    );
-
     --pvt-label-font-color: var(--rls-danger-color-500);
-    --pvt-body-border: var(--pvt-body-border-error);
   }
 
   &--disabled {
+    --pvt-label-opacity: 0.25;
     --pvt-body-opacity: 0.75;
-    --pvt-label-opacity: 0.5;
 
     --pvt-body-background: var(--pvt-body-background-disabled);
-    --pvt-body-border: var(--pvt-body-border-disabled);
   }
 
   &--readonly {
@@ -88,7 +84,7 @@
     position: relative;
     display: var(--rlc-field-box-label-display, block);
     width: 100%;
-    padding: 0rem 5rem;
+    padding: 0rem var(--rls-sizing-x3);
     box-sizing: border-box;
     color: var(--pvt-label-font-color);
     opacity: var(--pvt-label-opacity);
@@ -113,18 +109,42 @@
     overflow: hidden;
     background: var(--pvt-body-background);
     opacity: var(--pvt-body-opacity);
-    border-radius: var(--rlc-field-box-body-radius, var(--rls-sizing-x3));
+    border-radius: var(--rlc-field-box-body-radius, var(--rls-sizing-x4));
     padding: var(--rlc-field-box-body-padding, 0rem);
     box-sizing: border-box;
-    border: var(--pvt-body-border);
     box-shadow: var(--pvt-body-shadow);
+  }
+
+  &__action {
+    --rlc-icon-dimension: calc(var(--pvt-action-dimension) - 4rem);
+
+    display: flex;
+    flex: 0 0 auto;
+    width: var(--pvt-action-dimension);
+    height: var(--pvt-action-dimension);
+    align-items: center;
+    justify-content: center;
+    color: var(--rls-app-color-600);
+    padding: 0rem;
+    outline: none;
+    border-radius: var(--rlc-field-box-action-radius, var(--rls-sizing-x2));
+    background: var(--pvt-action-background);
+
+    &:hover {
+      background: var(--pvt-action-background-hover);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      background: transparent;
+    }
   }
 
   &__helper {
     color: var(--rls-app-color-400);
-    padding: 0rem 5rem;
+    padding: 0rem var(--rls-sizing-x3);
     box-sizing: border-box;
-    font-weight: var(--rls-font-weight-medium);
+    font-weight: var(--rls-overline-font-weight);
     font-size: var(--rls-overline-font-size);
     letter-spacing: var(--rls-overline-letter-spacing);
     min-height: var(--rls-overline-line-height);

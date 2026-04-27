@@ -22,13 +22,13 @@
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
-    padding: var(--rls-sizing-x4);
-    border-radius: var(--rls-sizing-x4);
+    padding: var(--rls-sizing-x4) var(--rls-sizing-x6);
+    border-radius: var(--rls-sizing-x6);
 
     & > span {
       font-size: var(--rls-body-font-size);
+      letter-spacing: var(--rls-body-letter-spacing);
       font-weight: var(--rls-font-weight-semibold);
-      letter-spacing: 0.325rem;
       color: var(--rls-app-color-900);
     }
   }
@@ -81,33 +81,33 @@
     }
 
     &:hover {
-      background: var(--rls-theme-color-900);
       color: var(--rls-theme-color-050);
+      background: var(--rls-theme-color-900);
     }
 
     &--selected {
-      --pvt-component-background: var(--rls-theme-color-200);
       --pvt-component-font-color: var(--rls-theme-color-600);
+      --pvt-component-background: var(--rls-theme-color-200);
     }
 
     &--focused {
-      --pvt-component-background: var(--rls-theme-gradient-500);
       --pvt-component-font-color: var(--rls-theme-color-050);
+      --pvt-component-background: var(--rls-theme-color-500);
     }
 
     &--disabled {
-      --pvt-span-background: var(--rls-app-color-100);
       --pvt-component-font-color: var(--rls-app-color-400);
+      --pvt-span-background: var(--rls-app-color-100);
 
       pointer-events: none;
     }
   }
 
   &__span {
+    cursor: default;
     font-size: var(--rls-body-font-size);
     letter-spacing: var(--rls-body-letter-spacing);
     font-weight: var(--rls-font-weight-medium);
-    cursor: default;
     pointer-events: none;
   }
 }

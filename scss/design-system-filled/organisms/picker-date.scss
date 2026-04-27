@@ -17,8 +17,9 @@
   background: var(--rlc-picker-date-background, transparent);
 
   &__header {
-    --rlc-picker-selector-title-padding: var(--rls-sizing-x4);
-    --rlc-picker-selector-title-radius: var(--rls-sizing-x4);
+    --rlc-picker-selector-title-padding: var(--rls-sizing-x4)
+      var(--rls-sizing-x6);
+    --rlc-picker-selector-title-radius: var(--rls-sizing-x6);
     --rlc-picker-selector-title-background: var(--rls-app-color-200);
 
     display: flex;
@@ -31,14 +32,17 @@
   &__title {
     height: var(--rls-sizing-x14);
     line-height: var(--rls-sizing-x14);
-    color: var(--rls-app-color-700);
+    font-size: var(--rls-paragraph-font-size);
     text-align: center;
     cursor: default;
-    font-weight: var(--rls-font-weight-bold);
-    font-size: var(--rls-paragraph-font-size);
+    color: var(--rls-app-color-700);
 
     &:hover {
       color: var(--rls-theme-color-500);
+    }
+
+    & > span {
+      font-weight: var(--rls-font-weight-bold);
     }
   }
 
