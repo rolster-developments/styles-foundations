@@ -1,9 +1,9 @@
 // Rolster Technology Datatable Component
-// v2.6.10
+// v2.6.11
 // @license MIT
 // Author: Rolster Developers
 // Created: 23/Abr/2026
-// Updated: 23/Abr/2026
+// Updated: 27/Abr/2026
 
 @mixin datatable_cell_vars() {
   --rlc-field-box-body-background: transparent;
@@ -69,20 +69,19 @@
     @include datatable_cell_control();
   }
 
-  &.rls-align-center {
-    justify-content: center;
-  }
-
   & > span {
     display: block;
-    width: 100%;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
   }
 
   & > p {
-    padding: var(--rls-sizing-x2) 0rem;
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 
   .rls-field-list {
@@ -134,7 +133,7 @@
   --pvt-datatable-header-padding-right: var(--pvt-datatable-padding-scroll);
   --pvt-datatable-header-background: var(
     --rlc-datatable-header-background,
-    var(--rls-app-color-100)
+    var(--rls-app-color-200)
   );
 
   --pvt-datatable-row-background: var(
@@ -157,7 +156,7 @@
   --rlc-amount-font-size: var(--pvt-datatable-font-size);
   --rlc-amount-width: 100%;
 
-  --rlc-badge-padding: 0.5rem 1.5rem;
+  --rlc-badge-padding: 0.5rem var(--rls-sizing-x2);
 
   --rlc-ballot-padding: 0rem;
   --rlc-ballot-component-row-gap: var(--rls-sizing-x1);
@@ -254,7 +253,8 @@
     position: relative;
     display: flex;
     min-height: var(--rls-sizing-x20);
-    align-items: center;
+    align-items: var(--rlc-datatable-align-items, center);
+    justify-content: var(--rlc-datatable-justify-content, flex-start);
     text-align: left;
     white-space: nowrap;
     padding: var(--rls-sizing-x2) 0rem;
@@ -339,11 +339,16 @@
     position: relative;
     display: flex;
     min-height: var(--rls-sizing-x20);
-    align-items: center;
+    align-items: var(--rlc-datatable-align-items, center);
+    justify-content: var(--rlc-datatable-justify-content, flex-start);
     cursor: default;
     text-align: left;
     padding: var(--rls-sizing-x2) 0rem;
     font-size: var(--pvt-datatable-font-size);
+    font-weight: var(
+      --rlc-datatable-cell-font-weight,
+      var(--rls-font-weight-regular)
+    );
     letter-spacing: var(--pvt-datatable-letter-spacing);
 
     @include datatable_cell_styles();

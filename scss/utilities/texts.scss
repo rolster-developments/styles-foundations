@@ -1,14 +1,15 @@
 // Rolster Technology Text Utilities
-// v2.1.3
+// v2.1.4
 // @license MIT
 // Author: Rolster Developers
 // Created: 08/Sep/2022
-// Updated: 17/Dic/2025
+// Updated: 27/Abr/2026
 
 .rls-align-center {
   --rlc-amount-text-align: center;
   --rlc-input-text-align: center;
   --rlc-poster-text-align: center;
+  --rlc-datatable-justify-content: center;
 
   text-align: center !important;
 }
@@ -25,6 +26,7 @@
   --rlc-amount-text-align: flex-start;
   --rlc-input-text-align: left;
   --rlc-poster-text-align: flex-start;
+  --rlc-datatable-justify-content: flex-start;
 
   text-align: left !important;
 }
@@ -33,6 +35,7 @@
   --rlc-amount-text-align: flex-end;
   --rlc-input-text-align: right;
   --rlc-poster-text-align: flex-end;
+  --rlc-datatable-justify-content: flex-end;
 
   text-align: right !important;
 }

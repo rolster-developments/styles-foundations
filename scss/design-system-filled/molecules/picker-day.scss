@@ -57,13 +57,13 @@
 
     &--selected {
       --pvt-span-background: var(--rls-theme-color-200);
-      --pvt-span-font-color: var(--rls-theme-color-600);
+      --pvt-span-font-color: var(--rls-theme-color-950);
       --pvt-span-box-shadow: none;
     }
 
     &--focused {
-      --pvt-span-background: var(--rls-theme-color-500);
-      --pvt-span-font-color: var(--rls-theme-color-050);
+      --pvt-span-background: var(--rls-theme-color-200);
+      --pvt-span-font-color: var(--rls-theme-color-950);
       --pvt-span-box-shadow: none;
     }
 

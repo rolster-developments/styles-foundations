@@ -1,15 +1,15 @@
 // Rolster Technology Badge Component
-// v1.2.7
+// v1.2.8
 // @license MIT
 // Author: Rolster Developers
 // Created: 23/Abr/2026
-// Updated: 23/Abr/2026
+// Updated: 27/Abr/2026
 
 .rls-badge {
   --pvt-dimension: var(--rlc-badge-dimension, var(--rls-sizing-x12));
-  --pvt-font-color: var(--rls-app-color-050);
-  --pvt-background: var(--rls-app-color-700);
-  --pvt-contrasted-font-color: var(--rls-app-color-600);
+  --pvt-font-color: var(--rls-app-color-800);
+  --pvt-background: var(--rls-app-color-200);
+  --pvt-contrasted-font-color: var(--rls-app-color-800);
   --pvt-contrasted-background: var(--rls-app-color-200);
 
   position: relative;
@@ -20,16 +20,16 @@
   line-height: var(--pvt-dimension);
   padding: var(--rlc-badge-padding, 0rem var(--rls-sizing-x2));
   box-sizing: var(--rlc-badge-box-sizing, border-box);
-  font-size: var(--rlc-badge-font-size, var(--rls-smalltext-font-size));
-  font-weight: var(--rlc-badge-font-weight, var(--rls-font-weight-regular));
+  font-size: var(--rlc-badge-font-size, var(--rls-caption-font-size));
+  font-weight: var(--rlc-badge-font-weight, var(--rls-caption-font-weight));
   text-align: center;
   letter-spacing: var(
     --rlc-badge-letter-spacing,
-    var(--rls-smalltext-letter-spacing)
+    var(--rls-caption-letter-spacing)
   );
   color: var(--pvt-font-color);
   background: var(--pvt-background);
-  border-radius: var(--rlc-badge-radius, calc(var(--pvt-dimension) / 2));
+  border-radius: var(--rlc-badge-radius, var(--rls-sizing-x2));
 
   &--contrasted {
     color: var(--pvt-contrasted-font-color);
@@ -37,9 +37,9 @@
   }
 
   &[rls-theme] {
-    --pvt-font-color: var(--rls-theme-color-050);
-    --pvt-background: var(--rls-theme-color-500);
-    --pvt-contrasted-font-color: var(--rls-theme-color-700);
+    --pvt-font-color: var(--rls-theme-color-800);
+    --pvt-background: var(--rls-theme-color-100);
+    --pvt-contrasted-font-color: var(--rls-theme-color-800);
     --pvt-contrasted-background: var(--rls-theme-color-100);
   }
 

@@ -69,20 +69,19 @@
     @include datatable_cell_control();
   }
 
-  &.rls-align-center {
-    justify-content: center;
-  }
-
   & > span {
     display: block;
-    width: 100%;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
   }
 
   & > p {
-    padding: var(--rls-sizing-x2) 0rem;
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 
   .rls-field-list {
@@ -272,15 +271,16 @@
     position: relative;
     display: flex;
     min-height: var(--rls-sizing-x20);
-    align-items: center;
+    align-items: var(--rlc-datatable-align-items, center);
+    justify-content: var(--rlc-datatable-justify-content, flex-start);
+    text-align: left;
+    white-space: nowrap;
     font-weight: var(
       --rlc-datatable-header-font-weight,
       var(--rls-font-weight-semibold)
     );
     font-size: var(--pvt-datatable-font-size);
     letter-spacing: var(--pvt-datatable-letter-spacing);
-    text-align: left;
-    white-space: nowrap;
 
     @include datatable_cell_styles();
 
@@ -360,10 +360,12 @@
 
     position: relative;
     display: flex;
-    align-items: center;
+    min-height: var(--rls-sizing-x20);
+    align-items: var(--rlc-datatable-align-items, center);
+    justify-content: var(--rlc-datatable-justify-content, flex-start);
     cursor: default;
     text-align: left;
-    min-height: var(--rls-sizing-x20);
+    padding: var(--rls-sizing-x2) 0rem;
     font-size: var(--pvt-datatable-font-size);
     letter-spacing: var(--pvt-datatable-letter-spacing);
 

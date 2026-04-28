@@ -1,9 +1,9 @@
 // Rolster Technology Button Component
-// v2.4.5
+// v2.4.6
 // @license MIT
 // Author: Rolster Developers
 // Created: 23/Abr/2026
-// Updated: 23/Abr/2026
+// Updated: 27/Abr/2026
 
 .rls-button {
   --pvt-button-content-background: none;
@@ -14,32 +14,32 @@
   --pvt-button-content-visibility: hidden;
   --pvt-button-ripple-background: var(--rls-theme-color-700);
 
-  --pvt-ghost-background: none;
-  --pvt-ghost-font-color: var(--rls-theme-color-500);
+  --pvt-ghost-background: var(--rls-theme-color-100);
+  --pvt-ghost-font-color: var(--rls-theme-color-950);
   --pvt-ghost-border: none;
 
-  --pvt-outline-background: var(--rls-app-color-050);
-  --pvt-outline-font-color: var(--rls-app-color-500);
-  --pvt-outline-border: var(--rls-app-border-1-300);
+  --pvt-outline-background: var(--rls-theme-color-100);
+  --pvt-outline-font-color: var(--rls-theme-color-950);
+  --pvt-outline-border: none;
 
   --pvt-flat-background: var(--rls-theme-color-100);
-  --pvt-flat-font-color: var(--rls-theme-color-500);
+  --pvt-flat-font-color: var(--rls-theme-color-950);
   --pvt-flat-border: none;
 
-  --pvt-stroked-background: var(--rls-app-color-050);
-  --pvt-stroked-font-color: var(--rls-theme-color-500);
-  --pvt-stroked-border: var(--rls-theme-border-1-300);
+  --pvt-stroked-background: var(--rls-theme-color-100);
+  --pvt-stroked-font-color: var(--rls-theme-color-950);
+  --pvt-stroked-border: none;
 
-  --pvt-classic-background: var(--rls-theme-color-050);
-  --pvt-classic-font-color: var(--rls-theme-color-500);
-  --pvt-classic-border: var(--rls-theme-border-1-300);
+  --pvt-classic-background: var(--rls-theme-color-300);
+  --pvt-classic-font-color: var(--rls-theme-color-950);
+  --pvt-classic-border: none;
 
-  --pvt-raised-background: var(--rls-theme-color-500);
-  --pvt-raised-font-color: var(--rls-theme-color-050);
+  --pvt-raised-background: var(--rls-theme-color-300);
+  --pvt-raised-font-color: var(--rls-theme-color-950);
   --pvt-raised-border: none;
 
-  --pvt-gradient-background: var(--rls-theme-color-500);
-  --pvt-gradient-font-color: var(--rls-theme-color-050);
+  --pvt-gradient-background: var(--rls-theme-color-300);
+  --pvt-gradient-font-color: var(--rls-theme-color-950);
   --pvt-gradient-border: none;
 
   position: relative;
@@ -58,66 +58,39 @@
   }
 
   &:not(:disabled):hover {
-    --pvt-ghost-background: var(--rls-theme-color-200);
-    --pvt-ghost-font-color: var(--rls-theme-font-100);
+    --pvt-ghost-background: var(--rls-theme-color-700);
+    --pvt-ghost-font-color: var(--rls-theme-color-050);
     --pvt-ghost-border: none;
 
-    --pvt-outline-background: transparent;
-    --pvt-outline-font-color: var(--rls-theme-color-500);
-    --pvt-outline-border: var(--rls-theme-border-1-500);
+    --pvt-outline-background: var(--rls-theme-color-700);
+    --pvt-outline-font-color: var(--rls-theme-color-050);
+    --pvt-outline-border: none;
 
-    --pvt-stroked-background: var(--rls-theme-color-100);
-    --pvt-stroked-font-color: var(--rls-theme-color-700);
-    --pvt-stroked-border: var(--rls-theme-border-1-700);
+    --pvt-stroked-background: var(--rls-theme-color-700);
+    --pvt-stroked-font-color: var(--rls-theme-color-050);
+    --pvt-stroked-border: none;
 
-    --pvt-classic-background: var(--rls-theme-color-100);
-    --pvt-classic-font-color: var(--rls-theme-color-700);
-    --pvt-classic-border: var(--rls-theme-border-1-700);
+    --pvt-classic-background: var(--rls-theme-color-700);
+    --pvt-classic-font-color: var(--rls-theme-color-050);
+    --pvt-classic-border: none;
 
-    --pvt-flat-background: var(--rls-theme-color-200);
-    --pvt-flat-font-color: var(--rls-theme-color-700);
+    --pvt-flat-background: var(--rls-theme-color-700);
+    --pvt-flat-font-color: var(--rls-theme-color-050);
     --pvt-flat-border: none;
 
     --pvt-raised-background: var(--rls-theme-color-700);
-    --pvt-raised-font-color: var(--rls-theme-font-900);
+    --pvt-raised-font-color: var(--rls-theme-color-050);
     --pvt-raised-border: none;
 
     --pvt-gradient-background: var(--rls-theme-color-700);
-    --pvt-gradient-font-color: var(--rls-theme-font-900);
+    --pvt-gradient-font-color: var(--rls-theme-color-050);
     --pvt-gradient-border: none;
   }
 
   &:disabled {
     --pvt-button-content-box-shadow: none;
 
-    --pvt-ghost-background: transparent;
-    --pvt-ghost-font-color: var(--rls-app-color-400);
-    --pvt-ghost-border: none;
-
-    --pvt-outline-background: transparent;
-    --pvt-outline-font-color: var(--rls-app-color-400);
-    --pvt-outline-border: var(--rls-app-border-1-300);
-
-    --pvt-stroked-background: transparent;
-    --pvt-stroked-font-color: var(--rls-app-color-400);
-    --pvt-stroked-border: var(--rls-app-border-1-300);
-
-    --pvt-classic-background: var(--rls-app-color-100);
-    --pvt-classic-font-color: var(--rls-app-color-400);
-    --pvt-classic-border: var(--rls-app-border-1-300);
-
-    --pvt-flat-background: var(--rls-app-color-100);
-    --pvt-flat-font-color: var(--rls-app-color-400);
-    --pvt-flat-border: none;
-
-    --pvt-raised-background: var(--rls-app-color-100);
-    --pvt-raised-font-color: var(--rls-app-color-400);
-    --pvt-raised-border: none;
-
-    --pvt-gradient-background: var(--rls-app-color-100);
-    --pvt-gradient-font-color: var(--rls-app-color-400);
-    --pvt-gradient-border: none;
-
+    opacity: 0.5;
     pointer-events: none;
   }
 
@@ -127,11 +100,11 @@
     align-items: center;
     overflow: hidden;
     column-gap: var(--rlc-button-content-gap, var(--rls-sizing-x2));
-    line-height: var(--rls-sizing-x24);
-    height: var(--rls-sizing-x24);
+    line-height: var(--rls-sizing-x22);
+    height: var(--rls-sizing-x22);
     padding: var(--rlc-button-content-padding, 0rem var(--rls-sizing-x6));
     box-sizing: border-box;
-    border-radius: var(--rlc-button-content-radius, var(--rls-sizing-x6));
+    border-radius: var(--rlc-button-content-radius, var(--rls-sizing-x4));
     box-shadow: var(--pvt-button-content-box-shadow);
     color: var(--pvt-button-content-font-color);
     border: var(--pvt-button-content-border);

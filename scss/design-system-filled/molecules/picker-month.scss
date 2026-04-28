@@ -35,18 +35,18 @@
     }
 
     &:hover {
-      color: var(--rls-theme-font-900);
+      color: var(--rls-theme-color-050);
       background: var(--rls-theme-color-900);
     }
 
     &--selected {
-      --pvt-component-font-color: var(--rls-theme-color-600);
+      --pvt-component-font-color: var(--rls-theme-color-950);
       --pvt-component-background: var(--rls-theme-color-200);
     }
 
     &--focused {
-      --pvt-component-font-color: var(--rls-theme-color-050);
-      --pvt-component-background: var(--rls-theme-color-500);
+      --pvt-component-font-color: var(--rls-theme-color-950);
+      --pvt-component-background: var(--rls-theme-color-200);
     }
 
     &--disabled {

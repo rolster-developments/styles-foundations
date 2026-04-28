@@ -1,9 +1,9 @@
 // Rolster Technology PickerClock Component
-// v2.0.0
+// v2.0.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 23/Abr/2026
-// Updated: 23/Abr/2026
+// Updated: 27/Abr/2026
 
 .rls-picker-clock {
   position: relative;
@@ -124,6 +124,7 @@
 
   &__footer {
     --rlc-button-width: 100%;
+    --rlc-button-content-padding: 0rem var(--rls-sizing-x3);
 
     display: flex;
     column-gap: var(--rls-sizing-x6);

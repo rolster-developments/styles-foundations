@@ -1,9 +1,9 @@
 // Rolster Technology PickerDateRange Component
-// v1.1.5
+// v1.1.6
 // @license MIT
 // Author: Rolster Developers
 // Created: 25/May/2023
-// Updated: 15/Sep/2025
+// Updated: 28/Abr/2026
 
 .rls-picker-date-range {
   position: relative;
@@ -73,6 +73,7 @@
 
   &__actions {
     --rlc-button-width: 100%;
+    --rlc-button-content-padding: 0rem var(--rls-sizing-x2);
 
     display: flex;
     column-gap: var(--rls-sizing-x4);

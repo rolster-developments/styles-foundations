@@ -26,7 +26,10 @@
     var(--rls-danger-color-100)
   );
 
-  --pvt-body-shadow: var(--rls-app-shadow-center-2);
+  --pvt-body-shadow: var(
+    --rlc-field-box-body-shadow,
+    var(--rls-app-shadow-center-2)
+  );
 
   --pvt-label-font-color: var(
     --rlc-field-box-label-font-color,
@@ -67,6 +70,11 @@
 
   &--error {
     --pvt-label-font-color: var(--rls-danger-color-500);
+
+    --pvt-body-shadow: var(
+      --rlc-field-box-body-shadow-error,
+      var(--rls-app-shadow-center-2)
+    );
   }
 
   &--disabled {
