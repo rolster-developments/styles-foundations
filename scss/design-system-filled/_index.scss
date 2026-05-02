@@ -1,13 +1,13 @@
-// Rolster Technology Design System Bordered
+// Rolster Technology Design System Filled
 // v2.3.3
 // @license MIT
 // Author: Rolster Developers
-// Created: 13/Abr/2023
+// Created: 23/Abr/2026
 // Updated: 23/Abr/2026
 
 @use 'sass:meta';
 
-.rls-design-system-bordered {
+.rls-design-system-filled {
   @include meta.load-css('app');
 
   @include meta.load-css('atoms/amount');
@@ -41,6 +41,7 @@
   @include meta.load-css('atoms/switch');
   @include meta.load-css('atoms/tabular-text');
 
+  @include meta.load-css('molecules/accordion');
   @include meta.load-css('molecules/alert');
   @include meta.load-css('molecules/ballot');
   @include meta.load-css('molecules/button-progress');

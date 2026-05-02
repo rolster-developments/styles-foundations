@@ -14,12 +14,13 @@
   ],
   "scripts": {
     "clean": "rimraf ./dist",
-    "dsbd:build": "sass scss/design-system-bordered/components.scss dist/design-system-bordered.css --style=compressed",
+    "dsbd:build": "sass scss/design-system-bordered/_index.scss dist/design-system-bordered.css --style=compressed",
+    "dsfl:build": "sass scss/design-system-filled/_index.scss dist/design-system-filled.css --style=compressed",
     "sass:build": "sass scss/styles.scss dist/styles.css --style=compressed",
     "css:prettier": "prettier --write dist/*.css --ignore-path .prettierignore",
     "css:minify": "css-minify -d dist/ -o dist/",
     "rltcss": "rtlcss dist/styles.css dist/styles.rtl.css",
-    "build": "npm run clean && npm run sass:build && npm run dsbd:build && npm run rltcss && npm run css:prettier && npm run css:minify",
+    "build": "npm run clean && npm run sass:build && npm run dsbd:build && npm run dsfl:build && npm run rltcss && npm run css:prettier && npm run css:minify",
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {

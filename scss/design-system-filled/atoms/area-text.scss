@@ -1,15 +1,16 @@
 // Rolster Technology AreaText Component
-// v1.0.0
+// v1.0.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 23/Abr/2026
-// Updated: 23/Abr/2026
+// Updated: 29/Abr/2026
 
 .rls-area-text {
   --pvt-font-color: var(--rlc-area-text-font-color, var(--rls-app-color-900));
-  --pvt-font-size: var(
-    --rlc-area-text-font-size,
-    var(--rls-input-font-size)
+  --pvt-font-size: var(--rlc-area-text-font-size, var(--rls-input-font-size));
+  --pvt-font-weight: var(
+    --rlc-area-text-font-weight,
+    var(--rls-input-font-weight)
   );
 
   --pvt-letter-spacing: var(
@@ -17,8 +18,11 @@
     var(--rls-input-letter-spacing)
   );
 
-  --pvt-line-height: var(--rlc-area-text-line-height, 1.5);
-  --pvt-min-height: var(--rlc-area-text-min-height, calc(var(--rls-sizing-x12) * 3));
+  --pvt-line-height: var(--rlc-area-text-line-height, --rls-input-line-height);
+  --pvt-min-height: var(
+    --rlc-area-text-min-height,
+    var(--rls-input-line-height)
+  );
   --pvt-padding: var(--rlc-area-text-padding, var(--rls-sizing-x3) 0rem);
   --pvt-text-align: var(--rlc-area-text-text-align, left);
 
@@ -42,20 +46,19 @@
     position: relative;
     width: 100%;
     min-height: var(--pvt-min-height);
-    padding: var(--pvt-padding);
     cursor: text;
     border: none;
     outline: none;
+    padding: 0rem;
     background: transparent;
+    resize: none;
+    overflow: hidden;
     color: var(--pvt-component-font-color);
     font-weight: var(--rls-font-weight-medium);
     font-size: var(--pvt-font-size);
     line-height: var(--pvt-line-height);
     text-align: var(--pvt-text-align);
     letter-spacing: var(--pvt-letter-spacing);
-    font-family: inherit;
-    overflow: hidden;
-    resize: none;
 
     &::placeholder {
       color: var(--rls-app-color-400);
@@ -81,7 +84,6 @@
     left: 0rem;
     width: 100%;
     min-height: var(--pvt-min-height);
-    padding: var(--pvt-padding);
     background: transparent;
     pointer-events: none;
     overflow: hidden;
@@ -89,7 +91,7 @@
     word-break: break-word;
     opacity: var(--pvt-value-opacity);
     color: var(--pvt-value-font-color);
-    font-weight: var(--rls-font-weight-medium);
+    font-weight: var(--pvt-font-weight);
     font-size: var(--pvt-font-size);
     line-height: var(--pvt-line-height);
     text-align: var(--pvt-text-align);

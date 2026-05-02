@@ -188,16 +188,6 @@ button {
   font-weight: var(--rls-button-font-weight);
 }
 
-input,
-textarea,
-select {
-  font-size: var(--rls-input-font-size);
-  letter-spacing: var(--rls-input-letter-spacing);
-  min-height: var(--rls-input-line-height);
-  line-height: var(--rls-input-line-height);
-  font-weight: var(--rls-input-font-weight);
-}
-
 @include typographic('h1', 'heading1');
 @include typographic('h2', 'heading2');
 @include typographic('h3', 'heading3');
