@@ -1,9 +1,9 @@
 // Rolster Technology Label Component
-// v1.1.0
+// v1.1.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 23/Abr/2026
-// Updated: 23/Abr/2026
+// Updated: 02/May/2026
 
 .rls-label {
   font-size: var(--rlc-label-font-size, var(--rls-smalltext-font-size));
@@ -12,7 +12,7 @@
     var(--rls-smalltext-letter-spacing)
   );
   line-height: var(--rlc-label-height, var(--rls-smalltext-line-height));
-  font-weight: inherit;
+  font-weight: var(--rlc-label-weight, inherit);
 
   &[rls-theme] {
     color: var(--rls-theme-color-500);
