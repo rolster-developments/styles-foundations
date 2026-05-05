@@ -1,9 +1,9 @@
 // Rolster Technology App Component
-// v2.3.10
+// v2.3.11
 // @license MIT
 // Author: Rolster Developers
 // Created: 23/Abr/2026
-// Updated: 28/Abr/2026
+// Updated: 04/May/2026
 
 * {
   scrollbar-width: thin;
@@ -16,6 +16,7 @@
     --pvt-navbar-width: var(--rlc-app-navbar-width, 160rem);
     --pvt-navbar-width-condense: 36rem;
     --pvt-navbar-snackbar: var(--pvt-navbar-width);
+    --pvt-navbar-padding: var(--rls-sizing-x8);
 
     display: flex;
     flex-direction: column;
@@ -34,6 +35,7 @@
     &--navbar-condense {
       --pvt-navbar-width: var(--pvt-navbar-width-condense);
       --pvt-nabvar-snackbar: var(--pvt-navbar-width-condense);
+      --pvt-navbar-padding: var(--rls-sizing-x8) var(--rls-sizing-x4);
     }
   }
 
@@ -90,9 +92,9 @@
       width: var(--pvt-navbar-width);
       height: 100%;
       margin: 0rem;
-      padding: var(--rls-sizing-x8);
+      padding: var(--pvt-navbar-padding);
       box-sizing: border-box;
-      transition: width 280ms var(--rls-acceleration-curve);
+      transition: all 280ms var(--rls-acceleration-curve);
 
       & + .rls-app__page__body {
         --rlc-snackbar-left: calc(50% + calc(var(--pvt-navbar-width) / 2));
@@ -110,6 +112,34 @@
         border-radius: var(--rls-sizing-x6);
         background: var(--rls-app-color-950);
         transition: width 280ms var(--rls-acceleration-curve);
+      }
+
+      &__menu {
+        display: flex;
+        flex-direction: column;
+        row-gap: var(--rls-sizing-x8);
+      }
+
+      &__option {
+        display: flex;
+        align-items: center;
+        column-gap: var(--rls-sizing-x6);
+        padding: var(--rls-sizing-x4) var(--rls-sizing-x6);
+        cursor: default;
+        border-radius: var(--rls-sizing-x6);
+        color: var(--rls-app-color-300);
+        background: var(--rls-app-color-800);
+
+        &:hover {
+          color: var(--rls-theme-color-950);
+          background: var(--rls-theme-color-200);
+        }
+
+        & > span {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
       }
     }
 

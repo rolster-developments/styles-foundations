@@ -1,13 +1,13 @@
 // Rolster Technology App Component
-// v2.3.10
+// v2.3.11
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 23/Abr/2026
+// Updated: 04/May/2026
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: var(--rls-theme-color-300) var(--rls-app-color-200);
+  scrollbar-color: var(--rls-app-color-500) var(--rls-app-color-200);
 }
 
 .rls-app {
@@ -107,6 +107,34 @@
         overflow-y: auto;
         box-sizing: border-box;
         border-right: var(--rls-app-border-1-200);
+      }
+
+      &__menu {
+        display: flex;
+        flex-direction: column;
+        row-gap: var(--rls-sizing-x8);
+      }
+
+      &__option {
+        display: flex;
+        align-items: center;
+        column-gap: var(--rls-sizing-x6);
+        padding: var(--rls-sizing-x4) var(--rls-sizing-x6);
+        cursor: default;
+        border-radius: var(--rls-sizing-x4);
+        color: var(--rls-app-color-700);
+        border: var(--rls-app-border-1-200);
+
+        &:hover {
+          color: var(--rls-app-color-900);
+          background: var(--rls-app-color-100);
+        }
+
+        & > span {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
       }
     }
 
