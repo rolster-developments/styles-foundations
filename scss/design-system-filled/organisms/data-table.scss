@@ -76,14 +76,6 @@
     overflow: hidden;
   }
 
-  & > p {
-    display: block;
-    width: 100%;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-  }
-
   .rls-field-list {
     --rlc-field-box-body-padding: var(--rls-sizing-x4) 0rem;
     --rlc-field-box-action-dimension: var(--rls-sizing-x10);

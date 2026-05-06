@@ -1,9 +1,9 @@
 // Rolster Technology App Component
-// v2.3.11
+// v2.3.12
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 04/May/2026
+// Updated: 06/May/2026
 
 * {
   scrollbar-width: thin;
@@ -159,7 +159,7 @@
       justify-content: space-between;
       align-items: center;
       column-gap: var(--rls-sizing-x8);
-      padding: 0rem var(--rls-sizing-x12);
+      padding: var(--rlc-app-toolbar-padding, 0rem var(--rls-sizing-x12));
       box-sizing: border-box;
       z-index: var(--rls-z-index-8);
       background: var(--rls-app-color-050);
