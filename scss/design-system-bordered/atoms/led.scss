@@ -6,13 +6,13 @@
 // Updated: 07/May/2026
 
 .rls-led {
-  --pvt-dimension: var(--rlc-led-dimension, var(--rls-sizing-x4));
+  --pvt-dimension: var(--rlc-led-dimension, var(--rls-sizing-x8));
   --pvt-background: var(--rls-app-color-100);
-  --pvt-content-background: var(--rls-app-gradient-500);
+  --pvt-content-background: var(--rls-app-color-500);
 
   width: auto;
   background: var(--pvt-background);
-  padding: var(--rlc-led-padding, var(--rls-sizing-x1));
+  padding: var(--rlc-led-padding, var(--rls-sizing-x2));
   border-radius: 50%;
 
   &::before {
