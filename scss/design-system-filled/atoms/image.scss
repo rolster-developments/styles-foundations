@@ -1,9 +1,9 @@
 // Rolster Technology Image Component
-// v2.0.0
+// v2.0.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 23/Abr/2026
-// Updated: 23/Abr/2026
+// Updated: 14/May/2026
 
 .rls-image {
   --pvt-background: transparent;
@@ -16,6 +16,7 @@
 
   width: var(--pvt-width);
   height: var(--pvt-height);
+  border-radius: var(--rlc-image-radius, 0rem);
   overflow: hidden;
 
   &--complet {
