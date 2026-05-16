@@ -33,24 +33,11 @@
     }
   }
 
-  &__action {
-    --rlc-icon-dimension: var(--rls-sizing-x10);
-
-    background: var(--rls-theme-color-100);
-    color: var(--rls-theme-color-600);
-    outline: none;
-    padding: var(--rls-sizing-x2);
-    border-radius: var(--rls-sizing-x4);
-
-    &:not(:disabled):hover {
-      color: var(--rls-theme-color-500);
-    }
-
-    &:disabled {
-      opacity: 0.5;
-      background: transparent;
-      color: var(--rls-theme-color-300);
-    }
+  .rls-button-icon {
+    --rlc-button-icon-size: var(--rls-sizing-x14);
+    --rlc-button-icon-icon-size: var(--rls-sizing-x10);
+    --rlc-button-icon-background: var(--rls-theme-color-100);
+    --rlc-button-icon-radius: var(--rls-sizing-x4);
   }
 
   &__component {

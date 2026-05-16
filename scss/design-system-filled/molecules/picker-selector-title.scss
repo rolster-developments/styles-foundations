@@ -33,23 +33,10 @@
     }
   }
 
-  & > button {
-    --rlc-icon-dimension: var(--rls-sizing-x10);
-
-    background: var(--rls-app-color-050);
-    outline: none;
-    padding: var(--rls-sizing-x2);
-    border-radius: var(--rls-sizing-x4);
-    color: var(--rls-app-color-900);
-
-    &:hover {
-      background: var(--rls-app-color-300);
-    }
-
-    &:disabled {
-      opacity: 0.5;
-      background: transparent;
-      color: var(--rls-app-color-600);
-    }
+  .rls-button-icon {
+    --rlc-button-icon-size: var(--rls-sizing-x14);
+    --rlc-button-icon-icon-size: var(--rls-sizing-x10);
+    --rlc-button-icon-background: var(--rls-app-color-050);
+    --rlc-button-icon-radius: var(--rls-sizing-x4);
   }
 }

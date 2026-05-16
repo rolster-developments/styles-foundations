@@ -1,9 +1,9 @@
 // Rolster Technology FieldBox Component
-// v2.3.2
+// v2.3.3
 // @license MIT
 // Author: Rolster Developers
 // Created: 23/Abr/2026
-// Updated: 23/Abr/2026
+// Updated: 16/May/2026
 
 .rls-field-box {
   --pvt-body-background: var(
@@ -111,6 +111,16 @@
   }
 
   &__body {
+    --rlc-button-icon-dimension: var(--rls-sizing-x12);
+    --rlc-button-icon-icon-dimension: calc(
+      var(--pvt-action-dimension) - var(--rls-sizing-x2)
+    );
+    --rlc-button-icon-background: var(--pvt-action-background);
+    --rlc-button-icon-radius: var(
+      --rlc-field-box-action-radius,
+      var(--rls-sizing-x2)
+    );
+
     display: flex;
     align-items: center;
     column-gap: var(--rls-sizing-x2);
@@ -121,31 +131,6 @@
     padding: var(--rlc-field-box-body-padding, 0rem);
     box-sizing: border-box;
     box-shadow: var(--pvt-body-shadow);
-  }
-
-  &__action {
-    --rlc-icon-dimension: calc(var(--pvt-action-dimension) - 4rem);
-
-    display: flex;
-    flex: 0 0 auto;
-    width: var(--pvt-action-dimension);
-    height: var(--pvt-action-dimension);
-    align-items: center;
-    justify-content: center;
-    color: var(--rls-app-color-600);
-    padding: 0rem;
-    outline: none;
-    border-radius: var(--rlc-field-box-action-radius, var(--rls-sizing-x2));
-    background: var(--pvt-action-background);
-
-    &:hover {
-      background: var(--pvt-action-background-hover);
-    }
-
-    &:disabled {
-      opacity: 0.5;
-      background: transparent;
-    }
   }
 
   &__helper {
