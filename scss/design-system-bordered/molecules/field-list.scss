@@ -1,9 +1,9 @@
 // Rolster Technology FieldList Component
-// v1.5.5
+// v1.5.6
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 03/May/2026
+// Updated: 17/May/2026
 
 .rls-field-list {
   --pvt-control-pointer-events: initial;
@@ -177,6 +177,65 @@
 
     &:not(:hover):focus {
       background: var(--rls-theme-color-100);
+    }
+  }
+
+  &__multi {
+    &__chips {
+      display: flex;
+      min-height: var(--rls-sizing-x12);
+      flex-wrap: wrap;
+      gap: var(--rls-sizing-x2);
+    }
+
+    &__placeholder {
+      margin: auto 0rem;
+      cursor: default;
+      font-weight: var(
+        --rlc-field-list-control-font-weight,
+        var(--rls-font-weight-medium)
+      );
+      font-size: var(
+        --rlc-field-list-control-font-size,
+        var(--rls-input-font-size)
+      );
+      letter-spacing: var(
+        --rlc-field-list-control-letter-spacing,
+        var(--rls-input-letter-spacing)
+      );
+      color: var(--rls-app-color-400);
+    }
+
+    &__chip {
+      display: flex;
+      width: auto;
+      align-items: center;
+      column-gap: var(--rls-sizing-x1);
+      border-radius: var(--rls-sizing-x2);
+      padding: var(--rls-sizing-x1) var(--rls-sizing-x3);
+      background: var(--rls-app-color-200);
+
+      &__description {
+        font-size: var(--rls-caption-font-size);
+        letter-spacing: var(--rls-caption-letter-spacing);
+        font-weight: var(--rls-font-weight-semibold);
+      }
+
+      &__remove {
+        --rlc-icon-dimension: var(--rls-sizing-x8);
+
+        flex: 0 0 auto;
+        background: none;
+        padding: 0rem;
+        margin: 0rem;
+        outline: none;
+      }
+    }
+
+    &__element {
+      display: flex;
+      align-items: center;
+      column-gap: var(--rls-sizing-x4);
     }
   }
 
