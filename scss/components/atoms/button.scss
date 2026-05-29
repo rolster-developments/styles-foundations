@@ -1,0 +1,156 @@
+// Rolster Technology Button Component (shared)
+// v2.4.7
+// @license MIT
+// Author: Rolster Developers
+// Created: 28/May/2026
+// Updated: 28/May/2026
+
+.rls-button {
+  --pvt-button-content-background: none;
+  --pvt-button-content-border: none;
+  --pvt-button-content-box-shadow: var(--rlc-button-content-box-shadow, none);
+  --pvt-button-content-font-color: var(--rls-theme-color-500);
+  --pvt-button-content-animation: none;
+  --pvt-button-content-visibility: hidden;
+  --pvt-button-ripple-background: var(--rls-theme-color-700);
+
+  position: relative;
+  padding: 0rem;
+  width: var(--rlc-button-width, auto);
+  outline: none;
+  background: transparent;
+
+  &:not(:disabled):not(:active) {
+    --pvt-button-content-animation: ripple-squarecenter 1000ms
+      var(--rls-standard-curve);
+  }
+
+  &:not(:disabled):focus {
+    --pvt-button-content-visibility: visible;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    column-gap: var(--rlc-button-content-gap, var(--rls-sizing-x2));
+    line-height: var(--rls-sizing-x22);
+    height: var(--rls-sizing-x22);
+    box-sizing: border-box;
+    border-radius: var(--rlc-button-content-radius, var(--rls-sizing-x4));
+    box-shadow: var(--pvt-button-content-box-shadow);
+    color: var(--pvt-button-content-font-color);
+    border: var(--pvt-button-content-border);
+    background: var(--pvt-button-content-background);
+    pointer-events: none;
+
+    &::before {
+      position: absolute;
+      display: block;
+      content: '';
+      top: 50%;
+      left: 50%;
+      padding-top: calc(100% - var(--rls-sizing-x8));
+      padding-left: calc(100% - var(--rls-sizing-x8));
+      margin-top: calc(-50% + var(--rls-sizing-x4));
+      margin-left: calc(-50% + var(--rls-sizing-x4));
+      border-radius: 50%;
+      opacity: 0.26;
+      transform: scale(0);
+      z-index: var(--rls-z-index-2);
+      background: var(--pvt-button-ripple-background);
+      animation: var(--pvt-button-content-animation);
+      visibility: var(--pvt-button-content-visibility);
+    }
+
+    &--ghost {
+      --rlc-spinner-color: var(--pvt-ghost-font-color);
+      --pvt-button-content-font-color: var(--pvt-ghost-font-color);
+      --pvt-button-content-background: var(--pvt-ghost-background);
+      --pvt-button-content-border: var(--pvt-ghost-border);
+    }
+
+    &--outline {
+      --rlc-spinner-color: var(--pvt-outline-font-color);
+      --pvt-button-content-font-color: var(--pvt-outline-font-color);
+      --pvt-button-content-background: var(--pvt-outline-background);
+      --pvt-button-content-border: var(--pvt-outline-border);
+    }
+
+    &--stroked {
+      --rlc-spinner-color: var(--pvt-stroked-font-color);
+      --pvt-button-content-font-color: var(--pvt-stroked-font-color);
+      --pvt-button-content-background: var(--pvt-stroked-background);
+      --pvt-button-content-border: var(--pvt-stroked-border);
+    }
+
+    &--classic {
+      --rlc-spinner-color: var(--pvt-classic-font-color);
+      --pvt-button-content-font-color: var(--pvt-classic-font-color);
+      --pvt-button-content-background: var(--pvt-classic-background);
+      --pvt-button-content-border: var(--pvt-classic-border);
+      --pvt-button-ripple-background: var(--rls-theme-font-100);
+    }
+
+    &--flat {
+      --rlc-spinner-color: var(--pvt-flat-font-color);
+      --pvt-button-content-font-color: var(--pvt-flat-font-color);
+      --pvt-button-content-background: var(--pvt-flat-background);
+      --pvt-button-content-border: var(--pvt-flat-border);
+      --pvt-button-ripple-background: var(--rls-theme-font-100);
+    }
+
+    &--raised {
+      --rlc-spinner-color: var(--pvt-raised-font-color);
+      --pvt-button-content-font-color: var(--pvt-raised-font-color);
+      --pvt-button-content-background: var(--pvt-raised-background);
+      --pvt-button-content-border: var(--pvt-raised-border);
+      --pvt-button-ripple-background: var(--rls-theme-font-900);
+    }
+
+    &--gradient {
+      --rlc-spinner-color: var(--pvt-gradient-font-color);
+      --pvt-button-content-font-color: var(--pvt-gradient-font-color);
+      --pvt-button-content-background: var(--pvt-gradient-background);
+      --pvt-button-content-border: var(--pvt-gradient-border);
+      --pvt-button-ripple-background: var(--rls-theme-font-900);
+    }
+  }
+
+  &__description {
+    display: flex;
+    width: auto;
+    align-items: center;
+    column-gap: var(--rlc-button-description-gap, var(--rls-sizing-x2));
+    padding: 0rem var(--rls-sizing-x2);
+    line-height: initial;
+    font-size: var(--rls-button-font-size);
+    letter-spacing: var(--rls-button-letter-spacing);
+    font-weight: var(--rlc-button-font-weight, var(--rls-font-weight-medium));
+    text-transform: var(--rlc-button-label-text-transform, uppercase);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}
+
+@keyframes ripple-squarecenter {
+  0% {
+    transform: scale(0);
+  }
+
+  20% {
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}

@@ -12,6 +12,11 @@
       "style": "dist/styles.css",
       "default": "dist/styles.css"
     },
+    "./components": {
+      "sass": "scss/components/index.scss",
+      "style": "dist/components.css",
+      "default": "dist/components.css"
+    },
     "./design-system-bordered": {
       "sass": "scss/design-system-bordered/index.scss",
       "style": "dist/design-system-bordered.css",
@@ -32,13 +37,16 @@
   ],
   "scripts": {
     "clean": "rimraf ./dist",
+    "comp:build": "sass scss/components/index.scss dist/components.css --style=compressed",
     "dsbd:build": "sass scss/design-system-bordered/index.scss dist/design-system-bordered.css --style=compressed",
     "dsfl:build": "sass scss/design-system-filled/index.scss dist/design-system-filled.css --style=compressed",
     "sass:build": "sass scss/styles.scss dist/styles.css --style=compressed",
     "css:prettier": "prettier --write dist/*.css --ignore-path .prettierignore",
     "css:minify": "css-minify -d dist/ -o dist/",
     "rltcss": "rtlcss dist/styles.css dist/styles.rtl.css",
-    "build": "npm run clean && npm run sass:build && npm run dsbd:build && npm run dsfl:build && npm run rltcss && npm run css:prettier && npm run css:minify",
+    "lib:build": "npm run sass:build && npm run comp:build && npm run dsbd:build && npm run dsfl:build",
+    "lib:compression": "npm run rltcss && npm run css:prettier && npm run css:minify",
+    "build": "npm run clean && npm run lib:build && npm run lib:compression",
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
