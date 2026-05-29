@@ -1,126 +1,27 @@
-// Rolster Technology App Component
+// Rolster Technology App Component (bordered overrides)
 // v2.3.12
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 06/May/2026
-
-* {
-  scrollbar-width: thin;
-  scrollbar-color: var(--rls-app-color-500) var(--rls-app-color-200);
-}
+// Updated: 28/May/2026
 
 .rls-app {
-  &__body {
-    --pvt-navbar-dimension: 0rem;
-    --pvt-navbar-width: var(--rlc-app-navbar-width, 160rem);
-    --pvt-navbar-width-condense: 36rem;
-    --pvt-navbar-snackbar: var(--pvt-navbar-width);
-
-    display: flex;
-    flex-direction: column;
-    padding: 0rem;
-    margin: 0rem;
-    width: var(--rls-html-max-width);
-    height: var(--rls-html-max-height);
-    overflow: hidden;
-    z-index: var(--rls-z-index-8);
-
-    &--navbar-snackbar {
-      --rlc-snackbar-left: calc(50% + calc(var(--pvt-navbar-snackbar) / 2));
-    }
-
-    &--navbar-condense {
-      --pvt-navbar-width: var(--pvt-navbar-width-condense);
-      --pvt-nabvar-snackbar: var(--pvt-navbar-width-condense);
-    }
-  }
-
-  &__header {
-    --rlc-toolbar-height: 100%;
-    --pvt-header-height: var(--rlc-app-header-height, var(--rls-sizing-x28));
-
-    position: relative;
-    width: 100%;
-    height: var(--pvt-header-height);
-    box-sizing: border-box;
-    z-index: var(--rls-z-index-8);
-    background: var(--rlc-app-header-background, var(--rls-app-color-050));
-
-    & + .rls-app__page,
-    & + .rls-app__content {
-      height: calc(var(--rls-html-max-height) - var(--pvt-header-height));
-    }
-  }
-
-  &__content {
-    position: relative;
-    width: 100%;
-    height: var(--rls-html-max-height);
-    margin: 0rem;
-    padding: 0rem;
-    overflow: auto;
-    box-sizing: border-box;
-    background: var(--rlc-app-content-background, var(--rls-app-color-050));
-  }
-
   &__page {
-    --pvt-toolbar-height: var(
-      --rls-app-page-toolbar-height,
-      var(--rls-sizing-x32)
-    );
-
-    position: relative;
-    display: flex;
-    width: 100%;
-    height: var(--rls-html-max-height);
-    margin: 0rem;
-    padding: 0rem;
-    overflow: hidden;
-    box-sizing: border-box;
-
     &__nav {
-      position: relative;
-      width: var(--pvt-navbar-width);
-      height: 100%;
-      margin: 0rem;
       padding: 0rem;
       background: var(--rlc-app-navbar-background, var(--rls-theme-color-200));
       transition: width 280ms var(--rls-acceleration-curve);
 
-      & + .rls-app__page__body {
-        --rlc-snackbar-left: calc(50% + calc(var(--pvt-navbar-width) / 2));
-
-        width: calc(100% - var(--pvt-navbar-width));
-      }
-
       &__content {
-        position: relative;
-        width: 100%;
-        height: 100%;
         background: var(
           --rlc-app-navbar-content-background,
           rgba(255, 255, 255, 0.84)
         );
         backdrop-filter: blur(2px);
-        overflow-x: hidden;
-        overflow-y: auto;
-        box-sizing: border-box;
         border-right: var(--rls-app-border-1-200);
       }
 
-      &__menu {
-        display: flex;
-        flex-direction: column;
-        row-gap: var(--rls-sizing-x8);
-      }
-
       &__option {
-        display: flex;
-        align-items: center;
-        column-gap: var(--rls-sizing-x6);
-        padding: var(--rls-sizing-x4) var(--rls-sizing-x6);
-        cursor: default;
         border-radius: var(--rls-sizing-x4);
         color: var(--rls-app-color-700);
         border: var(--rls-app-border-1-200);
@@ -129,39 +30,10 @@
           color: var(--rls-app-color-900);
           background: var(--rls-app-color-100);
         }
-
-        & > span {
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
       }
     }
 
-    &__body {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      height: 100%;
-      margin: 0rem;
-      padding: 0rem;
-      overflow: hidden;
-      box-sizing: border-box;
-      transition: width 240ms var(--rls-acceleration-curve);
-    }
-
     &__toolbar {
-      position: absolute;
-      top: 0rem;
-      display: flex;
-      width: 100%;
-      height: var(--pvt-toolbar-height);
-      justify-content: space-between;
-      align-items: center;
-      column-gap: var(--rls-sizing-x8);
-      padding: var(--rlc-app-toolbar-padding, 0rem var(--rls-sizing-x12));
-      box-sizing: border-box;
-      z-index: var(--rls-z-index-8);
       background: var(--rls-app-color-050);
       border-bottom: var(--rls-app-border-1-200);
 
@@ -172,57 +44,7 @@
     }
 
     &__content {
-      display: flex;
-      flex-direction: column;
-      width: calc(100% - var(--rls-sizing-x16));
-      height: 100%;
-      padding: var(--rls-sizing-x8) var(--rls-sizing-x8) 0rem
-        var(--rls-sizing-x8);
-      overflow-y: auto;
-      overflow-x: hidden;
       background: var(--rls-app-color-050);
-    }
-  }
-}
-
-.rls-divider {
-  height: var(--rlc-divider-height, var(--rls-sizing-x1));
-  background-image: linear-gradient(
-    to right,
-    var(--rlc-divider-background, var(--rls-app-color-300)) 50%,
-    rgba(255, 255, 255, 0) 0%
-  );
-  background-position: bottom;
-  background-size: var(--rlc-divider-size, var(--rls-sizing-x4));
-  background-repeat: repeat-x;
-}
-
-@media screen and (max-width: 640px) {
-  .rls-app {
-    &__body {
-      --pvt-navbar-dimension: 140rem;
-      --pvt-navbar-width: var(--pvt-navbar-dimension);
-      --pvt-navbar-width-condense: var(--pvt-navbar-dimension);
-      --pvt-section-navbar: 0rem;
-      --pvt-navbar-snackbar: 0rem;
-
-      &--navbar-condense {
-        --pvt-section-navbar: var(--pvt-navbar-dimension);
-      }
-    }
-
-    &__page {
-      width: calc(var(--rls-html-max-width) + var(--pvt-navbar-width));
-      left: calc(var(--pvt-section-navbar) * -1);
-      transition: left 280ms var(--rls-standard-curve);
-    }
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .rls-app {
-    &__body {
-      --pvt-navbar-dimension: calc(100vw - 32rem);
     }
   }
 }

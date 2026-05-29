@@ -7,6 +7,8 @@
 
 @use 'sass:meta';
 
+@include meta.load-css('app');
+
 @include meta.load-css('atoms/amount');
 @include meta.load-css('atoms/area-text');
 @include meta.load-css('atoms/avatar');
