@@ -1,9 +1,9 @@
-// Rolster Technology FieldBox Component
+// Rolster Technology FieldBox Component (filled overrides)
 // v2.3.3
 // @license MIT
 // Author: Rolster Developers
 // Created: 23/Abr/2026
-// Updated: 16/May/2026
+// Updated: 28/May/2026
 
 .rls-field-box {
   --pvt-body-background: var(
@@ -16,11 +16,6 @@
     var(--rls-app-color-050)
   );
 
-  --pvt-body-background-disabled: var(
-    --rlc-field-box-body-background-disabled,
-    var(--rls-app-color-100)
-  );
-
   --pvt-body-background-error: var(
     --rlc-field-box-body-background-error,
     var(--rls-danger-color-100)
@@ -31,46 +26,16 @@
     var(--rls-app-shadow-center-2)
   );
 
-  --pvt-label-font-color: var(
-    --rlc-field-box-label-font-color,
-    var(--rls-app-color-600)
-  );
-
-  --pvt-action-dimension: var(
-    --rlc-field-box-action-dimension,
-    var(--rls-sizing-x12)
-  );
-
-  --pvt-action-background: var(
-    --rlc-field-box-action-background,
-    var(--rls-app-color-200)
-  );
-
   --pvt-action-background-hover: var(
     --rlc-field-box-action-background-hover,
     var(--rls-app-color-300)
   );
 
-  --pvt-label-opacity: 1;
-  --pvt-body-opacity: 1;
-
-  position: relative;
-  display: flex;
-  width: var(--rlc-field-box-width, 100%);
-  flex-direction: column;
-  row-gap: var(--rls-sizing-x2);
-  padding: var(--rlc-field-box-padding, 0rem);
-  box-sizing: border-box;
-  transition: height 160ms 0ms var(--rls-standard-curve);
-
   &--focused {
-    --pvt-label-font-color: var(--rls-theme-color-500);
     --pvt-body-background: var(--pvt-body-background-focused);
   }
 
   &--error {
-    --pvt-label-font-color: var(--rls-danger-color-500);
-
     --pvt-body-shadow: var(
       --rlc-field-box-body-shadow-error,
       var(--rls-app-shadow-center-2)
@@ -79,77 +44,18 @@
 
   &--disabled {
     --pvt-label-opacity: 0.25;
-    --pvt-body-opacity: 0.75;
-
-    --pvt-body-background: var(--pvt-body-background-disabled);
-  }
-
-  &--readonly {
-    --rlc-input-font-color: var(--rls-app-color-600);
   }
 
   &__label {
-    position: relative;
-    display: var(--rlc-field-box-label-display, block);
-    width: 100%;
     padding: 0rem var(--rls-sizing-x3);
-    box-sizing: border-box;
-    color: var(--pvt-label-font-color);
-    opacity: var(--pvt-label-opacity);
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    font-weight: var(--rls-font-weight-medium);
-    font-size: var(--rls-smalltext-font-size);
-    letter-spacing: var(--rls-smalltext-letter-spacing);
-    min-height: var(--rls-smalltext-line-height);
-    line-height: var(--rls-smalltext-line-height);
-
-    span {
-      color: var(--rls-danger-color-500);
-    }
   }
 
   &__body {
-    --rlc-button-icon-dimension: var(--rls-sizing-x12);
-    --rlc-button-icon-icon-dimension: calc(
-      var(--pvt-action-dimension) - var(--rls-sizing-x2)
-    );
-    --rlc-button-icon-background: var(--pvt-action-background);
-    --rlc-button-icon-radius: var(
-      --rlc-field-box-action-radius,
-      var(--rls-sizing-x2)
-    );
-
-    display: flex;
-    align-items: center;
-    column-gap: var(--rls-sizing-x2);
-    overflow: hidden;
-    background: var(--pvt-body-background);
-    opacity: var(--pvt-body-opacity);
     border-radius: var(--rlc-field-box-body-radius, var(--rls-sizing-x4));
-    padding: var(--rlc-field-box-body-padding, 0rem);
-    box-sizing: border-box;
-    box-shadow: var(--pvt-body-shadow);
   }
 
   &__helper {
-    color: var(--rls-app-color-400);
     padding: 0rem var(--rls-sizing-x3);
-    box-sizing: border-box;
     font-weight: var(--rls-overline-font-weight);
-    font-size: var(--rls-overline-font-size);
-    letter-spacing: var(--rls-overline-letter-spacing);
-    min-height: var(--rls-overline-line-height);
-    line-height: var(--rls-overline-line-height);
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  &__error {
-    display: var(--rlc-field-box-error-display, block);
-    padding: 0rem var(--rls-sizing-x4);
-    box-sizing: border-box;
   }
 }

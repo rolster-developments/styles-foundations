@@ -1,9 +1,9 @@
-// Rolster Technology Accordion Component
+// Rolster Technology Accordion Component (bordered overrides)
 // v1.0.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 29/Abr/2026
-// Updated: 29/Abr/2026
+// Updated: 28/May/2026
 
 .rls-accordion {
   --pvt-background: var(--rls-app-color-050);
@@ -11,136 +11,35 @@
   --pvt-header-background: var(--rls-app-color-100);
   --pvt-header-hover-background: var(--rls-app-color-200);
   --pvt-header-radius: var(--rls-sizing-x4);
-  --pvt-title-font-color: var(--rls-app-color-800);
   --pvt-indicator-color: var(--rls-app-color-600);
-  --pvt-indicator-background: transparent;
-  --pvt-body-overflow: hidden;
-  --pvt-content-font-color: var(--rls-app-color-700);
   --pvt-divider: var(--rls-app-border-1-200);
 
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  background: var(--pvt-background);
   border: var(--pvt-border);
   border-radius: var(--rls-sizing-x4);
-  box-sizing: border-box;
   transition:
     box-shadow 240ms var(--rls-standard-curve),
     border-color 240ms var(--rls-standard-curve);
 
-  &__header {
-    position: relative;
-    display: flex;
-    width: 100%;
-    min-height: var(--rls-sizing-x24);
-    align-items: center;
-    justify-content: space-between;
-    column-gap: var(--rls-sizing-x4);
-    padding: var(--rls-sizing-x4) var(--rls-sizing-x6);
-    background: var(--pvt-header-background);
-    border: none;
-    border-radius: var(--pvt-header-radius);
-    box-sizing: border-box;
-    cursor: pointer;
-    text-align: left;
-    font-family: inherit;
-    transition: background 240ms var(--rls-standard-curve);
-
-    &:hover {
-      background: var(--pvt-header-hover-background);
-    }
-
-    &:focus-visible {
-      outline: var(--rls-app-border-2-500);
-      outline-offset: -2rem;
-    }
-  }
-
-  &__title {
-    flex: 1 1 auto;
-    color: var(--pvt-title-font-color);
-    font-size: var(--rls-paragraph-font-size);
-    font-weight: var(--rls-font-weight-semibold);
-    letter-spacing: var(--rls-paragraph-letter-spacing);
-  }
-
-  &__indicator {
-    --rlc-icon-color: var(--pvt-indicator-color);
-
-    display: flex;
-    flex: 0 0 auto;
-    width: var(--rls-sizing-x12);
-    height: var(--rls-sizing-x12);
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background: var(--pvt-indicator-background);
-    transform: rotate(0deg);
-    transition:
-      transform 360ms var(--rls-standard-curve),
-      background 240ms var(--rls-standard-curve);
-  }
-
   &__body {
-    height: 0rem;
-    overflow: var(--pvt-body-overflow);
-    opacity: 0;
     transform: translateY(-8rem);
-    transition:
-      height 360ms var(--rls-standard-curve),
-      opacity 280ms var(--rls-deceleration-curve),
-      transform 360ms var(--rls-deceleration-curve);
   }
 
   &__content {
-    padding: var(--rlc-accordion-content-padding, var(--rls-sizing-x8));
     border-top: var(--pvt-divider);
-    color: var(--pvt-content-font-color);
-    font-size: var(--rls-paragraph-font-size);
-    letter-spacing: var(--rls-paragraph-letter-spacing);
-    box-sizing: border-box;
   }
 
   &--open {
     --pvt-indicator-background: var(--rls-app-color-200);
     --pvt-header-radius: var(--rls-sizing-x4) var(--rls-sizing-x4) 0rem 0rem;
-    --pvt-body-overflow: initial;
-
-    .rls-accordion__body {
-      opacity: 1;
-      transform: translateY(0rem);
-    }
-
-    .rls-accordion__indicator {
-      transform: rotate(180deg);
-    }
   }
 
   &--disabled {
     --pvt-header-background: var(--rls-app-color-100);
     --pvt-header-hover-background: var(--rls-app-color-100);
-    --pvt-title-font-color: var(--rls-app-color-400);
-    --pvt-indicator-color: var(--rls-app-color-400);
-
-    .rls-accordion__header {
-      cursor: not-allowed;
-    }
   }
 
   &[rls-theme] {
-    --pvt-background: var(--rls-theme-color-050);
     --pvt-border: var(--rls-theme-border-1-200);
-    --pvt-header-background: var(--rls-theme-color-100);
-    --pvt-header-hover-background: var(--rls-theme-color-200);
-    --pvt-title-font-color: var(--rls-theme-color-800);
-    --pvt-indicator-color: var(--rls-theme-color-700);
-    --pvt-content-font-color: var(--rls-theme-color-700);
     --pvt-divider: var(--rls-theme-border-1-200);
-
-    &.rls-accordion--open {
-      --pvt-indicator-background: var(--rls-theme-color-200);
-    }
   }
 }

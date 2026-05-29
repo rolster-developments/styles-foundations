@@ -1,67 +1,27 @@
-// Rolster Technology MonthPicker Component
+// Rolster Technology MonthPicker Component (filled overrides)
 // v2.1.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 23/Abr/2026
-// Updated: 23/Abr/2026
+// Updated: 28/May/2026
 
 .rls-picker-month {
-  --pvt-component-background: transparent;
-  --pvt-component-font-color: var(--rls-app-color-900);
-
-  position: relative;
-  display: var(--rlc-picker-month-display, grid);
-  grid-template-columns: repeat(3, 1fr);
-  width: 100%;
-  max-width: 140rem;
-  column-gap: var(--rls-sizing-x2);
-  row-gap: var(--rls-sizing-x4);
-  padding: var(--rls-sizing-x1);
-  box-sizing: border-box;
-
   &__component {
-    position: relative;
-    display: flex;
-    box-sizing: border-box;
-    justify-content: center;
-    align-items: center;
-    height: var(--rls-sizing-x20);
-    border-radius: var(--rls-sizing-x4);
-    box-sizing: border-box;
-
-    &:not(:hover) {
-      color: var(--pvt-component-font-color);
-      background: var(--pvt-component-background);
-    }
-
     &:hover {
       color: var(--rls-theme-color-050);
-      background: var(--rls-theme-color-900);
     }
 
     &--selected {
       --pvt-component-font-color: var(--rls-theme-color-950);
-      --pvt-component-background: var(--rls-theme-color-200);
     }
 
     &--focused {
       --pvt-component-font-color: var(--rls-theme-color-950);
       --pvt-component-background: var(--rls-theme-color-200);
     }
-
-    &--disabled {
-      --pvt-component-font-color: var(--rls-app-color-400);
-      --pvt-component-background: transparent;
-
-      pointer-events: none;
-    }
   }
 
   &__span {
-    cursor: default;
-    font-size: var(--rls-caption-font-size);
     letter-spacing: var(--rls-caption-letter-spacing);
-    font-weight: var(--rls-font-weight-semibold);
-    pointer-events: none;
   }
 }

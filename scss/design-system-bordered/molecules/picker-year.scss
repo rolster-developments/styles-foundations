@@ -1,79 +1,22 @@
-// Rolster Technology YearPicker Component
+// Rolster Technology YearPicker Component (bordered overrides)
 // v2.1.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 28/Oct/2025
+// Updated: 28/May/2026
 
 .rls-picker-year {
-  --pvt-component-background: transparent;
-  --pvt-component-font-color: var(--rls-app-color-600);
-
-  position: relative;
-  display: var(--rlc-picker-year-display, block);
-  width: 100%;
-  max-width: 140rem;
-  box-sizing: border-box;
-  overflow: hidden;
-  user-select: none;
-
   &__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-sizing: border-box;
     padding: var(--rls-sizing-x4);
     border-radius: var(--rls-sizing-x4);
 
     & > span {
-      font-size: var(--rls-body-font-size);
-      font-weight: var(--rls-font-weight-semibold);
       letter-spacing: 0.325rem;
-      color: var(--rls-app-color-900);
     }
-  }
-
-  .rls-button-icon {
-    --rlc-button-icon-size: var(--rls-sizing-x14);
-    --rlc-button-icon-icon-size: var(--rls-sizing-x10);
-    --rlc-button-icon-background: var(--rls-theme-color-100);
-    --rlc-button-icon-radius: var(--rls-sizing-x4);
-  }
-
-  &__component {
-    position: relative;
-    display: grid;
-    width: 100%;
-    grid-template-columns: repeat(3, 1fr);
-    padding: var(--rls-sizing-x4);
-    box-sizing: border-box;
-    row-gap: var(--rls-sizing-x6);
-    column-gap: var(--rls-sizing-x8);
   }
 
   &__element {
-    position: relative;
-    display: flex;
-    height: var(--rls-sizing-x20);
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    text-align: center;
-    border-radius: var(--rls-sizing-x4);
-    box-shadow: none;
-
-    &:not(:hover) {
-      color: var(--pvt-component-font-color);
-      background: var(--pvt-component-background);
-    }
-
-    &:hover {
-      background: var(--rls-theme-color-900);
-      color: var(--rls-theme-color-050);
-    }
-
     &--selected {
-      --pvt-component-background: var(--rls-theme-color-200);
       --pvt-component-font-color: var(--rls-theme-color-600);
     }
 
@@ -81,20 +24,5 @@
       --pvt-component-background: var(--rls-theme-gradient-500);
       --pvt-component-font-color: var(--rls-theme-color-050);
     }
-
-    &--disabled {
-      --pvt-span-background: var(--rls-app-color-100);
-      --pvt-component-font-color: var(--rls-app-color-400);
-
-      pointer-events: none;
-    }
-  }
-
-  &__span {
-    font-size: var(--rls-body-font-size);
-    letter-spacing: var(--rls-body-letter-spacing);
-    font-weight: var(--rls-font-weight-medium);
-    cursor: default;
-    pointer-events: none;
   }
 }
