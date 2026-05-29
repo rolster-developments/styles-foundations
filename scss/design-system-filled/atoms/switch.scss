@@ -1,72 +1,12 @@
-// Rolster Technology Switch Component
+// Rolster Technology Switch Component (filled overrides)
 // v1.3.2
 // @license MIT
 // Author: Rolster Developers
 // Created: 23/Abr/2026
-// Updated: 17/May/2026
+// Updated: 28/May/2026
 
 .rls-switch {
-  --pvt-component-background: var(--rls-app-color-400);
-  --pvt-component-height: var(
-    --rlc-switch-component-height,
-    var(--rls-sizing-x12)
-  );
-
-  --pvt-element-left: var(--rls-sizing-x2);
-  --pvt-element-width: var(--rlc-switch-element-width, var(--rls-sizing-x8));
-  --pvt-element-height: var(--rlc-switch-element-height, var(--rls-sizing-x8));
-  --pvt-element-radius: var(--rlc-switch-element-radius, 50%);
-
-  max-width: var(--rlc-switch-max-width, var(--rls-sizing-x20));
-  flex: 0 0 auto;
-
-  &:hover {
-    cursor: var(--rlc-switch-cursor, initial);
-  }
-
-  &--capsule {
-    --pvt-component-height: var(--rls-sizing-x8);
-    --pvt-element-height: var(--rls-sizing-x4);
-    --pvt-element-radius: var(--rls-sizing-x4);
-  }
-
   &--checked {
     --pvt-component-background: var(--rls-theme-color-500);
-    --pvt-element-left: calc(
-      100% - var(--pvt-element-width) - var(--rls-sizing-x2)
-    );
-  }
-
-  &--disabled {
-    --pvt-component-background: var(--rls-app-color-300);
-
-    opacity: 0.5;
-    pointer-events: none;
-
-    &.rls-switch--checked {
-      --pvt-component-background: var(--rls-theme-color-400);
-    }
-  }
-
-  &__component {
-    position: relative;
-    width: 100%;
-    height: var(--pvt-component-height);
-    background: var(--pvt-component-background);
-    border-radius: var(--rls-sizing-x6);
-
-    &__element {
-      position: absolute;
-      top: var(--rls-sizing-x2);
-      left: var(--pvt-element-left);
-      width: var(--pvt-element-width);
-      height: var(--pvt-element-height);
-      border-radius: var(--pvt-element-radius);
-      padding: var(--rls-sizing-x2);
-      box-sizing: border-box;
-      z-index: var(--rls-z-index-2);
-      background: var(--rls-app-color-050);
-      transition: all 160ms var(--rls-standard-curve);
-    }
   }
 }

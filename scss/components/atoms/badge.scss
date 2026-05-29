@@ -1,0 +1,33 @@
+// Rolster Technology Badge Component (shared)
+// v1.2.8
+// @license MIT
+// Author: Rolster Developers
+// Created: 28/May/2026
+// Updated: 28/May/2026
+
+.rls-badge {
+  --pvt-dimension: var(--rlc-badge-dimension, var(--rls-sizing-x12));
+
+  position: relative;
+  display: inline-block;
+  width: auto;
+  min-width: var(--pvt-dimension);
+  height: var(--pvt-dimension);
+  line-height: var(--pvt-dimension);
+  padding: var(--rlc-badge-padding, 0rem var(--rls-sizing-x2));
+  box-sizing: var(--rlc-badge-box-sizing, border-box);
+  text-align: center;
+  color: var(--pvt-font-color);
+  background: var(--pvt-background);
+
+  &--contrasted {
+    color: var(--pvt-contrasted-font-color);
+    background: var(--pvt-contrasted-background);
+  }
+
+  & > span {
+    font-size: inherit;
+    letter-spacing: inherit;
+    line-height: inherit;
+  }
+}

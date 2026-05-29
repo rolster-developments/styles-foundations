@@ -1,13 +1,11 @@
-// Rolster Technology InputCounter Component
+// Rolster Technology InputCounter Component (bordered overrides)
 // v1.0.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 15/May/2026
-// Updated: 15/May/2026
+// Updated: 28/May/2026
 
 .rls-input-counter {
-  --rlc-button-icon-border: none;
-
   --pvt-body-border: var(
     --rlc-input-counter-border,
     var(--rls-app-border-1-200)
@@ -29,20 +27,6 @@
     var(--rls-app-color-300)
   );
 
-  display: flex;
-  width: auto;
-  height: auto;
-  flex: 0 0 auto;
-  align-items: center;
-  column-gap: var(--rls-sizing-x3);
-  overflow: hidden;
-  box-sizing: border-box;
-  border-radius: var(--rlc-input-counter-radius, var(--rls-sizing-x3));
-  border: var(--pvt-body-border);
-  box-shadow: var(--pvt-body-shadow);
-  background: var(--pvt-body-background);
-  transition: box-shadow 160ms 0ms var(--rls-standard-curve);
-
   &--focused {
     --pvt-body-shadow: var(
       --rlc-input-counter-shadow-focused,
@@ -58,53 +42,5 @@
   &--disabled {
     --pvt-body-background: var(--rls-app-color-100);
     --pvt-body-border: var(--rls-app-border-1-transparent);
-  }
-
-  &--readonly {
-    --pvt-body-background: transparent;
-  }
-
-  &__down {
-    --rlc-button-icon-radius: var(--rls-sizing-x3) 0rem 0rem
-      var(--rls-sizing-x3);
-  }
-
-  &__up {
-    --rlc-button-icon-radius: 0rem var(--rls-sizing-x3) var(--rls-sizing-x3)
-      0rem;
-  }
-
-  &__body {
-    display: flex;
-    flex: 1 1 auto;
-    align-items: center;
-    box-sizing: border-box;
-  }
-
-  &__control {
-    width: var(--rlc-input-counter-width, 20rem);
-    padding: 0rem var(--rls-sizing-x3);
-    border: none;
-    outline: none;
-    text-align: center;
-    background: transparent;
-    color: var(--rlc-input-counter-font-color, var(--rls-app-color-900));
-    font-size: var(--rlc-input-counter-font-size, var(--rls-input-font-size));
-    font-weight: var(--rls-font-weight-medium);
-    letter-spacing: var(--rls-input-letter-spacing);
-
-    &::-webkit-inner-spin-button,
-    &::-webkit-outer-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
-    }
-
-    &::placeholder {
-      color: var(--rls-app-color-400);
-    }
-
-    &:disabled {
-      cursor: not-allowed;
-    }
   }
 }

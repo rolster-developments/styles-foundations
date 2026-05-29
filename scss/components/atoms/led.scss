@@ -1,0 +1,30 @@
+// Rolster Technology Led Component (shared)
+// v1.0.1
+// @license MIT
+// Author: Rolster Developers
+// Created: 28/May/2026
+// Updated: 28/May/2026
+
+.rls-led {
+  --pvt-dimension: var(--rlc-led-dimension, var(--rls-sizing-x10));
+  --pvt-content-background: var(--rls-app-color-500);
+  --pvt-shadow-color: var(--rls-app-color-200);
+  --pvt-shadow-width: var(--rlc-led-shadow-width, var(--rls-sizing-x4));
+
+  width: auto;
+  border-radius: 50%;
+  box-shadow: 0 0 0 var(--pvt-shadow-width) var(--pvt-shadow-color);
+
+  &::before {
+    display: block;
+    content: '';
+    background: var(--pvt-content-background);
+    width: var(--pvt-dimension);
+    height: var(--pvt-dimension);
+    border-radius: 50%;
+  }
+
+  &[rls-theme] {
+    --pvt-shadow-color: var(--rls-theme-color-100);
+  }
+}

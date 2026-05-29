@@ -1,0 +1,39 @@
+// Rolster Technology SkeletonText Component (shared)
+// v1.2.0
+// @license MIT
+// Author: Rolster Developers
+// Created: 28/May/2026
+// Updated: 28/May/2026
+
+.rls-skeleton-text {
+  --pvt-height: var(--rlc-skeleton-text-height, var(--rls-body-line-height));
+  --rlc-skeleton-height: var(--pvt-height);
+
+  position: relative;
+  display: block;
+  overflow: inherit;
+  font-weight: inherit;
+  font-size: var(--rlc-skeleton-text-font-size, var(--rls-body-font-size));
+  letter-spacing: var(
+    --rlc-skeleton-text-letter-spacing,
+    var(--rls-body-letter-spacing)
+  );
+  line-height: var(--pvt-height);
+
+  &__value {
+    display: flex;
+    column-gap: var(--rlc-skeleton-text-column-gap, var(--rls-sizing-x4));
+    align-items: center;
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+
+    & > span {
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}

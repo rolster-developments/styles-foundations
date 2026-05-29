@@ -1,0 +1,42 @@
+// Rolster Technology Avatar Component (shared)
+// v1.1.6
+// @license MIT
+// Author: Rolster Developers
+// Created: 28/May/2026
+// Updated: 28/May/2026
+
+.rls-avatar {
+  --rlc-image-width: var(--rlc-avatar-width);
+  --rlc-image-height: var(--rlc-avatar-height);
+
+  position: relative;
+  display: flex;
+  flex: 0 0 auto;
+  width: var(--rlc-avatar-width, var(--rls-sizing-x24));
+  height: var(--rlc-avatar-height, var(--rls-sizing-x24));
+  justify-content: center;
+  align-items: center;
+  font-size: var(--rlc-avatar-font-size, var(--rls-title-font-size));
+  overflow: hidden;
+
+  &--skeleton {
+    background: var(--rls-theme-color-200);
+
+    & > * {
+      display: none;
+    }
+  }
+
+  &--rounded {
+    border-radius: 50%;
+  }
+
+  & > span {
+    font-size: inherit;
+  }
+
+  & > img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
