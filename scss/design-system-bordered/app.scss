@@ -8,9 +8,17 @@
 .rls-app {
   &__page {
     &__nav {
+      --pvt-background: var(--rls-app-color-200);
+      --pvt-background-option-hover: var(--rls-app-color-100);
+
       padding: 0rem;
-      background: var(--rlc-app-navbar-background, var(--rls-theme-color-200));
+      background: var(--rlc-app-navbar-background, var(--pvt-background));
       transition: width 280ms var(--rls-acceleration-curve);
+
+      &[rls-theme] {
+        --pvt-background: var(--rls-theme-color-200);
+        --pvt-background-option-hover: var(--rls-theme-color-100);
+      }
 
       &__content {
         background: var(
@@ -28,7 +36,7 @@
 
         &:hover {
           color: var(--rls-app-color-900);
-          background: var(--rls-app-color-100);
+          background: var(--pvt-background-option-hover);
         }
       }
     }

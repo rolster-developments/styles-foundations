@@ -16,19 +16,42 @@
   --pvt-ripple-color: var(--rlc-action-ripple-color, var(--rls-app-color-600));
   --pvt-tooltip-transition-delay: 0ms;
   --pvt-tooltip-opacity: 0;
+  --pvt-border-radius: 50%;
 
   position: relative;
+  display: flex;
+  flex: 0 0 auto;
   width: var(--rls-sizing-x16);
   height: var(--rls-sizing-x16);
+  align-items: center;
+  justify-content: center;
   border: none;
   outline: none;
-  padding: var(--rls-sizing-x2);
+  padding: 0rem;
   box-sizing: border-box;
   user-select: none;
   cursor: default;
-  border-radius: var(--rlc-action-radius, 50%);
+  border-radius: var(--rlc-action-radius, var(--pvt-border-radius));
   color: var(--rlc-action-color, var(--rls-app-color-600));
   background: var(--rlc-action-background, transparent);
+
+  &:not(:disabled):hover {
+    --pvt-tooltip-opacity: 1;
+    --pvt-tooltip-transition-delay: 480ms;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  &--flat {
+    --pvt-border-radius: var(--rls-sizing-x4);
+  }
+
+  &[rls-theme] {
+    --pvt-ripple-color: var(--rls-theme-color-600);
+  }
 
   &::before {
     position: absolute;
@@ -38,7 +61,7 @@
     left: 50%;
     opacity: 0.32;
     visibility: hidden;
-    border-radius: 50%;
+    border-radius: var(--pvt-border-radius);
     transform: scale(0);
     background: var(--pvt-ripple-color);
     padding-top: calc(120% - var(--rls-sizing-x4));
@@ -65,27 +88,18 @@
     height: var(--pvt-ripple-dimension);
     margin-top: var(--pvt-ripple-position);
     margin-left: var(--pvt-ripple-position);
-    border-radius: 50%;
+    border-radius: var(--pvt-border-radius);
     background: var(--pvt-ripple-color);
     transform: scale(0);
     transition: transform 160ms 0ms var(--rls-sharp-curve);
   }
 
-  &:not(:disabled):hover {
-    --pvt-tooltip-opacity: 1;
-    --pvt-tooltip-transition-delay: 480ms;
-
-    &::after {
-      transform: scale(1);
-    }
-  }
-
-  &:disabled {
-    opacity: 0.5;
-    pointer-events: none;
+  &:not(:disabled):hover::after {
+    transform: scale(1);
   }
 
   &__content {
+    width: auto;
     pointer-events: none;
   }
 

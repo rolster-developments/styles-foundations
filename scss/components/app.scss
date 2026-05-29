@@ -84,6 +84,7 @@
       width: var(--pvt-navbar-width);
       height: 100%;
       margin: 0rem;
+      transition: all 280ms var(--rls-acceleration-curve);
 
       & + .rls-app__page__body {
         --rlc-snackbar-left: calc(50% + calc(var(--pvt-navbar-width) / 2));
@@ -98,6 +99,7 @@
         overflow-x: hidden;
         overflow-y: auto;
         box-sizing: border-box;
+        transition: width 280ms var(--rls-acceleration-curve);
       }
 
       &__menu {

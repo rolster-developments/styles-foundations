@@ -23,20 +23,26 @@
     );
 
     &__nav {
+      --pvt-background-content: var(--rls-app-color-950);
+      --pvt-background-option: var(--rls-app-color-800);
+
       padding: var(--pvt-navbar-padding);
       box-sizing: border-box;
-      transition: all 280ms var(--rls-acceleration-curve);
+
+      &[rls-theme] {
+        --pvt-background-content: var(--rls-theme-color-950);
+        --pvt-background-option: var(--rls-theme-color-800);
+      }
 
       &__content {
         border-radius: var(--rls-sizing-x6);
-        background: var(--rls-app-color-950);
-        transition: width 280ms var(--rls-acceleration-curve);
+        background: var(--pvt-background-content);
       }
 
       &__option {
         border-radius: var(--rls-sizing-x6);
         color: var(--rls-app-color-300);
-        background: var(--rls-app-color-800);
+        background: var(--pvt-background-option);
 
         &:hover {
           color: var(--rls-theme-color-950);
