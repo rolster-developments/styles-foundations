@@ -1,60 +1,10 @@
-// Rolster Technology FieldDateRange Component
+// Rolster Technology FieldDateRange Component (filled overrides)
 // v1.1.8
 // @license MIT
 // Author: Rolster Developers
 // Created: 23/Abr/2026
-// Updated: 23/Abr/2026
-
-.rls-field-date-range {
-  --rlc-field-box-body-padding: var(--rls-sizing-x3) var(--rls-sizing-x4);
-
-  --pvt-font-size: var(
-    --rlc-field-date-range-font-size,
-    var(--rls-input-font-size)
-  );
-
-  --pvt-letter-spacing: var(
-    --rlc-field-date-range-letter-spacing,
-    var(--rls-input-letter-spacing)
-  );
-
-  position: relative;
-  width: 100%;
-  box-sizing: border-box;
-
-  .rls-field-box--readonly {
-    --pvt-control-width: 100%;
-  }
-
-  &__control {
-    position: relative;
-    width: 100%;
-    height: var(--rls-sizing-x12);
-    line-height: var(--rls-sizing-x12);
-    padding: 0rem;
-    cursor: default;
-    border: none;
-    outline: none;
-    background: transparent;
-    color: var(--rls-app-color-900);
-    font-weight: var(--rls-font-weight-medium);
-    font-size: var(--pvt-font-size);
-    letter-spacing: var(--pvt-letter-spacing);
-
-    &::placeholder {
-      color: var(--rls-app-color-400);
-    }
-
-    &:disabled {
-      opacity: 0.5;
-      cursor: not-allowed;
-    }
-  }
-}
+// Updated: 28/May/2026
 
 .rls-field-date-range-modal {
-  --rlc-modal-background: transparent;
-  --rlc-modal-max-width: 150rem;
   --rlc-picker-date-range-radius: var(--rls-sizing-x6);
-  --rlc-picker-date-range-background: var(--rls-app-color-050);
 }

@@ -1,44 +1,12 @@
-// Rolster Technology Dropdown Component
+// Rolster Technology Dropdown Component (filled overrides)
 // v1.0.2
 // @license MIT
 // Author: Rolster Developers
 // Created: 23/Abr/2026
-// Updated: 28/Abr/2026
+// Updated: 28/May/2026
 
 .rls-dropdown {
-  --pvt-content-opacity: 0;
-  --pvt-content-transform: scale(0, 0);
-
-  position: var(--rlc-dropdown-position, absolute);
-  display: block;
-  opacity: 0;
-  width: auto;
-  z-index: -16;
-  pointer-events: none;
-  transition: opacity 240ms 0ms var(--rls-standard-curve);
-
-  &--visible {
-    --pvt-content-opacity: 1;
-    --pvt-content-transform: scale(1, 1);
-
-    opacity: 1;
-    pointer-events: initial;
-    z-index: var(--rlc-dropdown-z-index, var(--rls-z-index-4));
-  }
-
   &__content {
-    display: block;
-    width: auto;
-    max-width: var(--rlc-dropdown-max-width, 150rem);
-    border-radius: var(--rlc-dropdown-radius, var(--rls-sizing-x6));
-    padding: var(--rlc-dropdown-padding, var(--rls-sizing-x6));
-    box-sizing: border-box;
-    background: var(--rlc-dropdown-background, var(--rls-app-color-050));
     box-shadow: var(--rls-app-shadow-center-4);
-    opacity: var(--pvt-content-opacity);
-    transform: var(--pvt-content-transform);
-    transition:
-      transform 240ms 0ms var(--rls-standard-curve),
-      opacity 240ms 0ms var(--rls-standard-curve);
   }
 }

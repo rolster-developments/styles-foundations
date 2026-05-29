@@ -1,0 +1,80 @@
+// Rolster Technology PickerDateRange Component (shared)
+// v1.1.6
+// @license MIT
+// Author: Rolster Developers
+// Created: 28/May/2026
+// Updated: 28/May/2026
+
+.rls-picker-date-range {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 150rem;
+  row-gap: var(--rls-sizing-x4);
+  overflow: hidden;
+  border-radius: var(--rlc-picker-date-range-radius, 0rem);
+  background: var(--rlc-picker-date-range-background, transparent);
+
+  &__header {
+    --rlc-picker-selector-title-background: var(--rls-app-color-200);
+
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--rls-sizing-x4);
+    padding: var(--rls-sizing-x4) var(--rls-sizing-x4) 0rem var(--rls-sizing-x4);
+    box-sizing: border-box;
+  }
+
+  &__title {
+    height: var(--rls-sizing-x14);
+    line-height: var(--rls-sizing-x14);
+    color: var(--rls-app-color-700);
+    text-align: center;
+    cursor: default;
+    font-size: var(--rls-paragraph-font-size);
+
+    &:hover {
+      color: var(--rls-theme-color-500);
+    }
+  }
+
+  &__component {
+    --rlc-picker-day-range-display: none;
+    --rlc-picker-month-display: none;
+    --rlc-picker-year-display: none;
+
+    display: flex;
+    justify-content: center;
+    width: 150rem;
+    padding: 0rem var(--rls-sizing-x2);
+    box-sizing: border-box;
+
+    &--day {
+      --rlc-picker-day-range-display: flex;
+    }
+
+    &--month {
+      --rlc-picker-month-display: grid;
+    }
+
+    &--year {
+      --rlc-picker-year-display: block;
+    }
+  }
+
+  &__footer {
+    &--hidden {
+      display: none;
+    }
+  }
+
+  &__actions {
+    --rlc-button-width: 100%;
+
+    display: flex;
+    column-gap: var(--rls-sizing-x4);
+    padding: var(--rls-sizing-x6) var(--rls-sizing-x8);
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+}

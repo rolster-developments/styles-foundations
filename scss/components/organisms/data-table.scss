@@ -1,0 +1,365 @@
+// Rolster Technology Datatable Component (shared)
+// v2.6.11
+// @license MIT
+// Author: Rolster Developers
+// Created: 28/May/2026
+// Updated: 28/May/2026
+
+@mixin datatable_cell_vars() {
+  --rlc-field-box-body-background: transparent;
+  --rlc-field-box-body-background-focused: transparent;
+  --rlc-field-box-body-background-disabled: transparent;
+  --rlc-field-box-body-padding: 0rem;
+  --rlc-field-box-body-border: none;
+  --rlc-field-box-body-border-focused: none;
+  --rlc-field-box-body-border-error: none;
+  --rlc-field-box-body-border-disabled: none;
+  --rlc-field-box-body-shadow: none;
+  --rlc-field-box-body-shadow-error: none;
+  --rlc-field-box-action-background: transparent;
+
+  --rlc-field-list-control-font-size: var(--pvt-datatable-font-size);
+  --rlc-field-list-control-font-weight: var(--rls-font-weight-medium);
+  --rlc-field-list-control-letter-spacing: var(--rls-body-letter-spacing);
+  --rlc-field-list-element-padding: var(--rls-sizing-x4);
+  --rlc-field-list-suggestions-bottom: var(--rls-sizing-x24);
+  --rlc-field-list-suggestions-top: var(--rls-sizing-x24);
+
+  --rlc-poster-font-size: var(--pvt-datatable-font-size);
+  --rlc-poster-width: calc(100% - var(--rls-sizing-x2));
+  --rlc-poster-height: var(--rls-sizing-x8);
+  --rlc-poster-padding: var(--rls-sizing-x2);
+}
+
+@mixin datatable_cell_control() {
+  --rlc-action-ripple-dimension: var(--rls-sizing-x16);
+  --rlc-action-ripple-position: -8rem;
+
+  --rlc-avatar-radius: var(--rls-sizing-x3);
+  --rlc-avatar-width: var(--rls-sizing-x16);
+  --rlc-avatar-height: var(--rls-sizing-x16);
+  --rlc-avatar-font-size: var(--pvt-datatable-font-size);
+
+  --rlc-image-width: var(--rls-sizing-x12);
+  --rlc-image-height: var(--rls-sizing-x12);
+
+  --rlc-switch-max-width: var(--rls-sizing-x16);
+  --rlc-switch-component-height: var(--rls-sizing-x8);
+  --rlc-switch-element-width: var(--rls-sizing-x6);
+  --rlc-switch-element-height: var(--rls-sizing-x4);
+  --rlc-switch-element-radius: var(--rls-sizing-x4);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--rls-sizing-x24);
+  padding: 0rem;
+
+  & > img {
+    width: var(--rls-sizing-x12);
+  }
+}
+
+@mixin datatable_cell_styles() {
+  --rlc-field-box-body-padding: var(--rls-sizing-x4) 0rem;
+  --rlc-field-box-action-dimension: var(--rls-sizing-x10);
+
+  &--contained {
+    overflow: hidden;
+  }
+
+  &--control {
+    @include datatable_cell_control();
+  }
+
+  & > span {
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  & > a {
+    &:hover {
+      color: var(--rls-app-color-700);
+      text-decoration: underline;
+    }
+  }
+}
+
+.rls-datatable {
+  --pvt-datatable-font-size: var(
+    --rlc-datatable-font-size,
+    var(--rls-label-font-size)
+  );
+
+  --pvt-datatable-letter-spacing: var(
+    --rlc-datatable-letter-spacing,
+    var(--rls-label-letter-spacing)
+  );
+
+  --pvt-datatable-font-color: var(
+    --rlc-datatable-font-color,
+    var(--rls-app-color-900)
+  );
+
+  --pvt-datatable-padding-component: 0rem;
+  --pvt-datatable-padding-scroll: var(--rlc-datatable-padding-scroll, 0rem);
+
+  --pvt-datatable-table-overflow: initial;
+  --pvt-datatable-body-overflow: initial;
+
+  --pvt-datatable-header-padding-right: var(--pvt-datatable-padding-scroll);
+
+  --rlc-amount-font-size: var(--pvt-datatable-font-size);
+  --rlc-amount-width: 100%;
+
+  --rlc-ballot-padding: 0rem;
+  --rlc-ballot-component-row-gap: var(--rls-sizing-x1);
+  --rlc-ballot-title-letter-spacing: var(--rls-smalltext-letter-spacing);
+  --rlc-ballot-title-font-size: var(--rls-smalltext-font-size);
+  --rlc-ballot-title-line-height: var(--rls-smalltext-line-height);
+  --rlc-ballot-subtitle-letter-spacing: var(--rls-overline-letter-spacing);
+  --rlc-ballot-subtitle-font-size: var(--rls-overline-font-size);
+  --rlc-ballot-subtitle-line-height: var(--rls-overline-line-height);
+
+  --rlc-field-box-body-background: transparent;
+  --rlc-field-box-padding: 0rem;
+  --rlc-field-box-width: 100%;
+  --rlc-field-box-error-display: none;
+  --rlc-field-box-label-display: none;
+
+  --rlc-input-font-size: var(--pvt-datatable-font-size);
+  --rlc-input-letter-spacing: var(--pvt-datatable-letter-spacing);
+
+  --rlc-skeleton-text-column-gap: var(--rls-sizing-x2);
+
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: var(--rlc-datatable-height, auto);
+  flex-direction: column;
+  row-gap: var(--rls-sizing-x6);
+  border-radius: var(--rls-sizing-x4);
+  box-sizing: border-box;
+
+  &--resizable {
+    --pvt-datatable-table-overflow: hidden;
+    --pvt-datatable-body-overflow: auto;
+
+    height: 100%;
+  }
+
+  &--scrolleable {
+    --pvt-datatable-padding-scroll: var(--rls-sizing-x4);
+
+    --pvt-datatable-header-padding-right: calc(
+      var(--pvt-datatable-padding-scroll) +
+        var(--rlc-datatable-width-scroll, var(--rls-sizing-x4))
+    );
+
+    --pvt-datatable-padding-component: 0rem
+      calc(var(--pvt-datatable-padding-scroll) + 5rem) 0rem 0rem;
+  }
+
+  &__toolbar {
+    display: flex;
+    flex: 0 0 auto;
+    column-gap: var(--rls-sizing-x6);
+    padding: var(--pvt-datatable-padding-component);
+    box-sizing: border-box;
+    background: var(--pvt-datatable-header-background);
+    border-radius: var(--pvt-datatable-border-radius);
+  }
+
+  &__table {
+    display: flex;
+    flex: 0 1 auto;
+    overflow: var(--pvt-datatable-table-overflow);
+
+    & > table {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      row-gap: var(--rls-sizing-x4);
+      border-spacing: 0;
+      border-collapse: collapse;
+    }
+  }
+
+  &__head {
+    flex: 0 0 auto;
+    width: 100%;
+    padding-right: var(--pvt-datatable-header-padding-right);
+    box-sizing: border-box;
+  }
+
+  &__header {
+    --rlc-poster-width: calc(100% - var(--rls-sizing-x2));
+    --rlc-poster-margin: auto 0rem;
+
+    display: flex;
+    column-gap: var(--rls-sizing-x6);
+    padding: 0rem var(--rls-sizing-x6);
+    box-sizing: border-box;
+    background: var(--pvt-datatable-header-background);
+    border-radius: var(--pvt-datatable-border-radius);
+  }
+
+  &__title {
+    @include datatable_cell_vars();
+
+    position: relative;
+    display: flex;
+    min-height: var(--rls-sizing-x20);
+    align-items: var(--rlc-datatable-align-items, center);
+    justify-content: var(--rlc-datatable-justify-content, flex-start);
+    text-align: left;
+    white-space: nowrap;
+    font-size: var(--pvt-datatable-font-size);
+    font-weight: var(
+      --rlc-datatable-header-font-weight,
+      var(--rls-font-weight-semibold)
+    );
+    letter-spacing: var(--pvt-datatable-letter-spacing);
+
+    @include datatable_cell_styles();
+
+    & > * {
+      color: var(--rls-app-color-700);
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    row-gap: var(--rls-sizing-x6);
+    padding-right: var(--pvt-datatable-padding-scroll);
+    box-sizing: border-box;
+    overflow-y: var(--pvt-datatable-body-overflow);
+  }
+
+  &__subheader,
+  &__record,
+  &__totals {
+    position: relative;
+    display: flex;
+    column-gap: var(--rls-sizing-x6);
+    padding: 0rem var(--rls-sizing-x6);
+    box-sizing: border-box;
+    background: var(--pvt-datatable-row-background);
+    border-radius: var(--pvt-datatable-border-radius);
+
+    &--contained {
+      overflow: hidden;
+    }
+  }
+
+  &__subheader {
+    --pvt-data-font-color: var(--rls-app-color-700);
+    --pvt-data-font-weight: var(--rls-font-weight-semibold);
+
+    position: sticky;
+    top: 0px;
+    z-index: var(--rls-z-index-4);
+    background: var(--pvt-datatable-header-background);
+  }
+
+  &__cell,
+  &__data {
+    @include datatable_cell_vars();
+
+    position: relative;
+    display: flex;
+    min-height: var(--rls-sizing-x20);
+    align-items: var(--rlc-datatable-align-items, center);
+    justify-content: var(--rlc-datatable-justify-content, flex-start);
+    cursor: default;
+    text-align: left;
+    padding: var(--rls-sizing-x2) 0rem;
+    font-size: var(--pvt-datatable-font-size);
+    letter-spacing: var(--pvt-datatable-letter-spacing);
+
+    @include datatable_cell_styles();
+  }
+
+  &__cell {
+    color: var(--pvt-datatable-font-color);
+    font-weight: var(--rls-font-weight-regular);
+  }
+
+  &__data {
+    color: var(--pvt-data-font-color, var(--pvt-datatable-font-color));
+    font-weight: var(--pvt-data-font-weight, var(--rls-font-weight-regular));
+  }
+
+  &__floating {
+    --pvt-action-tooltip-left: 0;
+    --pvt-action-tooltip-right: initial;
+    --pvt-action-tooltip-transform: translate(
+      calc(-100% - var(--rls-sizing-x4))
+    );
+
+    position: absolute;
+    display: flex;
+    left: initial;
+    right: 0;
+    height: 100%;
+    column-gap: 4rem;
+    align-items: center;
+    z-index: var(--rls-z-index-2);
+    padding: 0rem var(--rls-sizing-x6);
+    background: var(--pvt-datatable-floating-background);
+    border-right: none;
+    transform: translateX(calc(100% - var(--rls-sizing-x4)));
+    transition: transform 240ms var(--rls-standard-curve);
+
+    &:hover {
+      transform: translateX(0);
+    }
+
+    &--invested {
+      --pvt-action-tooltip-left: initial;
+      --pvt-action-tooltip-right: 0;
+      --pvt-action-tooltip-transform: translate(
+        calc(100% + var(--rls-sizing-x4))
+      );
+
+      right: initial;
+      left: 0;
+      transform: translateX(calc(-100% + var(--rls-sizing-x4)));
+    }
+
+    &[rls-theme] {
+      background: var(--rls-theme-color-050);
+    }
+
+    .rls-button-action__tooltip {
+      top: 0;
+      left: var(--pvt-action-tooltip-left);
+      right: var(--pvt-action-tooltip-right);
+      transform: var(--pvt-action-tooltip-transform);
+      z-index: var(--rls-z-index-2);
+    }
+  }
+
+  &__summary {
+    --pvt-datatable-row-background: var(--pvt-datatable-summary-background);
+
+    flex: 0 0 auto;
+    padding-right: var(--pvt-datatable-header-padding-right);
+    box-sizing: border-box;
+  }
+
+  &__footer {
+    --pvt-datatable-row-background: var(--pvt-datatable-footer-background);
+
+    position: relative;
+    flex: 0 0 auto;
+    width: 100%;
+    overflow: hidden;
+    padding: var(--pvt-datatable-padding-component);
+    box-sizing: border-box;
+  }
+}

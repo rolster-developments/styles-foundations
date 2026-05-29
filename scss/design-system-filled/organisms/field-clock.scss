@@ -1,62 +1,10 @@
-// Rolster Technology FieldClock Component
+// Rolster Technology FieldClock Component (filled overrides)
 // v1.1.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 23/Abr/2026
-// Updated: 23/Abr/2026
-
-.rls-field-clock {
-  --rlc-field-box-body-padding: var(--rls-sizing-x3) var(--rls-sizing-x4);
-
-  --pvt-font-size: var(--rlc-field-clock-font-size, var(--rls-input-font-size));
-
-  --pvt-letter-spacing: var(
-    --rlc-field-clock-letter-spacing,
-    var(--rls-input-letter-spacing)
-  );
-
-  position: relative;
-  width: 100%;
-  box-sizing: border-box;
-
-  .rls-field-box--readonly {
-    --pvt-control-width: 100%;
-  }
-
-  .rls-field-box__body {
-    column-gap: var(--rls-sizing-x2);
-  }
-
-  &__control {
-    position: relative;
-    width: 100%;
-    height: var(--rls-sizing-x12);
-    line-height: var(--rls-sizing-x12);
-    padding: 0rem;
-    cursor: default;
-    border: none;
-    outline: none;
-    background: transparent;
-    color: var(--rls-app-color-900);
-    font-weight: var(--rls-font-weight-medium);
-    font-size: var(--pvt-font-size);
-    letter-spacing: var(--pvt-letter-spacing);
-
-    &::placeholder {
-      color: var(--rls-app-color-400);
-    }
-
-    &:disabled {
-      opacity: 0.5;
-      cursor: not-allowed;
-    }
-  }
-}
+// Updated: 28/May/2026
 
 .rls-field-clock-modal {
-  --rlc-modal-background: transparent;
-  --rlc-modal-max-width: 150rem;
   --rlc-picker-clock-radius: var(--rls-sizing-x6);
-  --rlc-picker-clock-background: var(--rls-app-color-050);
-  --rlc-picker-clock-padding: var(--rls-sizing-x4) 0rem;
 }

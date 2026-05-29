@@ -34,27 +34,13 @@
   @include meta.load-css('molecules/picker-year');
   @include meta.load-css('molecules/tabs');
 
-  @include meta.load-css('organisms/bottom-sheet');
   @include meta.load-css('organisms/card');
-  @include meta.load-css('organisms/confirmation');
   @include meta.load-css('organisms/data-table');
   @include meta.load-css('organisms/dropdown');
-  @include meta.load-css('organisms/field-autocomplete');
   @include meta.load-css('organisms/field-clock');
-  @include meta.load-css('organisms/field-color');
   @include meta.load-css('organisms/field-date');
   @include meta.load-css('organisms/field-date-range');
-  @include meta.load-css('organisms/field-select');
-  @include meta.load-css('organisms/form');
-  @include meta.load-css('organisms/form-navigation');
-  @include meta.load-css('organisms/image-chooser');
-  @include meta.load-css('organisms/image-editor');
-  @include meta.load-css('organisms/image-editor-modal');
-  @include meta.load-css('organisms/modal');
-  @include meta.load-css('organisms/modal-sheet');
   @include meta.load-css('organisms/picker-clock');
-  @include meta.load-css('organisms/picker-color');
   @include meta.load-css('organisms/picker-date');
   @include meta.load-css('organisms/picker-date-range');
-  @include meta.load-css('organisms/snackbar');
 }
