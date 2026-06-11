@@ -1,12 +1,12 @@
 // Rolster Technology Led Component (bordered overrides)
-// v1.0.1
+// v1.0.2
 // @license MIT
 // Author: Rolster Developers
 // Created: 07/May/2026
-// Updated: 28/May/2026
+// Updated: 01/Jun/2026
 
 .rls-led {
   &[rls-theme] {
-    --pvt-content-background: var(--rls-theme-gradient-500);
+    --pvt-content-background: var(--rls-theme-color-500);
   }
 }
