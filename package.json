@@ -1,6 +1,6 @@
 {
   "name": "@rolster/styles-foundations",
-  "version": "3.2.1",
+  "version": "3.2.2",
   "description": "Front-end style pack to develop responsive and mobile projects on the web with Rolster.",
   "sass": "scss/styles.scss",
   "style": "dist/styles.css",
@@ -62,6 +62,6 @@
     "url": "git+https://github.com/rolster-developments/styles-foundations"
   },
   "engines": {
-    "node": ">=14.13"
+    "node": ">=22"
   }
 }
