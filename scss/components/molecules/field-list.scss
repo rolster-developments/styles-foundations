@@ -325,7 +325,7 @@
     bottom: var(--pvt-backdrop-bottom);
     opacity: var(--pvt-backdrop-opacity);
     z-index: var(--rls-z-index-2);
-    background: var(--rls-theme-backdrop-900);
+    background: var(--rls-theme-backdrop-400);
     backdrop-filter: blur(2px);
     transition:
       opacity 120ms 0ms var(--rls-deceleration-curve),
