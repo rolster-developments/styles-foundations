@@ -1,9 +1,9 @@
 // Rolster Technology Datatable Component (shared)
-// v2.6.11
+// v2.6.12
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 28/May/2026
+// Updated: 13/Jun/2026
 
 @mixin datatable_cell_vars() {
   --rlc-field-box-body-background: transparent;
@@ -112,7 +112,6 @@
   --pvt-datatable-header-padding-right: var(--pvt-datatable-padding-scroll);
 
   --rlc-amount-font-size: var(--pvt-datatable-font-size);
-  --rlc-amount-width: 100%;
 
   --rlc-ballot-padding: 0rem;
   --rlc-ballot-component-row-gap: var(--rls-sizing-x1);

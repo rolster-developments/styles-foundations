@@ -1,6 +1,6 @@
 {
   "name": "@rolster/styles-foundations",
-  "version": "3.2.2",
+  "version": "3.3.1",
   "description": "Front-end style pack to develop responsive and mobile projects on the web with Rolster.",
   "sass": "scss/styles.scss",
   "style": "dist/styles.css",
@@ -8,24 +8,24 @@
   "license": "MIT",
   "exports": {
     ".": {
-      "sass": "scss/styles.scss",
-      "style": "dist/styles.css",
-      "default": "dist/styles.css"
+      "sass": "./scss/styles.scss",
+      "style": "./dist/styles.css",
+      "default": "./dist/styles.css"
     },
     "./components": {
-      "sass": "scss/components/index.scss",
-      "style": "dist/components.css",
-      "default": "dist/components.css"
+      "sass": "./scss/components/index.scss",
+      "style": "./dist/components.css",
+      "default": "./dist/components.css"
     },
     "./design-system-bordered": {
-      "sass": "scss/design-system-bordered/index.scss",
-      "style": "dist/design-system-bordered.css",
-      "default": "dist/design-system-bordered.css"
+      "sass": "./scss/design-system-bordered/index.scss",
+      "style": "./dist/design-system-bordered.css",
+      "default": "./dist/design-system-bordered.css"
     },
     "./design-system-filled": {
-      "sass": "scss/design-system-filled/index.scss",
-      "style": "dist/design-system-filled.css",
-      "default": "dist/design-system-filled.css"
+      "sass": "./scss/design-system-filled/index.scss",
+      "style": "./dist/design-system-filled.css",
+      "default": "./dist/design-system-filled.css"
     },
     "./scss/*": "./scss/*"
   },
@@ -50,12 +50,12 @@
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
-    "css-minify": "^2.0.0",
-    "prettier": "^3.1.8",
+    "css-minify": "^2.1.0",
+    "prettier": "^3.8.4",
     "rimraf": "^6.1.3",
-    "rtlcss": "^4.1.0",
-    "sass": "^1.89.0",
-    "sass-migrator": "^2.2.1"
+    "rtlcss": "^4.3.0",
+    "sass": "^1.101.0",
+    "sass-migrator": "^2.6.0"
   },
   "repository": {
     "type": "git",
