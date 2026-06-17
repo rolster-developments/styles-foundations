@@ -1,0 +1,20 @@
+// Rolster Technology Notifications Component (filled overrides)
+// v1.0.0
+// @license MIT
+// Author: Rolster Developers
+// Created: 18/Jun/2026
+// Updated: 18/Jun/2026
+
+.rls-notification {
+  background: var(--rls-theme-color-050);
+
+  &__avatar {
+    --rlc-icon-color: var(--rls-theme-color-700);
+
+    background: var(--rls-theme-color-200);
+  }
+
+  &__title {
+    color: var(--rls-theme-color-700);
+  }
+}

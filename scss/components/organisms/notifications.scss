@@ -1,0 +1,96 @@
+// Rolster Technology Notifications Component (shared)
+// v1.0.0
+// @license MIT
+// Author: Rolster Developers
+// Created: 18/Jun/2026
+// Updated: 18/Jun/2026
+
+.rls-notifications {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--rls-sizing-x4);
+  right: var(--rls-sizing-x8);
+  bottom: var(--rls-sizing-x8);
+  width: auto;
+  max-width: 360rem;
+  z-index: var(--rls-z-index-32);
+  pointer-events: none;
+}
+
+.rls-notification {
+  display: flex;
+  column-gap: var(--rls-sizing-x6);
+  padding: var(--rls-sizing-x6);
+  box-sizing: border-box;
+  border-radius: var(--rls-sizing-x6);
+  background: var(--rls-app-color-050);
+  border-left: var(--rls-theme-border-4-400);
+  box-shadow: var(--rls-app-shadow-center-8);
+  transform: translateX(calc(100% + var(--rls-sizing-x8)));
+  transition: transform 240ms 0ms var(--rls-standard-curve);
+  pointer-events: auto;
+
+  &--visible {
+    transform: translateX(0);
+  }
+
+  &__avatar {
+    --rlc-icon-color: var(--rls-theme-color-050);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: var(--rls-theme-color-500);
+    width: var(--rls-sizing-x18);
+    height: var(--rls-sizing-x18);
+    min-width: var(--rls-sizing-x18);
+    border-radius: var(--rls-sizing-x4);
+
+    & + .rls-notification__component {
+      width: calc(100% - var(--rls-sizing-x18));
+    }
+  }
+
+  &__component {
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--rls-sizing-x2);
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: var(--rls-sizing-x4);
+
+    & > button {
+      background: transparent;
+      border: none;
+      padding: 0rem;
+      cursor: pointer;
+      color: var(--rls-theme-color-700);
+    }
+  }
+
+  &__title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--rls-theme-color-500);
+    font-size: var(--rls-body-font-size);
+    font-weight: var(--rls-font-weight-bold);
+    letter-spacing: var(--rls-body-letter-spacing);
+  }
+
+  &__content {
+    p {
+      line-height: var(--rls-sizing-x10);
+      color: var(--rls-app-color-600);
+      font-size: var(--rls-label-font-size);
+      font-weight: var(--rls-font-weight-medium);
+      letter-spacing: var(--rls-label-letter-spacing);
+    }
+  }
+}
