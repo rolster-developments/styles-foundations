@@ -1,9 +1,9 @@
 // Rolster Technology Typographics Utilities
-// v2.2.1
+// v2.2.3
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 09/Jun/2026
+// Updated: 18/Jun/2026
 
 @mixin typographic($name, $key) {
   .rls-#{$name}-font-default {
@@ -37,6 +37,16 @@
     @extend .rls-#{$name}-font-default;
     font-weight: var(--rls-font-weight-bold);
   }
+
+  .rls-#{$name}-font-extrabold {
+    @extend .rls-#{$name}-font-default;
+    font-weight: var(--rls-font-weight-extrabold);
+  }
+
+  .rls-#{$name}-font-black {
+    @extend .rls-#{$name}-font-default;
+    font-weight: var(--rls-font-weight-black);
+  }
 }
 
 :root {
@@ -45,17 +55,17 @@
   --rls-heading1-font-size: 32rem;
   --rls-heading1-letter-spacing: -4%;
   --rls-heading1-line-height: 40rem;
-  --rls-heading1-font-weight: 700;
+  --rls-heading1-font-weight: 800;
 
   --rls-heading2-font-size: 24rem;
   --rls-heading2-letter-spacing: -4%;
   --rls-heading2-line-height: 32rem;
-  --rls-heading2-font-weight: 700;
+  --rls-heading2-font-weight: 800;
 
   --rls-heading3-font-size: 21rem;
   --rls-heading3-letter-spacing: -3%;
   --rls-heading3-line-height: 28rem;
-  --rls-heading3-font-weight: 700;
+  --rls-heading3-font-weight: 800;
 
   --rls-heading4-font-size: 17rem;
   --rls-heading4-letter-spacing: -3%;
@@ -65,7 +75,7 @@
   --rls-heading5-font-size: 14rem;
   --rls-heading5-letter-spacing: -2%;
   --rls-heading5-line-height: 20rem;
-  --rls-heading5-font-weight: 600;
+  --rls-heading5-font-weight: 700;
 
   --rls-heading6-font-size: 12rem;
   --rls-heading6-letter-spacing: -2%;
