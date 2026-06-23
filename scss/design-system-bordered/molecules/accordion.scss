@@ -1,9 +1,9 @@
 // Rolster Technology Accordion Component (bordered overrides)
-// v1.0.0
+// v1.0.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 29/Abr/2026
-// Updated: 28/May/2026
+// Updated: 19/Jun/2026
 
 .rls-accordion {
   --pvt-background: var(--rls-app-color-050);
@@ -19,10 +19,6 @@
   transition:
     box-shadow 240ms var(--rls-standard-curve),
     border-color 240ms var(--rls-standard-curve);
-
-  &__body {
-    transform: translateY(-8rem);
-  }
 
   &__content {
     border-top: var(--pvt-divider);
