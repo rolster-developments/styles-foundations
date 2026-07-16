@@ -1,9 +1,9 @@
 // Rolster Technology Text Utilities
-// v2.1.4
+// v2.1.5
 // @license MIT
 // Author: Rolster Developers
 // Created: 08/Sep/2022
-// Updated: 27/Abr/2026
+// Updated: 16/Jul/2026
 
 .rls-align-center {
   --rlc-amount-text-align: center;
@@ -66,4 +66,48 @@ span.rls-truncate,
 p.rls-truncate {
   width: 100%;
   display: block;
+}
+
+.rls-font-color-050 {
+  color: var(--rls-app-color-050) !important;
+}
+
+.rls-font-color-100 {
+  color: var(--rls-app-color-100) !important;
+}
+
+.rls-font-color-200 {
+  color: var(--rls-app-color-200) !important;
+}
+
+.rls-font-color-300 {
+  color: var(--rls-app-color-300) !important;
+}
+
+.rls-font-color-400 {
+  color: var(--rls-app-color-400) !important;
+}
+
+.rls-font-color-500 {
+  color: var(--rls-app-color-500) !important;
+}
+
+.rls-font-color-600 {
+  color: var(--rls-app-color-600) !important;
+}
+
+.rls-font-color-700 {
+  color: var(--rls-app-color-700) !important;
+}
+
+.rls-font-color-800 {
+  color: var(--rls-app-color-800) !important;
+}
+
+.rls-font-color-900 {
+  color: var(--rls-app-color-900) !important;
+}
+
+.rls-font-color-950 {
+  color: var(--rls-app-color-950) !important;
 }
