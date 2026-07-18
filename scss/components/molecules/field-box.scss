@@ -1,9 +1,9 @@
 // Rolster Technology FieldBox Component (shared)
-// v2.3.3
+// v2.3.4
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 28/May/2026
+// Updated: 18/Jul/2026
 
 .rls-field-box {
   --pvt-body-background-disabled: var(
@@ -28,6 +28,8 @@
 
   --pvt-label-opacity: 1;
   --pvt-body-opacity: 1;
+
+  --rlc-button-action-dimension: var(--pvt-action-dimension);
 
   position: relative;
   display: flex;
@@ -79,9 +81,6 @@
 
   &__body {
     --rlc-button-icon-dimension: var(--rls-sizing-x12);
-    --rlc-button-icon-icon-dimension: calc(
-      var(--pvt-action-dimension) - var(--rls-sizing-x2)
-    );
     --rlc-button-icon-background: var(--pvt-action-background);
     --rlc-button-icon-radius: var(
       --rlc-field-box-action-radius,

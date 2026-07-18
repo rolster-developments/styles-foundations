@@ -1,28 +1,29 @@
 // Rolster Technology ButtonAction Component (shared)
-// v1.1.2
+// v1.1.3
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 28/May/2026
+// Updated: 18/Jul/2026
 
 .rls-button-action {
-  --pvt-ripple-dimension: var(
-    --rlc-action-ripple-dimension,
-    var(--rls-sizing-x18)
+  --pvt-dimension: var(--rlc-button-action-dimension, var(--rls-sizing-x16));
+  --pvt-ripple-dimension: calc(var(--pvt-dimension) + var(--rls-sizing-x2));
+  --pvt-ripple-position: calc(var(--pvt-ripple-dimension) / 2 * -1);
+  --pvt-ripple-color: var(
+    --rlc-button-action-ripple-color,
+    var(--rls-app-color-600)
   );
-
-  --pvt-ripple-position: var(--rlc-action-ripple-position, -9rem);
-
-  --pvt-ripple-color: var(--rlc-action-ripple-color, var(--rls-app-color-600));
   --pvt-tooltip-transition-delay: 0ms;
   --pvt-tooltip-opacity: 0;
   --pvt-border-radius: 50%;
 
+  --rlc-icon-dimension: calc(var(--pvt-dimension) - var(--rls-sizing-x4));
+
   position: relative;
   display: flex;
   flex: 0 0 auto;
-  width: var(--rls-sizing-x16);
-  height: var(--rls-sizing-x16);
+  width: var(--pvt-dimension);
+  height: var(--pvt-dimension);
   align-items: center;
   justify-content: center;
   border: none;
@@ -31,9 +32,9 @@
   box-sizing: border-box;
   user-select: none;
   cursor: default;
-  border-radius: var(--rlc-action-radius, var(--pvt-border-radius));
+  border-radius: var(--rlc-button-action-radius, var(--pvt-border-radius));
   color: var(--rlc-action-color, var(--rls-app-color-600));
-  background: var(--rlc-action-background, transparent);
+  background: var(--rlc-button-action-background, transparent);
 
   &:not(:disabled):hover {
     --pvt-tooltip-opacity: 1;

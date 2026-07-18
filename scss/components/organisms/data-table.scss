@@ -1,21 +1,22 @@
 // Rolster Technology Datatable Component (shared)
-// v2.6.12
+// v2.6.13
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 13/Jun/2026
+// Updated: 18/Jul/2026
 
 @mixin datatable_cell_vars() {
   --rlc-field-box-body-background: transparent;
   --rlc-field-box-body-background-focused: transparent;
   --rlc-field-box-body-background-disabled: transparent;
-  --rlc-field-box-body-padding: 0rem;
+  --rlc-field-box-body-padding: var(--rls-sizing-x4) 0rem;
   --rlc-field-box-body-border: none;
   --rlc-field-box-body-border-focused: none;
   --rlc-field-box-body-border-error: none;
   --rlc-field-box-body-border-disabled: none;
   --rlc-field-box-body-shadow: none;
   --rlc-field-box-body-shadow-error: none;
+  --rlc-field-box-action-dimension: var(--rls-sizing-x10);
   --rlc-field-box-action-background: transparent;
 
   --rlc-field-list-control-font-size: var(--pvt-datatable-font-size);
@@ -32,9 +33,6 @@
 }
 
 @mixin datatable_cell_control() {
-  --rlc-action-ripple-dimension: var(--rls-sizing-x16);
-  --rlc-action-ripple-position: -8rem;
-
   --rlc-avatar-radius: var(--rls-sizing-x3);
   --rlc-avatar-width: var(--rls-sizing-x16);
   --rlc-avatar-height: var(--rls-sizing-x16);
@@ -61,10 +59,7 @@
 }
 
 @mixin datatable_cell_styles() {
-  --rlc-field-box-body-padding: var(--rls-sizing-x4) 0rem;
-  --rlc-field-box-action-dimension: var(--rls-sizing-x10);
-
-  &--contained {
+  &--truncated {
     overflow: hidden;
   }
 
@@ -250,7 +245,7 @@
     background: var(--pvt-datatable-row-background);
     border-radius: var(--pvt-datatable-border-radius);
 
-    &--contained {
+    &--truncated {
       overflow: hidden;
     }
   }

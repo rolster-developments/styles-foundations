@@ -1,25 +1,19 @@
 // Rolster Technology ButtonIcon Component (shared)
-// v1.0.0
+// v1.0.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 28/May/2026
+// Updated: 18/Jul/2026
 
 .rls-button-icon {
-  --rlc-icon-dimension: var(
-    --rlc-button-icon-icon-dimension,
-    var(--rls-sizing-x12)
-  );
+  --pvt-dimension: var(--rlc-button-icon-dimension, var(--rls-sizing-x16));
 
-  --pvt-button-dimension: var(
-    --rlc-button-icon-dimension,
-    var(--rls-sizing-x16)
-  );
+  --rlc-icon-dimension: calc(var(--pvt-dimension) - var(--rls-sizing-x4));
 
   display: flex;
   flex: 0 0 auto;
-  width: var(--pvt-button-dimension);
-  height: var(--pvt-button-dimension);
+  width: var(--pvt-dimension);
+  height: var(--pvt-dimension);
   align-items: center;
   justify-content: center;
   padding: 0rem;
