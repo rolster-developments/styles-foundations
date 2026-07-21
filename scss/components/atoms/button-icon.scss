@@ -8,7 +8,7 @@
 .rls-button-icon {
   --pvt-dimension: var(--rlc-button-icon-dimension, var(--rls-sizing-x16));
 
-  --rlc-icon-dimension: calc(var(--pvt-dimension) - var(--rls-sizing-x4));
+  --rlc-icon-dimension: calc(var(--pvt-dimension) - var(--rls-sizing-x2));
 
   display: flex;
   flex: 0 0 auto;
