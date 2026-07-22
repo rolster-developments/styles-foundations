@@ -1,9 +1,9 @@
 // Rolster Technology Datatable Component (shared)
-// v2.6.13
+// v2.6.14
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 18/Jul/2026
+// Updated: 22/Jul/2026
 
 @mixin datatable_cell_vars() {
   --rlc-field-box-body-background: transparent;
@@ -19,6 +19,7 @@
   --rlc-field-box-action-dimension: var(--rls-sizing-x10);
   --rlc-field-box-action-background: transparent;
 
+  --rlc-field-list-body-padding: var(--rls-sizing-x4) 0rem;
   --rlc-field-list-control-font-size: var(--pvt-datatable-font-size);
   --rlc-field-list-control-font-weight: var(--rls-font-weight-medium);
   --rlc-field-list-control-letter-spacing: var(--rls-body-letter-spacing);
