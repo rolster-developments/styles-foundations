@@ -1,5 +1,5 @@
-// Rolster Technology Datatable Component (shared)
-// v2.6.14
+// Rolster Technology Datatable Component
+// v2.6.15
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
@@ -31,6 +31,8 @@
   --rlc-poster-width: calc(100% - var(--rls-sizing-x2));
   --rlc-poster-height: var(--rls-sizing-x8);
   --rlc-poster-padding: var(--rls-sizing-x2);
+
+  --rlc-button-action-dimension: var(--rls-sizing-x14);
 }
 
 @mixin datatable_cell_control() {
@@ -211,6 +213,7 @@
     justify-content: var(--rlc-datatable-justify-content, flex-start);
     text-align: left;
     white-space: nowrap;
+    padding: var(--rlc-datatable-title-padding, var(--rls-sizing-x1) 0rem);
     font-size: var(--pvt-datatable-font-size);
     font-weight: var(
       --rlc-datatable-header-font-weight,
@@ -272,7 +275,7 @@
     justify-content: var(--rlc-datatable-justify-content, flex-start);
     cursor: default;
     text-align: left;
-    padding: var(--rls-sizing-x2) 0rem;
+    padding: var(--rlc-datatable-cell-padding, var(--rls-sizing-x3) 0rem);
     font-size: var(--pvt-datatable-font-size);
     letter-spacing: var(--pvt-datatable-letter-spacing);
 
@@ -290,18 +293,20 @@
   }
 
   &__floating {
-    --pvt-action-tooltip-left: 0;
     --pvt-action-tooltip-right: initial;
+    --pvt-action-tooltip-left: 0;
     --pvt-action-tooltip-transform: translate(
       calc(-100% - var(--rls-sizing-x4))
     );
+
+    --rlc-button-action-dimension: var(--rls-sizing-x14);
 
     position: absolute;
     display: flex;
     left: initial;
     right: 0;
     height: 100%;
-    column-gap: 4rem;
+    column-gap: var(--rls-sizing-x4);
     align-items: center;
     z-index: var(--rls-z-index-2);
     padding: 0rem var(--rls-sizing-x6);
@@ -331,9 +336,9 @@
     }
 
     .rls-button-action__tooltip {
-      top: 0;
-      left: var(--pvt-action-tooltip-left);
       right: var(--pvt-action-tooltip-right);
+      left: var(--pvt-action-tooltip-left);
+      top: 0;
       transform: var(--pvt-action-tooltip-transform);
       z-index: var(--rls-z-index-2);
     }
