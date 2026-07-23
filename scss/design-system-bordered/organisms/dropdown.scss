@@ -1,13 +1,13 @@
 // Rolster Technology Dropdown Component
-// v1.0.2
+// v1.0.3
 // @license MIT
 // Author: Rolster Developers
 // Created: 13/Feb/2026
-// Updated: 28/May/2026
+// Updated: 23/Jul/2026
 
 .rls-dropdown {
   &__content {
     border: var(--rlc-dropdown-border, var(--rls-app-border-1-200));
-    box-shadow: var(--rls-theme-shadow-500);
+    box-shadow: var(--rls-app-shadow-center-8);
   }
 }

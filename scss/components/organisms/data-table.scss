@@ -1,9 +1,9 @@
 // Rolster Technology Datatable Component
-// v2.6.15
+// v2.6.16
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 22/Jul/2026
+// Updated: 23/Jul/2026
 
 @mixin datatable_cell_vars() {
   --rlc-field-box-body-background: transparent;
@@ -208,7 +208,7 @@
 
     position: relative;
     display: flex;
-    min-height: var(--rls-sizing-x20);
+    min-height: var(--rlc-datatable-title-height, var(--rls-sizing-x20));
     align-items: var(--rlc-datatable-align-items, center);
     justify-content: var(--rlc-datatable-justify-content, flex-start);
     text-align: left;
@@ -270,7 +270,7 @@
 
     position: relative;
     display: flex;
-    min-height: var(--rls-sizing-x20);
+    min-height: var(--rlc-datatable-cell-height, var(--rls-sizing-x16));
     align-items: var(--rlc-datatable-align-items, center);
     justify-content: var(--rlc-datatable-justify-content, flex-start);
     cursor: default;
