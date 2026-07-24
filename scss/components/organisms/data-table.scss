@@ -1,15 +1,15 @@
 // Rolster Technology Datatable Component
-// v2.6.16
+// v2.6.17
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 23/Jul/2026
+// Updated: 24/Jul/2026
 
 @mixin datatable_cell_vars() {
   --rlc-field-box-body-background: transparent;
   --rlc-field-box-body-background-focused: transparent;
   --rlc-field-box-body-background-disabled: transparent;
-  --rlc-field-box-body-padding: var(--rls-sizing-x4) 0rem;
+  --rlc-field-box-body-padding: var(--rls-sizing-x2) 0rem;
   --rlc-field-box-body-border: none;
   --rlc-field-box-body-border-focused: none;
   --rlc-field-box-body-border-error: none;
@@ -19,13 +19,13 @@
   --rlc-field-box-action-dimension: var(--rls-sizing-x10);
   --rlc-field-box-action-background: transparent;
 
-  --rlc-field-list-body-padding: var(--rls-sizing-x4) 0rem;
+  --rlc-field-list-body-padding: var(--rls-sizing-x2) 0rem;
   --rlc-field-list-control-font-size: var(--pvt-datatable-font-size);
   --rlc-field-list-control-font-weight: var(--rls-font-weight-medium);
   --rlc-field-list-control-letter-spacing: var(--rls-body-letter-spacing);
   --rlc-field-list-element-padding: var(--rls-sizing-x4);
-  --rlc-field-list-suggestions-bottom: var(--rls-sizing-x24);
-  --rlc-field-list-suggestions-top: var(--rls-sizing-x24);
+  --rlc-field-list-suggestions-bottom: var(--rls-sizing-x22);
+  --rlc-field-list-suggestions-top: var(--rls-sizing-x22);
 
   --rlc-poster-font-size: var(--pvt-datatable-font-size);
   --rlc-poster-width: calc(100% - var(--rls-sizing-x2));

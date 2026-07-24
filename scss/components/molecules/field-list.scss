@@ -1,18 +1,24 @@
 // Rolster Technology FieldList Component
-// v1.5.7
+// v1.5.8
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 22/Jul/2026
+// Updated: 24/Jul/2026
 
 .rls-field-list {
   --pvt-control-pointer-events: initial;
-  --pvt-list-height: 0rem;
+  --pvt-list-height: auto;
   --pvt-list-max-height: 180rem;
   --pvt-list-opacity: 0;
-  --pvt-list-transform: none;
+  --pvt-list-suggestions-offset: var(
+    --rlc-field-list-suggestions-offset,
+    var(--rls-sizing-x2)
+  );
+  --pvt-list-transform: translateY(
+    calc(-1 * var(--pvt-list-suggestions-offset))
+  );
   --pvt-list-body-component-display: none;
-  --pvt-list-body-height: 0rem;
+  --pvt-list-body-height: auto;
   --pvt-list-body-max-height: 180rem;
   --pvt-list-body-border: var(--rls-app-border-1-200);
   --pvt-list-component-padding: 0rem var(--rls-sizing-x4);
@@ -90,22 +96,18 @@
     width: 100%;
     height: var(--pvt-list-height);
     max-height: var(--pvt-list-max-height);
-    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
     z-index: -1;
     overflow: hidden;
     padding-bottom: var(--rls-sizing-x6);
-
-    &--visible {
-      --pvt-list-height: auto;
-      --pvt-list-body-height: auto;
-      --pvt-list-opacity: 1;
-
-      overflow: initial;
-      opacity: 1;
-      z-index: var(--rls-z-index-8);
-    }
+    transition:
+      visibility 0ms 240ms,
+      z-index 0ms 240ms;
 
     &--higher {
+      --pvt-list-transform: translateY(var(--pvt-list-suggestions-offset));
+
       top: initial;
       bottom: var(
         --rlc-field-list-suggestions-bottom,
@@ -116,6 +118,19 @@
     &--disabled {
       --pvt-element-opacity: 0.5;
       --pvt-element-pointer-events: none;
+    }
+
+    &--visible {
+      --pvt-list-opacity: 1;
+      --pvt-list-transform: none;
+
+      visibility: visible;
+      pointer-events: auto;
+      overflow: initial;
+      z-index: var(--rls-z-index-8);
+      transition:
+        visibility 0ms 0ms,
+        z-index 0ms 0ms;
     }
 
     &__body {
@@ -132,6 +147,9 @@
       z-index: var(--rls-z-index-2);
       background: var(--rls-app-color-050);
       transform: var(--pvt-list-transform);
+      transition:
+        opacity 240ms 0ms var(--rls-standard-curve),
+        transform 240ms 0ms var(--rls-standard-curve);
 
       &::before {
         display: var(--pvt-list-body-component-display);
@@ -366,9 +384,6 @@
         bottom: 0px;
         z-index: var(--rls-z-index-4);
         box-shadow: none;
-        transition:
-          opacity 240ms 0ms var(--rls-standard-curve),
-          transform 240ms 0ms var(--rls-standard-curve);
       }
     }
 
@@ -391,5 +406,17 @@
         }
       }
     }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rls-field-list__suggestions,
+  .rls-field-list__suggestions--higher,
+  .rls-field-list__suggestions--visible {
+    --pvt-list-transform: none;
+  }
+
+  .rls-field-list__suggestions__body {
+    transition: opacity 120ms 0ms linear;
   }
 }
