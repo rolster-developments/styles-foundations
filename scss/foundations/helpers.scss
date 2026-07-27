@@ -52,7 +52,8 @@
 
   --rls-#{$theme}-shadow-color-500: rgba(#{$r}, #{$g}, #{$b}, 0.24);
 
-  --rls-#{$theme}-shadow-500: 0px 0px 0px 3px var(--rls-#{$theme}-shadow-color-500);
+  --rls-#{$theme}-shadow-500: 0px 0px 0px 3px
+    var(--rls-#{$theme}-shadow-color-500);
 }
 
 @mixin rolster-theme(

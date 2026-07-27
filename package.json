@@ -36,6 +36,7 @@
     "scss/"
   ],
   "scripts": {
+    "prettier": "prettier --write .",
     "clean": "rimraf ./dist",
     "comp:build": "sass scss/components/index.scss dist/components.css --style=compressed",
     "dsbd:build": "sass scss/design-system-bordered/index.scss dist/design-system-bordered.css --style=compressed",

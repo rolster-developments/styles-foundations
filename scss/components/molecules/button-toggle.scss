@@ -75,7 +75,8 @@
       transform: var(--rlc-button-toggle-ul-transform);
       transform-origin: 0% 0%;
       box-shadow: var(--rls-theme-shadow-500);
-      transition: transform 240ms 0ms var(--rls-standard-curve),
+      transition:
+        transform 240ms 0ms var(--rls-standard-curve),
         opacity 240ms 0ms var(--rls-standard-curve);
 
       li {

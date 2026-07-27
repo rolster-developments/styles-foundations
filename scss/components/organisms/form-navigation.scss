@@ -23,8 +23,8 @@
   justify-content: flex-end;
   visibility: hidden;
   transform: translateX(100%);
-  transition: opacity var(--pvt-component-transition) 0ms
-      var(--rls-deceleration-curve),
+  transition:
+    opacity var(--pvt-component-transition) 0ms var(--rls-deceleration-curve),
     transform var(--pvt-component-transition) 0ms var(--rls-deceleration-curve),
     visibility var(--pvt-component-transition) 0ms var(--rls-deceleration-curve);
   z-index: var(--rls-z-index-16);

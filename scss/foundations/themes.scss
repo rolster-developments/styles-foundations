@@ -114,11 +114,11 @@
   --rls-theme-gradient-700: var(--rls-#{$theme}-gradient-700);
 
   --rls-theme-gradient-600: var(--rls-#{$theme}-gradient-600);
-  
+
   --rls-theme-gradient-500: var(--rls-#{$theme}-gradient-500);
 
   --rls-theme-gradient-400: var(--rls-#{$theme}-gradient-400);
-  
+
   --rls-theme-gradient-300: var(--rls-#{$theme}-gradient-300);
 
   @include rolster-border-theme($theme, 900);
