@@ -6,7 +6,7 @@
 // Updated: 18/Jul/2026
 
 .rls-button-action {
-  --pvt-dimension: var(--rlc-button-action-dimension, var(--rls-sizing-x16));
+  --pvt-dimension: var(--rlc-button-action-dimension, var(--rls-sizing-x14));
   --pvt-ripple-dimension: calc(var(--pvt-dimension) + var(--rls-sizing-x2));
   --pvt-ripple-position: calc(var(--pvt-ripple-dimension) / 2 * -1);
   --pvt-ripple-color: var(
