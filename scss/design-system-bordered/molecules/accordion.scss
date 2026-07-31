@@ -1,9 +1,9 @@
 // Rolster Technology Accordion Component
-// v1.0.1
+// v1.1.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 29/Abr/2026
-// Updated: 19/Jun/2026
+// Updated: 31/Jul/2026
 
 .rls-accordion {
   --pvt-background: var(--rls-app-color-050);
@@ -35,7 +35,7 @@
   }
 
   &[rls-theme] {
-    --pvt-border: var(--rls-theme-border-1-200);
-    --pvt-divider: var(--rls-theme-border-1-200);
+    --pvt-border: var(--rls-border-1) solid var(--rls-theme-container-200);
+    --pvt-divider: var(--rls-border-1) solid var(--rls-theme-container-200);
   }
 }

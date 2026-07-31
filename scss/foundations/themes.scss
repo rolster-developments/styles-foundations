@@ -1,5 +1,5 @@
 // Rolster Technology Themes Foundations
-// v2.5.4
+// v2.6.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 03/Mar/2022
@@ -73,9 +73,21 @@
 
   --rls-theme-color-050: var(--rls-#{$theme}-color-050);
 
-  --rls-theme-font-900: var(--rls-#{$theme}-color-050);
+  --rls-theme-container-050: var(--rls-#{$theme}-color-050);
+
+  --rls-theme-container-100: var(--rls-#{$theme}-color-100);
+
+  --rls-theme-container-200: var(--rls-#{$theme}-color-200);
+
+  --rls-theme-container-300: var(--rls-#{$theme}-color-300);
+
+  --rls-theme-font-950: var(--rls-#{$theme}-color-050);
+
+  --rls-theme-font-300: var(--rls-#{$theme}-color-700);
 
   --rls-theme-font-100: var(--rls-#{$theme}-color-900);
+
+  --rls-theme-font-050: var(--rls-#{$theme}-color-950);
 
   --rls-theme-skeleton-500: var(--rls-#{$theme}-skeleton-500);
 
@@ -130,6 +142,43 @@
   @include rolster-border-theme($theme, 100);
 }
 
+@mixin rolster-theme-dark($theme) {
+  --rls-theme-container-050: var(--rls-#{$theme}-color-950);
+
+  --rls-theme-container-100: var(--rls-#{$theme}-color-900);
+
+  --rls-theme-container-200: var(--rls-#{$theme}-color-800);
+
+  --rls-theme-container-300: var(--rls-#{$theme}-color-700);
+
+  --rls-theme-font-950: var(--rls-#{$theme}-color-950);
+
+  --rls-theme-font-300: var(--rls-#{$theme}-color-300);
+
+  --rls-theme-font-100: var(--rls-#{$theme}-color-100);
+
+  --rls-theme-font-050: var(--rls-#{$theme}-color-050);
+}
+
+$rolster-themes: (
+  'standard',
+  'secondary',
+  'tertiary',
+  'success',
+  'info',
+  'warning',
+  'danger',
+  'berry',
+  'ross',
+  'hope',
+  'mountains',
+  'amaizing',
+  'purple',
+  'amber',
+  'smartness',
+  'obsidian'
+);
+
 body {
   @include rolster-app-border('050');
   @include rolster-app-border('100');
@@ -161,68 +210,18 @@ body {
   @include rolster-border-token('obsidian');
 
   @include rolster-theme('primary');
+
+  &[app-theme='dark'] {
+    @include rolster-theme-dark('primary');
+  }
 }
 
-*[rls-theme='standard'] {
-  @include rolster-theme('standard');
-}
+@each $theme in $rolster-themes {
+  *[rls-theme='#{$theme}'] {
+    @include rolster-theme($theme);
 
-*[rls-theme='secondary'] {
-  @include rolster-theme('secondary');
-}
-
-*[rls-theme='tertiary'] {
-  @include rolster-theme('tertiary');
-}
-
-*[rls-theme='success'] {
-  @include rolster-theme('success');
-}
-
-*[rls-theme='info'] {
-  @include rolster-theme('info');
-}
-
-*[rls-theme='warning'] {
-  @include rolster-theme('warning');
-}
-
-*[rls-theme='danger'] {
-  @include rolster-theme('danger');
-}
-
-*[rls-theme='berry'] {
-  @include rolster-theme('berry');
-}
-
-*[rls-theme='ross'] {
-  @include rolster-theme('ross');
-}
-
-*[rls-theme='hope'] {
-  @include rolster-theme('hope');
-}
-
-*[rls-theme='mountains'] {
-  @include rolster-theme('mountains');
-}
-
-*[rls-theme='amaizing'] {
-  @include rolster-theme('amaizing');
-}
-
-*[rls-theme='purple'] {
-  @include rolster-theme('purple');
-}
-
-*[rls-theme='amber'] {
-  @include rolster-theme('amber');
-}
-
-*[rls-theme='smartness'] {
-  @include rolster-theme('smartness');
-}
-
-*[rls-theme='obsidian'] {
-  @include rolster-theme('obsidian');
+    body[app-theme='dark'] & {
+      @include rolster-theme-dark($theme);
+    }
+  }
 }

@@ -1,9 +1,9 @@
 // Rolster Technology ButtonIcon Component
-// v1.0.1
+// v1.1.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 18/Jul/2026
+// Updated: 31/Jul/2026
 
 .rls-button-icon {
   --pvt-dimension: var(--rlc-button-icon-dimension, var(--rls-sizing-x16));
@@ -33,6 +33,6 @@
   }
 
   &--skeleton {
-    background: var(--rls-theme-color-300);
+    background: var(--rls-theme-skeleton-300);
   }
 }

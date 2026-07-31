@@ -1,5 +1,5 @@
 // Rolster Technology Normalize Utilities
-// v2.0.6
+// v2.0.7
 // @license MIT
 // Author: Rolster Developers
 // Created: 11/Ago/2022
@@ -181,9 +181,18 @@ input[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-input:-internal-autofill-selected,
-textarea:-internal-autofill-selected {
-  background-color: transparent !important;
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill {
+  caret-color: currentColor;
+  transition: background-color 86400s ease-out 0s;
+}
+
+input:autofill,
+textarea:autofill {
+  caret-color: currentColor;
+  transition: background-color 86400s ease-out 0s;
 }
 
 table {

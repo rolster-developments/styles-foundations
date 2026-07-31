@@ -1,14 +1,14 @@
 // Rolster Technology DayRangePicker Component
-// v2.1.3
+// v2.2.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 25/May/2023
-// Updated: 28/May/2026
+// Updated: 31/Jul/2026
 
 .rls-picker-day-range {
   &__element {
     &--ranged {
-      --pvt-span-nothover-background: var(--rls-theme-color-100);
+      --pvt-span-nothover-background: var(--rls-theme-container-100);
     }
 
     &--end {

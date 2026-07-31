@@ -1,9 +1,9 @@
 // Rolster Technology Avatar Component
-// v1.1.6
+// v1.2.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 28/May/2026
+// Updated: 31/Jul/2026
 
 .rls-avatar {
   --rlc-image-width: var(--rlc-avatar-width);
@@ -20,7 +20,7 @@
   overflow: hidden;
 
   &--skeleton {
-    background: var(--rls-theme-color-200);
+    background: var(--rls-theme-skeleton-300);
 
     & > * {
       display: none;
