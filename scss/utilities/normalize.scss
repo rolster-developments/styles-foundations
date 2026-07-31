@@ -1,9 +1,9 @@
 // Rolster Technology Normalize Utilities
-// v2.0.5
+// v2.0.6
 // @license MIT
 // Author: Rolster Developers
 // Created: 11/Ago/2022
-// Updated: 17/Dic/2025
+// Updated: 31/Jul/2026
 
 :root {
   --rls-app-font-family:
@@ -62,11 +62,10 @@ svg:not(:root) {
 }
 
 figure {
-  margin: 8rem 40rem;
+  margin: var(--rls-sizing-x8) var(--rls-sizing-x40);
 }
 
 hr {
-  height: 0.0625rem;
   border-width: 0rem;
   box-sizing: content-box;
 }
@@ -80,7 +79,7 @@ kbd,
 pre,
 samp {
   font-family: inherit;
-  font-size: 8rem;
+  font-size: var(--rls-sizing-x8);
 }
 
 label,
@@ -89,11 +88,11 @@ select,
 textarea {
   font-family: inherit;
   line-height: normal;
-  font-size: 8rem;
+  font-size: var(--rls-sizing-x8);
 }
 
 button {
-  font-size: 8rem;
+  font-size: var(--rls-sizing-x8);
 }
 
 a,
@@ -109,7 +108,7 @@ textarea {
 }
 
 textarea::placeholder {
-  padding-left: 1rem;
+  padding-left: var(--rls-sizing-x1);
 }
 
 form,
@@ -180,6 +179,11 @@ input[type='number']::-webkit-outer-spin-button {
 input[type='search']::-webkit-search-cancel-button,
 input[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
+}
+
+input:-internal-autofill-selected,
+textarea:-internal-autofill-selected {
+  background-color: transparent !important;
 }
 
 table {
