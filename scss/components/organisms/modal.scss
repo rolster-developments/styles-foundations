@@ -1,9 +1,9 @@
 // Rolster Technology Modal Component
-// v1.2.5
+// v1.3.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 28/May/2026
+// Updated: 01/May/2026
 
 .rls-modal {
   --pvt-component-transform: translateY(150px) scale(0.6);
@@ -72,4 +72,30 @@
       opacity 120ms 0ms var(--rls-deceleration-curve),
       bottom 120ms 0ms var(--rls-deceleration-curve);
   }
+}
+
+.rls-modal-date {
+  --rlc-modal-background: transparent;
+  --rlc-modal-max-width: 150rem;
+  --rlc-picker-date-background: var(--rls-app-color-050);
+}
+
+.rls-modal-date-range {
+  --rlc-modal-background: transparent;
+  --rlc-modal-max-width: 150rem;
+  --rlc-picker-date-range-background: var(--rls-app-color-050);
+}
+
+.rls-modal-clock {
+  --rlc-modal-background: transparent;
+  --rlc-modal-max-width: 150rem;
+  --rlc-picker-clock-background: var(--rls-app-color-050);
+  --rlc-picker-clock-padding: var(--rls-sizing-x4) 0rem;
+}
+
+.rls-modal-color {
+  --rlc-modal-background: transparent;
+  --rlc-modal-max-width: 150rem;
+  --rlc-picker-color-radius: var(--rls-sizing-x4);
+  --rlc-picker-color-background: var(--rls-app-color-050);
 }

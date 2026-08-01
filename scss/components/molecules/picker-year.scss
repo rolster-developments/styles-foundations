@@ -1,5 +1,5 @@
 // Rolster Technology YearPicker Component
-// v2.2.0
+// v2.3.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
@@ -33,7 +33,7 @@
   .rls-button-icon {
     --rlc-button-icon-size: var(--rls-sizing-x14);
     --rlc-button-icon-icon-size: var(--rls-sizing-x10);
-    --rlc-button-icon-background: var(--rls-theme-container-100);
+    --rlc-button-icon-background: var(--rls-theme-background-100);
     --rlc-button-icon-radius: var(--rls-sizing-x4);
   }
 
@@ -70,7 +70,7 @@
     }
 
     &--selected {
-      --pvt-component-background: var(--rls-theme-container-200);
+      --pvt-component-background: var(--rls-theme-background-200);
     }
 
     &--disabled {

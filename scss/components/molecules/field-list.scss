@@ -1,5 +1,5 @@
 // Rolster Technology FieldList Component
-// v1.6.0
+// v1.7.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
@@ -185,7 +185,7 @@
     pointer-events: var(--pvt-element-pointer-events);
 
     &:not(:hover):focus {
-      background: var(--rls-theme-container-100);
+      background: var(--rls-theme-background-100);
     }
   }
 
@@ -269,11 +269,11 @@
       letter-spacing: var(--rls-label-letter-spacing);
 
       &:hover:not(:disabled) {
-        background: var(--rls-theme-container-100);
+        background: var(--rls-theme-background-100);
       }
 
       &:focus-visible:not(:disabled) {
-        background: var(--rls-theme-container-100);
+        background: var(--rls-theme-background-100);
       }
 
       &:disabled {

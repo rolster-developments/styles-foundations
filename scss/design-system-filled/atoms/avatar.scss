@@ -1,5 +1,5 @@
 // Rolster Technology Avatar Component
-// v1.2.0
+// v1.3.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 23/Abr/2026
@@ -8,5 +8,5 @@
 .rls-avatar {
   border-radius: var(--rlc-avatar-radius, var(--rls-sizing-x6));
   color: var(--rlc-avatar-color, var(--rls-app-color-950));
-  background: var(--rlc-avatar-background, var(--rls-theme-container-200));
+  background: var(--rlc-avatar-background, var(--rls-theme-background-200));
 }

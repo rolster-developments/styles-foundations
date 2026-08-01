@@ -1,20 +1,20 @@
 // Rolster Technology Notifications Component
-// v1.1.0
+// v1.2.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 18/Jun/2026
 // Updated: 31/Jul/2026
 
 .rls-notification {
-  background: var(--rls-theme-container-050);
+  background: var(--rls-theme-background-100);
 
   &__avatar {
-    --rlc-icon-color: var(--rls-theme-font-300);
+    --rlc-icon-color: var(--rls-theme-font-100);
 
-    background: var(--rls-theme-container-200);
+    background: var(--rls-theme-background-200);
   }
 
   &__title {
-    color: var(--rls-theme-font-300);
+    color: var(--rls-theme-font-100);
   }
 }

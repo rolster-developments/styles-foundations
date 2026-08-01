@@ -1,5 +1,5 @@
 // Rolster Technology Poster Component
-// v2.2.0
+// v2.3.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
@@ -19,8 +19,8 @@
     background: var(--rls-app-color-200);
 
     &[rls-theme] {
-      color: var(--rls-theme-font-300);
-      background: var(--rls-theme-container-100);
+      color: var(--rls-theme-font-100);
+      background: var(--rls-theme-background-100);
     }
   }
 }

@@ -1,5 +1,5 @@
 // Rolster Technology Pagination Component
-// v1.2.0
+// v1.3.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
@@ -51,8 +51,8 @@
     letter-spacing: var(--rls-body-letter-spacing);
 
     &:hover {
-      background: var(--rls-theme-container-300);
-      color: var(--rls-theme-font-050);
+      background: var(--rls-theme-background-300);
+      color: var(--rls-theme-font-400);
     }
   }
 

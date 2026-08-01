@@ -1,5 +1,5 @@
 // Rolster Technology Button Component
-// v2.4.8
+// v2.5.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
@@ -35,8 +35,8 @@
   --pvt-gradient-border: none;
 
   &:not(:disabled):hover {
-    --pvt-ghost-background: var(--rls-theme-container-200);
-    --pvt-ghost-font-color: var(--rls-theme-font-100);
+    --pvt-ghost-background: var(--rls-theme-background-200);
+    --pvt-ghost-font-color: var(--rls-theme-font-300);
     --pvt-ghost-border: none;
 
     --pvt-outline-background: transparent;

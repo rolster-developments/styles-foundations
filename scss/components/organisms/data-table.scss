@@ -1,5 +1,5 @@
 // Rolster Technology Datatable Component
-// v2.7.0
+// v2.8.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
@@ -215,7 +215,7 @@
     min-height: var(--rlc-datatable-title-height, var(--rls-sizing-x20));
     align-items: var(--rlc-datatable-align-items, center);
     justify-content: var(--rlc-datatable-justify-content, flex-start);
-    gap: var(--rls-datatable-cell-gap, var(--rls-sizing-x2));
+    gap: var(--rlc-datatable-cell-gap, var(--rls-sizing-x2));
     text-align: left;
     white-space: nowrap;
     padding: var(--rlc-datatable-title-padding, var(--rls-sizing-x1) 0rem);
@@ -278,7 +278,7 @@
     min-height: var(--rlc-datatable-cell-height, var(--rls-sizing-x16));
     align-items: var(--rlc-datatable-align-items, center);
     justify-content: var(--rlc-datatable-justify-content, flex-start);
-    gap: var(--rls-datatable-cell-gap, var(--rls-sizing-x2));
+    gap: var(--rlc-datatable-cell-gap, var(--rls-sizing-x2));
     cursor: default;
     text-align: left;
     padding: var(--rlc-datatable-cell-padding, var(--rls-sizing-x3) 0rem);
@@ -338,7 +338,7 @@
     }
 
     &[rls-theme] {
-      background: var(--rls-theme-container-050);
+      background: var(--rls-theme-background-100);
     }
 
     .rls-button-action__tooltip {

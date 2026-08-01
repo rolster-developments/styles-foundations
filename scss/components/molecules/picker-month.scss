@@ -1,5 +1,5 @@
 // Rolster Technology MonthPicker Component
-// v2.2.0
+// v2.3.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
@@ -39,7 +39,7 @@
     }
 
     &--selected {
-      --pvt-component-background: var(--rls-theme-container-200);
+      --pvt-component-background: var(--rls-theme-background-200);
     }
 
     &--disabled {

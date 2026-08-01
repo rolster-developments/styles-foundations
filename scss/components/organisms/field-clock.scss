@@ -1,9 +1,9 @@
 // Rolster Technology FieldClock Component
-// v1.1.1
+// v1.1.2
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 28/May/2026
+// Updated: 01/Ago/2026
 
 .rls-field-clock {
   --rlc-field-box-body-padding: var(--rls-sizing-x3) var(--rls-sizing-x4);
@@ -51,11 +51,4 @@
       cursor: not-allowed;
     }
   }
-}
-
-.rls-field-clock-modal {
-  --rlc-modal-background: transparent;
-  --rlc-modal-max-width: 150rem;
-  --rlc-picker-clock-background: var(--rls-app-color-050);
-  --rlc-picker-clock-padding: var(--rls-sizing-x4) 0rem;
 }

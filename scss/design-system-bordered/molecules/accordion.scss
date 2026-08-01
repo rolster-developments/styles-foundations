@@ -1,5 +1,5 @@
 // Rolster Technology Accordion Component
-// v1.1.0
+// v1.2.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 29/Abr/2026
@@ -35,7 +35,7 @@
   }
 
   &[rls-theme] {
-    --pvt-border: var(--rls-border-1) solid var(--rls-theme-container-200);
-    --pvt-divider: var(--rls-border-1) solid var(--rls-theme-container-200);
+    --pvt-border: var(--rls-theme-border-100);
+    --pvt-divider: var(--rls-theme-border-100);
   }
 }

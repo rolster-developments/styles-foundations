@@ -1,5 +1,5 @@
 // Rolster Technology App Component
-// v2.4.0
+// v2.5.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 23/Abr/2026
@@ -45,8 +45,8 @@
         background: var(--pvt-background-option);
 
         &:hover {
-          color: var(--rls-theme-font-050);
-          background: var(--rls-theme-container-200);
+          color: var(--rls-theme-font-400);
+          background: var(--rls-theme-background-200);
         }
       }
     }

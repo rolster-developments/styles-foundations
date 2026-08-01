@@ -1,5 +1,5 @@
 // Rolster Technology DayPicker Component
-// v2.2.0
+// v2.3.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 23/Abr/2026
@@ -12,8 +12,8 @@
     }
 
     &--focused {
-      --pvt-span-background: var(--rls-theme-container-200);
-      --pvt-span-font-color: var(--rls-theme-font-050);
+      --pvt-span-background: var(--rls-theme-background-200);
+      --pvt-span-font-color: var(--rls-theme-font-400);
       --pvt-span-box-shadow: none;
     }
   }
