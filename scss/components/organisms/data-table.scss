@@ -337,10 +337,6 @@
       transform: translateX(calc(-100% + var(--rls-sizing-x4)));
     }
 
-    &[rls-theme] {
-      background: var(--rls-theme-background-100);
-    }
-
     .rls-button-action__tooltip {
       right: var(--pvt-action-tooltip-right);
       left: var(--pvt-action-tooltip-left);

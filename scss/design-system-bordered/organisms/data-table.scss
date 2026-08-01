@@ -85,39 +85,3 @@
     }
   }
 }
-
-body[app-theme='dark'] {
-  .rls-datatable {
-    &__subheader,
-    &__record,
-    &__totals {
-      &--success {
-        --pvt-datatable-floating-background: var(--rls-success-color-900);
-
-        border: var(--rls-success-border-1-800);
-        background: var(--rls-success-color-950);
-      }
-
-      &--info {
-        --pvt-datatable-floating-background: var(--rls-info-color-900);
-
-        border: var(--rls-info-border-1-800);
-        background: var(--rls-info-color-950);
-      }
-
-      &--warning {
-        --pvt-datatable-floating-background: var(--rls-warning-color-900);
-
-        border: var(--rls-warning-border-1-800);
-        background: var(--rls-warning-color-950);
-      }
-
-      &--error {
-        --pvt-datatable-floating-background: var(--rls-danger-color-900);
-
-        border: var(--rls-danger-border-1-800);
-        background: var(--rls-danger-color-950);
-      }
-    }
-  }
-}

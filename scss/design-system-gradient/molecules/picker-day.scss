@@ -8,12 +8,12 @@
 .rls-picker-day {
   &__element {
     &--selected {
-      --pvt-span-font-color: var(--rls-theme-color-600);
+      --pvt-span-font-color: var(--rls-theme-font-500);
     }
 
     &--focused {
       --pvt-span-background: var(--rls-theme-gradient-300);
-      --pvt-span-font-color: var(--rls-theme-color-050);
+      --pvt-span-font-color: var(--rls-theme-font-300);
       --pvt-span-box-shadow: none;
     }
   }

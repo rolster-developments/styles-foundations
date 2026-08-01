@@ -50,6 +50,100 @@
     var(--rls-#{$theme}-color-#{$token});
 }
 
+@mixin rolster-theme-light($theme) {
+  --rls-theme-background-100: var(--rls-#{$theme}-color-100);
+
+  --rls-theme-background-200: var(--rls-#{$theme}-color-300);
+
+  --rls-theme-background-300: var(--rls-#{$theme}-color-500);
+
+  --rls-theme-background-400: var(--rls-#{$theme}-color-700);
+
+  --rls-theme-background-500: var(--rls-#{$theme}-color-900);
+
+  --rls-theme-font-100: var(--rls-#{$theme}-color-700);
+
+  --rls-theme-font-200: var(--rls-#{$theme}-color-900);
+
+  --rls-theme-font-300: var(--rls-#{$theme}-color-050);
+
+  --rls-theme-font-400: var(--rls-#{$theme}-color-100);
+
+  --rls-theme-font-500: var(--rls-#{$theme}-color-300);
+
+  --rls-theme-border-100: var(--rls-border-1) solid
+    var(--rls-#{$theme}-color-200);
+
+  --rls-theme-border-200: var(--rls-border-1) solid
+    var(--rls-#{$theme}-color-400);
+
+  --rls-theme-border-300: var(--rls-border-1) solid
+    var(--rls-#{$theme}-color-600);
+
+  --rls-theme-border-400: var(--rls-border-1) solid
+    var(--rls-#{$theme}-color-800);
+
+  --rls-theme-border-500: var(--rls-border-1) solid
+    var(--rls-#{$theme}-color-950);
+
+  --rls-theme-gradient-100: var(--rls-#{$theme}-gradient-100);
+
+  --rls-theme-gradient-200: var(--rls-#{$theme}-gradient-300);
+
+  --rls-theme-gradient-300: var(--rls-#{$theme}-gradient-500);
+
+  --rls-theme-gradient-400: var(--rls-#{$theme}-gradient-700);
+
+  --rls-theme-gradient-500: var(--rls-#{$theme}-gradient-900);
+}
+
+@mixin rolster-theme-dark($theme) {
+  --rls-theme-background-100: var(--rls-#{$theme}-color-950);
+
+  --rls-theme-background-200: var(--rls-#{$theme}-color-800);
+
+  --rls-theme-background-300: var(--rls-#{$theme}-color-600);
+
+  --rls-theme-background-400: var(--rls-#{$theme}-color-400);
+
+  --rls-theme-background-500: var(--rls-#{$theme}-color-200);
+
+  --rls-theme-font-100: var(--rls-#{$theme}-color-300);
+
+  --rls-theme-font-200: var(--rls-#{$theme}-color-200);
+
+  --rls-theme-font-300: var(--rls-#{$theme}-color-100);
+
+  --rls-theme-font-400: var(--rls-#{$theme}-color-900);
+
+  --rls-theme-font-500: var(--rls-#{$theme}-color-700);
+
+  --rls-theme-border-100: var(--rls-border-1) solid
+    var(--rls-#{$theme}-color-900);
+
+  --rls-theme-border-200: var(--rls-border-1) solid
+    var(--rls-#{$theme}-color-700);
+
+  --rls-theme-border-300: var(--rls-border-1) solid
+    var(--rls-#{$theme}-color-500);
+
+  --rls-theme-border-400: var(--rls-border-1) solid
+    var(--rls-#{$theme}-color-300);
+
+  --rls-theme-border-500: var(--rls-border-1) solid
+    var(--rls-#{$theme}-color-100);
+
+  --rls-theme-gradient-100: var(--rls-#{$theme}-gradient-900);
+
+  --rls-theme-gradient-200: var(--rls-#{$theme}-gradient-800);
+
+  --rls-theme-gradient-300: var(--rls-#{$theme}-gradient-600);
+
+  --rls-theme-gradient-400: var(--rls-#{$theme}-gradient-400);
+
+  --rls-theme-gradient-500: var(--rls-#{$theme}-gradient-200);
+}
+
 @mixin rolster-theme($theme) {
   --rls-theme-color-950: var(--rls-#{$theme}-color-950);
 
@@ -105,51 +199,6 @@
 
   --rls-theme-backdrop-900: var(--rls-#{$theme}-backdrop-900);
 
-  --rls-theme-background-100: var(--rls-#{$theme}-color-100);
-
-  --rls-theme-background-200: var(--rls-#{$theme}-color-300);
-
-  --rls-theme-background-300: var(--rls-#{$theme}-color-500);
-
-  --rls-theme-background-400: var(--rls-#{$theme}-color-700);
-
-  --rls-theme-background-500: var(--rls-#{$theme}-color-900);
-
-  --rls-theme-font-100: var(--rls-#{$theme}-color-700);
-
-  --rls-theme-font-200: var(--rls-#{$theme}-color-900);
-
-  --rls-theme-font-300: var(--rls-#{$theme}-color-050);
-
-  --rls-theme-font-400: var(--rls-#{$theme}-color-100);
-
-  --rls-theme-font-500: var(--rls-#{$theme}-color-300);
-
-  --rls-theme-border-100: var(--rls-border-1) solid
-    var(--rls-#{$theme}-color-200);
-
-  --rls-theme-border-200: var(--rls-border-1) solid
-    var(--rls-#{$theme}-color-400);
-
-  --rls-theme-border-300: var(--rls-border-1) solid
-    var(--rls-#{$theme}-color-600);
-
-  --rls-theme-border-400: var(--rls-border-1) solid
-    var(--rls-#{$theme}-color-800);
-
-  --rls-theme-border-500: var(--rls-border-1) solid
-    var(--rls-#{$theme}-color-950);
-
-  --rls-theme-gradient-100: var(--rls-#{$theme}-gradient-100);
-
-  --rls-theme-gradient-200: var(--rls-#{$theme}-gradient-300);
-
-  --rls-theme-gradient-300: var(--rls-#{$theme}-gradient-500);
-
-  --rls-theme-gradient-400: var(--rls-#{$theme}-gradient-700);
-
-  --rls-theme-gradient-500: var(--rls-#{$theme}-gradient-900);
-
   @include rolster-border-theme($theme, 900);
   @include rolster-border-theme($theme, 800);
   @include rolster-border-theme($theme, 700);
@@ -159,53 +208,6 @@
   @include rolster-border-theme($theme, 300);
   @include rolster-border-theme($theme, 200);
   @include rolster-border-theme($theme, 100);
-}
-
-@mixin rolster-theme-dark($theme) {
-  --rls-theme-background-100: var(--rls-#{$theme}-color-950);
-
-  --rls-theme-background-200: var(--rls-#{$theme}-color-800);
-
-  --rls-theme-background-300: var(--rls-#{$theme}-color-600);
-
-  --rls-theme-background-400: var(--rls-#{$theme}-color-400);
-
-  --rls-theme-background-500: var(--rls-#{$theme}-color-200);
-
-  --rls-theme-font-100: var(--rls-#{$theme}-color-300);
-
-  --rls-theme-font-200: var(--rls-#{$theme}-color-200);
-
-  --rls-theme-font-300: var(--rls-#{$theme}-color-100);
-
-  --rls-theme-font-400: var(--rls-#{$theme}-color-900);
-
-  --rls-theme-font-500: var(--rls-#{$theme}-color-700);
-
-  --rls-theme-border-100: var(--rls-border-1) solid
-    var(--rls-#{$theme}-color-900);
-
-  --rls-theme-border-200: var(--rls-border-1) solid
-    var(--rls-#{$theme}-color-700);
-
-  --rls-theme-border-300: var(--rls-border-1) solid
-    var(--rls-#{$theme}-color-500);
-
-  --rls-theme-border-400: var(--rls-border-1) solid
-    var(--rls-#{$theme}-color-300);
-
-  --rls-theme-border-500: var(--rls-border-1) solid
-    var(--rls-#{$theme}-color-100);
-
-  --rls-theme-gradient-100: var(--rls-#{$theme}-gradient-900);
-
-  --rls-theme-gradient-200: var(--rls-#{$theme}-gradient-800);
-
-  --rls-theme-gradient-300: var(--rls-#{$theme}-gradient-600);
-
-  --rls-theme-gradient-400: var(--rls-#{$theme}-gradient-400);
-
-  --rls-theme-gradient-500: var(--rls-#{$theme}-gradient-200);
 }
 
 $rolster-themes: (
@@ -259,14 +261,20 @@ body {
 
   @include rolster-theme('primary');
 
+  --rls-app-backdrop-filter: rgba(255, 255, 255, 0.6);
+
   &[app-theme='dark'] {
     @include rolster-theme-dark('primary');
+
+    --rls-app-backdrop-filter: rgba(31, 30, 49, 0.6);
   }
 }
 
 @each $theme in $rolster-themes {
   *[rls-theme='#{$theme}'] {
     @include rolster-theme($theme);
+
+    @include rolster-theme-light($theme);
 
     body[app-theme='dark'] & {
       @include rolster-theme-dark($theme);

@@ -29,13 +29,13 @@
   }
 
   &__avatar {
-    --rlc-icon-color: var(--rls-theme-color-050);
+    --rlc-icon-color: var(--rls-theme-font-300);
 
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background: var(--rls-theme-color-500);
+    background: var(--rls-theme-background-300);
     width: var(--rls-sizing-x18);
     height: var(--rls-sizing-x18);
     border-radius: var(--rls-sizing-x4);
