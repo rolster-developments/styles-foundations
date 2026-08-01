@@ -21,12 +21,17 @@
 .rls-notification {
   display: flex;
   column-gap: var(--rls-sizing-x6);
+  max-width: var(--rlc-notification-max-width, 360rem);
   padding: var(--rls-sizing-x6);
   box-sizing: border-box;
   border-radius: var(--rls-sizing-x6);
-  background: var(--rls-app-color-050);
+  background: var(
+    --rlc-notification-background,
+    color-mix(in srgb, var(--rls-app-color-050) 78%, transparent)
+  );
   border-left: var(--rls-theme-border-4-400);
   box-shadow: var(--rls-app-shadow-center-8);
+  backdrop-filter: blur(var(--rlc-notification-backdrop-blur, 12px));
   transform: translateX(calc(100% + var(--rls-sizing-x8)));
   transition: transform 240ms 0ms var(--rls-standard-curve);
   pointer-events: auto;

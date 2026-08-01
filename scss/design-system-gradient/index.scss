@@ -1,0 +1,24 @@
+// Rolster Technology Design System Gradient
+// v1.0.0
+// @license MIT
+// Author: Rolster Developers
+// Created: 31/Jul/2026
+// Updated: 31/Jul/2026
+
+@use 'sass:meta';
+
+.rls-design-system-gradient {
+  @include meta.load-css('atoms/avatar');
+  @include meta.load-css('atoms/button');
+  @include meta.load-css('atoms/check-box');
+  @include meta.load-css('atoms/progress-bar');
+  @include meta.load-css('atoms/radio-button');
+  @include meta.load-css('atoms/switch');
+
+  @include meta.load-css('molecules/pagination');
+  @include meta.load-css('molecules/picker-day');
+  @include meta.load-css('molecules/picker-month');
+  @include meta.load-css('molecules/picker-year');
+
+  @include meta.load-css('organisms/picker-clock');
+}

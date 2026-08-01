@@ -1,5 +1,5 @@
 // Rolster Technology ProgressBar Component
-// v1.2.0
+// v1.3.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
@@ -27,7 +27,7 @@
       top: 0rem;
       width: 0%;
       height: var(--pvt-component-height);
-      background: var(--rls-theme-gradient-500);
+      background: var(--rls-theme-color-500);
       border-radius: var(--pvt-component-radius);
     }
 
@@ -46,7 +46,7 @@
     top: 0rem;
     width: 0%;
     height: var(--pvt-component-height);
-    background: var(--rls-theme-gradient-500);
+    background: var(--rls-theme-color-500);
     transition: width 320ms 0ms var(--rls-standard-curve);
     border-radius: var(--pvt-component-radius);
   }

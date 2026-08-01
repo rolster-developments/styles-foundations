@@ -78,24 +78,27 @@
   --rlc-modal-background: transparent;
   --rlc-modal-max-width: 150rem;
   --rlc-picker-date-background: var(--rls-app-color-050);
+  --rlc-picker-date-radius: var(--rls-sizing-x4);
 }
 
 .rls-modal-date-range {
   --rlc-modal-background: transparent;
   --rlc-modal-max-width: 150rem;
   --rlc-picker-date-range-background: var(--rls-app-color-050);
+  --rlc-picker-date-range-radius: var(--rls-sizing-x4);
 }
 
 .rls-modal-clock {
   --rlc-modal-background: transparent;
   --rlc-modal-max-width: 150rem;
   --rlc-picker-clock-background: var(--rls-app-color-050);
+  --rlc-picker-clock-radius: var(--rls-sizing-x4);
   --rlc-picker-clock-padding: var(--rls-sizing-x4) 0rem;
 }
 
 .rls-modal-color {
   --rlc-modal-background: transparent;
   --rlc-modal-max-width: 150rem;
-  --rlc-picker-color-radius: var(--rls-sizing-x4);
   --rlc-picker-color-background: var(--rls-app-color-050);
+  --rlc-picker-color-radius: var(--rls-sizing-x4);
 }

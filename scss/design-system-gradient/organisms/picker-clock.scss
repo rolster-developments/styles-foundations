@@ -1,0 +1,16 @@
+// Rolster Technology ClockPicker Component
+// v1.0.0
+// @license MIT
+// Author: Rolster Developers
+// Created: 31/Jul/2026
+// Updated: 31/Jul/2026
+
+.rls-picker-clock {
+  &__zone {
+    &__value {
+      &--active {
+        background: var(--rls-theme-gradient-500);
+      }
+    }
+  }
+}

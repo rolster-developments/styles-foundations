@@ -1,9 +1,9 @@
 // Rolster Technology ProgressCircular Component
-// v1.1.0
+// v1.2.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 28/May/2026
+// Updated: 31/Jul/2026
 
 .rls-progress-circular {
   --pvt-dimension: var(
@@ -21,39 +21,40 @@
   &__svg {
     height: 100%;
     width: 100%;
-    transform: rotate(990deg);
-    animation: progress-circular-svg 3500ms linear infinite;
+    animation: progress-circular-svg 1600ms linear infinite;
   }
 
   &__circle {
     fill: none;
     stroke-width: 4px;
     stroke: inherit;
-    stroke-dasharray: 65;
-    stroke-dashoffset: 65;
-    opacity: 1;
-    animation: progress-circular-circle 1750ms var(--rls-standard-curve)
+    stroke-linecap: round;
+    stroke-dasharray: 1, 74.4;
+    stroke-dashoffset: 0;
+    animation: progress-circular-circle 1350ms var(--rls-standard-curve)
       infinite;
   }
 }
 
 @keyframes progress-circular-svg {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(180deg);
-  }
   100% {
     transform: rotate(360deg);
   }
 }
 
 @keyframes progress-circular-circle {
-  50% {
+  0% {
+    stroke-dasharray: 1, 74.4;
     stroke-dashoffset: 0;
   }
+
+  50% {
+    stroke-dasharray: 53, 22.4;
+    stroke-dashoffset: -21;
+  }
+
   100% {
-    stroke-dashoffset: -65;
+    stroke-dasharray: 53, 22.4;
+    stroke-dashoffset: -73;
   }
 }

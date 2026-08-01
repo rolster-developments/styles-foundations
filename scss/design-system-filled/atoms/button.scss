@@ -1,55 +1,27 @@
 // Rolster Technology Button Component
-// v2.4.6
+// v2.5.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 23/Abr/2026
-// Updated: 28/May/2026
+// Updated: 31/Jul/2026
 
 .rls-button {
   --pvt-ghost-background: var(--rls-theme-color-100);
   --pvt-ghost-font-color: var(--rls-theme-color-950);
   --pvt-ghost-border: none;
 
-  --pvt-outline-background: var(--rls-theme-color-100);
-  --pvt-outline-font-color: var(--rls-theme-color-950);
-  --pvt-outline-border: none;
-
   --pvt-flat-background: var(--rls-theme-color-100);
   --pvt-flat-font-color: var(--rls-theme-color-950);
   --pvt-flat-border: none;
-
-  --pvt-stroked-background: var(--rls-theme-color-100);
-  --pvt-stroked-font-color: var(--rls-theme-color-950);
-  --pvt-stroked-border: none;
-
-  --pvt-classic-background: var(--rls-theme-color-300);
-  --pvt-classic-font-color: var(--rls-theme-color-950);
-  --pvt-classic-border: none;
 
   --pvt-raised-background: var(--rls-theme-color-300);
   --pvt-raised-font-color: var(--rls-theme-color-950);
   --pvt-raised-border: none;
 
-  --pvt-gradient-background: var(--rls-theme-color-300);
-  --pvt-gradient-font-color: var(--rls-theme-color-950);
-  --pvt-gradient-border: none;
-
   &:not(:disabled):hover {
     --pvt-ghost-background: var(--rls-theme-color-700);
     --pvt-ghost-font-color: var(--rls-theme-color-050);
     --pvt-ghost-border: none;
-
-    --pvt-outline-background: var(--rls-theme-color-700);
-    --pvt-outline-font-color: var(--rls-theme-color-050);
-    --pvt-outline-border: none;
-
-    --pvt-stroked-background: var(--rls-theme-color-700);
-    --pvt-stroked-font-color: var(--rls-theme-color-050);
-    --pvt-stroked-border: none;
-
-    --pvt-classic-background: var(--rls-theme-color-700);
-    --pvt-classic-font-color: var(--rls-theme-color-050);
-    --pvt-classic-border: none;
 
     --pvt-flat-background: var(--rls-theme-color-700);
     --pvt-flat-font-color: var(--rls-theme-color-050);
@@ -59,9 +31,6 @@
     --pvt-raised-font-color: var(--rls-theme-color-050);
     --pvt-raised-border: none;
 
-    --pvt-gradient-background: var(--rls-theme-color-700);
-    --pvt-gradient-font-color: var(--rls-theme-color-050);
-    --pvt-gradient-border: none;
   }
 
   &:disabled {

@@ -1,6 +1,6 @@
 {
   "name": "@rolster/styles-foundations",
-  "version": "3.4.4",
+  "version": "3.4.10",
   "description": "Front-end style pack to develop responsive and mobile projects on the web with Rolster.",
   "sass": "scss/styles.scss",
   "style": "dist/styles.css",
@@ -27,6 +27,11 @@
       "style": "./dist/design-system-filled.css",
       "default": "./dist/design-system-filled.css"
     },
+    "./design-system-gradient": {
+      "sass": "./scss/design-system-gradient/index.scss",
+      "style": "./dist/design-system-gradient.css",
+      "default": "./dist/design-system-gradient.css"
+    },
     "./scss/*": "./scss/*"
   },
   "files": [
@@ -41,11 +46,12 @@
     "comp:build": "sass scss/components/index.scss dist/components.css --style=compressed",
     "dsbd:build": "sass scss/design-system-bordered/index.scss dist/design-system-bordered.css --style=compressed",
     "dsfl:build": "sass scss/design-system-filled/index.scss dist/design-system-filled.css --style=compressed",
+    "dsgr:build": "sass scss/design-system-gradient/index.scss dist/design-system-gradient.css --style=compressed",
     "sass:build": "sass scss/styles.scss dist/styles.css --style=compressed",
     "css:prettier": "prettier --write dist/*.css --ignore-path .prettierignore",
     "css:minify": "css-minify -d dist/ -o dist/",
     "rltcss": "rtlcss dist/styles.css dist/styles.rtl.css",
-    "lib:build": "npm run sass:build && npm run comp:build && npm run dsbd:build && npm run dsfl:build",
+    "lib:build": "npm run sass:build && npm run comp:build && npm run dsbd:build && npm run dsfl:build && npm run dsgr:build",
     "lib:compression": "npm run rltcss && npm run css:prettier && npm run css:minify",
     "build": "npm run clean && npm run lib:build && npm run lib:compression",
     "prepublishOnly": "npm run build"
