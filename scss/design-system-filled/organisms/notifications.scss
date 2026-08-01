@@ -9,12 +9,12 @@
   background: var(--rls-theme-background-100);
 
   &__avatar {
-    --rlc-icon-color: var(--rls-theme-font-100);
+    --rlc-icon-color: var(--rls-theme-font-color-100);
 
     background: var(--rls-theme-background-200);
   }
 
   &__title {
-    color: var(--rls-theme-font-100);
+    color: var(--rls-theme-font-color-100);
   }
 }

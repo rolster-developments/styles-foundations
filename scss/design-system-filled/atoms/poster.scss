@@ -10,7 +10,7 @@
   background: var(--rls-app-color-200);
 
   &[rls-theme] {
-    color: var(--rls-theme-font-200);
+    color: var(--rls-theme-font-color-200);
     background: var(--rls-theme-background-100);
   }
 }

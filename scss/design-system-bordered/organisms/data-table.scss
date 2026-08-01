@@ -57,31 +57,31 @@
     border: var(--pvt-datatable-row-border);
 
     &--success {
-      --pvt-datatable-floating-background: var(--rls-success-color-100);
+      --pvt-datatable-floating-background: var(--rls-success-datatable-floating);
 
-      border: var(--rls-success-border-1-200);
-      background: var(--rls-success-color-050);
+      border: var(--rls-success-datatable-border);
+      background: var(--rls-success-datatable-background);
     }
 
     &--info {
-      --pvt-datatable-floating-background: var(--rls-info-color-100);
+      --pvt-datatable-floating-background: var(--rls-info-datatable-floating);
 
-      border: var(--rls-info-border-1-200);
-      background: var(--rls-info-color-050);
+      border: var(--rls-info-datatable-border);
+      background: var(--rls-info-datatable-background);
     }
 
     &--warning {
-      --pvt-datatable-floating-background: var(--rls-warning-color-100);
+      --pvt-datatable-floating-background: var(--rls-warning-datatable-floating);
 
-      border: var(--rls-warning-border-1-200);
-      background: var(--rls-warning-color-050);
+      border: var(--rls-warning-datatable-border);
+      background: var(--rls-warning-datatable-background);
     }
 
     &--error {
-      --pvt-datatable-floating-background: var(--rls-danger-color-100);
+      --pvt-datatable-floating-background: var(--rls-danger-datatable-floating);
 
-      border: var(--rls-danger-border-1-200);
-      background: var(--rls-danger-color-050);
+      border: var(--rls-danger-datatable-border);
+      background: var(--rls-danger-datatable-background);
     }
   }
 }

@@ -14,7 +14,7 @@
   width: 100%;
   height: var(--pvt-component-height);
   overflow: hidden;
-  background: var(--rlc-progress-bar-background, var(--rls-theme-font-200));
+  background: var(--rlc-progress-bar-background, var(--rls-theme-font-color-200));
   border-radius: var(--pvt-component-radius);
 
   &--indeterminate {

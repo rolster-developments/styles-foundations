@@ -115,9 +115,9 @@
     --pvt-background: var(--rls-theme-background-100);
     --pvt-header-background: var(--rls-theme-background-100);
     --pvt-header-hover-background: var(--rls-theme-background-200);
-    --pvt-title-font-color: var(--rls-theme-font-200);
-    --pvt-indicator-color: var(--rls-theme-font-100);
-    --pvt-content-font-color: var(--rls-theme-font-100);
+    --pvt-title-font-color: var(--rls-theme-font-color-200);
+    --pvt-indicator-color: var(--rls-theme-font-color-100);
+    --pvt-content-font-color: var(--rls-theme-font-color-100);
 
     &.rls-accordion--open {
       --pvt-indicator-background: var(--rls-theme-background-200);

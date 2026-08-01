@@ -70,7 +70,7 @@
 
       &--active {
         background: var(--rls-theme-background-300);
-        color: var(--rls-theme-font-300);
+        color: var(--rls-theme-font-color-300);
       }
     }
   }
@@ -106,7 +106,7 @@
     }
 
     &__point {
-      fill: var(--rls-theme-font-300);
+      fill: var(--rls-theme-font-color-300);
     }
   }
 

@@ -20,9 +20,9 @@
   border-radius: var(--rlc-badge-radius, var(--rls-sizing-x2));
 
   &[rls-theme] {
-    --pvt-font-color: var(--rls-theme-font-200);
+    --pvt-font-color: var(--rls-theme-font-color-200);
     --pvt-background: var(--rls-theme-background-100);
-    --pvt-contrasted-font-color: var(--rls-theme-font-200);
+    --pvt-contrasted-font-color: var(--rls-theme-font-color-200);
     --pvt-contrasted-background: var(--rls-theme-background-100);
   }
 }

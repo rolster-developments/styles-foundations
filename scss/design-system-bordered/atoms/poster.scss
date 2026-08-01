@@ -10,7 +10,7 @@
   background: var(--rls-app-color-600);
 
   &[rls-theme] {
-    color: var(--rls-theme-font-300);
+    color: var(--rls-theme-font-color-300);
     background: var(--rls-theme-background-300);
   }
 
@@ -19,7 +19,7 @@
     background: var(--rls-app-color-200);
 
     &[rls-theme] {
-      color: var(--rls-theme-font-100);
+      color: var(--rls-theme-font-color-100);
       background: var(--rls-theme-background-100);
     }
   }

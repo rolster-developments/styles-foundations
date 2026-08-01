@@ -7,11 +7,11 @@
 
 .rls-avatar {
   border-radius: var(--rlc-avatar-radius, var(--rls-sizing-x4));
-  color: var(--rlc-avatar-color, var(--rls-theme-font-300));
+  color: var(--rlc-avatar-color, var(--rls-theme-font-color-300));
   background: var(--rlc-avatar-background, var(--rls-theme-background-300));
 
   &--contrasted {
-    color: var(--rlc-avatar-color, var(--rls-theme-font-100));
+    color: var(--rlc-avatar-color, var(--rls-theme-font-color-100));
     background: var(--rlc-avatar-background, var(--rls-theme-background-100));
   }
 }

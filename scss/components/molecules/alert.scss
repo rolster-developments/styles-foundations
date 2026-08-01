@@ -22,8 +22,8 @@
 
   &[rls-theme] {
     --pvt-icon-background: var(--rls-theme-background-300);
-    --pvt-icon-color: var(--rls-theme-font-300);
-    --pvt-content-font-color: var(--rls-theme-font-100);
+    --pvt-icon-color: var(--rls-theme-font-color-300);
+    --pvt-content-font-color: var(--rls-theme-font-color-100);
 
     background: var(--rls-theme-background-100);
     border: var(--rls-theme-border-100);

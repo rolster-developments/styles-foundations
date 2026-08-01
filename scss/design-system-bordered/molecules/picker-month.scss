@@ -12,12 +12,12 @@
     }
 
     &--selected {
-      --pvt-component-font-color: var(--rls-theme-font-100);
+      --pvt-component-font-color: var(--rls-theme-font-color-100);
     }
 
     &--focused {
       --pvt-component-background: var(--rls-theme-background-300);
-      --pvt-component-font-color: var(--rls-theme-font-300);
+      --pvt-component-font-color: var(--rls-theme-font-color-300);
     }
   }
 
