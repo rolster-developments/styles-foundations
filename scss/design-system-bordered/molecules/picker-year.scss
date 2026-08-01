@@ -17,12 +17,12 @@
 
   &__element {
     &--selected {
-      --pvt-component-font-color: var(--rls-theme-color-600);
+      --pvt-component-font-color: var(--rls-theme-font-100);
     }
 
     &--focused {
-      --pvt-component-background: var(--rls-theme-color-500);
-      --pvt-component-font-color: var(--rls-theme-color-050);
+      --pvt-component-background: var(--rls-theme-background-300);
+      --pvt-component-font-color: var(--rls-theme-font-300);
     }
   }
 }

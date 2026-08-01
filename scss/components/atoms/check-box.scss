@@ -1,15 +1,16 @@
 // Rolster Technology Checkbox Component
-// v1.5.0
+// v1.5.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 31/Jul/2026
+// Updated: 01/Ago/2026
 
 .rls-checkbox {
-  --rlc-icon-color: transparent;
   --pvt-dimension: var(--rlc-checkbox-dimension, var(--rls-sizing-x12));
-  --rlc-icon-dimension: calc(var(--pvt-dimension) - 2rem);
   --pvt-component-background: transparent;
+
+  --rlc-icon-dimension: calc(var(--pvt-dimension) - 2rem);
+  --rlc-icon-color: transparent;
 
   position: relative;
   display: flex;
@@ -27,18 +28,8 @@
     cursor: var(--rlc-checkbox-cursor, initial);
   }
 
-  &--checked {
-    --rlc-icon-color: var(--rls-theme-color-050);
-    --pvt-component-background: var(--rls-theme-background-200);
-  }
-
   &--disabled {
     opacity: 0.5;
     pointer-events: none;
-    background: var(--rls-app-color-300);
-
-    &.rls-checkbox--checked {
-      --rlc-icon-color: var(--rls-app-color-500);
-    }
   }
 }

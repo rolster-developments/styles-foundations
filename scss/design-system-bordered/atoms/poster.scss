@@ -10,8 +10,8 @@
   background: var(--rls-app-color-600);
 
   &[rls-theme] {
-    color: var(--rls-theme-color-050);
-    background: var(--rls-theme-color-500);
+    color: var(--rls-theme-font-300);
+    background: var(--rls-theme-background-300);
   }
 
   &--contrasted {

@@ -26,19 +26,9 @@
     cursor: var(--rlc-radiobutton-cursor, initial);
   }
 
-  &--checked {
-    --pvt-component-background: var(--rls-app-color-050);
-  }
-
   &--disabled {
     opacity: 0.5;
     pointer-events: none;
-    background: var(--rls-app-color-300);
-    border: none;
-
-    &.rls-radiobutton--checked {
-      --pvt-component-background: var(--rls-app-color-500);
-    }
   }
 
   &__component {

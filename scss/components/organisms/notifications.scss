@@ -1,37 +1,41 @@
 // Rolster Technology Notifications Component
-// v1.0.0
+// v1.0.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 18/Jun/2026
-// Updated: 18/Jun/2026
+// Updated: 01/Ago/2026
 
 .rls-notifications {
   position: fixed;
   display: flex;
+  width: auto;
+  max-width: var(--rlc-notification-max-width, 240rem);
   flex-direction: column;
   row-gap: var(--rls-sizing-x4);
   right: var(--rls-sizing-x8);
   bottom: var(--rls-sizing-x8);
-  width: auto;
-  max-width: 360rem;
   z-index: var(--rls-z-index-32);
   pointer-events: none;
+  border-radius: var(--rls-sizing-x6);
+  background: var(--rls-theme-backdrop-400);
+  overflow: hidden;
+  backdrop-filter: blur(2px);
+  transition: width 240ms 0ms var(--rls-standard-curve);
+
+  &--visible {
+    padding: var(--rls-sizing-x6);
+    box-sizing: border-box;
+  }
 }
 
 .rls-notification {
   display: flex;
   column-gap: var(--rls-sizing-x6);
-  max-width: var(--rlc-notification-max-width, 360rem);
   padding: var(--rls-sizing-x6);
   box-sizing: border-box;
   border-radius: var(--rls-sizing-x6);
-  background: var(
-    --rlc-notification-background,
-    color-mix(in srgb, var(--rls-app-color-050) 78%, transparent)
-  );
   border-left: var(--rls-theme-border-4-400);
   box-shadow: var(--rls-app-shadow-center-8);
-  backdrop-filter: blur(var(--rlc-notification-backdrop-blur, 12px));
   transform: translateX(calc(100% + var(--rls-sizing-x8)));
   transition: transform 240ms 0ms var(--rls-standard-curve);
   pointer-events: auto;
@@ -97,5 +101,11 @@
       font-weight: var(--rls-font-weight-medium);
       letter-spacing: var(--rls-label-letter-spacing);
     }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .rls-notifications {
+    max-width: calc(100% - 16rem);
   }
 }

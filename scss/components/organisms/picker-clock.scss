@@ -69,8 +69,8 @@
       background: var(--rls-app-color-200);
 
       &--active {
-        background: var(--rls-theme-color-500);
-        color: var(--rls-theme-color-050);
+        background: var(--rls-theme-background-300);
+        color: var(--rls-theme-font-300);
       }
     }
   }
@@ -93,20 +93,20 @@
     position: absolute;
 
     &__line {
-      stroke: var(--rls-theme-color-500);
+      stroke: var(--rls-theme-background-300);
       stroke-width: var(--rls-sizing-x1);
     }
 
     &__center {
-      fill: var(--rls-theme-color-500);
+      fill: var(--rls-theme-background-300);
     }
 
     &__indicator {
-      fill: var(--rls-theme-color-300);
+      fill: var(--rls-theme-background-200);
     }
 
     &__point {
-      fill: var(--rls-theme-color-050);
+      fill: var(--rls-theme-font-300);
     }
   }
 

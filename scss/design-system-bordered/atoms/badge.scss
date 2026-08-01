@@ -20,8 +20,8 @@
   border-radius: var(--rlc-badge-radius, calc(var(--pvt-dimension) / 2));
 
   &[rls-theme] {
-    --pvt-font-color: var(--rls-theme-color-050);
-    --pvt-background: var(--rls-theme-color-500);
+    --pvt-font-color: var(--rls-theme-font-300);
+    --pvt-background: var(--rls-theme-background-300);
     --pvt-contrasted-font-color: var(--rls-theme-font-100);
     --pvt-contrasted-background: var(--rls-theme-background-100);
   }

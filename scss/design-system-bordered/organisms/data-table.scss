@@ -1,9 +1,9 @@
 // Rolster Technology Datatable Component
-// v2.6.10
+// v2.6.11
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 28/May/2026
+// Updated: 01/Ago/2026
 
 .rls-datatable {
   --pvt-datatable-border-radius: var(
@@ -59,29 +59,65 @@
     &--success {
       --pvt-datatable-floating-background: var(--rls-success-color-100);
 
-      background: var(--rls-success-color-050);
       border: var(--rls-success-border-1-200);
+      background: var(--rls-success-color-050);
     }
 
     &--info {
       --pvt-datatable-floating-background: var(--rls-info-color-100);
 
-      background: var(--rls-info-color-050);
       border: var(--rls-info-border-1-200);
+      background: var(--rls-info-color-050);
     }
 
     &--warning {
       --pvt-datatable-floating-background: var(--rls-warning-color-100);
 
-      background: var(--rls-warning-color-050);
       border: var(--rls-warning-border-1-200);
+      background: var(--rls-warning-color-050);
     }
 
     &--error {
       --pvt-datatable-floating-background: var(--rls-danger-color-100);
 
-      background: var(--rls-danger-color-050);
       border: var(--rls-danger-border-1-200);
+      background: var(--rls-danger-color-050);
+    }
+  }
+}
+
+body[app-theme='dark'] {
+  .rls-datatable {
+    &__subheader,
+    &__record,
+    &__totals {
+      &--success {
+        --pvt-datatable-floating-background: var(--rls-success-color-900);
+
+        border: var(--rls-success-border-1-800);
+        background: var(--rls-success-color-950);
+      }
+
+      &--info {
+        --pvt-datatable-floating-background: var(--rls-info-color-900);
+
+        border: var(--rls-info-border-1-800);
+        background: var(--rls-info-color-950);
+      }
+
+      &--warning {
+        --pvt-datatable-floating-background: var(--rls-warning-color-900);
+
+        border: var(--rls-warning-border-1-800);
+        background: var(--rls-warning-color-950);
+      }
+
+      &--error {
+        --pvt-datatable-floating-background: var(--rls-danger-color-900);
+
+        border: var(--rls-danger-border-1-800);
+        background: var(--rls-danger-color-950);
+      }
     }
   }
 }

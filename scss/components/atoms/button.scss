@@ -1,9 +1,9 @@
 // Rolster Technology Button Component
-// v2.6.0
+// v2.6.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 31/Jul/2026
+// Updated: 01/Ago/2026
 
 .rls-button {
   --pvt-button-content-background: none;
@@ -76,7 +76,7 @@
       --pvt-button-content-font-color: var(--pvt-flat-font-color);
       --pvt-button-content-background: var(--pvt-flat-background);
       --pvt-button-content-border: var(--pvt-flat-border);
-      --pvt-button-ripple-background: var(--rls-theme-font-300);
+      --pvt-button-ripple-background: var(--rls-theme-font-200);
     }
 
     &--raised {
@@ -84,7 +84,7 @@
       --pvt-button-content-font-color: var(--pvt-raised-font-color);
       --pvt-button-content-background: var(--pvt-raised-background);
       --pvt-button-content-border: var(--pvt-raised-border);
-      --pvt-button-ripple-background: var(--rls-theme-font-500);
+      --pvt-button-ripple-background: var(--rls-theme-font-300);
     }
   }
 

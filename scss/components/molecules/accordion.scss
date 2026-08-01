@@ -1,9 +1,9 @@
 // Rolster Technology Accordion Component
-// v1.2.0
+// v1.2.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 31/Jul/2026
+// Updated: 01/Ago/2026
 
 .rls-accordion {
   --pvt-title-font-color: var(--rls-app-color-800);
@@ -113,14 +113,14 @@
 
   &[rls-theme] {
     --pvt-background: var(--rls-theme-background-100);
-    --pvt-header-background: var(--rls-theme-background-200);
-    --pvt-header-hover-background: var(--rls-theme-background-300);
-    --pvt-title-font-color: var(--rls-theme-font-400);
+    --pvt-header-background: var(--rls-theme-background-100);
+    --pvt-header-hover-background: var(--rls-theme-background-200);
+    --pvt-title-font-color: var(--rls-theme-font-200);
     --pvt-indicator-color: var(--rls-theme-font-100);
     --pvt-content-font-color: var(--rls-theme-font-100);
 
     &.rls-accordion--open {
-      --pvt-indicator-background: var(--rls-theme-background-300);
+      --pvt-indicator-background: var(--rls-theme-background-200);
     }
   }
 }

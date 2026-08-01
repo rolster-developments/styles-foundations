@@ -21,8 +21,8 @@
   border-radius: var(--rls-sizing-x4);
 
   &[rls-theme] {
-    --pvt-icon-background: var(--rls-theme-color-500);
-    --pvt-icon-color: var(--rls-theme-color-050);
+    --pvt-icon-background: var(--rls-theme-background-300);
+    --pvt-icon-color: var(--rls-theme-font-300);
     --pvt-content-font-color: var(--rls-theme-font-100);
 
     background: var(--rls-theme-background-100);

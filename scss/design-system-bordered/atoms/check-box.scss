@@ -1,16 +1,18 @@
 // Rolster Technology Checkbox Component
-// v1.4.0
+// v1.4.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 31/Jul/2026
+// Updated: 01/Jul/2026
 
 .rls-checkbox {
   background: transparent;
   border: var(--rls-app-border-1-400);
 
   &--checked {
-    background: var(--rls-theme-color-500);
-    border: var(--rls-theme-border-1-500);
+    --rlc-icon-color: var(--rls-theme-font-300);
+
+    border: var(--rls-theme-border-300);
+    background: var(--rls-theme-background-300);
   }
 }
