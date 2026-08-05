@@ -1,12 +1,16 @@
 // Rolster Technology ButtonAction Component
-// v1.2.1
+// v1.2.2
 // @license MIT
 // Author: Rolster Developers
 // Created: 15/May/2026
-// Updated: 01/Ago/2026
+// Updated: 05/Ago/2026
 
 .rls-button-action {
   &--flat {
     background: var(--rls-theme-background-100);
+  }
+
+  &__badge {
+    border-radius: var(--rls-sizing-x2);
   }
 }

@@ -1,9 +1,9 @@
 // Rolster Technology Responsives Foundations
-// v1.0.0
+// v2.0.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 12/Ago/2022
+// Updated: 05/Ago/2026
 
 @mixin responsive($size) {
   .#{$size}-2-5 {
@@ -179,20 +179,20 @@
   }
 }
 
-@include responsive(col-xs);
+@include responsive(rls-width-xs);
 
 @media only screen and (min-width: 361px) {
-  @include responsive(col-sm);
+  @include responsive(rls-width-sm);
 }
 
 @media only screen and (min-width: 641px) {
-  @include responsive(col-md);
+  @include responsive(rls-width-md);
 }
 
 @media only screen and (min-width: 961px) {
-  @include responsive(col-lg);
+  @include responsive(rls-width-lg);
 }
 
 @media only screen and (min-width: 1241px) {
-  @include responsive(col-xl);
+  @include responsive(rls-width-xl);
 }
