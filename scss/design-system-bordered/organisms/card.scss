@@ -1,15 +1,15 @@
 // Rolster Technology Card Component
-// v1.4.0
+// v1.4.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 31/Jul/2026
+// Updated: 07/Ago/2026
 
 .rls-card {
   --pvt-border: var(--rlc-card-border, var(--rls-app-border-1-300));
   --pvt-box-shadow: var(--rlc-card-box-shadow, var(--rls-app-shadow-center-6));
 
-  border-radius: var(--rls-sizing-x4);
+  border-radius: var(--rlc-card-radius, var(--rls-sizing-x6));
   box-shadow: var(--pvt-box-shadow);
 
   &[rls-theme] {

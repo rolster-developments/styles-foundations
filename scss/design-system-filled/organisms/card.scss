@@ -1,12 +1,12 @@
 // Rolster Technology Card Component
-// v1.4.0
+// v1.4.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 23/Abr/2026
-// Updated: 31/Jul/2026
+// Updated: 07/Ago/2026
 
 .rls-card {
-  border-radius: var(--rls-sizing-x6);
+  border-radius: var(--rlc-card-radius, var(--rls-sizing-x6));
 
   &[rls-theme] {
     --pvt-background: var(--rls-theme-background-100);
