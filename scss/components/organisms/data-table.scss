@@ -211,6 +211,7 @@
     position: relative;
     display: flex;
     box-sizing: border-box;
+    min-width: 0;
     min-height: var(--rlc-datatable-title-height, var(--rls-sizing-x20));
     align-items: var(--rlc-datatable-align-items, center);
     justify-content: var(--rlc-datatable-justify-content, flex-start);
@@ -262,7 +263,7 @@
     --pvt-data-font-weight: var(--rls-font-weight-semibold);
 
     position: sticky;
-    top: 0px;
+    top: 0rem;
     z-index: var(--rls-z-index-4);
     background: var(--pvt-datatable-header-background);
   }
@@ -274,6 +275,7 @@
     position: relative;
     display: flex;
     box-sizing: border-box;
+    min-width: 0;
     min-height: var(--rlc-datatable-cell-height, var(--rls-sizing-x16));
     align-items: var(--rlc-datatable-align-items, center);
     justify-content: var(--rlc-datatable-justify-content, flex-start);
