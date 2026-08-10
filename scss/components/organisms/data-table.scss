@@ -1,9 +1,9 @@
 // Rolster Technology Datatable Component
-// v2.8.0
+// v2.8.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 31/Jul/2026
+// Updated: 10/Ago/2026
 
 @mixin datatable_cell_vars() {
   --rlc-field-box-body-background: transparent;
@@ -50,10 +50,9 @@
   --rlc-switch-element-height: var(--rls-sizing-x4);
   --rlc-switch-element-radius: var(--rls-sizing-x4);
 
-  display: flex;
   justify-content: center;
   align-items: center;
-  width: var(--rls-sizing-x24);
+  width: var(--rls-sizing-x20);
   padding: 0rem;
 
   & > img {
@@ -200,7 +199,6 @@
     --rlc-poster-margin: auto 0rem;
 
     display: flex;
-    column-gap: var(--rls-sizing-x6);
     padding: 0rem var(--rls-sizing-x6);
     box-sizing: border-box;
     background: var(--pvt-datatable-header-background);
@@ -212,6 +210,7 @@
 
     position: relative;
     display: flex;
+    box-sizing: border-box;
     min-height: var(--rlc-datatable-title-height, var(--rls-sizing-x20));
     align-items: var(--rlc-datatable-align-items, center);
     justify-content: var(--rlc-datatable-justify-content, flex-start);
@@ -248,7 +247,6 @@
   &__totals {
     position: relative;
     display: flex;
-    column-gap: var(--rls-sizing-x6);
     padding: 0rem var(--rls-sizing-x6);
     box-sizing: border-box;
     background: var(--pvt-datatable-row-background);
@@ -275,6 +273,7 @@
 
     position: relative;
     display: flex;
+    box-sizing: border-box;
     min-height: var(--rlc-datatable-cell-height, var(--rls-sizing-x16));
     align-items: var(--rlc-datatable-align-items, center);
     justify-content: var(--rlc-datatable-justify-content, flex-start);
@@ -296,6 +295,12 @@
   &__data {
     color: var(--pvt-data-font-color, var(--pvt-datatable-font-color));
     font-weight: var(--pvt-data-font-weight, var(--rls-font-weight-regular));
+  }
+
+  &__title + &__title,
+  &__cell + &__cell,
+  &__data + &__data {
+    padding-left: var(--rlc-datatable-row-gap, var(--rls-sizing-x6));
   }
 
   &__floating {
