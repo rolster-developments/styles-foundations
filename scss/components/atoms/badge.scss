@@ -1,9 +1,9 @@
 // Rolster Technology Badge Component
-// v1.2.8
+// v1.2.9
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 28/May/2026
+// Updated: 11/Ago/2026
 
 .rls-badge {
   --pvt-dimension: var(--rlc-badge-dimension, var(--rls-sizing-x12));
@@ -13,6 +13,7 @@
   width: auto;
   min-width: var(--pvt-dimension);
   height: var(--pvt-dimension);
+  flex: 0 0 auto;
   line-height: var(--pvt-dimension);
   padding: var(--rlc-badge-padding, 0rem var(--rls-sizing-x2));
   box-sizing: var(--rlc-badge-box-sizing, border-box);
