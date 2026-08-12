@@ -1,9 +1,9 @@
 // Rolster Technology Datatable Component
-// v2.8.1
+// v2.8.2
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 10/Ago/2026
+// Updated: 12/Ago/2026
 
 @mixin datatable_cell_vars() {
   --rlc-field-box-body-background: transparent;
@@ -52,7 +52,7 @@
 
   justify-content: center;
   align-items: center;
-  width: var(--rls-sizing-x20);
+  width: var(--rlc-datatable-control-width, var(--rls-sizing-x24));
   padding: 0rem;
 
   & > img {
@@ -212,7 +212,7 @@
     display: flex;
     box-sizing: border-box;
     min-width: 0;
-    min-height: var(--rlc-datatable-title-height, var(--rls-sizing-x20));
+    min-height: var(--rlc-datatable-title-height, var(--rls-sizing-x22));
     align-items: var(--rlc-datatable-align-items, center);
     justify-content: var(--rlc-datatable-justify-content, flex-start);
     gap: var(--rlc-datatable-cell-gap, var(--rls-sizing-x2));
@@ -276,7 +276,7 @@
     display: flex;
     box-sizing: border-box;
     min-width: 0;
-    min-height: var(--rlc-datatable-cell-height, var(--rls-sizing-x16));
+    min-height: var(--rlc-datatable-cell-height, var(--rls-sizing-x22));
     align-items: var(--rlc-datatable-align-items, center);
     justify-content: var(--rlc-datatable-justify-content, flex-start);
     gap: var(--rlc-datatable-cell-gap, var(--rls-sizing-x2));
