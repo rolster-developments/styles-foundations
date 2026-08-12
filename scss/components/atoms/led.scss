@@ -1,9 +1,9 @@
 // Rolster Technology Led Component
-// v1.0.1
+// v1.0.2
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 28/May/2026
+// Updated: 11/Ago/2026
 
 .rls-led {
   --pvt-dimension: var(--rlc-led-dimension, var(--rls-sizing-x10));
@@ -12,6 +12,7 @@
   --pvt-shadow-width: var(--rlc-led-shadow-width, var(--rls-sizing-x2));
 
   width: auto;
+  flex: 0 0 auto;
   border-radius: 50%;
   box-shadow: 0 0 0 var(--pvt-shadow-width) var(--pvt-shadow-color);
 
