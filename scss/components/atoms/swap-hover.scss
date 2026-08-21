@@ -1,0 +1,29 @@
+// Rolster Technology HoverSwap Component
+// v1.0.0
+// @license MIT
+// Author: Rolster Developers
+// Created: 21/Ago/2026
+// Updated: 21/Ago/2026
+
+.rls-swap-hover {
+  --pvt-primary-display: flex;
+  --pvt-secondary-display: none;
+
+  position: relative;
+  display: var(--rlc-swap-hover-display, flex);
+  flex: var(--rlc-swap-hover-flex, 0 0 auto);
+  width: var(--rlc-swap-hover-width, 100%);
+
+  &:hover {
+    --pvt-primary-display: none;
+    --pvt-secondary-display: flex;
+  }
+
+  &__primary {
+    display: var(--pvt-primary-display);
+  }
+
+  &__secondary {
+    display: var(--pvt-secondary-display);
+  }
+}
