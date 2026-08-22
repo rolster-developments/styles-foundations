@@ -1,9 +1,9 @@
 // Rolster Technology FieldList Component
-// v1.7.0
+// v1.8.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 31/Jul/2026
+// Updated: 22/Ago/2026
 
 .rls-field-list {
   --pvt-control-pointer-events: initial;
@@ -101,6 +101,42 @@
     z-index: -1;
     overflow: hidden;
     padding-bottom: var(--rls-sizing-x6);
+
+    &--portal {
+      --pvt-list-height: 0rem;
+      --pvt-list-max-height: 180rem;
+      --pvt-list-opacity: 0;
+      --pvt-list-suggestions-offset: var(
+        --rlc-field-list-suggestions-offset,
+        var(--rls-sizing-x2)
+      );
+      --pvt-list-transform: translateY(
+        calc(-1 * var(--pvt-list-suggestions-offset))
+      );
+      --pvt-list-body-component-display: none;
+      --pvt-list-body-height: 0rem;
+      --pvt-list-body-max-height: 180rem;
+      --pvt-list-body-border: var(--rls-app-border-1-200);
+      --pvt-list-component-padding: 0rem var(--rls-sizing-x4);
+      --pvt-element-opacity: 1;
+      --pvt-element-pointer-events: initial;
+      --pvt-backdrop-opacity: 0;
+      --pvt-backdrop-bottom: initial;
+
+      position: fixed;
+      top: calc(var(--pvt-portal-top, 0px) + var(--rls-sizing-x6));
+      left: var(--pvt-portal-left, 0px);
+      width: var(--pvt-portal-width, 100%);
+
+      &.rls-field-list__suggestions--higher {
+        top: initial;
+        bottom: calc(var(--pvt-portal-bottom, 0px) - var(--rls-sizing-x4));
+      }
+
+      &.rls-field-list__suggestions--visible {
+        z-index: var(--rls-z-index-32);
+      }
+    }
 
     &--higher {
       --pvt-list-transform: translateY(var(--pvt-list-suggestions-offset));
@@ -356,6 +392,20 @@
     --pvt-list-body-component-display: block;
     --pvt-list-body-border: none;
     --pvt-list-component-padding: var(--rls-sizing-x6) var(--rls-sizing-x4);
+
+    &__suggestions--portal {
+      --pvt-list-transform: translateY(100%);
+      --pvt-list-body-component-display: block;
+      --pvt-list-body-border: none;
+      --pvt-list-component-padding: var(--rls-sizing-x6) var(--rls-sizing-x4);
+
+      width: 100%;
+
+      &.rls-field-list__suggestions--higher {
+        top: 0rem;
+        bottom: initial;
+      }
+    }
 
     &__suggestions {
       position: fixed;
