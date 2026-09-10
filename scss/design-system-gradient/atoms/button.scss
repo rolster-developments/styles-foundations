@@ -1,9 +1,9 @@
 // Rolster Technology Button Component
-// v2.6.1
+// v2.6.2
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 01/Ago/2026
+// Updated: 09/Sep/2026
 
 .rls-button {
   --pvt-ghost-background: none;
@@ -48,9 +48,5 @@
     --pvt-raised-border: none;
 
     pointer-events: none;
-  }
-
-  &__content {
-    padding: var(--rlc-button-content-padding, 0rem var(--rls-sizing-x4));
   }
 }

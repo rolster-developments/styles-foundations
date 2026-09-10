@@ -1,18 +1,48 @@
 // Rolster Technology Slider Component
-// v2.0.3
+// v2.1.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 28/May/2026
+// Updated: 09/Sep/2026
 
 .rls-slider {
   --pvt-track-height: var(--rls-sizing-x3);
   --pvt-thumb-background: var(--rls-theme-color-600);
   --pvt-thumb-color: var(--rls-theme-color-050);
+  --pvt-thumb-cursor: grab;
+  --pvt-motion-duration: 200ms;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--rls-sizing-x2);
 
   &--empty {
     --pvt-thumb-background: var(--rls-app-color-300);
     --pvt-thumb-color: var(--rls-app-color-900);
+  }
+
+  &--dragging {
+    --pvt-motion-duration: 0ms;
+    --pvt-thumb-cursor: grabbing;
+  }
+
+  &--disabled {
+    opacity: 0.25;
+    pointer-events: none;
+  }
+
+  &__label {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    color: var(--rlc-slider-label-font-color, var(--rls-app-color-600));
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-weight: var(--rls-font-weight-medium);
+    font-size: var(--rls-smalltext-font-size);
+    letter-spacing: var(--rls-smalltext-letter-spacing);
+    line-height: var(--rls-smalltext-line-height);
   }
 
   &__component {
@@ -21,6 +51,8 @@
     margin: 0rem 5rem;
     padding: var(--rls-sizing-x4) 0rem;
     box-sizing: border-box;
+    touch-action: none;
+    user-select: none;
   }
 
   &__body {
@@ -48,7 +80,7 @@
       height: var(--pvt-track-height);
       overflow: hidden;
       z-index: var(--rls-z-index-4);
-      transition: width 200ms 0ms var(--rls-standard-curve);
+      transition: width var(--pvt-motion-duration) 0ms var(--rls-standard-curve);
       background: var(--rls-theme-color-600);
     }
   }
@@ -57,7 +89,7 @@
     position: absolute;
     top: 0.5rem;
     left: 0rem;
-    cursor: pointer;
+    cursor: var(--pvt-thumb-cursor);
     width: var(--rls-sizing-x10);
     height: var(--rls-sizing-x10);
     line-height: var(--rls-sizing-x10);
@@ -69,6 +101,17 @@
     border-radius: 50%;
     background: var(--pvt-thumb-background);
     transform: translateX(-50%);
-    transition: left 200ms 0ms var(--rls-standard-curve);
+    transition: left var(--pvt-motion-duration) 0ms var(--rls-standard-curve);
+
+    &:focus-visible {
+      outline: none;
+      box-shadow: 0rem 0rem 0rem var(--rls-sizing-x2) var(--rls-theme-color-200);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rls-slider {
+    --pvt-motion-duration: 0ms;
   }
 }

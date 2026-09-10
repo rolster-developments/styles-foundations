@@ -1,9 +1,9 @@
 // Rolster Technology Button Component
-// v2.6.1
+// v2.7.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 01/Ago/2026
+// Updated: 09/Sep/2026
 
 .rls-button {
   --pvt-button-content-background: none;
@@ -14,8 +14,24 @@
   --pvt-button-content-visibility: hidden;
   --pvt-button-ripple-background: var(--rls-theme-color-700);
 
+  --pvt-button-content-height: var(
+    --rlc-button-content-height,
+    var(--rls-sizing-x22)
+  );
+
+  --pvt-button-content-line-height: var(
+    --rlc-button-content-line-height,
+    var(--pvt-button-content-height)
+  );
+
+  --pvt-button-font-size: var(
+    --rlc-button-font-size,
+    var(--rls-button-font-size)
+  );
+
   position: relative;
   padding: 0rem;
+  margin: var(--rlc-button-margin, 0rem);
   width: var(--rlc-button-width, auto);
   outline: none;
   background: transparent;
@@ -30,13 +46,19 @@
   }
 
   &__content {
+    --rlc-icon-dimension: var(
+      --rlc-button-icon-dimension,
+      var(--rls-sizing-x12)
+    );
+
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     column-gap: var(--rlc-button-content-gap, var(--rls-sizing-x2));
-    line-height: var(--rls-sizing-x22);
-    height: var(--rls-sizing-x22);
+    line-height: var(--pvt-button-content-line-height);
+    height: var(--pvt-button-content-height);
+    padding: var(--rlc-button-content-padding, 0rem var(--rls-sizing-x4));
     box-sizing: border-box;
     border-radius: var(--rlc-button-content-radius, var(--rls-sizing-x4));
     box-shadow: var(--pvt-button-content-box-shadow);
@@ -93,9 +115,9 @@
     width: auto;
     align-items: center;
     column-gap: var(--rlc-button-description-gap, var(--rls-sizing-x2));
-    padding: 0rem var(--rls-sizing-x2);
+    padding: var(--rlc-button-description-padding, 0rem var(--rls-sizing-x2));
     line-height: initial;
-    font-size: var(--rls-button-font-size);
+    font-size: var(--pvt-button-font-size);
     letter-spacing: var(--rls-button-letter-spacing);
     font-weight: var(--rlc-button-font-weight, var(--rls-font-weight-medium));
     text-transform: var(--rlc-button-label-text-transform, uppercase);

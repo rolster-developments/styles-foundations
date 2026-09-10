@@ -21,7 +21,7 @@
 
   &--transparent {
     &:not(.rls-avatar--skeleton) {
-      background: transparent;
+      background: transparent !important;
     }
   }
 

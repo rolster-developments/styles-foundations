@@ -15,13 +15,15 @@
   position: relative;
   display: flex;
   height: 100%;
+  min-height: 0rem;
   flex-direction: column;
   row-gap: var(--rls-sizing-x12);
 
   &__body {
     position: relative;
     display: flex;
-    height: 100%;
+    flex: 1 1 auto;
+    min-height: 0rem;
     justify-content: center;
     background: var(--rls-app-color-900);
 
@@ -74,6 +76,7 @@
 
   &__footer {
     display: flex;
+    flex: 0 0 auto;
     flex-direction: column;
     row-gap: var(--rls-sizing-x12);
     padding: var(--rlc-image-editor-footer-padding, 0rem);
