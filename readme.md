@@ -191,22 +191,23 @@ partial that emits no CSS of its own.
 | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
 | `rolster-theme($theme, $c950, $c900, $c800, $c700, $c600, $c500, $c400, $c300, $c200, $c100, $c050)` | declares the eleven color steps of a palette and its nine `--rls-<theme>-gradient-*` |
 | `rolster-theme-900($theme, $color)`                                                                  | sets `color-900` and derives `--rls-<theme>-backdrop-100` … `-900`                   |
-| `rolster-theme-700($theme, $color)`                                                                  | sets `color-700` and derives `--rls-<theme>-skeleton-100` … `-500`                   |
+| `rolster-theme-700($theme, $color)`                                                                  | sets `color-700` and derives `--rls-<theme>-skeleton-100` … `-500` (light surfaces)  |
+| `rolster-theme-300($theme, $color)`                                                                  | sets `color-300` and derives `--rls-<theme>-skeleton-dark-100` … `-500` (dark)       |
 | `rolster-theme-500($theme, $color)`                                                                  | sets `color-500` and derives `--rls-<theme>-shadow-color-500` and `-shadow-500`      |
 
 **`scss/foundations/themes.scss`** — theme and border mapping.
 
-| Signature                              | Description                                                                                |
-| -------------------------------------- | ------------------------------------------------------------------------------------------ |
-| `rolster-theme($theme)`                | maps a palette onto the active theme: colors, skeletons, shadow, backdrops and borders     |
-| `rolster-theme-light($theme)`          | maps the palette onto `--rls-theme-background/font-color/border/gradient-*` for light mode |
-| `rolster-theme-dark($theme)`           | the same mapping inverted, for dark mode                                                   |
-| `rolster-app-border($token)`           | builds `--rls-app-border-{1,2,4}-<token>` from `--rls-app-color-<token>`                   |
-| `rolster-border-color($theme, $token)` | builds `--rls-<theme>-border-{1,2,4}-<token>` for one token of a palette                   |
-| `rolster-border-token($theme)`         | applies `rolster-border-color` to the tokens `100` … `900` of a palette                    |
-| `rolster-border-theme($theme, $token)` | maps a palette border onto the active `--rls-theme-border-{1,2,4}-<token>`                 |
-| `rolster-datatable-light($theme)`      | datatable background, border and floating tokens of a palette, for light mode              |
-| `rolster-datatable-dark($theme)`       | the same datatable tokens, for dark mode                                                   |
+| Signature                              | Description                                                                                  |
+| -------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `rolster-theme($theme)`                | maps a palette onto the active theme: colors, shadow, backdrops and borders                  |
+| `rolster-theme-light($theme)`          | maps the palette onto `--rls-theme-background/font-color/border/gradient/skeleton-*` (light) |
+| `rolster-theme-dark($theme)`           | the same mapping inverted, for dark mode                                                     |
+| `rolster-app-border($token)`           | builds `--rls-app-border-{1,2,4}-<token>` from `--rls-app-color-<token>`                     |
+| `rolster-border-color($theme, $token)` | builds `--rls-<theme>-border-{1,2,4}-<token>` for one token of a palette                     |
+| `rolster-border-token($theme)`         | applies `rolster-border-color` to the tokens `100` … `900` of a palette                      |
+| `rolster-border-theme($theme, $token)` | maps a palette border onto the active `--rls-theme-border-{1,2,4}-<token>`                   |
+| `rolster-datatable-light($theme)`      | datatable background, border and floating tokens of a palette, for light mode                |
+| `rolster-datatable-dark($theme)`       | the same datatable tokens, for dark mode                                                     |
 
 **`scss/foundations/flex-boxs.scss`**
 
@@ -292,16 +293,16 @@ package, and `--rlc-*` are the per-component overrides a consumer sets to tweak
 one instance (for example `--rlc-icon-dimension` or
 `--rlc-app-header-height`).
 
-| Family       | Declared in                     | Tokens                                                                                                                                                        |
-| ------------ | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Colors       | `foundations/colors.scss`       | `--rls-app-color-050…950` (overridable with `--rls-project-color-*`), `--rls-<theme>-color-050…950`, `-gradient-*`, `-backdrop-*`, `-skeleton-*`, `-shadow-*` |
-| Themes       | `foundations/themes.scss`       | the active `--rls-theme-color-*`, `-background-*`, `-font-color-*`, `-border-*`, `-gradient-*`, `-backdrop-*`, `-skeleton-*`, `-datatable-*`                  |
-| Borders      | `foundations/borders.scss`      | `--rls-app-border-{1,2,4}-transparent`, plus the `--rls-app-border-{1,2,4}-<token>` built by `rolster-app-border`                                             |
-| Sizings      | `foundations/sizings.scss`      | `--rls-sizing-x1` … `--rls-sizing-x48`, `--rls-border-1/2/4` widths and the `--rls-sizing-safe-*` inset variables                                             |
-| Elevations   | `foundations/elevations.scss`   | `--rls-z-index-1…32`, `--rls-app-shadow-1…6` and the directional `--rls-app-shadow-{bottom,top,left,right,center}-{2…32}`                                     |
-| Typographics | `foundations/typographics.scss` | `--rls-font-weight-thin…black`                                                                                                                                |
-| Typographics | `utilities/typographics.scss`   | `--rls-<scale>-font-size`, `-letter-spacing`, `-line-height` and `-font-weight` for the eighteen scales                                                       |
-| Animations   | `foundations/animations.scss`   | `--rls-standard-curve`, `--rls-deceleration-curve`, `--rls-acceleration-curve`, `--rls-sharp-curve`                                                           |
+| Family       | Declared in                     | Tokens                                                                                                                                                                            |
+| ------------ | ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Colors       | `foundations/colors.scss`       | `--rls-app-color-050…950` (overridable with `--rls-project-color-*`), `--rls-<theme>-color-050…950`, `-gradient-*`, `-backdrop-*`, `-skeleton-*`, `-skeleton-dark-*`, `-shadow-*` |
+| Themes       | `foundations/themes.scss`       | the active `--rls-theme-color-*`, `-background-*`, `-font-color-*`, `-border-*`, `-gradient-*`, `-backdrop-*`, `-skeleton-*`, `-datatable-*`                                      |
+| Borders      | `foundations/borders.scss`      | `--rls-app-border-{1,2,4}-transparent`, plus the `--rls-app-border-{1,2,4}-<token>` built by `rolster-app-border`                                                                 |
+| Sizings      | `foundations/sizings.scss`      | `--rls-sizing-x1` … `--rls-sizing-x48`, `--rls-border-1/2/4` widths and the `--rls-sizing-safe-*` inset variables                                                                 |
+| Elevations   | `foundations/elevations.scss`   | `--rls-z-index-1…32`, `--rls-app-shadow-1…6` and the directional `--rls-app-shadow-{bottom,top,left,right,center}-{2…32}`                                                         |
+| Typographics | `foundations/typographics.scss` | `--rls-font-weight-thin…black`                                                                                                                                                    |
+| Typographics | `utilities/typographics.scss`   | `--rls-<scale>-font-size`, `-letter-spacing`, `-line-height` and `-font-weight` for the eighteen scales                                                                           |
+| Animations   | `foundations/animations.scss`   | `--rls-standard-curve`, `--rls-deceleration-curve`, `--rls-acceleration-curve`, `--rls-sharp-curve`                                                                               |
 
 The root entry adds the variables that bound the application shell, which the
 `.rls-app__*` layout reads to size itself:

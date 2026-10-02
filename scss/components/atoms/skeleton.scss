@@ -1,16 +1,23 @@
 // Rolster Technology Skeleton Component
-// v1.3.0
+// v1.4.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 31/Jul/2026
+// Updated: 28/Sep/2026
 
 .rls-skeleton {
   --pvt-height: var(--rlc-skeleton-height, inherit);
   --pvt-max-height: var(--rlc-skeleton-max-height, inherit);
   --pvt-min-height: var(--rlc-skeleton-min-height, inherit);
-  --pvt-color-primary: var(--rls-app-color-100);
-  --pvt-color-secondary: var(--rls-app-color-200);
+  --pvt-color-base: var(--rlc-skeleton-base, var(--rls-app-color-300));
+  --pvt-color-highlight: var(
+    --rlc-skeleton-highlight,
+    var(--rls-app-color-400)
+  );
+  --pvt-duration: var(--rlc-skeleton-duration, 1600ms);
+  --pvt-easing: var(--rlc-skeleton-easing, var(--rls-standard-curve));
+  --pvt-animation: rls-skeleton-shimmer;
+  --pvt-highlight-display: block;
 
   position: relative;
   width: 100%;
@@ -18,29 +25,85 @@
   max-height: var(--pvt-max-height);
   min-height: var(--pvt-min-height);
   line-height: var(--pvt-height);
-  background: linear-gradient(
-    90deg,
-    var(--pvt-color-primary) 25%,
-    var(--pvt-color-secondary) 50%,
-    var(--pvt-color-primary) 75%
-  );
+  background: var(--pvt-color-base);
   overflow: hidden;
-  background-size: 200% 100%;
-  animation: skeleton-animation 1600ms infinite;
-  border-radius: var(--rls-sizing-x2);
+  border-radius: var(--rlc-skeleton-radius, var(--rls-sizing-x4));
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    display: var(--pvt-highlight-display);
+    transform: translateX(-100%);
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      var(--pvt-color-highlight) 50%,
+      transparent 100%
+    );
+    animation: var(--pvt-animation) var(--pvt-duration) var(--pvt-easing)
+      infinite;
+    will-change: transform;
+  }
+
+  &--pulse {
+    --pvt-highlight-display: none;
+    --pvt-easing: var(--rlc-skeleton-easing, ease-in-out);
+
+    animation: rls-skeleton-pulse var(--pvt-duration) var(--pvt-easing) infinite;
+  }
+
+  &--wave {
+    --pvt-duration: var(--rlc-skeleton-duration, 2200ms);
+    --pvt-animation: rls-skeleton-wave;
+  }
+
+  @supports (background: color-mix(in srgb, red 50%, transparent)) {
+    --pvt-color-base: var(
+      --rlc-skeleton-base,
+      color-mix(in srgb, var(--rls-app-color-500) 16%, transparent)
+    );
+    --pvt-color-highlight: var(
+      --rlc-skeleton-highlight,
+      color-mix(in srgb, var(--rls-app-color-500) 12%, transparent)
+    );
+  }
 
   &[rls-theme] {
-    --pvt-color-primary: var(--rls-theme-skeleton-100);
-    --pvt-color-secondary: var(--rls-theme-skeleton-200);
+    --pvt-color-base: var(--rlc-skeleton-base, var(--rls-theme-skeleton-100));
+    --pvt-color-highlight: var(
+      --rlc-skeleton-highlight,
+      var(--rls-theme-skeleton-200)
+    );
   }
 }
 
-@keyframes skeleton-animation {
+@keyframes rls-skeleton-shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes rls-skeleton-pulse {
+  50% {
+    opacity: 0.45;
+  }
+}
+
+@keyframes rls-skeleton-wave {
   0% {
-    background-position: 200% 0;
+    transform: translateX(-100%);
   }
 
+  60%,
   100% {
-    background-position: -200% 0;
+    transform: translateX(100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rls-skeleton,
+  .rls-skeleton::after {
+    animation: none;
   }
 }

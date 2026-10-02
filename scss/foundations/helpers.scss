@@ -1,9 +1,9 @@
 // Rolster Technology Helpers Foundations
-// v1.2.0
+// v1.3.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 18/Abr/2025
-// Updated: 01/Ago/2026
+// Updated: 28/Sep/2026
 
 @use 'sass:color' as *;
 
@@ -56,6 +56,26 @@
     var(--rls-#{$theme}-shadow-color-500);
 }
 
+// Skeleton tokens for dark surfaces: same alphas as rolster-theme-700, taken
+// from the light step that mirrors color-700 around color-500.
+@mixin rolster-theme-300($theme, $color) {
+  $r: channel($color, 'red');
+  $g: channel($color, 'green');
+  $b: channel($color, 'blue');
+
+  --rls-#{$theme}-color-300: #{$color};
+
+  --rls-#{$theme}-skeleton-dark-500: rgba(#{$r}, #{$g}, #{$b}, 0.5);
+
+  --rls-#{$theme}-skeleton-dark-400: rgba(#{$r}, #{$g}, #{$b}, 0.325);
+
+  --rls-#{$theme}-skeleton-dark-300: rgba(#{$r}, #{$g}, #{$b}, 0.25);
+
+  --rls-#{$theme}-skeleton-dark-200: rgba(#{$r}, #{$g}, #{$b}, 0.175);
+
+  --rls-#{$theme}-skeleton-dark-100: rgba(#{$r}, #{$g}, #{$b}, 0.1);
+}
+
 @mixin rolster-theme(
   $theme,
   $c950,
@@ -84,7 +104,7 @@
 
   --rls-#{$theme}-color-400: #{$c400};
 
-  --rls-#{$theme}-color-300: #{$c300};
+  @include rolster-theme-300($theme, $c300);
 
   --rls-#{$theme}-color-200: #{$c200};
 

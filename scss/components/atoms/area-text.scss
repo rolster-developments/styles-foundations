@@ -1,9 +1,9 @@
 // Rolster Technology AreaText Component
-// v1.0.2
+// v1.1.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 31/Jul/2026
+// Updated: 02/Oct/2026
 
 .rls-area-text {
   --pvt-font-color: var(--rlc-area-text-font-color, var(--rls-app-color-900));
@@ -18,13 +18,23 @@
     var(--rls-input-letter-spacing)
   );
 
-  --pvt-line-height: var(--rlc-area-text-line-height, --rls-input-line-height);
+  --pvt-line-height: var(
+    --rlc-area-text-line-height,
+    var(--rls-input-line-height)
+  );
   --pvt-min-height: var(
     --rlc-area-text-min-height,
     var(--rls-input-line-height)
   );
   --pvt-padding: var(--rlc-area-text-padding, var(--rls-sizing-x3) 0rem);
   --pvt-text-align: var(--rlc-area-text-text-align, left);
+
+  --pvt-grip-color: var(--rlc-area-text-grip-color, var(--rls-app-color-400));
+  --pvt-grip-dimension: var(
+    --rlc-area-text-grip-dimension,
+    var(--rls-sizing-x4)
+  );
+  --pvt-grip-opacity: 0;
 
   --pvt-value-font-color: var(--pvt-font-color);
   --pvt-value-opacity: 1;
@@ -40,6 +50,35 @@
 
   &--disabled {
     --pvt-value-opacity: 0.5;
+  }
+
+  &--resizable {
+    --pvt-grip-opacity: 1;
+  }
+
+  // Grip drawn on the wrapper: a textarea does not render ::after, and
+  // pointer-events: none lets the drag reach the native resizer underneath
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0rem;
+    bottom: 0rem;
+    width: var(--pvt-grip-dimension);
+    height: var(--pvt-grip-dimension);
+    pointer-events: none;
+    opacity: var(--pvt-grip-opacity);
+    background-image: linear-gradient(
+      135deg,
+      transparent 0%,
+      transparent 45%,
+      var(--pvt-grip-color) 45%,
+      var(--pvt-grip-color) 58%,
+      transparent 58%,
+      transparent 71%,
+      var(--pvt-grip-color) 71%,
+      var(--pvt-grip-color) 84%,
+      transparent 84%
+    );
   }
 
   &__component {
@@ -75,6 +114,11 @@
     &:disabled {
       opacity: 0.5;
     }
+
+    // Replaced by the wrapper grip above
+    &::-webkit-resizer {
+      background: transparent;
+    }
   }
 
   &__value {
@@ -82,6 +126,7 @@
     top: 0rem;
     left: 0rem;
     width: 100%;
+    height: 100%;
     min-height: var(--pvt-min-height);
     background: transparent;
     pointer-events: none;

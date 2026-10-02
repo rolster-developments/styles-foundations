@@ -1,9 +1,9 @@
 // Rolster Technology ButtonAction Component
-// v1.1.4
+// v1.1.5
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 05/Ago/2026
+// Updated: 27/Sep/2026
 
 .rls-button-action {
   --pvt-dimension: var(--rlc-button-action-dimension, var(--rls-sizing-x14));
@@ -17,7 +17,10 @@
   --pvt-tooltip-opacity: 0;
   --pvt-border-radius: 50%;
 
-  --rlc-icon-dimension: calc(var(--pvt-dimension) - var(--rls-sizing-x2));
+  --rlc-icon-dimension: var(
+    --rlc-button-action-icon-dimension,
+    calc(var(--pvt-dimension) - var(--rls-sizing-x2))
+  );
 
   position: relative;
   display: flex;
