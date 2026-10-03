@@ -1,9 +1,9 @@
 // Rolster Technology AreaText Component
-// v1.1.0
+// v1.2.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 02/Oct/2026
+// Updated: 03/Oct/2026
 
 .rls-area-text {
   --pvt-font-color: var(--rlc-area-text-font-color, var(--rls-app-color-900));
@@ -22,11 +22,13 @@
     --rlc-area-text-line-height,
     var(--rls-input-line-height)
   );
-  --pvt-min-height: var(
-    --rlc-area-text-min-height,
-    var(--rls-input-line-height)
-  );
-  --pvt-padding: var(--rlc-area-text-padding, var(--rls-sizing-x3) 0rem);
+
+  // Height of a single row: matches the Input height so a FieldArea with
+  // minRows=1 renders as tall as a FieldText
+  --pvt-height: var(--rlc-area-text-height, var(--rls-sizing-x12));
+  --pvt-min-height: var(--rlc-area-text-min-height, var(--pvt-height));
+  --pvt-padding-y: calc((var(--pvt-height) - var(--pvt-line-height)) / 2);
+  --pvt-padding: var(--rlc-area-text-padding, var(--pvt-padding-y) 0rem);
   --pvt-text-align: var(--rlc-area-text-text-align, left);
 
   --pvt-grip-color: var(--rlc-area-text-grip-color, var(--rls-app-color-400));
@@ -83,9 +85,11 @@
 
   &__component {
     position: relative;
+    display: block;
     width: 100%;
     min-height: var(--pvt-min-height);
-    padding: 0rem;
+    padding: var(--pvt-padding);
+    box-sizing: border-box;
     cursor: text;
     border: none;
     outline: none;
@@ -128,6 +132,8 @@
     width: 100%;
     height: 100%;
     min-height: var(--pvt-min-height);
+    padding: var(--pvt-padding);
+    box-sizing: border-box;
     background: transparent;
     pointer-events: none;
     overflow: hidden;
