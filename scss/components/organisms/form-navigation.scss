@@ -1,9 +1,9 @@
 // Rolster Technology FormNavigation Component
-// v1.1.3
+// v1.2.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 28/May/2026
+// Updated: 04/Oct/2026
 
 .rls-form-navigation {
   --rlc-field-box-body-background: var(
@@ -11,7 +11,19 @@
     var(--rls-app-color-050)
   );
 
-  --pvt-component-transition: 160ms;
+  --pvt-duration-enter: var(
+    --rlc-form-navigation-duration-enter,
+    var(--rls-duration-enter-long)
+  );
+  --pvt-duration-exit: var(
+    --rlc-form-navigation-duration-exit,
+    var(--rls-duration-exit-long)
+  );
+
+  // Closed state drives the EXIT motion: short and accelerating.
+  --pvt-duration: var(--pvt-duration-exit);
+  --pvt-curve: var(--rls-emphasized-acceleration-curve);
+  --pvt-visibility-delay: var(--pvt-duration-exit);
 
   position: fixed;
   display: flex;
@@ -22,15 +34,21 @@
   height: 100%;
   justify-content: flex-end;
   visibility: hidden;
+  pointer-events: none;
   transform: translateX(100%);
   transition:
-    opacity var(--pvt-component-transition) 0ms var(--rls-deceleration-curve),
-    transform var(--pvt-component-transition) 0ms var(--rls-deceleration-curve),
-    visibility var(--pvt-component-transition) 0ms var(--rls-deceleration-curve);
+    transform var(--pvt-duration) 0ms var(--pvt-curve),
+    visibility 0ms linear var(--pvt-visibility-delay);
   z-index: var(--rls-z-index-16);
 
   &--visible {
+    // Open state drives the ENTER motion: longer and decelerating.
+    --pvt-duration: var(--pvt-duration-enter);
+    --pvt-curve: var(--rls-emphasized-deceleration-curve);
+    --pvt-visibility-delay: 0ms;
+
     visibility: visible;
+    pointer-events: auto;
     transform: translateX(0%);
   }
 
@@ -42,5 +60,6 @@
     flex-direction: column;
     background: var(--rlc-form-navigation-background, var(--rls-app-color-100));
     border-left: var(--rlc-form-navigation-border, var(--rls-app-border-1-200));
+    box-shadow: var(--rlc-form-navigation-shadow, var(--rls-app-shadow-6));
   }
 }

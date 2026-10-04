@@ -1,11 +1,25 @@
 // Rolster Technology Snackbar Component
-// v1.0.9
+// v1.1.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 28/May/2026
+// Updated: 04/Oct/2026
 
 .rls-snackbar {
+  --pvt-duration-enter: var(
+    --rlc-snackbar-duration-enter,
+    var(--rls-duration-enter-medium)
+  );
+  --pvt-duration-exit: var(
+    --rlc-snackbar-duration-exit,
+    var(--rls-duration-exit-short)
+  );
+
+  // Closed state drives the EXIT motion: short and accelerating.
+  --pvt-duration: var(--pvt-duration-exit);
+  --pvt-curve: var(--rls-emphasized-acceleration-curve);
+  --pvt-visibility-delay: var(--pvt-duration-exit);
+
   position: fixed;
   display: flex;
   left: var(--rlc-snackbar-left, 50%);
@@ -19,12 +33,26 @@
   border-radius: var(--rls-sizing-x6);
   background: var(--rls-app-color-050);
   border-left: var(--rls-theme-border-4-400);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
   transform: translate(-50%, calc(100% + var(--rls-sizing-x4)));
-  transition: all 160ms 0ms var(--rls-standard-curve);
+  transition:
+    transform var(--pvt-duration) 0ms var(--pvt-curve),
+    opacity var(--pvt-duration) 0ms var(--pvt-curve),
+    visibility 0ms linear var(--pvt-visibility-delay);
   box-shadow: var(--rls-app-shadow-center-8);
   z-index: var(--rls-z-index-32);
 
   &--visible {
+    // Open state drives the ENTER motion: longer and decelerating.
+    --pvt-duration: var(--pvt-duration-enter);
+    --pvt-curve: var(--rls-emphasized-deceleration-curve);
+    --pvt-visibility-delay: 0ms;
+
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
     transform: translate(-50%, calc(0% - var(--rls-sizing-x8)));
   }
 

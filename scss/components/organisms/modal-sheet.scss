@@ -1,29 +1,40 @@
 // Rolster Technology ModalSheet Component
-// v1.0.3
+// v1.1.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 03/Jun/2026
+// Updated: 04/Oct/2026
 
 .rls-modal-sheet {
-  --pvt-component-transform: translateY(150px) scale(0.6);
+  --pvt-duration-enter: var(
+    --rlc-modal-sheet-duration-enter,
+    var(--rls-duration-enter-medium)
+  );
+  --pvt-duration-exit: var(
+    --rlc-modal-sheet-duration-exit,
+    var(--rls-duration-exit-medium)
+  );
+
+  // Closed state drives the EXIT motion: short and accelerating.
+  --pvt-duration: var(--pvt-duration-exit);
+  --pvt-curve: var(--rls-emphasized-acceleration-curve);
+  --pvt-visibility-delay: var(--pvt-duration-exit);
+
+  --pvt-component-transform: translateY(var(--rls-sizing-x6)) scale(0.96);
+  --pvt-component-opacity: 0;
   --pvt-component-bottom: initial;
   --pvt-component-max-width: var(
     --rlc-modal-sheet-max-width,
     calc(100% - var(--rls-sizing-x8))
   );
-  --pvt-component-height: 0rem;
   --pvt-component-max-height: calc(100% - var(--rls-sizing-x12));
   --pvt-component-border-radius: var(
     --rlc-modal-sheet-border-radius,
     var(--rls-sizing-x6)
   );
-  --pvt-component-opacity: 0;
-  --pvt-component-visibility: hidden;
-  --pvt-component-transition: 160ms;
-
+  --pvt-component-shadow: none;
   --pvt-backdrop-opacity: 0;
-  --pvt-backdrop-bottom: initial;
+  --pvt-backdrop-blur: 0px;
 
   position: fixed;
   display: flex;
@@ -33,18 +44,24 @@
   height: 100%;
   z-index: var(--rls-z-index-24);
   visibility: hidden;
+  pointer-events: none;
   align-items: center;
   justify-content: center;
+  transition: visibility 0ms linear var(--pvt-visibility-delay);
 
   &--visible {
-    --pvt-component-visibility: visible;
-    --pvt-component-height: auto;
-    --pvt-component-opacity: 1;
+    // Open state drives the ENTER motion: longer and decelerating.
+    --pvt-duration: var(--pvt-duration-enter);
+    --pvt-curve: var(--rls-emphasized-deceleration-curve);
+    --pvt-visibility-delay: 0ms;
+
     --pvt-component-transform: translateY(0) scale(1);
-    --pvt-backdrop-bottom: 0rem;
+    --pvt-component-opacity: 1;
     --pvt-backdrop-opacity: 1;
+    --pvt-backdrop-blur: var(--rlc-modal-sheet-backdrop-blur, 2px);
 
     visibility: visible;
+    pointer-events: auto;
   }
 
   &__component {
@@ -52,21 +69,17 @@
     display: flex;
     bottom: var(--pvt-component-bottom);
     max-width: var(--pvt-component-max-width);
-    height: var(--pvt-component-height);
     max-height: var(--pvt-component-max-height);
     flex-direction: column;
     opacity: var(--pvt-component-opacity);
-    visibility: var(--pvt-component-visibility);
     z-index: var(--rls-z-index-2);
     border-radius: var(--pvt-component-border-radius);
     background: var(--rlc-modal-sheet-background, var(--rls-app-color-050));
+    box-shadow: var(--pvt-component-shadow);
     transform: var(--pvt-component-transform);
     transition:
-      opacity var(--pvt-component-transition) 0ms var(--rls-deceleration-curve),
-      transform var(--pvt-component-transition) 0ms
-        var(--rls-deceleration-curve),
-      visibility var(--pvt-component-transition) 0ms
-        var(--rls-deceleration-curve);
+      opacity var(--pvt-duration) 0ms var(--pvt-curve),
+      transform var(--pvt-duration) 0ms var(--pvt-curve);
   }
 
   &__backdrop {
@@ -75,29 +88,47 @@
     top: 0rem;
     left: 0rem;
     right: 0rem;
-    bottom: var(--pvt-backdrop-bottom);
+    bottom: 0rem;
     opacity: var(--pvt-backdrop-opacity);
     z-index: var(--rls-z-index-1);
     background: var(
       --rlc-modal-sheet-backdrop-color,
       var(--rls-theme-backdrop-400)
     );
-    backdrop-filter: var(--rlc-modal-sheet-backdrop-filter, blur(2px));
+    backdrop-filter: var(
+      --rlc-modal-sheet-backdrop-filter,
+      blur(var(--pvt-backdrop-blur))
+    );
     transition:
-      opacity 120ms 0ms var(--rls-deceleration-curve),
-      bottom 120ms 0ms var(--rls-deceleration-curve);
+      opacity var(--pvt-duration) 0ms linear,
+      backdrop-filter var(--pvt-duration) 0ms linear;
   }
 }
 
 @media screen and (max-width: 640px) {
   .rls-modal-sheet {
+    // On small screens the sheet behaves like a bottom sheet: it slides
+    // from the bottom edge, keeps full opacity and uses longer durations.
+    --pvt-duration-enter: var(
+      --rlc-modal-sheet-duration-enter,
+      var(--rls-duration-enter-long)
+    );
+    --pvt-duration-exit: var(
+      --rlc-modal-sheet-duration-exit,
+      var(--rls-duration-exit-long)
+    );
+
     --pvt-component-transform: translateY(100%);
+    --pvt-component-opacity: 1;
     --pvt-component-bottom: 0px;
     --pvt-component-max-width: 240rem;
     --pvt-component-max-height: 75%;
     --pvt-component-border-radius: var(--rls-sizing-x4) var(--rls-sizing-x4)
       0rem 0rem;
-    --pvt-component-transition: 320ms;
+    --pvt-component-shadow: var(
+      --rlc-modal-sheet-shadow,
+      var(--rls-app-shadow-6)
+    );
 
     align-items: initial;
 

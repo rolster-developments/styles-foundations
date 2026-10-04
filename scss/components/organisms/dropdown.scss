@@ -1,29 +1,45 @@
 // Rolster Technology Dropdown Component
-// v1.0.2
+// v1.1.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 28/May/2026
+// Updated: 04/Oct/2026
 
 .rls-dropdown {
+  --pvt-duration-enter: var(
+    --rlc-dropdown-duration-enter,
+    var(--rls-duration-enter-short)
+  );
+  --pvt-duration-exit: var(
+    --rlc-dropdown-duration-exit,
+    var(--rls-duration-exit-short)
+  );
+
+  --pvt-duration: var(--pvt-duration-exit);
+  --pvt-curve: var(--rls-emphasized-acceleration-curve);
+  --pvt-visibility-delay: var(--pvt-duration-exit);
+
   --pvt-content-opacity: 0;
-  --pvt-content-transform: scale(0, 0);
+  --pvt-content-transform: scale(0.94);
 
   position: var(--rlc-dropdown-position, absolute);
   display: block;
-  opacity: 0;
   width: auto;
-  z-index: -16;
+  z-index: var(--rlc-dropdown-z-index, var(--rls-z-index-4));
+  visibility: hidden;
   pointer-events: none;
-  transition: opacity 240ms 0ms var(--rls-standard-curve);
+  transition: visibility 0ms linear var(--pvt-visibility-delay);
 
   &--visible {
-    --pvt-content-opacity: 1;
-    --pvt-content-transform: scale(1, 1);
+    --pvt-duration: var(--pvt-duration-enter);
+    --pvt-curve: var(--rls-emphasized-deceleration-curve);
+    --pvt-visibility-delay: 0ms;
 
-    opacity: 1;
+    --pvt-content-opacity: 1;
+    --pvt-content-transform: scale(1);
+
+    visibility: visible;
     pointer-events: initial;
-    z-index: var(--rlc-dropdown-z-index, var(--rls-z-index-4));
   }
 
   &__content {
@@ -37,7 +53,7 @@
     opacity: var(--pvt-content-opacity);
     transform: var(--pvt-content-transform);
     transition:
-      transform 240ms 0ms var(--rls-standard-curve),
-      opacity 240ms 0ms var(--rls-standard-curve);
+      transform var(--pvt-duration) 0ms var(--pvt-curve),
+      opacity var(--pvt-duration) 0ms var(--pvt-curve);
   }
 }

@@ -1,20 +1,28 @@
 // Rolster Technology BottomSheet Component
-// v1.0.4
+// v1.1.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 28/May/2026
+// Updated: 04/Oct/2026
 
 .rls-bottom-sheet {
-  --pvt-component-transform: translateY(100%);
-  --pvt-component-height: 0rem;
-  --pvt-component-max-height: 75%;
-  --pvt-component-opacity: 0;
-  --pvt-component-visibility: hidden;
-  --pvt-component-transition: 320ms;
+  --pvt-duration-enter: var(
+    --rlc-bottom-sheet-duration-enter,
+    var(--rls-duration-enter-long)
+  );
+  --pvt-duration-exit: var(
+    --rlc-bottom-sheet-duration-exit,
+    var(--rls-duration-exit-long)
+  );
 
+  --pvt-duration: var(--pvt-duration-exit);
+  --pvt-curve: var(--rls-emphasized-acceleration-curve);
+  --pvt-visibility-delay: var(--pvt-duration-exit);
+
+  --pvt-component-transform: translateY(100%);
+  --pvt-component-max-height: 75%;
   --pvt-backdrop-opacity: 0;
-  --pvt-backdrop-bottom: initial;
+  --pvt-backdrop-blur: 0px;
 
   position: fixed;
   display: flex;
@@ -25,16 +33,21 @@
   justify-content: center;
   z-index: var(--rls-z-index-24);
   visibility: hidden;
+  pointer-events: none;
+  transition: visibility 0ms linear var(--pvt-visibility-delay);
 
   &--visible {
-    --pvt-component-visibility: visible;
-    --pvt-component-height: auto;
-    --pvt-component-opacity: 1;
+    // Open state drives the ENTER motion: longer and decelerating.
+    --pvt-duration: var(--pvt-duration-enter);
+    --pvt-curve: var(--rls-emphasized-deceleration-curve);
+    --pvt-visibility-delay: 0ms;
+
     --pvt-component-transform: translateY(0);
-    --pvt-backdrop-bottom: 0rem;
     --pvt-backdrop-opacity: 1;
+    --pvt-backdrop-blur: var(--rlc-bottom-sheet-backdrop-blur, 2px);
 
     visibility: visible;
+    pointer-events: auto;
   }
 
   &__component {
@@ -45,18 +58,12 @@
     max-width: 240rem;
     max-height: var(--pvt-component-max-height);
     flex-direction: column;
-    opacity: var(--pvt-component-opacity);
-    visibility: var(--pvt-component-visibility);
     z-index: var(--rls-z-index-2);
     border-radius: var(--rls-sizing-x4) var(--rls-sizing-x4) 0rem 0rem;
     background: var(--rlc-bottom-sheet-background, var(--rls-app-color-050));
+    box-shadow: var(--rlc-bottom-sheet-shadow, var(--rls-app-shadow-6));
     transform: var(--pvt-component-transform);
-    transition:
-      opacity var(--pvt-component-transition) 0ms var(--rls-deceleration-curve),
-      transform var(--pvt-component-transition) 0ms
-        var(--rls-deceleration-curve),
-      visibility var(--pvt-component-transition) 0ms
-        var(--rls-deceleration-curve);
+    transition: transform var(--pvt-duration) 0ms var(--pvt-curve);
 
     &::before {
       display: block;
@@ -75,17 +82,20 @@
     top: 0rem;
     left: 0rem;
     right: 0rem;
-    bottom: var(--pvt-backdrop-bottom);
+    bottom: 0rem;
     opacity: var(--pvt-backdrop-opacity);
     z-index: var(--rls-z-index-1);
     background: var(
       --rlc-bottom-sheet-backdrop-color,
       var(--rls-theme-backdrop-400)
     );
-    backdrop-filter: var(--rlc-bottom-sheet-backdrop-filter, blur(2px));
+    backdrop-filter: var(
+      --rlc-bottom-sheet-backdrop-filter,
+      blur(var(--pvt-backdrop-blur))
+    );
     transition:
-      opacity 120ms 0ms var(--rls-deceleration-curve),
-      bottom 120ms 0ms var(--rls-deceleration-curve);
+      opacity var(--pvt-duration) 0ms linear,
+      backdrop-filter var(--pvt-duration) 0ms linear;
   }
 }
 

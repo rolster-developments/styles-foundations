@@ -1,18 +1,29 @@
 // Rolster Technology Modal Component
-// v1.3.0
+// v1.4.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 01/May/2026
+// Updated: 04/Oct/2026
 
 .rls-modal {
-  --pvt-component-transform: translateY(150px) scale(0.6);
-  --pvt-component-height: 0rem;
+  --pvt-duration-enter: var(
+    --rlc-modal-duration-enter,
+    var(--rls-duration-enter-medium)
+  );
+  --pvt-duration-exit: var(
+    --rlc-modal-duration-exit,
+    var(--rls-duration-exit-medium)
+  );
+
+  // Closed state drives the EXIT motion: short and accelerating.
+  --pvt-duration: var(--pvt-duration-exit);
+  --pvt-curve: var(--rls-emphasized-acceleration-curve);
+  --pvt-visibility-delay: var(--pvt-duration-exit);
+
+  --pvt-component-transform: translateY(var(--rls-sizing-x6)) scale(0.96);
   --pvt-component-opacity: 0;
-  --pvt-component-visibility: hidden;
-  --pvt-component-transition: 160ms;
   --pvt-backdrop-opacity: 0;
-  --pvt-backdrop-bottom: initial;
+  --pvt-backdrop-blur: 0px;
 
   position: fixed;
   display: flex;
@@ -22,39 +33,40 @@
   height: 100%;
   z-index: var(--rls-z-index-24);
   visibility: hidden;
+  pointer-events: none;
   align-items: center;
   justify-content: center;
+  transition: visibility 0ms linear var(--pvt-visibility-delay);
 
   &--visible {
-    --pvt-component-visibility: visible;
-    --pvt-component-height: auto;
-    --pvt-component-opacity: 1;
+    // Open state drives the ENTER motion: longer and decelerating.
+    --pvt-duration: var(--pvt-duration-enter);
+    --pvt-curve: var(--rls-emphasized-deceleration-curve);
+    --pvt-visibility-delay: 0ms;
+
     --pvt-component-transform: translateY(0) scale(1);
-    --pvt-backdrop-bottom: 0rem;
+    --pvt-component-opacity: 1;
     --pvt-backdrop-opacity: 1;
+    --pvt-backdrop-blur: var(--rlc-modal-backdrop-blur, 2px);
 
     visibility: visible;
+    pointer-events: auto;
   }
 
   &__component {
     position: absolute;
     display: flex;
     max-width: var(--rlc-modal-max-width, calc(100% - var(--rls-sizing-x8)));
-    height: var(--pvt-component-height);
     max-height: calc(100% - var(--rls-sizing-x12));
     flex-direction: column;
     opacity: var(--pvt-component-opacity);
-    visibility: var(--pvt-component-visibility);
     z-index: var(--rls-z-index-2);
     border-radius: var(--rls-sizing-x4);
     background: var(--rlc-modal-background, var(--rls-app-color-050));
     transform: var(--pvt-component-transform);
     transition:
-      opacity var(--pvt-component-transition) 0ms var(--rls-deceleration-curve),
-      transform var(--pvt-component-transition) 0ms
-        var(--rls-deceleration-curve),
-      visibility var(--pvt-component-transition) 0ms
-        var(--rls-deceleration-curve);
+      opacity var(--pvt-duration) 0ms var(--pvt-curve),
+      transform var(--pvt-duration) 0ms var(--pvt-curve);
   }
 
   &__backdrop {
@@ -63,14 +75,17 @@
     top: 0rem;
     left: 0rem;
     right: 0rem;
-    bottom: var(--pvt-backdrop-bottom);
+    bottom: 0rem;
     opacity: var(--pvt-backdrop-opacity);
     z-index: var(--rls-z-index-1);
     background: var(--rlc-modal-backdrop-color, var(--rls-theme-backdrop-400));
-    backdrop-filter: var(--rlc-modal-backdrop-filter, blur(2px));
+    backdrop-filter: var(
+      --rlc-modal-backdrop-filter,
+      blur(var(--pvt-backdrop-blur))
+    );
     transition:
-      opacity 120ms 0ms var(--rls-deceleration-curve),
-      bottom 120ms 0ms var(--rls-deceleration-curve);
+      opacity var(--pvt-duration) 0ms linear,
+      backdrop-filter var(--pvt-duration) 0ms linear;
   }
 }
 

@@ -1,15 +1,26 @@
 // Rolster Technology Confirmation Component
-// v1.4.10
+// v1.5.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 28/May/2026
+// Updated: 04/Oct/2026
 
 .rls-confirmation {
-  --pvt-component-transform: translateY(150px) scale(0.6);
-  --pvt-component-height: 0rem;
+  --pvt-duration-enter: var(
+    --rlc-confirmation-duration-enter,
+    var(--rls-duration-enter-medium)
+  );
+  --pvt-duration-exit: var(
+    --rlc-confirmation-duration-exit,
+    var(--rls-duration-exit-medium)
+  );
+
+  --pvt-duration: var(--pvt-duration-exit);
+  --pvt-curve: var(--rls-emphasized-acceleration-curve);
+  --pvt-visibility-delay: var(--pvt-duration-exit);
+
+  --pvt-component-transform: translateY(var(--rls-sizing-x6)) scale(0.96);
   --pvt-component-opacity: 0;
-  --pvt-component-visibility: hidden;
 
   --pvt-title-font-size: var(--rls-heading6-font-size);
   --pvt-title-letter-spacing: var(--rls-heading6-letter-spacing);
@@ -26,7 +37,7 @@
   --pvt-content-line-height: var(--rls-input-line-height);
 
   --pvt-backdrop-opacity: 0;
-  --pvt-backdrop-bottom: initial;
+  --pvt-backdrop-blur: 0px;
 
   position: fixed;
   display: flex;
@@ -38,16 +49,21 @@
   align-items: center;
   z-index: var(--rls-z-index-24);
   visibility: hidden;
+  pointer-events: none;
+  transition: visibility 0ms linear var(--pvt-visibility-delay);
 
   &--visible {
-    --pvt-component-visibility: visible;
-    --pvt-component-height: auto;
-    --pvt-component-opacity: 1;
+    --pvt-duration: var(--pvt-duration-enter);
+    --pvt-curve: var(--rls-emphasized-deceleration-curve);
+    --pvt-visibility-delay: 0ms;
+
     --pvt-component-transform: translateY(0) scale(1);
-    --pvt-backdrop-bottom: 0rem;
+    --pvt-component-opacity: 1;
     --pvt-backdrop-opacity: 1;
+    --pvt-backdrop-blur: var(--rlc-confirmation-backdrop-blur, 2px);
 
     visibility: visible;
+    pointer-events: auto;
   }
 
   &__component {
@@ -55,11 +71,9 @@
     display: flex;
     width: calc(100% - var(--rls-sizing-x16));
     max-width: 180rem;
-    height: var(--pvt-component-height);
     flex-direction: column;
     row-gap: var(--rls-sizing-x8);
     opacity: var(--pvt-component-opacity);
-    visibility: var(--pvt-component-visibility);
     padding: var(--rls-sizing-x8) 0rem;
     box-sizing: border-box;
     z-index: var(--rls-z-index-4);
@@ -68,9 +82,8 @@
     box-shadow: var(--rls-app-shadow-4);
     transform: var(--pvt-component-transform);
     transition:
-      opacity 125ms 0ms var(--rls-deceleration-curve),
-      transform 125ms 0ms var(--rls-deceleration-curve),
-      visibility 125ms 0ms var(--rls-deceleration-curve);
+      opacity var(--pvt-duration) 0ms var(--pvt-curve),
+      transform var(--pvt-duration) 0ms var(--pvt-curve);
   }
 
   &__header {
@@ -150,14 +163,20 @@
     top: 0px;
     left: 0px;
     right: 0px;
-    bottom: var(--pvt-backdrop-bottom);
+    bottom: 0px;
     opacity: var(--pvt-backdrop-opacity);
     z-index: var(--rls-z-index-2);
-    background: var(--rlc-modal-backdrop-color, var(--rls-theme-backdrop-400));
-    backdrop-filter: var(--rlc-modal-backdrop-filter, blur(2px));
+    background: var(
+      --rlc-confirmation-backdrop-color,
+      var(--rlc-modal-backdrop-color, var(--rls-theme-backdrop-400))
+    );
+    backdrop-filter: var(
+      --rlc-confirmation-backdrop-filter,
+      blur(var(--pvt-backdrop-blur))
+    );
     transition:
-      opacity 120ms 0ms var(--rls-deceleration-curve),
-      bottom 120ms 0ms var(--rls-deceleration-curve);
+      opacity var(--pvt-duration) 0ms linear,
+      backdrop-filter var(--pvt-duration) 0ms linear;
   }
 }
 

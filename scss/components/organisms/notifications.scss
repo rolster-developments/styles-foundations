@@ -1,9 +1,9 @@
 // Rolster Technology Notifications Component
-// v1.0.1
+// v1.1.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 18/Jun/2026
-// Updated: 01/Ago/2026
+// Updated: 04/Oct/2026
 
 .rls-notifications {
   position: fixed;
@@ -29,6 +29,19 @@
 }
 
 .rls-notification {
+  --pvt-duration-enter: var(
+    --rlc-notification-duration-enter,
+    var(--rls-duration-enter-medium)
+  );
+  --pvt-duration-exit: var(
+    --rlc-notification-duration-exit,
+    var(--rls-duration-exit-medium)
+  );
+
+  // Closed state drives the EXIT motion: short and accelerating.
+  --pvt-duration: var(--pvt-duration-exit);
+  --pvt-curve: var(--rls-emphasized-acceleration-curve);
+
   display: flex;
   column-gap: var(--rls-sizing-x6);
   padding: var(--rls-sizing-x6);
@@ -37,12 +50,21 @@
   border-left: var(--rls-theme-border-4-400);
   box-shadow: var(--rls-app-shadow-center-8);
   background: var(--rls-app-color-050);
+  opacity: 0;
   transform: translateX(calc(100% + var(--rls-sizing-x8)));
-  transition: transform 240ms 0ms var(--rls-standard-curve);
-  pointer-events: auto;
+  transition:
+    transform var(--pvt-duration) 0ms var(--pvt-curve),
+    opacity var(--pvt-duration) 0ms var(--pvt-curve);
+  pointer-events: none;
 
   &--visible {
+    // Open state drives the ENTER motion: longer and decelerating.
+    --pvt-duration: var(--pvt-duration-enter);
+    --pvt-curve: var(--rls-emphasized-deceleration-curve);
+
+    opacity: 1;
     transform: translateX(0);
+    pointer-events: auto;
   }
 
   &__avatar {
