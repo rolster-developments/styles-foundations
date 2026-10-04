@@ -127,14 +127,20 @@ without touching the components:
 
 The light and dark variants are the same palette mapped in opposite
 directions: `rolster-theme-light` uses the low tokens as backgrounds and the
-high ones as text, `rolster-theme-dark` does the reverse. The dark variant is
-applied under `body[app-theme='dark']`, so the theme switch of an application
-is a single attribute.
+high ones as text, `rolster-theme-dark` mirrors every pair (level 100 swaps
+with 400 and 200 with 500, exactly as they do in light), so each level keeps
+in dark the contrast ratio it has in light. A third variant, `dim`, is the
+dark mapping with its base surface one step up (`color-900` instead of
+`color-950`) over a lighter application chrome. The variants are applied under
+`body[app-theme='dark']` and `body[app-theme='dim']`, so the theme switch of
+an application is a single attribute with three values: `light` (or no
+attribute), `dim` and `dark`.
 
 The application chrome is separate from the theme: `--rls-app-color-050` …
 `--rls-app-color-950` follow `app-theme` on their own and each one falls back
 to a `--rls-project-color-*` override, which is the supported way of rebranding
-without forking the pack:
+without forking the pack. The same override is read in every mode, so a value
+meant for one of them must be declared under its `app-theme` selector:
 
 ```scss
 @use '@rolster/styles-foundations';
@@ -179,6 +185,11 @@ body {
     @include themes.rolster-theme-dark('brand');
     @include themes.rolster-datatable-dark('brand');
   }
+
+  &[app-theme='dim'] {
+    @include themes.rolster-theme-dim('brand');
+    @include themes.rolster-datatable-dim('brand');
+  }
 }
 ```
 
@@ -201,13 +212,15 @@ partial that emits no CSS of its own.
 | -------------------------------------- | -------------------------------------------------------------------------------------------- |
 | `rolster-theme($theme)`                | maps a palette onto the active theme: colors, shadow, backdrops and borders                  |
 | `rolster-theme-light($theme)`          | maps the palette onto `--rls-theme-background/font-color/border/gradient/skeleton-*` (light) |
-| `rolster-theme-dark($theme)`           | the same mapping inverted, for dark mode                                                     |
+| `rolster-theme-dark($theme)`           | the same pairs mirrored (100 ↔ 400, 200 ↔ 500), for dark mode                                |
+| `rolster-theme-dim($theme)`            | the dark mapping with `background-100`, `border-100` and `gradient-100` one step up, for dim |
 | `rolster-app-border($token)`           | builds `--rls-app-border-{1,2,4}-<token>` from `--rls-app-color-<token>`                     |
 | `rolster-border-color($theme, $token)` | builds `--rls-<theme>-border-{1,2,4}-<token>` for one token of a palette                     |
 | `rolster-border-token($theme)`         | applies `rolster-border-color` to the tokens `100` … `900` of a palette                      |
 | `rolster-border-theme($theme, $token)` | maps a palette border onto the active `--rls-theme-border-{1,2,4}-<token>`                   |
 | `rolster-datatable-light($theme)`      | datatable background, border and floating tokens of a palette, for light mode                |
 | `rolster-datatable-dark($theme)`       | the same datatable tokens, for dark mode                                                     |
+| `rolster-datatable-dim($theme)`        | the same datatable tokens, for the dim theme                                                 |
 
 **`scss/foundations/flex-boxs.scss`**
 

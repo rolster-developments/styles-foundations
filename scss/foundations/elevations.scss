@@ -1,9 +1,9 @@
 // Rolster Technology Elevations Foundations
-// v2.1.5
+// v2.2.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 31/Jul/2026
+// Updated: 04/Oct/2026
 
 body {
   --rls-app-shadow-color: rgba(169, 169, 175, 0.6);
@@ -127,4 +127,22 @@ body[app-theme='dark'] {
   --rls-app-shadow-5: 0px 8px 24px -4px rgba(50, 44, 47, 0.08);
 
   --rls-app-shadow-6: 0px 8px 24px -4px rgba(50, 44, 47, 0.12);
+}
+
+body[app-theme='dim'] {
+  --rls-app-shadow-color: rgba(14, 13, 24, 0.55);
+
+  --rls-app-shadow-1: 0px 4px 2px -2px rgba(14, 13, 24, 0.12);
+
+  --rls-app-shadow-2: 0px 4px 8px -2px rgba(14, 13, 24, 0.18);
+
+  --rls-app-shadow-3: 0px 2px 4px -2px rgba(14, 13, 24, 0.24);
+
+  --rls-app-shadow-4:
+    0px 4px 8px -6px rgba(14, 13, 24, 0.14),
+    0px 16px 8px -4px rgba(14, 13, 24, 0.14);
+
+  --rls-app-shadow-5: 0px 8px 24px -4px rgba(14, 13, 24, 0.28);
+
+  --rls-app-shadow-6: 0px 8px 24px -4px rgba(14, 13, 24, 0.36);
 }

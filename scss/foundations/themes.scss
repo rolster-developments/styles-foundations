@@ -1,9 +1,9 @@
 // Rolster Technology Themes Foundations
-// v2.9.0
+// v2.10.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 03/Mar/2022
-// Updated: 28/Sep/2026
+// Updated: 04/Oct/2026
 
 @mixin rolster-app-border($token) {
   --rls-app-border-1-#{$token}: var(--rls-border-1) solid
@@ -120,21 +120,21 @@
 
   --rls-theme-background-100: var(--rls-#{$theme}-color-950);
 
-  --rls-theme-background-200: var(--rls-#{$theme}-color-800);
+  --rls-theme-background-200: var(--rls-#{$theme}-color-700);
 
-  --rls-theme-background-300: var(--rls-#{$theme}-color-600);
+  --rls-theme-background-300: var(--rls-#{$theme}-color-400);
 
-  --rls-theme-background-400: var(--rls-#{$theme}-color-400);
+  --rls-theme-background-400: var(--rls-#{$theme}-color-300);
 
-  --rls-theme-background-500: var(--rls-#{$theme}-color-200);
+  --rls-theme-background-500: var(--rls-#{$theme}-color-100);
 
   --rls-theme-font-color-100: var(--rls-#{$theme}-color-300);
 
-  --rls-theme-font-color-200: var(--rls-#{$theme}-color-200);
+  --rls-theme-font-color-200: var(--rls-#{$theme}-color-100);
 
-  --rls-theme-font-color-300: var(--rls-#{$theme}-color-100);
+  --rls-theme-font-color-300: var(--rls-#{$theme}-color-950);
 
-  --rls-theme-font-color-400: var(--rls-#{$theme}-color-900);
+  --rls-theme-font-color-400: var(--rls-#{$theme}-color-950);
 
   --rls-theme-font-color-500: var(--rls-#{$theme}-color-700);
 
@@ -142,26 +142,37 @@
     var(--rls-#{$theme}-color-900);
 
   --rls-theme-border-200: var(--rls-border-1) solid
-    var(--rls-#{$theme}-color-700);
+    var(--rls-#{$theme}-color-600);
 
   --rls-theme-border-300: var(--rls-border-1) solid
-    var(--rls-#{$theme}-color-500);
-
-  --rls-theme-border-400: var(--rls-border-1) solid
     var(--rls-#{$theme}-color-300);
 
+  --rls-theme-border-400: var(--rls-border-1) solid
+    var(--rls-#{$theme}-color-200);
+
   --rls-theme-border-500: var(--rls-border-1) solid
-    var(--rls-#{$theme}-color-100);
+    var(--rls-#{$theme}-color-050);
 
   --rls-theme-gradient-100: var(--rls-#{$theme}-gradient-900);
 
-  --rls-theme-gradient-200: var(--rls-#{$theme}-gradient-800);
+  --rls-theme-gradient-200: var(--rls-#{$theme}-gradient-700);
 
-  --rls-theme-gradient-300: var(--rls-#{$theme}-gradient-600);
+  --rls-theme-gradient-300: var(--rls-#{$theme}-gradient-400);
 
-  --rls-theme-gradient-400: var(--rls-#{$theme}-gradient-400);
+  --rls-theme-gradient-400: var(--rls-#{$theme}-gradient-300);
 
-  --rls-theme-gradient-500: var(--rls-#{$theme}-gradient-200);
+  --rls-theme-gradient-500: var(--rls-#{$theme}-gradient-100);
+}
+
+@mixin rolster-theme-dim($theme) {
+  @include rolster-theme-dark($theme);
+
+  --rls-theme-background-100: var(--rls-#{$theme}-color-900);
+
+  --rls-theme-border-100: var(--rls-border-1) solid
+    var(--rls-#{$theme}-color-800);
+
+  --rls-theme-gradient-100: var(--rls-#{$theme}-gradient-800);
 }
 
 @mixin rolster-datatable-light($theme) {
@@ -178,6 +189,14 @@
   --rls-#{$theme}-datatable-border: var(--rls-#{$theme}-border-1-700);
 
   --rls-#{$theme}-datatable-floating: var(--rls-#{$theme}-color-950);
+}
+
+@mixin rolster-datatable-dim($theme) {
+  --rls-#{$theme}-datatable-background: var(--rls-#{$theme}-color-900);
+
+  --rls-#{$theme}-datatable-border: var(--rls-#{$theme}-border-1-700);
+
+  --rls-#{$theme}-datatable-floating: var(--rls-#{$theme}-color-800);
 }
 
 @mixin rolster-theme($theme) {
@@ -303,6 +322,16 @@ body {
 
     --rls-app-backdrop-filter: rgba(31, 30, 49, 0.6);
   }
+
+  &[app-theme='dim'] {
+    @include rolster-theme-dim('primary');
+
+    @each $theme in $rolster-themes {
+      @include rolster-datatable-dim($theme);
+    }
+
+    --rls-app-backdrop-filter: rgba(58, 57, 74, 0.6);
+  }
 }
 
 @each $theme in $rolster-themes {
@@ -313,6 +342,10 @@ body {
 
     body[app-theme='dark'] & {
       @include rolster-theme-dark($theme);
+    }
+
+    body[app-theme='dim'] & {
+      @include rolster-theme-dim($theme);
     }
   }
 }

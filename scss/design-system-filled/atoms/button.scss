@@ -1,34 +1,34 @@
 // Rolster Technology Button Component
-// v2.5.1
+// v2.5.2
 // @license MIT
 // Author: Rolster Developers
 // Created: 23/Abr/2026
-// Updated: 09/Sep/2026
+// Updated: 04/Oct/2026
 
 .rls-button {
-  --pvt-ghost-background: var(--rls-theme-color-100);
-  --pvt-ghost-font-color: var(--rls-theme-color-950);
+  --pvt-ghost-background: var(--rls-theme-background-100);
+  --pvt-ghost-font-color: var(--rls-theme-font-color-100);
   --pvt-ghost-border: none;
 
-  --pvt-flat-background: var(--rls-theme-color-100);
-  --pvt-flat-font-color: var(--rls-theme-color-950);
+  --pvt-flat-background: var(--rls-theme-background-100);
+  --pvt-flat-font-color: var(--rls-theme-font-color-100);
   --pvt-flat-border: none;
 
-  --pvt-raised-background: var(--rls-theme-color-300);
-  --pvt-raised-font-color: var(--rls-theme-color-950);
+  --pvt-raised-background: var(--rls-theme-background-200);
+  --pvt-raised-font-color: var(--rls-theme-font-color-200);
   --pvt-raised-border: none;
 
   &:not(:disabled):hover {
-    --pvt-ghost-background: var(--rls-theme-color-700);
-    --pvt-ghost-font-color: var(--rls-theme-color-050);
+    --pvt-ghost-background: var(--rls-theme-background-400);
+    --pvt-ghost-font-color: var(--rls-theme-font-color-400);
     --pvt-ghost-border: none;
 
-    --pvt-flat-background: var(--rls-theme-color-700);
-    --pvt-flat-font-color: var(--rls-theme-color-050);
+    --pvt-flat-background: var(--rls-theme-background-400);
+    --pvt-flat-font-color: var(--rls-theme-font-color-400);
     --pvt-flat-border: none;
 
-    --pvt-raised-background: var(--rls-theme-color-700);
-    --pvt-raised-font-color: var(--rls-theme-color-050);
+    --pvt-raised-background: var(--rls-theme-background-400);
+    --pvt-raised-font-color: var(--rls-theme-font-color-400);
     --pvt-raised-border: none;
 
   }

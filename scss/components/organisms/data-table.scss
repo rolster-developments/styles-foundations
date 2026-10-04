@@ -1,9 +1,9 @@
 // Rolster Technology Datatable Component
-// v2.9.0
+// v2.9.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 09/Sep/2026
+// Updated: 04/Oct/2026
 
 @mixin datatable_cell_vars() {
   --rlc-field-box-body-background: transparent;
@@ -269,8 +269,8 @@
   }
 
   &__totals {
-    border: var(--rls-theme-border-1-100);
-    background: var(--rls-theme-color-050);
+    border: var(--rls-theme-border-100);
+    background: var(--rls-theme-background-100);
   }
 
   &__subheader {
