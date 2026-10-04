@@ -1,5 +1,5 @@
 // Rolster Technology Themes Foundations
-// v2.10.0
+// v2.11.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 03/Mar/2022
@@ -271,7 +271,8 @@ $rolster-themes: (
   'purple',
   'amber',
   'smartness',
-  'obsidian'
+  'obsidian',
+  'neutral'
 );
 
 body {
@@ -303,6 +304,7 @@ body {
   @include rolster-border-token('amber');
   @include rolster-border-token('smartness');
   @include rolster-border-token('obsidian');
+  @include rolster-border-token('neutral');
 
   @include rolster-theme('primary');
   @include rolster-theme-light('primary');

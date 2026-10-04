@@ -106,10 +106,10 @@ at once and switched at runtime by toggling the class on `<body>`:
 
 ### Themes
 
-`scss/foundations/colors.scss` declares seventeen palettes — `standard`,
+`scss/foundations/colors.scss` declares eighteen palettes — `standard`,
 `primary`, `secondary`, `tertiary`, `success`, `info`, `warning`, `danger`,
 `berry`, `ross`, `hope`, `mountains`, `amaizing`, `purple`, `amber`,
-`smartness` and `obsidian` — each one as `--rls-<palette>-color-050` through
+`smartness`, `obsidian` and `neutral` — each one as `--rls-<palette>-color-050` through
 `--rls-<palette>-color-950`, plus the derived gradients, backdrops, skeletons
 and shadows.
 
