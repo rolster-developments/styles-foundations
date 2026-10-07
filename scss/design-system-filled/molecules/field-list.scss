@@ -21,8 +21,8 @@
   }
 
   &__multi {
-    &__chip {
-      background: var(--rls-app-color-100);
+    .rls-chip {
+      --rlc-chip-background: var(--rls-app-color-100);
     }
   }
 }

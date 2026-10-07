@@ -1,0 +1,63 @@
+// Rolster Technology LedColor Component
+// v1.0.0
+// @license MIT
+// Author: Rolster Developers
+// Created: 07/Oct/2026
+// Updated: 07/Oct/2026
+
+.rls-led-color {
+  --pvt-duration: var(
+    --rlc-led-color-duration,
+    var(--rls-duration-enter-short)
+  );
+  --pvt-curve: var(--rls-standard-curve);
+
+  position: relative;
+  display: inline-flex;
+  width: auto;
+  flex: 0 0 auto;
+
+  &__trigger {
+    display: inline-flex;
+    padding: var(--rlc-led-color-padding, var(--rls-sizing-x2));
+    margin: 0rem;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+    transition: transform var(--pvt-duration) 0ms var(--pvt-curve);
+
+    &:hover {
+      transform: scale(1.08);
+    }
+
+    &:active {
+      transform: scale(0.94);
+    }
+
+    &:focus-visible {
+      box-shadow: 0 0 0 var(--rls-sizing-x1) var(--rls-app-color-400);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none;
+    }
+  }
+
+  &--readonly &__trigger {
+    cursor: default;
+    transform: none;
+  }
+
+  &--error {
+    .rls-led {
+      --pvt-shadow-color: var(--rls-danger-color-200);
+    }
+  }
+}

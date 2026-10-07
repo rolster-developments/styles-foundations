@@ -251,31 +251,6 @@
       color: var(--rls-app-color-400);
     }
 
-    &__chip {
-      display: flex;
-      width: auto;
-      align-items: center;
-      column-gap: var(--rls-sizing-x1);
-      border-radius: var(--rls-sizing-x2);
-      padding: var(--rls-sizing-x1) var(--rls-sizing-x3);
-
-      &__description {
-        font-size: var(--rls-caption-font-size);
-        letter-spacing: var(--rls-caption-letter-spacing);
-        font-weight: var(--rls-font-weight-semibold);
-      }
-
-      &__remove {
-        --rlc-icon-dimension: var(--rls-sizing-x8);
-
-        flex: 0 0 auto;
-        background: none;
-        padding: 0rem;
-        margin: 0rem;
-        outline: none;
-      }
-    }
-
     &__element {
       display: flex;
       align-items: center;

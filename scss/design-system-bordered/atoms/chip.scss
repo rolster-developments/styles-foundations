@@ -1,0 +1,57 @@
+// Rolster Technology Chip Component
+// v1.0.1
+// @license MIT
+// Author: Rolster Developers
+// Created: 07/Oct/2026
+// Updated: 07/Oct/2026
+
+.rls-chip {
+  --pvt-font-color: var(--rlc-chip-font-color, var(--rls-app-color-800));
+  --pvt-background: var(--rlc-chip-background, var(--rls-app-color-200));
+
+  --pvt-contrasted-font-color: var(
+    --rlc-chip-contrasted-font-color,
+    var(--rls-app-color-050)
+  );
+  --pvt-contrasted-background: var(
+    --rlc-chip-contrasted-background,
+    var(--rls-app-color-700)
+  );
+
+  --pvt-selected-font-color: var(
+    --rlc-chip-selected-font-color,
+    var(--rls-theme-font-color-300)
+  );
+  --pvt-selected-background: var(
+    --rlc-chip-selected-background,
+    var(--rls-theme-background-300)
+  );
+
+  font-size: var(--rlc-chip-font-size, var(--rls-caption-font-size));
+  font-weight: var(--rlc-chip-font-weight, var(--rls-font-weight-semibold));
+  letter-spacing: var(
+    --rlc-chip-letter-spacing,
+    var(--rls-caption-letter-spacing)
+  );
+  border-radius: var(--rlc-chip-radius, var(--rls-sizing-x2));
+
+  &[rls-theme] {
+    --pvt-font-color: var(
+      --rlc-chip-font-color,
+      var(--rls-theme-font-color-300)
+    );
+    --pvt-background: var(
+      --rlc-chip-background,
+      var(--rls-theme-background-300)
+    );
+
+    --pvt-contrasted-font-color: var(
+      --rlc-chip-contrasted-font-color,
+      var(--rls-theme-font-color-100)
+    );
+    --pvt-contrasted-background: var(
+      --rlc-chip-contrasted-background,
+      var(--rls-theme-background-100)
+    );
+  }
+}
