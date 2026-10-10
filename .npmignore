@@ -4,14 +4,10 @@ node_modules
 test
 
 # Files
-.eslintignore
-.eslintrc.json
 .gitignore
 .npmrc
 .prettierrc
 .prettierignore
 .rtlcssrc
-fonts/mont
 package-lock.json
-tsconfig.json
 rolster-icons-outline.json

@@ -1,0 +1,54 @@
+// Rolster Technology KelsonSans Font
+// v1.0.0
+// @license MIT
+// Author: Rolster Developers
+// Created: 23/Nov/2024
+// Updated: 13/Jun/2026
+
+@font-face {
+  font-family: -rolster-kelson-sans;
+  font-style: normal;
+  font-weight: 100 300;
+  src: url('./KelsonSans/KelsonSansLight.woff') format('woff');
+}
+
+@font-face {
+  font-family: -rolster-kelson-sans;
+  font-style: normal;
+  font-weight: 400;
+  src: url('./KelsonSans/KelsonSansRegular.woff') format('woff');
+}
+
+@font-face {
+  font-family: -rolster-kelson-sans;
+  font-style: normal;
+  font-weight: 500;
+  src: url('./KelsonSans/KelsonSansMedium.woff') format('woff');
+}
+
+@font-face {
+  font-family: -rolster-kelson-sans;
+  font-style: normal;
+  font-weight: 600;
+  src: url('./KelsonSans/KelsonSansMedium.woff') format('woff');
+}
+
+@font-face {
+  font-family: -rolster-kelson-sans;
+  font-style: normal;
+  font-weight: 700;
+  src: url('./KelsonSans/KelsonSansBold.woff') format('woff');
+}
+
+@font-face {
+  font-family: -rolster-kelson-sans;
+  font-style: normal;
+  font-weight: 800 900;
+  src: url('./KelsonSans/KelsonSansExtrabold.woff') format('woff');
+}
+
+:root {
+  --rls-app-font-family:
+    -rolster-kelson-sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Helvetica;
+}

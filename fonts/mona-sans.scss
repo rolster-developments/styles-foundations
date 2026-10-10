@@ -1,0 +1,47 @@
+// Rolster Technology MonaSans Font
+// v1.0.0
+// @license MIT
+// Author: Rolster Developers
+// Created: 23/Nov/2024
+// Updated: 13/Jun/2026
+
+@font-face {
+  font-family: -rolster-mona-sans;
+  font-style: normal;
+  font-weight: 100 300;
+  src: url('./MonaSans/MonaSansLight.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: -rolster-mona-sans;
+  font-style: normal;
+  font-weight: 400;
+  src: url('./MonaSans/MonaSansRegular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: -rolster-mona-sans;
+  font-style: normal;
+  font-weight: 500;
+  src: url('./MonaSans/MonaSansMedium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: -rolster-mona-sans;
+  font-style: normal;
+  font-weight: 600;
+  src: url('./MonaSans/MonaSansSemibold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: -rolster-mona-sans;
+  font-style: normal;
+  font-weight: 700 900;
+  src: url('./MonaSans/MonaSansBold.ttf') format('truetype');
+}
+
+:root {
+  --rls-app-font-family:
+    -rolster-mona-sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Helvetica;
+}

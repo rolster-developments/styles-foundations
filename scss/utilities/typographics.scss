@@ -1,9 +1,9 @@
 // Rolster Technology Typographics Utilities
-// v2.2.3
+// v2.2.4
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 18/Jun/2026
+// Updated: 10/Oct/2026
 
 @mixin typographic($name, $key) {
   .rls-#{$name}-font-default {
@@ -16,6 +16,11 @@
   .rls-#{$name}-font {
     @extend .rls-#{$name}-font-default;
     font-weight: var(--rls-#{$key}-font-weight);
+  }
+
+  .rls-#{$name}-font-light {
+    @extend .rls-#{$name}-font-default;
+    font-weight: var(--rls-font-weight-light);
   }
 
   .rls-#{$name}-font-regular {
@@ -55,17 +60,17 @@
   --rls-heading1-font-size: 32rem;
   --rls-heading1-letter-spacing: -4%;
   --rls-heading1-line-height: 40rem;
-  --rls-heading1-font-weight: 800;
+  --rls-heading1-font-weight: 700;
 
   --rls-heading2-font-size: 24rem;
   --rls-heading2-letter-spacing: -4%;
   --rls-heading2-line-height: 32rem;
-  --rls-heading2-font-weight: 800;
+  --rls-heading2-font-weight: 700;
 
   --rls-heading3-font-size: 21rem;
   --rls-heading3-letter-spacing: -3%;
   --rls-heading3-line-height: 28rem;
-  --rls-heading3-font-weight: 800;
+  --rls-heading3-font-weight: 700;
 
   --rls-heading4-font-size: 17rem;
   --rls-heading4-letter-spacing: -3%;
@@ -80,7 +85,7 @@
   --rls-heading6-font-size: 12rem;
   --rls-heading6-letter-spacing: -2%;
   --rls-heading6-line-height: 16rem;
-  --rls-heading6-font-weight: 600;
+  --rls-heading6-font-weight: 700;
 
   --rls-title-font-size: 9.5rem;
   --rls-title-letter-spacing: -1%;
@@ -93,54 +98,90 @@
   --rls-subtitle-font-weight: 500;
 
   --rls-body-font-size: 8rem;
-  --rls-body-letter-spacing: -1%;
+  --rls-body-letter-spacing: 2%;
   --rls-body-line-height: 9.5rem;
   --rls-body-font-weight: 400;
 
   --rls-input-font-size: 7.65rem;
-  --rls-input-letter-spacing: -1%;
+  --rls-input-letter-spacing: 4%;
   --rls-input-line-height: 8.125rem;
   --rls-input-font-weight: 500;
 
   --rls-paragraph-font-size: 7.325rem;
-  --rls-paragraph-letter-spacing: -1%;
+  --rls-paragraph-letter-spacing: 4%;
   --rls-paragraph-line-height: 8.5rem;
   --rls-paragraph-font-weight: 400;
 
   --rls-button-font-size: 7.5rem;
-  --rls-button-letter-spacing: -1%;
+  --rls-button-letter-spacing: 4%;
   --rls-button-line-height: 9rem;
   --rls-button-font-weight: 600;
 
   --rls-label-font-size: 7rem;
-  --rls-label-letter-spacing: -1%;
+  --rls-label-letter-spacing: 4%;
   --rls-label-line-height: 8.25rem;
   --rls-label-font-weight: 500;
 
   --rls-span-font-size: 6.5rem;
-  --rls-span-letter-spacing: -1%;
+  --rls-span-letter-spacing: 4%;
   --rls-span-line-height: 8rem;
   --rls-span-font-weight: 400;
 
   --rls-smalltext-font-size: 6.125rem;
-  --rls-smalltext-letter-spacing: -1%;
+  --rls-smalltext-letter-spacing: 4%;
   --rls-smalltext-line-height: 7.5rem;
   --rls-smalltext-font-weight: 500;
 
   --rls-caption-font-size: 5.575rem;
-  --rls-caption-letter-spacing: -1%;
+  --rls-caption-letter-spacing: 4%;
   --rls-caption-line-height: 6.75rem;
   --rls-caption-font-weight: 400;
 
   --rls-overline-font-size: 5.125rem;
-  --rls-overline-letter-spacing: -1%;
+  --rls-overline-letter-spacing: 4%;
   --rls-overline-line-height: 6.25rem;
   --rls-overline-font-weight: 500;
 
   --rls-tiny-font-size: 4.5rem;
-  --rls-tiny-letter-spacing: -1%;
+  --rls-tiny-letter-spacing: 4%;
   --rls-tiny-line-height: 5.25rem;
   --rls-tiny-font-weight: 400;
+}
+
+@media screen and (min-width: 361px) {
+  :root {
+    --rls-app-font-size: 2.125px;
+  }
+}
+
+@media screen and (min-width: 376px) {
+  :root {
+    --rls-app-font-size: 2.25px;
+  }
+}
+
+@media screen and (min-width: 416px) {
+  :root {
+    --rls-app-font-size: 2.5px;
+  }
+}
+
+@media screen and (min-width: 641px) {
+  :root {
+    --rls-app-font-size: 2px;
+  }
+}
+
+@media screen and (min-width: 1360px) {
+  :root {
+    --rls-app-font-size: 2.25px;
+  }
+}
+
+@media screen and (min-width: 1820px) {
+  :root {
+    --rls-app-font-size: 2.5px;
+  }
 }
 
 h1 {

@@ -1,0 +1,47 @@
+// Rolster Technology GoogleSans Font
+// v1.0.0
+// @license MIT
+// Author: Rolster Developers
+// Created: 27/Aug/2026
+// Updated: 27/Aug/2026
+
+@font-face {
+  font-family: -rolster-google-sans;
+  font-style: normal;
+  font-weight: 100 300;
+  src: url('./GoogleSans/GoogleSansLight.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: -rolster-google-sans;
+  font-style: normal;
+  font-weight: 400;
+  src: url('./GoogleSans/GoogleSansRegular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: -rolster-google-sans;
+  font-style: normal;
+  font-weight: 500;
+  src: url('./GoogleSans/GoogleSansMedium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: -rolster-google-sans;
+  font-style: normal;
+  font-weight: 600;
+  src: url('./GoogleSans/GoogleSansSemibold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: -rolster-google-sans;
+  font-style: normal;
+  font-weight: 700 900;
+  src: url('./GoogleSans/GoogleSansBold.ttf') format('truetype');
+}
+
+:root {
+  --rls-app-font-family:
+    -rolster-google-sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Helvetica;
+}

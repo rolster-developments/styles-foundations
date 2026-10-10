@@ -1,6 +1,6 @@
 {
   "name": "@rolster/styles-foundations",
-  "version": "3.9.0",
+  "version": "3.10.0",
   "description": "Front-end style pack to develop responsive and mobile projects on the web with Rolster.",
   "sass": "scss/styles.scss",
   "style": "dist/styles.css",
@@ -32,6 +32,8 @@
       "style": "./dist/design-system-gradient.css",
       "default": "./dist/design-system-gradient.css"
     },
+    "./fonts/*": "./fonts/*",
+    "./icons/*": "./icons/*",
     "./scss/*": "./scss/*"
   },
   "files": [

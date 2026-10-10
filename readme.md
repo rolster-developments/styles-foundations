@@ -27,6 +27,8 @@ or `@use` the source and reuse its mixins.
 | `@rolster/styles-foundations/design-system-filled`   | `scss/design-system-filled/index.scss`   | `dist/design-system-filled.css`   | the filled skin of the components                                           |
 | `@rolster/styles-foundations/design-system-gradient` | `scss/design-system-gradient/index.scss` | `dist/design-system-gradient.css` | the gradient skin of the components                                         |
 | `@rolster/styles-foundations/scss/*`                 | any file under `scss/`                   | —                                 | direct access to a single partial, to reuse its mixins                      |
+| `@rolster/styles-foundations/fonts/*`                | any file under `fonts/`                  | —                                 | a font family declaration and its binaries                                  |
+| `@rolster/styles-foundations/icons/*`                | any file under `icons/`                  | —                                 | the icon font declaration and its binaries                                  |
 
 Each entry declares three conditions: `sass` resolves the `scss/` source,
 while `style` and `default` resolve the compiled CSS. A Sass build therefore
@@ -45,12 +47,15 @@ import '@rolster/styles-foundations';
 import '@rolster/styles-foundations/components';
 ```
 
-The `./scss/*` passthrough exposes the whole source tree, so a project can
-reach a single partial:
+The `./scss/*`, `./fonts/*` and `./icons/*` passthroughs expose the source tree
+and the assets, so a project can reach a single partial, a font or the icon
+font:
 
 ```scss
 @use '@rolster/styles-foundations/scss/foundations/helpers' as helpers;
 @use '@rolster/styles-foundations/scss/utilities/layout' as layout;
+@use '@rolster/styles-foundations/fonts/poppins';
+@use '@rolster/styles-foundations/icons/rolster-icons';
 ```
 
 The bare specifier is resolved by the bundler (Vite, webpack `sass-loader`,
@@ -314,7 +319,7 @@ one instance (for example `--rlc-icon-dimension` or
 | Sizings      | `foundations/sizings.scss`      | `--rls-sizing-x1` … `--rls-sizing-x48`, `--rls-border-1/2/4` widths and the `--rls-sizing-safe-*` inset variables                                                                                                                     |
 | Elevations   | `foundations/elevations.scss`   | `--rls-z-index-1…32`, `--rls-app-shadow-1…6` and the directional `--rls-app-shadow-{bottom,top,left,right,center}-{2…32}`                                                                                                             |
 | Typographics | `foundations/typographics.scss` | `--rls-font-weight-thin…black`                                                                                                                                                                                                        |
-| Typographics | `utilities/typographics.scss`   | `--rls-<scale>-font-size`, `-letter-spacing`, `-line-height` and `-font-weight` for the eighteen scales                                                                                                                               |
+| Typographics | `utilities/typographics.scss`   | `--rls-app-font-size` and its responsive ladder, plus `--rls-<scale>-font-size`, `-letter-spacing`, `-line-height` and `-font-weight` for the eighteen scales                                                                         |
 | Animations   | `foundations/animations.scss`   | `--rls-standard-curve`, `--rls-deceleration-curve`, `--rls-acceleration-curve`, `--rls-sharp-curve`, the `--rls-emphasized-*-curve` set and `--rls-duration-{enter,exit}-{short,medium,long}` (zeroed under `prefers-reduced-motion`) |
 
 The root entry adds the variables that bound the application shell, which the
@@ -337,8 +342,21 @@ from `--rls-app-font-size`, whose default is `2px`. Scaling that single token
 scales the whole interface — sizings, typography and component dimensions
 alike.
 
-The root entry ships a ready-made scale under the `.rls-aspect-ratio` class,
-which grows the base size on wide screens:
+The root entry already moves it with the viewport, so an application gets the
+scale without importing anything else:
+
+| Viewport | `--rls-app-font-size` |
+| -------- | --------------------- |
+| < 361px  | `2px`                 |
+| ≥ 361px  | `2.125px`             |
+| ≥ 376px  | `2.25px`              |
+| ≥ 416px  | `2.5px`               |
+| ≥ 641px  | `2px`                 |
+| ≥ 1360px | `2.25px`              |
+| ≥ 1820px | `2.5px`               |
+
+On top of that, the `.rls-aspect-ratio` class grows the base size further on
+wide screens:
 
 | Viewport | `--rls-app-font-size` |
 | -------- | --------------------- |
@@ -354,26 +372,51 @@ which grows the base size on wide screens:
 
 ### Assets
 
-The package ships three font families and an icon font. They are published
-under `fonts/` and `icons/` but are not listed in the exports map, so they are
-referenced through their path inside `node_modules`:
+The package ships eight font families and an icon font, published under
+`fonts/` and `icons/` and reachable through the `./fonts/*` and `./icons/*`
+entries:
 
-| Asset                                    | Format                          | Declares                                       |
-| ---------------------------------------- | ------------------------------- | ---------------------------------------------- |
-| `fonts/mont/mont.scss`                   | `.otf`                          | `-rolster-system-font`, weights 100–900        |
-| `fonts/poppins/poppins.scss`             | `.woff2`                        | `-rolster-system-font`, weights 100–900        |
-| `fonts/space-grotesk/space-grotesk.scss` | `.woff`                         | `-rolster-system-font`, weights 100–900        |
-| `icons/rolster-icons.scss`               | `.woff`, `.ttf`, `.eot`, `.svg` | `-rolster-icons` and 248 `.rls-icon-*` classes |
+| Asset                          | Format                          | Declares                                       |
+| ------------------------------ | ------------------------------- | ---------------------------------------------- |
+| `fonts/google-sans.scss`       | `.ttf`                          | `-rolster-google-sans`, weights 100-900        |
+| `fonts/kelson-sans.scss`       | `.woff`                         | `-rolster-kelson-sans`, weights 100-900        |
+| `fonts/mona-sans.scss`         | `.ttf`                          | `-rolster-mona-sans`, weights 100-900          |
+| `fonts/plus-jakarta-sans.scss` | `.ttf`                          | `-rolster-plus-jakarta-sans`, weights 100-900  |
+| `fonts/poppins.scss`           | `.woff2`                        | `-rolster-poppins`, weights 100-900            |
+| `fonts/sora.scss`              | `.ttf`                          | `-rolster-sora`, weights 100-900               |
+| `fonts/space-grotesk.scss`     | `.woff`                         | `-rolster-space-grotesk`, weights 100-900      |
+| `fonts/urbanist.scss`          | `.ttf`                          | `-rolster-urbanist`, weights 100-900           |
+| `icons/rolster-icons.scss`     | `.woff`, `.ttf`, `.eot`, `.svg` | `-rolster-icons` and 248 `.rls-icon-*` classes |
 
-The three families declare the same `-rolster-system-font` family name, which
-is the first entry of `--rls-app-font-family`, so importing one of them is what
-picks the typeface of the application. Import exactly one:
+The eighteen typographic scales live in `scss/utilities/typographics.scss`
+and apply to every family. Their values are the ones the families agree on:
+fifty-four of the seventy-two tokens are already unanimous, and each of the
+remaining eighteen takes the value most of the families ask for, so Kelson
+Sans, Mona Sans, Mont and Space Grotesk match the default exactly. A font
+stylesheet carries only its `@font-face` rules and points
+`--rls-app-font-family` at the family it declares; it does not touch the
+scales. Importing one after the root entry is what picks the typeface of the
+application, so the order matters and only one family should be imported:
 
 ```scss
-@import '../node_modules/@rolster/styles-foundations/scss/styles';
-@import '../node_modules/@rolster/styles-foundations/fonts/poppins/poppins';
-@import '../node_modules/@rolster/styles-foundations/icons/rolster-icons';
+@use '@rolster/styles-foundations';
+@use '@rolster/styles-foundations/fonts/poppins';
+@use '@rolster/styles-foundations/icons/rolster-icons';
 ```
+
+The family name stays available for an explicit override, which is how a
+second family is used for a single block:
+
+```scss
+.rls-display {
+  font-family: -rolster-space-grotesk;
+}
+```
+
+The `url()` of every `@font-face` is relative to the stylesheet that declares
+it. A build that rebases relative urls resolves it inside `node_modules`;
+plain `sass` resolves it against the output file instead, so there the binaries
+have to be copied next to the generated CSS.
 
 An icon is rendered by applying its class to an element; the icon stylesheet
 resolves the glyph through a `::before` pseudo-element:
