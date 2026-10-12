@@ -1,9 +1,9 @@
 // Rolster Technology ImageEditor Component
-// v1.0.1
+// v1.0.2
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 28/May/2026
+// Updated: 10/Oct/2026
 
 .rls-image-editor {
   --pvt-overlay-background: var(--rls-theme-backdrop-900);
@@ -97,6 +97,30 @@
     justify-content: center;
     row-gap: var(--pvt-actions-row-gap);
     column-gap: var(--pvt-actions-column-gap);
+  }
+
+  &__action {
+    display: flex;
+    width: var(--rls-sizing-x24);
+    height: var(--rls-sizing-x24);
+    align-items: center;
+    justify-content: center;
+    padding: 0rem;
+    margin: 0rem;
+    background: var(--rls-theme-color-100);
+    color: var(--rls-theme-color-600);
+    border-radius: 50%;
+    border: none;
+    outline: none;
+
+    &:hover {
+      background: var(--rls-theme-color-600);
+      color: var(--rls-theme-color-050);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+    }
   }
 
   & > canvas {
