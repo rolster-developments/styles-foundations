@@ -389,10 +389,15 @@ entries:
 | `icons/rolster-icons.scss`     | `.woff`, `.ttf`, `.eot`, `.svg` | `-rolster-icons` and 248 `.rls-icon-*` classes |
 
 The eighteen typographic scales live in `scss/utilities/typographics.scss`
-and apply to every family. Their values are the ones the families agree on:
-fifty-four of the seventy-two tokens are already unanimous, and each of the
-remaining eighteen takes the value most of the families ask for, so Kelson
-Sans, Mona Sans, Mont and Space Grotesk match the default exactly. A font
+and apply to every family. Because `rem` is only 2px to 2.5px here, the
+`-line-height` tokens are sized in real pixels rather than by ratio alone:
+at the smallest `--rls-app-font-size` (2px) every scale keeps at least 1.5px
+of room above the accented capitals and below the descenders of the tallest
+bundled faces (Kelson Sans Bold, Plus Jakarta Sans, Mont), rounded up to the
+nearest 0.25rem (whole rem for the headings). That is
+what stops glyphs being clipped when a component sets `height` or
+`min-height` to the line-height token, and the margin only grows on the
+larger breakpoints. A font
 stylesheet carries only its `@font-face` rules and points
 `--rls-app-font-family` at the family it declares; it does not touch the
 scales. Importing one after the root entry is what picks the typeface of the
