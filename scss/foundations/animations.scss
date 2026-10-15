@@ -14,16 +14,12 @@ body {
 
   --rls-sharp-curve: cubic-bezier(0.4, 0, 0.6, 1);
 
-  // Emphasized curves: used by emerging components (modals, sheets,
-  // drawers, dropdowns). Entering elements decelerate into place,
-  // leaving elements accelerate out of view.
   --rls-emphasized-curve: cubic-bezier(0.2, 0, 0, 1);
 
   --rls-emphasized-deceleration-curve: cubic-bezier(0.05, 0.7, 0.1, 1);
 
   --rls-emphasized-acceleration-curve: cubic-bezier(0.3, 0, 0.8, 0.15);
 
-  // Motion durations: exits are always shorter than entrances.
   --rls-duration-enter-short: 200ms;
 
   --rls-duration-enter-medium: 280ms;
