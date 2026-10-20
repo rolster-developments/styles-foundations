@@ -1,9 +1,9 @@
 // Rolster Technology Notifications Component
-// v1.1.0
+// v1.1.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 18/Jun/2026
-// Updated: 04/Oct/2026
+// Updated: 20/Oct/2026
 
 .rls-notifications {
   position: fixed;
@@ -71,23 +71,21 @@
     --rlc-icon-color: var(--rls-theme-color-050);
 
     display: flex;
+    flex: 0 0 auto;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     background: var(--rls-theme-color-500);
     width: var(--rls-sizing-x18);
     height: var(--rls-sizing-x18);
-    min-width: var(--rls-sizing-x18);
     border-radius: var(--rls-sizing-x4);
-
-    & + .rls-notification__component {
-      width: calc(100% - var(--rls-sizing-x18));
-    }
   }
 
   &__component {
     display: flex;
+    flex: 1 1 auto;
     flex-direction: column;
+    min-width: 0;
     row-gap: var(--rls-sizing-x2);
   }
 
@@ -98,6 +96,7 @@
     column-gap: var(--rls-sizing-x4);
 
     & > button {
+      flex: 0 0 auto;
       background: transparent;
       border: none;
       padding: 0rem;
@@ -107,6 +106,7 @@
   }
 
   &__title {
+    min-width: 0;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;

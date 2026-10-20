@@ -1,9 +1,9 @@
 // Rolster Technology FieldList Component
-// v1.8.0
+// v1.8.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 22/Ago/2026
+// Updated: 20/Oct/2026
 
 .rls-field-list {
   --pvt-control-pointer-events: initial;
@@ -317,6 +317,7 @@
     box-sizing: border-box;
 
     &__avatar {
+      flex: 0 0 auto;
       width: var(--rls-sizing-x20);
       height: var(--rls-sizing-x20);
 
@@ -327,7 +328,9 @@
 
     &__description {
       display: flex;
+      flex: 1 1 auto;
       flex-direction: column;
+      min-width: 0;
       row-gap: var(--rls-sizing-x2);
       overflow: hidden;
 
