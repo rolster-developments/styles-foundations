@@ -1,12 +1,13 @@
 // Rolster Technology ButtonIcon Component
-// v1.1.0
+// v1.1.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 31/Jul/2026
+// Updated: 26/Oct/2026
 
 .rls-button-icon {
   --pvt-dimension: var(--rlc-button-icon-dimension, var(--rls-sizing-x16));
+  --pvt-radius: var(--rlc-button-icon-radius, var(--rls-sizing-x3));
 
   --rlc-icon-dimension: calc(var(--pvt-dimension) - var(--rls-sizing-x2));
 
@@ -18,7 +19,7 @@
   justify-content: center;
   padding: 0rem;
   outline: none;
-  border-radius: var(--rlc-button-icon-radius, var(--rls-sizing-x3));
+  border-radius: var(--pvt-radius);
   cursor: pointer;
   color: var(--rlc-button-icon-font-color, var(--rls-app-color-600));
   transition: transform 240ms var(--rls-standard-curve);
@@ -34,5 +35,10 @@
 
   &--skeleton {
     background: var(--rls-theme-skeleton-300);
+  }
+
+  &[rls-size='small'] {
+    --pvt-dimension: var(--rlc-button-icon-dimension, var(--rls-sizing-x12));
+    --pvt-radius: var(--rlc-button-icon-radius, var(--rls-sizing-x2));
   }
 }

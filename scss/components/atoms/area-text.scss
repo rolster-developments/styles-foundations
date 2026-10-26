@@ -1,9 +1,9 @@
 // Rolster Technology AreaText Component
-// v1.2.0
+// v1.2.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 03/Oct/2026
+// Updated: 26/Oct/2026
 
 .rls-area-text {
   --pvt-font-color: var(--rlc-area-text-font-color, var(--rls-app-color-900));
@@ -23,8 +23,6 @@
     var(--rls-input-line-height)
   );
 
-  // Height of a single row: matches the Input height so a FieldArea with
-  // minRows=1 renders as tall as a FieldText
   --pvt-height: var(--rlc-area-text-height, var(--rls-sizing-x12));
   --pvt-min-height: var(--rlc-area-text-min-height, var(--pvt-height));
   --pvt-padding-y: calc((var(--pvt-height) - var(--pvt-line-height)) / 2);
@@ -58,8 +56,6 @@
     --pvt-grip-opacity: 1;
   }
 
-  // Grip drawn on the wrapper: a textarea does not render ::after, and
-  // pointer-events: none lets the drag reach the native resizer underneath
   &::after {
     content: '';
     position: absolute;
@@ -146,5 +142,21 @@
     line-height: var(--pvt-line-height);
     text-align: var(--pvt-text-align);
     letter-spacing: var(--pvt-letter-spacing);
+  }
+
+  &[rls-size='small'] {
+    --pvt-font-size: var(
+      --rlc-area-text-font-size,
+      var(--rls-smalltext-font-size)
+    );
+    --pvt-letter-spacing: var(
+      --rlc-area-text-letter-spacing,
+      var(--rls-smalltext-letter-spacing)
+    );
+    --pvt-line-height: var(
+      --rlc-area-text-line-height,
+      var(--rls-smalltext-line-height)
+    );
+    --pvt-height: var(--rlc-area-text-height, var(--rls-sizing-x10));
   }
 }

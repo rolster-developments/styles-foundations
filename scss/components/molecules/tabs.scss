@@ -1,27 +1,31 @@
 // Rolster Technology Tabs Component
-// v1.0.2
+// v1.0.3
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 28/May/2026
+// Updated: 26/Oct/2026
 
 .rls-tabs {
   --pvt-children-font-color: var(--rls-app-color-800);
+  --pvt-radius: var(--rls-sizing-x4);
+  --pvt-children-height: var(--rls-sizing-x12);
+  --pvt-children-font-size: var(--rls-smalltext-font-size);
+  --pvt-children-letter-spacing: var(--rls-smalltext-letter-spacing);
 
   display: flex;
   background: var(--pvt-background);
   padding: var(--rls-sizing-x2);
   box-sizing: border-box;
-  border-radius: var(--rls-sizing-x4);
+  border-radius: var(--pvt-radius);
 
   &__children {
-    height: var(--rls-sizing-x12);
-    line-height: var(--rls-sizing-x12);
-    border-radius: var(--rls-sizing-x4);
+    height: var(--pvt-children-height);
+    line-height: var(--pvt-children-height);
+    border-radius: var(--pvt-radius);
     color: var(--rls-app-color-500);
-    font-size: var(--rls-smalltext-font-size);
+    font-size: var(--pvt-children-font-size);
     font-weight: var(--rls-font-weight-medium);
-    letter-spacing: var(--rls-smalltext-letter-spacing);
+    letter-spacing: var(--pvt-children-letter-spacing);
     text-align: center;
     cursor: pointer;
     transition: all 240ms var(--rls-standard-curve);
@@ -38,5 +42,12 @@
       background: transparent;
       cursor: not-allowed;
     }
+  }
+
+  &[rls-size='small'] {
+    --pvt-radius: var(--rls-sizing-x3);
+    --pvt-children-height: var(--rls-sizing-x10);
+    --pvt-children-font-size: var(--rls-overline-font-size);
+    --pvt-children-letter-spacing: var(--rls-overline-letter-spacing);
   }
 }

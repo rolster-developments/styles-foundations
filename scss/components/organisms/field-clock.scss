@@ -1,9 +1,9 @@
 // Rolster Technology FieldClock Component
-// v1.1.2
+// v1.1.3
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 01/Ago/2026
+// Updated: 26/Oct/2026
 
 .rls-field-clock {
   --rlc-field-box-body-padding: var(--rls-sizing-x3) var(--rls-sizing-x4);
@@ -14,6 +14,8 @@
     --rlc-field-clock-letter-spacing,
     var(--rls-input-letter-spacing)
   );
+
+  --pvt-control-height: var(--rlc-input-height, var(--rls-sizing-x12));
 
   position: relative;
   width: 100%;
@@ -30,8 +32,8 @@
   &__control {
     position: relative;
     width: 100%;
-    height: var(--rls-sizing-x12);
-    line-height: var(--rls-sizing-x12);
+    height: var(--pvt-control-height);
+    line-height: var(--pvt-control-height);
     padding: 0rem;
     cursor: default;
     border: none;
@@ -50,5 +52,16 @@
       opacity: 0.5;
       cursor: not-allowed;
     }
+  }
+
+  &[rls-size='small'] {
+    --pvt-font-size: var(
+      --rlc-field-clock-font-size,
+      var(--rls-smalltext-font-size)
+    );
+    --pvt-letter-spacing: var(
+      --rlc-field-clock-letter-spacing,
+      var(--rls-smalltext-letter-spacing)
+    );
   }
 }

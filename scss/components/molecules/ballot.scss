@@ -1,13 +1,17 @@
 // Rolster Technology Ballot Component
-// v1.2.3
+// v1.2.4
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 28/May/2026
+// Updated: 26/Oct/2026
 
 .rls-ballot {
-  --rlc-avatar-width: var(--rls-sizing-x20);
-  --rlc-avatar-height: var(--rls-sizing-x20);
+  --pvt-avatar-dimension: var(--rls-sizing-x20);
+  --pvt-gap: var(--rls-sizing-x4);
+  --pvt-padding: var(--rlc-ballot-padding, var(--rls-sizing-x4));
+
+  --rlc-avatar-width: var(--pvt-avatar-dimension);
+  --rlc-avatar-height: var(--pvt-avatar-dimension);
 
   --pvt-title-font-size: var(
     --rlc-ballot-title-font-size,
@@ -43,8 +47,8 @@
   display: flex;
   width: var(--rlc-ballot-width, 100%);
   align-items: center;
-  column-gap: var(--rls-sizing-x4);
-  padding: var(--rlc-ballot-padding, var(--rls-sizing-x4));
+  column-gap: var(--pvt-gap);
+  padding: var(--pvt-padding);
   box-sizing: border-box;
   overflow: hidden;
 
@@ -65,7 +69,7 @@
   }
 
   .rls-avatar + .rls-ballot__component {
-    width: calc(100% - var(--rlc-avatar-width) - var(--rls-sizing-x4));
+    width: calc(100% - var(--rlc-avatar-width) - var(--pvt-gap));
   }
 
   &__title {
@@ -106,5 +110,35 @@
     overflow: var(--rlc-ballot-subtitle-overflow, initial);
     text-overflow: var(--rlc-ballot-subtitle-text-overflow, initial);
     white-space: var(--rlc-ballot-subtitle-white-space, initial);
+  }
+
+  &[rls-size='small'] {
+    --pvt-avatar-dimension: var(--rls-sizing-x16);
+    --pvt-gap: var(--rls-sizing-x3);
+    --pvt-padding: var(--rlc-ballot-padding, var(--rls-sizing-x3));
+    --pvt-title-font-size: var(
+      --rlc-ballot-title-font-size,
+      var(--rls-caption-font-size)
+    );
+    --pvt-title-letter-spacing: var(
+      --rlc-ballot-title-letter-spacing,
+      var(--rls-caption-letter-spacing)
+    );
+    --pvt-title-line-height: var(
+      --rlc-ballot-title-line-height,
+      var(--rls-caption-line-height)
+    );
+    --pvt-subtitle-font-size: var(
+      --rlc-ballot-subtitle-font-size,
+      var(--rls-overline-font-size)
+    );
+    --pvt-subtitle-letter-spacing: var(
+      --rlc-ballot-subtitle-letter-spacing,
+      var(--rls-overline-letter-spacing)
+    );
+    --pvt-subtitle-line-height: var(
+      --rlc-ballot-subtitle-line-height,
+      var(--rls-overline-line-height)
+    );
   }
 }

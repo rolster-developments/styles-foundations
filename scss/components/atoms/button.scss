@@ -1,9 +1,9 @@
 // Rolster Technology Button Component
-// v2.7.1
+// v2.7.2
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 12/Oct/2026
+// Updated: 26/Oct/2026
 
 .rls-button {
   --pvt-button-content-background: none;
@@ -29,6 +29,26 @@
     var(--rls-button-font-size)
   );
 
+  --pvt-button-letter-spacing: var(
+    --rlc-button-letter-spacing,
+    var(--rls-button-letter-spacing)
+  );
+
+  --pvt-button-content-padding: var(
+    --rlc-button-content-padding,
+    0rem var(--rls-sizing-x4)
+  );
+
+  --pvt-button-content-radius: var(
+    --rlc-button-content-radius,
+    var(--rls-sizing-x4)
+  );
+
+  --pvt-button-icon-dimension: var(
+    --rlc-button-icon-dimension,
+    var(--rls-sizing-x12)
+  );
+
   position: relative;
   padding: 0rem;
   margin: var(--rlc-button-margin, 0rem);
@@ -46,10 +66,7 @@
   }
 
   &__content {
-    --rlc-icon-dimension: var(
-      --rlc-button-icon-dimension,
-      var(--rls-sizing-x12)
-    );
+    --rlc-icon-dimension: var(--pvt-button-icon-dimension);
 
     display: flex;
     justify-content: center;
@@ -58,9 +75,9 @@
     column-gap: var(--rlc-button-content-gap, var(--rls-sizing-x2));
     line-height: var(--pvt-button-content-line-height);
     height: var(--pvt-button-content-height);
-    padding: var(--rlc-button-content-padding, 0rem var(--rls-sizing-x4));
+    padding: var(--pvt-button-content-padding);
     box-sizing: border-box;
-    border-radius: var(--rlc-button-content-radius, var(--rls-sizing-x4));
+    border-radius: var(--pvt-button-content-radius);
     box-shadow: var(--pvt-button-content-box-shadow);
     color: var(--pvt-button-content-font-color);
     border: var(--pvt-button-content-border);
@@ -121,7 +138,7 @@
     padding: var(--rlc-button-description-padding, 0rem var(--rls-sizing-x2));
     line-height: initial;
     font-size: var(--pvt-button-font-size);
-    letter-spacing: var(--rls-button-letter-spacing);
+    letter-spacing: var(--pvt-button-letter-spacing);
     font-weight: var(--rls-button-font-weight);
     text-transform: var(--rlc-button-description-text-transform, uppercase);
     text-overflow: ellipsis;
@@ -132,6 +149,33 @@
       text-decoration: none;
       color: inherit;
     }
+  }
+
+  &[rls-size='small'] {
+    --pvt-button-content-height: var(
+      --rlc-button-content-height,
+      var(--rls-sizing-x18)
+    );
+    --pvt-button-content-padding: var(
+      --rlc-button-content-padding,
+      0rem var(--rls-sizing-x3)
+    );
+    --pvt-button-content-radius: var(
+      --rlc-button-content-radius,
+      var(--rls-sizing-x3)
+    );
+    --pvt-button-icon-dimension: var(
+      --rlc-button-icon-dimension,
+      var(--rls-sizing-x10)
+    );
+    --pvt-button-font-size: var(
+      --rlc-button-font-size,
+      var(--rls-smalltext-font-size)
+    );
+    --pvt-button-letter-spacing: var(
+      --rlc-button-letter-spacing,
+      var(--rls-smalltext-letter-spacing)
+    );
   }
 }
 

@@ -1,15 +1,26 @@
 // Rolster Technology Accordion Component
-// v1.2.1
+// v1.2.2
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 01/Ago/2026
+// Updated: 26/Oct/2026
 
 .rls-accordion {
   --pvt-title-font-color: var(--rls-app-color-800);
   --pvt-indicator-background: transparent;
   --pvt-body-overflow: hidden;
   --pvt-content-font-color: var(--rls-app-color-700);
+  --pvt-header-min-height: var(--rls-sizing-x24);
+  --pvt-header-padding: var(--rls-sizing-x4) var(--rls-sizing-x6);
+  --pvt-indicator-dimension: var(--rls-sizing-x12);
+  --pvt-title-font-size: var(--rls-paragraph-font-size);
+  --pvt-title-letter-spacing: var(--rls-paragraph-letter-spacing);
+  --pvt-content-padding: var(
+    --rlc-accordion-content-padding,
+    var(--rls-sizing-x8)
+  );
+  --pvt-content-font-size: var(--rls-paragraph-font-size);
+  --pvt-content-letter-spacing: var(--rls-paragraph-letter-spacing);
 
   position: relative;
   display: flex;
@@ -22,11 +33,11 @@
     position: relative;
     display: flex;
     width: 100%;
-    min-height: var(--rls-sizing-x24);
+    min-height: var(--pvt-header-min-height);
     align-items: center;
     justify-content: space-between;
     column-gap: var(--rls-sizing-x4);
-    padding: var(--rls-sizing-x4) var(--rls-sizing-x6);
+    padding: var(--pvt-header-padding);
     background: var(--pvt-header-background);
     border: none;
     border-radius: var(--pvt-header-radius);
@@ -49,9 +60,9 @@
   &__title {
     flex: 1 1 auto;
     color: var(--pvt-title-font-color);
-    font-size: var(--rls-paragraph-font-size);
+    font-size: var(--pvt-title-font-size);
     font-weight: var(--rls-font-weight-semibold);
-    letter-spacing: var(--rls-paragraph-letter-spacing);
+    letter-spacing: var(--pvt-title-letter-spacing);
   }
 
   &__indicator {
@@ -59,8 +70,8 @@
 
     display: flex;
     flex: 0 0 auto;
-    width: var(--rls-sizing-x12);
-    height: var(--rls-sizing-x12);
+    width: var(--pvt-indicator-dimension);
+    height: var(--pvt-indicator-dimension);
     align-items: center;
     justify-content: center;
     border-radius: 50%;
@@ -82,10 +93,10 @@
   }
 
   &__content {
-    padding: var(--rlc-accordion-content-padding, var(--rls-sizing-x8));
+    padding: var(--pvt-content-padding);
     color: var(--pvt-content-font-color);
-    font-size: var(--rls-paragraph-font-size);
-    letter-spacing: var(--rls-paragraph-letter-spacing);
+    font-size: var(--pvt-content-font-size);
+    letter-spacing: var(--pvt-content-letter-spacing);
     box-sizing: border-box;
   }
 
@@ -121,6 +132,24 @@
 
     &.rls-accordion--open {
       --pvt-indicator-background: var(--rls-theme-background-200);
+    }
+  }
+
+  &[rls-size='small'] {
+    --pvt-header-min-height: var(--rls-sizing-x20);
+    --pvt-header-padding: var(--rls-sizing-x3) var(--rls-sizing-x4);
+    --pvt-indicator-dimension: var(--rls-sizing-x10);
+    --pvt-title-font-size: var(--rls-smalltext-font-size);
+    --pvt-title-letter-spacing: var(--rls-smalltext-letter-spacing);
+    --pvt-content-padding: var(
+      --rlc-accordion-content-padding,
+      var(--rls-sizing-x6)
+    );
+    --pvt-content-font-size: var(--rls-smalltext-font-size);
+    --pvt-content-letter-spacing: var(--rls-smalltext-letter-spacing);
+
+    .rls-accordion__indicator {
+      --rlc-icon-dimension: var(--rls-sizing-x8);
     }
   }
 }

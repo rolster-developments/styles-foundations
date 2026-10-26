@@ -1,5 +1,5 @@
 // Rolster Technology ButtonAction Component
-// v1.1.7
+// v1.1.8
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
@@ -138,6 +138,10 @@
     transition: opacity 200ms 0ms var(--rls-deceleration-curve);
     opacity: var(--pvt-tooltip-opacity);
     transition-delay: var(--pvt-tooltip-transition-delay);
+  }
+
+  &[rls-size='small'] {
+    --pvt-dimension: var(--rlc-button-action-dimension, var(--rls-sizing-x12));
   }
 }
 

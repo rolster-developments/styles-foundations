@@ -1,22 +1,26 @@
 // Rolster Technology Avatar Component
-// v1.2.1
+// v1.2.2
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 03/Ago/2026
+// Updated: 26/Oct/2026
 
 .rls-avatar {
+  --pvt-width: var(--rlc-avatar-width, var(--rls-sizing-x24));
+  --pvt-height: var(--rlc-avatar-height, var(--rls-sizing-x24));
+  --pvt-font-size: var(--rlc-avatar-font-size, var(--rls-title-font-size));
+
   --rlc-image-width: var(--rlc-avatar-width);
   --rlc-image-height: var(--rlc-avatar-height);
 
   position: relative;
   display: flex;
   flex: 0 0 auto;
-  width: var(--rlc-avatar-width, var(--rls-sizing-x24));
-  height: var(--rlc-avatar-height, var(--rls-sizing-x24));
+  width: var(--pvt-width);
+  height: var(--pvt-height);
   justify-content: center;
   align-items: center;
-  font-size: var(--rlc-avatar-font-size, var(--rls-title-font-size));
+  font-size: var(--pvt-font-size);
   overflow: hidden;
 
   &--transparent {
@@ -44,5 +48,11 @@
   & > img {
     width: 100%;
     object-fit: cover;
+  }
+
+  &[rls-size='small'] {
+    --pvt-width: var(--rlc-avatar-width, var(--rls-sizing-x20));
+    --pvt-height: var(--rlc-avatar-height, var(--rls-sizing-x20));
+    --pvt-font-size: var(--rlc-avatar-font-size, var(--rls-body-font-size));
   }
 }

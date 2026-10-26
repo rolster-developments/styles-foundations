@@ -1,26 +1,31 @@
 // Rolster Technology ButtonOption Component
-// v1.2.0
+// v1.2.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 31/Jul/2026
+// Updated: 26/Oct/2026
 
 .rls-button-option {
   --pvt-span-color: var(--rls-app-color-800);
   --pvt-background-hover: var(--rls-theme-background-100);
+  --pvt-padding: var(--rls-sizing-x4) var(--rls-sizing-x3);
+  --pvt-row-gap: var(--rls-sizing-x3);
+  --pvt-radius: var(--rls-sizing-x4);
+  --pvt-font-size: var(--rls-span-font-size);
+  --pvt-letter-spacing: var(--rls-span-letter-spacing);
   --rlc-icon-color: var(--rls-app-color-600);
 
   display: flex;
   width: var(--rlc-button-option, auto);
   flex-direction: column;
-  row-gap: var(--rls-sizing-x3);
+  row-gap: var(--pvt-row-gap);
   align-items: center;
-  padding: var(--rls-sizing-x4) var(--rls-sizing-x3);
+  padding: var(--pvt-padding);
   box-sizing: border-box;
   outline: none;
   background: transparent;
   border: var(--rls-app-border-1-300);
-  border-radius: var(--rls-sizing-x4);
+  border-radius: var(--pvt-radius);
   overflow: hidden;
 
   &:not(:disabled):hover {
@@ -41,9 +46,19 @@
   }
 
   & > span {
-    font-size: var(--rls-span-font-size);
-    letter-spacing: var(--rls-span-letter-spacing);
+    font-size: var(--pvt-font-size);
+    letter-spacing: var(--pvt-letter-spacing);
     color: var(--pvt-span-color);
     font-weight: var(--rls-font-weight-medium);
+  }
+
+  &[rls-size='small'] {
+    --pvt-padding: var(--rls-sizing-x3) var(--rls-sizing-x2);
+    --pvt-row-gap: var(--rls-sizing-x2);
+    --pvt-radius: var(--rls-sizing-x3);
+    --pvt-font-size: var(--rls-caption-font-size);
+    --pvt-letter-spacing: var(--rls-caption-letter-spacing);
+
+    --rlc-icon-dimension: var(--rls-sizing-x10);
   }
 }

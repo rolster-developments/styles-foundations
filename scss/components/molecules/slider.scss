@@ -1,9 +1,9 @@
 // Rolster Technology Slider Component
-// v2.1.0
+// v2.1.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 09/Sep/2026
+// Updated: 26/Oct/2026
 
 .rls-slider {
   --pvt-track-height: var(--rls-sizing-x3);
@@ -11,6 +11,10 @@
   --pvt-thumb-color: var(--rls-theme-color-050);
   --pvt-thumb-cursor: grab;
   --pvt-motion-duration: 200ms;
+  --pvt-thumb-dimension: var(--rls-sizing-x10);
+  --pvt-label-font-size: var(--rls-smalltext-font-size);
+  --pvt-label-letter-spacing: var(--rls-smalltext-letter-spacing);
+  --pvt-label-line-height: var(--rls-smalltext-line-height);
 
   display: flex;
   flex-direction: column;
@@ -40,15 +44,15 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     font-weight: var(--rls-font-weight-medium);
-    font-size: var(--rls-smalltext-font-size);
-    letter-spacing: var(--rls-smalltext-letter-spacing);
-    line-height: var(--rls-smalltext-line-height);
+    font-size: var(--pvt-label-font-size);
+    letter-spacing: var(--pvt-label-letter-spacing);
+    line-height: var(--pvt-label-line-height);
   }
 
   &__component {
     position: relative;
-    width: calc(100% - var(--rls-sizing-x10));
-    margin: 0rem 5rem;
+    width: calc(100% - var(--pvt-thumb-dimension));
+    margin: 0rem calc(var(--pvt-thumb-dimension) / 2);
     padding: var(--rls-sizing-x4) 0rem;
     box-sizing: border-box;
     touch-action: none;
@@ -90,9 +94,9 @@
     top: 0.5rem;
     left: 0rem;
     cursor: var(--pvt-thumb-cursor);
-    width: var(--rls-sizing-x10);
-    height: var(--rls-sizing-x10);
-    line-height: var(--rls-sizing-x10);
+    width: var(--pvt-thumb-dimension);
+    height: var(--pvt-thumb-dimension);
+    line-height: var(--pvt-thumb-dimension);
     text-align: center;
     font-size: var(--rls-tiny-font-size);
     font-weight: var(--rls-font-weight-medium);
@@ -107,6 +111,14 @@
       outline: none;
       box-shadow: 0rem 0rem 0rem var(--rls-sizing-x2) var(--rls-theme-color-200);
     }
+  }
+
+  &[rls-size='small'] {
+    --pvt-track-height: var(--rls-sizing-x2);
+    --pvt-thumb-dimension: var(--rls-sizing-x8);
+    --pvt-label-font-size: var(--rls-overline-font-size);
+    --pvt-label-letter-spacing: var(--rls-overline-letter-spacing);
+    --pvt-label-line-height: var(--rls-overline-line-height);
   }
 }
 

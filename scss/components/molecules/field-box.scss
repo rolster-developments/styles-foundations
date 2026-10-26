@@ -1,9 +1,9 @@
 // Rolster Technology FieldBox Component
-// v2.3.4
+// v2.3.5
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 18/Jul/2026
+// Updated: 26/Oct/2026
 
 .rls-field-box {
   --pvt-body-background-disabled: var(
@@ -26,6 +26,14 @@
     var(--rls-app-color-200)
   );
 
+  --pvt-body-button-icon-dimension: var(--rls-sizing-x12);
+  --pvt-label-font-size: var(--rls-smalltext-font-size);
+  --pvt-label-letter-spacing: var(--rls-smalltext-letter-spacing);
+  --pvt-label-line-height: var(--rls-smalltext-line-height);
+  --pvt-helper-font-size: var(--rls-overline-font-size);
+  --pvt-helper-letter-spacing: var(--rls-overline-letter-spacing);
+  --pvt-helper-line-height: var(--rls-overline-line-height);
+  --pvt-error-padding: 0rem var(--rls-sizing-x4);
   --pvt-label-opacity: 1;
   --pvt-body-opacity: 1;
 
@@ -69,10 +77,10 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     font-weight: var(--rls-font-weight-medium);
-    font-size: var(--rls-smalltext-font-size);
-    letter-spacing: var(--rls-smalltext-letter-spacing);
-    min-height: var(--rls-smalltext-line-height);
-    line-height: var(--rls-smalltext-line-height);
+    font-size: var(--pvt-label-font-size);
+    letter-spacing: var(--pvt-label-letter-spacing);
+    min-height: var(--pvt-label-line-height);
+    line-height: var(--pvt-label-line-height);
 
     span {
       color: var(--rls-danger-color-500);
@@ -80,7 +88,7 @@
   }
 
   &__body {
-    --rlc-button-icon-dimension: var(--rls-sizing-x12);
+    --rlc-button-icon-dimension: var(--pvt-body-button-icon-dimension);
     --rlc-button-icon-background: var(--pvt-action-background);
     --rlc-button-icon-radius: var(
       --rlc-field-box-action-radius,
@@ -101,10 +109,10 @@
   &__helper {
     color: var(--rls-app-color-400);
     box-sizing: border-box;
-    font-size: var(--rls-overline-font-size);
-    letter-spacing: var(--rls-overline-letter-spacing);
-    min-height: var(--rls-overline-line-height);
-    line-height: var(--rls-overline-line-height);
+    font-size: var(--pvt-helper-font-size);
+    letter-spacing: var(--pvt-helper-letter-spacing);
+    min-height: var(--pvt-helper-line-height);
+    line-height: var(--pvt-helper-line-height);
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -112,7 +120,36 @@
 
   &__error {
     display: var(--rlc-field-box-error-display, block);
-    padding: 0rem var(--rls-sizing-x4);
+    padding: var(--pvt-error-padding);
     box-sizing: border-box;
+  }
+
+  &[rls-size='small'] {
+    --pvt-action-dimension: var(
+      --rlc-field-box-action-dimension,
+      var(--rls-sizing-x10)
+    );
+    --pvt-body-button-icon-dimension: var(--rls-sizing-x10);
+    --pvt-label-font-size: var(--rls-overline-font-size);
+    --pvt-label-letter-spacing: var(--rls-overline-letter-spacing);
+    --pvt-label-line-height: var(--rls-overline-line-height);
+    --pvt-helper-font-size: var(--rls-tiny-font-size);
+    --pvt-helper-letter-spacing: var(--rls-tiny-letter-spacing);
+    --pvt-helper-line-height: var(--rls-tiny-line-height);
+    --pvt-error-padding: 0rem var(--rls-sizing-x3);
+
+    --rlc-field-box-body-padding: var(--rls-sizing-x2) var(--rls-sizing-x3);
+    --rlc-input-height: var(--rls-sizing-x10);
+    --rlc-input-font-size: var(--rls-smalltext-font-size);
+    --rlc-input-letter-spacing: var(--rls-smalltext-letter-spacing);
+    --rlc-area-text-height: var(--rls-sizing-x10);
+    --rlc-area-text-font-size: var(--rls-smalltext-font-size);
+    --rlc-area-text-letter-spacing: var(--rls-smalltext-letter-spacing);
+    --rlc-area-text-line-height: var(--rls-smalltext-line-height);
+    --rlc-field-list-control-font-size: var(--rls-smalltext-font-size);
+    --rlc-field-list-control-letter-spacing: var(
+      --rls-smalltext-letter-spacing
+    );
+    --rlc-message-icon-dimension: var(--rls-sizing-x6);
   }
 }

@@ -1,9 +1,9 @@
 // Rolster Technology Dropdown Component
-// v1.1.0
+// v1.1.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 04/Oct/2026
+// Updated: 26/Oct/2026
 
 .rls-dropdown {
   --pvt-duration-enter: var(
@@ -21,6 +21,8 @@
 
   --pvt-content-opacity: 0;
   --pvt-content-transform: scale(0.94);
+  --pvt-content-padding: var(--rlc-dropdown-padding, var(--rls-sizing-x6));
+  --pvt-content-radius: var(--rlc-dropdown-radius, var(--rls-sizing-x6));
 
   position: var(--rlc-dropdown-position, absolute);
   display: block;
@@ -46,8 +48,8 @@
     display: block;
     width: auto;
     max-width: var(--rlc-dropdown-max-width, 150rem);
-    border-radius: var(--rlc-dropdown-radius, var(--rls-sizing-x6));
-    padding: var(--rlc-dropdown-padding, var(--rls-sizing-x6));
+    border-radius: var(--pvt-content-radius);
+    padding: var(--pvt-content-padding);
     box-sizing: border-box;
     background: var(--rlc-dropdown-background, var(--rls-app-color-050));
     opacity: var(--pvt-content-opacity);
@@ -55,5 +57,10 @@
     transition:
       transform var(--pvt-duration) 0ms var(--pvt-curve),
       opacity var(--pvt-duration) 0ms var(--pvt-curve);
+  }
+
+  &[rls-size='small'] {
+    --pvt-content-padding: var(--rlc-dropdown-padding, var(--rls-sizing-x4));
+    --pvt-content-radius: var(--rlc-dropdown-radius, var(--rls-sizing-x4));
   }
 }

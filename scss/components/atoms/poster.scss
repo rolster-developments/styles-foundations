@@ -1,29 +1,50 @@
 // Rolster Technology Poster Component
-// v2.1.3
+// v2.1.4
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 28/May/2026
+// Updated: 26/Oct/2026
 
 .rls-poster {
   --pvt-height: var(--rlc-poster-height, var(--rls-smalltext-line-height));
+  --pvt-font-size: var(--rlc-poster-font-size, var(--rls-smalltext-font-size));
+  --pvt-letter-spacing: var(
+    --rlc-poster-letter-spacing,
+    var(--rls-body-letter-spacing)
+  );
+  --pvt-padding: var(
+    --rlc-poster-padding,
+    var(--rls-sizing-x2) var(--rls-sizing-x4)
+  );
+  --pvt-radius: var(--rlc-poster-radius, var(--rls-sizing-x4));
 
   position: relative;
   display: block;
   width: var(--rlc-poster-width, auto);
   font-weight: inherit;
-  font-size: var(--rlc-poster-font-size, var(--rls-smalltext-font-size));
-  letter-spacing: var(
-    --rlc-poster-letter-spacing,
-    var(--rls-body-letter-spacing)
-  );
+  font-size: var(--pvt-font-size);
+  letter-spacing: var(--pvt-letter-spacing);
   height: var(--pvt-height);
   line-height: var(--pvt-height);
-  padding: var(--rlc-poster-padding, var(--rls-sizing-x2) var(--rls-sizing-x4));
+  padding: var(--pvt-padding);
   margin: var(--rlc-poster-margin, 0rem);
   text-align: var(--rlc-poster-text-align, center);
-  border-radius: var(--rlc-poster-radius, var(--rls-sizing-x4));
+  border-radius: var(--pvt-radius);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+
+  &[rls-size='small'] {
+    --pvt-height: var(--rlc-poster-height, var(--rls-overline-line-height));
+    --pvt-font-size: var(--rlc-poster-font-size, var(--rls-overline-font-size));
+    --pvt-letter-spacing: var(
+      --rlc-poster-letter-spacing,
+      var(--rls-overline-letter-spacing)
+    );
+    --pvt-padding: var(
+      --rlc-poster-padding,
+      var(--rls-sizing-x1) var(--rls-sizing-x3)
+    );
+    --pvt-radius: var(--rlc-poster-radius, var(--rls-sizing-x3));
+  }
 }

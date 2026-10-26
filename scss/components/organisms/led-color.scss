@@ -1,9 +1,9 @@
 // Rolster Technology LedColor Component
-// v1.0.0
+// v1.0.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 07/Oct/2026
-// Updated: 07/Oct/2026
+// Updated: 26/Oct/2026
 
 .rls-led-color {
   --pvt-duration: var(
@@ -59,5 +59,9 @@
     .rls-led {
       --pvt-shadow-color: var(--rls-danger-color-200);
     }
+  }
+
+  &[rls-size='small'] {
+    --rlc-led-dimension: var(--rls-sizing-x8);
   }
 }

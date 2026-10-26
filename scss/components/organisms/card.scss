@@ -1,13 +1,15 @@
 // Rolster Technology Card Component
-// v1.4.2
+// v1.4.3
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 07/Ago/2026
+// Updated: 26/Oct/2026
 
 .rls-card {
   --rlc-divider-background: var(--rls-app-color-300);
   --pvt-background: var(--rlc-card-background, var(--rls-app-color-050));
+  --pvt-content-gap: var(--rlc-card-content-gap, var(--rls-sizing-x4));
+  --pvt-content-padding: var(--rlc-card-content-padding, var(--rls-sizing-x8));
 
   background: var(--pvt-background);
 
@@ -18,8 +20,16 @@
   &__content {
     display: flex;
     flex-direction: column;
-    row-gap: var(--rlc-card-content-gap, var(--rls-sizing-x4));
-    padding: var(--rlc-card-content-padding, var(--rls-sizing-x8));
+    row-gap: var(--pvt-content-gap);
+    padding: var(--pvt-content-padding);
     box-sizing: border-box;
+  }
+
+  &[rls-size='small'] {
+    --pvt-content-gap: var(--rlc-card-content-gap, var(--rls-sizing-x3));
+    --pvt-content-padding: var(
+      --rlc-card-content-padding,
+      var(--rls-sizing-x6)
+    );
   }
 }

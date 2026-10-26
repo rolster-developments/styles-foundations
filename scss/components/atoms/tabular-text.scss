@@ -1,9 +1,9 @@
 // Rolster Technology TabularText Component
-// v1.1.3
+// v1.1.4
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 09/Jun/2026
+// Updated: 26/Oct/2026
 
 .rls-tabular-text {
   --pvt-char-font-size: var(
@@ -40,5 +40,12 @@
     display: block;
     width: var(--pvt-pointer-width);
     text-align: center;
+  }
+
+  &[rls-size='small'] {
+    --pvt-char-font-size: var(
+      --rlc-tabular-text-font-size,
+      var(--rls-span-font-size)
+    );
   }
 }

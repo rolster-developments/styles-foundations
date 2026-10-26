@@ -1,9 +1,9 @@
 // Rolster Technology ChipGroup Component
-// v1.0.0
+// v1.0.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 07/Oct/2026
-// Updated: 07/Oct/2026
+// Updated: 26/Oct/2026
 
 .rls-chip-group {
   display: flex;
@@ -15,5 +15,13 @@
   &--disabled {
     opacity: 0.5;
     pointer-events: none;
+  }
+
+  &[rls-size='small'] {
+    --rlc-chip-min-height: var(--rls-sizing-x10);
+    --rlc-chip-padding: var(--rls-sizing-x1) var(--rls-sizing-x2);
+    --rlc-chip-icon-dimension: var(--rls-sizing-x6);
+    --rlc-chip-font-size: var(--rls-tiny-font-size);
+    --rlc-chip-letter-spacing: var(--rls-tiny-letter-spacing);
   }
 }

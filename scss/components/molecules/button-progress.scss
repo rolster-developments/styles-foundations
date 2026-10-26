@@ -1,9 +1,9 @@
 // Rolster Technology ButtonProgress Component
-// v1.0.0
+// v1.0.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 28/May/2026
+// Updated: 26/Oct/2026
 
 .rls-button-progress {
   --rlc-progress-circular-dimension: var(--rls-sizing-x16);
@@ -12,4 +12,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &[rls-size='small'] {
+    --rlc-progress-circular-dimension: var(--rls-sizing-x12);
+    --rlc-button-action-dimension: var(--rls-sizing-x12);
+  }
 }

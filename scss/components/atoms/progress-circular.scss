@@ -1,9 +1,9 @@
 // Rolster Technology ProgressCircular Component
-// v1.2.0
+// v1.2.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 31/Jul/2026
+// Updated: 26/Oct/2026
 
 .rls-progress-circular {
   --pvt-dimension: var(
@@ -33,6 +33,13 @@
     stroke-dashoffset: 0;
     animation: progress-circular-circle 1350ms var(--rls-standard-curve)
       infinite;
+  }
+
+  &[rls-size='small'] {
+    --pvt-dimension: var(
+      --rlc-progress-circular-dimension,
+      var(--rls-sizing-x22)
+    );
   }
 }
 

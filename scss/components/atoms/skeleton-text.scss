@@ -1,23 +1,28 @@
 // Rolster Technology SkeletonText Component
-// v1.2.0
+// v1.2.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 28/May/2026
+// Updated: 26/Oct/2026
 
 .rls-skeleton-text {
   --pvt-height: var(--rlc-skeleton-text-height, var(--rls-body-line-height));
+  --pvt-font-size: var(
+    --rlc-skeleton-text-font-size,
+    var(--rls-body-font-size)
+  );
+  --pvt-letter-spacing: var(
+    --rlc-skeleton-text-letter-spacing,
+    var(--rls-body-letter-spacing)
+  );
   --rlc-skeleton-height: var(--pvt-height);
 
   position: relative;
   display: block;
   overflow: inherit;
   font-weight: inherit;
-  font-size: var(--rlc-skeleton-text-font-size, var(--rls-body-font-size));
-  letter-spacing: var(
-    --rlc-skeleton-text-letter-spacing,
-    var(--rls-body-letter-spacing)
-  );
+  font-size: var(--pvt-font-size);
+  letter-spacing: var(--pvt-letter-spacing);
   line-height: var(--pvt-height);
 
   &__value {
@@ -35,5 +40,17 @@
       text-overflow: ellipsis;
       white-space: nowrap;
     }
+  }
+
+  &[rls-size='small'] {
+    --pvt-height: var(--rlc-skeleton-text-height, var(--rls-span-line-height));
+    --pvt-font-size: var(
+      --rlc-skeleton-text-font-size,
+      var(--rls-span-font-size)
+    );
+    --pvt-letter-spacing: var(
+      --rlc-skeleton-text-letter-spacing,
+      var(--rls-span-letter-spacing)
+    );
   }
 }

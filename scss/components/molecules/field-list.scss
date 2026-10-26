@@ -1,9 +1,9 @@
 // Rolster Technology FieldList Component
-// v1.8.1
+// v1.8.2
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 20/Oct/2026
+// Updated: 26/Oct/2026
 
 .rls-field-list {
   --pvt-control-pointer-events: initial;
@@ -26,6 +26,15 @@
   --pvt-element-pointer-events: initial;
   --pvt-backdrop-opacity: 0;
   --pvt-backdrop-bottom: initial;
+  --pvt-control-height: var(--rlc-input-height, var(--rls-sizing-x12));
+  --pvt-ballot-title-font-size: var(--rls-label-font-size);
+  --pvt-ballot-title-letter-spacing: var(--rls-label-letter-spacing);
+  --pvt-ballot-title-line-height: var(--rls-label-line-height);
+  --pvt-ballot-subtitle-font-size: var(--rls-smalltext-font-size);
+  --pvt-ballot-subtitle-letter-spacing: var(--rls-smalltext-letter-spacing);
+  --pvt-ballot-subtitle-line-height: var(--rls-smalltext-line-height);
+  --pvt-action-font-size: var(--rls-label-font-size);
+  --pvt-action-letter-spacing: var(--rls-label-letter-spacing);
 
   --rlc-field-box-body-padding: var(
     --rlc-field-list-body-padding,
@@ -48,8 +57,8 @@
   &__control {
     position: relative;
     width: 100%;
-    height: var(--rls-sizing-x12);
-    line-height: var(--rls-sizing-x12);
+    height: var(--pvt-control-height);
+    line-height: var(--pvt-control-height);
     padding: 0rem;
     cursor: var(--rlc-field-list-control-cursor, default);
     border: none;
@@ -228,7 +237,7 @@
   &__multi {
     &__chips {
       display: flex;
-      min-height: var(--rls-sizing-x12);
+      min-height: var(--pvt-control-height);
       flex-wrap: wrap;
       gap: var(--rls-sizing-x2);
     }
@@ -275,9 +284,9 @@
       outline: none;
       border-radius: var(--rls-sizing-x4);
       color: var(--rls-theme-color-500);
-      font-size: var(--rls-label-font-size);
+      font-size: var(--pvt-action-font-size);
       font-weight: var(--rls-font-weight-medium);
-      letter-spacing: var(--rls-label-letter-spacing);
+      letter-spacing: var(--pvt-action-letter-spacing);
 
       &:hover:not(:disabled) {
         background: var(--rls-theme-background-100);
@@ -303,12 +312,14 @@
   &__ballot {
     --rlc-ballot-padding: var(--rls-sizing-x4) var(--rls-sizing-x2);
     --rlc-ballot-component-row-gap: var(--rls-sizing-x2);
-    --rlc-ballot-title-letter-spacing: var(--rls-label-letter-spacing);
-    --rlc-ballot-title-font-size: var(--rls-label-font-size);
-    --rlc-ballot-title-line-height: var(--rls-label-line-height);
-    --rlc-ballot-subtitle-letter-spacing: var(--rls-smalltext-letter-spacing);
-    --rlc-ballot-subtitle-font-size: var(--rls-smalltext-font-size);
-    --rlc-ballot-subtitle-line-height: var(--rls-smalltext-line-height);
+    --rlc-ballot-title-letter-spacing: var(--pvt-ballot-title-letter-spacing);
+    --rlc-ballot-title-font-size: var(--pvt-ballot-title-font-size);
+    --rlc-ballot-title-line-height: var(--pvt-ballot-title-line-height);
+    --rlc-ballot-subtitle-letter-spacing: var(
+      --pvt-ballot-subtitle-letter-spacing
+    );
+    --rlc-ballot-subtitle-font-size: var(--pvt-ballot-subtitle-font-size);
+    --rlc-ballot-subtitle-line-height: var(--pvt-ballot-subtitle-line-height);
   }
 
   &__empty {
@@ -361,6 +372,23 @@
     transition:
       opacity 120ms 0ms var(--rls-deceleration-curve),
       bottom 120ms 0ms var(--rls-deceleration-curve);
+  }
+
+  &[rls-size='small'] {
+    --pvt-control-height: var(--rlc-input-height, var(--rls-sizing-x10));
+    --pvt-ballot-title-font-size: var(--rls-caption-font-size);
+    --pvt-ballot-title-letter-spacing: var(--rls-caption-letter-spacing);
+    --pvt-ballot-title-line-height: var(--rls-caption-line-height);
+    --pvt-ballot-subtitle-font-size: var(--rls-overline-font-size);
+    --pvt-ballot-subtitle-letter-spacing: var(--rls-overline-letter-spacing);
+    --pvt-ballot-subtitle-line-height: var(--rls-overline-line-height);
+    --pvt-action-font-size: var(--rls-caption-font-size);
+    --pvt-action-letter-spacing: var(--rls-caption-letter-spacing);
+
+    --rlc-field-box-body-padding: var(
+      --rlc-field-list-body-padding,
+      var(--rls-sizing-x2) var(--rls-sizing-x3)
+    );
   }
 }
 

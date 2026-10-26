@@ -1,9 +1,9 @@
 // Rolster Technology Datatable Component
-// v2.9.1
+// v2.9.2
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 04/Oct/2026
+// Updated: 26/Oct/2026
 
 @mixin datatable_cell_vars() {
   --rlc-field-box-body-background: transparent;
@@ -16,7 +16,7 @@
   --rlc-field-box-body-border-disabled: none;
   --rlc-field-box-body-shadow: none;
   --rlc-field-box-body-shadow-error: none;
-  --rlc-field-box-action-dimension: var(--rls-sizing-x10);
+  --rlc-field-box-action-dimension: var(--pvt-datatable-action-dimension);
   --rlc-field-box-action-background: transparent;
 
   --rlc-field-list-body-padding: var(--rls-sizing-x2) 0rem;
@@ -24,33 +24,34 @@
   --rlc-field-list-control-font-weight: var(--rls-font-weight-medium);
   --rlc-field-list-control-letter-spacing: var(--rls-body-letter-spacing);
   --rlc-field-list-element-padding: var(--rls-sizing-x4);
-  --rlc-field-list-suggestions-top: var(--rls-sizing-x22);
+  --rlc-field-list-suggestions-top: var(--pvt-datatable-suggestions-top);
   --rlc-field-list-suggestions-bottom: var(--rls-sizing-x16);
 
   --rlc-poster-font-size: var(--pvt-datatable-font-size);
   --rlc-poster-width: calc(100% - var(--rls-sizing-x2));
-  --rlc-poster-height: var(--rls-sizing-x8);
+  --rlc-poster-height: var(--pvt-datatable-poster-height);
   --rlc-poster-padding: var(--rls-sizing-x2);
 
-  --rlc-button-action-dimension: var(--rls-sizing-x14);
+  --rlc-button-action-dimension: var(--pvt-datatable-control-dimension);
 
   --rlc-button-margin: 0rem auto;
-  --rlc-button-content-height: var(--rls-sizing-x14);
+  --rlc-button-content-height: var(--pvt-datatable-control-dimension);
   --rlc-button-content-padding: 0rem var(--rls-sizing-x4);
   --rlc-button-content-radius: var(--rls-sizing-x3);
   --rlc-button-description-padding: 0rem;
   --rlc-button-font-size: var(--pvt-datatable-font-size);
-  --rlc-button-icon-dimension: var(--rls-sizing-x8);
+  --rlc-button-icon-dimension: var(--pvt-datatable-button-icon-dimension);
+  --rlc-input-height: var(--pvt-datatable-input-height);
 }
 
 @mixin datatable_cell_control() {
   --rlc-avatar-radius: var(--rls-sizing-x3);
-  --rlc-avatar-width: var(--rls-sizing-x16);
-  --rlc-avatar-height: var(--rls-sizing-x16);
+  --rlc-avatar-width: var(--pvt-datatable-avatar-dimension);
+  --rlc-avatar-height: var(--pvt-datatable-avatar-dimension);
   --rlc-avatar-font-size: var(--pvt-datatable-font-size);
 
-  --rlc-image-width: var(--rls-sizing-x12);
-  --rlc-image-height: var(--rls-sizing-x12);
+  --rlc-image-width: var(--pvt-datatable-image-dimension);
+  --rlc-image-height: var(--pvt-datatable-image-dimension);
 
   --rlc-switch-max-width: var(--rls-sizing-x16);
   --rlc-switch-component-height: var(--rls-sizing-x8);
@@ -60,13 +61,13 @@
 
   justify-content: center;
   align-items: center;
-  min-width: var(--rlc-datatable-control-width, var(--rls-sizing-x20));
-  max-width: var(--rlc-datatable-control-width, var(--rls-sizing-x20));
+  min-width: var(--pvt-datatable-control-width);
+  max-width: var(--pvt-datatable-control-width);
   padding: 0rem;
   box-sizing: initial;
 
   & > img {
-    width: var(--rls-sizing-x12);
+    width: var(--pvt-datatable-image-dimension);
   }
 }
 
@@ -114,6 +115,33 @@
     var(--rls-app-color-900)
   );
 
+  --pvt-datatable-cell-height: var(
+    --rlc-datatable-cell-height,
+    var(--rls-sizing-x22)
+  );
+  --pvt-datatable-title-height: var(
+    --rlc-datatable-title-height,
+    var(--rls-sizing-x22)
+  );
+  --pvt-datatable-cell-padding: var(
+    --rlc-datatable-cell-padding,
+    var(--rls-sizing-x3) 0rem
+  );
+  --pvt-datatable-row-gap: var(--rlc-datatable-row-gap, var(--rls-sizing-x6));
+  --pvt-datatable-row-padding: 0rem var(--rls-sizing-x8);
+  --pvt-datatable-rows-gap: var(--rls-sizing-x6);
+  --pvt-datatable-control-dimension: var(--rls-sizing-x14);
+  --pvt-datatable-control-width: var(
+    --rlc-datatable-control-width,
+    var(--rls-sizing-x20)
+  );
+  --pvt-datatable-action-dimension: var(--rls-sizing-x10);
+  --pvt-datatable-avatar-dimension: var(--rls-sizing-x16);
+  --pvt-datatable-image-dimension: var(--rls-sizing-x12);
+  --pvt-datatable-button-icon-dimension: var(--rls-sizing-x8);
+  --pvt-datatable-poster-height: var(--rls-sizing-x8);
+  --pvt-datatable-suggestions-top: var(--rls-sizing-x22);
+  --pvt-datatable-input-height: var(--rls-sizing-x12);
   --pvt-datatable-padding-component: 0rem;
   --pvt-datatable-padding-scroll: var(--rlc-datatable-padding-scroll, 0rem);
 
@@ -149,7 +177,7 @@
   width: 100%;
   height: var(--rlc-datatable-height, auto);
   flex-direction: column;
-  row-gap: var(--rls-sizing-x6);
+  row-gap: var(--pvt-datatable-rows-gap);
   border-radius: var(--rls-sizing-x4);
   box-sizing: border-box;
 
@@ -175,7 +203,7 @@
   &__toolbar {
     display: flex;
     flex: 0 0 auto;
-    column-gap: var(--rls-sizing-x6);
+    column-gap: var(--pvt-datatable-rows-gap);
     padding: var(--pvt-datatable-padding-component);
     box-sizing: border-box;
     background: var(--pvt-datatable-header-background);
@@ -209,7 +237,7 @@
     --rlc-poster-margin: auto 0rem;
 
     display: flex;
-    padding: 0rem var(--rls-sizing-x8);
+    padding: var(--pvt-datatable-row-padding);
     box-sizing: border-box;
     background: var(--pvt-datatable-header-background);
     border-radius: var(--pvt-datatable-border-radius);
@@ -222,7 +250,7 @@
     display: flex;
     box-sizing: border-box;
     min-width: 0;
-    min-height: var(--rlc-datatable-title-height, var(--rls-sizing-x22));
+    min-height: var(--pvt-datatable-title-height);
     align-items: var(--rlc-datatable-align-items, center);
     justify-content: var(--rlc-datatable-justify-content, flex-start);
     gap: var(--rlc-datatable-cell-gap, var(--rls-sizing-x2));
@@ -247,7 +275,7 @@
     display: flex;
     flex: 1 1 auto;
     flex-direction: column;
-    row-gap: var(--rls-sizing-x6);
+    row-gap: var(--pvt-datatable-rows-gap);
     padding-right: var(--pvt-datatable-padding-scroll);
     box-sizing: border-box;
     overflow-y: var(--pvt-datatable-body-overflow);
@@ -258,7 +286,7 @@
   &__totals {
     position: relative;
     display: flex;
-    padding: 0rem var(--rls-sizing-x8);
+    padding: var(--pvt-datatable-row-padding);
     box-sizing: border-box;
     background: var(--pvt-datatable-row-background);
     border-radius: var(--pvt-datatable-border-radius);
@@ -291,13 +319,13 @@
     display: flex;
     box-sizing: border-box;
     min-width: 0;
-    min-height: var(--rlc-datatable-cell-height, var(--rls-sizing-x22));
+    min-height: var(--pvt-datatable-cell-height);
     align-items: var(--rlc-datatable-align-items, center);
     justify-content: var(--rlc-datatable-justify-content, flex-start);
     gap: var(--rlc-datatable-cell-gap, var(--rls-sizing-x2));
     cursor: default;
     text-align: left;
-    padding: var(--rlc-datatable-cell-padding, var(--rls-sizing-x3) 0rem);
+    padding: var(--pvt-datatable-cell-padding);
     font-size: var(--pvt-datatable-font-size);
     letter-spacing: var(--pvt-datatable-letter-spacing);
 
@@ -317,7 +345,7 @@
   &__title + &__title,
   &__cell + &__cell,
   &__data + &__data {
-    padding-left: var(--rlc-datatable-row-gap, var(--rls-sizing-x6));
+    padding-left: var(--pvt-datatable-row-gap);
   }
 
   &__floating {
@@ -327,7 +355,7 @@
       calc(-100% - var(--rls-sizing-x4))
     );
 
-    --rlc-button-action-dimension: var(--rls-sizing-x14);
+    --rlc-button-action-dimension: var(--pvt-datatable-control-dimension);
 
     position: absolute;
     display: flex;
@@ -385,5 +413,50 @@
     overflow: hidden;
     padding: var(--pvt-datatable-padding-component);
     box-sizing: border-box;
+  }
+
+  &[rls-size='small'] {
+    --pvt-datatable-font-size: var(
+      --rlc-datatable-font-size,
+      var(--rls-caption-font-size)
+    );
+    --pvt-datatable-letter-spacing: var(
+      --rlc-datatable-letter-spacing,
+      var(--rls-caption-letter-spacing)
+    );
+    --pvt-datatable-cell-height: var(
+      --rlc-datatable-cell-height,
+      var(--rls-sizing-x18)
+    );
+    --pvt-datatable-title-height: var(
+      --rlc-datatable-title-height,
+      var(--rls-sizing-x18)
+    );
+    --pvt-datatable-cell-padding: var(
+      --rlc-datatable-cell-padding,
+      var(--rls-sizing-x2) 0rem
+    );
+    --pvt-datatable-row-gap: var(--rlc-datatable-row-gap, var(--rls-sizing-x4));
+    --pvt-datatable-row-padding: 0rem var(--rls-sizing-x6);
+    --pvt-datatable-rows-gap: var(--rls-sizing-x4);
+    --pvt-datatable-control-dimension: var(--rls-sizing-x12);
+    --pvt-datatable-control-width: var(
+      --rlc-datatable-control-width,
+      var(--rls-sizing-x16)
+    );
+    --pvt-datatable-action-dimension: var(--rls-sizing-x8);
+    --pvt-datatable-avatar-dimension: var(--rls-sizing-x12);
+    --pvt-datatable-image-dimension: var(--rls-sizing-x10);
+    --pvt-datatable-button-icon-dimension: var(--rls-sizing-x6);
+    --pvt-datatable-poster-height: var(--rls-sizing-x6);
+    --pvt-datatable-suggestions-top: var(--rls-sizing-x18);
+    --pvt-datatable-input-height: var(--rls-sizing-x10);
+
+    --rlc-ballot-title-letter-spacing: var(--rls-overline-letter-spacing);
+    --rlc-ballot-title-font-size: var(--rls-overline-font-size);
+    --rlc-ballot-title-line-height: var(--rls-overline-line-height);
+    --rlc-ballot-subtitle-letter-spacing: var(--rls-tiny-letter-spacing);
+    --rlc-ballot-subtitle-font-size: var(--rls-tiny-font-size);
+    --rlc-ballot-subtitle-line-height: var(--rls-tiny-line-height);
   }
 }

@@ -1,9 +1,9 @@
 // Rolster Technology SwitchLabel Component
-// v1.0.12
+// v1.0.13
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 28/May/2026
+// Updated: 26/Oct/2026
 
 .rls-label-switch {
   --rlc-switch-cursor: pointer;
@@ -19,13 +19,19 @@
     var(--rls-label-letter-spacing)
   );
 
+  --pvt-component-width: var(--rlc-switch-max-width, var(--rls-sizing-x20));
+  --pvt-label-line-height: var(
+    --rlc-label-switch-line-height,
+    var(--rls-sizing-x12)
+  );
+  --pvt-gap: var(--rls-sizing-x4);
   --pvt-text-opacity: 1;
   --pvt-text-overflow: hidden;
   --pvt-text-white-space: nowrap;
   --pvt-text-text-overflow: ellipsis;
 
   display: flex;
-  column-gap: var(--rls-sizing-x4);
+  column-gap: var(--pvt-gap);
   align-items: center;
 
   &--disabled {
@@ -46,7 +52,7 @@
   }
 
   &__component {
-    width: var(--rlc-switch-max-width, var(--rls-sizing-x20));
+    width: var(--pvt-component-width);
     flex: 0 0 auto;
   }
 
@@ -55,7 +61,7 @@
     font-size: var(--pvt-label-font-size);
     font-weight: var(--rls-font-weight-medium);
     letter-spacing: var(--pvt-label-letter-spacing);
-    line-height: var(--rlc-label-switch-line-height, var(--rls-sizing-x12));
+    line-height: var(--pvt-label-line-height);
     color: var(--rlc-label-switch-font-color, var(--rls-app-color-500));
     user-select: none;
     opacity: var(--pvt-text-opacity);
@@ -67,5 +73,26 @@
       text-overflow: initial;
       white-space: initial;
     }
+  }
+
+  &[rls-size='small'] {
+    --pvt-component-width: var(--rlc-switch-max-width, var(--rls-sizing-x16));
+    --pvt-label-font-size: var(
+      --rlc-label-switch-font-size,
+      var(--rls-caption-font-size)
+    );
+    --pvt-label-letter-spacing: var(
+      --rlc-label-switch-letter-spacing,
+      var(--rls-caption-letter-spacing)
+    );
+    --pvt-label-line-height: var(
+      --rlc-label-switch-line-height,
+      var(--rls-sizing-x10)
+    );
+    --pvt-gap: var(--rls-sizing-x3);
+
+    --rlc-switch-component-height: var(--rls-sizing-x10);
+    --rlc-switch-element-width: var(--rls-sizing-x6);
+    --rlc-switch-element-height: var(--rls-sizing-x6);
   }
 }

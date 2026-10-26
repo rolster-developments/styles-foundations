@@ -1,12 +1,14 @@
 // Rolster Technology Breadcrumb Component
-// v1.1.4
+// v1.1.5
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 28/May/2026
+// Updated: 26/Oct/2026
 
 .rls-breadcrumb {
   --pvt-height: var(--rlc-breadcrumb-height, var(--rls-sizing-x18));
+  --pvt-padding: var(--rlc-breadcrumb-padding, 0rem var(--rls-sizing-x8));
+  --pvt-icon-dimension: var(--rls-sizing-x12);
   --pvt-link-font-color: var(--rls-app-color-600);
 
   --pvt-label-font-size: var(
@@ -25,7 +27,7 @@
   width: 100%;
   height: var(--pvt-height);
   line-height: var(--pvt-height);
-  padding: var(--rlc-breadcrumb-padding, 0rem var(--rls-sizing-x8));
+  padding: var(--pvt-padding);
   box-sizing: border-box;
   user-select: none;
   overflow-x: var(--rlc-breadcrumb-overflow-x, auto);
@@ -60,7 +62,7 @@
       margin: 0rem var(--rls-sizing-x2);
       cursor: default;
       color: inherit;
-      font-size: var(--rls-sizing-x12);
+      font-size: var(--pvt-icon-dimension);
       font-weight: normal;
       font-style: normal;
       letter-spacing: normal;
@@ -83,5 +85,19 @@
         }
       }
     }
+  }
+
+  &[rls-size='small'] {
+    --pvt-height: var(--rlc-breadcrumb-height, var(--rls-sizing-x14));
+    --pvt-padding: var(--rlc-breadcrumb-padding, 0rem var(--rls-sizing-x6));
+    --pvt-icon-dimension: var(--rls-sizing-x10);
+    --pvt-label-font-size: var(
+      --rlc-breadcrumb-font-size,
+      var(--rls-span-font-size)
+    );
+    --pvt-label-letter-spacing: var(
+      --rlc-breadcrumb-letter-spacing,
+      var(--rls-span-letter-spacing)
+    );
   }
 }

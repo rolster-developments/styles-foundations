@@ -1,16 +1,22 @@
 // Rolster Technology Toolbar Component
-// v1.1.1
+// v1.1.2
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 28/May/2026
+// Updated: 26/Oct/2026
 
 .rls-toolbar {
+  --pvt-height: var(--rlc-toolbar-height, var(--rls-sizing-x28));
+  --pvt-gap: var(--rls-sizing-x6);
+  --pvt-title-height: var(--rls-sizing-x12);
+  --pvt-title-font-size: var(--rls-body-font-size);
+  --pvt-actions-gap: var(--rls-sizing-x8);
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  column-gap: var(--rls-sizing-x6);
-  height: var(--rlc-toolbar-height, var(--rls-sizing-x28));
+  column-gap: var(--pvt-gap);
+  height: var(--pvt-height);
 
   & > * {
     width: auto;
@@ -33,9 +39,9 @@
 
   &__title {
     color: var(--rls-app-color-900);
-    height: var(--rls-sizing-x12);
-    line-height: var(--rls-sizing-x12);
-    font-size: var(--rls-body-font-size);
+    height: var(--pvt-title-height);
+    line-height: var(--pvt-title-height);
+    font-size: var(--pvt-title-font-size);
     letter-spacing: var(--rls-label-letter-spacing);
     font-weight: var(--rls-font-weight-bold);
   }
@@ -47,7 +53,15 @@
   &__actions {
     display: flex;
     box-sizing: border-box;
-    column-gap: var(--rls-sizing-x8);
+    column-gap: var(--pvt-actions-gap);
     align-items: center;
+  }
+
+  &[rls-size='small'] {
+    --pvt-height: var(--rlc-toolbar-height, var(--rls-sizing-x22));
+    --pvt-gap: var(--rls-sizing-x4);
+    --pvt-title-height: var(--rls-sizing-x10);
+    --pvt-title-font-size: var(--rls-span-font-size);
+    --pvt-actions-gap: var(--rls-sizing-x6);
   }
 }

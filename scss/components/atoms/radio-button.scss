@@ -1,9 +1,9 @@
 // Rolster Technology Radiobutton Component
-// v1.3.5
+// v1.3.6
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 07/Ago/2026
+// Updated: 26/Oct/2026
 
 .rls-radiobutton {
   --pvt-dimension: var(--rlc-radiobutton-dimension, var(--rls-sizing-x12));
@@ -37,5 +37,9 @@
     border-radius: 50%;
     background: var(--pvt-component-background);
     transition: all 160ms 0ms var(--rls-standard-curve);
+  }
+
+  &[rls-size='small'] {
+    --pvt-dimension: var(--rlc-radiobutton-dimension, var(--rls-sizing-x10));
   }
 }

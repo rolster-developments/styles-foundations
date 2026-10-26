@@ -1,13 +1,24 @@
 // Rolster Technology FieldAutocomplete Component
-// v1.0.8
+// v1.0.9
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 31/Jul/2026
+// Updated: 26/Oct/2026
 
 .rls-field-autocomplete {
   --pvt-control-width: 100%;
   --pvt-control-opacity: 1;
+  --pvt-control-height: var(--rlc-input-height, var(--rls-sizing-x12));
+  --pvt-control-font-size: var(
+    --rlc-input-font-size,
+    var(--rls-input-font-size)
+  );
+  --pvt-control-letter-spacing: var(
+    --rlc-input-letter-spacing,
+    var(--rls-input-letter-spacing)
+  );
+  --pvt-search-padding: var(--rls-sizing-x4);
+  --pvt-search-radius: var(--rls-sizing-x4);
 
   &.rls-field-box--selected {
     --pvt-control-width: calc(100% - var(--pvt-action-dimension));
@@ -25,8 +36,8 @@
       margin-top: var(--rls-sizing-x2);
       margin-bottom: var(--rls-sizing-x6);
       background: var(--rls-app-color-100);
-      border-radius: var(--rls-sizing-x4);
-      padding: var(--rls-sizing-x4);
+      border-radius: var(--pvt-search-radius);
+      padding: var(--pvt-search-padding);
       box-sizing: border-box;
 
       button {
@@ -45,17 +56,17 @@
 
     &__control {
       width: 100%;
-      height: var(--rls-sizing-x12);
-      line-height: var(--rls-sizing-x12);
+      height: var(--pvt-control-height);
+      line-height: var(--pvt-control-height);
       padding: 0rem;
       cursor: text;
       border: none;
       outline: none;
       background: transparent;
       color: var(--rls-app-color-900);
-      font-size: var(--rls-input-font-size);
+      font-size: var(--pvt-control-font-size);
       font-weight: var(--rls-font-weight-medium);
-      letter-spacing: var(--rls-input-letter-spacing);
+      letter-spacing: var(--pvt-control-letter-spacing);
 
       &::placeholder {
         color: var(--rls-app-color-400);
@@ -75,5 +86,10 @@
     .rls-progress-bar {
       margin-bottom: var(--rls-sizing-x8);
     }
+  }
+
+  &[rls-size='small'] {
+    --pvt-search-padding: var(--rls-sizing-x3);
+    --pvt-search-radius: var(--rls-sizing-x3);
   }
 }

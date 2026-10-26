@@ -1,9 +1,9 @@
 // Rolster Technology ProgressBar Component
-// v1.3.0
+// v1.3.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 31/Jul/2026
+// Updated: 26/Oct/2026
 
 .rls-progress-bar {
   --pvt-component-display: block;
@@ -14,7 +14,10 @@
   width: 100%;
   height: var(--pvt-component-height);
   overflow: hidden;
-  background: var(--rlc-progress-bar-background, var(--rls-theme-font-color-400));
+  background: var(
+    --rlc-progress-bar-background,
+    var(--rls-theme-font-color-400)
+  );
   border-radius: var(--pvt-component-radius);
 
   &--indeterminate {
@@ -49,6 +52,13 @@
     background: var(--rls-theme-background-400);
     transition: width 320ms 0ms var(--rls-standard-curve);
     border-radius: var(--pvt-component-radius);
+  }
+
+  &[rls-size='small'] {
+    --pvt-component-height: var(
+      --rlc-progress-bar-height,
+      var(--rls-sizing-x1)
+    );
   }
 }
 
