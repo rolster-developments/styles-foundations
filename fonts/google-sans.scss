@@ -1,9 +1,9 @@
 // Rolster Technology GoogleSans Font
-// v1.0.0
+// v1.1.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 27/Aug/2026
-// Updated: 27/Aug/2026
+// Updated: 27/Oct/2026
 
 @font-face {
   font-family: -rolster-google-sans;
@@ -44,4 +44,21 @@
   --rls-app-font-family:
     -rolster-google-sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Helvetica;
+
+  --rls-heading2-line-height: 33rem;
+  --rls-heading3-line-height: 29rem;
+  --rls-heading5-line-height: 19rem;
+  --rls-heading6-line-height: 17rem;
+  --rls-title-line-height: 13rem;
+  --rls-subtitle-line-height: 12rem;
+  --rls-body-line-height: 11rem;
+  --rls-input-line-height: 10.5rem;
+  --rls-paragraph-line-height: 10rem;
+  --rls-button-line-height: 10.25rem;
+  --rls-label-line-height: 9.5rem;
+  --rls-span-line-height: 9rem;
+  --rls-smalltext-line-height: 8.5rem;
+  --rls-caption-line-height: 7.75rem;
+  --rls-overline-line-height: 7.25rem;
+  --rls-tiny-line-height: 6.5rem;
 }

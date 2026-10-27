@@ -268,7 +268,7 @@ It is applied for `xs` (no query), `sm` (≥ 420px), `md` (≥ 720px), `lg`
 column count) and `.rls-flex-<size>-col-1` … `-col-12` (the span of a child,
 clamped to the column count of its container).
 
-**`scss/utilities/typographics.scss`**
+**`scss/foundations/typographics.scss`**
 
 | Signature                  | Description                                                                      |
 | -------------------------- | -------------------------------------------------------------------------------- |
@@ -318,8 +318,7 @@ one instance (for example `--rlc-icon-dimension` or
 | Borders      | `foundations/borders.scss`      | `--rls-app-border-{1,2,4}-transparent`, plus the `--rls-app-border-{1,2,4}-<token>` built by `rolster-app-border`                                                                                                                     |
 | Sizings      | `foundations/sizings.scss`      | `--rls-sizing-x1` … `--rls-sizing-x48`, `--rls-border-1/2/4` widths and the `--rls-sizing-safe-*` inset variables                                                                                                                     |
 | Elevations   | `foundations/elevations.scss`   | `--rls-z-index-1…32`, `--rls-app-shadow-1…6` and the directional `--rls-app-shadow-{bottom,top,left,right,center}-{2…32}`                                                                                                             |
-| Typographics | `foundations/typographics.scss` | `--rls-font-weight-thin…black`                                                                                                                                                                                                        |
-| Typographics | `utilities/typographics.scss`   | `--rls-app-font-size` and its responsive ladder, plus `--rls-<scale>-font-size`, `-letter-spacing`, `-line-height` and `-font-weight` for the eighteen scales                                                                         |
+| Typographics | `foundations/typographics.scss` | `--rls-font-weight-thin…black`, `--rls-app-font-size` and its responsive ladder, plus `--rls-<scale>-font-size`, `-letter-spacing`, `-line-height` and `-font-weight` for the eighteen scales                                         |
 | Animations   | `foundations/animations.scss`   | `--rls-standard-curve`, `--rls-deceleration-curve`, `--rls-acceleration-curve`, `--rls-sharp-curve`, the `--rls-emphasized-*-curve` set and `--rls-duration-{enter,exit}-{short,medium,long}` (zeroed under `prefers-reduced-motion`) |
 
 The root entry adds the variables that bound the application shell, which the
@@ -372,15 +371,17 @@ wide screens:
 
 ### Assets
 
-The package ships eight font families and an icon font, published under
+The package ships ten font families and an icon font, published under
 `fonts/` and `icons/` and reachable through the `./fonts/*` and `./icons/*`
 entries:
 
 | Asset                          | Format                          | Declares                                       |
 | ------------------------------ | ------------------------------- | ---------------------------------------------- |
+| `fonts/dm-sans.scss`           | `.ttf`                          | `-rolster-dm-sans`, weights 100-900            |
 | `fonts/google-sans.scss`       | `.ttf`                          | `-rolster-google-sans`, weights 100-900        |
 | `fonts/kelson-sans.scss`       | `.woff`                         | `-rolster-kelson-sans`, weights 100-900        |
 | `fonts/mona-sans.scss`         | `.ttf`                          | `-rolster-mona-sans`, weights 100-900          |
+| `fonts/mont.scss`              | `.otf`                          | `-rolster-mont`, weights 100-900               |
 | `fonts/plus-jakarta-sans.scss` | `.ttf`                          | `-rolster-plus-jakarta-sans`, weights 100-900  |
 | `fonts/poppins.scss`           | `.woff2`                        | `-rolster-poppins`, weights 100-900            |
 | `fonts/sora.scss`              | `.ttf`                          | `-rolster-sora`, weights 100-900               |
@@ -388,20 +389,25 @@ entries:
 | `fonts/urbanist.scss`          | `.ttf`                          | `-rolster-urbanist`, weights 100-900           |
 | `icons/rolster-icons.scss`     | `.woff`, `.ttf`, `.eot`, `.svg` | `-rolster-icons` and 248 `.rls-icon-*` classes |
 
-The eighteen typographic scales live in `scss/utilities/typographics.scss`
-and apply to every family. Because `rem` is only 2px to 2.5px here, the
-`-line-height` tokens are sized in real pixels rather than by ratio alone:
-at the smallest `--rls-app-font-size` (2px) every scale keeps at least 1.5px
-of room above the accented capitals and below the descenders of the tallest
-bundled faces (Kelson Sans Bold, Plus Jakarta Sans, Mont), rounded up to the
-nearest 0.25rem (whole rem for the headings). That is
-what stops glyphs being clipped when a component sets `height` or
-`min-height` to the line-height token, and the margin only grows on the
-larger breakpoints. A font
-stylesheet carries only its `@font-face` rules and points
-`--rls-app-font-family` at the family it declares; it does not touch the
-scales. Importing one after the root entry is what picks the typeface of the
-application, so the order matters and only one family should be imported:
+The eighteen typographic scales live in `scss/foundations/typographics.scss`
+and are the defaults for any typeface, including the system fallbacks.
+Because `rem` is only 2px to 2.5px here, their `-line-height` tokens are sized
+in real pixels rather than by ratio alone: at the smallest
+`--rls-app-font-size` (2px) every scale keeps room above the accented
+capitals and below the descenders of the tallest bundled faces, which is what
+stops glyphs being clipped when a component sets `height` or `min-height` to
+the line-height token. Tuned for the tallest faces, those defaults leave too
+much air under the more compact ones, so each font stylesheet carries its
+`@font-face` rules, points `--rls-app-font-family` at the family it declares
+and redefines only the `--rls-<scale>-line-height` tokens that differ from
+the defaults for that family (Poppins, the reference, redefines none). Each value is the foundations line height scaled by the family's own
+normal line height (ascender, descender and line gap, Poppins being the 1.5
+reference the defaults were tuned for), never below the box that keeps the
+accented capitals and descenders of its heaviest weight unclipped on both
+macOS and Windows metrics, and never above the foundations default, rounded
+up to the nearest 0.25rem (whole rem for the headings). Importing one after the root entry is what picks the typeface
+of the application and its line heights, so the order matters and only one
+family should be imported:
 
 ```scss
 @use '@rolster/styles-foundations';

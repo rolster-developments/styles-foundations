@@ -1,9 +1,9 @@
 // Rolster Technology KelsonSans Font
-// v1.0.0
+// v1.1.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 23/Nov/2024
-// Updated: 13/Jun/2026
+// Updated: 27/Oct/2026
 
 @font-face {
   font-family: -rolster-kelson-sans;
@@ -51,4 +51,18 @@
   --rls-app-font-family:
     -rolster-kelson-sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Helvetica;
+
+  --rls-heading6-line-height: 17rem;
+  --rls-title-line-height: 13.5rem;
+  --rls-subtitle-line-height: 12.5rem;
+  --rls-body-line-height: 11.5rem;
+  --rls-input-line-height: 11rem;
+  --rls-paragraph-line-height: 10.5rem;
+  --rls-button-line-height: 10.75rem;
+  --rls-label-line-height: 10rem;
+  --rls-span-line-height: 9.25rem;
+  --rls-smalltext-line-height: 8.75rem;
+  --rls-caption-line-height: 8rem;
+  --rls-overline-line-height: 7.25rem;
+  --rls-tiny-line-height: 6.5rem;
 }

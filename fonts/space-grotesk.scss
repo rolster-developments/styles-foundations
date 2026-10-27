@@ -1,9 +1,9 @@
 // Rolster Technology SpaceGrotesk Font
-// v1.0.0
+// v1.1.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 23/Nov/2024
-// Updated: 13/Jun/2026
+// Updated: 27/Oct/2026
 
 @font-face {
   font-family: -rolster-space-grotesk;
@@ -44,4 +44,23 @@
   --rls-app-font-family:
     -rolster-space-grotesk, -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, Helvetica;
+
+  --rls-heading1-line-height: 39rem;
+  --rls-heading2-line-height: 29rem;
+  --rls-heading3-line-height: 26rem;
+  --rls-heading4-line-height: 21rem;
+  --rls-heading5-line-height: 17rem;
+  --rls-heading6-line-height: 15rem;
+  --rls-title-line-height: 11.5rem;
+  --rls-subtitle-line-height: 10.5rem;
+  --rls-body-line-height: 9.75rem;
+  --rls-input-line-height: 9.5rem;
+  --rls-paragraph-line-height: 9rem;
+  --rls-button-line-height: 9.5rem;
+  --rls-label-line-height: 9rem;
+  --rls-span-line-height: 8rem;
+  --rls-smalltext-line-height: 7.75rem;
+  --rls-caption-line-height: 7.5rem;
+  --rls-overline-line-height: 7rem;
+  --rls-tiny-line-height: 6rem;
 }
