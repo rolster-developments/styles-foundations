@@ -1,9 +1,9 @@
 // Rolster Technology Tabs Component
-// v1.0.3
+// v1.1.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 26/Oct/2026
+// Updated: 28/Oct/2026
 
 .rls-tabs {
   --pvt-children-font-color: var(--rls-app-color-800);
@@ -11,6 +11,15 @@
   --pvt-children-height: var(--rls-sizing-x12);
   --pvt-children-font-size: var(--rls-smalltext-font-size);
   --pvt-children-letter-spacing: var(--rls-smalltext-letter-spacing);
+  --pvt-children-gap: var(--rls-sizing-x2);
+  --pvt-badge-dimension: var(--rls-sizing-x8);
+  --pvt-badge-font-size: var(--rls-caption-font-size);
+  --pvt-badge-letter-spacing: var(--rls-caption-letter-spacing);
+  --pvt-badge-opacity: 1;
+
+  --rlc-badge-dimension: var(--pvt-badge-dimension);
+  --rlc-badge-font-size: var(--pvt-badge-font-size);
+  --rlc-badge-letter-spacing: var(--pvt-badge-letter-spacing);
 
   display: flex;
   background: var(--pvt-background);
@@ -19,8 +28,12 @@
   border-radius: var(--pvt-radius);
 
   &__children {
+    display: flex;
     height: var(--pvt-children-height);
     line-height: var(--pvt-children-height);
+    align-items: center;
+    justify-content: center;
+    column-gap: var(--pvt-children-gap);
     border-radius: var(--pvt-radius);
     color: var(--rls-app-color-500);
     font-size: var(--pvt-children-font-size);
@@ -30,6 +43,10 @@
     cursor: pointer;
     transition: all 240ms var(--rls-standard-curve);
 
+    .rls-badge {
+      opacity: var(--pvt-badge-opacity);
+    }
+
     &--active {
       color: var(--pvt-children-font-color);
       font-weight: var(--rls-font-weight-bold);
@@ -37,6 +54,8 @@
     }
 
     &--disabled {
+      --pvt-badge-opacity: 0.5;
+
       color: var(--rls-app-color-400);
       font-weight: var(--rls-font-weight-regular);
       background: transparent;
@@ -49,5 +68,8 @@
     --pvt-children-height: var(--rls-sizing-x10);
     --pvt-children-font-size: var(--rls-overline-font-size);
     --pvt-children-letter-spacing: var(--rls-overline-letter-spacing);
+    --pvt-badge-dimension: var(--rls-sizing-x7);
+    --pvt-badge-font-size: var(--rls-tiny-font-size);
+    --pvt-badge-letter-spacing: var(--rls-tiny-letter-spacing);
   }
 }
