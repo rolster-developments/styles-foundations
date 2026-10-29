@@ -452,4 +452,4 @@ components entry, at least one design system, a font and the icon font.
 
 ## Contributing
 
-- Daniel Andrés Castillo Pedroza :rocket:
+:sparkles: Daniel Andrés Castillo Pedroza
