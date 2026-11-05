@@ -1,43 +1,43 @@
 // Rolster Technology SpaceGrotesk Font
-// v1.1.0
+// v1.2.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 23/Nov/2024
-// Updated: 27/Oct/2026
+// Updated: 05/Nov/2026
 
 @font-face {
   font-family: -rolster-space-grotesk;
   font-style: normal;
   font-weight: 100 300;
-  src: url('./SpaceGrotesk/SpaceGroteskLight.woff') format('woff');
+  src: url('./SpaceGrotesk/SpaceGroteskLight.woff2') format('woff2');
 }
 
 @font-face {
   font-family: -rolster-space-grotesk;
   font-style: normal;
   font-weight: 400;
-  src: url('./SpaceGrotesk/SpaceGroteskRegular.woff') format('woff');
+  src: url('./SpaceGrotesk/SpaceGroteskRegular.woff2') format('woff2');
 }
 
 @font-face {
   font-family: -rolster-space-grotesk;
   font-style: normal;
   font-weight: 500;
-  src: url('./SpaceGrotesk/SpaceGroteskMedium.woff') format('woff');
+  src: url('./SpaceGrotesk/SpaceGroteskMedium.woff2') format('woff2');
 }
 
 @font-face {
   font-family: -rolster-space-grotesk;
   font-style: normal;
   font-weight: 600;
-  src: url('./SpaceGrotesk/SpaceGroteskSemibold.woff') format('woff');
+  src: url('./SpaceGrotesk/SpaceGroteskSemibold.woff2') format('woff2');
 }
 
 @font-face {
   font-family: -rolster-space-grotesk;
   font-style: normal;
   font-weight: 700 900;
-  src: url('./SpaceGrotesk/SpaceGroteskBold.woff') format('woff');
+  src: url('./SpaceGrotesk/SpaceGroteskBold.woff2') format('woff2');
 }
 
 :root {

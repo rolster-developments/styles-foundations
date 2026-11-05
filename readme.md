@@ -371,22 +371,21 @@ wide screens:
 
 ### Assets
 
-The package ships ten font families and an icon font, published under
+The package ships the font families below and an icon font, published under
 `fonts/` and `icons/` and reachable through the `./fonts/*` and `./icons/*`
 entries:
 
 | Asset                          | Format                          | Declares                                       |
 | ------------------------------ | ------------------------------- | ---------------------------------------------- |
-| `fonts/dm-sans.scss`           | `.ttf`                          | `-rolster-dm-sans`, weights 100-900            |
-| `fonts/google-sans.scss`       | `.ttf`                          | `-rolster-google-sans`, weights 100-900        |
-| `fonts/kelson-sans.scss`       | `.woff`                         | `-rolster-kelson-sans`, weights 100-900        |
-| `fonts/mona-sans.scss`         | `.ttf`                          | `-rolster-mona-sans`, weights 100-900          |
-| `fonts/mont.scss`              | `.otf`                          | `-rolster-mont`, weights 100-900               |
-| `fonts/plus-jakarta-sans.scss` | `.ttf`                          | `-rolster-plus-jakarta-sans`, weights 100-900  |
+| `fonts/dm-sans.scss`           | `.woff2`                        | `-rolster-dm-sans`, weights 100-900            |
+| `fonts/google-sans.scss`       | `.woff2`                        | `-rolster-google-sans`, weights 100-900        |
+| `fonts/kelson-sans.scss`       | `.woff2`                        | `-rolster-kelson-sans`, weights 100-900        |
+| `fonts/mona-sans.scss`         | `.woff2`                        | `-rolster-mona-sans`, weights 100-900          |
+| `fonts/plus-jakarta-sans.scss` | `.woff2`                        | `-rolster-plus-jakarta-sans`, weights 100-900  |
 | `fonts/poppins.scss`           | `.woff2`                        | `-rolster-poppins`, weights 100-900            |
-| `fonts/sora.scss`              | `.ttf`                          | `-rolster-sora`, weights 100-900               |
-| `fonts/space-grotesk.scss`     | `.woff`                         | `-rolster-space-grotesk`, weights 100-900      |
-| `fonts/urbanist.scss`          | `.ttf`                          | `-rolster-urbanist`, weights 100-900           |
+| `fonts/sora.scss`              | `.woff2`                        | `-rolster-sora`, weights 100-900               |
+| `fonts/space-grotesk.scss`     | `.woff2`                        | `-rolster-space-grotesk`, weights 100-900      |
+| `fonts/urbanist.scss`          | `.woff2`                        | `-rolster-urbanist`, weights 100-900           |
 | `icons/rolster-icons.scss`     | `.woff`, `.ttf`, `.eot`, `.svg` | `-rolster-icons` and 248 `.rls-icon-*` classes |
 
 The eighteen typographic scales live in `scss/foundations/typographics.scss`

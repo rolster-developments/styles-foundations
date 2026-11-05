@@ -1,43 +1,43 @@
 // Rolster Technology Urbanist Font
-// v1.1.0
+// v1.2.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 23/Nov/2024
-// Updated: 27/Oct/2026
+// Updated: 05/Nov/2026
 
 @font-face {
   font-family: -rolster-urbanist;
   font-style: normal;
   font-weight: 100 300;
-  src: url('./Urbanist/UrbanistLight.ttf') format('truetype');
+  src: url('./Urbanist/UrbanistLight.woff2') format('woff2');
 }
 
 @font-face {
   font-family: -rolster-urbanist;
   font-style: normal;
   font-weight: 400;
-  src: url('./Urbanist/UrbanistRegular.ttf') format('truetype');
+  src: url('./Urbanist/UrbanistRegular.woff2') format('woff2');
 }
 
 @font-face {
   font-family: -rolster-urbanist;
   font-style: normal;
   font-weight: 500;
-  src: url('./Urbanist/UrbanistMedium.ttf') format('truetype');
+  src: url('./Urbanist/UrbanistMedium.woff2') format('woff2');
 }
 
 @font-face {
   font-family: -rolster-urbanist;
   font-style: normal;
   font-weight: 600;
-  src: url('./Urbanist/UrbanistSemibold.ttf') format('truetype');
+  src: url('./Urbanist/UrbanistSemibold.woff2') format('woff2');
 }
 
 @font-face {
   font-family: -rolster-urbanist;
   font-style: normal;
   font-weight: 700 900;
-  src: url('./Urbanist/UrbanistBold.ttf') format('truetype');
+  src: url('./Urbanist/UrbanistBold.woff2') format('woff2');
 }
 
 :root {

@@ -1,16 +1,16 @@
 // Rolster Technology Mont Font
-// v1.1.0
+// v1.2.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 23/Nov/2024
-// Updated: 27/Oct/2026
+// Updated: 05/Nov/2026
 
 @font-face {
   font-family: -rolster-mont;
   font-style: normal;
   font-weight: 100 300;
   font-display: swap;
-  src: url('./Mont/MontLight.otf') format('opentype');
+  src: url('./Mont/MontLight.woff2') format('woff2');
 }
 
 @font-face {
@@ -18,7 +18,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('./Mont/MontRegular.otf') format('opentype');
+  src: url('./Mont/MontRegular.woff2') format('woff2');
 }
 
 @font-face {
@@ -26,7 +26,7 @@
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url('./Mont/MontSemibold.otf') format('opentype');
+  src: url('./Mont/MontSemibold.woff2') format('woff2');
 }
 
 @font-face {
@@ -34,7 +34,7 @@
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url('./Mont/MontSemibold.otf') format('opentype');
+  src: url('./Mont/MontSemibold.woff2') format('woff2');
 }
 
 @font-face {
@@ -42,7 +42,7 @@
   font-style: normal;
   font-weight: 700 900;
   font-display: swap;
-  src: url('./Mont/MontBold.otf') format('opentype');
+  src: url('./Mont/MontBold.woff2') format('woff2');
 }
 
 :root {

@@ -1,43 +1,43 @@
 // Rolster Technology MonaSans Font
-// v1.1.0
+// v1.2.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 23/Nov/2024
-// Updated: 27/Oct/2026
+// Updated: 05/Nov/2026
 
 @font-face {
   font-family: -rolster-mona-sans;
   font-style: normal;
   font-weight: 100 300;
-  src: url('./MonaSans/MonaSansLight.ttf') format('truetype');
+  src: url('./MonaSans/MonaSansLight.woff2') format('woff2');
 }
 
 @font-face {
   font-family: -rolster-mona-sans;
   font-style: normal;
   font-weight: 400;
-  src: url('./MonaSans/MonaSansRegular.ttf') format('truetype');
+  src: url('./MonaSans/MonaSansRegular.woff2') format('woff2');
 }
 
 @font-face {
   font-family: -rolster-mona-sans;
   font-style: normal;
   font-weight: 500;
-  src: url('./MonaSans/MonaSansMedium.ttf') format('truetype');
+  src: url('./MonaSans/MonaSansMedium.woff2') format('woff2');
 }
 
 @font-face {
   font-family: -rolster-mona-sans;
   font-style: normal;
   font-weight: 600;
-  src: url('./MonaSans/MonaSansSemibold.ttf') format('truetype');
+  src: url('./MonaSans/MonaSansSemibold.woff2') format('woff2');
 }
 
 @font-face {
   font-family: -rolster-mona-sans;
   font-style: normal;
   font-weight: 700 900;
-  src: url('./MonaSans/MonaSansBold.ttf') format('truetype');
+  src: url('./MonaSans/MonaSansBold.woff2') format('woff2');
 }
 
 :root {

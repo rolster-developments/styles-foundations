@@ -1,43 +1,43 @@
 // Rolster Technology Sora Font
-// v1.1.0
+// v1.2.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 23/Nov/2024
-// Updated: 27/Oct/2026
+// Updated: 05/Nov/2026
 
 @font-face {
   font-family: -rolster-sora;
   font-style: normal;
   font-weight: 100 300;
-  src: url('./Sora/SoraLight.ttf') format('truetype');
+  src: url('./Sora/SoraLight.woff2') format('woff2');
 }
 
 @font-face {
   font-family: -rolster-sora;
   font-style: normal;
   font-weight: 400;
-  src: url('./Sora/SoraRegular.ttf') format('truetype');
+  src: url('./Sora/SoraRegular.woff2') format('woff2');
 }
 
 @font-face {
   font-family: -rolster-sora;
   font-style: normal;
   font-weight: 500;
-  src: url('./Sora/SoraMedium.ttf') format('truetype');
+  src: url('./Sora/SoraMedium.woff2') format('woff2');
 }
 
 @font-face {
   font-family: -rolster-sora;
   font-style: normal;
   font-weight: 600;
-  src: url('./Sora/SoraSemibold.ttf') format('truetype');
+  src: url('./Sora/SoraSemibold.woff2') format('woff2');
 }
 
 @font-face {
   font-family: -rolster-sora;
   font-style: normal;
   font-weight: 700 900;
-  src: url('./Sora/SoraBold.ttf') format('truetype');
+  src: url('./Sora/SoraBold.woff2') format('woff2');
 }
 
 :root {

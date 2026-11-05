@@ -1,43 +1,43 @@
 // Rolster Technology PlusJakartaSans Font
-// v1.1.0
+// v1.2.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 23/Nov/2024
-// Updated: 27/Oct/2026
+// Updated: 05/Nov/2026
 
 @font-face {
   font-family: -rolster-plus-jakarta-sans;
   font-style: normal;
   font-weight: 100 300;
-  src: url('./PlusJakartaSans/PlusJakartaSansLight.ttf') format('truetype');
+  src: url('./PlusJakartaSans/PlusJakartaSansLight.woff2') format('woff2');
 }
 
 @font-face {
   font-family: -rolster-plus-jakarta-sans;
   font-style: normal;
   font-weight: 400;
-  src: url('./PlusJakartaSans/PlusJakartaSansRegular.ttf') format('truetype');
+  src: url('./PlusJakartaSans/PlusJakartaSansRegular.woff2') format('woff2');
 }
 
 @font-face {
   font-family: -rolster-plus-jakarta-sans;
   font-style: normal;
   font-weight: 500;
-  src: url('./PlusJakartaSans/PlusJakartaSansMedium.ttf') format('truetype');
+  src: url('./PlusJakartaSans/PlusJakartaSansMedium.woff2') format('woff2');
 }
 
 @font-face {
   font-family: -rolster-plus-jakarta-sans;
   font-style: normal;
   font-weight: 600;
-  src: url('./PlusJakartaSans/PlusJakartaSansSemibold.ttf') format('truetype');
+  src: url('./PlusJakartaSans/PlusJakartaSansSemibold.woff2') format('woff2');
 }
 
 @font-face {
   font-family: -rolster-plus-jakarta-sans;
   font-style: normal;
   font-weight: 700 900;
-  src: url('./PlusJakartaSans/PlusJakartaSansBold.ttf') format('truetype');
+  src: url('./PlusJakartaSans/PlusJakartaSansBold.woff2') format('woff2');
 }
 
 :root {
