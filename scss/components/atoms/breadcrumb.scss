@@ -1,9 +1,9 @@
 // Rolster Technology Breadcrumb Component
-// v1.1.5
+// v1.2.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 26/Oct/2026
+// Updated: 11/Nov/2026
 
 .rls-breadcrumb {
   --pvt-height: var(--rlc-breadcrumb-height, var(--rls-sizing-x18));
@@ -72,6 +72,14 @@
 
     &__a {
       display: inline-block;
+      min-height: 0rem;
+      padding: 0rem;
+      border: none;
+      background: transparent;
+      font: inherit;
+      letter-spacing: inherit;
+      color: inherit;
+      appearance: none;
 
       &[rls-theme] {
         color: var(--rls-theme-color-500);
@@ -82,6 +90,11 @@
 
         &:hover {
           text-decoration: underline;
+        }
+
+        &:focus-visible {
+          outline: var(--rls-app-border-2-500);
+          outline-offset: var(--rls-sizing-x1);
         }
       }
     }

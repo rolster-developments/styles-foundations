@@ -1,9 +1,9 @@
 // Rolster Technology LabelCheckBox Component
-// v1.0.12
+// v1.1.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 26/Oct/2026
+// Updated: 11/Nov/2026
 
 .rls-label-checkbox {
   --pvt-dimension: var(--rlc-label-checkbox-dimension, var(--rls-sizing-x12));
@@ -37,8 +37,6 @@
 
   &--disabled {
     --pvt-text-opacity: 0.5;
-
-    pointer-events: none;
   }
 
   &--reverse {
