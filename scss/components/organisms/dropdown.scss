@@ -1,9 +1,9 @@
 // Rolster Technology Dropdown Component
-// v1.1.1
+// v1.2.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 26/Oct/2026
+// Updated: 11/Nov/2026
 
 .rls-dropdown {
   --pvt-duration-enter: var(
@@ -20,7 +20,7 @@
   --pvt-visibility-delay: var(--pvt-duration-exit);
 
   --pvt-content-opacity: 0;
-  --pvt-content-transform: scale(0.94);
+  --pvt-content-transform: scale(0);
   --pvt-content-padding: var(--rlc-dropdown-padding, var(--rls-sizing-x6));
   --pvt-content-radius: var(--rlc-dropdown-radius, var(--rls-sizing-x6));
 
