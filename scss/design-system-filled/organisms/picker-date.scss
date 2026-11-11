@@ -1,9 +1,9 @@
 // Rolster Technology PickerDate Component
-// v2.1.3
+// v2.1.4
 // @license MIT
 // Author: Rolster Developers
 // Created: 23/Abr/2026
-// Updated: 28/May/2026
+// Updated: 11/Nov/2026
 
 .rls-picker-date {
   &__header {
@@ -13,7 +13,7 @@
   }
 
   &__title {
-    & > span {
+    & > button {
       font-weight: var(--rls-font-weight-bold);
     }
   }
