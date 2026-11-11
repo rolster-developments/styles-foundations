@@ -1,9 +1,9 @@
 // Rolster Technology PickerColor Component
-// v1.0.1
+// v1.1.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 28/May/2026
+// Updated: 11/Nov/2026
 
 .rls-picker-color {
   position: relative;
@@ -36,6 +36,11 @@
     border-radius: var(--rls-sizing-x6);
     cursor: crosshair;
     box-sizing: border-box;
+
+    &:focus-visible {
+      outline: var(--rls-app-border-2-500);
+      outline-offset: var(--rls-sizing-x1);
+    }
   }
 
   &__indicator {
@@ -79,6 +84,11 @@
       height: var(--rls-sizing-x10);
       cursor: pointer;
       border-radius: var(--rls-sizing-x5);
+
+      &:focus-visible {
+        outline: var(--rls-app-border-2-500);
+        outline-offset: var(--rls-sizing-x1);
+      }
 
       &--alpha {
         background-size: 8rem 8rem;
