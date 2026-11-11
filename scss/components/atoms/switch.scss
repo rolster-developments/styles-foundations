@@ -1,9 +1,9 @@
 // Rolster Technology Switch Component
-// v1.3.5
+// v1.4.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 26/Oct/2026
+// Updated: 11/Nov/2026
 
 .rls-switch {
   --pvt-component-background: var(--rls-app-color-400);
@@ -19,11 +19,25 @@
   --pvt-element-radius: var(--rlc-switch-element-radius, 50%);
   --pvt-max-width: var(--rlc-switch-max-width, var(--rls-sizing-x20));
 
+  display: flex;
+  width: 100%;
   max-width: var(--pvt-max-width);
   flex: 0 0 auto;
+  min-height: 0rem;
+  padding: 0rem;
+  border: none;
+  background: transparent;
+  font: inherit;
+  box-sizing: border-box;
+  appearance: none;
 
-  &:hover {
+  &:hover:not(:disabled) {
     cursor: var(--rlc-switch-cursor, initial);
+  }
+
+  &:focus-visible {
+    outline: var(--rls-app-border-2-500);
+    outline-offset: var(--rls-sizing-x1);
   }
 
   &--capsule {
@@ -40,11 +54,12 @@
 
   &--disabled {
     opacity: 0.25;
-    pointer-events: none;
+    cursor: default;
   }
 
   &__component {
     position: relative;
+    display: block;
     width: 100%;
     height: var(--pvt-component-height);
     background: var(--pvt-component-background);
@@ -52,6 +67,7 @@
 
     &__element {
       position: absolute;
+      display: block;
       top: var(--rls-sizing-x2);
       left: var(--pvt-element-left);
       width: var(--pvt-element-width);
