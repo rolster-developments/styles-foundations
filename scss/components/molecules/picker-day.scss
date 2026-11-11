@@ -1,9 +1,9 @@
 // Rolster Technology DayPicker Component
-// v2.3.1
+// v2.4.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 01/Ago/2026
+// Updated: 11/Nov/2026
 
 .rls-picker-day {
   --pvt-span-background: transparent;
@@ -45,9 +45,23 @@
   }
 
   &__element {
+    position: relative;
+    width: 100%;
+    min-height: 0rem;
     text-align: center;
     padding: var(--rls-sizing-x1);
+    border: none;
+    background: transparent;
+    font: inherit;
+    letter-spacing: inherit;
+    color: inherit;
     box-sizing: border-box;
+    appearance: none;
+
+    &:focus-visible {
+      outline: var(--rls-app-border-2-500);
+      outline-offset: calc(var(--rls-sizing-x1) * -1);
+    }
 
     &--today {
       --pvt-span-background: transparent;
