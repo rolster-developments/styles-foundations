@@ -1,0 +1,12 @@
+// Rolster Technology Popover Component
+// v1.0.0
+// @license MIT
+// Author: Rolster Developers
+// Created: 11/Nov/2026
+// Updated: 11/Nov/2026
+
+.rls-popover {
+  &__content {
+    box-shadow: var(--rls-app-shadow-center-8);
+  }
+}

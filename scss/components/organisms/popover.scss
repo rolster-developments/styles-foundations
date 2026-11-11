@@ -1,0 +1,113 @@
+// Rolster Technology Popover Component
+// v1.0.0
+// @license MIT
+// Author: Rolster Developers
+// Created: 11/Nov/2026
+// Updated: 11/Nov/2026
+
+.rls-popover {
+  --pvt-duration-enter: var(
+    --rlc-popover-duration-enter,
+    var(--rls-duration-enter-short)
+  );
+  --pvt-duration-exit: var(
+    --rlc-popover-duration-exit,
+    var(--rls-duration-exit-short)
+  );
+
+  --pvt-duration: var(--pvt-duration-exit);
+  --pvt-curve: var(--rls-emphasized-acceleration-curve);
+  --pvt-visibility-delay: var(--pvt-duration-exit);
+
+  --pvt-content-opacity: 0;
+  --pvt-content-transform: scale(0);
+  --pvt-content-padding: var(--rlc-popover-padding, var(--rls-sizing-x6));
+  --pvt-content-radius: var(--rlc-popover-radius, var(--rls-sizing-x6));
+
+  --pvt-arrow-size: var(--rlc-popover-arrow-size, var(--rls-sizing-x4));
+  --pvt-arrow-position: var(--rlc-popover-arrow-position, 50%);
+  --pvt-arrow-top: auto;
+  --pvt-arrow-right: auto;
+  --pvt-arrow-bottom: auto;
+  --pvt-arrow-left: auto;
+  --pvt-arrow-translate: translate(-50%, -50%);
+
+  position: var(--rlc-popover-position, absolute);
+  display: block;
+  width: auto;
+  z-index: var(--rlc-popover-z-index, var(--rls-z-index-4));
+  visibility: hidden;
+  pointer-events: none;
+  transition: visibility 0ms linear var(--pvt-visibility-delay);
+
+  &--visible {
+    --pvt-duration: var(--pvt-duration-enter);
+    --pvt-curve: var(--rls-emphasized-deceleration-curve);
+    --pvt-visibility-delay: 0ms;
+
+    --pvt-content-opacity: 1;
+    --pvt-content-transform: scale(1);
+
+    visibility: visible;
+    pointer-events: initial;
+  }
+
+  &--bottom {
+    --pvt-arrow-top: 0rem;
+    --pvt-arrow-left: var(--pvt-arrow-position);
+    --pvt-arrow-translate: translate(-50%, -50%);
+  }
+
+  &--top {
+    --pvt-arrow-bottom: 0rem;
+    --pvt-arrow-left: var(--pvt-arrow-position);
+    --pvt-arrow-translate: translate(-50%, 50%);
+  }
+
+  &--right {
+    --pvt-arrow-left: 0rem;
+    --pvt-arrow-top: var(--pvt-arrow-position);
+    --pvt-arrow-translate: translate(-50%, -50%);
+  }
+
+  &--left {
+    --pvt-arrow-right: 0rem;
+    --pvt-arrow-top: var(--pvt-arrow-position);
+    --pvt-arrow-translate: translate(50%, -50%);
+  }
+
+  &__content {
+    position: relative;
+    display: block;
+    width: auto;
+    max-width: var(--rlc-popover-max-width, 150rem);
+    border-radius: var(--pvt-content-radius);
+    padding: var(--pvt-content-padding);
+    box-sizing: border-box;
+    background: var(--rlc-popover-background, var(--rls-app-color-050));
+    opacity: var(--pvt-content-opacity);
+    transform: var(--pvt-content-transform);
+    transition:
+      transform var(--pvt-duration) 0ms var(--pvt-curve),
+      opacity var(--pvt-duration) 0ms var(--pvt-curve);
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: var(--pvt-arrow-top);
+      right: var(--pvt-arrow-right);
+      bottom: var(--pvt-arrow-bottom);
+      left: var(--pvt-arrow-left);
+      width: var(--pvt-arrow-size);
+      height: var(--pvt-arrow-size);
+      background: inherit;
+      transform: var(--pvt-arrow-translate) rotate(45deg);
+    }
+  }
+
+  &[rls-size='small'] {
+    --pvt-content-padding: var(--rlc-popover-padding, var(--rls-sizing-x4));
+    --pvt-content-radius: var(--rlc-popover-radius, var(--rls-sizing-x4));
+    --pvt-arrow-size: var(--rlc-popover-arrow-size, var(--rls-sizing-x3));
+  }
+}
