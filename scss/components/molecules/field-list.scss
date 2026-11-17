@@ -1,9 +1,9 @@
 // Rolster Technology FieldList Component
-// v1.8.3
+// v1.8.4
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 11/Nov/2026
+// Updated: 17/Nov/2026
 
 .rls-field-list {
   --pvt-control-pointer-events: initial;
@@ -27,14 +27,6 @@
   --pvt-backdrop-opacity: 0;
   --pvt-backdrop-bottom: initial;
   --pvt-control-height: var(--rlc-input-height, var(--rls-sizing-x12));
-  --pvt-ballot-title-font-size: var(--rls-label-font-size);
-  --pvt-ballot-title-letter-spacing: var(--rls-label-letter-spacing);
-  --pvt-ballot-title-line-height: var(--rls-label-line-height);
-  --pvt-ballot-subtitle-font-size: var(--rls-smalltext-font-size);
-  --pvt-ballot-subtitle-letter-spacing: var(--rls-smalltext-letter-spacing);
-  --pvt-ballot-subtitle-line-height: var(--rls-smalltext-line-height);
-  --pvt-action-font-size: var(--rls-label-font-size);
-  --pvt-action-letter-spacing: var(--rls-label-letter-spacing);
 
   --rlc-field-box-body-padding: var(
     --rlc-field-list-body-padding,
@@ -95,11 +87,32 @@
   }
 
   &__suggestions {
+    --pvt-ballot-title-font-size: var(--rls-label-font-size);
+    --pvt-ballot-title-letter-spacing: var(--rls-label-letter-spacing);
+    --pvt-ballot-title-line-height: var(--rls-label-line-height);
+    --pvt-ballot-subtitle-font-size: var(--rls-smalltext-font-size);
+    --pvt-ballot-subtitle-letter-spacing: var(--rls-smalltext-letter-spacing);
+    --pvt-ballot-subtitle-line-height: var(--rls-smalltext-line-height);
+    --pvt-action-font-size: var(--rls-label-font-size);
+    --pvt-action-letter-spacing: var(--rls-label-letter-spacing);
+
     position: absolute;
     top: var(
       --rlc-field-list-suggestions-top,
       calc(100% + var(--rls-sizing-x6))
     );
+
+    &[rls-size='small'] {
+      --pvt-ballot-title-font-size: var(--rls-caption-font-size);
+      --pvt-ballot-title-letter-spacing: var(--rls-caption-letter-spacing);
+      --pvt-ballot-title-line-height: var(--rls-caption-line-height);
+      --pvt-ballot-subtitle-font-size: var(--rls-overline-font-size);
+      --pvt-ballot-subtitle-letter-spacing: var(--rls-overline-letter-spacing);
+      --pvt-ballot-subtitle-line-height: var(--rls-overline-line-height);
+      --pvt-action-font-size: var(--rls-caption-font-size);
+      --pvt-action-letter-spacing: var(--rls-caption-letter-spacing);
+    }
+
     bottom: initial;
     left: 0rem;
     width: 100%;
@@ -376,14 +389,6 @@
 
   &[rls-size='small'] {
     --pvt-control-height: var(--rlc-input-height, var(--rls-sizing-x10));
-    --pvt-ballot-title-font-size: var(--rls-caption-font-size);
-    --pvt-ballot-title-letter-spacing: var(--rls-caption-letter-spacing);
-    --pvt-ballot-title-line-height: var(--rls-caption-line-height);
-    --pvt-ballot-subtitle-font-size: var(--rls-overline-font-size);
-    --pvt-ballot-subtitle-letter-spacing: var(--rls-overline-letter-spacing);
-    --pvt-ballot-subtitle-line-height: var(--rls-overline-line-height);
-    --pvt-action-font-size: var(--rls-caption-font-size);
-    --pvt-action-letter-spacing: var(--rls-caption-letter-spacing);
 
     --rlc-field-box-body-padding: var(
       --rlc-field-list-body-padding,
