@@ -1,9 +1,9 @@
 // Rolster Technology FieldListSuggestions Component
-// v1.1.0
+// v1.2.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 11/Nov/2026
+// Updated: 17/Nov/2026
 
 .rls-field-list__ul {
   &__search {
@@ -72,4 +72,25 @@
   .rls-progress-bar {
     margin-bottom: var(--rls-sizing-x8);
   }
+}
+
+.rls-field-list__suggestions__header {
+  padding: var(--rls-sizing-x4) var(--rls-sizing-x4) var(--rls-sizing-x2);
+  box-sizing: border-box;
+  color: var(--rls-app-color-900);
+  font-size: var(--rls-label-font-size);
+  font-weight: var(--rls-font-weight-bold);
+  letter-spacing: var(--rls-label-letter-spacing);
+  line-height: var(--rls-label-line-height);
+  border-bottom: var(--rls-app-border-1-200);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rls-field-list__suggestions[rls-size='small']
+  .rls-field-list__suggestions__header {
+  font-size: var(--rls-caption-font-size);
+  letter-spacing: var(--rls-caption-letter-spacing);
+  line-height: var(--rls-caption-line-height);
 }

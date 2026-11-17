@@ -1,0 +1,151 @@
+// Rolster Technology Filter Component
+// v1.0.0
+// @license MIT
+// Author: Rolster Developers
+// Created: 17/Nov/2026
+// Updated: 17/Nov/2026
+
+.rls-filter {
+  --pvt-filter-gap: var(--rlc-filter-gap, var(--rls-sizing-x2));
+  --pvt-filter-font-size: var(
+    --rlc-filter-font-size,
+    var(--rls-label-font-size)
+  );
+  --pvt-filter-letter-spacing: var(
+    --rlc-filter-letter-spacing,
+    var(--rls-label-letter-spacing)
+  );
+  --pvt-filter-color: var(--rlc-filter-color, var(--rls-app-color-700));
+  --pvt-filter-color-active: var(
+    --rlc-filter-color-active,
+    var(--rls-theme-color-300)
+  );
+  --pvt-filter-counter-dimension: var(--rls-sizing-x8);
+  --pvt-filter-counter-font-size: var(--rls-caption-font-size);
+  --pvt-filter-caret-dimension: var(--rls-sizing-x8);
+  --pvt-filter-value-max-width: var(--rlc-filter-value-max-width, 60rem);
+
+  --rlc-icon-dimension: var(--pvt-filter-caret-dimension);
+
+  max-width: 100%;
+  min-width: 0;
+
+  &__trigger {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    min-width: 0;
+    gap: var(--pvt-filter-gap);
+    padding: var(--rls-sizing-x1) 0rem;
+    box-sizing: border-box;
+    color: var(--pvt-filter-color);
+    font-size: var(--pvt-filter-font-size);
+    font-weight: var(--rls-font-weight-semibold);
+    letter-spacing: var(--pvt-filter-letter-spacing);
+    white-space: nowrap;
+    transition: color var(--rls-duration-exit-short) ease-in-out;
+
+    &--active,
+    &--visible {
+      --pvt-filter-color: var(--pvt-filter-color-active);
+    }
+
+    &--disabled {
+      opacity: 0.5;
+    }
+  }
+
+  &__label,
+  &__value,
+  &__caret {
+    color: inherit;
+  }
+
+  &__label,
+  &__value {
+    flex: 0 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__value {
+    font-weight: var(--rls-font-weight-medium);
+    max-width: var(--pvt-filter-value-max-width);
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--rls-sizing-x2);
+    min-width: 0;
+
+    &__title {
+      flex: 1 1 auto;
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .rls-button-action {
+      flex: 0 0 auto;
+    }
+  }
+
+  &--select &__trigger--active &__label::after {
+    content: ':';
+  }
+
+  &__counter {
+    display: inline-block;
+    min-width: var(--pvt-filter-counter-dimension);
+    height: var(--pvt-filter-counter-dimension);
+    line-height: var(--pvt-filter-counter-dimension);
+    padding: 0rem var(--rls-sizing-x2);
+    box-sizing: border-box;
+    border-radius: var(--pvt-filter-counter-dimension);
+    text-align: center;
+    font-size: var(--pvt-filter-counter-font-size);
+    font-weight: var(--rls-font-weight-semibold);
+    letter-spacing: 0;
+    color: var(--rls-theme-color-050);
+    background: var(--rls-theme-color-300);
+  }
+
+  &__caret {
+    flex: 0 0 auto;
+  }
+
+  &[rls-size='small'] {
+    --pvt-filter-gap: var(--rlc-filter-gap, var(--rls-sizing-x1));
+    --pvt-filter-font-size: var(
+      --rlc-filter-font-size,
+      var(--rls-caption-font-size)
+    );
+    --pvt-filter-letter-spacing: var(
+      --rlc-filter-letter-spacing,
+      var(--rls-caption-letter-spacing)
+    );
+    --pvt-filter-counter-dimension: var(--rls-sizing-x7);
+    --pvt-filter-counter-font-size: var(--rls-overline-font-size);
+    --pvt-filter-caret-dimension: var(--rls-sizing-x7);
+  }
+}
+
+.rls-filter__panel {
+  --pvt-filter-panel-width: var(--rlc-filter-panel-width, 140rem);
+}
+
+@media screen and (min-width: 481px) {
+  .rls-filter__panel {
+    width: var(--pvt-filter-panel-width);
+
+    &.rls-field-list__suggestions--portal {
+      left: min(
+        var(--pvt-portal-left, 0px),
+        calc(100vw - var(--pvt-filter-panel-width) - var(--rls-sizing-x8))
+      );
+    }
+  }
+}
