@@ -1,5 +1,5 @@
 // Rolster Technology PickerSelectorTitle Component
-// v1.1.1
+// v1.1.2
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
@@ -46,6 +46,7 @@
 
   .rls-button-icon {
     --rlc-button-icon-dimension: var(--rls-sizing-x14);
+    --rlc-button-icon-icon-dimension: var(--rls-sizing-x10);
     --rlc-button-icon-background: var(--rls-app-color-050);
     --rlc-button-icon-radius: var(--rls-sizing-x4);
   }
