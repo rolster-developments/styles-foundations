@@ -1,9 +1,9 @@
 // Rolster Technology InputCounter Component
-// v1.0.0
+// v1.0.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 15/May/2026
-// Updated: 28/May/2026
+// Updated: 19/Nov/2026
 
 .rls-input-counter {
   --pvt-body-border: var(
@@ -16,16 +16,6 @@
   );
 
   --pvt-body-shadow: none;
-
-  --pvt-button-background: var(
-    --rlc-input-counter-action-background,
-    var(--rls-app-color-200)
-  );
-
-  --pvt-button-background-hover: var(
-    --rlc-input-counter-action-background-hover,
-    var(--rls-app-color-300)
-  );
 
   &--focused {
     --pvt-body-shadow: var(

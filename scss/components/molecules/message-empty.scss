@@ -1,9 +1,9 @@
 // Rolster Technology MessageEmpty Component
-// v1.0.2
+// v1.0.3
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 26/Oct/2026
+// Updated: 19/Nov/2026
 
 .rls-message-empty {
   --pvt-logo-size: var(--rlc-message-empty-logo-size, var(--rls-sizing-x32));
@@ -37,7 +37,7 @@
 
   &__logo {
     --rlc-icon-color: var(--pvt-logo-color);
-    --rlc-icon-font-size: var(--pvt-logo-size);
+    --rlc-icon-dimension: var(--pvt-logo-size);
 
     display: flex;
     align-items: center;

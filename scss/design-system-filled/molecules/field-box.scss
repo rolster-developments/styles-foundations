@@ -1,9 +1,9 @@
 // Rolster Technology FieldBox Component
-// v2.3.3
+// v2.3.4
 // @license MIT
 // Author: Rolster Developers
 // Created: 23/Abr/2026
-// Updated: 28/May/2026
+// Updated: 19/Nov/2026
 
 .rls-field-box {
   --pvt-body-background: var(
@@ -16,19 +16,9 @@
     var(--rls-app-color-050)
   );
 
-  --pvt-body-background-error: var(
-    --rlc-field-box-body-background-error,
-    var(--rls-danger-color-100)
-  );
-
   --pvt-body-shadow: var(
     --rlc-field-box-body-shadow,
     var(--rls-app-shadow-center-2)
-  );
-
-  --pvt-action-background-hover: var(
-    --rlc-field-box-action-background-hover,
-    var(--rls-app-color-300)
   );
 
   &--focused {
