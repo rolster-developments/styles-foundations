@@ -1,9 +1,9 @@
 // Rolster Technology Sizings Foundations
-// v2.1.2
+// v3.0.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 31/Jul/2026
+// Updated: 19/Nov/2026
 
 body {
   --rls-sizing-x1: 1rem;
@@ -21,8 +21,6 @@ body {
   --rls-sizing-x7: 7rem;
 
   --rls-sizing-x8: 8rem;
-
-  --rls-sizing-x9: 9rem;
 
   --rls-sizing-x10: 10rem;
 
@@ -44,43 +42,15 @@ body {
 
   --rls-sizing-x28: 28rem;
 
-  --rls-sizing-x30: 30rem;
-
   --rls-sizing-x32: 32rem;
 
   --rls-sizing-x36: 36rem;
 
   --rls-sizing-x40: 40rem;
 
-  --rls-sizing-x48: 48rem;
-
   --rls-border-1: 1px;
 
   --rls-border-2: 2px;
 
   --rls-border-4: 4px;
-}
-
-@supports (padding-top: constant(safe-area-inset-top)) {
-  :root {
-    --rls-sizing-safe-top: constant(safe-area-inset-top);
-
-    --rls-sizing-safe-right: constant(safe-area-inset-right);
-
-    --rls-sizing-safe-bottom: constant(safe-area-inset-bottom);
-
-    --rls-sizing-safe-left: constant(safe-area-inset-left);
-  }
-}
-
-@supports (padding-top: env(safe-area-inset-top)) {
-  :root {
-    --rls-sizing-safe-top: env(safe-area-inset-top);
-
-    --rls-sizing-safe-right: env(safe-area-inset-right);
-
-    --rls-sizing-safe-bottom: env(safe-area-inset-bottom);
-
-    --rls-sizing-safe-left: env(safe-area-inset-left);
-  }
 }

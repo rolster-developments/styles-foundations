@@ -1,9 +1,9 @@
 // Rolster Technology Animations Foundations
-// v2.1.0
+// v3.0.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 04/Oct/2026
+// Updated: 19/Nov/2026
 
 body {
   --rls-standard-curve: cubic-bezier(0.4, 0, 0.2, 1);
@@ -13,8 +13,6 @@ body {
   --rls-acceleration-curve: cubic-bezier(0.4, 0, 1, 1);
 
   --rls-sharp-curve: cubic-bezier(0.4, 0, 0.6, 1);
-
-  --rls-emphasized-curve: cubic-bezier(0.2, 0, 0, 1);
 
   --rls-emphasized-deceleration-curve: cubic-bezier(0.05, 0.7, 0.1, 1);
 
