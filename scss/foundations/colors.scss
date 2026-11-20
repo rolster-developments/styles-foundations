@@ -1,5 +1,5 @@
 // Rolster Technology Colors Foundations
-// v2.10.0
+// v2.11.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 03/Mar/2022
@@ -197,17 +197,17 @@ body {
 
   @include helpers.rolster-theme(
     'mountains',
-    #161d18,
-    #2c352f,
-    #323d36,
-    #3b4a41,
-    #4f6457,
-    #5b7163,
-    #758c7d,
-    #9aaea0,
-    #c1cec4,
-    #e0e7e1,
-    #f6f7f6
+    #1b231e,
+    #222b25,
+    #303b34,
+    #425047,
+    #54695c,
+    #6c8375,
+    #90a898,
+    #b8cdbf,
+    #d9e7de,
+    #f2fbf5,
+    #ffffff
   );
 
   @include helpers.rolster-theme(
@@ -272,32 +272,32 @@ body {
 
   @include helpers.rolster-theme(
     'obsidian',
-    #29221f,
-    #4a3f39,
-    #54483f,
-    #625346,
-    #796955,
-    #8d7f65,
-    #9c9073,
-    #b2aa92,
-    #cecaba,
-    #e6e4db,
-    #f5f5f1
+    #23201a,
+    #2d281e,
+    #3e372b,
+    #544b3b,
+    #6e624c,
+    #897b61,
+    #ae9f82,
+    #d2c5ae,
+    #eae2d3,
+    #fcf8ef,
+    #ffffff
   );
 
   @include helpers.rolster-theme(
     'neutral',
-    #161628,
-    #222137,
-    #27273e,
-    #2f2e47,
-    #393953,
-    #45455e,
-    #66677e,
-    #9394a6,
-    #bebeca,
-    #e0e0e8,
-    #f6f6f9
+    #1e1e31,
+    #26263c,
+    #35354e,
+    #494964,
+    #60607d,
+    #797a95,
+    #9d9eb7,
+    #c4c5d8,
+    #e1e2ee,
+    #f7f7ff,
+    #ffffff
   );
 
   &[app-theme='dim'] {
