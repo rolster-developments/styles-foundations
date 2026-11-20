@@ -1,5 +1,5 @@
 // Rolster Technology Input Component
-// v1.1.6
+// v1.1.7
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
@@ -64,6 +64,9 @@
 
     &:-webkit-autofill {
       -webkit-text-fill-color: var(--pvt-component-font-color);
+      caret-color: var(--pvt-component-font-color);
+      -webkit-background-clip: text;
+      background-clip: text;
     }
 
     &::selection {
