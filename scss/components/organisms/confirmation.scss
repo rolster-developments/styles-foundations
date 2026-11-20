@@ -1,5 +1,5 @@
 // Rolster Technology Confirmation Component
-// v1.5.1
+// v1.5.2
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
@@ -47,7 +47,7 @@
   height: var(--rls-html-max-height);
   justify-content: center;
   align-items: center;
-  z-index: var(--rls-z-index-24);
+  z-index: var(--rls-elevation-dialog);
   visibility: hidden;
   pointer-events: none;
   transition: visibility 0ms linear var(--pvt-visibility-delay);
@@ -76,7 +76,7 @@
     opacity: var(--pvt-component-opacity);
     padding: var(--rls-sizing-x8) 0rem;
     box-sizing: border-box;
-    z-index: var(--rls-z-index-4);
+    z-index: var(--rls-elevation-floating);
     border-radius: var(--rls-sizing-x4);
     background: var(--rls-app-color-050);
     box-shadow: var(--rls-app-shadow-1);
@@ -165,7 +165,7 @@
     right: 0px;
     bottom: 0px;
     opacity: var(--pvt-backdrop-opacity);
-    z-index: var(--rls-z-index-2);
+    z-index: var(--rls-elevation-raised);
     background: var(
       --rlc-confirmation-backdrop-color,
       var(--rlc-modal-backdrop-color, var(--rls-theme-backdrop-400))

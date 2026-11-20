@@ -1,5 +1,5 @@
 // Rolster Technology BottomSheet Component
-// v1.1.1
+// v1.1.2
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
@@ -31,7 +31,7 @@
   width: 100%;
   height: 100%;
   justify-content: center;
-  z-index: var(--rls-z-index-24);
+  z-index: var(--rls-elevation-dialog);
   visibility: hidden;
   pointer-events: none;
   transition: visibility 0ms linear var(--pvt-visibility-delay);
@@ -58,7 +58,7 @@
     max-width: 240rem;
     max-height: var(--pvt-component-max-height);
     flex-direction: column;
-    z-index: var(--rls-z-index-2);
+    z-index: var(--rls-elevation-raised);
     border-radius: var(--rls-sizing-x4) var(--rls-sizing-x4) 0rem 0rem;
     background: var(--rlc-bottom-sheet-background, var(--rls-app-color-050));
     box-shadow: var(--rlc-bottom-sheet-shadow, var(--rls-app-shadow-2));
@@ -84,7 +84,7 @@
     right: 0rem;
     bottom: 0rem;
     opacity: var(--pvt-backdrop-opacity);
-    z-index: var(--rls-z-index-1);
+    z-index: var(--rls-elevation-backdrop);
     background: var(
       --rlc-bottom-sheet-backdrop-color,
       var(--rls-theme-backdrop-400)

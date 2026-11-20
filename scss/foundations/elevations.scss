@@ -1,5 +1,5 @@
 // Rolster Technology Elevations Foundations
-// v4.0.0
+// v5.0.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
@@ -8,19 +8,21 @@
 body {
   --rls-app-shadow-color: rgba(169, 169, 175, 0.6);
 
-  --rls-z-index-1: 1;
+  --rls-elevation-backdrop: 1;
 
-  --rls-z-index-2: 2;
+  --rls-elevation-raised: 2;
 
-  --rls-z-index-4: 4;
+  --rls-elevation-floating: 4;
 
-  --rls-z-index-8: 8;
+  --rls-elevation-navigation: 8;
 
-  --rls-z-index-16: 16;
+  --rls-elevation-sticky: 16;
 
-  --rls-z-index-24: 24;
+  --rls-elevation-dialog: 24;
 
-  --rls-z-index-32: 32;
+  --rls-elevation-menu: 32;
+
+  --rls-elevation-notification: 48;
 
   --rls-app-shadow-1:
     0px 4px 8px -6px rgba(169, 169, 175, 0.03),

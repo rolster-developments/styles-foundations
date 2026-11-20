@@ -1,5 +1,5 @@
 // Rolster Technology FormNavigation Component
-// v1.2.2
+// v1.2.3
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
@@ -41,7 +41,7 @@
   transition:
     transform var(--pvt-duration) 0ms var(--pvt-curve),
     visibility 0ms linear var(--pvt-visibility-delay);
-  z-index: var(--rls-z-index-16);
+  z-index: var(--rls-elevation-sticky);
 
   &--visible {
     // Open state drives the ENTER motion: longer and decelerating.

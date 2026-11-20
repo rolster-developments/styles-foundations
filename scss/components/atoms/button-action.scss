@@ -1,5 +1,5 @@
 // Rolster Technology ButtonAction Component
-// v1.1.10
+// v1.1.11
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
@@ -118,7 +118,7 @@
     font-size: var(--rls-overline-font-size);
     color: var(--rls-theme-font-color-200);
     background: var(--rls-theme-background-200);
-    z-index: var(--rls-z-index-4);
+    z-index: var(--rls-elevation-floating);
     transform: translate(62.5%, 62.5%);
   }
 

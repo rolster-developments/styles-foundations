@@ -1,9 +1,9 @@
 // Rolster Technology Notifications Component
-// v1.1.1
+// v1.1.2
 // @license MIT
 // Author: Rolster Developers
 // Created: 18/Jun/2026
-// Updated: 20/Oct/2026
+// Updated: 19/Nov/2026
 
 .rls-notifications {
   position: fixed;
@@ -14,7 +14,7 @@
   row-gap: var(--rls-sizing-x4);
   right: var(--rls-sizing-x8);
   bottom: var(--rls-sizing-x8);
-  z-index: var(--rls-z-index-32);
+  z-index: var(--rls-elevation-notification);
   pointer-events: none;
   border-radius: var(--rls-sizing-x6);
   background: var(--rls-app-backdrop-filter);

@@ -1,5 +1,5 @@
 // Rolster Technology FieldList Component
-// v1.8.5
+// v1.8.6
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
@@ -158,7 +158,7 @@
       }
 
       &.rls-field-list__suggestions--visible {
-        z-index: var(--rls-z-index-32);
+        z-index: var(--rls-elevation-menu);
       }
     }
 
@@ -186,7 +186,7 @@
       visibility: visible;
       pointer-events: auto;
       overflow: initial;
-      z-index: var(--rls-z-index-8);
+      z-index: var(--rls-elevation-navigation);
     }
 
     &__body {
@@ -200,7 +200,7 @@
       box-sizing: border-box;
       opacity: var(--pvt-list-opacity);
       overflow: hidden;
-      z-index: var(--rls-z-index-2);
+      z-index: var(--rls-elevation-raised);
       background: var(--rls-app-color-050);
       transform: var(--pvt-list-transform);
       transition:
@@ -381,7 +381,7 @@
     right: 0rem;
     bottom: var(--pvt-backdrop-bottom);
     opacity: var(--pvt-backdrop-opacity);
-    z-index: var(--rls-z-index-2);
+    z-index: var(--rls-elevation-raised);
     background: var(--rls-theme-backdrop-400);
     backdrop-filter: blur(2px);
     transition:
@@ -426,7 +426,7 @@
       justify-content: center;
       top: 0rem;
       left: 0rem;
-      z-index: var(--rls-z-index-32);
+      z-index: var(--rls-elevation-menu);
 
       &--visible {
         --pvt-list-max-height: initial;
@@ -441,7 +441,7 @@
       &__body {
         position: absolute;
         bottom: 0px;
-        z-index: var(--rls-z-index-4);
+        z-index: var(--rls-elevation-floating);
         box-shadow: none;
       }
     }

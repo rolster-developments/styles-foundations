@@ -1,5 +1,5 @@
 // Rolster Technology ModalSheet Component
-// v1.1.1
+// v1.1.2
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
@@ -42,7 +42,7 @@
   left: 0rem;
   width: 100%;
   height: 100%;
-  z-index: var(--rls-z-index-24);
+  z-index: var(--rls-elevation-dialog);
   visibility: hidden;
   pointer-events: none;
   align-items: center;
@@ -72,7 +72,7 @@
     max-height: var(--pvt-component-max-height);
     flex-direction: column;
     opacity: var(--pvt-component-opacity);
-    z-index: var(--rls-z-index-2);
+    z-index: var(--rls-elevation-raised);
     border-radius: var(--pvt-component-border-radius);
     background: var(--rlc-modal-sheet-background, var(--rls-app-color-050));
     box-shadow: var(--pvt-component-shadow);
@@ -90,7 +90,7 @@
     right: 0rem;
     bottom: 0rem;
     opacity: var(--pvt-backdrop-opacity);
-    z-index: var(--rls-z-index-1);
+    z-index: var(--rls-elevation-backdrop);
     background: var(
       --rlc-modal-sheet-backdrop-color,
       var(--rls-theme-backdrop-400)
