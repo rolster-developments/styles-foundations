@@ -1,9 +1,9 @@
 // Rolster Technology Helpers Foundations
-// v1.3.0
+// v2.0.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 18/Abr/2025
-// Updated: 28/Sep/2026
+// Updated: 20/Nov/2026
 
 @use 'sass:color' as *;
 
@@ -15,14 +15,8 @@
   --rls-#{$theme}-color-900: #{$color};
 
   --rls-#{$theme}-backdrop-900: rgba(#{$r}, #{$g}, #{$b}, 0.9);
-  --rls-#{$theme}-backdrop-800: rgba(#{$r}, #{$g}, #{$b}, 0.8);
-  --rls-#{$theme}-backdrop-700: rgba(#{$r}, #{$g}, #{$b}, 0.7);
-  --rls-#{$theme}-backdrop-600: rgba(#{$r}, #{$g}, #{$b}, 0.6);
-  --rls-#{$theme}-backdrop-500: rgba(#{$r}, #{$g}, #{$b}, 0.5);
+
   --rls-#{$theme}-backdrop-400: rgba(#{$r}, #{$g}, #{$b}, 0.4);
-  --rls-#{$theme}-backdrop-300: rgba(#{$r}, #{$g}, #{$b}, 0.3);
-  --rls-#{$theme}-backdrop-200: rgba(#{$r}, #{$g}, #{$b}, 0.2);
-  --rls-#{$theme}-backdrop-100: rgba(#{$r}, #{$g}, #{$b}, 0.1);
 }
 
 @mixin rolster-theme-700($theme, $color) {
@@ -31,10 +25,6 @@
   $b: channel($color, 'blue');
 
   --rls-#{$theme}-color-700: #{$color};
-
-  --rls-#{$theme}-skeleton-500: rgba(#{$r}, #{$g}, #{$b}, 0.5);
-
-  --rls-#{$theme}-skeleton-400: rgba(#{$r}, #{$g}, #{$b}, 0.325);
 
   --rls-#{$theme}-skeleton-300: rgba(#{$r}, #{$g}, #{$b}, 0.25);
 
@@ -56,18 +46,12 @@
     var(--rls-#{$theme}-shadow-color-500);
 }
 
-// Skeleton tokens for dark surfaces: same alphas as rolster-theme-700, taken
-// from the light step that mirrors color-700 around color-500.
 @mixin rolster-theme-300($theme, $color) {
   $r: channel($color, 'red');
   $g: channel($color, 'green');
   $b: channel($color, 'blue');
 
   --rls-#{$theme}-color-300: #{$color};
-
-  --rls-#{$theme}-skeleton-dark-500: rgba(#{$r}, #{$g}, #{$b}, 0.5);
-
-  --rls-#{$theme}-skeleton-dark-400: rgba(#{$r}, #{$g}, #{$b}, 0.325);
 
   --rls-#{$theme}-skeleton-dark-300: rgba(#{$r}, #{$g}, #{$b}, 0.25);
 
@@ -130,12 +114,6 @@
     var(--rls-#{$theme}-color-800) 85%
   );
 
-  --rls-#{$theme}-gradient-600: linear-gradient(
-    180deg,
-    var(--rls-#{$theme}-color-600) 15%,
-    var(--rls-#{$theme}-color-700) 85%
-  );
-
   --rls-#{$theme}-gradient-500: linear-gradient(
     180deg,
     var(--rls-#{$theme}-color-500) 15%,
@@ -152,12 +130,6 @@
     180deg,
     var(--rls-#{$theme}-color-300) 15%,
     var(--rls-#{$theme}-color-400) 85%
-  );
-
-  --rls-#{$theme}-gradient-200: linear-gradient(
-    180deg,
-    var(--rls-#{$theme}-color-200) 15%,
-    var(--rls-#{$theme}-color-300) 85%
   );
 
   --rls-#{$theme}-gradient-100: linear-gradient(

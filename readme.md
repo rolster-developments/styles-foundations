@@ -115,8 +115,9 @@ at once and switched at runtime by toggling the class on `<body>`:
 `primary`, `secondary`, `tertiary`, `success`, `info`, `warning`, `danger`,
 `berry`, `ross`, `hope`, `mountains`, `amaizing`, `purple`, `amber`,
 `smartness`, `obsidian` and `neutral` — each one as `--rls-<palette>-color-050` through
-`--rls-<palette>-color-950`, plus the derived gradients, backdrops, skeletons
-and shadows.
+`--rls-<palette>-color-950`, plus the derived gradients (`100`, `300`, `400`,
+`500`, `700`, `800`, `900`), backdrops (`400`, `900`), skeletons (`100` … `300`,
+light and dark), shadow and borders (`border-1-200`, `-500`, `-700`).
 
 `scss/foundations/themes.scss` turns one of those palettes into the **active
 theme**: the `--rls-theme-*` variables every component reads. It applies
@@ -203,29 +204,29 @@ body {
 **`scss/foundations/helpers.scss`** — palette declaration; the only foundations
 partial that emits no CSS of its own.
 
-| Signature                                                                                            | Description                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
-| `rolster-theme($theme, $c950, $c900, $c800, $c700, $c600, $c500, $c400, $c300, $c200, $c100, $c050)` | declares the eleven color steps of a palette and its nine `--rls-<theme>-gradient-*` |
-| `rolster-theme-900($theme, $color)`                                                                  | sets `color-900` and derives `--rls-<theme>-backdrop-100` … `-900`                   |
-| `rolster-theme-700($theme, $color)`                                                                  | sets `color-700` and derives `--rls-<theme>-skeleton-100` … `-500` (light surfaces)  |
-| `rolster-theme-300($theme, $color)`                                                                  | sets `color-300` and derives `--rls-<theme>-skeleton-dark-100` … `-500` (dark)       |
-| `rolster-theme-500($theme, $color)`                                                                  | sets `color-500` and derives `--rls-<theme>-shadow-color-500` and `-shadow-500`      |
+| Signature                                                                                            | Description                                                                         |
+| ---------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `rolster-theme($theme, $c950, $c900, $c800, $c700, $c600, $c500, $c400, $c300, $c200, $c100, $c050)` | declares the eleven color steps of a palette and its `--rls-<theme>-gradient-*`     |
+| `rolster-theme-900($theme, $color)`                                                                  | sets `color-900` and derives `--rls-<theme>-backdrop-400` and `-900`                |
+| `rolster-theme-700($theme, $color)`                                                                  | sets `color-700` and derives `--rls-<theme>-skeleton-100` … `-300` (light surfaces) |
+| `rolster-theme-300($theme, $color)`                                                                  | sets `color-300` and derives `--rls-<theme>-skeleton-dark-100` … `-300` (dark)      |
+| `rolster-theme-500($theme, $color)`                                                                  | sets `color-500` and derives `--rls-<theme>-shadow-color-500` and `-shadow-500`     |
 
 **`scss/foundations/themes.scss`** — theme and border mapping.
 
-| Signature                              | Description                                                                                  |
-| -------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `rolster-theme($theme)`                | maps a palette onto the active theme: colors, shadow, backdrops and borders                  |
-| `rolster-theme-light($theme)`          | maps the palette onto `--rls-theme-background/font-color/border/gradient/skeleton-*` (light) |
-| `rolster-theme-dark($theme)`           | the same pairs mirrored (100 ↔ 400, 200 ↔ 500), for dark mode                                |
-| `rolster-theme-dim($theme)`            | the dark mapping with `background-100`, `border-100` and `gradient-100` one step up, for dim |
-| `rolster-app-border($width, $token)`   | builds `--rls-app-border-<width>-<token>` from `--rls-app-color-<token>`                     |
-| `rolster-border-color($theme, $token)` | builds `--rls-<theme>-border-{1,2,4}-<token>` for one token of a palette                     |
-| `rolster-border-token($theme)`         | applies `rolster-border-color` to the tokens `100` … `900` of a palette                      |
-| `rolster-border-theme($theme, $token)` | maps a palette border onto the active `--rls-theme-border-{1,2,4}-<token>`                   |
-| `rolster-datatable-light($theme)`      | datatable background, border and floating tokens of a palette, for light mode                |
-| `rolster-datatable-dark($theme)`       | the same datatable tokens, for dark mode                                                     |
-| `rolster-datatable-dim($theme)`        | the same datatable tokens, for the dim theme                                                 |
+| Signature                                      | Description                                                                                  |
+| ---------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `rolster-theme($theme)`                        | maps a palette onto the active theme: colors, shadow, backdrops and borders                  |
+| `rolster-theme-light($theme)`                  | maps the palette onto `--rls-theme-background/font-color/border/gradient/skeleton-*` (light) |
+| `rolster-theme-dark($theme)`                   | the same pairs mirrored (100 ↔ 400, 200 ↔ 500), for dark mode                                |
+| `rolster-theme-dim($theme)`                    | the dark mapping with `background-100`, `border-100` and `gradient-100` one step up, for dim |
+| `rolster-app-border($width, $token)`           | builds `--rls-app-border-<width>-<token>` from `--rls-app-color-<token>`                     |
+| `rolster-border-color($theme, $width, $token)` | builds `--rls-<theme>-border-<width>-<token>` from `--rls-<theme>-color-<token>`             |
+| `rolster-border-token($theme)`                 | applies `rolster-border-color` to width 1 on the tokens `200`, `500` and `700`               |
+| `rolster-border-theme($theme, $width, $token)` | maps a palette border onto the active `--rls-theme-border-<width>-<token>`                   |
+| `rolster-datatable-light($theme)`              | datatable background, border and floating tokens of a palette, for light mode                |
+| `rolster-datatable-dark($theme)`               | the same datatable tokens, for dark mode                                                     |
+| `rolster-datatable-dim($theme)`                | the same datatable tokens, for the dim theme                                                 |
 
 **`scss/foundations/flex-boxs.scss`**
 
@@ -313,9 +314,9 @@ one instance (for example `--rlc-icon-dimension` or
 
 | Family       | Declared in                     | Tokens                                                                                                                                                                                                                                                                                   |
 | ------------ | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Colors       | `foundations/colors.scss`       | `--rls-app-color-050…950` (overridable with `--rls-project-color-*`), `--rls-<theme>-color-050…950`, `-gradient-*`, `-backdrop-*`, `-skeleton-*`, `-skeleton-dark-*`, `-shadow-*`                                                                                                        |
-| Themes       | `foundations/themes.scss`       | the active `--rls-theme-color-*`, `-background-*`, `-font-color-*`, `-border-*`, `-gradient-*`, `-backdrop-*`, `-skeleton-*`, `-datatable-*`                                                                                                                                             |
-| Borders      | `foundations/borders.scss`      | `--rls-app-border-1-transparent`, plus the `--rls-app-border-{1,2}-<token>` built by `rolster-app-border` (width 1 on `100`…`400`, width 2 on `100`, `200` and `500`)                                                                                                                    |
+| Colors       | `foundations/colors.scss`       | `--rls-app-color-050…950` (overridable with `--rls-project-color-*`), `--rls-<theme>-color-050…950`, `-gradient-{100,300,400,500,700,800,900}`, `-backdrop-{400,900}`, `-skeleton-{100,200,300}`, `-skeleton-dark-{100,200,300}`, `-shadow-color-500`, `-shadow-500`                     |
+| Themes       | `foundations/themes.scss`       | the active `--rls-theme-color-050…900`, `-background-*`, `-font-color-*`, `-border-{100,300}`, `-border-1-500`, `-border-4-400`, `-gradient-{100,300,400}`, `-backdrop-{400,900}`, `-skeleton-{100,200,300}`, `-shadow-500`; `--rls-<theme>-border-1-{200,500,700}` and `-datatable-*`   |
+| Borders      | `foundations/borders.scss`      | `--rls-app-border-1-transparent`, plus the `--rls-app-border-{1,2}-<token>` built by `rolster-app-border` (width 1 on `200`…`400`, width 2 on `100`, `200` and `500`)                                                                                                                    |
 | Sizings      | `foundations/sizings.scss`      | `--rls-sizing-x1`…`x8`, then `x10`, `x12`, `x14`, `x16`, `x18`, `x20`, `x22`, `x24`, `x26`, `x28`, `x32`, `x36`, `x40`, and the `--rls-border-1/2/4` widths                                                                                                                              |
 | Elevations   | `foundations/elevations.scss`   | the elevation ladder `--rls-elevation-backdrop` (1), `-raised` (2), `-floating` (4), `-navigation` (8), `-sticky` (16), `-dialog` (24), `-menu` (32) and `-notification` (48), plus `--rls-app-shadow-1` and `-2`, and `--rls-app-shadow-center-{2,4,6,8}` over `--rls-app-shadow-color` |
 | Typographics | `foundations/typographics.scss` | `--rls-font-weight-light…black` (300 to 900), `--rls-app-font-size` and its responsive ladder, plus `--rls-<scale>-font-size`, `-letter-spacing`, `-line-height` and `-font-weight` for the eighteen scales                                                                              |
