@@ -1,9 +1,9 @@
 // Rolster Technology ModalSheet Component
-// v1.1.0
+// v1.1.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 04/Oct/2026
+// Updated: 19/Nov/2026
 
 .rls-modal-sheet {
   --pvt-duration-enter: var(
@@ -127,7 +127,7 @@
       0rem 0rem;
     --pvt-component-shadow: var(
       --rlc-modal-sheet-shadow,
-      var(--rls-app-shadow-6)
+      var(--rls-app-shadow-2)
     );
 
     align-items: initial;

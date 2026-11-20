@@ -1,9 +1,9 @@
 // Rolster Technology Confirmation Component
-// v1.5.0
+// v1.5.1
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 04/Oct/2026
+// Updated: 19/Nov/2026
 
 .rls-confirmation {
   --pvt-duration-enter: var(
@@ -79,7 +79,7 @@
     z-index: var(--rls-z-index-4);
     border-radius: var(--rls-sizing-x4);
     background: var(--rls-app-color-050);
-    box-shadow: var(--rls-app-shadow-4);
+    box-shadow: var(--rls-app-shadow-1);
     transform: var(--pvt-component-transform);
     transition:
       opacity var(--pvt-duration) 0ms var(--pvt-curve),

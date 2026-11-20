@@ -1,5 +1,5 @@
 // Rolster Technology Elevations Foundations
-// v3.0.0
+// v4.0.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
@@ -22,11 +22,11 @@ body {
 
   --rls-z-index-32: 32;
 
-  --rls-app-shadow-4:
+  --rls-app-shadow-1:
     0px 4px 8px -6px rgba(169, 169, 175, 0.03),
     0px 16px 8px -4px rgba(169, 169, 175, 0.03);
 
-  --rls-app-shadow-6: 0px 8px 24px -4px rgba(169, 169, 175, 0.12);
+  --rls-app-shadow-2: 0px 8px 24px -4px rgba(169, 169, 175, 0.12);
 
   --rls-app-shadow-center-2: 0px 0px 2px 0px var(--rls-app-shadow-color);
 
@@ -40,19 +40,19 @@ body {
 body[app-theme='dark'] {
   --rls-app-shadow-color: rgb(98, 111, 155, 0.6);
 
-  --rls-app-shadow-4:
+  --rls-app-shadow-1:
     0px 4px 8px -6px rgba(50, 44, 47, 0.03),
     0px 16px 8px -4px rgba(50, 44, 47, 0.03);
 
-  --rls-app-shadow-6: 0px 8px 24px -4px rgba(50, 44, 47, 0.12);
+  --rls-app-shadow-2: 0px 8px 24px -4px rgba(50, 44, 47, 0.12);
 }
 
 body[app-theme='dim'] {
   --rls-app-shadow-color: rgba(14, 13, 24, 0.55);
 
-  --rls-app-shadow-4:
+  --rls-app-shadow-1:
     0px 4px 8px -6px rgba(14, 13, 24, 0.14),
     0px 16px 8px -4px rgba(14, 13, 24, 0.14);
 
-  --rls-app-shadow-6: 0px 8px 24px -4px rgba(14, 13, 24, 0.36);
+  --rls-app-shadow-2: 0px 8px 24px -4px rgba(14, 13, 24, 0.36);
 }
