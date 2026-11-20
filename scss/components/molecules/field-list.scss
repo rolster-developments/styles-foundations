@@ -1,9 +1,9 @@
 // Rolster Technology FieldList Component
-// v1.8.6
+// v1.8.7
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 19/Nov/2026
+// Updated: 20/Nov/2026
 
 .rls-field-list {
   --pvt-control-pointer-events: initial;
@@ -74,7 +74,7 @@
     pointer-events: var(--pvt-control-pointer-events);
 
     &::placeholder {
-      color: var(--rls-app-color-400);
+      color: var(--rls-app-color-500);
     }
 
     &::selection {
