@@ -1,5 +1,5 @@
 // Rolster Technology Colors Foundations
-// v2.11.0
+// v2.12.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 03/Mar/2022
@@ -47,152 +47,152 @@ body {
 
   @include helpers.rolster-theme(
     'primary',
-    #0b2446,
-    #103a6a,
-    #0c4380,
-    #094e9b,
-    #0a63bf,
-    #1780e0,
-    #409cf0,
-    #82bdf7,
-    #bddbfa,
-    #ddebfc,
-    #f0f7fe
+    #152251,
+    #2a3f87,
+    #314aa4,
+    #3c5aca,
+    #4e73f8,
+    #6a8fff,
+    #8aa9ff,
+    #adc4ff,
+    #cedcff,
+    #e6edff,
+    #f4f7ff
   );
 
   @include helpers.rolster-theme(
     'secondary',
-    #003027,
-    #005544,
-    #006751,
-    #008365,
-    #00a47a,
+    #003020,
+    #00533b,
+    #006347,
+    #007958,
+    #00966e,
+    #00b283,
     #00cf99,
-    #25e2aa,
-    #63f2c3,
-    #a0fad7,
-    #cdfee8,
-    #eafff6
+    #71deb4,
+    #aeedd1,
+    #d6f6e7,
+    #edfbf4
   );
 
   @include helpers.rolster-theme(
     'tertiary',
-    #460404,
-    #82100c,
-    #a1100b,
-    #cc1102,
-    #ff2101,
+    #4d0900,
+    #811801,
+    #991c00,
+    #ba2500,
+    #e53100,
     #ff3c0a,
-    #ff6532,
-    #ff9a6d,
-    #ffc4a5,
-    #ffe3d3,
-    #fff3ec
+    #ff856b,
+    #ffae9c,
+    #ffd0c5,
+    #ffe7e1,
+    #fff4f2
   );
 
   @include helpers.rolster-theme(
     'success',
-    #012d22,
-    #04503b,
-    #046146,
-    #017b56,
-    #019f6c,
-    #0bbe81,
-    #30d798,
-    #6beab6,
-    #a5f5cf,
-    #d0fbe4,
-    #ecfdf5
+    #012f25,
+    #035243,
+    #006251,
+    #007863,
+    #07a287,
+    #25af93,
+    #5ac3a9,
+    #8dd7c3,
+    #bbe8db,
+    #dcf3ec,
+    #f0faf6
   );
 
   @include helpers.rolster-theme(
     'info',
-    #063852,
-    #085172,
-    #02628a,
-    #0075a7,
-    #0092cf,
+    #002b3d,
+    #004d68,
+    #005c7c,
+    #007097,
+    #008bba,
+    #00a5db,
     #06b6f1,
-    #31ccff,
-    #78ddff,
-    #b7ebff,
-    #dff4ff,
-    #effaff
+    #76d3ff,
+    #b3e5ff,
+    #d8f2ff,
+    #eef9ff
   );
 
   @include helpers.rolster-theme(
     'warning',
-    #411607,
-    #722f15,
-    #8a3816,
-    #aa4713,
-    #cd6512,
-    #e88918,
-    #efa930,
-    #f2c057,
-    #f6d991,
-    #fbedca,
-    #fef8ec
+    #3c1f00,
+    #663900,
+    #794500,
+    #945500,
+    #b66b00,
+    #d77f00,
+    #f59200,
+    #fca549,
+    #ffd3ab,
+    #ffe9d5,
+    #fff5ec
   );
 
   @include helpers.rolster-theme(
     'danger',
-    #4b0404,
-    #881415,
-    #a50f10,
-    #c80d0e,
-    #ed1516,
-    #ff2627,
-    #ff6465,
-    #ff9d9d,
-    #ffc5c5,
-    #ffdfdf,
-    #fff1f1
+    #4b0c0c,
+    #7e1c1b,
+    #981c1e,
+    #bb1e23,
+    #e52c30,
+    #f43c3c,
+    #ff8379,
+    #ffada4,
+    #ffcfca,
+    #ffe7e4,
+    #fff4f3
   );
 
   @include helpers.rolster-theme(
     'berry',
-    #430e1e,
-    #78233f,
-    #8c2543,
-    #a7294a,
-    #c7375a,
+    #43151e,
+    #722a37,
+    #893042,
+    #a93a50,
     #dc5770,
-    #ec96a4,
-    #f1b0b9,
-    #f7d4d9,
-    #fbe8e9,
-    #fdf3f4
+    #eb647c,
+    #fb8395,
+    #ffabb5,
+    #ffced3,
+    #ffe6e8,
+    #fff4f5
   );
 
   @include helpers.rolster-theme(
     'ross',
-    #500119,
-    #8f0c37,
-    #a80939,
-    #c8083b,
-    #ed1146,
+    #4a0c19,
+    #7c1b30,
+    #961c38,
+    #b81e45,
+    #e12c57,
     #ff4b6e,
-    #ff6982,
-    #ff9fad,
-    #ffcad2,
-    #ffe2e6,
-    #fff0f1
+    #ff808f,
+    #ffabb2,
+    #ffced1,
+    #ffe6e7,
+    #fff4f4
   );
 
   @include helpers.rolster-theme(
     'hope',
-    #02312c,
-    #105146,
-    #0d6255,
-    #0a7b68,
-    #07a287,
+    #002f24,
+    #005342,
+    #00624f,
+    #007861,
+    #009579,
+    #00b090,
     #0cc09d,
-    #25dcb5,
-    #57f1cc,
-    #95fade,
-    #cafdee,
-    #effef9
+    #78dcc0,
+    #b1ebd9,
+    #d7f5eb,
+    #eefaf6
   );
 
   @include helpers.rolster-theme(
@@ -212,62 +212,62 @@ body {
 
   @include helpers.rolster-theme(
     'amaizing',
-    #3f133f,
-    #632c63,
-    #763177,
-    #8e3a91,
-    #aa49b0,
+    #38183b,
+    #602f65,
+    #74377a,
+    #8f4296,
+    #b055b8,
     #c568cd,
-    #d993df,
-    #e7bbec,
-    #f0d9f5,
-    #f8edfa,
-    #fcf6fd
+    #dc8ae3,
+    #ebacf0,
+    #f5cdf8,
+    #fae5fc,
+    #fdf4fd
   );
 
   @include helpers.rolster-theme(
     'purple',
-    #201f47,
-    #35347b,
-    #3c399a,
-    #4843bf,
+    #1e1e55,
+    #38378e,
+    #4341ad,
     #5552d9,
-    #6e74e6,
-    #8a96ef,
-    #acbbf5,
-    #cbd6fa,
-    #e2e9fd,
-    #eff4fe
+    #6765ff,
+    #8088ff,
+    #9aa4ff,
+    #b8c1ff,
+    #d4daff,
+    #e8ecff,
+    #f5f6ff
   );
 
   @include helpers.rolster-theme(
     'amber',
-    #40150a,
-    #772c17,
-    #943418,
-    #ba4014,
-    #e15616,
+    #431800,
+    #722e01,
+    #883800,
+    #a54500,
+    #cc5700,
     #ef6f20,
-    #f28e45,
-    #f7b77a,
-    #fad5ae,
-    #fdecd7,
-    #fef7ee
+    #fc8a4f,
+    #ffb08a,
+    #ffd1bc,
+    #ffe8dd,
+    #fff5f0
   );
 
   @include helpers.rolster-theme(
     'smartness',
-    #321816,
-    #5a302d,
-    #6c3934,
-    #83453a,
-    #9c5a43,
+    #362116,
+    #5e3d2b,
+    #714833,
+    #8b583e,
     #b67959,
-    #bd8a62,
-    #c9a380,
-    #dcc4ab,
-    #eee2d7,
-    #f9f6f1
+    #c58666,
+    #d79f82,
+    #e7bba5,
+    #f2d6c8,
+    #f9eae2,
+    #fcf5f2
   );
 
   @include helpers.rolster-theme(
