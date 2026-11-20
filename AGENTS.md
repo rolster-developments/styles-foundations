@@ -43,6 +43,31 @@ there and regenerating with `npm run fonts:build`; the originals in
 subset a `.woff2` from `fonts/` again: it already lacks the glyphs outside the
 current ranges.
 
+## Testing local changes in a consumer (react-components)
+
+Never symlink this folder into a consumer's `node_modules`. Vite rewrites the
+`url('./Sora/SoraLight.woff2')` references in `fonts/*.scss` to the symlink's
+real path, which lies outside the consumer's root, and serves them as
+`/@fs/...` 403: the fonts never load. Install a packed copy instead, exactly
+what npm would put there:
+
+```
+cd styles-foundations && npm run build
+npm pack --pack-destination /tmp
+rm -rf ../react-components/node_modules/@rolster/styles-foundations
+mkdir -p ../react-components/node_modules/@rolster/styles-foundations
+tar -xzf /tmp/rolster-styles-foundations-<version>.tgz \
+  -C ../react-components/node_modules/@rolster/styles-foundations \
+  --strip-components=1
+```
+
+The consumer compiles the SCSS from source and now serves fonts and icons from
+inside its own root. Repeat the pack after each change you want to see, then
+**restart the consumer's Vite**: it does not watch `node_modules`, and
+`npm pack` stamps every file with a fixed 1985 mtime, so a reload alone keeps
+serving the cached transform. `npm install` in the consumer restores the
+published version.
+
 ## Icon font
 
 `icons/` is outside this pipeline and keeps its own `.eot`, `.ttf`, `.woff`
