@@ -1,5 +1,5 @@
 // Rolster Technology Dropdown Component
-// v1.2.1
+// v1.2.2
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
@@ -27,7 +27,7 @@
   position: var(--rlc-dropdown-position, absolute);
   display: block;
   width: auto;
-  z-index: var(--rlc-dropdown-z-index, var(--rls-elevation-floating));
+  z-index: var(--rlc-dropdown-z-index, var(--rls-elevation-menu));
   visibility: hidden;
   pointer-events: none;
   transition: visibility 0ms linear var(--pvt-visibility-delay);
