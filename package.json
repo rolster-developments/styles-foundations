@@ -45,6 +45,8 @@
   "scripts": {
     "prettier": "prettier --write .",
     "fonts:build": "python3 scripts/fonts-woff2.py",
+    "colors:build": "python3 scripts/colors-scss.py",
+    "colors:check": "python3 scripts/colors-scss.py --check",
     "clean": "rimraf ./dist",
     "comp:build": "sass scss/components/index.scss dist/components.css --style=compressed",
     "dsbd:build": "sass scss/design-system-bordered/index.scss dist/design-system-bordered.css --style=compressed",

@@ -43,6 +43,34 @@ there and regenerating with `npm run fonts:build`; the originals in
 subset a `.woff2` from `fonts/` again: it already lacks the glyphs outside the
 current ranges.
 
+## Color palettes
+
+`scss/foundations/colors.scss` is generated: never edit its values by hand.
+`scripts/colors-scss.py`, run through `npm run colors:build`, writes the whole
+file from the constants at its top and keeps only the six header lines of the
+existing file, so bump the version and date there before running it.
+
+- `APP` holds the eleven greys of the `--rls-app-color-*` scale for `light`,
+  `dim` and `dark`, from `950` to `050`, written as literals.
+- `THEMES` lists the eighteen palettes in file order. A palette whose value is
+  a single hex is chromatic: the script derives its eleven steps in OKLCH from
+  that base, which stays in the ramp as the step whose lightness is nearest
+  (`LADDER`), scaling the chroma curve (`CHROMA`) so that step keeps the base
+  chroma and clamping to sRGB by reducing chroma only. A palette whose value is
+  a list of eleven hexes is achromatic and goes in verbatim; those sit on the
+  lightness ladder of the `app` scale, not on `LADDER`.
+
+To change a chromatic palette, change its base hex. To add one, add its tuple
+to `THEMES` and the name to `$rolster-themes` and to the `rolster-border-token`
+list in `scss/foundations/themes.scss`. `npm run colors:check` exits 1 when
+`colors.scss` differs from what the script would write; run it before
+committing a change to either file.
+
+`LADDER` and `CHROMA` are the per-step means measured on the thirteen chromatic
+palettes that existed before the OKLCH regeneration of 20/Nov/2026; they are
+the shared shape of every ramp and should not change without regenerating all
+of them.
+
 ## Testing local changes in a consumer (react-components)
 
 Never symlink this folder into a consumer's `node_modules`. Vite rewrites the
