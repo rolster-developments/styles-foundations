@@ -1,5 +1,5 @@
 // Rolster Technology FieldBox Component
-// v2.3.7
+// v2.3.8
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
@@ -25,6 +25,8 @@
     --rlc-field-box-action-background,
     var(--rls-app-color-200)
   );
+
+  --pvt-action-radius: var(--rlc-field-box-action-radius, var(--rls-sizing-x2));
 
   --pvt-body-button-icon-dimension: var(--rls-sizing-x12);
   --pvt-label-font-size: var(--rls-smalltext-font-size);
@@ -94,10 +96,7 @@
       --pvt-action-font-color,
       var(--rls-app-color-600)
     );
-    --rlc-button-icon-radius: var(
-      --rlc-field-box-action-radius,
-      var(--rls-sizing-x2)
-    );
+    --rlc-button-icon-radius: var(--pvt-action-radius);
 
     display: flex;
     align-items: center;

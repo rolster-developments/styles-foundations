@@ -1,9 +1,9 @@
 // Rolster Technology FieldList Component
-// v1.8.4
+// v1.8.5
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 17/Nov/2026
+// Updated: 19/Nov/2026
 
 .rls-field-list {
   --pvt-control-pointer-events: initial;
@@ -28,10 +28,12 @@
   --pvt-backdrop-bottom: initial;
   --pvt-control-height: var(--rlc-input-height, var(--rls-sizing-x12));
 
-  --rlc-field-box-body-padding: var(
+  --pvt-body-padding: var(
     --rlc-field-list-body-padding,
     var(--rls-sizing-x3) var(--rls-sizing-x4)
   );
+
+  --rlc-field-box-body-padding: var(--pvt-body-padding);
 
   position: relative;
   box-sizing: border-box;
@@ -390,7 +392,7 @@
   &[rls-size='small'] {
     --pvt-control-height: var(--rlc-input-height, var(--rls-sizing-x10));
 
-    --rlc-field-box-body-padding: var(
+    --pvt-body-padding: var(
       --rlc-field-list-body-padding,
       var(--rls-sizing-x2) var(--rls-sizing-x3)
     );
