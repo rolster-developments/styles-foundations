@@ -1,0 +1,69 @@
+// Rolster Technology Accordion Component
+// v1.0.0
+// @license MIT
+// Author: Rolster Developers
+// Created: 21/Nov/2026
+// Updated: 21/Nov/2026
+
+.rls-accordion {
+  --pvt-background: var(--rls-app-color-050);
+  --pvt-border: var(--rls-app-border-1-200);
+  --pvt-divider: var(--rls-app-border-1-200);
+  --pvt-header-background: var(--rls-app-color-050);
+  --pvt-header-hover-background: var(--rls-app-color-100);
+  --pvt-header-radius: var(--rls-sizing-x4);
+  --pvt-header-padding: var(--rls-sizing-x4) var(--rls-sizing-x8);
+  --pvt-title-font-color: var(--rls-app-color-600);
+  --pvt-title-font-size: 9rem;
+  --pvt-indicator-color: var(--rls-app-color-500);
+  --pvt-content-font-color: var(--rls-app-color-500);
+  --pvt-content-font-size: 8rem;
+
+  border: var(--pvt-border);
+  border-radius: var(--rls-sizing-x4);
+
+  &__title {
+    font-weight: var(--rls-font-weight-medium);
+  }
+
+  &__content {
+    border-top: var(--pvt-divider);
+  }
+
+  &--open {
+    --pvt-indicator-background: var(--rls-app-color-100);
+    --pvt-header-radius: var(--rls-sizing-x4) var(--rls-sizing-x4) 0rem 0rem;
+  }
+
+  &--disabled {
+    --pvt-header-background: var(--rls-app-color-100);
+    --pvt-header-hover-background: var(--rls-app-color-100);
+  }
+
+  &[rls-theme] {
+    --pvt-border: var(--rls-border-1) solid
+      color-mix(in srgb, var(--rls-theme-color-500) 24%, transparent);
+    --pvt-divider: var(--rls-border-1) solid
+      color-mix(in srgb, var(--rls-theme-color-500) 24%, transparent);
+    --pvt-header-hover-background: color-mix(
+      in srgb,
+      var(--rls-theme-color-500) 8%,
+      transparent
+    );
+    --pvt-indicator-color: var(--rls-theme-color-500);
+
+    &.rls-accordion--open {
+      --pvt-indicator-background: color-mix(
+        in srgb,
+        var(--rls-theme-color-500) 8%,
+        transparent
+      );
+    }
+  }
+
+  &[rls-size='small'] {
+    --pvt-header-padding: var(--rls-sizing-x3) var(--rls-sizing-x6);
+    --pvt-title-font-size: 8rem;
+    --pvt-content-font-size: 7rem;
+  }
+}

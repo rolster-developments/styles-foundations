@@ -1,0 +1,47 @@
+// Rolster Technology Pagination Component
+// v1.0.0
+// @license MIT
+// Author: Rolster Developers
+// Created: 21/Nov/2026
+// Updated: 21/Nov/2026
+
+.rls-pagination {
+  --pvt-dimension: var(--rlc-pagination-dimension, var(--rls-sizing-x12));
+  --pvt-pages-gap: var(--rls-sizing-x4);
+  --pvt-font-size: 7rem;
+
+  &__page {
+    color: var(--rls-app-color-500);
+    background: transparent;
+    border-radius: var(--rls-sizing-x4);
+
+    &:hover:not(:disabled) {
+      color: var(--rls-app-color-700);
+      background: var(--rls-app-color-100);
+    }
+
+    &--active {
+      color: var(--rls-theme-color-500);
+      background: transparent;
+      box-shadow: inset 0px 0px 0px 1px var(--rls-theme-color-500);
+    }
+  }
+
+  &__description,
+  &__count {
+    color: var(--rls-app-color-600);
+    font-weight: var(--rls-font-weight-regular);
+  }
+
+  &__action {
+    color: var(--rls-app-color-500);
+
+    &:hover:not(:disabled) {
+      color: var(--rls-theme-color-500);
+    }
+  }
+
+  &[rls-size='small'] {
+    --pvt-dimension: var(--rlc-pagination-dimension, var(--rls-sizing-x10));
+  }
+}

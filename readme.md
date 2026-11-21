@@ -26,6 +26,7 @@ or `@use` the source and reuse its mixins.
 | `@rolster/styles-foundations/design-system-bordered` | `scss/design-system-bordered/index.scss` | `dist/design-system-bordered.css` | the bordered skin of the components                                         |
 | `@rolster/styles-foundations/design-system-filled`   | `scss/design-system-filled/index.scss`   | `dist/design-system-filled.css`   | the filled skin of the components                                           |
 | `@rolster/styles-foundations/design-system-gradient` | `scss/design-system-gradient/index.scss` | `dist/design-system-gradient.css` | the gradient skin of the components                                         |
+| `@rolster/styles-foundations/design-system-rome`     | `scss/design-system-rome/index.scss`     | `dist/design-system-rome.css`     | the Rome skin of the components, after the Rome dashboard UI kit            |
 | `@rolster/styles-foundations/scss/*`                 | any file under `scss/`                   | —                                 | direct access to a single partial, to reuse its mixins                      |
 | `@rolster/styles-foundations/fonts/*`                | any file under `fonts/`                  | —                                 | a font family declaration and its binaries                                  |
 | `@rolster/styles-foundations/icons/*`                | any file under `icons/`                  | —                                 | the icon font declaration and its binaries                                  |
@@ -89,11 +90,17 @@ is present on an ancestor:
 | `./design-system-bordered` | `.rls-design-system-bordered` |
 | `./design-system-filled`   | `.rls-design-system-filled`   |
 | `./design-system-gradient` | `.rls-design-system-gradient` |
+| `./design-system-rome`     | `.rls-design-system-rome`     |
 
 `bordered` and `filled` are complete skins; `gradient` only restyles a subset
 (avatar, button, button action, check box, progress bar, radio button, switch,
 pagination, the day/month/year pickers and the clock picker), so it is meant to
-be combined with one of the other two. Several design systems can be imported
+be combined with one of the other two. `rome` follows the Rome dashboard UI
+kit: white surfaces on a light grey page, 1px borders, 8px radii, gradient
+primaries and a 4px tinted focus ring. It is a complete skin: it covers every
+component `bordered` and `filled` cover, and the ones the kit does not define
+(accordion, notifications, snackbar, the clock, colour and range pickers) are
+styled with the same vocabulary so nothing falls back to the bare component. Several design systems can be imported
 at once and switched at runtime by toggling the class on `<body>`:
 
 ```scss

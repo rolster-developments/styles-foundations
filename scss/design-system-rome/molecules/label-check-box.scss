@@ -1,0 +1,15 @@
+// Rolster Technology Label Check Box Component
+// v1.0.0
+// @license MIT
+// Author: Rolster Developers
+// Created: 21/Nov/2026
+// Updated: 21/Nov/2026
+
+.rls-label-checkbox {
+  --pvt-label-font-size: var(--rlc-label-checkbox-font-size, 9rem);
+
+  &__text {
+    color: var(--rlc-label-checkbox-font-color, var(--rls-app-color-600));
+    font-weight: var(--rls-font-weight-regular);
+  }
+}

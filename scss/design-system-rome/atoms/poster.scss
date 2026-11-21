@@ -1,0 +1,34 @@
+// Rolster Technology Poster Component
+// v1.0.0
+// @license MIT
+// Author: Rolster Developers
+// Created: 21/Nov/2026
+// Updated: 21/Nov/2026
+
+.rls-poster {
+  color: var(--rls-app-color-050);
+  background: var(--rls-app-color-600);
+
+  &[rls-theme] {
+    color: var(--rls-theme-font-color-300);
+    background: var(--rls-theme-gradient-300);
+  }
+
+  &--contrasted {
+    color: var(--rls-app-color-600);
+    background: color-mix(
+      in srgb,
+      var(--rls-app-color-200) 45%,
+      var(--rls-app-color-050)
+    );
+
+    &[rls-theme] {
+      color: var(--rls-theme-color-500);
+      background: color-mix(
+        in srgb,
+        var(--rls-theme-color-500) 8%,
+        transparent
+      );
+    }
+  }
+}

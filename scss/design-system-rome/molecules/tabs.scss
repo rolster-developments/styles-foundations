@@ -1,0 +1,50 @@
+// Rolster Technology Tabs Component
+// v1.0.0
+// @license MIT
+// Author: Rolster Developers
+// Created: 21/Nov/2026
+// Updated: 21/Nov/2026
+
+.rls-tabs {
+  --pvt-background: var(--rls-app-color-100);
+  --pvt-border: var(--rls-app-border-1-200);
+  --pvt-children-font-color: var(--rls-app-color-600);
+  --pvt-children-height: var(--rls-sizing-x20);
+  --pvt-children-font-size: 8rem;
+  --pvt-children-gap: var(--rls-sizing-x2);
+  --pvt-radius: var(--rls-sizing-x4);
+
+  padding: var(--rls-sizing-x2);
+  border: var(--pvt-border);
+  box-sizing: border-box;
+
+  &__children {
+    color: var(--rls-app-color-500);
+    font-weight: var(--rls-font-weight-regular);
+
+    &--active {
+      color: var(--pvt-children-font-color);
+      background: var(--rls-app-color-050);
+      font-weight: var(--rls-font-weight-medium);
+      box-shadow:
+        0px 2px 4px -2px rgba(27, 46, 94, 0.08),
+        0px 4px 8px -2px rgba(27, 46, 94, 0.04);
+    }
+  }
+
+  &[rls-theme] {
+    --pvt-background: color-mix(
+      in srgb,
+      var(--rls-theme-color-500) 8%,
+      transparent
+    );
+    --pvt-border: var(--rls-border-1) solid transparent;
+    --pvt-children-font-color: var(--rls-theme-color-500);
+  }
+
+  &[rls-size='small'] {
+    --pvt-children-height: var(--rls-sizing-x16);
+    --pvt-children-font-size: 7rem;
+    --pvt-radius: var(--rls-sizing-x3);
+  }
+}

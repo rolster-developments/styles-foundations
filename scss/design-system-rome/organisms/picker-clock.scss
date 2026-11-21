@@ -1,0 +1,50 @@
+// Rolster Technology Picker Clock Component
+// v1.0.0
+// @license MIT
+// Author: Rolster Developers
+// Created: 21/Nov/2026
+// Updated: 21/Nov/2026
+
+.rls-picker-clock {
+  border-radius: var(--rlc-picker-clock-radius, var(--rls-sizing-x4));
+  background: var(--rlc-picker-clock-background, var(--rls-app-color-050));
+
+  &__title {
+    &__value {
+      color: var(--rls-app-color-600);
+
+      &--active {
+        color: var(--rls-theme-color-500);
+      }
+    }
+  }
+
+  &__zone {
+    &__value {
+      border-radius: var(--rls-sizing-x2);
+      color: var(--rls-app-color-600);
+      background: color-mix(
+        in srgb,
+        var(--rls-app-color-200) 45%,
+        var(--rls-app-color-050)
+      );
+
+      &--active {
+        color: var(--rls-theme-font-color-300);
+        background: var(--rls-theme-gradient-300);
+      }
+    }
+  }
+
+  &__plate {
+    border: var(--rls-app-border-1-200);
+    background: var(--rls-app-color-100);
+  }
+
+  &__footer {
+    --rlc-button-content-padding: 0rem var(--rls-sizing-x4);
+
+    padding: var(--rls-sizing-x6) var(--rls-sizing-x8) var(--rls-sizing-x8)
+      var(--rls-sizing-x8);
+  }
+}

@@ -1,0 +1,95 @@
+// Rolster Technology App Component
+// v1.0.0
+// @license MIT
+// Author: Rolster Developers
+// Created: 21/Nov/2026
+// Updated: 21/Nov/2026
+
+* {
+  scrollbar-color: var(--rls-app-color-300) var(--rls-app-color-100);
+}
+
+.rls-app {
+  &-body {
+    background: var(--rls-app-color-100);
+  }
+
+  &-header {
+    border-bottom: var(--rls-app-border-1-200);
+  }
+
+  &-content {
+    background: var(--rlc-app-content-background, var(--rls-app-color-100));
+  }
+
+  &-page {
+    &__content {
+      background: var(--rls-app-color-100);
+    }
+  }
+
+  &-navbar {
+    --pvt-background: var(--rls-app-color-050);
+    --pvt-background-option-hover: var(--rls-app-color-100);
+    --pvt-option-font-color: var(--rls-app-color-600);
+    --pvt-option-font-color-hover: var(--rls-app-color-700);
+
+    background: var(--rlc-app-navbar-background, var(--pvt-background));
+
+    &[rls-theme] {
+      --pvt-background-option-hover: color-mix(
+        in srgb,
+        var(--rls-theme-color-500) 8%,
+        transparent
+      );
+      --pvt-option-font-color-hover: var(--rls-theme-color-500);
+    }
+
+    &__content {
+      border-right: var(--rls-app-border-1-200);
+    }
+
+    &__body {
+      row-gap: var(--rlc-app-navbar-body-gap, var(--rls-sizing-x4));
+      padding: var(--rlc-app-navbar-body-padding, var(--rls-sizing-x12));
+    }
+
+    &__menu {
+      row-gap: var(--rls-sizing-x4);
+    }
+
+    &__option {
+      min-height: var(--rls-sizing-x24);
+      column-gap: var(--rls-sizing-x8);
+      padding: 0rem var(--rls-sizing-x8);
+      border-radius: var(--rls-sizing-x4);
+      color: var(--pvt-option-font-color);
+      font-size: 9rem;
+
+      &:hover {
+        color: var(--pvt-option-font-color-hover);
+        background: var(--pvt-background-option-hover);
+      }
+    }
+  }
+
+  &-toolbar {
+    background: var(--rls-app-color-050);
+    border-bottom: var(--rls-app-border-1-200);
+
+    & + .rls-app-page__content {
+      width: calc(100% - var(--rls-sizing-x24));
+      padding: calc(var(--pvt-toolbar-height) + var(--rls-sizing-x12))
+        var(--rls-sizing-x12) var(--rls-sizing-x12) var(--rls-sizing-x12);
+    }
+  }
+}
+
+.rls-divider {
+  background-image: linear-gradient(
+    to right,
+    var(--rlc-divider-background, var(--rls-app-color-200)) 50%,
+    rgba(255, 255, 255, 0) 0%
+  );
+  background-size: var(--rlc-divider-size, 200%);
+}

@@ -1,0 +1,82 @@
+// Rolster Technology Button Component
+// v1.0.0
+// @license MIT
+// Author: Rolster Developers
+// Created: 21/Nov/2026
+// Updated: 21/Nov/2026
+
+.rls-button {
+  --pvt-button-font-size: var(--rlc-button-font-size, 9rem);
+  --pvt-button-content-height: var(
+    --rlc-button-content-height,
+    var(--rls-sizing-x24)
+  );
+  --pvt-button-content-padding: var(
+    --rlc-button-content-padding,
+    0rem var(--rls-sizing-x8)
+  );
+  --pvt-button-content-radius: var(
+    --rlc-button-content-radius,
+    var(--rls-sizing-x4)
+  );
+
+  --pvt-ghost-background: transparent;
+  --pvt-ghost-font-color: var(--rls-theme-color-500);
+  --pvt-ghost-border: var(--rls-border-1) solid var(--rls-theme-color-500);
+
+  --pvt-flat-background: var(--rls-app-color-100);
+  --pvt-flat-font-color: var(--rls-app-color-500);
+  --pvt-flat-border: var(--rls-app-border-1-200);
+
+  --pvt-raised-background: var(--rls-theme-gradient-300);
+  --pvt-raised-font-color: var(--rls-theme-font-color-300);
+  --pvt-raised-border: none;
+
+  &:not(:disabled):hover {
+    --pvt-ghost-background: color-mix(
+      in srgb,
+      var(--rls-theme-color-500) 8%,
+      transparent
+    );
+
+    --pvt-flat-background: var(--rls-app-color-200);
+    --pvt-flat-font-color: var(--rls-app-color-600);
+
+    --pvt-raised-background: var(--rls-theme-gradient-400);
+  }
+
+  &:disabled {
+    --pvt-button-content-box-shadow: none;
+
+    opacity: 0.4;
+  }
+
+  &__content {
+    column-gap: var(--rlc-button-content-gap, var(--rls-sizing-x4));
+
+    &--flat {
+      --pvt-button-ripple-background: var(--rls-app-color-400);
+    }
+  }
+
+  &__description {
+    font-weight: var(--rls-font-weight-medium);
+    text-transform: var(--rlc-button-description-text-transform, none);
+  }
+
+  &[rls-size='small'] {
+    --pvt-button-font-size: var(--rlc-button-font-size, 8rem);
+    --pvt-button-content-height: var(
+      --rlc-button-content-height,
+      var(--rls-sizing-x20)
+    );
+    --pvt-button-content-padding: var(
+      --rlc-button-content-padding,
+      0rem var(--rls-sizing-x6)
+    );
+    --pvt-button-content-radius: var(
+      --rlc-button-content-radius,
+      var(--rls-sizing-x4)
+    );
+  }
+}

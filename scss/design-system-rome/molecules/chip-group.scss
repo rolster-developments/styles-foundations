@@ -1,0 +1,10 @@
+// Rolster Technology Chip Group Component
+// v1.0.0
+// @license MIT
+// Author: Rolster Developers
+// Created: 21/Nov/2026
+// Updated: 21/Nov/2026
+
+.rls-chip-group {
+  gap: var(--rlc-chip-group-gap, var(--rls-sizing-x4));
+}

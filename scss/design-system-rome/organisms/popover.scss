@@ -1,0 +1,39 @@
+// Rolster Technology Popover Component
+// v1.0.0
+// @license MIT
+// Author: Rolster Developers
+// Created: 21/Nov/2026
+// Updated: 21/Nov/2026
+
+.rls-popover {
+  --pvt-content-padding: var(
+    --rlc-popover-padding,
+    var(--rls-sizing-x2) var(--rls-sizing-x4)
+  );
+  --pvt-content-radius: var(--rlc-popover-radius, var(--rls-sizing-x2));
+  --pvt-arrow-border-width: 1px 0rem 0rem 1px;
+
+  &--top {
+    --pvt-arrow-border-width: 0rem 1px 1px 0rem;
+  }
+
+  &--right {
+    --pvt-arrow-border-width: 0rem 0rem 1px 1px;
+  }
+
+  &--left {
+    --pvt-arrow-border-width: 1px 1px 0rem 0rem;
+  }
+
+  &__content {
+    border: var(--rlc-popover-border, var(--rls-app-border-1-200));
+    box-shadow: 0px 8px 24px -4px rgba(27, 46, 94, 0.08);
+    color: var(--rls-app-color-600);
+    font-size: 7rem;
+
+    &::before {
+      border: inherit;
+      border-width: var(--pvt-arrow-border-width);
+    }
+  }
+}

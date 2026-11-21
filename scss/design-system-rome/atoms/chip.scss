@@ -1,0 +1,64 @@
+// Rolster Technology Chip Component
+// v1.0.0
+// @license MIT
+// Author: Rolster Developers
+// Created: 21/Nov/2026
+// Updated: 21/Nov/2026
+
+.rls-chip {
+  --pvt-min-height: var(--rlc-chip-min-height, var(--rls-sizing-x16));
+  --pvt-gap: var(--rlc-chip-gap, var(--rls-sizing-x2));
+  --pvt-padding: var(--rlc-chip-padding, 0rem var(--rls-sizing-x8));
+
+  --pvt-font-color: var(--rlc-chip-font-color, var(--rls-app-color-600));
+  --pvt-background: var(
+    --rlc-chip-background,
+    color-mix(in srgb, var(--rls-app-color-200) 45%, var(--rls-app-color-050))
+  );
+
+  --pvt-contrasted-font-color: var(
+    --rlc-chip-contrasted-font-color,
+    var(--rls-app-color-050)
+  );
+  --pvt-contrasted-background: var(
+    --rlc-chip-contrasted-background,
+    var(--rls-app-color-600)
+  );
+
+  --pvt-selected-font-color: var(
+    --rlc-chip-selected-font-color,
+    var(--rls-theme-font-color-300)
+  );
+  --pvt-selected-background: var(
+    --rlc-chip-selected-background,
+    var(--rls-theme-gradient-300)
+  );
+
+  font-size: var(--rlc-chip-font-size, 7rem);
+  font-weight: var(--rlc-chip-font-weight, var(--rls-font-weight-regular));
+  border-radius: var(--rlc-chip-radius, var(--rls-sizing-x4));
+
+  &[rls-theme] {
+    --pvt-font-color: var(--rlc-chip-font-color, var(--rls-theme-color-500));
+    --pvt-background: var(
+      --rlc-chip-background,
+      color-mix(in srgb, var(--rls-theme-color-500) 8%, transparent)
+    );
+
+    --pvt-contrasted-font-color: var(
+      --rlc-chip-contrasted-font-color,
+      var(--rls-theme-font-color-300)
+    );
+    --pvt-contrasted-background: var(
+      --rlc-chip-contrasted-background,
+      var(--rls-theme-gradient-300)
+    );
+  }
+
+  &[rls-size='small'] {
+    --pvt-min-height: var(--rlc-chip-min-height, var(--rls-sizing-x12));
+    --pvt-padding: var(--rlc-chip-padding, 0rem var(--rls-sizing-x4));
+
+    border-radius: var(--rlc-chip-radius, var(--rls-sizing-x2));
+  }
+}

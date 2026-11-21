@@ -1,0 +1,93 @@
+// Rolster Technology Data Table Component
+// v1.0.0
+// @license MIT
+// Author: Rolster Developers
+// Created: 21/Nov/2026
+// Updated: 21/Nov/2026
+
+.rls-datatable {
+  --pvt-datatable-border-radius: var(--rlc-datatable-border-radius, 0rem);
+
+  --pvt-datatable-header-background: var(
+    --rlc-datatable-header-background,
+    var(--rls-app-color-050)
+  );
+  --pvt-datatable-header-border: var(
+    --rlc-datatable-header-border,
+    var(--rls-app-border-1-200)
+  );
+
+  --pvt-datatable-row-background: var(
+    --rlc-datatable-row-background,
+    var(--rls-app-color-050)
+  );
+  --pvt-datatable-row-border: var(
+    --rlc-datatable-row-border,
+    var(--rls-app-border-1-200)
+  );
+
+  --pvt-datatable-summary-background: var(
+    --rlc-datatable-summary-background,
+    var(--rls-app-color-100)
+  );
+  --pvt-datatable-footer-background: var(
+    --rlc-datatable-footer-background,
+    var(--rls-app-color-050)
+  );
+  --pvt-datatable-floating-background: var(--rls-app-color-050);
+
+  --pvt-datatable-rows-gap: 0rem;
+  --pvt-datatable-row-padding: 0rem var(--rls-sizing-x12);
+  --pvt-datatable-font-size: var(--rlc-datatable-font-size, 8rem);
+  --pvt-datatable-font-color: var(
+    --rlc-datatable-font-color,
+    var(--rls-app-color-600)
+  );
+  --pvt-datatable-cell-height: var(
+    --rlc-datatable-cell-height,
+    var(--rls-sizing-x24)
+  );
+
+  --rlc-badge-padding: 0rem var(--rls-sizing-x4);
+
+  border-radius: var(--rls-sizing-x4);
+  border: var(--rls-app-border-1-200);
+  background: var(--rls-app-color-050);
+
+  &__toolbar {
+    border-bottom: var(--pvt-datatable-header-border);
+  }
+
+  &__header {
+    border-bottom: var(--pvt-datatable-header-border);
+  }
+
+  &__title {
+    font-size: 7rem;
+    font-weight: var(
+      --rlc-datatable-header-font-weight,
+      var(--rls-font-weight-medium)
+    );
+    text-transform: uppercase;
+
+    & > * {
+      color: var(--rls-app-color-500);
+    }
+  }
+
+  &__subheader,
+  &__record,
+  &__totals {
+    border-bottom: var(--pvt-datatable-row-border);
+  }
+
+  &__record {
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__footer {
+    border-top: var(--pvt-datatable-header-border);
+  }
+}

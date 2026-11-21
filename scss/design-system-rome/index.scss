@@ -1,0 +1,64 @@
+// Rolster Technology Design System Rome
+// v1.0.0
+// @license MIT
+// Author: Rolster Developers
+// Created: 21/Nov/2026
+// Updated: 21/Nov/2026
+
+@use 'sass:meta';
+
+.rls-design-system-rome {
+  @include meta.load-css('app');
+
+  @include meta.load-css('atoms/area-text');
+  @include meta.load-css('atoms/avatar');
+  @include meta.load-css('atoms/badge');
+  @include meta.load-css('atoms/breadcrumb');
+  @include meta.load-css('atoms/button');
+  @include meta.load-css('atoms/button-action');
+  @include meta.load-css('atoms/button-icon');
+  @include meta.load-css('atoms/check-box');
+  @include meta.load-css('atoms/chip');
+  @include meta.load-css('atoms/image');
+  @include meta.load-css('atoms/input');
+  @include meta.load-css('atoms/input-counter');
+  @include meta.load-css('atoms/input-search');
+  @include meta.load-css('atoms/label');
+  @include meta.load-css('atoms/led');
+  @include meta.load-css('atoms/poster');
+  @include meta.load-css('atoms/progress-bar');
+  @include meta.load-css('atoms/radio-button');
+  @include meta.load-css('atoms/switch');
+
+  @include meta.load-css('molecules/accordion');
+  @include meta.load-css('molecules/ballot');
+  @include meta.load-css('molecules/chip-group');
+  @include meta.load-css('molecules/field-box');
+  @include meta.load-css('molecules/field-list');
+  @include meta.load-css('molecules/label-check-box');
+  @include meta.load-css('molecules/label-radio-button');
+  @include meta.load-css('molecules/label-switch');
+  @include meta.load-css('molecules/pagination');
+  @include meta.load-css('molecules/picker-day');
+  @include meta.load-css('molecules/picker-day-range');
+  @include meta.load-css('molecules/picker-month');
+  @include meta.load-css('molecules/picker-selector-title');
+  @include meta.load-css('molecules/picker-year');
+  @include meta.load-css('molecules/slider');
+  @include meta.load-css('molecules/tabs');
+  @include meta.load-css('molecules/toolbar');
+
+  @include meta.load-css('organisms/card');
+  @include meta.load-css('organisms/data-table');
+  @include meta.load-css('organisms/dropdown');
+  @include meta.load-css('organisms/field-clock');
+  @include meta.load-css('organisms/field-date');
+  @include meta.load-css('organisms/field-date-range');
+  @include meta.load-css('organisms/notifications');
+  @include meta.load-css('organisms/picker-clock');
+  @include meta.load-css('organisms/picker-color');
+  @include meta.load-css('organisms/picker-date');
+  @include meta.load-css('organisms/picker-date-range');
+  @include meta.load-css('organisms/popover');
+  @include meta.load-css('organisms/snackbar');
+}

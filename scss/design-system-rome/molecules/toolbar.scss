@@ -1,0 +1,27 @@
+// Rolster Technology Toolbar Component
+// v1.0.0
+// @license MIT
+// Author: Rolster Developers
+// Created: 21/Nov/2026
+// Updated: 21/Nov/2026
+
+.rls-toolbar {
+  --pvt-height: var(--rlc-toolbar-height, var(--rls-sizing-x32));
+  --pvt-title-height: var(--rls-sizing-x16);
+  --pvt-title-font-size: 12rem;
+  --pvt-actions-gap: var(--rls-sizing-x12);
+
+  &__title {
+    color: var(--rls-app-color-700);
+  }
+
+  &__subtitle {
+    color: var(--rls-app-color-500);
+  }
+
+  &[rls-size='small'] {
+    --pvt-height: var(--rlc-toolbar-height, var(--rls-sizing-x24));
+    --pvt-title-height: var(--rls-sizing-x12);
+    --pvt-title-font-size: 9rem;
+  }
+}
