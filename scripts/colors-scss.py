@@ -41,7 +41,7 @@ APP = {
 
 THEMES = [
     ('standard', APP['light']),
-    ('primary', '#4e73f8'),
+    ('primary', '#1780e0'),
     ('secondary', '#00cf99'),
     ('tertiary', '#ff3c0a'),
     ('success', '#07a287'),

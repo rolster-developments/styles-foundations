@@ -1,9 +1,9 @@
 // Rolster Technology Colors Foundations
-// v2.13.1
+// v2.14.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 03/Mar/2022
-// Updated: 20/Nov/2026
+// Updated: 21/Nov/2026
 
 @use 'helpers' as helpers;
 
@@ -47,17 +47,17 @@ body {
 
   @include helpers.rolster-theme(
     'primary',
-    #152251,
-    #2a3f87,
-    #314aa4,
-    #3c5aca,
-    #4e73f8,
-    #6a8fff,
-    #8aa9ff,
-    #adc4ff,
-    #cedcff,
-    #e6edff,
-    #f4f7ff
+    #062749,
+    #12477b,
+    #0f5495,
+    #0d67b8,
+    #1780e0,
+    #3899fc,
+    #6bb1ff,
+    #9bcaff,
+    #c4e0ff,
+    #e1efff,
+    #f1f8ff
   );
 
   @include helpers.rolster-theme(
