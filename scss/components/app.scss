@@ -1,5 +1,5 @@
 // Rolster Technology App Component
-// v2.4.3
+// v2.4.4
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
@@ -177,8 +177,7 @@
       flex-direction: column;
       width: calc(100% - var(--rls-sizing-x16));
       height: 100%;
-      padding: var(--rls-sizing-x8) var(--rls-sizing-x8) 0rem
-        var(--rls-sizing-x8);
+      padding: var(--rls-sizing-x8);
       overflow-y: auto;
       overflow-x: hidden;
     }
