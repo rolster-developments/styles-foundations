@@ -1,5 +1,5 @@
 // Rolster Technology Data Table Component
-// v1.0.0
+// v1.1.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 21/Nov/2026
@@ -12,18 +12,16 @@
     --rlc-datatable-header-background,
     var(--rls-app-color-050)
   );
-  --pvt-datatable-header-border: var(
-    --rlc-datatable-header-border,
-    var(--rls-app-border-1-200)
-  );
+  --pvt-datatable-header-border: var(--rlc-datatable-header-border, none);
 
   --pvt-datatable-row-background: var(
     --rlc-datatable-row-background,
     var(--rls-app-color-050)
   );
-  --pvt-datatable-row-border: var(
-    --rlc-datatable-row-border,
-    var(--rls-app-border-1-200)
+  --pvt-datatable-row-border: var(--rlc-datatable-row-border, none);
+  --pvt-datatable-row-background-alternate: var(
+    --rlc-datatable-row-background-alternate,
+    var(--rls-app-color-100)
   );
 
   --pvt-datatable-summary-background: var(
@@ -51,15 +49,13 @@
   --rlc-badge-padding: 0rem var(--rls-sizing-x4);
 
   border-radius: var(--rls-sizing-x4);
-  border: var(--rls-app-border-1-200);
+  border: none;
   background: var(--rls-app-color-050);
 
-  &__toolbar {
-    border-bottom: var(--pvt-datatable-header-border);
-  }
-
-  &__header {
-    border-bottom: var(--pvt-datatable-header-border);
+  &__table {
+    & > table {
+      row-gap: 0rem;
+    }
   }
 
   &__title {
@@ -75,19 +71,18 @@
     }
   }
 
-  &__subheader,
-  &__record,
-  &__totals {
-    border-bottom: var(--pvt-datatable-row-border);
-  }
-
   &__record {
-    &:last-child {
-      border-bottom: none;
+    &:nth-child(odd of .rls-datatable__record) {
+      --pvt-datatable-row-background: var(
+        --pvt-datatable-row-background-alternate
+      );
+      --pvt-datatable-floating-background: var(
+        --pvt-datatable-row-background-alternate
+      );
     }
   }
 
-  &__footer {
-    border-top: var(--pvt-datatable-header-border);
+  &__totals {
+    border: none;
   }
 }

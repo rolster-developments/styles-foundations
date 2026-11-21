@@ -1,5 +1,5 @@
 // Rolster Technology App Component
-// v1.0.0
+// v1.2.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 21/Nov/2026
@@ -11,26 +11,26 @@
 
 .rls-app {
   &-body {
-    background: var(--rls-app-color-100);
+    background: var(--rls-app-color-050);
   }
 
   &-header {
     border-bottom: var(--rls-app-border-1-200);
   }
 
-  &-content {
-    background: var(--rlc-app-content-background, var(--rls-app-color-100));
-  }
-
   &-page {
     &__content {
-      background: var(--rls-app-color-100);
+      background: var(--rls-app-color-050);
     }
   }
 
   &-navbar {
-    --pvt-background: var(--rls-app-color-050);
-    --pvt-background-option-hover: var(--rls-app-color-100);
+    --pvt-background: var(--rls-app-color-100);
+    --pvt-background-option-hover: color-mix(
+      in srgb,
+      var(--rls-app-color-200) 80%,
+      var(--rls-app-color-050)
+    );
     --pvt-option-font-color: var(--rls-app-color-600);
     --pvt-option-font-color-hover: var(--rls-app-color-700);
 
@@ -66,9 +66,15 @@
       color: var(--pvt-option-font-color);
       font-size: 9rem;
 
-      &:hover {
+      &:hover,
+      &--active {
         color: var(--pvt-option-font-color-hover);
         background: var(--pvt-background-option-hover);
+      }
+
+      & > span {
+        font-size: 9rem;
+        font-weight: var(--rls-font-weight-regular);
       }
     }
   }
