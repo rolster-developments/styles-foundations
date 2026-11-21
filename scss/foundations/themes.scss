@@ -1,5 +1,5 @@
 // Rolster Technology Themes Foundations
-// v5.0.0
+// v6.0.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 03/Mar/2022
@@ -8,17 +8,6 @@
 @mixin rolster-app-border($width, $token) {
   --rls-app-border-#{$width}-#{$token}: var(--rls-border-#{$width}) solid
     var(--rls-app-color-#{$token});
-}
-
-@mixin rolster-border-color($theme, $width, $token) {
-  --rls-#{$theme}-border-#{$width}-#{$token}: var(--rls-border-#{$width}) solid
-    var(--rls-#{$theme}-color-#{$token});
-}
-
-@mixin rolster-border-token($theme) {
-  @include rolster-border-color($theme, 1, 200);
-  @include rolster-border-color($theme, 1, 500);
-  @include rolster-border-color($theme, 1, 700);
 }
 
 @mixin rolster-border-theme($theme, $width, $token) {
@@ -177,41 +166,19 @@ body {
   @include rolster-app-border(2, '200');
   @include rolster-app-border(2, '500');
 
-  @include rolster-border-token('standard');
-  @include rolster-border-token('primary');
-  @include rolster-border-token('secondary');
-  @include rolster-border-token('tertiary');
-  @include rolster-border-token('success');
-  @include rolster-border-token('info');
-  @include rolster-border-token('warning');
-  @include rolster-border-token('danger');
-  @include rolster-border-token('berry');
-  @include rolster-border-token('ross');
-  @include rolster-border-token('hope');
-  @include rolster-border-token('mountains');
-  @include rolster-border-token('amaizing');
-  @include rolster-border-token('purple');
-  @include rolster-border-token('amber');
-  @include rolster-border-token('smartness');
-  @include rolster-border-token('obsidian');
-  @include rolster-border-token('neutral');
-
   @include rolster-theme('primary');
   @include rolster-theme-light('primary');
-
 
   --rls-app-backdrop-filter: rgba(255, 255, 255, 0.6);
 
   &[app-theme='dark'] {
     @include rolster-theme-dark('primary');
 
-
     --rls-app-backdrop-filter: rgba(31, 30, 49, 0.6);
   }
 
   &[app-theme='dim'] {
     @include rolster-theme-dim('primary');
-
 
     --rls-app-backdrop-filter: rgba(58, 57, 74, 0.6);
   }

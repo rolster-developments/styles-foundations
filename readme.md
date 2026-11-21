@@ -118,7 +118,9 @@ base color per chromatic palette, see `AGENTS.md`) declares eighteen palettes �
 `smartness`, `obsidian` and `neutral` — each one as `--rls-<palette>-color-050` through
 `--rls-<palette>-color-950`, plus the derived gradients (`100`, `300`, `400`,
 `500`, `700`, `800`, `900`), backdrops (`400`, `900`), skeletons (`100` … `300`,
-light and dark), shadow and borders (`border-1-200`, `-500`, `-700`).
+light and dark) and shadow. Borders are not part of a palette: a component
+reads them from the active theme (`--rls-theme-border-*`) or from the neutral
+app scale (`--rls-app-border-*`).
 
 `scss/foundations/themes.scss` turns one of those palettes into the **active
 theme**: the `--rls-theme-*` variables every component reads. It applies
@@ -183,7 +185,6 @@ body {
     #f0f7fe
   );
 
-  @include themes.rolster-border-token('brand');
   @include themes.rolster-theme('brand');
   @include themes.rolster-theme-light('brand');
 
@@ -219,8 +220,6 @@ partial that emits no CSS of its own.
 | `rolster-theme-dark($theme)`                   | the same pairs mirrored (100 ↔ 400, 200 ↔ 500), for dark mode                                |
 | `rolster-theme-dim($theme)`                    | the dark mapping with `background-100`, `border-100` and `gradient-100` one step up, for dim |
 | `rolster-app-border($width, $token)`           | builds `--rls-app-border-<width>-<token>` from `--rls-app-color-<token>`                     |
-| `rolster-border-color($theme, $width, $token)` | builds `--rls-<theme>-border-<width>-<token>` from `--rls-<theme>-color-<token>`             |
-| `rolster-border-token($theme)`                 | applies `rolster-border-color` to width 1 on the tokens `200`, `500` and `700`               |
 | `rolster-border-theme($theme, $width, $token)` | maps a palette border onto the active `--rls-theme-border-<width>-<token>`                   |
 
 **`scss/foundations/flex-boxs.scss`**
@@ -310,7 +309,7 @@ one instance (for example `--rlc-icon-dimension` or
 | Family       | Declared in                     | Tokens                                                                                                                                                                                                                                                                                   |
 | ------------ | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Colors       | `foundations/colors.scss`       | `--rls-app-color-050…950` (overridable with `--rls-project-color-*`), `--rls-<theme>-color-050…950`, `-gradient-{100,300,400,500,700,800,900}`, `-backdrop-{400,900}`, `-skeleton-{100,200,300}`, `-skeleton-dark-{100,200,300}`, `-shadow-color-500`, `-shadow-500`                     |
-| Themes       | `foundations/themes.scss`       | the active `--rls-theme-color-050…900`, `-background-*`, `-font-color-*`, `-border-{100,300}`, `-border-1-500`, `-border-4-400`, `-gradient-{100,300,400}`, `-backdrop-{400,900}`, `-skeleton-{100,200,300}`, `-shadow-500`; `--rls-<theme>-border-1-{200,500,700}`   |
+| Themes       | `foundations/themes.scss`       | the active `--rls-theme-color-050…900`, `-background-*`, `-font-color-*`, `-border-{100,300}`, `-border-1-500`, `-border-4-400`, `-gradient-{100,300,400}`, `-backdrop-{400,900}`, `-skeleton-{100,200,300}`, `-shadow-500`   |
 | Borders      | `foundations/borders.scss`      | `--rls-app-border-1-transparent`, plus the `--rls-app-border-{1,2}-<token>` built by `rolster-app-border` (width 1 on `200`…`400`, width 2 on `100`, `200` and `500`)                                                                                                                    |
 | Sizings      | `foundations/sizings.scss`      | `--rls-sizing-x1`…`x8`, then `x10`, `x12`, `x14`, `x16`, `x18`, `x20`, `x22`, `x24`, `x26`, `x28`, `x32`, `x36`, `x40`, and the `--rls-border-1/2/4` widths                                                                                                                              |
 | Elevations   | `foundations/elevations.scss`   | the elevation ladder `--rls-elevation-backdrop` (1), `-raised` (2), `-floating` (4), `-navigation` (8), `-sticky` (16), `-dialog` (24), `-menu` (32) and `-notification` (48), plus `--rls-app-shadow-1` and `-2`, and `--rls-app-shadow-center-{2,4,6,8}` over `--rls-app-shadow-color` |
