@@ -105,7 +105,7 @@ at once and switched at runtime by toggling the class on `<body>`:
 
 ```html
 <body class="rls-design-system-filled">
-  <div class="rls-app__body">...</div>
+  <div class="rls-app-body">...</div>
 </body>
 ```
 
@@ -317,7 +317,7 @@ one instance (for example `--rlc-icon-dimension` or
 | Animations   | `foundations/animations.scss`   | `--rls-standard-curve`, `--rls-deceleration-curve`, `--rls-acceleration-curve`, `--rls-sharp-curve`, `--rls-emphasized-deceleration-curve`, `--rls-emphasized-acceleration-curve` and `--rls-duration-{enter,exit}-{short,medium,long}` (zeroed under `prefers-reduced-motion`)          |
 
 The root entry adds the variables that bound the application shell, which the
-`.rls-app__*` layout reads to size itself:
+`.rls-app-*` layout reads to size itself:
 
 ```css
 :root {
