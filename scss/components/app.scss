@@ -1,5 +1,5 @@
 // Rolster Technology App Component
-// v2.4.4
+// v3.0.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
@@ -11,7 +11,7 @@
 }
 
 .rls-app {
-  &__body {
+  &-body {
     --pvt-navbar-dimension: 0rem;
     --pvt-navbar-width: var(--rlc-app-navbar-width, 160rem);
     --pvt-navbar-width-condense: 36rem;
@@ -36,7 +36,7 @@
     }
   }
 
-  &__header {
+  &-header {
     --rlc-toolbar-height: 100%;
     --pvt-header-height: var(--rlc-app-header-height, var(--rls-sizing-x28));
 
@@ -47,13 +47,13 @@
     z-index: var(--rls-elevation-navigation);
     background: var(--rlc-app-header-background, var(--rls-app-color-050));
 
-    & + .rls-app__page,
-    & + .rls-app__content {
+    & + .rls-app-page,
+    & + .rls-app-content {
       height: calc(var(--rls-html-max-height) - var(--pvt-header-height));
     }
   }
 
-  &__content {
+  &-content {
     position: relative;
     width: 100%;
     height: var(--rls-html-max-height);
@@ -64,7 +64,7 @@
     background: var(--rlc-app-content-background, var(--rls-app-color-050));
   }
 
-  &__page {
+  &-page {
     --pvt-toolbar-height: var(
       --rlc-app-page-toolbar-height,
       var(--rls-sizing-x32)
@@ -79,73 +79,6 @@
     overflow: hidden;
     box-sizing: border-box;
 
-    &__nav {
-      position: relative;
-      width: var(--pvt-navbar-width);
-      height: 100%;
-      margin: 0rem;
-      transition: all 280ms var(--rls-acceleration-curve);
-
-      & + .rls-app__page__body {
-        --rlc-snackbar-left: calc(50% + calc(var(--pvt-navbar-width) / 2));
-
-        width: calc(100% - var(--pvt-navbar-width));
-      }
-
-      &__content {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        overflow-x: hidden;
-        overflow-y: auto;
-        box-sizing: border-box;
-        transition: width 280ms var(--rls-acceleration-curve);
-      }
-
-      &__body {
-        display: flex;
-        flex-direction: column;
-        row-gap: var(--rlc-app-navbar-body-gap, var(--rls-sizing-x4));
-        padding: var(--rlc-app-navbar-body-padding, var(--rls-sizing-x6));
-        box-sizing: border-box;
-      }
-
-      &__menu {
-        display: flex;
-        flex-direction: column;
-        row-gap: var(--rls-sizing-x8);
-      }
-
-      &__option {
-        display: flex;
-        width: 100%;
-        min-height: 0rem;
-        align-items: center;
-        column-gap: var(--rls-sizing-x6);
-        padding: var(--rls-sizing-x4) var(--rls-sizing-x6);
-        border: none;
-        box-sizing: border-box;
-        cursor: default;
-        font: inherit;
-        letter-spacing: inherit;
-        text-align: inherit;
-        color: inherit;
-        background: transparent;
-        appearance: none;
-
-        &:focus-visible {
-          outline: var(--rls-app-border-2-500);
-          outline-offset: calc(var(--rls-sizing-x1) * -1);
-        }
-
-        & > span {
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
-      }
-    }
-
     &__body {
       display: flex;
       flex-direction: column;
@@ -158,20 +91,6 @@
       transition: width 240ms var(--rls-acceleration-curve);
     }
 
-    &__toolbar {
-      position: absolute;
-      top: 0rem;
-      display: flex;
-      width: 100%;
-      height: var(--pvt-toolbar-height);
-      justify-content: space-between;
-      align-items: center;
-      column-gap: var(--rls-sizing-x8);
-      padding: var(--rlc-app-toolbar-padding, 0rem var(--rls-sizing-x12));
-      box-sizing: border-box;
-      z-index: var(--rls-elevation-navigation);
-    }
-
     &__content {
       display: flex;
       flex-direction: column;
@@ -181,6 +100,86 @@
       overflow-y: auto;
       overflow-x: hidden;
     }
+  }
+  &-navbar {
+    position: relative;
+    width: var(--pvt-navbar-width);
+    height: 100%;
+    margin: 0rem;
+    transition: all 280ms var(--rls-acceleration-curve);
+
+    & + .rls-app-page__body {
+      --rlc-snackbar-left: calc(50% + calc(var(--pvt-navbar-width) / 2));
+
+      width: calc(100% - var(--pvt-navbar-width));
+    }
+
+    &__content {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow-x: hidden;
+      overflow-y: auto;
+      box-sizing: border-box;
+      transition: width 280ms var(--rls-acceleration-curve);
+    }
+
+    &__body {
+      display: flex;
+      flex-direction: column;
+      row-gap: var(--rlc-app-navbar-body-gap, var(--rls-sizing-x4));
+      padding: var(--rlc-app-navbar-body-padding, var(--rls-sizing-x6));
+      box-sizing: border-box;
+    }
+
+    &__menu {
+      display: flex;
+      flex-direction: column;
+      row-gap: var(--rls-sizing-x8);
+    }
+
+    &__option {
+      display: flex;
+      width: 100%;
+      min-height: 0rem;
+      align-items: center;
+      column-gap: var(--rls-sizing-x6);
+      padding: var(--rls-sizing-x4) var(--rls-sizing-x6);
+      border: none;
+      box-sizing: border-box;
+      cursor: default;
+      font: inherit;
+      letter-spacing: inherit;
+      text-align: inherit;
+      color: inherit;
+      background: transparent;
+      appearance: none;
+
+      &:focus-visible {
+        outline: var(--rls-app-border-2-500);
+        outline-offset: calc(var(--rls-sizing-x1) * -1);
+      }
+
+      & > span {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+
+  &-toolbar {
+    position: absolute;
+    top: 0rem;
+    display: flex;
+    width: 100%;
+    height: var(--pvt-toolbar-height);
+    justify-content: space-between;
+    align-items: center;
+    column-gap: var(--rls-sizing-x8);
+    padding: var(--rlc-app-toolbar-padding, 0rem var(--rls-sizing-x12));
+    box-sizing: border-box;
+    z-index: var(--rls-elevation-navigation);
   }
 }
 
@@ -198,7 +197,7 @@
 
 @media screen and (max-width: 640px) {
   .rls-app {
-    &__body {
+    &-body {
       --pvt-navbar-dimension: 140rem;
       --pvt-navbar-width: var(--pvt-navbar-dimension);
       --pvt-navbar-width-condense: var(--pvt-navbar-dimension);
@@ -210,7 +209,7 @@
       }
     }
 
-    &__page {
+    &-page {
       width: calc(var(--rls-html-max-width) + var(--pvt-navbar-width));
       left: calc(var(--pvt-section-navbar) * -1);
       transition: left 280ms var(--rls-standard-curve);
@@ -220,7 +219,7 @@
 
 @media screen and (max-width: 480px) {
   .rls-app {
-    &__body {
+    &-body {
       --pvt-navbar-dimension: calc(100vw - 32rem);
     }
   }

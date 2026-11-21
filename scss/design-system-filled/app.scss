@@ -1,12 +1,12 @@
 // Rolster Technology App Component
-// v2.5.2
+// v3.0.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 23/Abr/2026
-// Updated: 04/Oct/2026
+// Updated: 21/Nov/2026
 
 .rls-app {
-  &__body {
+  &-body {
     --pvt-navbar-padding: var(--rls-sizing-x8);
 
     background: var(--rls-app-color-100);
@@ -16,52 +16,52 @@
     }
   }
 
-  &__page {
+  &-page {
     --pvt-content-padding-top: var(
       --rlc-app-page-content-padding-top,
       var(--rls-sizing-x2)
     );
 
-    &__nav {
-      --pvt-background-content: var(--rls-app-color-950);
-      --pvt-background-option: var(--rls-app-color-800);
-      --pvt-option-font-color: var(--rls-app-color-300);
+  }
+  &-navbar {
+    --pvt-background-content: var(--rls-app-color-950);
+    --pvt-background-option: var(--rls-app-color-800);
+    --pvt-option-font-color: var(--rls-app-color-300);
 
-      padding: var(--pvt-navbar-padding);
-      box-sizing: border-box;
+    padding: var(--pvt-navbar-padding);
+    box-sizing: border-box;
 
-      &[rls-theme] {
-        --pvt-background-content: var(--rls-theme-background-500);
-        --pvt-background-option: var(--rls-theme-background-400);
-        --pvt-option-font-color: var(--rls-theme-font-color-400);
-      }
-
-      &__content {
-        border-radius: var(--rls-sizing-x6);
-        background: var(--pvt-background-content);
-      }
-
-      &__option {
-        border-radius: var(--rls-sizing-x6);
-        color: var(--pvt-option-font-color);
-        background: var(--pvt-background-option);
-
-        &:hover {
-          color: var(--rls-theme-font-color-200);
-          background: var(--rls-theme-background-100);
-        }
-      }
+    &[rls-theme] {
+      --pvt-background-content: var(--rls-theme-background-500);
+      --pvt-background-option: var(--rls-theme-background-400);
+      --pvt-option-font-color: var(--rls-theme-font-color-400);
     }
 
-    &__toolbar {
-      background: var(--rls-app-color-100);
+    &__content {
+      border-radius: var(--rls-sizing-x6);
+      background: var(--pvt-background-content);
+    }
 
-      & + .rls-app__page__content {
-        padding: calc(
-            var(--pvt-toolbar-height) + var(--pvt-content-padding-top)
-          )
-          var(--rls-sizing-x8) 0rem var(--rls-sizing-x8);
+    &__option {
+      border-radius: var(--rls-sizing-x6);
+      color: var(--pvt-option-font-color);
+      background: var(--pvt-background-option);
+
+      &:hover {
+        color: var(--rls-theme-font-color-200);
+        background: var(--rls-theme-background-100);
       }
+    }
+  }
+
+  &-toolbar {
+    background: var(--rls-app-color-100);
+
+    & + .rls-app-page__content {
+      padding: calc(
+          var(--pvt-toolbar-height) + var(--pvt-content-padding-top)
+        )
+        var(--rls-sizing-x8) 0rem var(--rls-sizing-x8);
     }
   }
 }
