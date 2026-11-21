@@ -1,5 +1,5 @@
 // Rolster Technology Amount Component
-// v1.2.10
+// v1.2.11
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
@@ -9,8 +9,8 @@
   --pvt-font-size: var(--rlc-amount-font-size, var(--rls-body-font-size));
   --pvt-font-weight: var(--rlc-amount-font-weight, inherit);
   --pvt-decimal-width: var(--rlc-amount-decimal-width, 0.5);
-  --pvt-decimal-size: var(--rlc-amount-decimal-size, 0.6);
-  --pvt-width-separator: var(--rlc-amount-separator, 1.25);
+  --pvt-decimal-size: var(--rlc-amount-decimal-size, 0.75);
+  --pvt-width-separator: var(--rlc-amount-separator, 1.425);
 
   --rlc-tabular-text-font-size: var(--pvt-font-size);
   --rlc-tabular-text-font-weight: var(--pvt-font-weight);
