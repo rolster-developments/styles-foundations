@@ -1,9 +1,9 @@
 // Rolster Technology Themes Foundations
-// v4.1.0
+// v5.0.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 03/Mar/2022
-// Updated: 20/Nov/2026
+// Updated: 21/Nov/2026
 
 @mixin rolster-app-border($width, $token) {
   --rls-app-border-#{$width}-#{$token}: var(--rls-border-#{$width}) solid
@@ -117,30 +117,6 @@
   --rls-theme-gradient-100: var(--rls-#{$theme}-gradient-800);
 }
 
-@mixin rolster-datatable-light($theme) {
-  --rls-#{$theme}-datatable-background: var(--rls-#{$theme}-color-050);
-
-  --rls-#{$theme}-datatable-border: var(--rls-#{$theme}-border-1-200);
-
-  --rls-#{$theme}-datatable-floating: var(--rls-#{$theme}-color-100);
-}
-
-@mixin rolster-datatable-dark($theme) {
-  --rls-#{$theme}-datatable-background: var(--rls-#{$theme}-color-900);
-
-  --rls-#{$theme}-datatable-border: var(--rls-#{$theme}-border-1-700);
-
-  --rls-#{$theme}-datatable-floating: var(--rls-#{$theme}-color-950);
-}
-
-@mixin rolster-datatable-dim($theme) {
-  --rls-#{$theme}-datatable-background: var(--rls-#{$theme}-color-900);
-
-  --rls-#{$theme}-datatable-border: var(--rls-#{$theme}-border-1-700);
-
-  --rls-#{$theme}-datatable-floating: var(--rls-#{$theme}-color-800);
-}
-
 @mixin rolster-theme($theme) {
   --rls-theme-color-900: var(--rls-#{$theme}-color-900);
 
@@ -223,18 +199,12 @@ body {
   @include rolster-theme('primary');
   @include rolster-theme-light('primary');
 
-  @each $theme in $rolster-themes {
-    @include rolster-datatable-light($theme);
-  }
 
   --rls-app-backdrop-filter: rgba(255, 255, 255, 0.6);
 
   &[app-theme='dark'] {
     @include rolster-theme-dark('primary');
 
-    @each $theme in $rolster-themes {
-      @include rolster-datatable-dark($theme);
-    }
 
     --rls-app-backdrop-filter: rgba(31, 30, 49, 0.6);
   }
@@ -242,9 +212,6 @@ body {
   &[app-theme='dim'] {
     @include rolster-theme-dim('primary');
 
-    @each $theme in $rolster-themes {
-      @include rolster-datatable-dim($theme);
-    }
 
     --rls-app-backdrop-filter: rgba(58, 57, 74, 0.6);
   }

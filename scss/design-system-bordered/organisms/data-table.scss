@@ -1,9 +1,9 @@
 // Rolster Technology Datatable Component
-// v2.6.11
+// v2.7.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 20/Mar/2018
-// Updated: 01/Ago/2026
+// Updated: 21/Nov/2026
 
 .rls-datatable {
   --pvt-datatable-border-radius: var(
@@ -55,33 +55,5 @@
   &__record,
   &__totals {
     border: var(--pvt-datatable-row-border);
-
-    &--success {
-      --pvt-datatable-floating-background: var(--rls-success-datatable-floating);
-
-      border: var(--rls-success-datatable-border);
-      background: var(--rls-success-datatable-background);
-    }
-
-    &--info {
-      --pvt-datatable-floating-background: var(--rls-info-datatable-floating);
-
-      border: var(--rls-info-datatable-border);
-      background: var(--rls-info-datatable-background);
-    }
-
-    &--warning {
-      --pvt-datatable-floating-background: var(--rls-warning-datatable-floating);
-
-      border: var(--rls-warning-datatable-border);
-      background: var(--rls-warning-datatable-background);
-    }
-
-    &--error {
-      --pvt-datatable-floating-background: var(--rls-danger-datatable-floating);
-
-      border: var(--rls-danger-datatable-border);
-      background: var(--rls-danger-datatable-background);
-    }
   }
 }
