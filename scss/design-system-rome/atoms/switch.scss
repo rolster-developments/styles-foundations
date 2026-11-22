@@ -1,17 +1,12 @@
 // Rolster Technology Switch Component
-// v1.0.0
+// v1.1.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 21/Nov/2026
-// Updated: 21/Nov/2026
+// Updated: 22/Nov/2026
 
 .rls-switch {
   --pvt-component-background: var(--rls-app-color-300);
-  --pvt-component-height: var(
-    --rlc-switch-component-height,
-    var(--rls-sizing-x12)
-  );
-  --pvt-max-width: var(--rlc-switch-max-width, var(--rls-sizing-x24));
 
   &--checked {
     --pvt-component-background: var(--rls-theme-color-500);

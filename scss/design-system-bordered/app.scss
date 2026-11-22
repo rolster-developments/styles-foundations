@@ -47,7 +47,7 @@
 
     & + .rls-app-page__content {
       padding: calc(var(--pvt-toolbar-height) + var(--rls-sizing-x8))
-        var(--rls-sizing-x8) var(--rls-sizing-x8) var(--rls-sizing-x8);
+        var(--rls-sizing-x8) 0rem var(--rls-sizing-x8);
     }
   }
 }

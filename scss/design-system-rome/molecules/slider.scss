@@ -1,13 +1,11 @@
 // Rolster Technology Slider Component
-// v1.1.0
+// v1.2.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 21/Nov/2026
-// Updated: 21/Nov/2026
+// Updated: 22/Nov/2026
 
 .rls-slider {
-  --pvt-track-height: var(--rls-sizing-x4);
-  --pvt-thumb-dimension: var(--rls-sizing-x12);
   --pvt-thumb-background: var(--rls-theme-gradient-300);
   --pvt-thumb-color: var(--rls-theme-font-color-300);
 
@@ -50,10 +48,5 @@
           color-mix(in srgb, var(--rls-theme-color-500) 32%, transparent),
         0px 2px 4px -2px rgba(27, 46, 94, 0.08);
     }
-  }
-
-  &[rls-size='small'] {
-    --pvt-track-height: var(--rls-sizing-x2);
-    --pvt-thumb-dimension: var(--rls-sizing-x8);
   }
 }

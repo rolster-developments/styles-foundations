@@ -1,9 +1,9 @@
 // Rolster Technology Picker Color Component
-// v1.0.0
+// v1.1.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 21/Nov/2026
-// Updated: 21/Nov/2026
+// Updated: 22/Nov/2026
 
 .rls-picker-color {
   border-radius: var(--rlc-picker-color-radius, var(--rls-sizing-x4));
@@ -26,9 +26,5 @@
     &__input {
       color: var(--rls-app-color-600);
     }
-  }
-
-  &__actions {
-    padding-top: var(--rls-sizing-x6);
   }
 }
