@@ -1,5 +1,5 @@
 // Rolster Technology Button Option Component
-// v1.0.0
+// v1.1.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 21/Nov/2026
@@ -12,7 +12,6 @@
     var(--rls-theme-color-500) 8%,
     transparent
   );
-  --pvt-font-size: 8rem;
   --rlc-icon-color: var(--rls-app-color-500);
 
   border: var(--rls-app-border-1-200);
@@ -28,9 +27,5 @@
 
   &:disabled {
     opacity: 0.4;
-  }
-
-  &[rls-size='small'] {
-    --pvt-font-size: 7rem;
   }
 }

@@ -1,5 +1,5 @@
 // Rolster Technology App Component
-// v1.2.0
+// v1.3.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 21/Nov/2026
@@ -64,7 +64,6 @@
       padding: 0rem var(--rls-sizing-x8);
       border-radius: var(--rls-sizing-x4);
       color: var(--pvt-option-font-color);
-      font-size: 9rem;
 
       &:hover,
       &--active {
@@ -73,7 +72,6 @@
       }
 
       & > span {
-        font-size: 9rem;
         font-weight: var(--rls-font-weight-regular);
       }
     }

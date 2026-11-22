@@ -1,5 +1,5 @@
 // Rolster Technology Field Box Component
-// v1.0.0
+// v1.1.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 21/Nov/2026
@@ -32,10 +32,6 @@
     --rlc-field-box-label-font-color,
     var(--rls-app-color-500)
   );
-  --pvt-label-font-size: 7rem;
-  --pvt-label-line-height: var(--rls-sizing-x10);
-  --pvt-helper-font-size: 7rem;
-  --pvt-helper-line-height: var(--rls-sizing-x10);
 
   &--focused {
     --pvt-body-shadow: var(

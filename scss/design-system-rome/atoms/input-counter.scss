@@ -1,5 +1,5 @@
 // Rolster Technology Input Counter Component
-// v1.0.0
+// v1.1.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 21/Nov/2026
@@ -7,7 +7,6 @@
 
 .rls-input-counter {
   --pvt-radius: var(--rlc-input-counter-radius, var(--rls-sizing-x4));
-  --pvt-font-size: var(--rlc-input-counter-font-size, 9rem);
   --pvt-body-border: var(
     --rlc-input-counter-border,
     var(--rls-app-border-1-200)

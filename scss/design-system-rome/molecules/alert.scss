@@ -1,5 +1,5 @@
 // Rolster Technology Alert Component
-// v1.0.0
+// v1.1.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 21/Nov/2026
@@ -18,10 +18,6 @@
     border-radius: var(--rls-sizing-x4);
   }
 
-  &__content {
-    font-size: 8rem;
-  }
-
   &[rls-theme] {
     --pvt-icon-background: var(--rls-theme-gradient-300);
     --pvt-icon-color: var(--rls-theme-font-color-300);
@@ -33,10 +29,6 @@
 
   &[rls-size='small'] {
     --pvt-padding: var(--rls-sizing-x4) var(--rls-sizing-x6);
-
-    .rls-alert__content {
-      font-size: 7rem;
-    }
 
     .rls-alert__icon {
       border-radius: var(--rls-sizing-x3);

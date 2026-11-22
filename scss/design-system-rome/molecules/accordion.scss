@@ -1,5 +1,5 @@
 // Rolster Technology Accordion Component
-// v1.0.0
+// v1.1.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 21/Nov/2026
@@ -14,10 +14,8 @@
   --pvt-header-radius: var(--rls-sizing-x4);
   --pvt-header-padding: var(--rls-sizing-x4) var(--rls-sizing-x8);
   --pvt-title-font-color: var(--rls-app-color-600);
-  --pvt-title-font-size: 9rem;
   --pvt-indicator-color: var(--rls-app-color-500);
   --pvt-content-font-color: var(--rls-app-color-500);
-  --pvt-content-font-size: 8rem;
 
   border: var(--pvt-border);
   border-radius: var(--rls-sizing-x4);
@@ -63,7 +61,5 @@
 
   &[rls-size='small'] {
     --pvt-header-padding: var(--rls-sizing-x3) var(--rls-sizing-x6);
-    --pvt-title-font-size: 8rem;
-    --pvt-content-font-size: 7rem;
   }
 }

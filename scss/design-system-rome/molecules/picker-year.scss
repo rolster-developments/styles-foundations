@@ -1,5 +1,5 @@
 // Rolster Technology Picker Year Component
-// v1.0.0
+// v1.1.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 21/Nov/2026
@@ -15,7 +15,6 @@
 
     & > span {
       color: var(--rls-app-color-600);
-      font-size: 9rem;
       font-weight: var(--rls-font-weight-bold);
     }
   }
@@ -44,9 +43,5 @@
       --pvt-component-background: var(--rls-theme-gradient-300);
       --pvt-component-font-color: var(--rls-theme-font-color-300);
     }
-  }
-
-  &__span {
-    font-size: 8rem;
   }
 }

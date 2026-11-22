@@ -1,5 +1,5 @@
 // Rolster Technology Design System Rome
-// v1.1.0
+// v1.2.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 21/Nov/2026
@@ -39,7 +39,6 @@
   @include meta.load-css('molecules/field-box');
   @include meta.load-css('molecules/field-file');
   @include meta.load-css('molecules/field-list');
-  @include meta.load-css('molecules/field-readonly');
   @include meta.load-css('molecules/label-check-box');
   @include meta.load-css('molecules/label-radio-button');
   @include meta.load-css('molecules/label-switch');

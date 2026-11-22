@@ -1,5 +1,5 @@
 // Rolster Technology Area Text Component
-// v1.0.0
+// v1.1.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 21/Nov/2026
@@ -7,20 +7,13 @@
 
 .rls-area-text {
   --pvt-font-color: var(--rlc-area-text-font-color, var(--rls-app-color-600));
-  --pvt-font-size: var(--rlc-area-text-font-size, 9rem);
   --pvt-font-weight: var(
     --rlc-area-text-font-weight,
     var(--rls-font-weight-regular)
   );
-  --pvt-line-height: var(--rlc-area-text-line-height, var(--rls-sizing-x12));
   --pvt-grip-color: var(--rlc-area-text-grip-color, var(--rls-app-color-300));
 
   &__component {
     font-weight: var(--pvt-font-weight);
-  }
-
-  &[rls-size='small'] {
-    --pvt-font-size: var(--rlc-area-text-font-size, 7rem);
-    --pvt-line-height: var(--rlc-area-text-line-height, var(--rls-sizing-x10));
   }
 }

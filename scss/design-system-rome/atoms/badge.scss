@@ -1,5 +1,5 @@
 // Rolster Technology Badge Component
-// v1.0.0
+// v1.1.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 21/Nov/2026
@@ -15,7 +15,7 @@
     var(--rls-app-color-050)
   );
 
-  font-size: var(--rlc-badge-font-size, 7rem);
+  font-size: var(--rlc-badge-font-size, var(--rls-caption-font-size));
   font-weight: var(--rlc-badge-font-weight, var(--rls-font-weight-bold));
   border-radius: var(--rlc-badge-radius, calc(var(--pvt-dimension) / 2));
 

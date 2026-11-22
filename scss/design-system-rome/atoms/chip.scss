@@ -1,5 +1,5 @@
 // Rolster Technology Chip Component
-// v1.0.0
+// v1.1.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 21/Nov/2026
@@ -34,7 +34,7 @@
     var(--rls-theme-gradient-300)
   );
 
-  font-size: var(--rlc-chip-font-size, 7rem);
+  font-size: var(--rlc-chip-font-size, var(--rls-caption-font-size));
   font-weight: var(--rlc-chip-font-weight, var(--rls-font-weight-regular));
   border-radius: var(--rlc-chip-radius, var(--rls-sizing-x4));
 

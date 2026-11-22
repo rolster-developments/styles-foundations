@@ -1,5 +1,5 @@
 // Rolster Technology Picker Day Range Component
-// v1.0.0
+// v1.1.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 21/Nov/2026
@@ -8,12 +8,10 @@
 .rls-picker-day-range {
   &__title {
     color: var(--rls-app-color-600);
-    font-size: 9rem;
   }
 
   &__label {
     color: var(--rls-app-color-500);
-    font-size: 7rem;
   }
 
   &__element {
@@ -43,7 +41,6 @@
 
     &__span {
       border-radius: var(--rls-sizing-x6);
-      font-size: 8rem;
       font-weight: var(--rls-font-weight-bold);
     }
   }

@@ -1,5 +1,5 @@
 // Rolster Technology Button Toggle Component
-// v1.0.0
+// v1.1.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 21/Nov/2026
@@ -8,7 +8,6 @@
 .rls-button-toggle {
   --pvt-element-height: var(--rls-sizing-x20);
   --pvt-element-padding: 0rem var(--rls-sizing-x6);
-  --pvt-element-font-size: 8rem;
 
   &__action {
     --rlc-button-content-radius: var(--rls-sizing-x4) 0rem 0rem
@@ -44,6 +43,5 @@
   &[rls-size='small'] {
     --pvt-element-height: var(--rls-sizing-x16);
     --pvt-element-padding: 0rem var(--rls-sizing-x4);
-    --pvt-element-font-size: 7rem;
   }
 }

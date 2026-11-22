@@ -1,5 +1,5 @@
 // Rolster Technology Data Table Component
-// v1.2.0
+// v1.3.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 21/Nov/2026
@@ -34,7 +34,6 @@
 
   --pvt-datatable-rows-gap: 0rem;
   --pvt-datatable-row-padding: 0rem var(--rls-sizing-x12);
-  --pvt-datatable-font-size: var(--rlc-datatable-font-size, 8rem);
   --pvt-datatable-font-color: var(
     --rlc-datatable-font-color,
     var(--rls-app-color-600)
@@ -57,7 +56,6 @@
   }
 
   &__title {
-    font-size: 7rem;
     font-weight: var(
       --rlc-datatable-header-font-weight,
       var(--rls-font-weight-medium)

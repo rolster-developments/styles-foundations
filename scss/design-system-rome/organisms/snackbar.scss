@@ -1,5 +1,5 @@
 // Rolster Technology Snackbar Component
-// v1.1.0
+// v1.2.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 21/Nov/2026
@@ -26,14 +26,12 @@
 
   &__title {
     color: var(--rls-app-color-600);
-    font-size: 9rem;
     font-weight: var(--rls-font-weight-medium);
   }
 
   &__content {
     p {
       color: var(--rls-app-color-500);
-      font-size: 8rem;
       font-weight: var(--rls-font-weight-regular);
     }
   }
