@@ -1,0 +1,36 @@
+// Rolster Technology Button Option Component
+// v1.0.0
+// @license MIT
+// Author: Rolster Developers
+// Created: 21/Nov/2026
+// Updated: 21/Nov/2026
+
+.rls-button-option {
+  --pvt-span-color: var(--rls-app-color-600);
+  --pvt-background-hover: color-mix(
+    in srgb,
+    var(--rls-theme-color-500) 8%,
+    transparent
+  );
+  --pvt-font-size: 8rem;
+  --rlc-icon-color: var(--rls-app-color-500);
+
+  border: var(--rls-app-border-1-200);
+
+  &--checked {
+    --pvt-background-hover: var(--rls-theme-gradient-400);
+    --pvt-span-color: var(--rls-theme-font-color-300);
+    --rlc-icon-color: var(--rls-theme-font-color-300);
+
+    background: var(--rls-theme-gradient-300);
+    border: var(--rls-border-1) solid transparent;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+  }
+
+  &[rls-size='small'] {
+    --pvt-font-size: 7rem;
+  }
+}

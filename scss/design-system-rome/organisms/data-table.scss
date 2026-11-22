@@ -1,5 +1,5 @@
 // Rolster Technology Data Table Component
-// v1.1.0
+// v1.2.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 21/Nov/2026
@@ -12,13 +12,11 @@
     --rlc-datatable-header-background,
     var(--rls-app-color-050)
   );
-  --pvt-datatable-header-border: var(--rlc-datatable-header-border, none);
 
   --pvt-datatable-row-background: var(
     --rlc-datatable-row-background,
     var(--rls-app-color-050)
   );
-  --pvt-datatable-row-border: var(--rlc-datatable-row-border, none);
   --pvt-datatable-row-background-alternate: var(
     --rlc-datatable-row-background-alternate,
     var(--rls-app-color-100)

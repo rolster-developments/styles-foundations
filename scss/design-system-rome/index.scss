@@ -1,5 +1,5 @@
 // Rolster Technology Design System Rome
-// v1.0.0
+// v1.1.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 21/Nov/2026
@@ -17,6 +17,7 @@
   @include meta.load-css('atoms/button');
   @include meta.load-css('atoms/button-action');
   @include meta.load-css('atoms/button-icon');
+  @include meta.load-css('atoms/button-option');
   @include meta.load-css('atoms/check-box');
   @include meta.load-css('atoms/chip');
   @include meta.load-css('atoms/image');
@@ -31,10 +32,14 @@
   @include meta.load-css('atoms/switch');
 
   @include meta.load-css('molecules/accordion');
+  @include meta.load-css('molecules/alert');
   @include meta.load-css('molecules/ballot');
+  @include meta.load-css('molecules/button-toggle');
   @include meta.load-css('molecules/chip-group');
   @include meta.load-css('molecules/field-box');
+  @include meta.load-css('molecules/field-file');
   @include meta.load-css('molecules/field-list');
+  @include meta.load-css('molecules/field-readonly');
   @include meta.load-css('molecules/label-check-box');
   @include meta.load-css('molecules/label-radio-button');
   @include meta.load-css('molecules/label-switch');
@@ -49,9 +54,11 @@
   @include meta.load-css('molecules/toolbar');
 
   @include meta.load-css('organisms/card');
+  @include meta.load-css('organisms/confirmation');
   @include meta.load-css('organisms/data-table');
   @include meta.load-css('organisms/dropdown');
   @include meta.load-css('organisms/field-clock');
+  @include meta.load-css('organisms/field-color');
   @include meta.load-css('organisms/field-date');
   @include meta.load-css('organisms/field-date-range');
   @include meta.load-css('organisms/notifications');
