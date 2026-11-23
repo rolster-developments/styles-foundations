@@ -1,9 +1,9 @@
 // Rolster Technology Field List Component
-// v1.4.0
+// v1.5.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 21/Nov/2026
-// Updated: 22/Nov/2026
+// Updated: 23/Nov/2026
 
 .rls-field-list {
   --pvt-control-font-weight: var(
@@ -14,6 +14,10 @@
   &__control,
   &__multi__placeholder {
     font-weight: var(--pvt-control-font-weight);
+  }
+
+  &__control {
+    color: var(--rlc-input-font-color, var(--rls-app-color-600));
   }
 
   &__suggestions {

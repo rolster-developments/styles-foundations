@@ -1,9 +1,9 @@
 // Rolster Technology Design System Rome
-// v1.3.0
+// v1.4.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 21/Nov/2026
-// Updated: 22/Nov/2026
+// Updated: 23/Nov/2026
 
 @use 'sass:meta';
 
@@ -23,6 +23,7 @@
   @include meta.load-css('atoms/image');
   @include meta.load-css('atoms/input');
   @include meta.load-css('atoms/input-counter');
+  @include meta.load-css('atoms/input-password');
   @include meta.load-css('atoms/input-search');
   @include meta.load-css('atoms/led');
   @include meta.load-css('atoms/poster');
