@@ -1,5 +1,5 @@
 // Rolster Technology Data Table Component
-// v1.4.0
+// v1.6.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 21/Nov/2026
@@ -10,8 +10,10 @@
 
   --pvt-datatable-header-background: var(
     --rlc-datatable-header-background,
-    var(--rls-app-color-050)
+    var(--rls-app-color-100)
   );
+
+  --pvt-datatable-rows-gap: var(--rls-sizing-x6);
 
   --pvt-datatable-row-background: var(
     --rlc-datatable-row-background,
@@ -46,7 +48,6 @@
       --rlc-datatable-header-font-weight,
       var(--rls-font-weight-medium)
     );
-    text-transform: uppercase;
 
     & > * {
       color: var(--rls-app-color-500);
@@ -54,7 +55,7 @@
   }
 
   &__record {
-    &:nth-child(odd of .rls-datatable__record) {
+    &:nth-child(even of .rls-datatable__record) {
       --pvt-datatable-row-background: var(
         --pvt-datatable-row-background-alternate
       );

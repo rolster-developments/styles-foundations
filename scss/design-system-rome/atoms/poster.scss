@@ -1,9 +1,9 @@
 // Rolster Technology Poster Component
-// v1.0.0
+// v1.1.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 21/Nov/2026
-// Updated: 21/Nov/2026
+// Updated: 22/Nov/2026
 
 .rls-poster {
   color: var(--rls-app-color-050);
@@ -16,11 +16,7 @@
 
   &--contrasted {
     color: var(--rls-app-color-600);
-    background: color-mix(
-      in srgb,
-      var(--rls-app-color-200) 45%,
-      var(--rls-app-color-050)
-    );
+    background: var(--rls-app-color-200);
 
     &[rls-theme] {
       color: var(--rls-theme-color-500);

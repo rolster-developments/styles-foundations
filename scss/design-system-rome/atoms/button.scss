@@ -1,5 +1,5 @@
 // Rolster Technology Button Component
-// v1.2.0
+// v1.3.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 21/Nov/2026
@@ -55,7 +55,6 @@
 
   &__description {
     font-weight: var(--rls-font-weight-medium);
-    text-transform: var(--rlc-button-description-text-transform, none);
   }
 
   &[rls-size='small'] {
