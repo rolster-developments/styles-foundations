@@ -1,9 +1,9 @@
 // Rolster Technology Field Box Component
-// v1.3.0
+// v1.4.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 21/Nov/2026
-// Updated: 22/Nov/2026
+// Updated: 23/Nov/2026
 
 .rls-field-box {
   --pvt-body-background: var(
@@ -64,8 +64,6 @@
   }
 
   &__body {
-    --rlc-button-icon-border: none;
-
     border-radius: var(--rlc-field-box-body-radius, var(--rls-sizing-x4));
     border: var(--pvt-body-border);
     transition: box-shadow 160ms var(--rls-standard-curve);

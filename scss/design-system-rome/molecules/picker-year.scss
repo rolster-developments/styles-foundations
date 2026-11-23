@@ -1,9 +1,9 @@
 // Rolster Technology Picker Year Component
-// v1.2.0
+// v1.3.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 21/Nov/2026
-// Updated: 22/Nov/2026
+// Updated: 23/Nov/2026
 
 .rls-picker-year {
   --pvt-component-font-color: var(--rls-app-color-600);
@@ -20,7 +20,6 @@
 
   .rls-button-icon {
     --rlc-button-icon-background: var(--rls-app-color-050);
-    --rlc-button-icon-border: none;
     --rlc-button-icon-radius: var(--rls-sizing-x4);
 
     box-shadow: 0px 8px 24px -4px rgba(27, 46, 94, 0.08);
