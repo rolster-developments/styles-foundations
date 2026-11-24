@@ -1,9 +1,9 @@
 // Rolster Technology Styles
-// v2.1.2
+// v2.1.3
 // @license MIT
 // Author: Rolster Developers
 // Created: 11/Ago/2022
-// Updated: 20/Sep/2025
+// Updated: 24/Nov/2026
 
 @use 'foundations';
 @use 'utilities';
@@ -13,19 +13,14 @@
   --rls-html-max-height: 100%;
 }
 
-.rls-aspect-ratio {
-  --rls-app-font-size-1360: 2.5px;
-  --rls-app-font-size-1820: 2.925px;
-}
-
 @media screen and (min-width: 1360px) {
   .rls-aspect-ratio {
-    --rls-app-font-size: var(--rls-app-font-size-1360);
+    --rls-app-font-size: var(--rls-app-font-size-wide-1360);
   }
 }
 
 @media screen and (min-width: 1820px) {
   .rls-aspect-ratio {
-    --rls-app-font-size: var(--rls-app-font-size-1820);
+    --rls-app-font-size: var(--rls-app-font-size-wide-1820);
   }
 }

@@ -357,18 +357,23 @@ scale without importing anything else:
 | ≥ 1820px | `2.5px`               |
 
 On top of that, the `.rls-aspect-ratio` class grows the base size further on
-wide screens:
+wide screens. Below `1360px` it declares nothing, so the ladder above still
+applies:
 
 | Viewport | `--rls-app-font-size` |
 | -------- | --------------------- |
-| < 1360px | `2px`                 |
+| < 1360px | ladder above          |
 | ≥ 1360px | `2.5px`               |
 | ≥ 1820px | `2.925px`             |
 
+The class goes on `<html>`, not on `<body>`: `--rls-app-font-size` is resolved
+by the `html` rule itself, and a custom property declared on `<body>` is
+visible to `<body>` and its descendants but never to its parent.
+
 ```html
-<body class="rls-aspect-ratio">
+<html class="rls-aspect-ratio">
   ...
-</body>
+</html>
 ```
 
 ### Assets

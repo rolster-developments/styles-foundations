@@ -1,9 +1,9 @@
 // Rolster Technology Normalize Utilities
-// v2.0.8
+// v2.0.9
 // @license MIT
 // Author: Rolster Developers
 // Created: 11/Ago/2022
-// Updated: 20/Nov/2026
+// Updated: 24/Nov/2026
 
 :root {
   --rls-app-font-family:
@@ -79,7 +79,7 @@ kbd,
 pre,
 samp {
   font-family: inherit;
-  font-size: var(--rls-sizing-x8);
+  font-size: var(--rls-body-font-size);
 }
 
 label,
@@ -88,11 +88,11 @@ select,
 textarea {
   font-family: inherit;
   line-height: normal;
-  font-size: var(--rls-sizing-x8);
+  font-size: var(--rls-body-font-size);
 }
 
 button {
-  font-size: var(--rls-sizing-x8);
+  font-size: var(--rls-body-font-size);
 }
 
 a,
