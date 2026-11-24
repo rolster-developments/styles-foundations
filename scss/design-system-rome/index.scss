@@ -1,9 +1,9 @@
 // Rolster Technology Design System Rome
-// v1.4.0
+// v1.5.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 21/Nov/2026
-// Updated: 23/Nov/2026
+// Updated: 24/Nov/2026
 
 @use 'sass:meta';
 
@@ -51,6 +51,7 @@
   @include meta.load-css('molecules/tabs');
   @include meta.load-css('molecules/toolbar');
 
+  @include meta.load-css('organisms/bottom-sheet');
   @include meta.load-css('organisms/card');
   @include meta.load-css('organisms/confirmation');
   @include meta.load-css('organisms/data-table');
@@ -59,6 +60,8 @@
   @include meta.load-css('organisms/field-color');
   @include meta.load-css('organisms/field-date');
   @include meta.load-css('organisms/field-date-range');
+  @include meta.load-css('organisms/modal');
+  @include meta.load-css('organisms/modal-sheet');
   @include meta.load-css('organisms/notifications');
   @include meta.load-css('organisms/picker-clock');
   @include meta.load-css('organisms/picker-color');

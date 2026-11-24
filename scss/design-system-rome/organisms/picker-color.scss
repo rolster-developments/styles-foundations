@@ -6,7 +6,7 @@
 // Updated: 22/Nov/2026
 
 .rls-picker-color {
-  border-radius: var(--rlc-picker-color-radius, var(--rls-sizing-x4));
+  border-radius: var(--rlc-picker-color-radius, var(--rls-sizing-x6));
   background: var(--rlc-picker-color-background, var(--rls-app-color-050));
 
   &__preview,

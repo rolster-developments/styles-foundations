@@ -1,9 +1,9 @@
 # Rolster Technology Colors SCSS
-# v1.0.0
+# v1.2.0
 # @license MIT
 # Author: Rolster Developers
 # Created: 20/Nov/2026
-# Updated: 20/Nov/2026
+# Updated: 23/Nov/2026
 
 import math
 import sys
@@ -53,7 +53,7 @@ THEMES = [
     ('hope', '#65a30d'),
     ('mountains', [
         '#1b231e', '#222b25', '#303b34', '#425047', '#54695c', '#6c8375',
-        '#90a898', '#b8cdbf', '#d9e7de', '#f2fbf5', '#ffffff',
+        '#90a898', '#b8cdbf', '#d9e7de', '#edf5f0', '#f8fdfa',
     ]),
     ('amaizing', '#eab308'),
     ('purple', '#5552d9'),
@@ -61,11 +61,11 @@ THEMES = [
     ('smartness', '#b67959'),
     ('obsidian', [
         '#23201a', '#2d281e', '#3e372b', '#544b3b', '#6e624c', '#897b61',
-        '#ae9f82', '#d2c5ae', '#eae2d3', '#fcf8ef', '#ffffff',
+        '#ae9f82', '#d2c5ae', '#eae2d3', '#f6f2ea', '#fefcf7',
     ]),
     ('neutral', [
         '#1e1e31', '#26263c', '#35354e', '#494964', '#60607d', '#797a95',
-        '#9d9eb7', '#c4c5d8', '#e1e2ee', '#f7f7ff', '#ffffff',
+        '#9d9eb7', '#c4c5d8', '#e1e2ee', '#f1f2f8', '#fbfbff',
     ]),
 ]
 

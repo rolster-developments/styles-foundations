@@ -1,9 +1,9 @@
 // Rolster Technology Data Table Component
-// v1.11.0
+// v1.14.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 21/Nov/2026
-// Updated: 23/Nov/2026
+// Updated: 24/Nov/2026
 
 .rls-datatable {
   --pvt-datatable-border-radius: var(--rlc-datatable-border-radius, 0rem);
@@ -32,6 +32,7 @@
     --rlc-datatable-footer-background,
     var(--rls-app-color-050)
   );
+
   --pvt-datatable-control-background: var(
     --rlc-datatable-control-background,
     var(--rls-app-color-200)
@@ -66,7 +67,17 @@
     }
   }
 
-  &__cell--control {
+  &__title,
+  &__cell,
+  &__data {
+    --rlc-field-box-action-background: var(
+      --rlc-datatable-field-action-background,
+      var(--rls-app-color-200)
+    );
+  }
+
+  &__cell--control,
+  &__title--control {
     .rls-button-action {
       background: var(--pvt-datatable-control-background);
     }

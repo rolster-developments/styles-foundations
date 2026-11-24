@@ -1,0 +1,28 @@
+// Rolster Technology Modal Component
+// v1.0.0
+// @license MIT
+// Author: Rolster Developers
+// Created: 24/Nov/2026
+// Updated: 24/Nov/2026
+
+.rls-modal {
+  &__component {
+    border-radius: var(--rls-sizing-x6);
+  }
+}
+
+.rls-modal-date {
+  --rlc-picker-date-radius: var(--rls-sizing-x6);
+}
+
+.rls-modal-date-range {
+  --rlc-picker-date-range-radius: var(--rls-sizing-x6);
+}
+
+.rls-modal-clock {
+  --rlc-picker-clock-radius: var(--rls-sizing-x6);
+}
+
+.rls-modal-color {
+  --rlc-picker-color-radius: var(--rls-sizing-x6);
+}
