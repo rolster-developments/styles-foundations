@@ -1,9 +1,9 @@
 // Rolster Technology Urbanist Font
-// v1.2.0
+// v1.3.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 23/Nov/2024
-// Updated: 05/Nov/2026
+// Updated: 24/Nov/2026
 
 @font-face {
   font-family: -rolster-urbanist;
@@ -45,22 +45,57 @@
     -rolster-urbanist, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Helvetica;
 
-  --rls-heading1-line-height: 39rem;
-  --rls-heading2-line-height: 29rem;
-  --rls-heading3-line-height: 26rem;
-  --rls-heading4-line-height: 21rem;
-  --rls-heading5-line-height: 17rem;
-  --rls-heading6-line-height: 15rem;
-  --rls-title-line-height: 11.5rem;
-  --rls-subtitle-line-height: 10.5rem;
-  --rls-body-line-height: 9.75rem;
-  --rls-input-line-height: 9.5rem;
-  --rls-paragraph-line-height: 9rem;
-  --rls-button-line-height: 9.5rem;
-  --rls-label-line-height: 9rem;
-  --rls-span-line-height: 8rem;
-  --rls-smalltext-line-height: 7.75rem;
-  --rls-caption-line-height: 7.5rem;
-  --rls-overline-line-height: 7rem;
-  --rls-tiny-line-height: 6rem;
+  --rls-heading1-font-size: 35.2rem;
+  --rls-heading1-line-height: 43rem;
+
+  --rls-heading2-font-size: 26.4rem;
+  --rls-heading2-line-height: 32rem;
+
+  --rls-heading3-font-size: 23.1rem;
+  --rls-heading3-line-height: 29rem;
+
+  --rls-heading4-font-size: 18.7rem;
+  --rls-heading4-line-height: 24rem;
+
+  --rls-heading5-font-size: 15.4rem;
+  --rls-heading5-line-height: 19rem;
+
+  --rls-heading6-font-size: 13.2rem;
+  --rls-heading6-line-height: 17rem;
+
+  --rls-title-font-size: 10.45rem;
+  --rls-title-line-height: 12.75rem;
+
+  --rls-subtitle-font-size: 9.625rem;
+  --rls-subtitle-line-height: 11.75rem;
+
+  --rls-body-font-size: 8.8rem;
+  --rls-body-line-height: 10.75rem;
+
+  --rls-input-font-size: 8.415rem;
+  --rls-input-line-height: 10.5rem;
+
+  --rls-paragraph-font-size: 8.0575rem;
+  --rls-paragraph-line-height: 10rem;
+
+  --rls-button-font-size: 8.25rem;
+  --rls-button-line-height: 10.5rem;
+
+  --rls-label-font-size: 7.7rem;
+  --rls-label-line-height: 10rem;
+
+  --rls-span-font-size: 7.15rem;
+  --rls-span-line-height: 9rem;
+
+  --rls-smalltext-font-size: 6.7375rem;
+  --rls-smalltext-line-height: 8.75rem;
+
+  --rls-caption-font-size: 6.1325rem;
+  --rls-caption-line-height: 8.25rem;
+
+  --rls-overline-font-size: 5.6375rem;
+  --rls-overline-line-height: 7.75rem;
+
+  --rls-tiny-font-size: 4.95rem;
+  --rls-tiny-line-height: 6.75rem;
 }

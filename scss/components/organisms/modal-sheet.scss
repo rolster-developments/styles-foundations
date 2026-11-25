@@ -1,9 +1,9 @@
 // Rolster Technology ModalSheet Component
-// v1.1.2
+// v1.1.3
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 19/Nov/2026
+// Updated: 24/Nov/2026
 
 .rls-modal-sheet {
   --pvt-duration-enter: var(
@@ -74,6 +74,7 @@
     opacity: var(--pvt-component-opacity);
     z-index: var(--rls-elevation-raised);
     border-radius: var(--pvt-component-border-radius);
+    outline: none;
     background: var(--rlc-modal-sheet-background, var(--rls-app-color-050));
     box-shadow: var(--pvt-component-shadow);
     transform: var(--pvt-component-transform);

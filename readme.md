@@ -405,14 +405,22 @@ stops glyphs being clipped when a component sets `height` or `min-height` to
 the line-height token. Tuned for the tallest faces, those defaults leave too
 much air under the more compact ones, so each font stylesheet carries its
 `@font-face` rules, points `--rls-app-font-family` at the family it declares
-and redefines only the `--rls-<scale>-line-height` tokens that differ from
-the defaults for that family (Poppins, the reference, redefines none). Each value is the foundations line height scaled by the family's own
+and redefines only the scale tokens that differ from the defaults for that
+family (Poppins, the reference, redefines none). Each line height is the foundations line height scaled by the family's own
 normal line height (ascender, descender and line gap, Poppins being the 1.5
 reference the defaults were tuned for), never below the box that keeps the
 accented capitals and descenders of its heaviest weight unclipped on both
 macOS and Windows metrics, and never above the foundations default, rounded
-up to the nearest 0.25rem (whole rem for the headings). Importing one after the root entry is what picks the typeface
-of the application and its line heights, so the order matters and only one
+up to the nearest 0.25rem (whole rem for the headings).
+
+A family may also redefine `--rls-<scale>-font-size` when it reads small at
+the sizes the defaults assume. Urbanist is the only one that does: it carries
+the eighteen sizes at 110% of the defaults and recomputes its line heights
+from those larger sizes under the same rules, so the face keeps its own
+compact rhythm while rendering a tenth bigger.
+
+Importing one after the root entry is what picks the typeface
+of the application and its scale, so the order matters and only one
 family should be imported:
 
 ```scss

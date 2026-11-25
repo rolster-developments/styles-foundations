@@ -1,9 +1,9 @@
 // Rolster Technology BottomSheet Component
-// v1.1.2
+// v1.1.3
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 19/Nov/2026
+// Updated: 24/Nov/2026
 
 .rls-bottom-sheet {
   --pvt-duration-enter: var(
@@ -60,6 +60,7 @@
     flex-direction: column;
     z-index: var(--rls-elevation-raised);
     border-radius: var(--rls-sizing-x4) var(--rls-sizing-x4) 0rem 0rem;
+    outline: none;
     background: var(--rlc-bottom-sheet-background, var(--rls-app-color-050));
     box-shadow: var(--rlc-bottom-sheet-shadow, var(--rls-app-shadow-2));
     transform: var(--pvt-component-transform);
