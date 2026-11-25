@@ -1,9 +1,9 @@
 // Rolster Technology App Component
-// v3.0.1
+// v3.1.0
 // @license MIT
 // Author: Rolster Developers
 // Created: 28/May/2026
-// Updated: 22/Nov/2026
+// Updated: 25/Nov/2026
 
 * {
   scrollbar-width: thin;
@@ -140,6 +140,10 @@
     }
 
     &__option {
+      --pvt-tooltip-opacity: 0;
+      --pvt-tooltip-transition-delay: 0ms;
+
+      position: relative;
       display: flex;
       width: 100%;
       min-height: 0rem;
@@ -196,6 +200,44 @@
   background-repeat: repeat-x;
 }
 
+@media screen and (min-width: 641px) {
+  .rls-app-body--navbar-condense {
+    .rls-app-navbar {
+      &__content {
+        overflow: clip;
+        overflow-clip-margin: 240rem;
+      }
+
+      &__option {
+        justify-content: center;
+        column-gap: 0rem;
+
+        &:hover {
+          --pvt-tooltip-opacity: 1;
+          --pvt-tooltip-transition-delay: 480ms;
+        }
+
+        & > span {
+          position: absolute;
+          top: 50%;
+          left: 100%;
+          margin-left: var(--rls-sizing-x4);
+          padding: var(--rls-sizing-x4);
+          border-radius: var(--rls-sizing-x2);
+          pointer-events: none;
+          z-index: var(--rls-elevation-menu);
+          color: var(--rls-app-color-050);
+          background: var(--rls-app-color-900);
+          transform: translateY(-50%);
+          opacity: var(--pvt-tooltip-opacity);
+          transition: opacity 200ms 0ms var(--rls-deceleration-curve);
+          transition-delay: var(--pvt-tooltip-transition-delay);
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 640px) {
   .rls-app {
     &-body {
@@ -214,7 +256,81 @@
       width: calc(var(--rls-html-max-width) + var(--pvt-navbar-width));
       left: calc(var(--pvt-section-navbar) * -1);
       transition: left 280ms var(--rls-standard-curve);
+
+      &:has(> .rls-app-navbar--drawer) {
+        width: var(--rls-html-max-width);
+        left: 0rem;
+      }
     }
+  }
+
+  .rls-app-body .rls-app-navbar.rls-app-navbar--drawer {
+    --pvt-duration: var(--rls-duration-enter-long);
+    --pvt-curve: var(--rls-emphasized-deceleration-curve);
+    --pvt-visibility-delay: 0ms;
+    --pvt-backdrop-opacity: 1;
+    --pvt-backdrop-blur: var(--rlc-app-navbar-backdrop-blur, 2px);
+    --pvt-content-transform: translateX(0);
+
+    position: fixed;
+    top: 0rem;
+    left: 0rem;
+    width: var(--rls-html-max-width);
+    height: var(--rls-html-max-height);
+    padding: 0rem;
+    background: transparent;
+    z-index: var(--rls-elevation-dialog);
+    visibility: visible;
+    pointer-events: auto;
+    transition: visibility 0ms linear var(--pvt-visibility-delay);
+
+    & + .rls-app-page__body {
+      --rlc-snackbar-left: 50%;
+
+      width: 100%;
+    }
+
+    & > .rls-app-navbar__content {
+      position: fixed;
+      top: 0rem;
+      left: 0rem;
+      width: var(--pvt-navbar-dimension);
+      height: var(--rls-html-max-height);
+      z-index: var(--rls-elevation-raised);
+      transform: var(--pvt-content-transform);
+      transition: transform var(--pvt-duration) 0ms var(--pvt-curve);
+    }
+
+    & > .rls-app-navbar__backdrop {
+      position: absolute;
+      display: block;
+      top: 0rem;
+      left: 0rem;
+      right: 0rem;
+      bottom: 0rem;
+      z-index: var(--rls-elevation-backdrop);
+      background: var(
+        --rlc-app-navbar-backdrop-color,
+        var(--rls-theme-backdrop-400)
+      );
+      backdrop-filter: blur(var(--pvt-backdrop-blur));
+      opacity: var(--pvt-backdrop-opacity);
+      transition:
+        opacity var(--pvt-duration) 0ms linear,
+        backdrop-filter var(--pvt-duration) 0ms linear;
+    }
+  }
+
+  .rls-app-body--navbar-condense .rls-app-navbar.rls-app-navbar--drawer {
+    --pvt-duration: var(--rls-duration-exit-long);
+    --pvt-curve: var(--rls-emphasized-acceleration-curve);
+    --pvt-visibility-delay: var(--pvt-duration);
+    --pvt-backdrop-opacity: 0;
+    --pvt-backdrop-blur: 0px;
+    --pvt-content-transform: translateX(-100%);
+
+    visibility: hidden;
+    pointer-events: none;
   }
 }
 
